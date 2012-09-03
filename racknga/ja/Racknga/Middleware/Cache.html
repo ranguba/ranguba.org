@@ -428,16 +428,16 @@ it.</p>
       <pre class="lines">
 
 
+98
 99
 100
 101
 102
 103
-104
-105</pre>
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 98</span>
 
 <span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_application">application</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
   <span class="ivar">@application</span> <span class="op">=</span> <span class="id identifier rubyid_application">application</span>
@@ -502,12 +502,12 @@ it.</p>
       <pre class="lines">
 
 
+94
 95
-96
-97</pre>
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 94</span>
 
 <span class="kw">def</span> <span class="id identifier rubyid_database">database</span>
   <span class="ivar">@database</span>
@@ -550,6 +550,7 @@ it.</p>
       <pre class="lines">
 
 
+107
 108
 109
 110
@@ -562,11 +563,10 @@ it.</p>
 117
 118
 119
-120
-121</pre>
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 107</span>
 
 <span class="kw">def</span> <span class="id identifier rubyid_call">call</span><span class="lparen">(</span><span class="id identifier rubyid_environment">environment</span><span class="rparen">)</span>
   <span class="id identifier rubyid_request">request</span> <span class="op">=</span> <span class="const">Rack</span><span class="op">::</span><span class="const">Request</span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_environment">environment</span><span class="rparen">)</span>
@@ -613,12 +613,12 @@ it.</p>
       <pre class="lines">
 
 
+128
 129
-130
-131</pre>
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 129</span>
+      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 128</span>
 
 <span class="kw">def</span> <span class="id identifier rubyid_close_database">close_database</span>
   <span class="ivar">@database</span><span class="period">.</span><span class="id identifier rubyid_close_database">close_database</span>
@@ -654,12 +654,12 @@ it.</p>
       <pre class="lines">
 
 
+123
 124
-125
-126</pre>
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/cache.rb', line 123</span>
 
 <span class="kw">def</span> <span class="id identifier rubyid_ensure_database">ensure_database</span>
   <span class="ivar">@database</span><span class="period">.</span><span class="id identifier rubyid_ensure_database">ensure_database</span>
