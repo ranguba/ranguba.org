@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Class: ActiveGroonga::ResultSet
+  
+    &mdash; activegroonga
+  
+ - ラングバ</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../index.html.ja">
+      <span class="title">
+  Class: ActiveGroonga::ResultSet
+  
+    &mdash; activegroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../activegroonga/en/ActiveGroonga/ResultSet.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../activegroonga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../../activegroonga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../../index.html.ja#install-activegroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../../developer.html.ja">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class="title"><span class="object_link"><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
+     &raquo; 
+    <span class="title">ResultSet</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link" href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link" href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: ActiveGroonga::ResultSet
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveGroonga::ResultSet</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">Enumerable</dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/active_groonga/result_set.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expression-instance_method" title="#expression (instance method)">- (Object) <strong>expression</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>Returns the value of attribute expression.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#n_records-instance_method" title="#n_records (instance method)">- (Object) <strong>n_records</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>Returns the value of attribute n_records.</p></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#records-instance_method" title="#records (instance method)">- (Object) <strong>records</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>Returns the value of attribute records.</p></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#empty%3F-instance_method" title="#empty? (instance method)">- (Boolean) <strong>empty?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>この結果セットがレコードを持っているかどうかを返します。</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#group-instance_method" title="#group (instance method)">- (Object) <strong>group</strong>(key) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ResultSet) <strong>initialize</strong>(records, klass, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>A new instance of ResultSet.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#paginate-instance_method" title="#paginate (instance method)">- (Object) <strong>paginate</strong>(sort_keys = nil, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>結果セットをページネーションします。</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sort-instance_method" title="#sort (instance method)">- (Object) <strong>sort</strong>(keys = nil, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>結果セットをソートします。</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>) <strong>initialize</strong>(records, klass, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>A new instance of ResultSet</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/result_set.rb', line 21</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_records">records</span><span class="comma">,</span> <span class="id identifier rubyid_klass">klass</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="ivar">@records</span> <span class="op">=</span> <span class="id identifier rubyid_records">records</span>
+  <span class="ivar">@klass</span> <span class="op">=</span> <span class="id identifier rubyid_klass">klass</span>
+  <span class="ivar">@groups</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span>
+  <span class="ivar">@expression</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:expression</span><span class="rbracket">]</span>
+  <span class="kw">if</span> <span class="ivar">@expression</span><span class="period">.</span><span class="id identifier rubyid_nil?">nil?</span> <span class="kw">and</span> <span class="ivar">@records</span><span class="period">.</span><span class="id identifier rubyid_respond_to?">respond_to?</span><span class="lparen">(</span><span class="symbol">:expression</span><span class="rparen">)</span>
+    <span class="ivar">@expression</span> <span class="op">=</span> <span class="ivar">@records</span><span class="period">.</span><span class="id identifier rubyid_expression">expression</span>
+  <span class="kw">end</span>
+  <span class="ivar">@n_records</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:n_records</span><span class="rbracket">]</span> <span class="op">||</span> <span class="ivar">@records</span><span class="period">.</span><span class="id identifier rubyid_size">size</span>
+  <span class="ivar">@default_sort_keys</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:default_sort_keys</span><span class="rbracket">]</span>
+  <span class="ivar">@default_limit</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:default_limit</span><span class="rbracket">]</span>
+  <span class="id identifier rubyid_compute_n_key_nested">compute_n_key_nested</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="expression-instance_method">
+  
+    - (<tt>Object</tt>) <strong>expression</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute expression</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/result_set.rb', line 20</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_expression">expression</span>
+  <span class="ivar">@expression</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="n_records-instance_method">
+  
+    - (<tt>Object</tt>) <strong>n_records</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute n_records</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/result_set.rb', line 20</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_n_records">n_records</span>
+  <span class="ivar">@n_records</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="records-instance_method">
+  
+    - (<tt>Object</tt>) <strong>records</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute records</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/result_set.rb', line 20</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_records">records</span>
+  <span class="ivar">@records</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="each-instance_method">
+  
+    - (<tt>Object</tt>) <strong>each</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+152
+153
+154
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/result_set.rb', line 152</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_each">each</span>
+  <span class="ivar">@records</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_record">record</span><span class="op">|</span>
+    <span class="id identifier rubyid_object">object</span> <span class="op">=</span> <span class="id identifier rubyid_instantiate">instantiate</span><span class="lparen">(</span><span class="id identifier rubyid_record">record</span><span class="rparen">)</span>
+    <span class="kw">next</span> <span class="kw">if</span> <span class="id identifier rubyid_object">object</span><span class="period">.</span><span class="id identifier rubyid_nil?">nil?</span>
+    <span class="kw">yield</span><span class="lparen">(</span><span class="id identifier rubyid_object">object</span><span class="rparen">)</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="empty?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>empty?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>この結果セットがレコードを持っているかどうかを返します。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">戻り値:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>この結果セットが1つ以上レコードを持っていればtrue、持っていなければfalse。</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/result_set.rb', line 164</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_empty?">empty?</span>
+  <span class="id identifier rubyid_records">records</span><span class="period">.</span><span class="id identifier rubyid_empty?">empty?</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="group-instance_method">
+  
+    - (<tt>Object</tt>) <strong>group</strong>(key) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+148
+149
+150</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/result_set.rb', line 148</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_group">group</span><span class="lparen">(</span><span class="id identifier rubyid_key">key</span><span class="rparen">)</span>
+  <span class="ivar">@groups</span><span class="lbracket">[</span><span class="id identifier rubyid_key">key</span><span class="rbracket">]</span> <span class="op">||=</span> <span class="ivar">@records</span><span class="period">.</span><span class="id identifier rubyid_group">group</span><span class="lparen">(</span><span class="id identifier rubyid_key">key</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="paginate-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>) <strong>paginate</strong>(sort_keys, options = {}) </span>
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>) <strong>paginate</strong>(options = {}) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>結果セットをページネーションします。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">オーバーロード:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>) <strong>paginate</strong>(sort_keys, options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>ページネーションした結果セット。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">例:</p>
+    
+      
+      <pre class="example code"><span class="id identifier rubyid_result_set">result_set</span> <span class="op">=</span> <span class="const">User</span><span class="period">.</span><span class="id identifier rubyid_all">all</span>
+<span class="comment"># "name"カラムの値で昇順にソートしてページネーションします。</span><span class="comment"># ページネーションした結果セットは10以下のレコードを持ちます。</span><span class="comment"># 返すページはユーザがリクエストしたページです。</span><span class="comment"># ユーザがページを指定していない場合は最初のページを返します。</span><span class="comment">#</span><span class="id identifier rubyid_result_set">result_set</span><span class="period">.</span><span class="id identifier rubyid_paginate">paginate</span><span class="lparen">(</span><span class="lbracket">[</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">name</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="symbol">:ascending</span><span class="rbracket">]</span><span class="rbracket">]</span><span class="comma">,</span>
+                    <span class="symbol">:size</span> <span class="op">=&gt;</span> <span class="int">10</span><span class="comma">,</span>
+                    <span class="symbol">:page</span> <span class="op">=&gt;</span> <span class="id identifier rubyid_param">param</span><span class="lbracket">[</span><span class="symbol">:page</span><span class="rbracket">]</span><span class="rparen">)</span></pre>
+    
+  </div>
+<p class="tag_title">引数:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">sort_keys</span>
+      
+      
+        <span class="type">(<tt>Array&lt;Array&lt;String, Symbol&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>ページネーション用のソートキーの配列。各ソートキーは配列で、中身はソートに使うカラムの名前と昇順か降順の指定。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">オプションHash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ページサイズ。<span class="object_link"><a href="Base.html#limit-class_method" title="ActiveGroonga::Base.limit (method)">Base.limit</a></span>をデフォルト値として使います。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:page</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>取得するページ。ページは0基点ではなく1基点です。デフォルト値は1です。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">戻り値:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>ページネーションした結果セット。</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>) <strong>paginate</strong>(options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p><span class="object_link"><a href="Base.html#sort_keys-class_method" title="ActiveGroonga::Base.sort_keys (method)">Base.sort_keys</a></span>をソートキーとして使います。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">例:</p>
+    
+      
+      <pre class="example code"><span class="comment"># デフォルトのソートキー。</span><span class="const">User</span><span class="period">.</span><span class="id identifier rubyid_sort_keys">sort_keys</span> <span class="op">=</span> <span class="lbracket">[</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">name</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="symbol">:ascending</span><span class="rbracket">]</span><span class="rbracket">]</span>
+<span class="id identifier rubyid_result_set">result_set</span> <span class="op">=</span> <span class="const">User</span><span class="period">.</span><span class="id identifier rubyid_all">all</span>
+<span class="comment"># "name"カラムの値で昇順にソートしてページネーションします。</span><span class="comment"># これはデフォルト値として指定しているからです。</span><span class="comment">#</span><span class="comment"># 返すページはユーザがリクエストしたページです。</span><span class="comment"># ユーザがページを指定していない場合は最初のページを返します。</span><span class="comment">#</span><span class="id identifier rubyid_result_set">result_set</span><span class="period">.</span><span class="id identifier rubyid_paginate">paginate</span><span class="lparen">(</span><span class="symbol">:size</span> <span class="op">=&gt;</span> <span class="int">10</span><span class="comma">,</span>
+                    <span class="symbol">:page</span> <span class="op">=&gt;</span> <span class="id identifier rubyid_param">param</span><span class="lbracket">[</span><span class="symbol">:page</span><span class="rbracket">]</span><span class="rparen">)</span></pre>
+    
+  </div>
+
+  
+    
+    
+    <p class="tag_title">オプションHash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ページサイズ。<span class="object_link"><a href="Base.html#limit-class_method" title="ActiveGroonga::Base.limit (method)">Base.limit</a></span>をデフォルト値として使います。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:page</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>指定したページ。デフォルト値は1。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">戻り値:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>ページネーションした結果セット。</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/result_set.rb', line 80</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_paginate">paginate</span><span class="lparen">(</span><span class="id identifier rubyid_sort_keys">sort_keys</span><span class="op">=</span><span class="kw">nil</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id identifier rubyid_sort_keys">sort_keys</span><span class="period">.</span><span class="id identifier rubyid_is_a?">is_a?</span><span class="lparen">(</span><span class="const">Hash</span><span class="rparen">)</span> <span class="kw">and</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_empty?">empty?</span>
+    <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_sort_keys">sort_keys</span>
+    <span class="id identifier rubyid_sort_keys">sort_keys</span> <span class="op">=</span> <span class="kw">nil</span>
+  <span class="kw">end</span>
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:size</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id identifier rubyid_normalize_limit">normalize_limit</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:size</span><span class="rbracket">]</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:page</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id identifier rubyid_normalize_page">normalize_page</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:page</span><span class="rbracket">]</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_sort_keys">sort_keys</span> <span class="op">=</span> <span class="id identifier rubyid_normalize_sort_keys">normalize_sort_keys</span><span class="lparen">(</span><span class="id identifier rubyid_sort_keys">sort_keys</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_records">records</span> <span class="op">=</span> <span class="ivar">@records</span><span class="period">.</span><span class="id identifier rubyid_paginate">paginate</span><span class="lparen">(</span><span class="id identifier rubyid_sort_keys">sort_keys</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_set">set</span> <span class="op">=</span> <span class="id identifier rubyid_create_result_set">create_result_set</span><span class="lparen">(</span><span class="id identifier rubyid_records">records</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_set">set</span><span class="period">.</span><span class="id identifier rubyid_extend">extend</span><span class="lparen">(</span><span class="const">PaginationProxy</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_set">set</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sort-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>) <strong>sort</strong>(keys, options = {}) </span>
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>) <strong>sort</strong>(options = {}) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>結果セットをソートします。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">オーバーロード:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>) <strong>sort</strong>(keys, options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>ソート済みの結果セット。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">例:</p>
+    
+      
+      <pre class="example code"><span class="id identifier rubyid_result_set">result_set</span> <span class="op">=</span> <span class="const">User</span><span class="period">.</span><span class="id identifier rubyid_all">all</span>
+<span class="comment"># "name"カラムの値で昇順にソートします。</span><span class="comment"># ソートした結果セットは5番目から14番目のレコードを含んでいます。</span><span class="comment">#</span><span class="id identifier rubyid_result_set">result_set</span><span class="period">.</span><span class="id identifier rubyid_paginate">paginate</span><span class="lparen">(</span><span class="lbracket">[</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">name</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="symbol">:ascending</span><span class="rbracket">]</span><span class="rbracket">]</span><span class="comma">,</span>
+                    <span class="symbol">:limit</span> <span class="op">=&gt;</span> <span class="int">10</span><span class="comma">,</span>
+                    <span class="symbol">:offset</span> <span class="op">=&gt;</span> <span class="int">4</span><span class="rparen">)</span></pre>
+    
+  </div>
+<p class="tag_title">引数:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">keys</span>
+      
+      
+        <span class="type">(<tt>Array&lt;Array&lt;String, Symbol&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>ソート用のソートキーの配列。各ソートキーは配列で、中身はソートに使うカラムの名前と昇順か降順の指定。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">オプションHash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:limit</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>最大レコード数。デフォルト値として<span class="object_link"><a href="Base.html#limit-class_method" title="ActiveGroonga::Base.limit (method)">Base.limit</a></span>を使います。もし<span class="object_link"><a href="Base.html#limit-class_method" title="ActiveGroonga::Base.limit (method)">Base.limit</a></span>がnilなら、全てのレコードを返します。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:offset</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>何番目のレコードから返すか。オフセットは1基点ではなく0基点です。デフォルト値は0です。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">戻り値:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>ソートした結果セット。</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>) <strong>sort</strong>(options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p><span class="object_link"><a href="Base.html#sort_keys-class_method" title="ActiveGroonga::Base.sort_keys (method)">Base.sort_keys</a></span>をソートキーとして使います。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">例:</p>
+    
+      
+      <pre class="example code"><span class="comment"># デフォルトのソートキー。</span><span class="const">User</span><span class="period">.</span><span class="id identifier rubyid_sort_keys">sort_keys</span> <span class="op">=</span> <span class="lbracket">[</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">name</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="symbol">:ascending</span><span class="rbracket">]</span><span class="rbracket">]</span>
+<span class="id identifier rubyid_result_set">result_set</span> <span class="op">=</span> <span class="const">User</span><span class="period">.</span><span class="id identifier rubyid_all">all</span>
+<span class="comment"># "name"カラムの値で昇順にソートします。</span><span class="comment"># これはデフォルト値として指定しているからです。</span><span class="comment"># ソートした結果セットは5番目から14番目のレコードを含んでいます。</span><span class="comment">#</span><span class="id identifier rubyid_result_set">result_set</span><span class="period">.</span><span class="id identifier rubyid_paginate">paginate</span><span class="lparen">(</span><span class="symbol">:limit</span> <span class="op">=&gt;</span> <span class="int">10</span><span class="comma">,</span>
+                    <span class="symbol">:offset</span> <span class="op">=&gt;</span> <span class="int">4</span><span class="rparen">)</span></pre>
+    
+  </div>
+
+  
+    
+    
+    <p class="tag_title">オプションHash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:limit</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>最大レコード数。デフォルト値として<span class="object_link"><a href="Base.html#limit-class_method" title="ActiveGroonga::Base.limit (method)">Base.limit</a></span>を使います。もし<span class="object_link"><a href="Base.html#limit-class_method" title="ActiveGroonga::Base.limit (method)">Base.limit</a></span>がnilなら、全てのレコードを返します。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:offset</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>何番目のレコードから返すか。オフセットは1基点ではなく0基点です。デフォルト値は0です。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">戻り値:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>ソートした結果セット。</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+138
+139
+140
+141
+142
+143
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/result_set.rb', line 138</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_sort">sort</span><span class="lparen">(</span><span class="id identifier rubyid_keys">keys</span><span class="op">=</span><span class="kw">nil</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id identifier rubyid_keys">keys</span><span class="period">.</span><span class="id identifier rubyid_is_a?">is_a?</span><span class="lparen">(</span><span class="const">Hash</span><span class="rparen">)</span> <span class="kw">and</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_empty?">empty?</span>
+    <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_keys">keys</span>
+    <span class="id identifier rubyid_keys">keys</span> <span class="op">=</span> <span class="kw">nil</span>
+  <span class="kw">end</span>
+  <span class="id identifier rubyid_keys">keys</span> <span class="op">=</span> <span class="id identifier rubyid_normalize_sort_keys">normalize_sort_keys</span><span class="lparen">(</span><span class="id identifier rubyid_keys">keys</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:limit</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id identifier rubyid_normalize_limit">normalize_limit</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:limit</span><span class="rbracket">]</span><span class="rparen">)</span> <span class="op">||</span> <span class="ivar">@n_records</span>
+  <span class="id identifier rubyid_create_result_set">create_result_set</span><span class="lparen">(</span><span class="ivar">@records</span><span class="period">.</span><span class="id identifier rubyid_sort">sort</span><span class="lparen">(</span><span class="id identifier rubyid_keys">keys</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../tango-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>
