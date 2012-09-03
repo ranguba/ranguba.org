@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Class: Groonga::IndexColumn
+  
+    &mdash; rroonga
+  
+ - ラングバ</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../index.html.ja">
+      <span class="title">
+  Class: Groonga::IndexColumn
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../rroonga/en/Groonga/IndexColumn.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../rroonga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../../rroonga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../../index.html.ja#install-rroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../../developer.html.ja">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (I)</a> &raquo;
+    <span class="title"><span class="object_link"><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
+     &raquo; 
+    <span class="title">IndexColumn</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">フレーム無し</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="../class_list.html">クラスリスト</a>
+  
+    <a class="full_list_link" id="method_list_link" href="../method_list.html">メソッドリスト</a>
+  
+    <a class="full_list_link" id="file_list_link" href="../file_list.html">ファイルリスト</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Groonga::IndexColumn
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class="object_link"><a href="Column.html" title="Groonga::Column (class)">Column</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></li>
+          
+            <li class="next"><span class="object_link"><a href="Column.html" title="Groonga::Column (class)">Column</a></span></li>
+          
+            <li class="next">Groonga::IndexColumn</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/groonga/rb-grn-index-column.c<span class="defines">,<br />
+  ext/groonga/rb-grn-index-column.c</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>転置索引エントリを格納するカラム。このカラムを利用するこ
+とにより高速な全文検索を実現できる。</p>
+<p>テーブルにGroonga::IndexColumnを定義する方法は
+<span class="object_link"><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>IDが <em>id</em> であるレコードを高速に全文検索するため転置索引を作
+成する。多くの場合、Groonga::Table#define_index_columnで
+<ins>:source</ins> オプションを指定することにより、自動的に全文検索
+用の索引は更新されるので、明示的にこのメソッドを使うこと
+は少ない。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_cursor-instance_method" title="#open_cursor (instance method)">- (Object) <strong>open_cursor</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#search-instance_method" title="#search (instance method)">- (Object) <strong>search</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#source%3D-instance_method" title="#source= (instance method)">- (Object) <strong>source=</strong>(Groonga) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>インデックス対象となるカラムを設定する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sources-instance_method" title="#sources (instance method)">- (Groonga::Columnの配列) <strong>sources</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>インデックス対象となっているカラムの配列を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sources%3D-instance_method" title="#sources= (instance method)">- (Object) <strong>sources=</strong>(Groonga) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>インデックス対象となる複数のカラムを配列で設定する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_position%3F-instance_method" title="#with_position? (instance method)">- (Boolean) <strong>with_position?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_section%3F-instance_method" title="#with_section? (instance method)">- (Boolean) <strong>with_section?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_weight%3F-instance_method" title="#with_weight? (instance method)">- (Boolean) <strong>with_weight?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="Column.html" title="Groonga::Column (class)">Column</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="Column.html#clear_lock-instance_method" title="Groonga::Column#clear_lock (method)">#clear_lock</a></span>, <span class="object_link"><a href="Column.html#index%3F-instance_method" title="Groonga::Column#index? (method)">#index?</a></span>, <span class="object_link"><a href="Column.html#indexes-instance_method" title="Groonga::Column#indexes (method)">#indexes</a></span>, <span class="object_link"><a href="Column.html#local_name-instance_method" title="Groonga::Column#local_name (method)">#local_name</a></span>, <span class="object_link"><a href="Column.html#lock-instance_method" title="Groonga::Column#lock (method)">#lock</a></span>, <span class="object_link"><a href="Column.html#locked%3F-instance_method" title="Groonga::Column#locked? (method)">#locked?</a></span>, <span class="object_link"><a href="Column.html#reference%3F-instance_method" title="Groonga::Column#reference? (method)">#reference?</a></span>, <span class="object_link"><a href="Column.html#rename-instance_method" title="Groonga::Column#rename (method)">#rename</a></span>, <span class="object_link"><a href="Column.html#scalar%3F-instance_method" title="Groonga::Column#scalar? (method)">#scalar?</a></span>, <span class="object_link"><a href="Column.html#select-instance_method" title="Groonga::Column#select (method)">#select</a></span>, <span class="object_link"><a href="Column.html#table-instance_method" title="Groonga::Column#table (method)">#table</a></span>, <span class="object_link"><a href="Column.html#unlock-instance_method" title="Groonga::Column#unlock (method)">#unlock</a></span>, <span class="object_link"><a href="Column.html#vector%3F-instance_method" title="Groonga::Column#vector? (method)">#vector?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class="object_link"><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class="object_link"><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class="object_link"><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class="object_link"><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class="object_link"><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class="object_link"><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class="object_link"><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class="object_link"><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class="object_link"><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class="object_link"><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class="object_link"><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class="object_link"><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class="object_link"><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class="object_link"><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class="object_link"><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class="object_link"><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]=-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id) </span>
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>IDが <em>id</em> であるレコードを高速に全文検索するため転置索引を作
+成する。多くの場合、Groonga::Table#define_index_columnで
+<ins>:source</ins> オプションを指定することにより、自動的に全文検索
+用の索引は更新されるので、明示的にこのメソッドを使うこと
+は少ない。</p>
+<p><em>value</em> には文字列を指定する。</p>
+<p><em>options</em> を指定することにより、より索引の作成を制御できる。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class="inline"><p>記事の段落毎に索引を作成する。</p></div></p>
+      
+      <pre class="example code"><span class="id identifier rubyid_articles">articles</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Array</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">&lt;articles&gt;</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class="id identifier rubyid_articles">articles</span><span class="period">.</span><span class="id identifier rubyid_define_column">define_column</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">title</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ShortText</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class="id identifier rubyid_articles">articles</span><span class="period">.</span><span class="id identifier rubyid_define_column">define_column</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">content</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Text</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+
+<span class="id identifier rubyid_terms">terms</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Hash</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">&lt;terms&gt;</span><span class="tstring_end">"</span></span><span class="comma">,</span>
+                             <span class="symbol">:default_tokenizer</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">TokenBigram</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class="id identifier rubyid_content_index">content_index</span> <span class="op">=</span> <span class="id identifier rubyid_terms">terms</span><span class="period">.</span><span class="id identifier rubyid_define_index_column">define_index_column</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">content</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="id identifier rubyid_articles">articles</span><span class="comma">,</span>
+                                          <span class="symbol">:with_section</span> <span class="op">=&gt;</span> <span class="kw">true</span><span class="rparen">)</span>
+
+<span class="id identifier rubyid_content">content</span> <span class="op">=</span> <span class="heredoc_beg">&lt;&lt;-EOC</span>
+<span class="tstring_content">groonga は組み込み型の全文検索エンジンライブラリです。
+DBMSやスクリプト言語処理系等に組み込むことによって、その
+全文検索機能を強化することができます。また、リレーショナ
+ルモデルに基づくデータストア機能を内包しており、groonga
+単体でも高速なデータストアサーバとして使用することができ
+ます。
+
+■全文検索方式
+転置索引型の全文検索エンジンです。転置索引は圧縮されてファ
+イルに格納され、検索時のディスク読み出し量を小さく、かつ
+局所的に抑えるように設計されています。用途に応じて以下の
+索引タイプを選択できます。
+</span><span class="heredoc_end">EOC
+</span>
+<span class="id identifier rubyid_groonga">groonga</span> <span class="op">=</span> <span class="id identifier rubyid_articles">articles</span><span class="period">.</span><span class="id identifier rubyid_add">add</span><span class="lparen">(</span><span class="symbol">:title</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">groonga</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="symbol">:content</span> <span class="op">=&gt;</span> <span class="id identifier rubyid_content">content</span><span class="rparen">)</span>
+
+<span class="id identifier rubyid_content">content</span><span class="period">.</span><span class="id identifier rubyid_split">split</span><span class="lparen">(</span><span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">\n{2,}</span><span class="regexp_end">/</span></span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_each_with_index">each_with_index</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_sentence">sentence</span><span class="comma">,</span> <span class="id identifier rubyid_i">i</span><span class="op">|</span>
+  <span class="id identifier rubyid_content_index">content_index</span><span class="lbracket">[</span><span class="id identifier rubyid_groonga">groonga</span><span class="rbracket">]</span> <span class="op">=</span> <span class="lbrace">{</span><span class="symbol">:value</span> <span class="op">=&gt;</span> <span class="id identifier rubyid_sentence">sentence</span><span class="comma">,</span> <span class="symbol">:section</span> <span class="op">=&gt;</span> <span class="id identifier rubyid_i">i</span> <span class="op">+</span> <span class="int">1</span><span class="rbrace">}</span>
+<span class="kw">end</span>
+
+<span class="id identifier rubyid_content_index">content_index</span><span class="period">.</span><span class="id identifier rubyid_search">search</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">エンジン</span><span class="tstring_end">"</span></span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_record">record</span><span class="op">|</span>
+  <span class="id identifier rubyid_p">p</span> <span class="id identifier rubyid_record">record</span><span class="period">.</span><span class="id identifier rubyid_key">key</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">title</span><span class="tstring_end">"</span></span><span class="rbracket">]</span> <span class="comment"># -&gt; "groonga"
+</span><span class="kw">end</span></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>The name and value
+pairs. Omitted names are initialized as the default value</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 167</span>
+
+static VALUE
+rb_grn_index_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
+{
+    grn_ctx *context = NULL;
+    grn_obj *column, *range;
+    grn_rc rc;
+    grn_id id;
+    unsigned int section;
+    grn_obj *old_value, *new_value;
+    VALUE original_rb_value, rb_section, rb_old_value, rb_new_value;
+
+    original_rb_value = rb_value;
+
+    rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
+				    NULL, NULL,
+				    &amp;new_value, &amp;old_value,
+				    NULL, &amp;range,
+				    NULL, NULL);
+
+    id = RVAL2GRNID(rb_id, context, range, self);
+
+    if (!RVAL2CBOOL(rb_obj_is_kind_of(rb_value, rb_cHash))) {
+	VALUE hash_value;
+	hash_value = rb_hash_new();
+	rb_hash_aset(hash_value, RB_GRN_INTERN("value"), rb_value);
+	rb_value = hash_value;
+    }
+
+    rb_grn_scan_options(rb_value,
+			"section", &amp;rb_section,
+			"old_value", &amp;rb_old_value,
+			"value", &amp;rb_new_value,
+			NULL);
+
+    if (NIL_P(rb_section))
+	section = 1;
+    else
+	section = NUM2UINT(rb_section);
+
+    if (NIL_P(rb_old_value)) {
+	old_value = NULL;
+    } else {
+	GRN_BULK_REWIND(old_value);
+	RVAL2GRNBULK(rb_old_value, context, old_value);
+    }
+
+    if (NIL_P(rb_new_value)) {
+	new_value = NULL;
+    } else {
+	GRN_BULK_REWIND(new_value);
+	RVAL2GRNBULK(rb_new_value, context, new_value);
+    }
+
+    rc = grn_column_index_update(context, column,
+				 id, section, old_value, new_value);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return original_rb_value;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open_cursor-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_cursor</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 561</span>
+
+static VALUE
+rb_grn_index_column_open_cursor (VALUE self, VALUE rb_table_cursor)
+{
+    grn_ctx *context;
+    grn_obj *column;
+    grn_table_cursor *table_cursor;
+    grn_id rid_min = GRN_ID_NIL;
+    grn_id rid_max = GRN_ID_MAX;
+    int flags = 0;
+    grn_obj *index_cursor;
+    VALUE rb_cursor;
+
+    rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
+				    NULL, NULL,
+				    NULL, NULL, NULL, NULL,
+				    NULL, NULL);
+    table_cursor = RVAL2GRNTABLECURSOR(rb_table_cursor, NULL);
+
+    index_cursor = grn_index_cursor_open(context, table_cursor,
+					 column, rid_min, rid_max, flags);
+
+    rb_cursor = GRNINDEXCURSOR2RVAL(context, index_cursor);
+
+    if (rb_block_given_p())
+	return rb_ensure(rb_yield, rb_cursor, rb_grn_object_close, rb_cursor);
+    else
+	return rb_cursor;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="search-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>search</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  column.search(query, options={}) → Groonga::Hash</p>
+<p><em>object</em> から <em>query</em> に対応するオブジェクトを検索し、見つかっ
+たオブジェクトのIDがキーになっているGroonga::Hashを返す。</p>
+<p>利用可能なオプションは以下の通り。
+[…]
+  …</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>The name and value
+pairs. Omitted names are initialized as the default value</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 444</span>
+
+static VALUE
+rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *column;
+    grn_obj *range;
+    grn_obj *query = NULL, *id_query = NULL, *string_query = NULL;
+    grn_obj *result;
+    grn_operator operator;
+    grn_rc rc;
+    VALUE rb_query, options, rb_result, rb_operator;
+
+    rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
+				    NULL, NULL,
+				    NULL, NULL, NULL, &amp;range,
+				    &amp;id_query, &amp;string_query);
+
+    rb_scan_args(argc, argv, "11", &amp;rb_query, &amp;options);
+
+    if (CBOOL2RVAL(rb_obj_is_kind_of(rb_query, rb_cInteger))) {
+	grn_id id;
+	id = NUM2UINT(rb_query);
+	GRN_TEXT_SET(context, id_query, &amp;id, sizeof(grn_id));
+	query = id_query;
+    } else {
+	const char *_query;
+	_query = StringValuePtr(rb_query);
+	GRN_TEXT_SET(context, string_query, _query, RSTRING_LEN(rb_query));
+	query = string_query;
+    }
+
+    rb_grn_scan_options(options,
+			"result", &amp;rb_result,
+			"operator", &amp;rb_operator,
+			NULL);
+
+    if (NIL_P(rb_result)) {
+	result = grn_table_create(context, NULL, 0, NULL,
+				  GRN_OBJ_TABLE_HASH_KEY | GRN_OBJ_WITH_SUBREC,
+				  range, 0);
+	rb_grn_context_check(context, self);
+	rb_result = GRNOBJECT2RVAL(Qnil, context, result, GRN_TRUE);
+    } else {
+	result = RVAL2GRNOBJECT(rb_result, &amp;context);
+    }
+
+    operator = RVAL2GRNOPERATOR(rb_operator);
+
+    rc = grn_obj_search(context, column, query, result, operator, NULL);
+    rb_grn_rc_check(rc, self);
+
+    return rb_result;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="source=-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>source=</strong>(Groonga) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>インデックス対象となるカラムを設定する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+396
+397
+398
+399
+400
+401
+402
+403</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 396</span>
+
+static VALUE
+rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
+{
+    if (!RVAL2CBOOL(rb_obj_is_kind_of(rb_source, rb_cArray)))
+	rb_source = rb_ary_new3(1, rb_source);
+
+    return rb_grn_index_column_set_sources(self, rb_source);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sources-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Column.html" title="Groonga::Column (class)">Groonga::Column</a></span>の配列</tt>) <strong>sources</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>インデックス対象となっているカラムの配列を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="Column.html" title="Groonga::Column (class)">Groonga::Column</a></span>の配列</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 234</span>
+
+static VALUE
+rb_grn_index_column_get_sources (VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *column;
+    grn_obj sources;
+    grn_id *source_ids;
+    VALUE rb_sources;
+    int i, n;
+    VALUE exception;
+
+    rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
+				    NULL, NULL,
+				    NULL, NULL, NULL, NULL,
+				    NULL, NULL);
+
+    GRN_OBJ_INIT(&amp;sources, GRN_BULK, 0, GRN_ID_NIL);
+    grn_obj_get_info(context, column, GRN_INFO_SOURCE, &amp;sources);
+    rb_grn_context_check(context, self);
+
+    n = GRN_BULK_VSIZE(&amp;sources) / sizeof(grn_id);
+    source_ids = (grn_id *)GRN_BULK_HEAD(&amp;sources);
+    rb_sources = rb_ary_new2(n);
+    for (i = 0; i &lt; n; i++) {
+	grn_obj *source;
+	VALUE rb_source;
+
+	source = grn_ctx_at(context, *source_ids);
+	exception = rb_grn_context_to_exception(context, self);
+	if (!NIL_P(exception)) {
+	    grn_obj_unlink(context, &amp;sources);
+	    rb_exc_raise(exception);
+	}
+
+	rb_source = GRNOBJECT2RVAL(Qnil, context, source, GRN_FALSE);
+	rb_ary_push(rb_sources, rb_source);
+	source_ids++;
+    }
+    grn_obj_unlink(context, &amp;sources);
+
+    return rb_sources;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sources=-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>sources=</strong>(Groonga) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>インデックス対象となる複数のカラムを配列で設定する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 348</span>
+
+static VALUE
+rb_grn_index_column_set_sources (VALUE self, VALUE rb_sources)
+{
+    VALUE exception;
+    grn_ctx *context = NULL;
+    grn_obj *column;
+    int i, n;
+    VALUE *rb_source_values;
+    grn_id range_id;
+    grn_id *sources;
+    grn_rc rc;
+
+    rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
+				    NULL, NULL,
+				    NULL, NULL,
+				    &amp;range_id, NULL,
+				    NULL, NULL);
+
+    n = RARRAY_LEN(rb_sources);
+    rb_source_values = RARRAY_PTR(rb_sources);
+    sources = ALLOCA_N(grn_id, n);
+    for (i = 0; i &lt; n; i++) {
+	sources[i] = resolve_source_id(context, column, range_id,
+				       rb_source_values[i]);
+    }
+
+    {
+	grn_obj bulk_sources;
+	GRN_OBJ_INIT(&amp;bulk_sources, GRN_BULK, 0, GRN_ID_NIL);
+	GRN_TEXT_SET(context, &amp;bulk_sources, sources, n * sizeof(grn_id));
+	rc = grn_obj_set_info(context, column, GRN_INFO_SOURCE, &amp;bulk_sources);
+	exception = rb_grn_context_to_exception(context, self);
+	grn_obj_unlink(context, &amp;bulk_sources);
+    }
+
+    if (!NIL_P(exception))
+	rb_exc_raise(exception);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_position?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>with_position?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  column.with_position? → true/false</p>
+<p><em>column</em> が位置情報も格納する場合は <ins>true</ins> を返します。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 548</span>
+
+static VALUE
+rb_grn_index_column_with_position_p (VALUE self)
+{
+    grn_obj *column;
+
+    rb_grn_index_column_deconstruct(SELF(self), &amp;column, NULL,
+				    NULL, NULL,
+				    NULL, NULL, NULL, NULL,
+				    NULL, NULL);
+
+    return CBOOL2RVAL(column-&gt;header.flags &amp; GRN_OBJ_WITH_POSITION);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_section?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>with_section?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  column.with_section? → true/false</p>
+<p><em>column</em> が段落情報も格納する場合は <ins>true</ins> を返します。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 506</span>
+
+static VALUE
+rb_grn_index_column_with_section_p (VALUE self)
+{
+    grn_obj *column;
+
+    rb_grn_index_column_deconstruct(SELF(self), &amp;column, NULL,
+				    NULL, NULL,
+				    NULL, NULL, NULL, NULL,
+				    NULL, NULL);
+
+    return CBOOL2RVAL(column-&gt;header.flags &amp; GRN_OBJ_WITH_SECTION);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_weight?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>with_weight?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  column.with_weight? → true/false</p>
+<p><em>column</em> がウェイト情報も格納する場合は <ins>true</ins> を返します。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 527</span>
+
+static VALUE
+rb_grn_index_column_with_weight_p (VALUE self)
+{
+    grn_obj *column;
+
+    rb_grn_index_column_deconstruct(SELF(self), &amp;column, NULL,
+				    NULL, NULL,
+				    NULL, NULL, NULL, NULL,
+				    NULL, NULL);
+
+    return CBOOL2RVAL(column-&gt;header.flags &amp; GRN_OBJ_WITH_WEIGHT);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../tango-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

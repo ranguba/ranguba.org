@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Module: Groonga::Operator
+  
+    &mdash; rroonga
+  
+ - ラングバ</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../index.html.ja">
+      <span class="title">
+  Module: Groonga::Operator
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../rroonga/en/Groonga/Operator.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../rroonga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../../rroonga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../../index.html.ja#install-rroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../../developer.html.ja">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (O)</a> &raquo;
+    <span class="title"><span class="object_link"><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
+     &raquo; 
+    <span class="title">Operator</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">フレーム無し</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="../class_list.html">クラスリスト</a>
+  
+    <a class="full_list_link" id="method_list_link" href="../method_list.html">メソッドリスト</a>
+  
+    <a class="full_list_link" id="file_list_link" href="../file_list.html">ファイルリスト</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Groonga::Operator
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">ext/groonga/rb-grn-operator.c</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="PUSH-constant" class="">PUSH =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_PUSH</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="POP-constant" class="">POP =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_POP</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="NO_OPERATION-constant" class="">NO_OPERATION =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_NOP</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="CALL-constant" class="">CALL =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_CALL</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="INTERN-constant" class="">INTERN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_INTERN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GET_REFERENCE-constant" class="">GET_REFERENCE =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GET_REF</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GET_VALUE-constant" class="">GET_VALUE =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GET_VALUE</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="AND-constant" class="">AND =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_AND</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="BUT-constant" class="">BUT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_BUT</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="OR-constant" class="">OR =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_OR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="ASSIGN-constant" class="">ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="STAR_ASSIGN-constant" class="">STAR_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_STAR_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SLASH_ASSIGN-constant" class="">SLASH_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SLASH_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="MODULO_ASSIGN-constant" class="">MODULO_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_MOD_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="PLUS_ASSIGN-constant" class="">PLUS_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_PLUS_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="MINUS_ASSIGN-constant" class="">MINUS_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_MINUS_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SHIFTL_ASSIGN-constant" class="">SHIFTL_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SHIFTL_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SHIRTR_ASSIGN-constant" class="">SHIRTR_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SHIFTR_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SHIFTRR_ASSIGN-constant" class="">SHIFTRR_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SHIFTRR_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="AND_ASSIGN-constant" class="">AND_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_AND_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="XOR_ASSIGN-constant" class="">XOR_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_XOR_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="OR_ASSIGN-constant" class="">OR_ASSIGN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_OR_ASSIGN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="JUMP-constant" class="">JUMP =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_JUMP</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="CJUMP-constant" class="">CJUMP =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_CJUMP</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="COMMA-constant" class="">COMMA =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_COMMA</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="BITWISE_OR-constant" class="">BITWISE_OR =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_BITWISE_OR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="BITWISE_XOR-constant" class="">BITWISE_XOR =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_BITWISE_XOR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="BITWISE_AND-constant" class="">BITWISE_AND =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_BITWISE_AND</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="BITWISE_NOT-constant" class="">BITWISE_NOT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_BITWISE_NOT</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="EQUAL-constant" class="">EQUAL =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_EQUAL</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="NOT_EQUAL-constant" class="">NOT_EQUAL =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_NOT_EQUAL</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="LESS-constant" class="">LESS =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_LESS</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GREATER-constant" class="">GREATER =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GREATER</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="LESS_EQUAL-constant" class="">LESS_EQUAL =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_LESS_EQUAL</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GREATER_EQUAL-constant" class="">GREATER_EQUAL =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GREATER_EQUAL</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="IN-constant" class="">IN =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_IN</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="MATCH-constant" class="">MATCH =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_MATCH</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="NEAR-constant" class="">NEAR =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_NEAR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="NEAR2-constant" class="">NEAR2 =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_NEAR2</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SIMILAR-constant" class="">SIMILAR =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SIMILAR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="TERM_EXTRACT-constant" class="">TERM_EXTRACT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_TERM_EXTRACT</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SHIFTL-constant" class="">SHIFTL =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SHIFTL</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SHIFTR-constant" class="">SHIFTR =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SHIFTR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SHIFTRR-constant" class="">SHIFTRR =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SHIFTRR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="PLUS-constant" class="">PLUS =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_PLUS</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="MINUS-constant" class="">MINUS =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_MINUS</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="STAR-constant" class="">STAR =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_STAR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SLASH-constant" class="">SLASH =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SLASH</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="MODULO-constant" class="">MODULO =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_MOD</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="DELETE-constant" class="">DELETE =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_DELETE</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="INCREMENT-constant" class="">INCREMENT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_INCR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="DECREMENT-constant" class="">DECREMENT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_DECR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="INCREMENT_POST-constant" class="">INCREMENT_POST =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_INCR_POST</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="DECREMENT_POST-constant" class="">DECREMENT_POST =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_DECR_POST</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="NOT-constant" class="">NOT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_NOT</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="ADJUST-constant" class="">ADJUST =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_ADJUST</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="EXACT-constant" class="">EXACT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_EXACT</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="LONGEST_COMMON_PREFIX-constant" class="">LONGEST_COMMON_PREFIX =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_LCP</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="PARTIAL-constant" class="">PARTIAL =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_PARTIAL</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="UNSPLIT-constant" class="">UNSPLIT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_UNSPLIT</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="PREFIX-constant" class="">PREFIX =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_PREFIX</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="SUFFIX-constant" class="">SUFFIX =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_SUFFIX</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GEO_DISTANCE1-constant" class="">GEO_DISTANCE1 =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GEO_DISTANCE1</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GEO_DISTANCE2-constant" class="">GEO_DISTANCE2 =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GEO_DISTANCE2</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GEO_DISTANCE3-constant" class="">GEO_DISTANCE3 =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GEO_DISTANCE3</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GEO_DISTANCE4-constant" class="">GEO_DISTANCE4 =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GEO_DISTANCE4</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GEO_WITHINP5-constant" class="">GEO_WITHINP5 =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GEO_WITHINP5</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GEO_WITHINP6-constant" class="">GEO_WITHINP6 =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GEO_WITHINP6</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="GEO_WITHINP8-constant" class="">GEO_WITHINP8 =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_GEO_WITHINP8</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="OBJECT_SEARCH-constant" class="">OBJECT_SEARCH =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_OBJ_SEARCH</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="EXPRESSION_GET_VARIABLE-constant" class="">EXPRESSION_GET_VARIABLE =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_EXPR_GET_VAR</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="TABLE_CREATE-constant" class="">TABLE_CREATE =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_TABLE_CREATE</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="TABLE_SELECT-constant" class="">TABLE_SELECT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_TABLE_SELECT</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="TABLE_SORT-constant" class="">TABLE_SORT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_TABLE_SORT</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="TABLE_GROUP-constant" class="">TABLE_GROUP =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_TABLE_GROUP</span><span class="rparen">)</span></pre></dd>
+      
+        <dt id="JSON_PUT-constant" class="">JSON_PUT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">UINT2NUM</span><span class="lparen">(</span><span class="const">GRN_OP_JSON_PUT</span><span class="rparen">)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../tango-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

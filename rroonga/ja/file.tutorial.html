@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="icon" href="../../favicon.png" />
+    <title>ファイル: チュートリアル &mdash; rroonga - ラングバ</title>
+
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../index.html.ja">
+      <span class="title">ファイル: チュートリアル &mdash; rroonga</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../rroonga/en/file.tutorial.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../rroonga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../rroonga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../index.html.ja#install-rroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../developer.html.ja">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">索引</a> &raquo; 
+    <span class="title">File: tutorial</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">フレーム無し</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="class_list.html">クラスリスト</a>
+  
+    <a class="full_list_link" id="method_list_link" href="method_list.html">メソッドリスト</a>
+  
+    <a class="full_list_link" id="file_list_link" href="file_list.html">ファイルリスト</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id="filecontents"><h1>チュートリアル</h1>
+<p>このページでは簡単なアプリケーションの作成を通して
+rroongaの操作方法を紹介します。</p>
+<h2>インストール</h2>
+<p>rroongaはRubyGemsでインストールできます。</p>
+<pre class="code command_line"><code>% sudo gem install rroonga
+</code></pre>
+<h2>データベースの作成</h2>
+<p>簡単なブックマークアプリケーション用のデータベースを作ってみ
+ます。以下のようにgroongaライブラリを読み込んでirbを起動しま
+す。</p>
+<pre class="code irb"><code>% irb --simple-prompt -rubygems -rgroonga
+&gt;&gt;
+</code></pre>
+<p>まず、エンコーディングを設定します。ここではUTF-8を利用します。</p>
+<pre class="code irb"><code>&gt;&gt; $KCODE = "UTF-8"
+=&gt; "UTF-8"
+&gt;&gt; Groonga::Context.default_options = {:encoding =&gt; :utf8}
+=&gt; {:encoding=&gt;:utf8}
+</code></pre>
+<p>それでは、ファイルを指定してデータベースを作成します。</p>
+<pre class="code irb"><code>&gt;&gt; Groonga::Database.create(:path =&gt; "/tmp/bookmark.db")
+=&gt; #&lt;Groonga::Database ...&gt;
+</code></pre>
+<p>ここで作成したデータベースは、これ以降、暗黙のうちに利用され
+ます。最初にデータベースを作成したら特に意識する必要はありま
+せん。</p>
+<h2>テーブルの定義</h2>
+<p>groongaには以下の3種類のテーブルがあります。</p>
+<dl>
+	<dt>Groonga::Hash</dt>
+	<dd>ハッシュテーブル。主キーでレコードを管理します。キーと完全
+一致するレコードを非常に高速に検索することができます。</dd>
+</dl>
+<dl>
+	<dt>Groonga::PatriciaTrie</dt>
+	<dd>パトリシアトライ。ハッシュテーブルに比べて完全一致検索の速
+度がやや遅いですが、前方一致検索・共通接頭辞探索などの検索
+が行えます。またカーソルを用いてキーの昇降順にレコードを取
+り出すことができます。</dd>
+</dl>
+<dl>
+	<dt>Groonga::Array</dt>
+	<dd>配列。主キーの存在しないテーブルです。レコードはIDによって
+識別します。</dd>
+</dl>
+<p>ここではハッシュテーブルを利用して、 <code>Items</code> という名前のテー
+ブルを作成します。キーは文字列とします。</p>
+<pre class="code irb"><code>&gt;&gt; Groonga::Schema.create_table("Items", :type =&gt; :hash)
+=&gt; [...]
+</code></pre>
+<p>これで <code>Items</code> という名前のテーブルが作成できました。</p>
+<p>定義したテーブルはGroonga.[]で参照できます。</p>
+<pre class="code irb"><code>&gt;&gt; items = Groonga["Items"]
+=&gt; #&lt;Groonga::Hash ...&gt;
+</code></pre>
+<p>テーブルはRubyのHashのように扱えます。</p>
+<p>例えば、以下のように <code>size</code> でテーブルに登録されているレコード
+の件数を取得できます。</p>
+<pre class="code irb"><code>&gt;&gt; items.size
+=&gt; 0
+</code></pre>
+<h2>レコードを追加する</h2>
+<p><code>Items</code> テーブルにレコードを追加します。</p>
+<pre class="code irb"><code>&gt;&gt; items.add("http://ja.wikipedia.org/wiki/Ruby")
+=&gt; #&lt;Groonga::Record ...&gt;
+&gt;&gt; items.add("http://www.ruby-lang.org/ja/")
+=&gt; #&lt;Groonga::Record ...&gt;
+</code></pre>
+<p>件数を確認すると確かに2件増えています。</p>
+<pre class="code irb"><code>&gt;&gt; items.size
+=&gt; 2
+</code></pre>
+<p>主キーを指定してレコードを取り出す時には以下のようにします。</p>
+<pre class="code irb"><code>&gt;&gt; items["http://ja.wikipedia.org/wiki/Ruby"]
+=&gt; #&lt;Groonga::Record ...&gt;
+</code></pre>
+<h2>全文検索を行う</h2>
+<p>各itemのタイトル文字列を登録して、全文検索できるようにしてみ
+ましょう。</p>
+<p>まず <code>Items</code> テーブルに <code>title</code> という名前のカラムを追加し
+ます。ここでは、 <code>Text</code> 型のデータを持つカラムとして定義
+します。</p>
+<pre class="code irb"><code>&gt;&gt; Groonga::Schema.change_table("Items") do |table|
+?&gt;     table.text("title")
+&gt;&gt;   end
+=&gt; [...]
+</code></pre>
+<p>定義したカラムは <code>#{テーブル名}.#{カラム名}</code> という名前になります。
+テーブルと同じように <span class="object_link"><a href="Groonga.html#%5B%5D-class_method" title="Groonga.[] (method)">Groonga.[]</a></span> で参照できます。</p>
+<pre class="code irb"><code>&gt;&gt; title_column = Groonga["Items.title"]
+=&gt; #&lt;Groonga::VariableSizeColumn ...&gt;
+</code></pre>
+<p>全文検索するために、文字列を分解して得られる各単語を格納する
+ためのテーブルを別途用意します。ここではTermsという名前でテー
+ブルを定義します。</p>
+<pre class="code irb"><code>&gt;&gt; Groonga::Schema.create_table("Terms",
+?&gt;                              :type =&gt; :patricia_trie,
+?&gt;                              :key_normalize =&gt; true,
+?&gt;                              :default_tokenizer =&gt; "TokenBigram")
+</code></pre>
+<p>ここでは、トークナイザとして<tt>:default_tokenzier =&gt;
+“TokenBigram”</tt> を指定しています。トークナイザとは文字列を
+単語に分解するオブジェクトのことです。デフォルトではトークナ
+イザは指定されていません。全文検索を利用するためにはトークナ
+イザを指定する必要があるので、ここではN-gramの一種であるバイ
+グラムを指定しています。</p>
+<p>N-gramを利用した全文検索では、分解したN文字とその出現位置を利
+用して全文検索を行います。N-gramのNは文字列を何文字毎に分解す
+るかの文字数になります。groongaは1文字で分解するユニグラム、
+2文字のバイグラム、3文字のトリグラムをサポートしています。</p>
+<p>また、大文字小文字の区別なく検索するために
+<code>:key_normalize =&gt; true</code> も指定しています。</p>
+<p>単語格納用テーブルの準備ができたので、 <code>Items</code> テーブ
+ルの <code>title</code> カラムに対するインデックスを定義します。</p>
+<pre class="code irb"><code>&gt;&gt; Groonga::Schema.change_table("Terms") do |table|
+?&gt;     table.index("Items.title")
+&gt;&gt;   end
+=&gt; [...]
+</code></pre>
+<p>少し違和感を感じるかも知れませんが、 <code>Items</code> テーブル
+のカラムに対するインデックスは、 <code>Terms</code> テーブルのカ
+ラムとして定義します。</p>
+<p><code>Items</code> にレコードが登録されると、その中に含まれる単
+語に該当するレコードが <code>Terms</code> に自動的に追加されるよ
+うになります。</p>
+<p><code>Terms</code> は、文書に含まれる語彙に相当する、やや特殊な
+テーブルだと言えます。しかし、他のテーブルと同様に語彙テーブ
+ルには自由にカラムを追加し、単語毎の様々な属性を管理すること
+ができます。これはある種の検索処理を行う際には非常に便利に機
+能します。</p>
+<p>これでテーブルの定義は完了です。</p>
+<p>先ほど登録した各レコードの <code>title</code> カラムに値をセットします。</p>
+<pre class="code irb"><code>&gt;&gt; items["http://ja.wikipedia.org/wiki/Ruby"].title = "Ruby"
+=&gt; "Ruby"
+&gt;&gt; items["http://www.ruby-lang.org/ja/"].title = "オブジェクトスクリプト言語Ruby"
+"オブジェクトスクリプト言語Ruby"
+</code></pre>
+<p>以下のようにして検索することができます。</p>
+<pre class="code irb"><code>&gt;&gt; ruby_items = items.select {|record| record.title =~ "Ruby"}
+=&gt; #&lt;Groonga::Hash ..., size: &lt;2&gt;&gt;
+</code></pre>
+<p>検索結果はGroonga::Hashで返されます。ハッシュのキーに見つかっ
+た <code>Items</code> のレコードが入っています。</p>
+<pre class="code irb"><code>&gt;&gt; ruby_items.collect {|record| record.key.key}
+=&gt; ["http://ja.wikipedia.org/wiki/Ruby", "http://www.ruby-lang.org/ja/"]
+</code></pre>
+<p>上の例では <code>record.key</code> で <code>Items</code> のレコードを取得して、
+さらにそのキーを指定して（ <code>record.key.key</code> ）で <code>Items</code> 
+のキーを返しています。</p>
+<p><code>record["_key"]</code> でアクセスすると自動的に参照しているレコード
+を辿っていき、参照先のキーにアクセスできます。</p>
+<pre class="code irb"><code>&gt;&gt; ruby_items.collect {|record| record["_key"]}
+=&gt; ["http://ja.wikipedia.org/wiki/Ruby", "http://www.ruby-lang.org/ja/"]
+</code></pre>
+<h2>マルチユーザ向けのブックマークアプリケーション</h2>
+<p>ここまでで作った単機能のアプリケーションをもう少し拡張して、
+複数のユーザが、それぞれにコメントを記入できるブックマークア
+プリケーションにしてみましょう。</p>
+<p>まず、ユーザ情報とコメント情報を格納するテーブルを追加して、
+下図のようなテーブル構成にします。</p>
+<p>http://qwik.jp/senna/senna2.files/rect4605.png</p>
+<p>まず、 <code>Users</code> テーブルを追加します。</p>
+<pre class="code irb"><code>&gt;&gt; Groonga::Schema.create_table("Users", :type =&gt; :hash) do |table|
+?&gt;     table.text("name")
+&gt;&gt;   end
+=&gt; [...]
+</code></pre>
+<p>次に、 <code>Comments</code> テーブルを追加します。</p>
+<pre class="code irb"><code>&gt;&gt; Groonga::Schema.create_table("Comments") do |table|
+?&gt;     table.reference("item")
+&gt;&gt;   table.reference("author", "Users")
+&gt;&gt;   table.text("content")
+&gt;&gt;   table.time("issued")
+&gt;&gt;   end
+=&gt; [...]
+</code></pre>
+<p><code>Comments</code> テーブルの <code>content</code> カラムを全文検索できる
+ようにインデックスを定義します。</p>
+<pre class="code irb"><code>&gt;&gt; Groonga::Schema.change_table("Terms") do |table|
+?&gt;     table.index("Comments.content")
+&gt;&gt;   end
+=&gt; [...]
+</code></pre>
+<p>これでテーブルが定義できました。</p>
+<p>続いてユーザを何人か追加します。</p>
+<pre class="code irb"><code>&gt;&gt; users = Groonga["Users"]
+=&gt; #&lt;Groonga::Hash ...&gt;
+&gt;&gt; users.add("moritan", :name =&gt; "モリタン")
+=&gt; #&lt;Groonga::Record ...&gt;
+&gt;&gt; users.add("taporobo", :name =&gt; "タポロボ")
+=&gt; #&lt;Groonga::Record ...&gt;
+</code></pre>
+<p>次に、実際にユーザがブックマークを貼る時の処理を実行してみま
+しょう。</p>
+<p>ユーザ <code>moritan</code> が、Ruby関連のとあるページをブックマークしたと
+想定します。</p>
+<p>まず対象のページが <code>Items</code> テーブルに登録済かどうか調
+べます。</p>
+<pre class="code irb"><code>&gt;&gt; items.has_key?("http://www.rubyist.net/~matz/")
+=&gt; false
+</code></pre>
+<p>未登録なのでまず当該ページを <code>Items</code> に登録します。</p>
+<pre class="code irb"><code>&gt;&gt; items.add("http://www.rubyist.net/~matz/",
+?&gt;           :title =&gt; "Matzにっき")
+=&gt; #&lt;Groonga::Record ...&gt;
+</code></pre>
+<p>次に、登録したitemを <code>item</code> カラムの値に指定して
+<code>Comments</code> にレコードを登録します。</p>
+<pre class="code irb"><code>&gt;&gt; require "time"
+=&gt; true
+&gt;&gt; comments = Groonga["Comments"]
+=&gt; #&lt;Groonga::Array ...&gt;
+&gt;&gt; comments.add(:item =&gt; "http://www.rubyist.net/~matz/",
+?&gt;              :author =&gt; "moritan",
+?&gt;              :content =&gt; "Ruby Matz",
+?&gt;              :issued =&gt; Time.parse("2010-11-20T18:01:22+09:00"))
+=&gt; #&lt;Groonga::Record ...&gt;
+</code></pre>
+<h2>メソッド化</h2>
+<p>上記の一連の手続きをメソッドにまとめてみます。</p>
+<pre class="code irb"><code>&gt;&gt; @items = items
+=&gt; #&lt;Groonga::Hash ...&gt;
+&gt;&gt; @comments = comments
+=&gt; #&lt;Groonga::Array ...&gt;
+&gt;&gt; def add_bookmark(url, title, author, content, issued)
+&gt;&gt;   item = @items[url] || @items.add(url, :title =&gt; title)
+&gt;&gt;   @comments.add(:item =&gt; item,
+?&gt;                 :author =&gt; author,
+?&gt;                 :content =&gt; content,
+?&gt;                 :issued =&gt; issued)
+&gt;&gt;   end
+=&gt; nil
+</code></pre>
+<p><code>itmes</code> と <code>comments</code> をインスタンス変数に代入しているのはメ
+ソッド内からでも見えるようにするためです。</p>
+<p><code>add_bookmark</code> は以下のような手順を実行しています。</p>
+<ul>
+	<li><code>Items</code> テーブルに該当ページのレコードがあるかどうか調べる。</li>
+	<li>レコードがなければ追加する。</li>
+	<li><code>Comments</code> テーブルにレコードを登録する。</li>
+</ul>
+<p>作成したメソッドを呼び出していくつかブックマークを登録してみ
+ましょう。</p>
+<pre class="code irb"><code>&gt;&gt; add_bookmark("http://jp.rubyist.net/magazine/",
+?&gt;              "Rubyist Magazine - るびま", "moritan", "Ruby 記事",
+?&gt;              Time.parse("2010-10-07T14:18:28+09:00"))
+=&gt; #&lt;Groonga::Record ...&gt;
+&gt;&gt; add_bookmark("http://groonga.rubyforge.org/",
+?&gt;              "Rubyでgroonga使って全文検索 - ラングバ", "taporobo",
+?&gt;              "Ruby groonga 全文検索",
+?&gt;              Time.parse("2010-11-11T12:39:59+09:00"))
+=&gt; #&lt;Groonga::Record ...&gt;
+&gt;&gt; add_bookmark("http://www.rubyist.net/~matz/",
+?&gt;              "Matz日記", "taporobo", "Ruby 日記",
+?&gt;              Time.parse("2010-07-28T20:46:23+09:00"))
+=&gt; #&lt;Groonga::Record ...&gt;
+</code></pre>
+<h2>全文検索その2</h2>
+<p>登録したレコードに対して全文検索を実行してみます。</p>
+<pre class="code irb"><code>&gt;&gt; records = comments.select do |record|
+?&gt;     record["content"] =~ "Ruby"
+&gt;&gt;   end
+=&gt; #&lt;Groonga::Hash ...&gt;
+&gt;&gt; records.each do |record|
+?&gt;     comment = record.key
+&gt;&gt;   p [comment.id,
+?&gt;       comment.issued,
+?&gt;       comment.item.title,
+?&gt;       comment.author.name,
+?&gt;       comment.content]
+&gt;&gt;   end
+[1, Sat Nov 20 18:01:22 +0900 2010, "Matzにっき", "モリタン", "Ruby Matz"]
+[2, Thu Oct 07 14:18:28 +0900 2010, "Rubyist Magazine - るびま", "モリタン", "Ruby 記事"]
+[3, Thu Nov 11 12:39:59 +0900 2010, "Rubyでgroonga使って全文検索 - ラングバ", "タポロボ", "Ruby groonga 全文検索検"]
+[4, Wed Jul 28 20:46:23 +0900 2010, "Matzにっき", "タポロボ", "Ruby 日記"]
+</code></pre>
+<p>カラム名と同じメソッドでカラムへのアクセスできます。複合デー
+タ型の要素も再帰的に辿ることができます。（同様の出力を普通の
+RDBで実現するためには、 <code>Items</code> テーブル、
+<code>Comments</code> テーブル、 <code>Users</code> テーブルのJOIN操作が
+必要になります。）</p>
+<p>上の式の中で、肝心の検索処理は、第一引数の式を評価する時点で
+完了していて、レコードセットオブジェクトとしてメモリに蓄積さ
+れています。</p>
+<pre class="code irb"><code>&gt;&gt; records
+#&lt;Groonga::Hash ..., size: &lt;4&gt;&gt;
+</code></pre>
+<p>レコードセットは、出力する前に様々に加工することができます。</p>
+<p>以下は、日付で降順にソートしてから出力した例です。</p>
+<pre class="code irb"><code>&gt;&gt; records.sort([{:key =&gt; "issued", :order =&gt; "descending"}]).each do |record|
+?&gt;     comment = record.key
+&gt;&gt;   p [comment.id,
+?&gt;       comment.issued,
+?&gt;       comment.item.title,
+?&gt;       comment.author.name,
+?&gt;       comment.content]
+&gt;&gt;   end
+[1, Sat Nov 20 18:01:22 +0900 2010, "Matzにっき", "モリタン", "Ruby Matz"]
+[3, Thu Nov 11 12:39:59 +0900 2010, "Rubyでgroonga使って全文検索 - ラングバ", "タポロボ", "Ruby groonga 全文検索"]
+[2, Thu Oct 07 14:18:28 +0900 2010, "Rubyist Magazine - るびま", "モリタン", "Ruby 記事"]
+[4, Wed Jul 28 20:46:23 +0900 2010, "Matzにっき, "タポロボ", "Ruby 日記"]
+=&gt; [...]
+</code></pre>
+<p>同じitemが何度も出てくると検索結果が見にくいので、item毎にグ
+ループ化してみます。</p>
+<pre class="code irb"><code>&gt;&gt; records.group("item").each do |record|
+?&gt;     item = record.key
+&gt;&gt;   p [record.n_sub_records,
+?&gt;       item.key,
+?&gt;       item.title]
+&gt;&gt;   end
+[2, "http://www.rubyist.net/~matz/", "Matzにっき"]
+[1, "http://jp.rubyist.net/magazine/", "Rubyist Magazine - るびま"]
+[1, "http://groonga.rubyforge.org/", "Rubyでgroonga使って全文検索 - ラングバ"]
+=&gt; nil
+</code></pre>
+<p><code>n_sub_records</code> というのはグループ化した単位に含まれるレコード
+の件数を示します。SQLで言えば、GROUP BY句を含むクエリのcount
+関数のような働きです。</p>
+<h2>少し複雑な検索</h2>
+<p>さらに実用的な検索について考えてみましょう。</p>
+<p>ブックマークが大量に蓄積されるに従って、より的確に適合度を算
+出する必要性に迫られます。</p>
+<p>今のところ検索対象として利用できるのは <code>Items.title</code> 
+と <code>Comments.content</code> ですが、 <code>Items.title</code> は
+元ページから得られるやや信頼できる情報なのに対して、
+<code>Comments.content</code> はブックマークユーザが任意に設定で
+きる情報で、やや信憑性に乏しいと言えます。しかし、再現率を確
+保するためにはユーザのコメントも是非対象に含めたいところです。</p>
+<p>そこで、以下のようなポリシーで検索を行うことにします。</p>
+<ul>
+	<li><code>Items.title</code> か <code>Comments.content</code> のいずれ
+  かにマッチするitemを検索する。</li>
+	<li>ただし、 <code>Items.title</code> にマッチしたレコードはスコア
+  を10倍重み付けする。</li>
+	<li>同一のitemに対して、キーワードにマッチする <code>comment</code> 
+  が複数存在した場合は、それぞれの <code>comment</code> のスコアの
+  和を、該当するitemのスコアとする。</li>
+</ul>
+<p>以下のようにして、commentとitemとそれぞれに対する検索結果を求
+めます。</p>
+<pre class="code irb"><code>&gt;&gt; ruby_comments = @comments.select {|record| record.content =~ "Ruby"}
+=&gt; #&lt;Groonga::Hash ..., size: &lt;4&gt;
+&gt;&gt; ruby_items = @items.select do |record|
+?&gt;     target = record.match_target do |match_record|
+?&gt;       match_record.title * 10
+&gt;&gt;     end
+&gt;&gt;   target =~ "Ruby"
+&gt;&gt;   end
+#&lt;Groonga::Hash ..., size: &lt;4&gt;&gt;
+</code></pre>
+<p>_ruby_comments_の結果をitem毎にグループ化し、_ruby_items_と
+unionして出力します。</p>
+<pre class="code irb"><code>&gt;&gt; ruby_items = ruby_comments.group("item").union!(ruby_items)
+#&lt;Groonga::Hash ..., size: &lt;5&gt;&gt;
+&gt;&gt; ruby_items.sort([{:key =&gt; "_score", :order =&gt; "descending"}]).each do |record|
+&gt;&gt;   p [record.score, record.title]
+&gt;&gt; end
+[10, "Rubyist Magazine - るびま"]
+[10, "Ruby"]
+[10, "Rubyでgroonga使って全文検索 - ラングバ"]
+[10, "オブジェクトスクリプト言語Ruby"]
+[2, "Matzにっき"]
+</code></pre>
+<p>これで目的の結果が得られました。</p></div></div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../tango-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>
