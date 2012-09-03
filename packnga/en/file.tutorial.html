@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="icon" href="../../favicon.png" />
+    <title>
+  File: tutorial
+  
+    &mdash; packnga
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../">
+      <span class="title">
+  File: tutorial
+  
+    &mdash; packnga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../packnga/ja/file.tutorial.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../packnga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../packnga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../#install-packnga">Install</a></li>
+    <li id="menu-developer"><a href="../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: tutorial</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Tutorial</h1>
+<p>We introduce how to use Packnga with Packnga&#8217;s Rakefile and gemspec in this page.</p>
+<h2>Install</h2>
+<p>You can install Packnga from Rubygems.</p>
+<pre class="code command_line"><code>% sudo gem install packnga
+</code></pre>
+<h2>Prepare to create tasks</h2>
+<p>Before using Packnga, you should create <code>spec</code> variable with
+ Gem::Specification.new or Jeweler::Tasks.new.
+Packnga create tasks with <code>spec</code> in Rakefile.</p>
+<h3>Create spec with Gem::Specification.new</h3>
+<p>We introduce to create <code>spec</code> with Gem::Specification.new in a gemspec file.
+Please see below gemspec example with Gem::Specification.new.</p>
+<pre class="code ruby"><code><span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='const'>Packnga</span><span class='op'>::</span><span class='const'>VERSION</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+
+<span class='id identifier rubyid_readme_path'>readme_path</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_base_dir'>base_dir</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>README.textile</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_entries'>entries</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_readme_path'>readme_path</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^h2\.\s(.*)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_entry'>entry</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry_title'>entry_title</span><span class='op'>|</span>
+  <span class='id identifier rubyid_entries'>entries</span><span class='lbracket'>[</span><span class='id identifier rubyid_entries'>entries</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_entry_title'>entry_title</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>1</span><span class='rbracket'>]</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_authors'>authors</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_emails'>emails</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Authors</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_line'>each_line</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
+  <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\*\s*(.+)\s&lt;([^&lt;&gt;]*)&gt;$</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_line'>line</span>
+    <span class='id identifier rubyid_authors'>authors</span> <span class='op'>&lt;&lt;</span> <span class='backref'>$1</span>
+    <span class='id identifier rubyid_emails'>emails</span> <span class='op'>&lt;&lt;</span> <span class='backref'>$2</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_clean_white_space'>clean_white_space</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span>
+  <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\A\n+|\n+\z)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='id identifier rubyid_clean_white_space'>clean_white_space</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Description</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_summary'>summary</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n\n+</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span>
+
+<span class='const'>Gem</span><span class='op'>::</span><span class='const'>Specification</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>packnga</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='id identifier rubyid_version'>version</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_authors'>authors</span> <span class='op'>=</span> <span class='id identifier rubyid_authors'>authors</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span> <span class='op'>=</span> <span class='id identifier rubyid_emails'>emails</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_summary'>summary</span> <span class='op'>=</span> <span class='id identifier rubyid_summary'>summary</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span>
+
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_extra_rdoc_files'>extra_rdoc_files</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>README.textile</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_files'>files</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>README.textile</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Rakefile</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Gemfile</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_chdir'>chdir</span><span class='lparen'>(</span><span class='id identifier rubyid_base_dir'>base_dir</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_files'>files</span> <span class='op'>+=</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>lib/**/*.rb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_files'>files</span> <span class='op'>+=</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>doc/text/*.*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_homepage'>homepage</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://groonga.rubyforge.org/</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_licenses'>licenses</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LGPLv2</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_require_paths'>require_paths</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>lib</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_rubyforge_project'>rubyforge_project</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_runtime_dependency'>add_runtime_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rake</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_runtime_dependency'>add_runtime_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yard</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_runtime_dependency'>add_runtime_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rubyforge</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_runtime_dependency'>add_runtime_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gettext</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_development_dependency'>add_development_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test-unit</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_development_dependency'>add_development_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test-unit-notify</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_development_dependency'>add_development_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bundler</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_development_dependency'>add_development_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RedCloth</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+</code></pre>
+<p>If you set the attribute <code>rubyforge_project</code> of <code>spec</code> value,
+&#8220;Packnga::ReleaseTask&#8221; class creates tasks for rubyforge.</p>
+<p>Next, we should get <code>spec</code> value in Rakefile from gemspec,
+ so we write below source code in  Rakefile.</p>
+<pre class="code ruby"><code><span class='id identifier rubyid_helper'>helper</span> <span class='op'>=</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>GemHelper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_base_dir'>base_dir</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_helper'>helper</span><span class='period'>.</span><span class='id identifier rubyid_install'>install</span>
+<span class='id identifier rubyid_spec'>spec</span> <span class='op'>=</span> <span class='id identifier rubyid_helper'>helper</span><span class='period'>.</span><span class='id identifier rubyid_gemspec'>gemspec</span>
+</code></pre>
+<h3>Create spec with Jeweler::Tasks.new</h3>
+<p>If you want to create <code>spec</code> with Jeweler::Tasks.new in your Rakefile,
+please see below example.
+This source code is written in old Packnga&#8217;s Rakefile.</p>
+<pre class="code ruby"><code><span class='id identifier rubyid_spec'>spec</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='const'>Jeweler</span><span class='op'>::</span><span class='const'>Tasks</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__spec'>_spec</span><span class='op'>|</span>
+  <span class='id identifier rubyid_spec'>spec</span> <span class='op'>=</span> <span class='id identifier rubyid__spec'>_spec</span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>packnga</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='id identifier rubyid_version'>version</span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_rubyforge_project'>rubyforge_project</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_homepage'>homepage</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://groonga.rubyforge.org/</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_authors'>authors</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Haruka Yoshihara</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kouhei Sutou</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yoshihara@clear-code.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>kou@clear-code.com</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_entries'>entries</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>README.textile</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^h2\.\s(.*)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='id identifier rubyid_cleanup_white_space'>cleanup_white_space</span><span class='lparen'>(</span><span class='id identifier rubyid_entries'>entries</span><span class='lbracket'>[</span><span class='id identifier rubyid_entries'>entries</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Description</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_summary'>summary</span><span class='comma'>,</span> <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n\n+</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='int'>3</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_license'>license</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LGPLv2</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_files'>files</span> <span class='op'>=</span> <span class='const'>FileList</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>lib/**/*.rb</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Rakefile</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>README.textile</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Gemfile</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>doc/text/**</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_test_files'>test_files</span> <span class='op'>=</span> <span class='const'>FileList</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test/**/*.rb</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='kw'>end</span>
+</code></pre>
+<h2>Create tasks</h2>
+<p>Packnga&#8217;s classes has charge of each tasks.
+This table describes Packnga&#8217;s classes.</p>
+<dl>
+	<dt>Packnga::DocumentTask</dt>
+	<dd>This class create tasks for generating references.
+It define tasks to generate <span class="caps">YARD</span> documentation and po files.
+It also defines tasks to translate documents with po files.</dd>
+</dl>
+<dl>
+	<dt>Packnga::ReleaseTask</dt>
+	<dd>This class create tasks for uploading references and package and preparing to upload them.
+It defines a task to tag the current version in git and a task to user-install gem for test.
+It also create tasks for uploading rubyforge if you set <code>rubyforge_project</code> in <code>spec</code> .</dd>
+</dl>
+<p>Please see below for creating tasks.</p>
+<pre class="code ruby"><code>
+<span class='const'>Packnga</span><span class='op'>::</span><span class='const'>DocumentTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
+<span class='const'>Packnga</span><span class='op'>::</span><span class='const'>ReleaseTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
+</code></pre>
+<h3>Set the document path.</h3>
+<p>You can set parameters with block when creating object of Packnga::DocumentTask and Releasetask.
+For example, We introduce to how to set base directory for document.
+Document is created in this directory.
+You can write Rakefile to set this directory path, see below.</p>
+<p><span class="caps">NOTE</span>: Please set same path to each clasess.</p>
+<pre class="code ruby"><code>
+<span class='const'>Packnga</span><span class='op'>::</span><span class='const'>DocumentTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
+  <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_base_dir'>base_dir</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>doc/</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+
+<span class='const'>Packnga</span><span class='op'>::</span><span class='const'>ReleaseTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
+  <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_base_dir'>base_dir</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>doc/</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+</code></pre>
+<p>You can set other parameters.
+Please see Packnga&#8217;s reference manual in detail.</p></div></div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

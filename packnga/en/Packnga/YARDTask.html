@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Class: Packnga::YARDTask
+  
+    &mdash; packnga
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../">
+      <span class="title">
+  Class: Packnga::YARDTask
+  
+    &mdash; packnga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../packnga/ja/Packnga/YARDTask.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../packnga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../../packnga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../../#install-packnga">Install</a></li>
+    <li id="menu-developer"><a href="../../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (Y)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Packnga.html" title="Packnga (module)">Packnga</a></span></span>
+     &raquo; 
+    <span class="title">YARDTask</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Packnga::YARDTask
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Packnga::YARDTask</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">Rake::DSL</dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/packnga/yard-task.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This class creates YARD task. YARD task generates references by YARD.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#base_dir-instance_method" title="#base_dir (instance method)">- (String) <strong>base_dir</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is used to set path of base directory of document.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#options-instance_method" title="#options (instance method)">- (Array&lt;String&gt;) <strong>options</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Custom yardoc command line options.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#readme-instance_method" title="#readme (instance method)">- (String) <strong>readme</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is used to set README file to yardoc task.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#source_files-instance_method" title="#source_files (instance method)">- (Array&lt;String&gt;) <strong>source_files</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is used to set source files for document.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text_files%3D-instance_method" title="#text_files= (instance method)">- (Array&lt;String&gt;) <strong>text_files</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is used to set text files for document.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#before_define-instance_method" title="#before_define (instance method)">- (Object) <strong>before_define</strong>(&amp;hook) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Regists yardoc parameters with block.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="base_dir=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="base_dir-instance_method">
+  
+    - (<tt>String</tt>) <strong>base_dir</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is used to set path of base directory of document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>path of base directory of document</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/yard-task.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_base_dir'>base_dir</span>
+  <span class='ivar'>@base_dir</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="options=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="options-instance_method">
+  
+    - (<tt>Array&lt;String&gt;</tt>) <strong>options</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Custom yardoc command line options</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>custom yardoc command line options</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/yard-task.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='ivar'>@options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="readme=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="readme-instance_method">
+  
+    - (<tt>String</tt>) <strong>readme</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is used to set README file to yardoc task.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>path of readme file</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/yard-task.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_readme'>readme</span>
+  <span class='ivar'>@readme</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="source_files=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="source_files-instance_method">
+  
+    - (<tt>Array&lt;String&gt;</tt>) <strong>source_files</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is used to set source files for document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>target source files</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/yard-task.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_source_files'>source_files</span>
+  <span class='ivar'>@source_files</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="text_files-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="text_files=-instance_method">
+  
+    - (<tt>Array&lt;String&gt;</tt>) <strong>text_files=</strong>(value) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is used to set text files for document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>target text files</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/yard-task.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_text_files='>text_files=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@text_files</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="before_define-instance_method">
+  
+    - (<tt>Object</tt>) <strong>before_define</strong>(&amp;hook) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Regists yardoc parameters with block.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/yard-task.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_before_define'>before_define</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_hook'>hook</span><span class='rparen'>)</span>
+  <span class='ivar'>@hooks</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_hook'>hook</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

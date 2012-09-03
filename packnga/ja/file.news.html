@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="icon" href="../../favicon.png" />
+    <title>
+  File: news
+  
+    &mdash; packnga
+  
+ - ラングバ</title>
+
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../index.html.ja">
+      <span class="title">
+  File: news
+  
+    &mdash; packnga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../packnga/en/file.news.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../packnga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../packnga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../index.html.ja#install-packnga">インストール</a></li>
+    <li id="menu-developer"><a href="../../developer.html.ja">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: news</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2>0.9.5: 2012-08-30</h2>
+<h3>改良</h3>
+<ul>
+	<li>[reference-task] YARDに実装されたYARD::<span class="caps">CLI</span>::I18nクラスを使用してpotファイルやpoファイルの作成や更新を行うようにした。</li>
+	<li>[reference-task] specに指定されたファイルとpoファイルから翻訳されたHTMLドキュメントを作るようにした。</li>
+	<li>[reference-task] <span class="caps">GNU</span> gettextにあるmsginitコマンドの代わりにgettext gemのGetText::Tools::MsgInit.runメソッドを使うようにした。</li>
+	<li>YARDTaskやReferenceTaskに対して、HTMLドキュメント生成のためのファイルをDocumentTaskから指定するようにした。</li>
+	<li>[tutorial] gemspecファイルとGem::Specification.newからspecを作成する例を追加した。</li>
+	<li>YARDTaskやReferenceTaskのreadmeファイルの設定をそれぞれのアクセサから設定できるようにした。</li>
+	<li>ドキュメントを改善した。</li>
+</ul>
+<h3>変更</h3>
+<ul>
+	<li>[reference-task] poファイルを作成するディレクトリを、指定されたドキュメントのベースディレクトリの下に作成するようにした。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>[document-task] DocumentTaskがブロックなしでもオブジェクトが生成できるように修正した。</li>
+	<li>YARDTaskやReferenceTaskのオブジェクト生成時にブロックを実行しないようにした。</li>
+	<li>[reference-task] 別プロセスでRakeタスクを実行していたのをRake::Taskクラスを使うように修正した。</li>
+</ul>
+<h3>感謝</h3>
+<ul>
+	<li>tetradiceさん</li>
+	<li>島田 浩二さん</li>
+</ul>
+<h2>0.9.4: 2011-09-27</h2>
+<h3>改良</h3>
+<ul>
+	<li>同一プロセス内では一度入力したパスワードを保存するようにした。</li>
+</ul>
+<h3>変更</h3>
+<ul>
+	<li>gem作成前にrubyのバージョンをチェックするように変更した。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>タスク&quot;release:rubyforge:news:post&quot;でRubyforgeにニュースがポストされなかったバグを修正した。</li>
+</ul>
+<h2>0.9.3: 2011-09-22</h2>
+<h3>改良</h3>
+<ul>
+	<li>パスワードを入力した後に改行するようにした。</li>
+	<li>Rubyforgeに更新情報をポストするタスク&quot;release:rubyforge:news:post&quot;を追加した。</li>
+</ul>
+<h3>変更</h3>
+<ul>
+	<li>各言語のpoファイルをアップデートするタスクの名前を変更した。
+（例えば、&quot;translate:po:ja:update&quot;は&quot;translate:po:update:ja&quot;に変更された。)</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>git tag時に添付するメッセージ中に含まれていた&quot;version&quot;という文字列がバージョン番号になるように修正した。</li>
+</ul>
+<h2>0.9.2: 2011-08-29</h2>
+<h3>改良</h3>
+<ul>
+	<li>doc/text/がないケースに対応した。</li>
+	<li>yardocのオプションのカスタマイズに対応した。</li>
+	<li>xml2poのmodeのカスタマイズに対応した。</li>
+	<li>lib/<strong>/</strong>.rbだけをデフォルトでドキュメント対象となるファイルとして使うようにした。</li>
+</ul>
+<h2>0.9.1: 2011-08-25</h2>
+<h3>改良</h3>
+<ul>
+	<li>Rubyforgeにパッケージがないときにパッケージを作るようにした。</li>
+	<li>Packnga::ReleaseTask#tag_messageを追加した。</li>
+	<li>Packnga::ReleaseTask#publish_optionsを追加した。</li>
+	<li>.htaccessファイルのパスを取得するための属性をDocumentTaskクラスに追加した。</li>
+	<li>タスク&quot;reference:publicaton:generate&quot;を追加した。
+（このタスクはリファレンスの公開準備のあとに実行されます。）</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>タスク&quot;release:reference:publish&quot;が止まってしまうバグを修正した。</li>
+	<li>Rubyforgeにtar.gzファイルをアップロードする前にグループidをチェックするようにした。</li>
+	<li>.htaccessファイルに英語ページをリダイレクトするための文のみ書くようにした。
+（チュートリアルのリダイレクトは書かないようにした。）</li>
+</ul>
+<h2>0.9.0: 2011-08-19</h2>
+<p>The first release!</p></div></div>
+
+    <div id="footer">
+  Generated on Fri Aug 31 17:25:38 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../tango-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

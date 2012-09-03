@@ -1,0 +1,946 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Class: Packnga::ReleaseTask
+  
+    &mdash; packnga
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../">
+      <span class="title">
+  Class: Packnga::ReleaseTask
+  
+    &mdash; packnga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../packnga/ja/Packnga/ReleaseTask.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../packnga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../../packnga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../../#install-packnga">Install</a></li>
+    <li id="menu-developer"><a href="../../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Packnga.html" title="Packnga (module)">Packnga</a></span></span>
+     &raquo; 
+    <span class="title">ReleaseTask</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Packnga::ReleaseTask
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Packnga::ReleaseTask</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">Rake::DSL</dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/packnga/release-task.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This class creates release tasks.</p>
+
+<p>Release tasks tag current version and install gem for test. It also define
+tasks to upload RubyForge whether option.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#base_dir%3D-instance_method" title="#base_dir= (instance method)">- (Object) <strong>base_dir</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is path of base directory of document.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#changes%3D-instance_method" title="#changes= (instance method)">- (Object) <strong>changes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is text for changes in new release to post news to
+RubyForge.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index_html_dir%3D-instance_method" title="#index_html_dir= (instance method)">- (Object) <strong>index_html_dir</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is path of HTML files written version and release date.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#publish_options%3D-instance_method" title="#publish_options= (instance method)">- (Object) <strong>publish_options</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is options for uploading RubyForge by rsync.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tag_message%3D-instance_method" title="#tag_message= (instance method)">- (Object) <strong>tag_message</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is message when tagging in release.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ReleaseTask) <strong>initialize</strong>(spec) {|_self| ... }</a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines task for preparing to release.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Packnga::ReleaseTask (class)">ReleaseTask</a></span></tt>) <strong>initialize</strong>(spec) {|_self| ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Defines task for preparing to release. Defined tasks update version and
+release-date in index files and tag in git. If you set rubyforge_project of
+Jeweler::Task.new with its given block, it also define tasks to update
+RubyForge.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>spec</span>
+      
+      
+        <span class='type'>(<tt>Gem::Specification</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>specification for your package</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>_self</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>_self</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Packnga::ReleaseTask (class)">Packnga::ReleaseTask</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the object that the method was called on</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
+  <span class='ivar'>@spec</span> <span class='op'>=</span> <span class='id identifier rubyid_spec'>spec</span>
+  <span class='ivar'>@index_html_dir</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@rubyforge</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@tag_messsage</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@publish_options</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@changes</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@rubyforge_password</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>yield</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+  <span class='id identifier rubyid_set_default_values'>set_default_values</span>
+  <span class='id identifier rubyid_define_tasks'>define_tasks</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="base_dir=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>base_dir=</strong>(value)  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is path of base directory of document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>path of base directory of document</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_base_dir='>base_dir=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@base_dir</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="changes=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>changes=</strong>(value)  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is text for changes in new release to post news to
+RubyForge.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>text for changes.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_changes='>changes=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@changes</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="index_html_dir=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>index_html_dir=</strong>(value)  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is path of HTML files written version and release date.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>path of HTML files</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_index_html_dir='>index_html_dir=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@index_html_dir</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="publish_options=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>publish_options=</strong>(value)  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is options for uploading RubyForge by rsync.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>options for uploading.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_publish_options='>publish_options=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@publish_options</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tag_message=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>tag_message=</strong>(value)  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is message when tagging in release.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>message</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tag_message='>tag_message=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@tag_message</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+</div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>
