@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>はじめに - ChupaText</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="ChupaTextリファレンスマニュアル">
+<link rel="up" href="overview.html" title="ChupaTextの概要">
+<link rel="prev" href="news.html" title="お知らせ">
+<link rel="next" href="install.html" title="プラットフォーム毎のChupaTextのインストール方法">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="../../../ranguba.css" type="text/css">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.png" />
+
+
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="header">
+  <h1 class="title">
+    <a href="../../">
+      <span class="title">Rubyでgroonga使って全文検索</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </h1>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="./">リファレンストップ</a></li>
+    <li id="menu-readme"><a href="readme.html">はじめに</a></li>
+    <li id="menu-install"><a href="install.html">インストール</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="news.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="overview.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">ChupaTextリファレンスマニュアル</th>
+<td><a accesskey="n" href="install.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="readme"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="readme.top_of_page"></a>はじめに</span></h2>
+<p>はじめに — テキスト抽出ユーティリティChupaTextの概要</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="idp5920624"></a><h2>名前</h2>
+<p>ChupaText</p>
+</div>
+<div class="refsect1">
+<a name="idp8444816"></a><h2>作者</h2>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>Nobuyoshi Nakada &lt;nakada@clear-code.com&gt;</p></li>
+<li class="listitem"><p>Kouhei Sutou &lt;kou@clear-code.com&gt;</p></li>
+</ul></div>
+</div>
+<div class="refsect1">
+<a name="idp8113520"></a><h2>ライセンス</h2>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>
+  ソースコード: LGPLバージョン2.1またはそれ以降のバージョン（詳細:
+  <a class="ulink" href="http://www.gnu.org/licenses/lgpl-2.1.html" target="_top">license/lgpl-2.1.txt</a>
+  ）です。
+</p></li>
+<li class="listitem">
+<p>ドキュメント: LGPLとGFDLとクリエイティブ・コモンズ・ライセンスのトリプルライセンス。</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="circle">
+<li class="listitem"><p>
+  LGPLバージョン2.1またはそれ以降のバージョン（詳細:
+  <a class="ulink" href="http://www.gnu.org/licenses/lgpl-2.1.html" target="_top">license/lgpl-2.1.txt</a>
+  ）です。
+</p></li>
+<li class="listitem"><p>
+  GFDLはバージョン1.3またはそれ以降のバージョン（詳細:
+  <a class="ulink" href="http://www.gnu.org/licenses/fdl.html" target="_top">license/gfdl-1.3.txt</a>
+  ）です。
+</p></li>
+<li class="listitem"><p>
+  クリエイティブ・コモンズ・ライセンスは
+  <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">表示-継承（CC BY-SA）</a>
+  です。
+</p></li>
+</ul></div>
+</li>
+<li class="listitem">
+<p>例外:</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="circle">
+<li class="listitem"><p>
+  modules/excel/: GPLバージョン2（詳細:
+  <a class="ulink" href="http://www.gnu.org/licenses/gpl-2.html" target="_top">license/gpl-2.txt</a>
+  ）です。
+  <a class="ulink" href="http://projects.gnome.org/gnumeric/" target="_top">Gnumeric</a>
+  に含まれているファイルです。
+</p></li>
+<li class="listitem"><p>...</p></li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="refsect1">
+<a name="idp5593680"></a><h2>ChupaText?</h2>
+<p>ChupaTextはPDFやオフィス文書からテキストとメタデータを抽出するユーティリティです。ライブラリ、コマンドライン、Webサービス経由で利用できます。</p>
+</div>
+<div class="refsect1">
+<a name="idp5595216"></a><h2>依存ライブラリ・ソフトウェア</h2>
+<p>必須:</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>GLib &gt;= 2.24</p></li>
+<li class="listitem"><p>libgsf</p></li>
+</ul></div>
+<p>任意:</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>Poppler</p></li>
+<li class="listitem"><p>wv</p></li>
+<li class="listitem"><p>libgoffice</p></li>
+<li class="listitem"><p>Gnumeric</p></li>
+<li class="listitem"><p>LibreOfficeまたはOpenOffice.orgまたはunoconv</p></li>
+<li class="listitem"><p>ruby &gt;= 1.9.2</p></li>
+</ul></div>
+</div>
+<div class="refsect1">
+<a name="idp5435552"></a><h2>入手方法</h2>
+<p>
+  tar.gz: 
+  <a class="ulink" href="http://rubyforge.org/frs/?group_id=8073" target="_top">&lt;URL:http://rubyforge.org/frs/?group_id=8073&gt;</a>
+  
+</p>
+</div>
+<div class="refsect1">
+<a name="idp5437600"></a><h2>リポジトリ</h2>
+<p>
+  ChupaTextのリポジトリは
+  <a class="ulink" href="http://github.com/ranguba/chupatext" target="_top">GitHub</a>
+  上にあります。
+</p>
+<pre class="programlisting">% git clone git://github.com/ranguba/chupatext.git</pre>
+</div>
+<div class="refsect1">
+<a name="idp7559776"></a><h2>インストール</h2>
+<p>
+  <a class="link" href="install.html" title="プラットフォーム毎のChupaTextのインストール方法">インストール</a>
+  を見てください。
+</p>
+</div>
+<div class="refsect1">
+<a name="idp7561856"></a><h2>使い方</h2>
+<pre class="programlisting">% chupatext [オプション ...] ファイル ...</pre>
+<p>ファイルにテキストを抽出したいファイルを指定します。</p>
+<p>
+  詳細は
+  <a class="link" href="chupatext.html" title="chupatext">chupatext</a>
+  を見てください。
+</p>
+</div>
+<div class="refsect1">
+<a name="idp7565040"></a><h2>感謝</h2>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Yuto Hayamizu</p></li></ul></div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</div>
+
+<div class="sponsors">
+  <p id="sponsor-rubyforge">
+    <a href="http://rubyforge.org/projects/groonga/">
+      <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+    </a>
+  </p>
+  <p id="sponsor-github">
+    <a href="http://github.com/ranguba/">
+      <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+    </a>
+  </p>
+  <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+      <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../tango-logo.png" />
+    </a>
+  </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+</div>
+
+</body>
+</html>

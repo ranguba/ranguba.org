@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>バージョン情報 - ChupaText</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="ChupaTextリファレンスマニュアル">
+<link rel="up" href="extracting.html" title="抽出">
+<link rel="prev" href="extracting.html" title="抽出">
+<link rel="next" href="index-all.html" title="すべてのシンボル一覧">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="../../../ranguba.css" type="text/css">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.png" />
+
+
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="header">
+  <h1 class="title">
+    <a href="../../">
+      <span class="title">Rubyでgroonga使って全文検索</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </h1>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="./">リファレンストップ</a></li>
+    <li id="menu-readme"><a href="readme.html">はじめに</a></li>
+    <li id="menu-install"><a href="install.html">インストール</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="extracting.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="extracting.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">ChupaTextリファレンスマニュアル</th>
+<td><a accesskey="n" href="index-all.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#chupatext-Version-Information.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#chupatext-Version-Information.description" class="shortcut">説明</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="chupatext-Version-Information"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="chupatext-Version-Information.top_of_page"></a>バージョン情報</span></h2>
+<p>バージョン情報 — ChupaTextのバージョンをチェックする変数とマクロ</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="chupatext-Version-Information.synopsis"></a><h2>概要</h2>
+<pre class="synopsis">#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-CHECK-VERSION:CAPS" title="CHUPA_CHECK_VERSION()">CHUPA_CHECK_VERSION</a>                 (major,
+                                                         minor,
+                                                         micro)
+#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-COMMIT-ID:CAPS" title="CHUPA_COMMIT_ID">CHUPA_COMMIT_ID</a>
+#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-N-COMMITS:CAPS" title="CHUPA_N_COMMITS">CHUPA_N_COMMITS</a>
+#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-RELEASE-DATE:CAPS" title="CHUPA_RELEASE_DATE">CHUPA_RELEASE_DATE</a>
+#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-VERSION:CAPS" title="CHUPA_VERSION">CHUPA_VERSION</a>
+#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-VERSION-DESCRIPTION:CAPS" title="CHUPA_VERSION_DESCRIPTION">CHUPA_VERSION_DESCRIPTION</a>
+#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-VERSION-MAJOR:CAPS" title="CHUPA_VERSION_MAJOR">CHUPA_VERSION_MAJOR</a>
+#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-VERSION-MICRO:CAPS" title="CHUPA_VERSION_MICRO">CHUPA_VERSION_MICRO</a>
+#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-VERSION-MINOR:CAPS" title="CHUPA_VERSION_MINOR">CHUPA_VERSION_MINOR</a>
+#define             <a class="link" href="chupatext-Version-Information.html#CHUPA-VERSION-STRING:CAPS" title="CHUPA_VERSION_STRING">CHUPA_VERSION_STRING</a>
+<span class="returnvalue">gint</span>                <a class="link" href="chupatext-Version-Information.html#chupa-n-commits" title="chupa_n_commits ()">chupa_n_commits</a>                     (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">gint</span>                <a class="link" href="chupatext-Version-Information.html#chupa-release-date" title="chupa_release_date ()">chupa_release_date</a>                  (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">gint</span>                <a class="link" href="chupatext-Version-Information.html#chupa-version" title="chupa_version ()">chupa_version</a>                       (<em class="parameter"><code><span class="type">void</span></code></em>);
+const <span class="returnvalue">gchar</span> *       <a class="link" href="chupatext-Version-Information.html#chupa-version-description" title="chupa_version_description ()">chupa_version_description</a>           (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">gint</span>                <a class="link" href="chupatext-Version-Information.html#chupa-version-major" title="chupa_version_major ()">chupa_version_major</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">gint</span>                <a class="link" href="chupatext-Version-Information.html#chupa-version-micro" title="chupa_version_micro ()">chupa_version_micro</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">gint</span>                <a class="link" href="chupatext-Version-Information.html#chupa-version-minor" title="chupa_version_minor ()">chupa_version_minor</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+const <span class="returnvalue">gchar</span> *       <a class="link" href="chupatext-Version-Information.html#chupa-version-string" title="chupa_version_string ()">chupa_version_string</a>                (<em class="parameter"><code><span class="type">void</span></code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="chupatext-Version-Information.description"></a><h2>説明</h2>
+<p>ChupaTextはバージョン情報を提供します。主にconfigureスクリプトの中で便利に使うことができます。テストでは普通はここで説明する機能を使わないでしょう。</p>
+</div>
+<div class="refsect1">
+<a name="chupatext-Version-Information.details"></a><h2>詳細</h2>
+<div class="refsect2">
+<a name="CHUPA-CHECK-VERSION:CAPS"></a><h3>CHUPA_CHECK_VERSION()</h3>
+<pre class="programlisting">#define             CHUPA_CHECK_VERSION(major, minor, micro)</pre>
+<p>ChupaTextのバージョンをチェックします。ChupaTextのヘッダーファイルに書いてあるバージョンが渡されたバージョンと同じか新しかったら真を返します。</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>major</code></em> :</span></p></td>
+<td>メジャーバージョン番号。</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>minor</code></em> :</span></p></td>
+<td>マイナーバージョン番号。</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>micro</code></em> :</span></p></td>
+<td>マイクロバージョン番号。</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHUPA-COMMIT-ID:CAPS"></a><h3>CHUPA_COMMIT_ID</h3>
+<pre class="programlisting">#define CHUPA_COMMIT_ID "g02c92e4"
+</pre>
+<p>このバージョンのコミットIDです。</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHUPA-N-COMMITS:CAPS"></a><h3>CHUPA_N_COMMITS</h3>
+<pre class="programlisting">#define CHUPA_N_COMMITS 5
+</pre>
+<p>リリースされたバージョンからのコミット数です。</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHUPA-RELEASE-DATE:CAPS"></a><h3>CHUPA_RELEASE_DATE</h3>
+<pre class="programlisting">#define CHUPA_RELEASE_DATE 20110320
+</pre>
+<p>リリース日です。</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHUPA-VERSION:CAPS"></a><h3>CHUPA_VERSION</h3>
+<pre class="programlisting">#define             CHUPA_VERSION</pre>
+<p>(MAJOR + 1000000 + MINOR + 1000 + MICRO)という式で計算したChupaTextのバージョンを表す数です。</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHUPA-VERSION-DESCRIPTION:CAPS"></a><h3>CHUPA_VERSION_DESCRIPTION</h3>
+<pre class="programlisting">#define             CHUPA_VERSION_DESCRIPTION</pre>
+<p>"#{MAJOR}.#{MINOR}.#{MICRO}-#{N_COMMITS}-#{COMMIT_ID} #{DATE}"という形式のChupaTextのバージョン番号を説明する文字列です。</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHUPA-VERSION-MAJOR:CAPS"></a><h3>CHUPA_VERSION_MAJOR</h3>
+<pre class="programlisting">#define CHUPA_VERSION_MAJOR 1
+</pre>
+<p>ChupaTextのメジャーバージョン。</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHUPA-VERSION-MICRO:CAPS"></a><h3>CHUPA_VERSION_MICRO</h3>
+<pre class="programlisting">#define CHUPA_VERSION_MICRO 0
+</pre>
+<p>ChupaTextのマイクロバージョン。</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHUPA-VERSION-MINOR:CAPS"></a><h3>CHUPA_VERSION_MINOR</h3>
+<pre class="programlisting">#define CHUPA_VERSION_MINOR 0
+</pre>
+<p>ChupaTextのマイナーバージョン。</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="CHUPA-VERSION-STRING:CAPS"></a><h3>CHUPA_VERSION_STRING</h3>
+<pre class="programlisting">#define CHUPA_VERSION_STRING "1.0.0"
+</pre>
+<p>"#{MAJOR}.#{MINOR}.#{MICRO}"という形式のChupaTextのバージョンを表す文字列です。</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chupa-n-commits"></a><h3>chupa_n_commits ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                chupa_n_commits                     (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chupa-release-date"></a><h3>chupa_release_date ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                chupa_release_date                  (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chupa-version"></a><h3>chupa_version ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                chupa_version                       (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chupa-version-description"></a><h3>chupa_version_description ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *       chupa_version_description           (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chupa-version-major"></a><h3>chupa_version_major ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                chupa_version_major                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chupa-version-micro"></a><h3>chupa_version_micro ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                chupa_version_micro                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chupa-version-minor"></a><h3>chupa_version_minor ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                chupa_version_minor                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="chupa-version-string"></a><h3>chupa_version_string ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *       chupa_version_string                (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</div>
+
+<div class="sponsors">
+  <p id="sponsor-rubyforge">
+    <a href="http://rubyforge.org/projects/groonga/">
+      <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+    </a>
+  </p>
+  <p id="sponsor-github">
+    <a href="http://github.com/ranguba/">
+      <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+    </a>
+  </p>
+  <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+      <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../tango-logo.png" />
+    </a>
+  </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+</div>
+
+</body>
+</html>
