@@ -1,0 +1,885 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Class: Groonga::Logger
+  
+    &mdash; rroonga
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../">
+      <span class="title">
+  Class: Groonga::Logger
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../rroonga/ja/Groonga/Logger.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../rroonga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../../rroonga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../../#install-rroonga">Install</a></li>
+    <li id="menu-developer"><a href="../../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (L)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
+     &raquo; 
+    <span class="title">Logger</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Groonga::Logger
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Groonga::Logger</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/groonga/rb-grn-logger.c<span class="defines">,<br />
+  ext/groonga/rb-grn-logger.c</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>groongaから出力されるログを記録するためのクラス。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log_path-class_method" title="Groonga::Logger.log_path (class method)">+ (Object) <strong>Groonga::Logger.log_path</strong>(#) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>groongaのデフォルトロガーがログを出力するファイルの
+パスを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log_path%3D-class_method" title="Groonga::Logger.log_path= (class method)">+ (Object) <strong>Groonga::Logger.log_path=</strong>(path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>groongaのデフォルトロガーがログを出力するファイルのパスを
+指定する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_log_path-class_method" title="Groonga::Logger.query_log_path (class method)">+ (Object) <strong>Groonga::Logger.query_log_path</strong>(#) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>groongaのデフォルトロガーがクエリログを出力するファイルの
+パスを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_log_path%3D-class_method" title="Groonga::Logger.query_log_path= (class method)">+ (Object) <strong>Groonga::Logger.query_log_path=</strong>(path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>groongaのデフォルトロガーがクエリログを出力するファイルの
+パスを指定する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register-class_method" title="Groonga::Logger.register (class method)">+ (Object) <strong>Groonga::Logger.register</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>groongaがログを出力する度に呼び出されるブロックを登録す
+る。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reopen-class_method" title="Groonga::Logger.reopen (class method)">+ (Object) <strong>Groonga::Logger.reopen</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>groongaのデフォルトロガーがログを出力するファイルを再オー
+プンする。ログファイルのバックアップ時などに使用する。.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Object) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 208</span>
+
+static VALUE
+rb_grn_logger_initialize (int argc, VALUE *argv, VALUE self)
+{
+    rb_grn_logger_info_wrapper *wrapper;
+    grn_logger_info *logger;
+    grn_log_level level;
+    int flags = 0;
+    VALUE options, rb_level, rb_time, rb_title, rb_message, rb_location;
+    VALUE rb_handler;
+
+    rb_scan_args(argc, argv, &quot;01&amp;&quot;, &amp;options, &amp;rb_handler);
+
+    rb_grn_scan_options(options,
+                        &quot;level&quot;, &amp;rb_level,
+                        &quot;time&quot;, &amp;rb_time,
+                        &quot;title&quot;, &amp;rb_title,
+                        &quot;message&quot;, &amp;rb_message,
+                        &quot;location&quot;, &amp;rb_location,
+                        NULL);
+
+    level = RVAL2GRNLOGLEVEL(rb_level);
+
+    if (NIL_P(rb_time) || RVAL2CBOOL(rb_time))
+        flags |= GRN_LOG_TIME;
+    if (NIL_P(rb_title) || RVAL2CBOOL(rb_title))
+        flags |= GRN_LOG_TITLE;
+    if (NIL_P(rb_message) || RVAL2CBOOL(rb_message))
+        flags |= GRN_LOG_MESSAGE;
+    if (NIL_P(rb_location) || RVAL2CBOOL(rb_location))
+        flags |= GRN_LOG_LOCATION;
+
+    wrapper = ALLOC(rb_grn_logger_info_wrapper);
+    logger = ALLOC(grn_logger_info);
+    wrapper-&gt;logger = logger;
+    DATA_PTR(self) = wrapper;
+
+    logger-&gt;max_level = level;
+    logger-&gt;flags = flags;
+    rb_grn_logger_set_handler(self, rb_handler);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="log_path-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Logger.log_path</strong>(#) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaのデフォルトロガーがログを出力するファイルの
+パスを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 405</span>
+
+static VALUE
+rb_grn_logger_s_get_log_path (VALUE klass)
+{
+#ifdef WIN32
+    rb_raise(rb_eNotImpError, &quot;grn_log_path isn't available on Windows.&quot;);
+    return Qnil;
+#else
+    if (grn_log_path) {
+	return rb_str_new2(grn_log_path);
+    } else {
+	return Qnil;
+    }
+#endif
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log_path=-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Logger.log_path=</strong>(path) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaのデフォルトロガーがログを出力するファイルのパスを
+指定する。</p>
+<p>Groonga::Logger.registerで独自のロガーを設定している場合、
+設定している独自ロガーは無効になる。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 430</span>
+
+static VALUE
+rb_grn_logger_s_set_log_path (VALUE klass, VALUE path)
+{
+#ifdef WIN32
+    rb_raise(rb_eNotImpError, &quot;grn_qlog_path isn't available on Windows.&quot;);
+    return Qnil;
+#else
+    return rb_grn_logger_s_set_path(klass, path, &amp;grn_log_path, &quot;@@log_path&quot;);
+#endif
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_log_path-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Logger.query_log_path</strong>(#) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaのデフォルトロガーがクエリログを出力するファイルの
+パスを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 448</span>
+
+static VALUE
+rb_grn_logger_s_get_query_log_path (VALUE klass)
+{
+#ifdef WIN32
+    rb_raise(rb_eNotImpError, &quot;grn_qlog_path isn't available on Windows.&quot;);
+    return Qnil;
+#else
+    if (grn_qlog_path) {
+	return rb_str_new2(grn_qlog_path);
+    } else {
+	return Qnil;
+    }
+#endif
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_log_path=-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Logger.query_log_path=</strong>(path) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaのデフォルトロガーがクエリログを出力するファイルの
+パスを指定する。</p>
+<p>Groonga::Logger.registerで独自のロガーを設定している場合、
+設定している独自ロガーは無効になる。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 473</span>
+
+static VALUE
+rb_grn_logger_s_set_query_log_path (VALUE klass, VALUE path)
+{
+#ifdef WIN32
+    rb_raise(rb_eNotImpError, &quot;grn_qlog_path isn't available on Windows.&quot;);
+    return Qnil;
+#else
+    return rb_grn_logger_s_set_path(klass, path, &amp;grn_qlog_path,
+				    &quot;@@query_log_path&quot;);
+#endif
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Logger.register</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaがログを出力する度に呼び出されるブロックを登録す
+る。</p>
+<p>ブロックに渡されてくる引数は <em>level</em> ,  <em>time</em> ,  <em>title</em> ,
+<em>message</em> ,  <em>location</em> の5つで、 <em>level</em> はSymbol、それ以外は
+全て文字列で渡される。その4つについては <em>options</em> で <ins>false</ins>
+を指定することでブロックに渡さないようにすることができ、
+その場合は空文字列が実際には渡される。</p>
+<p><em>options</em> に指定可能な値は以下の通り。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 297</span>
+
+static VALUE
+rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
+{
+    VALUE logger, rb_context = Qnil;
+    grn_ctx *context;
+
+    logger = rb_funcall2(klass, rb_intern(&quot;new&quot;), argc, argv);
+    rb_grn_logger_set_handler(logger, rb_block_proc());
+    context = rb_grn_context_ensure(&amp;rb_context);
+    grn_logger_info_set(context, RVAL2GRNLOGGER(logger));
+    rb_grn_context_check(context, logger);
+    rb_cv_set(klass, &quot;@@current_logger&quot;, logger);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reopen-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Logger.reopen</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaのデフォルトロガーがログを出力するファイルを再オー
+プンする。ログファイルのバックアップ時などに使用する。</p>
+<p>Groonga::Logger.registerで独自のロガーを設定している場合
+は例外が発生する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+365
+366
+367
+368
+369</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 365</span>
+
+static VALUE
+rb_grn_logger_s_reopen (VALUE klass)
+{
+    return rb_grn_logger_s_reopen_with_related_object(klass, klass);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,2384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../favicon.ico" />
+    <link rel="icon" href="../../../../favicon.png" />
+    <title>
+  Class: Groonga::Schema::TableDefinition
+  
+    &mdash; rroonga
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../../">
+      <span class="title">
+  Class: Groonga::Schema::TableDefinition
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../../rroonga/ja/Groonga/Schema/TableDefinition.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../../rroonga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../../../rroonga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../../../#install-rroonga">Install</a></li>
+    <li id="menu-developer"><a href="../../../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Groonga.html" title="Groonga (module)">Groonga</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Schema.html" title="Groonga::Schema (class)">Schema</a></span></span>
+     &raquo; 
+    <span class="title">TableDefinition</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Groonga::Schema::TableDefinition
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Groonga::Schema::TableDefinition</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="Path.html" title="Groonga::Schema::Path (module)">Path</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/groonga/schema.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>スキーマ定義時にGroonga::Schema.create_tableや
+Groonga::Schema#create_tableからブロックに渡されてくる
+オブジェクト</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  <h2>Constant Summary</h2>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">- (Object) <strong>name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルの名前.</p></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#boolean-instance_method" title="#boolean (instance method)">- (Object) <strong>boolean</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #bool)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の真偽値を格納できるカラムを作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#column-instance_method" title="#column (instance method)">- (Object) <strong>column</strong>(name, type, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> で型が <em>type</em> のカラムを作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#float-instance_method" title="#float (instance method)">- (Object) <strong>float</strong>(name, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のieee754形式の64bit浮動小数点数のカラム
+を作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index-instance_method" title="#index (instance method)">- (Object) <strong>index</strong>(target_table_or_target_column_full_name, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>target_table</em> の <em>target_column</em> を対象とするインデック
+スカラムを作成します。複数のカラムを指定することもで
+きます。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#integer16-instance_method" title="#integer16 (instance method)">- (Object) <strong>integer16</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #int16)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a 16 bit signed integer column named <code>name</code>.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#integer32-instance_method" title="#integer32 (instance method)">- (Object) <strong>integer32</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #integer, #int32)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の32bit符号付き整数のカラムを作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#integer64-instance_method" title="#integer64 (instance method)">- (Object) <strong>integer64</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #int64)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の64bit符号付き整数のカラムを作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#integer8-instance_method" title="#integer8 (instance method)">- (Object) <strong>integer8</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #int8)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a 8 bit signed integer column named <code>name</code>.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#long_text-instance_method" title="#long_text (instance method)">- (Object) <strong>long_text</strong>(name, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の2Gbyte以下の文字列を格納できるカラムを
+作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reference-instance_method" title="#reference (instance method)">- (Object) <strong>reference</strong>(name, table = nil, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> で <em>table</em> のレコードIDを格納する参照カラ
+ムを作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_column-instance_method" title="#remove_column (instance method)">- (Object) <strong>remove_column</strong>(name, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のカラムを削除します。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_index-instance_method" title="#remove_index (instance method)">- (Object) <strong>remove_index</strong>(target_table_or_target_column_full_name, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>target_table</em> の <em>target_column</em> を対象とするインデッ
+クスカラムを削除します。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rename_column-instance_method" title="#rename_column (instance method)">- (Object) <strong>rename_column</strong>(current_name, new_name, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Renames <em>current_name</em> column to <em>new_name</em> column.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#short_text-instance_method" title="#short_text (instance method)">- (Object) <strong>short_text</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #string)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の4Kbyte以下の文字列を格納できるカラムを
+作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text-instance_method" title="#text (instance method)">- (Object) <strong>text</strong>(name, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の64Kbyte以下の文字列を格納できるカラムを
+作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#time-instance_method" title="#time (instance method)">- (Object) <strong>time</strong>(name, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の64bit符号付き整数で1970年1月1日0時0分
+0秒からの経過マイクロ秒数を格納するカラムを作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#timestamps-instance_method" title="#timestamps (instance method)">- (Object) <strong>timestamps</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>以下と同様:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tokyo_geo_point-instance_method" title="#tokyo_geo_point (instance method)">- (Object) <strong>tokyo_geo_point</strong>(name, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a geo point in Tokyo geodetic system column
+named <code>name</code>.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unsigned_integer16-instance_method" title="#unsigned_integer16 (instance method)">- (Object) <strong>unsigned_integer16</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #uint16)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a 16 bit unsigned integer column named <code>name</code>.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unsigned_integer32-instance_method" title="#unsigned_integer32 (instance method)">- (Object) <strong>unsigned_integer32</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #unsigned_integer, #uint32)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の32bit符号なし整数のカラムを作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unsigned_integer64-instance_method" title="#unsigned_integer64 (instance method)">- (Object) <strong>unsigned_integer64</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #uint64)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の64bit符号なし整数のカラムを作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unsigned_integer8-instance_method" title="#unsigned_integer8 (instance method)">- (Object) <strong>unsigned_integer8</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #uint8)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a 8 bit unsigned integer column named <code>name</code>.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#wgs84_geo_point-instance_method" title="#wgs84_geo_point (instance method)">- (Object) <strong>wgs84_geo_point</strong>(name, options = {}) </a>
+    
+
+    
+      (also: #geo_point)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a geo point in <span class="caps">WGS</span> 84 (World Geodetic System) column
+named <code>name</code>.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="name-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>name</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>テーブルの名前</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1002
+1003
+1004</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1002</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="boolean-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>boolean</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='bool-instance_method'>bool</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> の真偽値を格納できるカラムを作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1355
+1356
+1357</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1355</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_boolean'>boolean</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bool</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="column-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>column</strong>(name, type, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> で型が <em>type</em> のカラムを作成する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:force</span>
+          <span class="type">(<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The force</p>
+<p><ins>true</ins> を指定すると既存の同名のカラムが
+存在していても、強制的に新しいカラムを作成する。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:path</span>
+          <span class="type">(<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The path</p>
+<p>カラムを保存するパス。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:persistent</span>
+          <span class="type">(<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The persistent</p>
+<p><ins>true</ins> を指定すると永続カラムとなる。+:path+ を省略
+した場合は自動的にパスが付加される。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:type</span>
+          <span class="type">(<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:scalar</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The type</p>
+<p>カラムの値の格納方法について指定する。
+<b>:scalar</b>
+  スカラ値(単独の値)を格納する。
+<b>:vector</b>
+  値の配列を格納する。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:compress</span>
+          <span class="type">(<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The compress</p>
+<p>値の圧縮方法を指定する。省略した場合は、圧縮しない。
+<b>:zlib</b>
+  値をzlib圧縮して格納する。
+<b>:lzo</b>
+  値をlzo圧縮して格納する。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1068
+1069
+1070
+1071
+1072
+1073
+1074
+1075
+1076
+1077</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1068</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnDefinition</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>ColumnDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_update_definition'>update_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnDefinition</span><span class='comma'>,</span> <span class='id identifier rubyid_definition'>definition</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
+  <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_column_options'>column_options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="float-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>float</strong>(name, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> のieee754形式の64bit浮動小数点数のカラム
+を作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1289
+1290
+1291</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1289</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_float'>float</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Float</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="index-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>index</strong>(target_table_or_target_column_full_name, *args) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>target_table</em> の <em>target_column</em> を対象とするインデック
+スカラムを作成します。複数のカラムを指定することもで
+きます。</p>
+<p><em>target_column_full_name</em> で指定するときはテーブル名
+とカラム名を&quot;.&quot;でつなげます。例えば、「Users」テーブ
+ルの「name」カラムのインデックスカラムを指定する場合
+はこうなります。</p>
+table.index(&#8220;Users.name&#8221;)
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1153
+1154
+1155
+1156
+1157
+1158
+1159
+1160
+1161
+1162
+1163
+1164
+1165
+1166
+1167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1153</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_target_table_or_target_column_full_name'>target_table_or_target_column_full_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_target_table'>target_table</span><span class='comma'>,</span> <span class='id identifier rubyid_target_columns'>target_columns</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span>
+    <span class='id identifier rubyid_parse_index_argument'>parse_index_argument</span><span class='lparen'>(</span><span class='id identifier rubyid_target_table_or_target_column_full_name'>target_table_or_target_column_full_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='const'>IndexColumnDefinition</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>IndexColumnDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_update_definition'>update_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='const'>IndexColumnDefinition</span><span class='comma'>,</span> <span class='id identifier rubyid_definition'>definition</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_target_table'>target_table</span> <span class='op'>=</span> <span class='id identifier rubyid_target_table'>target_table</span>
+  <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_target_columns'>target_columns</span> <span class='op'>=</span> <span class='id identifier rubyid_target_columns'>target_columns</span>
+  <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_column_options'>column_options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="integer16-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>integer16</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='int16-instance_method'>int16</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Defines a 16 bit signed integer column named <code>name</code>.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the column name</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>({}) the options</p></div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1219
+1220
+1221</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1219</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_integer16'>integer16</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int16</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="integer32-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>integer32</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='integer-instance_method'>integer</span>, <span id='int32-instance_method'>int32</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> の32bit符号付き整数のカラムを作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1228
+1229
+1230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_integer32'>integer32</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int32</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="integer64-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>integer64</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='int64-instance_method'>int64</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> の64bit符号付き整数のカラムを作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1238
+1239
+1240</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1238</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_integer64'>integer64</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="integer8-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>integer8</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='int8-instance_method'>int8</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Defines a 8 bit signed integer column named <code>name</code>.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the column name</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>({}) the options</p></div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1208
+1209
+1210</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1208</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_integer8'>integer8</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int8</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="long_text-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>long_text</strong>(name, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> の2Gbyte以下の文字列を格納できるカラムを
+作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1334
+1335
+1336</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1334</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_long_text'>long_text</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LongText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reference-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>reference</strong>(name, table = nil, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> で <em>table</em> のレコードIDを格納する参照カラ
+ムを作成する。</p>
+<p><em>table</em> が省略された場合は <em>name</em> の複数形が使われる。
+例えば、 <em>name</em> が&quot;user&quot;な場合は <em>table</em> は&quot;users&quot;になる。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1346
+1347
+1348
+1349</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1346</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reference'>reference</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>||=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_context'>context</span><span class='op'>|</span> <span class='id identifier rubyid_guess_table_name'>guess_table_name</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_column-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>remove_column</strong>(name, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> のカラムを削除します。</p>
+<p><em>options</em> に指定可能な値はありません(<span class="caps">TODO</span> <em>options</em> は不要?)。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1083
+1084
+1085
+1086
+1087
+1088
+1089
+1090
+1091</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1083</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnRemoveDefinition</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>ColumnRemoveDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_update_definition'>update_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnRemoveDefinition</span><span class='comma'>,</span> <span class='id identifier rubyid_definition'>definition</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_index-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>remove_index</strong>(target_table_or_target_column_full_name, *args) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>target_table</em> の <em>target_column</em> を対象とするインデッ
+クスカラムを削除します。</p>
+<p><em>target_column_full_name</em> で指定するときはテーブル名
+とカラム名を&quot;.&quot;でつなげます。例えば、「Users」テーブ
+ルの「name」カラムのインデックスカラムを削除する場合
+はこうなります。</p>
+table.remove_index(&#8220;Users.name&#8221;)
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1183
+1184
+1185
+1186
+1187
+1188
+1189
+1190
+1191
+1192
+1193
+1194
+1195
+1196
+1197
+1198
+1199
+1200</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1183</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_index'>remove_index</span><span class='lparen'>(</span><span class='id identifier rubyid_target_table_or_target_column_full_name'>target_table_or_target_column_full_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_target_table'>target_table</span><span class='comma'>,</span> <span class='id identifier rubyid_target_columns'>target_columns</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span>
+    <span class='id identifier rubyid_parse_index_argument'>parse_index_argument</span><span class='lparen'>(</span><span class='id identifier rubyid_target_table_or_target_column_full_name'>target_table_or_target_column_full_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>||=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_context'>context</span><span class='op'>|</span>
+    <span class='const'>IndexColumnDefinition</span><span class='period'>.</span><span class='id identifier rubyid_column_name'>column_name</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span>
+                                      <span class='id identifier rubyid_target_table'>target_table</span><span class='comma'>,</span>
+                                      <span class='id identifier rubyid_target_columns'>target_columns</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='const'>ColumnRemoveDefinition</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>ColumnRemoveDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_update_definition'>update_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='const'>ColumnRemoveDefinition</span><span class='comma'>,</span> <span class='id identifier rubyid_definition'>definition</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rename_column-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>rename_column</strong>(current_name, new_name, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Renames <em>current_name</em> column to <em>new_name</em> column.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default
+value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt>Groonga:Context</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The context to be used in renaming.</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1100
+1101
+1102
+1103
+1104
+1105
+1106
+1107
+1108
+1109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnRenameDefinition</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>ColumnRenameDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span>
+                                            <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_update_definition'>update_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnRenameDefinition</span><span class='comma'>,</span> <span class='id identifier rubyid_definition'>definition</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_definition'>definition</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="short_text-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>short_text</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='string-instance_method'>string</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> の4Kbyte以下の文字列を格納できるカラムを
+作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1315
+1316
+1317</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1315</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="text-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>text</strong>(name, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> の64Kbyte以下の文字列を格納できるカラムを
+作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1325
+1326
+1327</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1325</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="time-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>time</strong>(name, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> の64bit符号付き整数で1970年1月1日0時0分
+0秒からの経過マイクロ秒数を格納するカラムを作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1298
+1299
+1300</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1298</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Time</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="timestamps-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>timestamps</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>以下と同様:
+  table.time(&#8220;updated_at&#8221;)
+  table.time(&#8220;created_at&#8221;)</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1305
+1306
+1307
+1308</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1305</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_timestamps'>timestamps</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>created_at</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>updated_at</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tokyo_geo_point-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>tokyo_geo_point</strong>(name, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Defines a geo point in Tokyo geodetic system column
+named <code>name</code>.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the column name</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>({}) the options</p></div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1378
+1379
+1380</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1378</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tokyo_geo_point'>tokyo_geo_point</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokyoGeoPoint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unsigned_integer16-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unsigned_integer16</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='uint16-instance_method'>uint16</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Defines a 16 bit unsigned integer column named <code>name</code>.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the column name</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>({}) the options</p></div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1260
+1261
+1262</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1260</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer16'>unsigned_integer16</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt16</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unsigned_integer32-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unsigned_integer32</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='unsigned_integer-instance_method'>unsigned_integer</span>, <span id='uint32-instance_method'>uint32</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> の32bit符号なし整数のカラムを作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1269
+1270
+1271</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1269</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer32'>unsigned_integer32</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt32</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unsigned_integer64-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unsigned_integer64</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='uint64-instance_method'>uint64</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>名前が <em>name</em> の64bit符号なし整数のカラムを作成する。</p>
+<p><em>options</em> に指定可能な値は
+<span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column</a></span> を参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1279
+1280
+1281</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1279</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer64'>unsigned_integer64</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unsigned_integer8-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unsigned_integer8</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='uint8-instance_method'>uint8</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Defines a 8 bit unsigned integer column named <code>name</code>.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the column name</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>({}) the options</p></div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1249
+1250
+1251</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1249</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer8'>unsigned_integer8</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt8</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="wgs84_geo_point-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>wgs84_geo_point</strong>(name, options = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='geo_point-instance_method'>geo_point</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Defines a geo point in <span class="caps">WGS</span> 84 (World Geodetic System) column
+named <code>name</code>.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the column name</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>({}) the options</p></div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1389
+1390
+1391</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1389</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_wgs84_geo_point'>wgs84_geo_point</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WGS84GeoPoint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

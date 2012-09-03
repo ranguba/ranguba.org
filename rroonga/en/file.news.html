@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="icon" href="../../favicon.png" />
+    <title>
+  File: news
+  
+    &mdash; rroonga
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../">
+      <span class="title">
+  File: news
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../rroonga/ja/file.news.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../rroonga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../rroonga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../#install-rroonga">Install</a></li>
+    <li id="menu-developer"><a href="../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: news</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="2-0-5">2.0.5: 2012-05-30</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 2.0.3.</li>
+	<li>Added more error checks.</li>
+	<li>Added missing backslash escape for groonga command.</li>
+</ul>
+<h2 id="2-0-4">2.0.4: 2012-05-02</h2>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a bug that weight of match target is ignored.</li>
+</ul>
+<h2 id="2-0-3">2.0.3: 2012-05-02</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 2.0.2.</li>
+	<li>Groonga::Table#each supports options that are same as
+  Groonga::Table#open_cursor&#8217;s one.</li>
+	<li>[grndump] added <code>--order-by=id</code> option. With this option, dumped
+  records are sorted by ID instead of key. You can restore records
+  without ID change if you don&#8217;t delete any records. [#1341]</li>
+	<li>Supported building on Windows with RubyInstaller for Windows with DevKit.
+  [GitHub#6] [Patch by @ongaeshi]</li>
+	<li>Supported similar search by <code>table.select {|record|
+  record.column.similar_search(text)}</code> syntax.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a GC related crach bug.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>@ongaeshi</li>
+</ul>
+<h2 id="2-0-2">2.0.2: 2012-03-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 2.0.1.</li>
+	<li>Added <a href="http://groonga.rubyforge.org/#logo">logos</a> .</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a Groonga::Snipet related crach bug caused by GC.</li>
+</ul>
+<h2 id="2-0-0">2.0.0: 2012-03-22</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 2.0.0.</li>
+	<li>[gem][windows] Removed mswin packages.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>[test] Fixed version test failure. [GitHub#4] [Reported by @takkanm]</li>
+	<li>Fixed a Groonga::Expression related crach bug caused by GC.</li>
+	<li>[doc] Fixed broken <span class="caps">HTML</span> output. [groonga-dev,00699]
+  [Reported by Hirano]</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>@takkanm</li>
+	<li>Hirano</li>
+</ul>
+<h2 id="1-3-1">1.3.1: 2012-01-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 1.3.0.</li>
+	<li>[schema] Supported Int8, Int16, UInt8 and UInt16.</li>
+	<li>[schema] Supported TokyoGeoPoint and WGS84GeoPoint.</li>
+	<li>[schema][dumper] Supported Boolean and more built-in types.
+  [Reported by @mashiro]</li>
+	<li>[schema] Supported type object as column type. [#1002]</li>
+	<li>Added Groonga::VariableSizeColumn#compressed?. [#1004]</li>
+	<li>Added Groonga::Record#score=.</li>
+	<li>Improve performance for encoded string.</li>
+	<li>Added Groonga::Command::Builder.escape_value.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>@mashiro</li>
+</ul>
+<h2 id="1-3-0">1.3.0: 2011-11-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>[schema] Remove also needless db.tables/ directory if it is empty.</li>
+	<li>[schema] Remove also needless db.tables/table.columns/ directory if it is empty.</li>
+	<li>Added query log parser.</li>
+	<li>Added groonga-query-log-extract command.</li>
+	<li>Added grntest log analyzer.</li>
+	<li>Added <span class="caps">JSON</span> gem dependency.</li>
+	<li>Supported groonga 1.2.8.</li>
+	<li>Dropped groonga 1.2.7 or former support.</li>
+	<li>Added Groonga::Table#defrag.</li>
+	<li>Added Groonga::Table#rename.</li>
+	<li>Added Groonga::Column#rename.</li>
+	<li>Added Groonga::DoubleArrayTrie.</li>
+	<li>[schema] Supported table rename.</li>
+	<li>[schema] Supported column rename.</li>
+	<li>[schema] Supported double array trie.</li>
+</ul>
+<h3>Changes</h3>
+<ul>
+	<li>[schema] Don&#8217;t use named path by default for location aware DB.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a crash problem on GC.</li>
+</ul>
+<h2>1.2.9: 2011-09-16</h2>
+<h3>Fixes</h3>
+<ul>
+	<li>deleted unneed object files.</li>
+</ul>
+<h2>1.2.8: 2011-09-16</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>supported &#8220;!=&#8221; expression for column in block of Groonga::Table#select.</li>
+	<li>accepted Hash like object as options.</li>
+	<li>supported vector in dump in Ruby syntax.</li>
+	<li>supported GRN_CTX_PER_DB environment variables.
+(<span class="caps">NOTE</span>: You should pay attention to use this variables.)</li>
+</ul>
+<h2>1.2.7: 2011-08-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Added Groonga::Snippet#close that frees resource.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed build error on Ruby 1.8.7.</li>
+</ul>
+<h2>1.2.6: 2011-08-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 1.2.5.</li>
+	<li>Added Groonga::Record#added? that returns true when the record is just added.</li>
+	<li>Added Groonga::VariableSizeColumn#defrag? that defrags the column.</li>
+	<li>Added Groonga::Database#defrag that defrags the all variable size columns.</li>
+	<li>Supported column name specification by symbol.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed install *.rb failure by gem install.</li>
+	<li>Fixed some memory leaks.</li>
+	<li>Fixed crash bug on exit.</li>
+</ul>
+<h2>1.2.5: 2011-08-05</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Re-supported tar.gz distribution.</li>
+	<li>Added Groonga::Context#close.</li>
+	<li>Added Groonga::Context#closed?.</li>
+	<li>Deprecated Groonga::ObjectClosed. Use Groonga::Closed instead.</li>
+	<li>grndump: Added &#8212;exclude-table option that specifies not dumped tables.</li>
+	<li>dump: Removed path equality check.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>dump: Fixed wrong index table type.</li>
+	<li>Re-supported auto groonga install.</li>
+</ul>
+<h2>1.2.4: 2011-06-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 1.2.3.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Re-supported auto groonga install.</li>
+	<li>Added missing pkg-config gem dependency.</li>
+</ul>
+<h2>1.2.3: 2011-06-27</h2>
+<h3>Fixes</h3>
+<ul>
+	<li>remove object files in gem packages.</li>
+	<li>fix charactor corruption in reference.</li>
+</ul>
+<h2>1.2.2: 2011-06-27</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>created &#8220;Developers&#8221; page in English.</li>
+	<li>added description for tasks of &#8220;html:publish&#8221; and &#8220;publish&#8221;.</li>
+</ul>
+<h3>Changes</h3>
+<ul>
+	<li>Groonga::Record#attributes return same attributes object for duplicate records.</li>
+	<li>added document for Groonga::Record#attributes.</li>
+	<li>changed tool name in document page for creating document.</li>
+	<li>moved NEWS*.rdoc and tutorial.texttile to doc/text/.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>fixed the tutorial path in index page.</li>
+	<li>fixed the path of tutorial in index page in English.</li>
+	<li>follow the groonga downlowd <span class="caps">URL</span> change. [mallowlabs]</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>mallowlabs</li>
+</ul>
+<h2>1.2.1: 2011-06-07</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>added document of Groonga::Table#pagination.</li>
+	<li>added grndump in package.</li>
+	<li>corresponded recursive reference of Records by Groonga::Record#attributes.
+  (experimental) [mooz]</li>
+	<li>Groonga::Record#attributes supported data including _score.</li>
+	<li>corresponded Windows for 64-bit.
+  (but there&#8217;s not 64-bit ruby, so rroonga for 64-bit windows cannot run.)</li>
+	<li>added Groonga::Posting.</li>
+	<li>added :delimit, :token_delimiter for alias of TokenDelimit.</li>
+	<li>Groonga::DatabaseDumper#dump corresponded lexicon table.</li>
+	<li>Groonga::DatabaseDumper#dump corresponded data including plugin.</li>
+	<li>added Groonga::IndexColumn#open_cursor. [yoshihara]</li>
+	<li>added Groonga::IndexCursor. [yoshihara]</li>
+	<li>added Groonga::Object#builtin?. [yoshihara]</li>
+</ul>
+<h3>Changes</h3>
+<ul>
+	<li>check existence of column before removing it.</li>
+	<li>removed grn expression document.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>mooz</li>
+	<li>yoshihara</li>
+</ul>
+<h2>1.2.0: 2011-04-01</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 1.2.0.</li>
+	<li>Added Groonga::Accessor#local_name.</li>
+	<li>Added Groonga::IndexColumn#with_section?.</li>
+	<li>Added Groonga::IndexColumn#with_weight?.</li>
+	<li>Added Groonga::IndexColumn#with_position?.</li>
+	<li>Groonga::Schema.dump supported groonga command format dump.</li>
+	<li>Added grndump command.</li>
+	<li>Groonga::Database#each supports order customize.</li>
+	<li>Added Groonga::Context#match_escalation_threshold.</li>
+	<li>Added Groonga::Context#match_escalation_threshold=.</li>
+	<li>Improved error message.</li>
+	<li>Supported Rubyish name like :short_text instead of the
+  official type name like &#8220;ShortText&#8221; in Groonga::Schema.</li>
+</ul>
+<h2>1.1.0: 2011-02-09</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 1.1.0.</li>
+	<li>Added Groonga::Plugin.register.</li>
+</ul>
+<h2>1.0.9: 2011-01-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported gem creation on Windows. [Patch by ongaeshi]</li>
+	<li>Supported generated directory that is created by Groonga::Schema removal
+  when table or column is removed.</li>
+	<li>Added Groonga::Context#create_database.</li>
+	<li>Added Groonga::Context#open_database.</li>
+	<li>Added Groonga::Column#indexes.</li>
+	<li>Supported a notation for specifying index column as match target in
+  Groonga::Table#select:
+    table.select do |record|
+      record.match(&#8220;query&#8221;) do |match_record|
+        (match_record.index(&#8220;Terms.title&#8221;) * 1000) |
+          (match_record.index(&#8220;Terms.description&#8221;) * 100)
+          match_record.content
+      end
+    end</li>
+	<li>Supported prefix search in Groonga::Table#select:
+    table.select do |record|
+      record.name.prefix_search(&#8220;groo&#8221;)
+    end</li>
+	<li>Supported suffix search in Groonga::Table#select:
+    table.select do |record|
+      record.name.suffix_search(&#8220;nga&#8221;)
+    end</li>
+	<li>Supported :default_tokenizer schema dump.</li>
+	<li>Supported :key_normalize schema dump.</li>
+	<li>Supported pseudo columns by Groonga::Table#have_column?.</li>
+	<li>Supported pseudo columns by Groonga::Record#have_column?.</li>
+</ul>
+<h3>Changes</h3>
+<ul>
+	<li>Renamed Groonga::Operatoion to Groonga::Operator.
+  (Groonga::Operation is deprecated but still usable.)</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a crash bug when not default Groonga::Context is used in
+  Groonga::Table#select.</li>
+	<li>Fixed a crash bug when an exception is occurred.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>ongaeshi</li>
+</ul>
+<h2>1.0.8: 2010-12-25</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Improved Groonga::Schema&#8217;s n-gram tokenizer detect process.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed GC problem caused by match_target in select.</li>
+</ul>
+<h2>1.0.7: 2010-12-19</h2>
+<h3>Fixes</h3>
+<ul>
+	<li>Supported pkg-config installed by RubyGems on Ruby 1.8. [Reported by @kamipo]</li>
+	<li>Fixed a memory leak in Groonga::Table#columns.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>@kamipo</li>
+</ul>
+<h2>1.0.5: 2010-11-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Added snail_case type name aliases for built-in groonga types
+  to Groonga::Schema.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a crash bug on GC. [Ryo Onodera]</li>
+</ul>
+<h2>1.0.4: 2010-11-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 1.0.4.</li>
+	<li>Added Groonga::UnsupportedCommandVersion.</li>
+	<li>Added Groonga::Record#support_sub_records?.</li>
+	<li>Added Groonga::Record#eql?とGroonga::Record#hash.
+  (treat two the same table and the same record ID object as the same Hash key.)</li>
+	<li>Supported pkg-config gem.</li>
+	<li>Supported generic #record_id object handle for custom record object
+  in Groonga::Table#select.</li>
+	<li>Added Groonga::Record#record_id.</li>
+	<li>Added Groonga::Table#support_key?.</li>
+	<li>Added Groonga::Record#support_key?.</li>
+	<li>Added Groonga::Record#support_key?.</li>
+	<li>Added Groonga::Column#reference_key?.</li>
+	<li>Added Groonga::Column#index_column?.</li>
+	<li>Added Groonga::Schema#dump.</li>
+	<li>Supported multi columns index creation in Groonga::Schema.</li>
+	<li>Supported meaningful path in Groonga::Schema.</li>
+	<li>Made reference table omissible when index column definition
+  in Groonga::Schema.</li>
+	<li>Added Groonga::Schema.remove_column.</li>
+	<li>Added convenience timestamps methods to define &#8220;created_at&#8221; and
+  &#8220;updated_at&#8221; columns in Groonga::Schema.</li>
+	<li>Added Groonga::Context#support_zlib?.</li>
+	<li>Added Groonga::Context#support_lzo?.</li>
+	<li>Added Groonga::Database#touch.</li>
+	<li>Added Groonga::Table#exist?.</li>
+	<li>Added Groonga::Record#valid?.</li>
+	<li>Added Groonga::Column#vector?.</li>
+	<li>Added Groonga::Column#scalar?.</li>
+	<li>Added Groonga::Record#vector_column?.</li>
+	<li>Added Groonga::Record#scalar_column?.</li>
+	<li>Accepted any object that has record_raw_id method for record ID required
+  location. Groonga::Record isn&#8217;t required.</li>
+	<li>Added Groonga::Record#record_raw_id.</li>
+	<li>Accepted any object that as to_ary method for reference vector column value.</li>
+</ul>
+<h2>Changes</h2>
+<ul>
+	<li>Used :key as the default value of :order_by of
+  Groonga::PatriciaTrie#open_cursor.</li>
+	<li>Removed a deprecated Groonga::TableKeySupport#find.</li>
+	<li>Used ShortText as the default key type of
+  Groonga::Hash#create and Groonga::PatriciaTrie#create.</li>
+	<li>Renamed Groonga::Schema#load to Groonga::Schema#restore.</li>
+	<li>Supported pkg-confg 1.0.7.</li>
+	<li>Added Groonga::Column#index? and deprecated Groonga::Column#index_column?.</li>
+	<li>Added Groonga::Column#reference? and deprecated
+  Groonga::Column#reference_column?.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed index for key isn&#8217;t be able to define.</li>
+	<li>Fixed a crash problem on GC.</li>
+</ul>
+<h2>1.0.1: 2010-09-12</h2>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed wrong flag used on creating a table. [Reported by ono matope]</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>ono matope</li>
+</ul>
+<h2>1.0.0: 2010-08-29</h2>
+<ul>
+	<li>Supported groonga 1.0.0.</li>
+	<li>Added Groonga::CASError.</li>
+	<li>Added :order_by option to Groonga::Table#open_cursor.</li>
+	<li>Added Groonga::PatriciaTrie#open_prefix_cursor that creates a cursor
+    to retrieve each records by prefix search.</li>
+	<li>Added Groonga::PatriciaTrie#open_rk_cursor that creats a cursor to
+    retrieve katakana keys from roman letters and/or hiragana.</li>
+	<li>Added Groonga::PatriciaTrie#open_near_cursor that creates a cursor to
+    retrieve records order by distance from key.</li>
+	<li>Supported _key as index source.</li>
+</ul>
+<h2>0.9.5: 2010-07-20</h2>
+<ul>
+	<li>Supported groonga 0.7.4.</li>
+	<li>Imporoved Groonga::Table#select:</li>
+	<li>Supported weight match:</li>
+</ul>
+Here is an example to match source column or title column and
+title column has high score:
+table.select do |record|
+(record.title * 10 | record.source) =~ &#8220;query&#8221;
+end
+<ul>
+	<li>Supported and representation for and conditions:</li>
+</ul>
+Here are examples that represents the same condition:
+table.select do |record|
+conditions = []
+conditions &lt;&lt; record.title =~ &#8220;query&#8221;
+conditions &lt;&lt; record.updated_at &gt; Time.parse(&#8220;2010-07-29T21:14:29+09:00&#8221;)
+conditions
+end
+table.select do |record|
+(record.title =~ &#8220;query&#8221;) &amp;
+(record.updated_at &gt; Time.parse(&#8220;2010-07-29T21:14:29+09:00&#8221;))
+end
+<ul>
+	<li>Provided groonga runtime version: Groonga::<span class="caps">VERSION</span></li>
+	<li>Added Groonga::Table#support_sub_records?</li>
+	<li>Supported pagination: Groonga::Table#paginate, Groonga::Pagination</li>
+</ul>
+<h2>0.9.4: 2010-04-22</h2>
+<ul>
+	<li>Fixed release miss.</li>
+</ul>
+<h2>0.9.3: 2010-04-22</h2>
+<ul>
+	<li>Fixed release miss.</li>
+</ul>
+<h2>0.9.2: 2010-04-22</h2>
+<ul>
+	<li>Supported groonga 0.1.9.</li>
+	<li>Many.</li>
+</ul>
+<h2>0.9.1: 2010-02-09</h2>
+<ul>
+	<li>Supported groonga 0.1.6</li>
+</ul>
+<h2>0.9.0: 2010-02-09</h2>
+<ul>
+	<li>Supported groonga 0.1.5</li>
+	<li>Added <span class="caps">API</span></li>
+	<li>Groonga::Object#context</li>
+	<li>Groonga::Record#n_sub_records</li>
+	<li>Groonga::Context#send</li>
+	<li>Groonga::Context#receive</li>
+	<li>Groonga::PatriciaTrie#prefix_search [Tasuku <span class="caps">SUENAGA</span>]</li>
+	<li>Groonga::Object#path [Ryo Onodera]</li>
+	<li>Groonga::Object#lock [Tasuku <span class="caps">SUENAGA</span>]</li>
+	<li>Groonga::Object#unlock [Tasuku <span class="caps">SUENAGA</span>]</li>
+	<li>Groonga::Object#locked? [Tasuku <span class="caps">SUENAGA</span>]</li>
+	<li>Groonga::Object#temporary?</li>
+	<li>Groonga::Object#persistent?</li>
+	<li>Groonga::ObjectClosed</li>
+	<li>Groonga::Context.[]</li>
+	<li>Groonga::Table#column_value</li>
+	<li>Groonga::Table#set_column_value</li>
+	<li>Changed <span class="caps">API</span></li>
+	<li>Groonga::Table#select, Groonga::Column#select</li>
+	<li>They also accept Groonga::Expression</li>
+	<li>Added :syntax option that specifies grn expression syntax</li>
+	<li>Groonga::Table#open_cursor</li>
+	<li>Added :offset option that specifies offset.</li>
+	<li>Added :limit option that specifies max number of records.</li>
+	<li>Changed Groonga::Expression.parse options:</li>
+	<li>(nil (default) &#8594; :column) &#8594; (nil (default) &#8594; :query)</li>
+	<li>:column &#8594; removed</li>
+	<li>:table &#8594; :query</li>
+	<li>:table_query &#8594; :query</li>
+	<li>:expression &#8594; :script</li>
+	<li>:language &#8594; :script</li>
+	<li>Groonga::Table#define_column, Groonga::Table#define_index_column</li>
+	<li>Defined column becomes persistent table by default</li>
+	<li>Groonga::Table#[] &#8594; Groonga::Table#value</li>
+	<li>Groonga::Table#[]= &#8594; Groonga::Table#set_value</li>
+	<li>Groonga::Table#find &#8594; Groonga::Table#[]</li>
+	<li>Groonga::Table#find &#8594; obsolete</li>
+	<li>Groonga::Table#[]= &#8594; removed</li>
+	<li>Groonga::TableKeySupport#[]= is alias of Groonga::TableKeySupport#add</li>
+	<li>Changed exception class to Groonga::NoSuchColumn from
+    Groonga::InvalidArgument when Groonga::Record accesses nonexistent
+    a column.</li>
+	<li>Bug fixes</li>
+	<li>Fixed a bug that context isn&#8217;t passed to schema [dara]</li>
+	<li>Fixed a bug that Groonga::PatriciaTrie#tag_keys doesn&#8217;t return
+    that last text. [Ryo Onodera]</li>
+	<li>Added &#8212;with-debug option to extconf.rb for debug build.</li>
+	<li>Fixed a bug that Ruby 1.9.1 may fail extconf.rb.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>dara</li>
+	<li>Ryo Onodera</li>
+	<li>Tasuku <span class="caps">SUENAGA</span></li>
+</ul>
+<h2>0.0.7: 2009-10-02</h2>
+<ul>
+	<li>Supported groonga 0.1.4</li>
+	<li>Added <span class="caps">API</span></li>
+	<li>Groonga::PatriciaTrie#scan</li>
+	<li>Groonga::PatriciaTrie#tag_keys</li>
+	<li>Groonga::Expression#snippet</li>
+	<li>Groonga::Object#append</li>
+	<li>Groonga::Object#prepend</li>
+</ul>
+<h2>0.0.6: 2009-07-31</h2>
+<ul>
+	<li>Supported groonga 0.1.1.</li>
+	<li>Fixed documents [id:mat_aki]</li>
+	<li>Supported groonga expression for searching.</li>
+	<li>Added <span class="caps">API</span></li>
+	<li>Groonga::Table#union!</li>
+	<li>Groonga::Table#intersect!</li>
+	<li>Groonga::Table#differene!</li>
+	<li>Groonga::Table#merge!</li>
+	<li>Provided tar.gz [id:m_seki]</li>
+	<li>Fixed memory leaks</li>
+</ul>
+<h2>0.0.3: 2009-07-18</h2>
+<ul>
+	<li>Added Groonga::TableKeySupport#has_key? [#26145] [Tasuku <span class="caps">SUENAGA</span>]</li>
+	<li>Groonga::Record#[] raises an exception for nonexistent
+  column name. [#26146] [Tasuku <span class="caps">SUENAGA</span>]</li>
+	<li>Supported 32bit environment [niku]</li>
+	<li>Added a test for N-gram index search [dara]</li>
+	<li>Added APIs</li>
+	<li>Groonga::Record#incemrent!</li>
+	<li>Groonga::Record#decemrent!</li>
+	<li>Groonga::Record#lock</li>
+	<li>Groonga::Table#lock</li>
+	<li>Groonga::Schema: A <span class="caps">DSL</span> for schema definition</li>
+	<li>Groonga::Expression</li>
+</ul>
+<h2>0.0.2: 2009-06-04</h2>
+<ul>
+	<li>Supported groonga 0.0.8 [mori]</li>
+	<li>Improved preformance: cache key, value, domain and range</li>
+	<li>Improved <span class="caps">API</span></li>
+	<li>Added documents</li>
+	<li>Supported Ruby 1.9</li>
+	<li>Bug fixes:</li>
+	<li>Fixed install process [Tasuku <span class="caps">SUENAGA</span>]</li>
+	<li>Fixed memory leaks</li>
+</ul>
+<h2>0.0.1: 2009-04-30</h2>
+<ul>
+	<li>Initial release!</li>
+</ul></div></div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>
