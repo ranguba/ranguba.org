@@ -1,158 +1,223 @@
-<!DOCTYPE html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-<title>README - groonga's activegroonga-fabrication-1.0.1 Documentation</title>
+	    <link rel="stylesheet" href="/ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.png" />
+    <title>File: README.rdoc [ActiveGroonga Fabrication - 1.0.0] - ラングバ</title>
 
-<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
-<script type="text/javascript">
-  var rdoc_rel_prefix = "./";
-</script>
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
-
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
 
 <body class="file">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="./index.html">Home</a>
-    <a href="./table_of_contents.html#classes">Classes</a>
-    <a href="./table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
-
-
-  <nav id="search-section" class="section project-section" class="initially-hidden">
-  <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
-             title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
-  </form>
-
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
-
-
-  <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="./NEWS_ja_rdoc.html">NEWS.ja</a>
-  
-    <li class="file"><a href="./NEWS_rdoc.html">NEWS</a>
-  
-    <li class="file"><a href="./README_ja_rdoc.html">README.ja</a>
-  
-    <li class="file"><a href="./README_rdoc.html">README</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
-
-  <ul class="link-list">
-  
-    <li><a href="./Fabrication.html">Fabrication</a>
-  
-    <li><a href="./Fabrication/Generator.html">Fabrication::Generator</a>
-  
-    <li><a href="./Fabrication/Generator/ActiveGroonga.html">Fabrication::Generator::ActiveGroonga</a>
-  
-    <li><a href="./ActiveGroongaFabrication.html">ActiveGroongaFabrication</a>
-  
-    <li><a href="./ActiveGroongaFabrication/VERSION.html">ActiveGroongaFabrication::VERSION</a>
-  
-  </ul>
-</nav>
-
+<div class="header">
+  <div class="title">
+    <a href="/">
+      <span class="title">File: README.rdoc [ActiveGroonga Fabrication - 1.0.0]</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
   </div>
-</nav>
-
-<div id="documentation" class="description">
-  
-<h1 id="label-README"><a href="README_rdoc.html">README</a></h1>
-
-<h2 id="label-Name">Name</h2>
-
-<p>ActiveGroonga <a href="Fabrication.html">Fabrication</a></p>
-
-<h2 id="label-Description">Description</h2>
-
-<p>A ActiveGroonga generator for <a href="Fabrication.html">Fabrication</a>.</p>
-<ul><li>
-<p>ActiveGroonga: <a
-href="http://groonga.rubyforge.org/">groonga.rubyforge.org/</a></p>
-</li><li>
-<p>Fabrication: <a
-href="https://github.com/paulelliott/fabrication">github.com/paulelliott/fabrication</a></p>
-</li></ul>
-
-<h2 id="label-Author">Author</h2>
-
-<p>Kouhei Sutou <code>&lt;kou@clear-code.com&gt;</code></p>
-
-<h2 id="label-License">License</h2>
-
-<p>LGPL 2.1. See license/LGPL for details.</p>
-
-<p>(Kouhei Sutou has a right to change license including contributed patches.)</p>
-
-<h2 id="label-Dependencies">Dependencies</h2>
-<ul><li>
-<p>ActiveGroonga</p>
-</li><li>
-<p><a href="Fabrication.html">Fabrication</a></p>
-</li></ul>
-
-<h2 id="label-Install">Install</h2>
-
-<pre>% sudo gem install activegroonga-fabrication</pre>
-
-<h2 id="label-Usage">Usage</h2>
-
-<p>Just require. Now, you can use <a href="Fabrication.html">Fabrication</a>
-for ActiveGroonga.</p>
-
-<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&quot;active_groonga_fabrication&quot;</span>
-</pre>
-
-<h2 id="label-Documents">Documents</h2>
-
-<p>Japanese only. Sorry.</p>
-
-<p><a
-href="http://groonga.rubyforge.org/activegroonga-fabrication/">groonga.rubyforge.org/activegroonga-fabrication/</a></p>
-
-<h2 id="label-Mailing+list">Mailing list</h2>
-
-<p><a
-href="http://rubyforge.org/mailman/listinfo/groonga-users-en">rubyforge.org/mailman/listinfo/groonga-users-en</a></p>
-
-<h2 id="label-Thanks">Thanks</h2>
-<ul><li>
-<p>…</p>
-</li></ul>
-
+  <ul class="menu">
+    <li id="menu-reference"><a href="/rroonga/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="/rroonga/text/TUTORIAL_ja_rdoc.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="/#install-rroonga">インストール</a></li>
+    <li id="menu-developer"><a href="/developer.html">開発者向け情報</a></li>
+  </ul>
 </div>
 
+<div class="content">
 
 
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
-</footer>
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./NEWS_ja_rdoc.html">NEWS.ja.rdoc</a></li>
+				
+					<li class="file"><a href="./NEWS_rdoc.html">NEWS.rdoc</a></li>
+				
+					<li class="file"><a href="./README_ja_rdoc.html">README.ja.rdoc</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Fabrication.html">Fabrication</a></li>
+				
+					<li><a href="./Fabrication/Generator.html">Fabrication::Generator</a></li>
+				
+					<li><a href="./Fabrication/Generator/ActiveGroonga.html">Fabrication::Generator::ActiveGroonga</a></li>
+				
+					<li><a href="./ActiveGroongaFabrication.html">ActiveGroongaFabrication</a></li>
+				
+					<li><a href="./ActiveGroongaFabrication/VERSION.html">ActiveGroongaFabrication::VERSION</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1>README</h1>
+<h2>Name</h2>
+<p>
+ActiveGroonga <a href="Fabrication.html">Fabrication</a>
+</p>
+<h2>Description</h2>
+<p>
+A ActiveGroonga generator for <a href="Fabrication.html">Fabrication</a>.
+</p>
+<ul>
+<li><p>
+ActiveGroonga: <a
+href="http://groonga.rubyforge.org/">groonga.rubyforge.org/</a>
+</p>
+</li>
+<li><p>
+Fabrication: <a
+href="https://github.com/paulelliott/fabrication">github.com/paulelliott/fabrication</a>
+</p>
+</li>
+</ul>
+<h2>Author</h2>
+<p>
+Kouhei Sutou <tt>&lt;kou@clear-code.com&gt;</tt>
+</p>
+<h2>License</h2>
+<p>
+LGPL 2.1. See license/LGPL for details.
+</p>
+<p>
+(Kouhei Sutou has a right to change license including contributed patches.)
+</p>
+<h2>Dependencies</h2>
+<ul>
+<li><p>
+ActiveGroonga
+</p>
+</li>
+<li><p>
+<a href="Fabrication.html">Fabrication</a>
+</p>
+</li>
+</ul>
+<h2>Install</h2>
+<pre>
+  % sudo gem install activegroonga-fabrication
+</pre>
+<h2>Documents</h2>
+<p>
+Japanese only. Sorry.
+</p>
+<p>
+<a
+href="http://groonga.rubyforge.org/activegroonga-fabrication/">groonga.rubyforge.org/activegroonga-fabrication/</a>
+</p>
+<h2>Mailing list</h2>
+<p>
+<a
+href="http://rubyforge.org/mailman/listinfo/groonga-users-en">rubyforge.org/mailman/listinfo/groonga-users-en</a>
+</p>
+<h2>Thanks</h2>
+<ul>
+<li><p>
+&#8230;
+</p>
+</li>
+</ul>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="/rubyforge.png" width="120" height="24" border="0" alt="Ruby/groongaプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          ラングバプロジェクトはGitHubにホスティングしてもらっています。
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="/tango-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>
 
