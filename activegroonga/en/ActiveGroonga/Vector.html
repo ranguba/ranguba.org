@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  relpath = '..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -59,41 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (V)</a> &raquo;
+    <a href="../_index.html">Index (V)</a> &raquo; 
     <span class='title'><span class='object_link'><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
      &raquo; 
     <span class="title">Vector</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link"
-        href="../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: ActiveGroonga::Vector
   
   
@@ -136,8 +129,7 @@
 
 
 
-
-
+  
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
     
@@ -151,10 +143,7 @@
   </span>
   
   
-  
-    
-      <span class="note title readonly">readonly</span>
-    
+    <span class="note title readonly">readonly</span>
     
   
   
@@ -178,10 +167,7 @@
   </span>
   
   
-  
-    
-      <span class="note title readonly">readonly</span>
-    
+    <span class="note title readonly">readonly</span>
     
   
   
@@ -205,10 +191,7 @@
   </span>
   
   
-  
-    
-      <span class="note title readonly">readonly</span>
-    
+    <span class="note title readonly">readonly</span>
     
   
   
@@ -226,6 +209,7 @@
 
 
 
+  
 
   
     <h2>
@@ -243,7 +227,6 @@
 
     
   </span>
-  
   
   
   
@@ -271,7 +254,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -287,7 +269,6 @@
 
     
   </span>
-  
   
   
   
@@ -315,7 +296,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -337,7 +317,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -353,7 +332,6 @@
 
     
   </span>
-  
   
     <span class="note title constructor">constructor</span>
   
@@ -383,7 +361,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -399,15 +376,13 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="ActiveGroonga::Vector (class)">Vector</a></span></tt>) <strong>initialize</strong>(owner, klass, values = []) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     <p>A new instance of Vector</p>
 
@@ -432,11 +407,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 21</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_owner'>owner</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='ivar'>@owner</span> <span class='op'>=</span> <span class='id identifier rubyid_owner'>owner</span>
-  <span class='ivar'>@klass</span> <span class='op'>=</span> <span class='id identifier rubyid_klass'>klass</span>
-  <span class='ivar'>@values</span> <span class='op'>=</span> <span class='id identifier rubyid_values'>values</span>
-  <span class='ivar'>@values</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='ivar'>@values</span><span class='rbracket'>]</span> <span class='kw'>unless</span> <span class='ivar'>@values</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id owner'>owner</span><span class='comma'>,</span> <span class='id klass'>klass</span><span class='comma'>,</span> <span class='id values'>values</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@owner</span> <span class='op'>=</span> <span class='id owner'>owner</span>
+  <span class='ivar'>@klass</span> <span class='op'>=</span> <span class='id klass'>klass</span>
+  <span class='ivar'>@values</span> <span class='op'>=</span> <span class='id values'>values</span>
+  <span class='ivar'>@values</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='ivar'>@values</span><span class='rbracket'>]</span> <span class='kw'>unless</span> <span class='ivar'>@values</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -450,16 +425,15 @@
     
       
       <span id=""></span>
+      <span id="klass-instance_method"></span>
       <div class="method_details first">
-  <h3 class="signature first" id="klass-instance_method">
+  <p class="signature first" id="klass-instance_method">
   
     - (<tt>Object</tt>) <strong>klass</strong>  <span class="extras">(readonly)</span>
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     <p>Returns the value of attribute klass</p>
 
@@ -481,7 +455,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 20</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_klass'>klass</span>
+<span class='kw'>def</span> <span class='id klass'>klass</span>
   <span class='ivar'>@klass</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -491,16 +465,15 @@
     
       
       <span id=""></span>
+      <span id="owner-instance_method"></span>
       <div class="method_details ">
-  <h3 class="signature " id="owner-instance_method">
+  <p class="signature " id="owner-instance_method">
   
     - (<tt>Object</tt>) <strong>owner</strong>  <span class="extras">(readonly)</span>
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     <p>Returns the value of attribute owner</p>
 
@@ -522,7 +495,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 20</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_owner'>owner</span>
+<span class='kw'>def</span> <span class='id owner'>owner</span>
   <span class='ivar'>@owner</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -532,16 +505,15 @@
     
       
       <span id=""></span>
+      <span id="values-instance_method"></span>
       <div class="method_details ">
-  <h3 class="signature " id="values-instance_method">
+  <p class="signature " id="values-instance_method">
   
     - (<tt>Object</tt>) <strong>values</strong>  <span class="extras">(readonly)</span>
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     <p>Returns the value of attribute values</p>
 
@@ -563,7 +535,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 20</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_values'>values</span>
+<span class='kw'>def</span> <span class='id values'>values</span>
   <span class='ivar'>@values</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -576,18 +548,16 @@
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="<<-instance_method">
+  <p class="signature first" id="<<-instance_method">
   
     - (<tt>Object</tt>) <strong>&lt;&lt;</strong>(value) 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -601,9 +571,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 46</span>
 
-<span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='ivar'>@klass</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@owner</span><span class='period'>.</span><span class='id identifier rubyid_persisted?'>persisted?</span>
-  <span class='ivar'>@values</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>def</span> <span class='op'>&lt;&lt;</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span>
+  <span class='id value'>value</span> <span class='op'>=</span> <span class='ivar'>@klass</span><span class='period'>.</span><span class='id create'>create</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@owner</span><span class='period'>.</span><span class='id persisted?'>persisted?</span>
+  <span class='ivar'>@values</span> <span class='op'>&lt;&lt;</span> <span class='id value'>value</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -611,15 +581,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="build-instance_method">
+  <p class="signature " id="build-instance_method">
   
     - (<tt>Object</tt>) <strong>build</strong>(*args, &amp;block) 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -632,8 +600,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 28</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='ivar'>@klass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id build'>build</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='ivar'>@klass</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -641,15 +609,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="create-instance_method">
+  <p class="signature " id="create-instance_method">
   
     - (<tt>Object</tt>) <strong>create</strong>(*args, &amp;block) 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -662,8 +628,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 32</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='ivar'>@klass</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id create'>create</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='ivar'>@klass</span><span class='period'>.</span><span class='id create'>create</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -671,15 +637,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="create!-instance_method">
+  <p class="signature " id="create!-instance_method">
   
     - (<tt>Object</tt>) <strong>create!</strong>(*args, &amp;block) 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -692,8 +656,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 36</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_create!'>create!</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='ivar'>@klass</span><span class='period'>.</span><span class='id identifier rubyid_create!'>create!</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id create!'>create!</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='ivar'>@klass</span><span class='period'>.</span><span class='id create!'>create!</span><span class='lparen'>(</span><span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -701,15 +665,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="each-instance_method">
+  <p class="signature " id="each-instance_method">
   
     - (<tt>Object</tt>) <strong>each</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -724,9 +686,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 40</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span>
-  <span class='ivar'>@values</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_instantiate'>instantiate</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id each'>each</span>
+  <span class='ivar'>@values</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id value'>value</span><span class='op'>|</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id instantiate'>instantiate</span><span class='lparen'>(</span><span class='id value'>value</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -735,15 +697,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="to_ary-instance_method">
+  <p class="signature " id="to_ary-instance_method">
   
     - (<tt>Object</tt>) <strong>to_ary</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -756,8 +716,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/vector.rb', line 51</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
-  <span class='id identifier rubyid_to_a'>to_a</span>
+<span class='kw'>def</span> <span class='id to_ary'>to_ary</span>
+  <span class='id to_a'>to_a</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -767,7 +727,7 @@
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

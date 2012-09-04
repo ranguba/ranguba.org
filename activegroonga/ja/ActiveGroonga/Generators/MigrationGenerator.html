@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../../';
-  framesUrl = "../../frames.html#!" + escape(window.location.href);
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -59,38 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (M)</a> &raquo;
+    <a href="../../_index.html">Index (M)</a> &raquo; 
     <span class="title"><span class="object_link"><a href="../../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span> &raquo; <span class="title"><span class="object_link"><a href="../Generators.html" title="ActiveGroonga::Generators (module)">Generators</a></span></span>
      &raquo; 
     <span class="title">MigrationGenerator</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="../../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link" href="../../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link" href="../../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: ActiveGroonga::Generators::MigrationGenerator
   
   
@@ -142,10 +138,19 @@
 
 </div>
 
+  
+  
+  
+  
+  
+  
 
 
-
-
+  
+  
+  
+  
+  
 
   
     <h2>
@@ -169,7 +174,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline"></div></span>
@@ -185,7 +189,6 @@
 
     
   </span>
-  
   
     <span class="note title constructor">constructor</span>
   
@@ -212,7 +215,6 @@
   
   
   
-  
   <h3 class="inherited">Methods inherited from <span class="object_link"><a href="Base.html" title="ActiveGroonga::Generators::Base (class)">Base</a></span></h3>
   <p class="inherited"><span class="object_link"><a href="Base.html#base_root-class_method" title="ActiveGroonga::Generators::Base.base_root (method)">base_root</a></span>, <span class="object_link"><a href="Base.html#next_migration_number-class_method" title="ActiveGroonga::Generators::Base.next_migration_number (method)">next_migration_number</a></span></p>
 
@@ -221,15 +223,13 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class="object_link"><a href="" title="ActiveGroonga::Generators::MigrationGenerator (class)">MigrationGenerator</a></span></tt>) <strong>initialize</strong>(args, *options) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     <p>A new instance of MigrationGenerator</p>
 
@@ -252,9 +252,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rails/generators/active_groonga/migration/migration_generator.rb', line 25</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_args">args</span><span class="comma">,</span> <span class="op">*</span><span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
+<span class="kw">def</span> <span class="id initialize">initialize</span><span class="lparen">(</span><span class="id args">args</span><span class="comma">,</span> <span class="op">*</span><span class="id options">options</span><span class="rparen">)</span>
   <span class="kw">super</span>
-  <span class="id identifier rubyid_parse_columns!">parse_columns!</span>
+  <span class="id parse_columns!">parse_columns!</span>
 <span class="kw">end</span></pre>
     </td>
   </tr>
@@ -266,18 +266,16 @@
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="create_migration_file-instance_method">
+  <p class="signature first" id="create_migration_file-instance_method">
   
     - (<tt>Object</tt>) <strong>create_migration_file</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -291,9 +289,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rails/generators/active_groonga/migration/migration_generator.rb', line 30</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_create_migration_file">create_migration_file</span>
-  <span class="id identifier rubyid_set_local_assigns!">set_local_assigns!</span>
-  <span class="id identifier rubyid_migration_template">migration_template</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">migration.rb</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">db/groonga/migrate/</span><span class="embexpr_beg">#{</span><span class="id identifier rubyid_file_name">file_name</span><span class="rbrace">}</span><span class="tstring_content">.rb</span><span class="tstring_end">"</span></span>
+<span class="kw">def</span> <span class="id create_migration_file">create_migration_file</span>
+  <span class="id set_local_assigns!">set_local_assigns!</span>
+  <span class="id migration_template">migration_template</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">migration.rb</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">db/groonga/migrate/</span><span class="embexpr_beg">#{</span><span class="id file_name">file_name</span><span class="rbrace">}</span><span class="tstring_content">.rb</span><span class="tstring_end">"</span></span>
 <span class="kw">end</span></pre>
     </td>
   </tr>
@@ -303,7 +301,7 @@
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

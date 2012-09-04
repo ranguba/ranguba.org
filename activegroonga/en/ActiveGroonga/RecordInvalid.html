@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  relpath = '..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -59,41 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (R)</a> &raquo;
+    <a href="../_index.html">Index (R)</a> &raquo; 
     <span class='title'><span class='object_link'><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
      &raquo; 
     <span class="title">RecordInvalid</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link"
-        href="../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Exception: ActiveGroonga::RecordInvalid
   
   
@@ -136,8 +129,11 @@
 
 
 
-
-
+  
+  
+  
+  
+  
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
     
@@ -151,10 +147,7 @@
   </span>
   
   
-  
-    
-      <span class="note title readonly">readonly</span>
-    
+    <span class="note title readonly">readonly</span>
     
   
   
@@ -172,6 +165,10 @@
 
 
 
+  
+  
+  
+  
 
   
     <h2>
@@ -189,7 +186,6 @@
 
     
   </span>
-  
   
     <span class="note title constructor">constructor</span>
   
@@ -214,20 +210,17 @@
   
   
   
-  
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="ActiveGroonga::RecordInvalid (class)">RecordInvalid</a></span></tt>) <strong>initialize</strong>(record) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     <p>A new instance of RecordInvalid</p>
 
@@ -252,11 +245,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/validations.rb', line 19</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='rparen'>)</span>
-  <span class='ivar'>@record</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span>
-  <span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='ivar'>@record</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_full_messages'>full_messages</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-  <span class='kw'>super</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>activegroonga.errors.messages.record_invalid</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-               <span class='symbol'>:errors</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_errors'>errors</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id record'>record</span><span class='rparen'>)</span>
+  <span class='ivar'>@record</span> <span class='op'>=</span> <span class='id record'>record</span>
+  <span class='id errors'>errors</span> <span class='op'>=</span> <span class='ivar'>@record</span><span class='period'>.</span><span class='id errors'>errors</span><span class='period'>.</span><span class='id full_messages'>full_messages</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='const'>I18n</span><span class='period'>.</span><span class='id t'>t</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>activegroonga.errors.messages.record_invalid</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+               <span class='symbol'>:errors</span> <span class='op'>=&gt;</span> <span class='id errors'>errors</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -270,16 +263,15 @@
     
       
       <span id=""></span>
+      <span id="record-instance_method"></span>
       <div class="method_details first">
-  <h3 class="signature first" id="record-instance_method">
+  <p class="signature first" id="record-instance_method">
   
     - (<tt>Object</tt>) <strong>record</strong>  <span class="extras">(readonly)</span>
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     <p>Returns the value of attribute record</p>
 
@@ -301,7 +293,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/validations.rb', line 18</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_record'>record</span>
+<span class='kw'>def</span> <span class='id record'>record</span>
   <span class='ivar'>@record</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -313,7 +305,7 @@
 
 
 </div>
-
+    
     <div id="footer"></div>
 
   

@@ -17,11 +17,9 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
@@ -55,42 +53,40 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-
+    
+    <span class="title"></span>
+  
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link"
-        href="class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1 class="noborder title">activegroonga</h1>
 <div id="listing">
   <h1 class="alphaindex">Alphabetic Index</h1>
   
   <h2>File Listing</h2>
-  <ul id="files" class="index_inline_list">
+  <ul id="files">
   
   
     <li class="r1"><a href="index.html" title="README">README</a></li>
@@ -123,7 +119,7 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span>
+                <span class='object_link'><a href="ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span> 
                 
               </li>
             
@@ -136,14 +132,14 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Base.html" title="ActiveGroonga::Base (class)">Base</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Base.html" title="ActiveGroonga::Base (class)">Base</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Generators/Base.html" title="ActiveGroonga::Generators::Base (class)">Base</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Generators/Base.html" title="ActiveGroonga::Generators::Base (class)">Base</a></span> 
                 
                   <small>(ActiveGroonga::Generators)</small>
                 
@@ -158,35 +154,35 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Callbacks.html" title="ActiveGroonga::Callbacks (module)">Callbacks</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Callbacks.html" title="ActiveGroonga::Callbacks (module)">Callbacks</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Validations/ClassMethods.html" title="ActiveGroonga::Validations::ClassMethods (module)">ClassMethods</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Validations/ClassMethods.html" title="ActiveGroonga::Validations::ClassMethods (module)">ClassMethods</a></span> 
                 
                   <small>(ActiveGroonga::Validations)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Generators/Column.html" title="ActiveGroonga::Generators::Column (class)">Column</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Generators/Column.html" title="ActiveGroonga::Generators::Column (class)">Column</a></span> 
                 
                   <small>(ActiveGroonga::Generators)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Railties/Configurable.html" title="ActiveGroonga::Railties::Configurable (module)">Configurable</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Railties/Configurable.html" title="ActiveGroonga::Railties::Configurable (module)">Configurable</a></span> 
                 
                   <small>(ActiveGroonga::Railties)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/TestFixtures/ConnectionMock.html" title="ActiveGroonga::TestFixtures::ConnectionMock (class)">ConnectionMock</a></span>
+                <span class='object_link'><a href="ActiveGroonga/TestFixtures/ConnectionMock.html" title="ActiveGroonga::TestFixtures::ConnectionMock (class)">ConnectionMock</a></span> 
                 
                   <small>(ActiveGroonga::TestFixtures)</small>
                 
@@ -201,14 +197,14 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Database.html" title="ActiveGroonga::Database (class)">Database</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Database.html" title="ActiveGroonga::Database (class)">Database</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/DuplicateMigrationVersionError.html" title="ActiveGroonga::DuplicateMigrationVersionError (class)">DuplicateMigrationVersionError</a></span>
+                <span class='object_link'><a href="ActiveGroonga/DuplicateMigrationVersionError.html" title="ActiveGroonga::DuplicateMigrationVersionError (class)">DuplicateMigrationVersionError</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -223,7 +219,7 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Error.html" title="ActiveGroonga::Error (class)">Error</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Error.html" title="ActiveGroonga::Error (class)">Error</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -238,7 +234,7 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Generators.html" title="ActiveGroonga::Generators (module)">Generators</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Generators.html" title="ActiveGroonga::Generators (module)">Generators</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -253,7 +249,7 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/KeyOverrideError.html" title="ActiveGroonga::KeyOverrideError (class)">KeyOverrideError</a></span>
+                <span class='object_link'><a href="ActiveGroonga/KeyOverrideError.html" title="ActiveGroonga::KeyOverrideError (class)">KeyOverrideError</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -271,35 +267,35 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Migration.html" title="ActiveGroonga::Migration (class)">Migration</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Migration.html" title="ActiveGroonga::Migration (class)">Migration</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/MigrationEntry.html" title="ActiveGroonga::MigrationEntry (class)">MigrationEntry</a></span>
+                <span class='object_link'><a href="ActiveGroonga/MigrationEntry.html" title="ActiveGroonga::MigrationEntry (class)">MigrationEntry</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Generators/MigrationGenerator.html" title="ActiveGroonga::Generators::MigrationGenerator (class)">MigrationGenerator</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Generators/MigrationGenerator.html" title="ActiveGroonga::Generators::MigrationGenerator (class)">MigrationGenerator</a></span> 
                 
                   <small>(ActiveGroonga::Generators)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Migrator.html" title="ActiveGroonga::Migrator (class)">Migrator</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Migrator.html" title="ActiveGroonga::Migrator (class)">Migrator</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Generators/ModelGenerator.html" title="ActiveGroonga::Generators::ModelGenerator (class)">ModelGenerator</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Generators/ModelGenerator.html" title="ActiveGroonga::Generators::ModelGenerator (class)">ModelGenerator</a></span> 
                 
                   <small>(ActiveGroonga::Generators)</small>
                 
@@ -314,7 +310,7 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/NoKeyTableError.html" title="ActiveGroonga::NoKeyTableError (class)">NoKeyTableError</a></span>
+                <span class='object_link'><a href="ActiveGroonga/NoKeyTableError.html" title="ActiveGroonga::NoKeyTableError (class)">NoKeyTableError</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -329,7 +325,14 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Persistence.html" title="ActiveGroonga::Persistence (module)">Persistence</a></span>
+                <span class='object_link'><a href="ActiveGroonga/ResultSet/PaginationProxy.html" title="ActiveGroonga::ResultSet::PaginationProxy (module)">PaginationProxy</a></span> 
+                
+                  <small>(ActiveGroonga::ResultSet)</small>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="ActiveGroonga/Persistence.html" title="ActiveGroonga::Persistence (module)">Persistence</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -344,35 +347,35 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Railtie.html" title="ActiveGroonga::Railtie (class)">Railtie</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Railtie.html" title="ActiveGroonga::Railtie (class)">Railtie</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Railties.html" title="ActiveGroonga::Railties (module)">Railties</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Railties.html" title="ActiveGroonga::Railties (module)">Railties</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/RecordInvalid.html" title="ActiveGroonga::RecordInvalid (class)">RecordInvalid</a></span>
+                <span class='object_link'><a href="ActiveGroonga/RecordInvalid.html" title="ActiveGroonga::RecordInvalid (class)">RecordInvalid</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/RecordNotSaved.html" title="ActiveGroonga::RecordNotSaved (class)">RecordNotSaved</a></span>
+                <span class='object_link'><a href="ActiveGroonga/RecordNotSaved.html" title="ActiveGroonga::RecordNotSaved (class)">RecordNotSaved</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/ResultSet.html" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span>
+                <span class='object_link'><a href="ActiveGroonga/ResultSet.html" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -387,14 +390,14 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Schema.html" title="ActiveGroonga::Schema (class)">Schema</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Schema.html" title="ActiveGroonga::Schema (class)">Schema</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/SchemaManagementTable.html" title="ActiveGroonga::SchemaManagementTable (class)">SchemaManagementTable</a></span>
+                <span class='object_link'><a href="ActiveGroonga/SchemaManagementTable.html" title="ActiveGroonga::SchemaManagementTable (class)">SchemaManagementTable</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -409,21 +412,21 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveSupport/TestCase.html" title="ActiveSupport::TestCase (class)">TestCase</a></span>
-                
-                  <small>(ActiveSupport)</small>
-                
-              </li>
-            
-              <li>
-                <span class='object_link'><a href="ActiveGroonga/TestCase.html" title="ActiveGroonga::TestCase (class)">TestCase</a></span>
+                <span class='object_link'><a href="ActiveGroonga/TestCase.html" title="ActiveGroonga::TestCase (class)">TestCase</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/TestFixtures.html" title="ActiveGroonga::TestFixtures (module)">TestFixtures</a></span>
+                <span class='object_link'><a href="ActiveSupport/TestCase.html" title="ActiveSupport::TestCase (class)">TestCase</a></span> 
+                
+                  <small>(ActiveSupport)</small>
+                
+              </li>
+            
+              <li>
+                <span class='object_link'><a href="ActiveGroonga/TestFixtures.html" title="ActiveGroonga::TestFixtures (module)">TestFixtures</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -438,21 +441,21 @@
           <ul>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/VERSION.html" title="ActiveGroonga::VERSION (module)">VERSION</a></span>
+                <span class='object_link'><a href="ActiveGroonga/VERSION.html" title="ActiveGroonga::VERSION (module)">VERSION</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Validations.html" title="ActiveGroonga::Validations (module)">Validations</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Validations.html" title="ActiveGroonga::Validations (module)">Validations</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
               </li>
             
               <li>
-                <span class='object_link'><a href="ActiveGroonga/Vector.html" title="ActiveGroonga::Vector (class)">Vector</a></span>
+                <span class='object_link'><a href="ActiveGroonga/Vector.html" title="ActiveGroonga::Vector (class)">Vector</a></span> 
                 
                   <small>(ActiveGroonga)</small>
                 
@@ -468,7 +471,7 @@
 </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

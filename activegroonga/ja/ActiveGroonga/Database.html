@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  relpath = '..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -59,38 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (D)</a> &raquo;
+    <a href="../_index.html">Index (D)</a> &raquo; 
     <span class="title"><span class="object_link"><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
      &raquo; 
     <span class="title">Database</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link" href="../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link" href="../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: ActiveGroonga::Database
   
   
@@ -132,8 +128,6 @@
 
 
 
-
-
   
     <h2>
       Instance Method Summary
@@ -150,7 +144,6 @@
 
     
   </span>
-  
   
   
   
@@ -178,7 +171,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline"></div></span>
@@ -194,7 +186,6 @@
 
     
   </span>
-  
   
     <span class="note title constructor">constructor</span>
   
@@ -224,7 +215,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline"></div></span>
@@ -246,7 +236,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline"></div></span>
@@ -261,15 +250,13 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class="object_link"><a href="" title="ActiveGroonga::Database (class)">Database</a></span></tt>) <strong>initialize</strong>(path) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     <p>A new instance of Database</p>
 
@@ -292,8 +279,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/database.rb', line 20</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_path">path</span><span class="rparen">)</span>
-  <span class="ivar">@path</span> <span class="op">=</span> <span class="id identifier rubyid_path">path</span>
+<span class="kw">def</span> <span class="id initialize">initialize</span><span class="lparen">(</span><span class="id path">path</span><span class="rparen">)</span>
+  <span class="ivar">@path</span> <span class="op">=</span> <span class="id path">path</span>
   <span class="ivar">@database</span> <span class="op">=</span> <span class="kw">nil</span>
 <span class="kw">end</span></pre>
     </td>
@@ -306,18 +293,16 @@
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="close-instance_method">
+  <p class="signature first" id="close-instance_method">
   
     - (<tt>Object</tt>) <strong>close</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -332,9 +317,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/database.rb', line 44</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_close">close</span>
-  <span class="kw">return</span> <span class="kw">if</span> <span class="ivar">@database</span><span class="period">.</span><span class="id identifier rubyid_nil?">nil?</span>
-  <span class="ivar">@database</span><span class="period">.</span><span class="id identifier rubyid_close">close</span>
+<span class="kw">def</span> <span class="id close">close</span>
+  <span class="kw">return</span> <span class="kw">if</span> <span class="ivar">@database</span><span class="period">.</span><span class="id nil?">nil?</span>
+  <span class="ivar">@database</span><span class="period">.</span><span class="id close">close</span>
   <span class="ivar">@database</span> <span class="op">=</span> <span class="kw">nil</span>
 <span class="kw">end</span></pre>
     </td>
@@ -343,15 +328,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="ensure_available-instance_method">
+  <p class="signature " id="ensure_available-instance_method">
   
     - (<tt>Object</tt>) <strong>ensure_available</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -372,15 +355,15 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/database.rb', line 25</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_ensure_available">ensure_available</span>
+<span class="kw">def</span> <span class="id ensure_available">ensure_available</span>
   <span class="kw">return</span> <span class="kw">if</span> <span class="ivar">@database</span>
-  <span class="kw">if</span> <span class="ivar">@path</span><span class="period">.</span><span class="id identifier rubyid_exist?">exist?</span>
-    <span class="ivar">@database</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Database</span><span class="period">.</span><span class="id identifier rubyid_open">open</span><span class="lparen">(</span><span class="ivar">@path</span><span class="period">.</span><span class="id identifier rubyid_to_s">to_s</span><span class="comma">,</span>
-                                       <span class="symbol">:context</span> <span class="op">=&gt;</span> <span class="const">Base</span><span class="period">.</span><span class="id identifier rubyid_context">context</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="ivar">@path</span><span class="period">.</span><span class="id exist?">exist?</span>
+    <span class="ivar">@database</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Database</span><span class="period">.</span><span class="id open">open</span><span class="lparen">(</span><span class="ivar">@path</span><span class="period">.</span><span class="id to_s">to_s</span><span class="comma">,</span>
+                                       <span class="symbol">:context</span> <span class="op">=&gt;</span> <span class="const">Base</span><span class="period">.</span><span class="id context">context</span><span class="rparen">)</span>
   <span class="kw">else</span>
-    <span class="const">FileUtils</span><span class="period">.</span><span class="id identifier rubyid_mkdir_p">mkdir_p</span><span class="lparen">(</span><span class="ivar">@path</span><span class="period">.</span><span class="id identifier rubyid_dirname">dirname</span><span class="rparen">)</span> <span class="kw">unless</span> <span class="ivar">@path</span><span class="period">.</span><span class="id identifier rubyid_dirname">dirname</span><span class="period">.</span><span class="id identifier rubyid_exist?">exist?</span>
-    <span class="ivar">@database</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Database</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:path</span> <span class="op">=&gt;</span> <span class="ivar">@path</span><span class="period">.</span><span class="id identifier rubyid_to_s">to_s</span><span class="comma">,</span>
-                                         <span class="symbol">:context</span> <span class="op">=&gt;</span> <span class="const">Base</span><span class="period">.</span><span class="id identifier rubyid_context">context</span><span class="rparen">)</span>
+    <span class="const">FileUtils</span><span class="period">.</span><span class="id mkdir_p">mkdir_p</span><span class="lparen">(</span><span class="ivar">@path</span><span class="period">.</span><span class="id dirname">dirname</span><span class="rparen">)</span> <span class="kw">unless</span> <span class="ivar">@path</span><span class="period">.</span><span class="id dirname">dirname</span><span class="period">.</span><span class="id exist?">exist?</span>
+    <span class="ivar">@database</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Database</span><span class="period">.</span><span class="id create">create</span><span class="lparen">(</span><span class="symbol">:path</span> <span class="op">=&gt;</span> <span class="ivar">@path</span><span class="period">.</span><span class="id to_s">to_s</span><span class="comma">,</span>
+                                         <span class="symbol">:context</span> <span class="op">=&gt;</span> <span class="const">Base</span><span class="period">.</span><span class="id context">context</span><span class="rparen">)</span>
   <span class="kw">end</span>
 <span class="kw">end</span></pre>
     </td>
@@ -389,15 +372,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="remove-instance_method">
+  <p class="signature " id="remove-instance_method">
   
     - (<tt>Object</tt>) <strong>remove</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -413,10 +394,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/database.rb', line 37</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_remove">remove</span>
-  <span class="id identifier rubyid_ensure_available">ensure_available</span> <span class="kw">if</span> <span class="ivar">@path</span><span class="period">.</span><span class="id identifier rubyid_exist?">exist?</span>
-  <span class="kw">return</span> <span class="kw">if</span> <span class="ivar">@database</span><span class="period">.</span><span class="id identifier rubyid_nil?">nil?</span>
-  <span class="ivar">@database</span><span class="period">.</span><span class="id identifier rubyid_remove">remove</span>
+<span class="kw">def</span> <span class="id remove">remove</span>
+  <span class="id ensure_available">ensure_available</span> <span class="kw">if</span> <span class="ivar">@path</span><span class="period">.</span><span class="id exist?">exist?</span>
+  <span class="kw">return</span> <span class="kw">if</span> <span class="ivar">@database</span><span class="period">.</span><span class="id nil?">nil?</span>
+  <span class="ivar">@database</span><span class="period">.</span><span class="id remove">remove</span>
   <span class="ivar">@database</span> <span class="op">=</span> <span class="kw">nil</span>
 <span class="kw">end</span></pre>
     </td>
@@ -425,15 +406,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="reopen-instance_method">
+  <p class="signature " id="reopen-instance_method">
   
     - (<tt>Object</tt>) <strong>reopen</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -447,9 +426,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/database.rb', line 50</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_reopen">reopen</span>
-  <span class="id identifier rubyid_close">close</span>
-  <span class="id identifier rubyid_ensure_available">ensure_available</span>
+<span class="kw">def</span> <span class="id reopen">reopen</span>
+  <span class="id close">close</span>
+  <span class="id ensure_available">ensure_available</span>
 <span class="kw">end</span></pre>
     </td>
   </tr>
@@ -459,7 +438,7 @@
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

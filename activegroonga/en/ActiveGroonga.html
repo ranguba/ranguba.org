@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
@@ -59,41 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index (A)</a> &raquo;
+    <a href="_index.html">Index (A)</a> &raquo; 
     
     
     <span class="title">ActiveGroonga</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link"
-        href="class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Module: ActiveGroonga
   
   
@@ -115,7 +108,7 @@
   
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">lib/active_groonga/error.rb<span class="defines">,<br />
-  lib/active_groonga.rb,<br /> lib/active_groonga/base.rb,<br /> lib/active_groonga/vector.rb,<br /> lib/active_groonga/schema.rb,<br /> lib/active_groonga/version.rb,<br /> lib/active_groonga/railtie.rb,<br /> lib/active_groonga/fixtures.rb,<br /> lib/active_groonga/database.rb,<br /> lib/active_groonga/migrator.rb,<br /> lib/active_groonga/migration.rb,<br /> lib/active_groonga/test_case.rb,<br /> lib/active_groonga/callbacks.rb,<br /> lib/active_groonga/result_set.rb,<br /> lib/active_groonga/persistence.rb,<br /> lib/active_groonga/validations.rb,<br /> lib/rails/generators/active_groonga.rb,<br /> lib/active_groonga/railties/configurable.rb,<br /> lib/rails/generators/active_groonga/migration/column.rb,<br /> lib/rails/generators/active_groonga/model/model_generator.rb,<br /> lib/rails/generators/active_groonga/migration/migration_generator.rb</span>
+  lib/active_groonga.rb,<br /> lib/active_groonga/base.rb,<br /> lib/active_groonga/schema.rb,<br /> lib/active_groonga/vector.rb,<br /> lib/active_groonga/version.rb,<br /> lib/active_groonga/railtie.rb,<br /> lib/active_groonga/database.rb,<br /> lib/active_groonga/fixtures.rb,<br /> lib/active_groonga/migrator.rb,<br /> lib/active_groonga/migration.rb,<br /> lib/active_groonga/callbacks.rb,<br /> lib/active_groonga/test_case.rb,<br /> lib/active_groonga/result_set.rb,<br /> lib/active_groonga/validations.rb,<br /> lib/active_groonga/persistence.rb,<br /> lib/rails/generators/active_groonga.rb,<br /> lib/active_groonga/railties/configurable.rb,<br /> lib/rails/generators/active_groonga/migration/column.rb,<br /> lib/rails/generators/active_groonga/model/model_generator.rb,<br /> lib/rails/generators/active_groonga/migration/migration_generator.rb</span>
 </dd>
   
 </dl>
@@ -142,11 +135,11 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
 
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
-  
+   
     
       <strong class="modules">Modules:</strong> <span class='object_link'><a href="ActiveGroonga/Callbacks.html" title="ActiveGroonga::Callbacks (module)">Callbacks</a></span>, <span class='object_link'><a href="ActiveGroonga/Generators.html" title="ActiveGroonga::Generators (module)">Generators</a></span>, <span class='object_link'><a href="ActiveGroonga/Persistence.html" title="ActiveGroonga::Persistence (module)">Persistence</a></span>, <span class='object_link'><a href="ActiveGroonga/Railties.html" title="ActiveGroonga::Railties (module)">Railties</a></span>, <span class='object_link'><a href="ActiveGroonga/TestFixtures.html" title="ActiveGroonga::TestFixtures (module)">TestFixtures</a></span>, <span class='object_link'><a href="ActiveGroonga/VERSION.html" title="ActiveGroonga::VERSION (module)">VERSION</a></span>, <span class='object_link'><a href="ActiveGroonga/Validations.html" title="ActiveGroonga::Validations (module)">Validations</a></span>
     
-  
+   
     
       <strong class="classes">Classes:</strong> <span class='object_link'><a href="ActiveGroonga/Base.html" title="ActiveGroonga::Base (class)">Base</a></span>, <span class='object_link'><a href="ActiveGroonga/Database.html" title="ActiveGroonga::Database (class)">Database</a></span>, <span class='object_link'><a href="ActiveGroonga/DuplicateMigrationVersionError.html" title="ActiveGroonga::DuplicateMigrationVersionError (class)">DuplicateMigrationVersionError</a></span>, <span class='object_link'><a href="ActiveGroonga/Error.html" title="ActiveGroonga::Error (class)">Error</a></span>, <span class='object_link'><a href="ActiveGroonga/KeyOverrideError.html" title="ActiveGroonga::KeyOverrideError (class)">KeyOverrideError</a></span>, <span class='object_link'><a href="ActiveGroonga/Migration.html" title="ActiveGroonga::Migration (class)">Migration</a></span>, <span class='object_link'><a href="ActiveGroonga/MigrationEntry.html" title="ActiveGroonga::MigrationEntry (class)">MigrationEntry</a></span>, <span class='object_link'><a href="ActiveGroonga/Migrator.html" title="ActiveGroonga::Migrator (class)">Migrator</a></span>, <span class='object_link'><a href="ActiveGroonga/NoKeyTableError.html" title="ActiveGroonga::NoKeyTableError (class)">NoKeyTableError</a></span>, <span class='object_link'><a href="ActiveGroonga/Railtie.html" title="ActiveGroonga::Railtie (class)">Railtie</a></span>, <span class='object_link'><a href="ActiveGroonga/RecordInvalid.html" title="ActiveGroonga::RecordInvalid (class)">RecordInvalid</a></span>, <span class='object_link'><a href="ActiveGroonga/RecordNotSaved.html" title="ActiveGroonga::RecordNotSaved (class)">RecordNotSaved</a></span>, <span class='object_link'><a href="ActiveGroonga/ResultSet.html" title="ActiveGroonga::ResultSet (class)">ResultSet</a></span>, <span class='object_link'><a href="ActiveGroonga/Schema.html" title="ActiveGroonga::Schema (class)">Schema</a></span>, <span class='object_link'><a href="ActiveGroonga/SchemaManagementTable.html" title="ActiveGroonga::SchemaManagementTable (class)">SchemaManagementTable</a></span>, <span class='object_link'><a href="ActiveGroonga/TestCase.html" title="ActiveGroonga::TestCase (class)">TestCase</a></span>, <span class='object_link'><a href="ActiveGroonga/Vector.html" title="ActiveGroonga::Vector (class)">Vector</a></span>
     
@@ -154,16 +147,16 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
 </p>
 
 
+  
 
 
-
-
+  
 
 
   
 
 </div>
-
+    
     <div id="footer"></div>
 
   

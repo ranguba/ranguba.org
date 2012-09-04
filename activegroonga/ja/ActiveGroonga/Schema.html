@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  relpath = '..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -59,38 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (S)</a> &raquo;
+    <a href="../_index.html">Index (S)</a> &raquo; 
     <span class="title"><span class="object_link"><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
      &raquo; 
     <span class="title">Schema</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link" href="../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link" href="../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: ActiveGroonga::Schema
   
   
@@ -132,8 +128,6 @@
 
 
 
-
-
   
     <h2>
       Class Method Summary
@@ -156,7 +150,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline"></div></span>
@@ -172,7 +165,6 @@
 
     
   </span>
-  
   
   
   
@@ -209,7 +201,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline"></div></span>
@@ -225,7 +216,6 @@
 
     
   </span>
-  
   
   
   
@@ -248,7 +238,6 @@
     
   </span>
   
-  
     <span class="note title constructor">constructor</span>
   
   
@@ -270,15 +259,13 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class="object_link"><a href="" title="ActiveGroonga::Schema (class)">Schema</a></span></tt>) <strong>initialize</strong>(options = {}) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     <p>A new instance of Schema</p>
 
@@ -303,11 +290,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/schema.rb', line 37</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
-  <span class="ivar">@options</span> <span class="op">=</span> <span class="lparen">(</span><span class="id identifier rubyid_options">options</span> <span class="op">||</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span>
-  <span class="ivar">@version</span> <span class="op">=</span> <span class="ivar">@options</span><span class="period">.</span><span class="id identifier rubyid_delete">delete</span><span class="lparen">(</span><span class="symbol">:version</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_context">context</span> <span class="op">=</span> <span class="ivar">@options</span><span class="period">.</span><span class="id identifier rubyid_delete">delete</span><span class="lparen">(</span><span class="symbol">:context</span><span class="rparen">)</span> <span class="op">||</span> <span class="const">Base</span><span class="period">.</span><span class="id identifier rubyid_context">context</span>
-  <span class="ivar">@schema</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Schema</span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="symbol">:context</span> <span class="op">=&gt;</span> <span class="id identifier rubyid_context">context</span><span class="rparen">)</span>
+<span class="kw">def</span> <span class="id initialize">initialize</span><span class="lparen">(</span><span class="id options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="ivar">@options</span> <span class="op">=</span> <span class="lparen">(</span><span class="id options">options</span> <span class="op">||</span> <span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span><span class="period">.</span><span class="id dup">dup</span>
+  <span class="ivar">@version</span> <span class="op">=</span> <span class="ivar">@options</span><span class="period">.</span><span class="id delete">delete</span><span class="lparen">(</span><span class="symbol">:version</span><span class="rparen">)</span>
+  <span class="id context">context</span> <span class="op">=</span> <span class="ivar">@options</span><span class="period">.</span><span class="id delete">delete</span><span class="lparen">(</span><span class="symbol">:context</span><span class="rparen">)</span> <span class="op">||</span> <span class="const">Base</span><span class="period">.</span><span class="id context">context</span>
+  <span class="ivar">@schema</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Schema</span><span class="period">.</span><span class="id new">new</span><span class="lparen">(</span><span class="symbol">:context</span> <span class="op">=&gt;</span> <span class="id context">context</span><span class="rparen">)</span>
 <span class="kw">end</span></pre>
     </td>
   </tr>
@@ -319,18 +306,16 @@
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="define-class_method">
+  <p class="signature first" id="define-class_method">
   
     + (<tt>Object</tt>) <strong>define</strong>(options = {}, &amp;block) 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -343,8 +328,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/schema.rb', line 21</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_define">define</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_define">define</span><span class="lparen">(</span><span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+<span class="kw">def</span> <span class="id define">define</span><span class="lparen">(</span><span class="id options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id block">block</span><span class="rparen">)</span>
+  <span class="id new">new</span><span class="lparen">(</span><span class="id options">options</span><span class="rparen">)</span><span class="period">.</span><span class="id define">define</span><span class="lparen">(</span><span class="op">&amp;</span><span class="id block">block</span><span class="rparen">)</span>
 <span class="kw">end</span></pre>
     </td>
   </tr>
@@ -352,15 +337,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="dump-class_method">
+  <p class="signature " id="dump-class_method">
   
     + (<tt>Object</tt>) <strong>dump</strong>(options = {}) 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -380,15 +363,15 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/schema.rb', line 25</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_dump">dump</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_options">options</span> <span class="op">||=</span> <span class="lbrace">{</span><span class="rbrace">}</span>
-  <span class="kw">if</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_is_a?">is_a?</span><span class="lparen">(</span><span class="const">Hash</span><span class="rparen">)</span>
-    <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span>
-    <span class="id identifier rubyid_output">output</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_delete">delete</span><span class="lparen">(</span><span class="symbol">:output</span><span class="rparen">)</span>
+<span class="kw">def</span> <span class="id dump">dump</span><span class="lparen">(</span><span class="id options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
+  <span class="id options">options</span> <span class="op">||=</span> <span class="lbrace">{</span><span class="rbrace">}</span>
+  <span class="kw">if</span> <span class="id options">options</span><span class="period">.</span><span class="id is_a?">is_a?</span><span class="lparen">(</span><span class="const">Hash</span><span class="rparen">)</span>
+    <span class="id options">options</span> <span class="op">=</span> <span class="id options">options</span><span class="period">.</span><span class="id dup">dup</span>
+    <span class="id output">output</span> <span class="op">=</span> <span class="id options">options</span><span class="period">.</span><span class="id delete">delete</span><span class="lparen">(</span><span class="symbol">:output</span><span class="rparen">)</span>
   <span class="kw">else</span>
-    <span class="id identifier rubyid_output">output</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="comma">,</span> <span class="lbrace">{</span><span class="rbrace">}</span>
+    <span class="id output">output</span><span class="comma">,</span> <span class="id options">options</span> <span class="op">=</span> <span class="id options">options</span><span class="comma">,</span> <span class="lbrace">{</span><span class="rbrace">}</span>
   <span class="kw">end</span>
-  <span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_dump">dump</span><span class="lparen">(</span><span class="id identifier rubyid_output">output</span><span class="rparen">)</span>
+  <span class="id new">new</span><span class="lparen">(</span><span class="id options">options</span><span class="rparen">)</span><span class="period">.</span><span class="id dump">dump</span><span class="lparen">(</span><span class="id output">output</span><span class="rparen">)</span>
 <span class="kw">end</span></pre>
     </td>
   </tr>
@@ -399,18 +382,16 @@
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="define-instance_method">
+  <p class="signature first" id="define-instance_method">
   
     - (<tt>Object</tt>) <strong>define</strong> {|@schema| ... }
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 
@@ -418,7 +399,7 @@
 </div>
 <div class="tags">
   
-<p class="tag_title">Yields:</p>
+<h3>Yields:</h3>
 <ul class="yield">
   
     <li>
@@ -447,10 +428,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/schema.rb', line 44</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_define">define</span><span class="lparen">(</span><span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
+<span class="kw">def</span> <span class="id define">define</span><span class="lparen">(</span><span class="op">&amp;</span><span class="id block">block</span><span class="rparen">)</span>
   <span class="kw">yield</span><span class="lparen">(</span><span class="ivar">@schema</span><span class="rparen">)</span>
-  <span class="ivar">@schema</span><span class="period">.</span><span class="id identifier rubyid_define">define</span>
-  <span class="id identifier rubyid_update_version">update_version</span> <span class="kw">if</span> <span class="ivar">@version</span>
+  <span class="ivar">@schema</span><span class="period">.</span><span class="id define">define</span>
+  <span class="id update_version">update_version</span> <span class="kw">if</span> <span class="ivar">@version</span>
 <span class="kw">end</span></pre>
     </td>
   </tr>
@@ -458,15 +439,13 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="dump-instance_method">
+  <p class="signature " id="dump-instance_method">
   
     - (<tt>Object</tt>) <strong>dump</strong>(output = nil) 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -503,31 +482,31 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/schema.rb', line 50</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_dump">dump</span><span class="lparen">(</span><span class="id identifier rubyid_output">output</span><span class="op">=</span><span class="kw">nil</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_dumped_schema">dumped_schema</span> <span class="op">=</span> <span class="ivar">@schema</span><span class="period">.</span><span class="id identifier rubyid_dump">dump</span>
-  <span class="kw">return</span> <span class="kw">nil</span> <span class="kw">if</span> <span class="id identifier rubyid_dumped_schema">dumped_schema</span><span class="period">.</span><span class="id identifier rubyid_nil?">nil?</span>
+<span class="kw">def</span> <span class="id dump">dump</span><span class="lparen">(</span><span class="id output">output</span><span class="op">=</span><span class="kw">nil</span><span class="rparen">)</span>
+  <span class="id dumped_schema">dumped_schema</span> <span class="op">=</span> <span class="ivar">@schema</span><span class="period">.</span><span class="id dump">dump</span>
+  <span class="kw">return</span> <span class="kw">nil</span> <span class="kw">if</span> <span class="id dumped_schema">dumped_schema</span><span class="period">.</span><span class="id nil?">nil?</span>
 
-  <span class="id identifier rubyid_return_string">return_string</span> <span class="op">=</span> <span class="kw">false</span>
-  <span class="kw">if</span> <span class="id identifier rubyid_output">output</span><span class="period">.</span><span class="id identifier rubyid_nil?">nil?</span>
-    <span class="id identifier rubyid_output">output</span> <span class="op">=</span> <span class="const">StringIO</span><span class="period">.</span><span class="id identifier rubyid_new">new</span>
-    <span class="id identifier rubyid_return_string">return_string</span> <span class="op">=</span> <span class="kw">true</span>
+  <span class="id return_string">return_string</span> <span class="op">=</span> <span class="kw">false</span>
+  <span class="kw">if</span> <span class="id output">output</span><span class="period">.</span><span class="id nil?">nil?</span>
+    <span class="id output">output</span> <span class="op">=</span> <span class="const">StringIO</span><span class="period">.</span><span class="id new">new</span>
+    <span class="id return_string">return_string</span> <span class="op">=</span> <span class="kw">true</span>
   <span class="kw">end</span>
-  <span class="id identifier rubyid_version">version</span> <span class="op">=</span> <span class="ivar">@version</span> <span class="op">||</span> <span class="id identifier rubyid_management_table">management_table</span><span class="period">.</span><span class="id identifier rubyid_current_version">current_version</span>
-  <span class="id identifier rubyid_output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ActiveGroonga::Schema.define(:version =&gt; </span><span class="embexpr_beg">#{</span><span class="id identifier rubyid_version">version</span><span class="rbrace">}</span><span class="tstring_content">) do |schema|\n</span><span class="tstring_end">"</span></span>
-  <span class="id identifier rubyid_output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">  schema.instance_eval do\n</span><span class="tstring_end">"</span></span>
-  <span class="id identifier rubyid_dumped_schema">dumped_schema</span><span class="period">.</span><span class="id identifier rubyid_each_line">each_line</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_line">line</span><span class="op">|</span>
-    <span class="kw">if</span> <span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">^\s*$</span><span class="regexp_end">/</span></span> <span class="op">=~</span> <span class="id identifier rubyid_line">line</span>
-      <span class="id identifier rubyid_output">output</span> <span class="op">&lt;&lt;</span> <span class="id identifier rubyid_line">line</span>
+  <span class="id version">version</span> <span class="op">=</span> <span class="ivar">@version</span> <span class="op">||</span> <span class="id management_table">management_table</span><span class="period">.</span><span class="id current_version">current_version</span>
+  <span class="id output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ActiveGroonga::Schema.define(:version =&gt; </span><span class="embexpr_beg">#{</span><span class="id version">version</span><span class="rbrace">}</span><span class="tstring_content">) do |schema|\n</span><span class="tstring_end">"</span></span>
+  <span class="id output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">  schema.instance_eval do\n</span><span class="tstring_end">"</span></span>
+  <span class="id dumped_schema">dumped_schema</span><span class="period">.</span><span class="id each_line">each_line</span> <span class="kw">do</span> <span class="op">|</span><span class="id line">line</span><span class="op">|</span>
+    <span class="kw">if</span> <span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">^\s*$</span><span class="regexp_end">/</span></span> <span class="op">=~</span> <span class="id line">line</span>
+      <span class="id output">output</span> <span class="op">&lt;&lt;</span> <span class="id line">line</span>
     <span class="kw">else</span>
-      <span class="id identifier rubyid_output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">    </span><span class="embexpr_beg">#{</span><span class="id identifier rubyid_line">line</span><span class="rbrace">}</span><span class="tstring_end">"</span></span>
+      <span class="id output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">    </span><span class="embexpr_beg">#{</span><span class="id line">line</span><span class="rbrace">}</span><span class="tstring_end">"</span></span>
     <span class="kw">end</span>
   <span class="kw">end</span>
-  <span class="id identifier rubyid_output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">  end\n</span><span class="tstring_end">"</span></span>
-  <span class="id identifier rubyid_output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">end\n</span><span class="tstring_end">"</span></span>
-  <span class="kw">if</span> <span class="id identifier rubyid_return_string">return_string</span>
-    <span class="id identifier rubyid_output">output</span><span class="period">.</span><span class="id identifier rubyid_string">string</span>
+  <span class="id output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">  end\n</span><span class="tstring_end">"</span></span>
+  <span class="id output">output</span> <span class="op">&lt;&lt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">end\n</span><span class="tstring_end">"</span></span>
+  <span class="kw">if</span> <span class="id return_string">return_string</span>
+    <span class="id output">output</span><span class="period">.</span><span class="id string">string</span>
   <span class="kw">else</span>
-    <span class="id identifier rubyid_output">output</span>
+    <span class="id output">output</span>
   <span class="kw">end</span>
 <span class="kw">end</span></pre>
     </td>
@@ -538,7 +517,7 @@
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   
