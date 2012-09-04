@@ -95,33 +95,681 @@
 
 <dl class="box">
   
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Groonga::RecordExpressionBuilder</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
   
     
   
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class="object_link"><a href="ExpressionBuildable.html" title="Groonga::ExpressionBuildable (module)">ExpressionBuildable</a></span></dd>
+      
     
   
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last"></dd>
+    <dd class="r1 last">lib/groonga/expression-builder.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
-
-
-
-
-
-
-
-
-
-</div>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
     
-    <div id="footer"></div>
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class="object_link"><a href="MatchTargetRecordExpressionBuilder.html" title="Groonga::MatchTargetRecordExpressionBuilder (class)">MatchTargetRecordExpressionBuilder</a></span></p>
+</div>
+
+  <h2>Constant Summary</h2>
+  
+
 
   
+  
+  
+  
+  <h3 class="inherited">Constants included from <span class="object_link"><a href="ExpressionBuildable.html" title="Groonga::ExpressionBuildable (module)">ExpressionBuildable</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="ExpressionBuildable.html#VALID_COLUMN_NAME_RE-constant" title="Groonga::ExpressionBuildable::VALID_COLUMN_NAME_RE (constant)">VALID_COLUMN_NAME_RE</a></span></p>
+
+
+
+  
+  
+  
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes included from <span class="object_link"><a href="ExpressionBuildable.html" title="Groonga::ExpressionBuildable (module)">ExpressionBuildable</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="ExpressionBuildable.html#allow_column-instance_method" title="Groonga::ExpressionBuildable#allow_column (method)">allow_column</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#allow_pragma-instance_method" title="Groonga::ExpressionBuildable#allow_pragma (method)">allow_pragma</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#allow_update-instance_method" title="Groonga::ExpressionBuildable#allow_update (method)">allow_update</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#default_column-instance_method" title="Groonga::ExpressionBuildable#default_column (method)">default_column</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#query-instance_method" title="Groonga::ExpressionBuildable#query (method)">query</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#syntax-instance_method" title="Groonga::ExpressionBuildable#syntax (method)">syntax</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#table-instance_method" title="Groonga::ExpressionBuildable#table (method)">table</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Object) <strong>[]</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#id-instance_method" title="#id (instance method)">- (Object) <strong>id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index-instance_method" title="#index (instance method)">- (Object) <strong>index</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (RecordExpressionBuilder) <strong>initialize</strong>(table, name) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>A new instance of RecordExpressionBuilder.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key-instance_method" title="#key (instance method)">- (Object) <strong>key</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#match-instance_method" title="#match (instance method)">- (Object) <strong>match</strong>(query, options_or_default_column = {}, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#match_target-instance_method" title="#match_target (instance method)">- (Object) <strong>match_target</strong>(&amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#n_sub_records-instance_method" title="#n_sub_records (instance method)">- (Object) <strong>n_sub_records</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#score-instance_method" title="#score (instance method)">- (Object) <strong>score</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class="object_link"><a href="ExpressionBuildable.html" title="Groonga::ExpressionBuildable (module)">ExpressionBuildable</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="ExpressionBuildable.html#%26-instance_method" title="Groonga::ExpressionBuildable#&amp; (method)">#, #build, #|
+
+  Constructor Details
+  
+    
+  
+  
+    - (RecordExpressionBuilder) initialize(table, name) 
+  
+
+  
+
+  
+    
+A new instance of RecordExpressionBuilder
+
+
+  
+
+
+  
+
+
+  
+    
+      
+
+
+391
+392
+393
+394
+395
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 391
+
+def initialize(table, name)
+  super()
+  @table = table
+  @name = name
+end
+
+    
+  
+
+
+  
+
+
+  Dynamic Method Handling
+  
+    This class handles dynamic methods through the method_missing method
+    
+  
+  
+    
+  
+  
+    - (Object) method_missing(name, *args, block)  (private)
+  
+
+  
+
+  
+    
+      
+
+
+467
+468
+469
+470
+471
+472
+473
+474
+475
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 467
+
+def method_missing(name, *args, block)
+  return super if block
+  return super unless args.empty?
+  if VALID_COLUMN_NAME_RE =~ name.to_s
+    self[name]
+  else
+    super
+  end
+end
+
+    
+  
+
+
+  
+
+
+
+  
+    Instance Method Details
+    
+    
+      
+  
+  
+    - (Object) [](name) 
+  
+
+  
+
+  
+    
+      
+
+
+397
+398
+399
+400
+401
+402
+403
+404
+405
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 397
+
+def [](name)
+  column = @table.column(name)
+  if column.nil?
+    message = unknown column #{name.inspect}  +
+      for table #{@table.inspect}
+    raise ArgumentError, message
+  end
+  column_expression_builder(column, name)
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) id 
+  
+
+  
+
+  
+    
+      
+
+
+407
+408
+409
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 407
+
+def id
+  self[_id]
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) index(name) 
+  
+
+  
+
+  
+    
+      
+
+
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 441
+
+def index(name)
+  object = @table.context[name]
+  if object.nil?
+    raise ArgumentError, unknown index column: #{name}
+  end
+  if object.range != @table
+    raise ArgumentError,
+          different index column: #{name}: #{object.inspect}
+  end
+  column_expression_builder(object, name)
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) key 
+  
+
+  
+
+  
+    
+      
+
+
+411
+412
+413
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 411
+
+def key
+  self[_key]
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) match(query, options_or_default_column = {}, block) 
+  
+
+  
+
+  
+    
+      
+
+
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 423
+
+def match(query, options_or_default_column={}, block)
+  if options_or_default_column.is_a?(String)
+    options = {:default_column = options_or_default_column}
+  else
+    options = options_or_default_column
+  end
+  options = options.dup
+  options[:syntax] ||= :query
+  if block_given? and options[:default_column].nil?
+    options[:default_column] = build_match_target(block)
+  end
+  SubExpressionBuilder.new(query, options)
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) match_target(block) 
+  
+
+  
+
+  
+    
+      
+
+
+437
+438
+439
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 437
+
+def match_target(block)
+  MatchTargetExpressionBuilder.new(build_match_target(block))
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) n_sub_records 
+  
+
+  
+
+  
+    
+      
+
+
+419
+420
+421
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 419
+
+def n_sub_records
+  self[_nsubrecs]
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) score 
+  
+
+  
+
+  
+    
+      
+
+
+415
+416
+417
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 415
+
+def score
+  self[_score]
+end
+
+    
+  
+
+
+    
+  
+
+
+    
+    
+
+  
+</a></span></p></div>
     </div>
 
     <div class="sponsors">
@@ -156,5 +804,4 @@ piwik_log(piwik_action_name, piwik_idsite, piwik_url);
 <!-- End Piwik Tag -->
     </div>
 
-</body>
-</html>
+</body></html>

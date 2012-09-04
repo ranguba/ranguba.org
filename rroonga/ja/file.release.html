@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="icon" href="../../favicon.png" />
+    <title>ファイル: お知らせ &mdash; rroonga - ラングバ</title>
+
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../index.html.ja">
+      <span class="title">ファイル: お知らせ &mdash; rroonga</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../rroonga/en/file.release.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../rroonga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../rroonga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../index.html.ja#install-rroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../developer.html.ja">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html" title="Index">索引</a> &raquo; 
+    <span class="title">ファイル: お知らせ</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">フレーム無し</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">クラスリスト</a>
+  
+    <a id="method_list_link" href="#">メソッドリスト</a>
+  
+    <a id="file_list_link" href="#">ファイルリスト</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id="filecontents"><h1>リリース手順</h1>
+<h2>news.rdocに前回リリースからの変更点のまとめ</h2>
+<p>news.rdocに前回のリリース時から現在までの変更点をnews.rdocにまとめるため、下記コマンドを実行してgitのコミットログを表示する。</p>
+<pre class="code">
+$ <span class="git identifier id">git</span> <span class="log identifier id">log</span> <span class="minus op">-</span><span class="p identifier id">p</span> <span class="minus op">-</span><span class="minus op">-</span><span class="reverse identifier id">reverse</span> </pre>
+<p>ログを"Author:"で検索しながら、ユーザにとって知る必要があるもの（ユーザに見える情報）のコミットログのみを抜き出す。
+その動詞を過去形にする。
+それらログをそれぞれを次のようにまとめる。
+機能などに新しく追加されたものに関してはImprovement,
+動作の変更などはChanges,
+バグの修正など前バージョンまでにあった問題を修正したものはFixesに記述する。
+また、コミットログの行末に[人名]がある場合はその人名をThanks以下に書く。
+この作業をリリース予定日よりも前に行った場合は、news.rdocの先頭にコミットIDをメモしておく。</p>
+<h3>news.rdocの1リリース分のテンプレート</h3>
+<pre class="code">
+<span class="h2 identifier id">h2</span><span class="dot token">.</span> </pre>
+
+<pre class="code">
+<span class="eq op">==</span> </pre>
+<p><span class="caps">TODO</span>:テンプレをtextileにする</p>
+<h2>日本語訳の作成</h2>
+<p>下記コマンドを実行してja.poを更新する。</p>
+<pre class="code">
+$ <span class="rake identifier id">rake</span> <span class="reference identifier id">reference</span><span class="symbol val">:po</span><span class="symbol val">:update</span>
+</pre>
+<p>その後、ja.poを開いて、各msgid（コミットログ）に対応するmsgstrにコミットログの和訳を作成する。</p>
+<h2>バージョンとリリース日の更新</h2>
+<p>下記コマンドを入力して、プロジェクトページ（html/index.html、html/index.html.ja）のrroongaの項にある最新バージョンとリリース日をそれぞれ次回リリースに合わせたものに更新する。</p>
+<pre class="code">
+$ <span class="rake identifier id">rake</span> <span class="release identifier id">release</span><span class="symbol val">:info</span><span class="symbol val">:update</span> <span class="OLD_VERSION constant id">OLD_VERSION</span><span class="assign token">=</span></pre>
+<h2>gemパッケージの作成</h2>
+<p>下記コマンドを打ってアップロード用のgemパッケージをビルドする。</p>
+<pre class="code">
+$ <span class="ruby1 identifier id">ruby1</span><span class="integer val">.8</span> <span class="minus op">-</span><span class="S constant id">S</span> <span class="rake identifier id">rake</span> <span class="build identifier id">build</span>
+</pre>
+<p>rroongaの場合、ruby1.9.1ではパースできないオブジェクトがあるためruby1.8で作成する。
+<span class="caps">TODO</span>: YAMLの設定ファイルを直して1.9.1でやる</p>
+<h2>gemパッケージの動作確認</h2>
+<p>そのgemパッケージの動作を確認するため、下記コマンドを打ってローカル環境にインストールする。</p>
+<pre class="code">
+$ <span class="gem1 identifier id">gem1</span><span class="float val">.9.1</span> <span class="install identifier id">install</span> <span class="pkg identifier id">pkg</span><span class="div op">/</span><span class="rroonga identifier id">rroonga</span><span class="minus op">-</span></pre>
+<p>インストールが成功すると/home/(ユーザ名)/.gem/ruby/1.9.1/gems/rroonga-（バージョン番号）/にインストールされる。
+このディレクトリに移動して、テストを実行し動作を確認する。</p>
+<pre class="code">
+$ <span class="NO_MAKE constant id">NO_MAKE</span><span class="assign token">=</span><span class="yes identifier id">yes</span> <span class="ruby1 identifier id">ruby1</span><span class="float val">.9.1</span> <span class="test identifier id">test</span><span class="div op">/</span><span class="run identifier id">run</span><span class="minus op">-</span><span class="test identifier id">test</span><span class="dot token">.</span><span class="rb identifier id">rb</span>
+</pre>
+<h2>news.rdocの再まとめ</h2>
+<p>news.rdocの行頭にコミットIDが残っている場合、
+下記コマンドを実行してログを表示する。</p>
+<pre class="code">
+<span class="git identifier id">git</span> <span class="log identifier id">log</span> <span class="minus op">-</span><span class="minus op">-</span><span class="reverse identifier id">reverse</span> <span class="minus op">-</span><span class="p identifier id">p</span> </pre>
+<p>上記ログを"Author:"で検索しながら、ユーザにとって知る必要があるもの（ユーザに見える情報）のコミットログのみを抜き出す。
+その動詞を過去形にする。
+それらログをそれぞれを次のようにまとめる。
+機能などに新しく追加されたものに関してはImprovement,
+動作の変更などはChanges,
+バグの修正など前バージョンまでにあった問題を修正したものはFixesに記述する。
+また、コミットログの行末に[人名]がある場合はその人名をThanks以下に書く。</p>
+<p>その後、下記コマンドを実行してja.poを更新する。</p>
+<pre class="code">
+$ <span class="rake identifier id">rake</span> <span class="reference identifier id">reference</span><span class="symbol val">:po</span><span class="symbol val">:update</span>
+</pre>
+<p>その後、ja.poを開いて、各msgid（追加したコミットログ）に対応するmsgstrにコミットログの和訳を作成する。</p>
+<h2>リリースバージョンのタグを作成</h2>
+<p>下記コマンドを入力して、今回リリースするバージョンのタグを打ってgit pushする。</p>
+<pre class="code">
+$ <span class="rake identifier id">rake</span> <span class="release identifier id">release</span>
+</pre>
+<h2>rubygems.orgにパッケージをアップロード</h2>
+<p>下記コマンドを実行してパッケージをアップロードする。</p>
+<pre class="code">
+$ <span class="ruby1 identifier id">ruby1</span><span class="integer val">.8</span> <span class="minus op">-</span><span class="S constant id">S</span> <span class="rake identifier id">rake</span> <span class="gemcutter identifier id">gemcutter</span><span class="symbol val">:release</span>
+</pre>
+<h2>rubyforgeにパッケージをアップロード</h2>
+<p>下記コマンドを実行してアップロードする。</p>
+<pre class="code">
+$ <span class="ruby1 identifier id">ruby1</span><span class="integer val">.8</span> <span class="minus op">-</span><span class="S constant id">S</span> <span class="rake identifier id">rake</span> <span class="reference identifier id">reference</span><span class="symbol val">:publish</span>
+$ <span class="ruby1 identifier id">ruby1</span><span class="integer val">.8</span> <span class="minus op">-</span><span class="S constant id">S</span> <span class="rake identifier id">rake</span> <span class="html identifier id">html</span><span class="symbol val">:publish</span>
+</pre>
+<p><span class="caps">TODO</span>: rake publishした時にユーザ名を用いて~/.rubyforge/user-config.ymlを書き換える（rubyforge —setup を自動的に行う）</p>
+<h2>メーリングリストにリリースの周知</h2>
+<p>メーリングリストにリリースした旨を書いたメールを流す。
+日本語の他、英語のメーリングリストにもリリースした旨を英語で書いたメールを流す。</p>
+<p>h3.日本語でのメールの具体例</p>
+<p>吉原です。</p>
+<p>（最新バージョンをリリースしたことを書く）
+groongaのRubyバインディングrroonga1.2.3をリリースしました。
+（rroongaのインデックスページのURL）
+  http://groonga.rubyforge.org/index.html.ja#about-rroonga</p>
+<p>（ソフトウェアの概略）
+rroongaはRubyらしい書き方でgroongaを操作できることを重視しています。
+同時に、groongaの速度をそのまま生かすことも大事にしています。</p>
+<p>（前回リリースから今回リリースまでに変更された点のうち、ユーザにとって重要なものを書く）
+1.2.1からの変更された点としては、ドキュメントの一部英訳化、リファ
+レンスのパスの修正などを行いました。また、rroongaをインストールし
+ようとした際、groongaがないと自動でインストールする機能が復活しま
+した。</p>
+<p>（コマンドなどのインストール方法）
+インストール:
+  % sudo gem install rroonga</p>
+<p>（チュートリアルページのURL）
+irbを使ったrroongaのチュートリアルはこちらにあります。</p>
+http://groonga.rubyforge.org/rroonga/ja/file.tutorial.html
+<p>（http://groonga.rubyforge.org/rroonga/ja/file.news.htmlを見て、前回リリース時からの変更点を書く）
+1.2.1からの変更点は以下の通りです。</p>
+<p>1.2.3: 2011-06-27</p>
+<p>修正
+    gemパッケージに含まれてしまったオブジェクトファイル(*.o)を削除。
+    一部のリファレンスマニュアルの文字化けを修正。</p>
+<p>1.2.2: 2011-06-27</p>
+<p>改良
+    英語版の「開発者向け情報」ページを作成。
+    “html:publish”タスクと"publish"に関しての説明を追加。</p>
+<p>変更
+    Groonga::Record#attributesが重複したレコードが現れた際に
+    同じattributesオブジェクトを返すようにした。
+    Groonga::Record#attributesにドキュメントを追加。
+    「開発者向け情報」ページ内にあるドキュメント作成ツールを変更。
+    NEWS*.rdocとtutorial.texttileをディレクトリdoc/text/に移動。</p>
+<p>修正
+    インデックスページにある「チュートリアル」ページへのリンクを修正。
+    インデックスページにある英語版「チュートリアル」ページへのリンクを修正。
+    新しいgroongaのダウンロードURLに対応。 [mallowlabs]</p>
+<p>感謝
+    mallowlabsさん</p>
+<h3>英語でのメールの具体例</h3>
+<pre class="code">
+<span class="Everyone constant id">Everyone</span><span class="comma token">,</span>
+
+</pre>
+<h2>rubyforgeのニュースを更新</h2>
+<p>rubyforgeのpost_newsコマンドを使ってrubyforgeの最新ニュースを更新する。</p>
+<h2>次回リリース時のバージョン番号の設定</h2>
+<p>ext/groonga/rb-grn.hにある、RB_GRN_MAJOR_VERSION,RB_GRN_MINOR_VERSION,RB_GRN_MICRO_VERSIONの値を次回リリース時のバージョンの値に変更する。</p></div></div>
+    
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../tango-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

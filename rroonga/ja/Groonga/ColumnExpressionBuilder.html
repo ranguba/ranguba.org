@@ -95,33 +95,832 @@
 
 <dl class="box">
   
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Groonga::ColumnExpressionBuilder</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
   
     
   
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class="object_link"><a href="ExpressionBuildable.html" title="Groonga::ExpressionBuildable (module)">ExpressionBuildable</a></span></dd>
+      
     
   
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last"></dd>
+    <dd class="r1 last">lib/groonga/expression-builder.rb</dd>
   
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
 
 
-
-
-
-
-
-
+  </div>
+</div>
+<div class="tags">
+  
 
 </div>
-    
-    <div id="footer"></div>
+  <h2>Constant Summary</h2>
+  
+
 
   
+  
+  
+  
+  <h3 class="inherited">Constants included from <span class="object_link"><a href="ExpressionBuildable.html" title="Groonga::ExpressionBuildable (module)">ExpressionBuildable</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="ExpressionBuildable.html#VALID_COLUMN_NAME_RE-constant" title="Groonga::ExpressionBuildable::VALID_COLUMN_NAME_RE (constant)">VALID_COLUMN_NAME_RE</a></span></p>
+
+
+
+  
+  
+  
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes included from <span class="object_link"><a href="ExpressionBuildable.html" title="Groonga::ExpressionBuildable (module)">ExpressionBuildable</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="ExpressionBuildable.html#allow_column-instance_method" title="Groonga::ExpressionBuildable#allow_column (method)">allow_column</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#allow_pragma-instance_method" title="Groonga::ExpressionBuildable#allow_pragma (method)">allow_pragma</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#allow_update-instance_method" title="Groonga::ExpressionBuildable#allow_update (method)">allow_update</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#default_column-instance_method" title="Groonga::ExpressionBuildable#default_column (method)">default_column</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#query-instance_method" title="Groonga::ExpressionBuildable#query (method)">query</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#syntax-instance_method" title="Groonga::ExpressionBuildable#syntax (method)">syntax</a></span>, <span class="object_link"><a href="ExpressionBuildable.html#table-instance_method" title="Groonga::ExpressionBuildable#table (method)">table</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%25-instance_method" title="#% (instance method)">- (Object) <strong>%</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%2A-instance_method" title="#* (instance method)">- (Object) <strong>*</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%2B-instance_method" title="#+ (instance method)">- (Object) <strong>+</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#--instance_method" title="#- (instance method)">- (Object) <strong>-</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%2F-instance_method" title="#/ (instance method)">- (Object) <strong>/</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3C-instance_method" title="#&lt; (instance method)">- (Object) <strong>&lt;</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3C%3D-instance_method" title="#&lt;= (instance method)">- (Object) <strong>&lt;=</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Object) <strong>==</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3D%7E-instance_method" title="#=~ (instance method)">- (Object) <strong>=~</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3E-instance_method" title="#&gt; (instance method)">- (Object) <strong>&gt;</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3E%3D-instance_method" title="#&gt;= (instance method)">- (Object) <strong>&gt;=</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ColumnExpressionBuilder) <strong>initialize</strong>(column, name, query, options = {}) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>A new instance of ColumnExpressionBuilder.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#match-instance_method" title="#match (instance method)">- (Object) <strong>match</strong>(query, options = {}, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class="object_link"><a href="ExpressionBuildable.html" title="Groonga::ExpressionBuildable (module)">ExpressionBuildable</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="ExpressionBuildable.html#%26-instance_method" title="Groonga::ExpressionBuildable#&amp; (method)">#, #build, #|
+
+  Constructor Details
+  
+    
+  
+  
+    - (ColumnExpressionBuilder) initialize(column, name, query, options = {}) 
+  
+
+  
+
+  
+    
+A new instance of ColumnExpressionBuilder
+
+
+  
+
+
+  
+
+
+  
+    
+      
+
+
+490
+491
+492
+493
+494
+495
+496
+497
+498
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 490
+
+def initialize(column, name, query, options={})
+  super()
+  @table = options[:table] || column.table
+  @default_column = column
+  @column_name = options[:column_name] || @default_column.local_name
+  @range = @default_column.range
+  @name = name
+  @query = query
+end
+
+    
+  
+
+
+  
+
+
+  Dynamic Method Handling
+  
+    This class handles dynamic methods through the method_missing method
+    
+  
+  
+    
+  
+  
+    - (Object) method_missing(name, *args, block)  (private)
+  
+
+  
+
+  
+    
+      
+
+
+556
+557
+558
+559
+560
+561
+562
+563
+564
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 556
+
+def method_missing(name, *args, block)
+  return super if block
+  return super unless args.empty?
+  if VALID_COLUMN_NAME_RE =~ name.to_s
+    column_value_builder.send(name)
+  else
+    super
+  end
+end
+
+    
+  
+
+
+  
+
+
+
+  
+    Instance Method Details
+    
+    
+      
+  
+  
+    - (Object) %(other) 
+  
+
+  
+
+  
+    
+      
+
+
+540
+541
+542
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 540
+
+def %(other)
+  column_value_builder % other
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) *(other) 
+  
+
+  
+
+  
+    
+      
+
+
+532
+533
+534
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 532
+
+def *(other)
+  column_value_builder * other
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) +(other) 
+  
+
+  
+
+  
+    
+      
+
+
+524
+525
+526
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 524
+
+def +(other)
+  column_value_builder + other
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) -(other) 
+  
+
+  
+
+  
+    
+      
+
+
+528
+529
+530
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 528
+
+def -(other)
+  column_value_builder - other
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) /(other) 
+  
+
+  
+
+  
+    
+      
+
+
+536
+537
+538
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 536
+
+def /(other)
+  column_value_builder / other
+end
+
+    
+  
+
+
+    
+      
+  </a>-instance_method"&gt;
+  
+    - (Object) (other) 
+  
+
+  
+
+  
+    
+      
+
+
+508
+509
+510
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 508
+
+def (other)
+  column_value_builder  other
+end
+
+    
+  
+
+
+    
+      
+  </span>=-instance_method"&gt;
+  
+    - (Object) =(other) 
+  
+
+  
+
+  
+    
+      
+
+
+512
+513
+514
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 512
+
+def =(other)
+  column_value_builder = other
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) ==(other) 
+  
+
+  
+
+  
+    
+      
+
+
+500
+501
+502
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 500
+
+def ==(other)
+  column_value_builder == other
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) =~(other) 
+  
+
+  
+
+  
+    
+      
+
+
+504
+505
+506
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 504
+
+def =~(other)
+  column_value_builder =~ other
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) (other) 
+  
+
+  
+
+  
+    
+      
+
+
+516
+517
+518
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 516
+
+def (other)
+  column_value_builder  other
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) =(other) 
+  
+
+  
+
+  
+    
+      
+
+
+520
+521
+522
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 520
+
+def =(other)
+  column_value_builder = other
+end
+
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) match(query, options = {}, block) 
+  
+
+  
+
+  
+    
+      
+
+
+544
+545
+546
+    
+    
+      # File 'lib/groonga/expression-builder.rb', line 544
+
+def match(query, options={}, block)
+  column_value_builder.match(query, options, block)
+end
+
+    
+  
+
+
+    
+  
+
+</p></div>
     </div>
 
     <div class="sponsors">
@@ -156,5 +955,4 @@ piwik_log(piwik_action_name, piwik_idsite, piwik_url);
 <!-- End Piwik Tag -->
     </div>
 
-</body>
-</html>
+</body></html>

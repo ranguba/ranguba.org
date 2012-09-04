@@ -1,0 +1,1759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="icon" href="../../favicon.png" />
+    <title>
+  Class: SelectorByMethod
+  
+    &mdash; rroonga
+  
+ - ラングバ</title>
+
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../index.html.ja">
+      <span class="title">
+  Class: SelectorByMethod
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../rroonga/en/SelectorByMethod.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../rroonga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../rroonga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../index.html.ja#install-rroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../developer.html.ja">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (S)</a> &raquo; 
+    
+    
+    <span class="title">SelectorByMethod</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">フレーム無し</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">クラスリスト</a>
+  
+    <a id="method_list_link" href="#">メソッドリスト</a>
+  
+    <a id="file_list_link" href="#">ファイルリスト</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: SelectorByMethod
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class="object_link"><a href="Selector.html" title="Selector (class)">Selector</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class="object_link"><a href="Selector.html" title="Selector (class)">Selector</a></span></li>
+          
+            <li class="next">SelectorByMethod</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class="object_link"><a href="ColumnTokenizer.html" title="ColumnTokenizer (module)">ColumnTokenizer</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">benchmark/select.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="DEFAULT_LIMIT-constant" class="">DEFAULT_LIMIT =
+          
+        </dt>
+        <dd><pre class="code"><span class="int">10</span></pre></dd>
+      
+        <dt id="DEFAULT_DRILLDOWN_LIMIT-constant" class="">DEFAULT_DRILLDOWN_LIMIT =
+          
+        </dt>
+        <dd><pre class="code"><span class="const">DEFAULT_LIMIT</span></pre></dd>
+      
+        <dt id="DEFAULT_OUTPUT_COLUMNS-constant" class="">DEFAULT_OUTPUT_COLUMNS =
+          
+        </dt>
+        <dd><pre class="code"><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">_id, _key, *</span><span class="tstring_end">"</span></span></pre></dd>
+      
+        <dt id="DEFAULT_DRILLDOWN_OUTPUT_COLUMNS-constant" class="">DEFAULT_DRILLDOWN_OUTPUT_COLUMNS =
+          
+        </dt>
+        <dd><pre class="code"><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">_key, _nsubrecs</span><span class="tstring_end">"</span></span></pre></dd>
+      
+        <dt id="DESCENDING_ORDER_PREFIX-constant" class="">DESCENDING_ORDER_PREFIX =
+          
+        </dt>
+        <dd><pre class="code"><span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">\A-</span><span class="regexp_end">/</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class="object_link"><a href="Selector.html" title="Selector (class)">Selector</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="Selector.html#context-instance_method" title="Selector#context (method)">context</a></span>, <span class="object_link"><a href="Selector.html#database_path-instance_method" title="Selector#database_path (method)">database_path</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#access_column-instance_method" title="#access_column (instance method)">- (Object) <strong>access_column</strong>(table, column) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ascending_order_sort_key-instance_method" title="#ascending_order_sort_key (instance method)">- (Object) <strong>ascending_order_sort_key</strong>(key) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_column_list-instance_method" title="#build_column_list (instance method)">- (Object) <strong>build_column_list</strong>(result, columns) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_sort_key-instance_method" title="#build_sort_key (instance method)">- (Object) <strong>build_sort_key</strong>(sort_by) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#column_included_in_record%3F-instance_method" title="#column_included_in_record? (instance method)">- (Boolean) <strong>column_included_in_record?</strong>(column, record) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_window_options-instance_method" title="#create_window_options (instance method)">- (Object) <strong>create_window_options</strong>(limit, offset) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_sort_key-instance_method" title="#default_sort_key (instance method)">- (Object) <strong>default_sort_key</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>XX use #ascending_order_sort_key(“_id”).</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#descending_order_sort_key-instance_method" title="#descending_order_sort_key (instance method)">- (Object) <strong>descending_order_sort_key</strong>(key) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_group-instance_method" title="#do_group (instance method)">- (Object) <strong>do_group</strong>(result, column) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_select-instance_method" title="#do_select (instance method)">- (Object) <strong>do_select</strong>(filter, table, default_column) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#drilldown-instance_method" title="#drilldown (instance method)">- (Object) <strong>drilldown</strong>(query, result) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#drilldown_format-instance_method" title="#drilldown_format (instance method)">- (Object) <strong>drilldown_format</strong>(query, result) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#drilldown_result-instance_method" title="#drilldown_result (instance method)">- (Object) <strong>drilldown_result</strong>(result, drilldown_columns, query) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#drilldown_sort-instance_method" title="#drilldown_sort (instance method)">- (Object) <strong>drilldown_sort</strong>(query, result) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#format-instance_method" title="#format (instance method)">- (Object) <strong>format</strong>(query, result) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#format_record-instance_method" title="#format_record (instance method)">- (Object) <strong>format_record</strong>(column_list, record) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#format_result-instance_method" title="#format_result (instance method)">- (Object) <strong>format_result</strong>(result, output_columns) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#needs_drilldown%3F-instance_method" title="#needs_drilldown? (instance method)">- (Boolean) <strong>needs_drilldown?</strong>(query) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#needs_sort%3F-instance_method" title="#needs_sort? (instance method)">- (Boolean) <strong>needs_sort?</strong>(query) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select-instance_method" title="#select (instance method)">- (Object) <strong>select</strong>(query) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sort-instance_method" title="#sort (instance method)">- (Object) <strong>sort</strong>(query, result) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sort_key-instance_method" title="#sort_key (instance method)">- (Object) <strong>sort_key</strong>(sort_by) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_json-instance_method" title="#to_json (instance method)">- (Object) <strong>to_json</strong>(value, column) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class="object_link"><a href="ColumnTokenizer.html" title="ColumnTokenizer (module)">ColumnTokenizer</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="ColumnTokenizer.html#tokenize_column_list-instance_method" title="ColumnTokenizer#tokenize_column_list (method)">#tokenize_column_list</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="Selector.html" title="Selector (class)">Selector</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="Selector.html#initialize-instance_method" title="Selector#initialize (method)">#initialize</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class="object_link"><a href="Selector.html#initialize-instance_method" title="Selector#initialize (method)">Selector</a></span></p>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="access_column-instance_method">
+  
+    - (<tt>Object</tt>) <strong>access_column</strong>(table, column) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+429
+430
+431
+432
+433
+434
+435</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 429</span>
+
+<span class="kw">def</span> <span class="id access_column">access_column</span><span class="lparen">(</span><span class="id table">table</span><span class="comma">,</span> <span class="id column">column</span><span class="rparen">)</span>
+  <span class="id columns">columns</span> <span class="op">=</span> <span class="id column">column</span><span class="period">.</span><span class="id split">split</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">.</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+  <span class="id columns">columns</span><span class="period">.</span><span class="id each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id name">name</span><span class="op">|</span>
+    <span class="id table">table</span> <span class="op">=</span> <span class="id table">table</span><span class="period">.</span><span class="id column">column</span><span class="lparen">(</span><span class="id name">name</span><span class="rparen">)</span><span class="period">.</span><span class="id range">range</span>
+  <span class="kw">end</span>
+  <span class="id table">table</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="ascending_order_sort_key-instance_method">
+  
+    - (<tt>Object</tt>) <strong>ascending_order_sort_key</strong>(key) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+402
+403
+404
+405
+406
+407</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 402</span>
+
+<span class="kw">def</span> <span class="id ascending_order_sort_key">ascending_order_sort_key</span><span class="lparen">(</span><span class="id key">key</span><span class="rparen">)</span>
+  <span class="lbrace">{</span>
+    <span class="symbol">:key</span> <span class="op">=&gt;</span> <span class="id key">key</span><span class="comma">,</span>
+    <span class="symbol">:order</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ascending</span><span class="tstring_end">"</span></span><span class="comma">,</span>
+  <span class="rbrace">}</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="build_column_list-instance_method">
+  
+    - (<tt>Object</tt>) <strong>build_column_list</strong>(result, columns) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 486</span>
+
+<span class="kw">def</span> <span class="id build_column_list">build_column_list</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id columns">columns</span><span class="rparen">)</span>
+  <span class="id access_table">access_table</span> <span class="op">=</span> <span class="id result">result</span><span class="period">.</span><span class="id first">first</span><span class="period">.</span><span class="id table">table</span>
+
+  <span class="id table">table</span> <span class="op">=</span> <span class="id result">result</span><span class="period">.</span><span class="id first">first</span><span class="period">.</span><span class="id key">key</span>
+  <span class="kw">unless</span> <span class="id table">table</span><span class="period">.</span><span class="id is_a?">is_a?</span><span class="lparen">(</span><span class="const">Groonga</span><span class="op">::</span><span class="const">Table</span><span class="rparen">)</span>
+    <span class="id table">table</span> <span class="op">=</span> <span class="id result">result</span><span class="period">.</span><span class="id first">first</span><span class="period">.</span><span class="id table">table</span>
+  <span class="kw">end</span>
+  <span class="id columns">columns</span> <span class="op">=</span> <span class="id columns">columns</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id column">column</span><span class="op">|</span>
+    <span class="kw">if</span> <span class="id column">column</span> <span class="op">==</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">*</span><span class="tstring_end">"</span></span>
+      <span class="id table">table</span><span class="period">.</span><span class="id columns">columns</span><span class="period">.</span><span class="id collect">collect</span><span class="lparen">(</span><span class="op">&amp;</span><span class="symbol">:name</span><span class="rparen">)</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id name">name</span><span class="op">|</span>
+        <span class="id name">name</span><span class="period">.</span><span class="id sub">sub</span><span class="lparen">(</span><span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">\A[A-Za-z0-9_]+\.</span><span class="regexp_end">/</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
+      <span class="kw">end</span>
+    <span class="kw">else</span>
+      <span class="id column">column</span> <span class="kw">if</span> <span class="id column_included_in_record?">column_included_in_record?</span><span class="lparen">(</span><span class="id column">column</span><span class="comma">,</span> <span class="id result">result</span><span class="period">.</span><span class="id first">first</span><span class="rparen">)</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span><span class="period">.</span><span class="id flatten">flatten</span><span class="period">.</span><span class="id compact">compact</span>
+
+  <span class="id columns">columns</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id column">column</span><span class="op">|</span>
+    <span class="lbracket">[</span><span class="id column">column</span><span class="comma">,</span> <span class="id access_column">access_column</span><span class="lparen">(</span><span class="id access_table">access_table</span><span class="comma">,</span> <span class="id column">column</span><span class="rparen">)</span><span class="rbracket">]</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="build_sort_key-instance_method">
+  
+    - (<tt>Object</tt>) <strong>build_sort_key</strong>(sort_by) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 382</span>
+
+<span class="kw">def</span> <span class="id build_sort_key">build_sort_key</span><span class="lparen">(</span><span class="id sort_by">sort_by</span><span class="rparen">)</span>
+  <span class="id tokens">tokens</span> <span class="op">=</span> <span class="id tokenize_column_list">tokenize_column_list</span><span class="lparen">(</span><span class="id sort_by">sort_by</span><span class="rparen">)</span>
+
+  <span class="id tokens">tokens</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id token">token</span><span class="op">|</span>
+    <span class="id key">key</span> <span class="op">=</span> <span class="id token">token</span><span class="period">.</span><span class="id sub">sub</span><span class="lparen">(</span><span class="const">DESCENDING_ORDER_PREFIX</span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
+    <span class="kw">if</span> <span class="id token">token</span> <span class="op">=~</span> <span class="const">DESCENDING_ORDER_PREFIX</span>
+      <span class="id descending_order_sort_key">descending_order_sort_key</span><span class="lparen">(</span><span class="id key">key</span><span class="rparen">)</span>
+    <span class="kw">else</span>
+      <span class="id ascending_order_sort_key">ascending_order_sort_key</span><span class="lparen">(</span><span class="id key">key</span><span class="rparen">)</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="column_included_in_record?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>column_included_in_record?</strong>(column, record) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+478
+479
+480
+481
+482
+483
+484</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 478</span>
+
+<span class="kw">def</span> <span class="id column_included_in_record?">column_included_in_record?</span><span class="lparen">(</span><span class="id column">column</span><span class="comma">,</span> <span class="id record">record</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id record">record</span><span class="period">.</span><span class="id respond_to?">respond_to?</span><span class="lparen">(</span><span class="symbol">:have_column?</span><span class="rparen">)</span>
+    <span class="id record">record</span><span class="period">.</span><span class="id have_column?">have_column?</span><span class="lparen">(</span><span class="id column">column</span><span class="rparen">)</span>
+  <span class="kw">else</span>
+    <span class="id record">record</span><span class="period">.</span><span class="id include?">include?</span><span class="lparen">(</span><span class="id column">column</span><span class="rparen">)</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="create_window_options-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create_window_options</strong>(limit, offset) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 418</span>
+
+<span class="kw">def</span> <span class="id create_window_options">create_window_options</span><span class="lparen">(</span><span class="id limit">limit</span><span class="comma">,</span> <span class="id offset">offset</span><span class="rparen">)</span>
+  <span class="id window_options">window_options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span>
+  <span class="kw">if</span> <span class="id limit">limit</span>
+    <span class="id window_options">window_options</span><span class="lbracket">[</span><span class="symbol">:limit</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id limit">limit</span>
+  <span class="kw">end</span>
+  <span class="kw">if</span> <span class="id offset">offset</span>
+    <span class="id window_options">window_options</span><span class="lbracket">[</span><span class="symbol">:offset</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id offset">offset</span>
+  <span class="kw">end</span>
+  <span class="id window_options">window_options</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="default_sort_key-instance_method">
+  
+    - (<tt>Object</tt>) <strong>default_sort_key</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>XX use #ascending_order_sort_key(“_id”)</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+409
+410
+411
+412
+413
+414
+415
+416</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 409</span>
+
+<span class="kw">def</span> <span class="id default_sort_key">default_sort_key</span> <span class="comment">#XX use #ascending_order_sort_key("_id")
+</span>  <span class="lbracket">[</span>
+    <span class="lbrace">{</span>
+      <span class="symbol">:key</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">_id</span><span class="tstring_end">"</span></span><span class="comma">,</span>
+      <span class="symbol">:order</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ascending</span><span class="tstring_end">"</span></span><span class="comma">,</span>
+    <span class="rbrace">}</span>
+  <span class="rbracket">]</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="descending_order_sort_key-instance_method">
+  
+    - (<tt>Object</tt>) <strong>descending_order_sort_key</strong>(key) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+395
+396
+397
+398
+399
+400</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 395</span>
+
+<span class="kw">def</span> <span class="id descending_order_sort_key">descending_order_sort_key</span><span class="lparen">(</span><span class="id key">key</span><span class="rparen">)</span>
+  <span class="lbrace">{</span>
+    <span class="symbol">:key</span> <span class="op">=&gt;</span> <span class="id key">key</span><span class="comma">,</span>
+    <span class="symbol">:order</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">descending</span><span class="tstring_end">"</span></span><span class="comma">,</span>
+  <span class="rbrace">}</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="do_group-instance_method">
+  
+    - (<tt>Object</tt>) <strong>do_group</strong>(result, column) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+361
+362
+363</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 361</span>
+
+<span class="kw">def</span> <span class="id do_group">do_group</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id column">column</span><span class="rparen">)</span>
+  <span class="id result">result</span><span class="period">.</span><span class="id group">group</span><span class="lparen">(</span><span class="id column">column</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="do_select-instance_method">
+  
+    - (<tt>Object</tt>) <strong>do_select</strong>(filter, table, default_column) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 282</span>
+
+<span class="kw">def</span> <span class="id do_select">do_select</span><span class="lparen">(</span><span class="id filter">filter</span><span class="comma">,</span> <span class="id table">table</span><span class="comma">,</span> <span class="id default_column">default_column</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id filter">filter</span>
+    <span class="id options">options</span> <span class="op">=</span> <span class="lbrace">{</span>
+      <span class="symbol">:syntax</span> <span class="op">=&gt;</span> <span class="symbol">:script</span>
+    <span class="rbrace">}</span>
+    <span class="kw">if</span> <span class="id default_column">default_column</span>
+      <span class="id options">options</span><span class="lbracket">[</span><span class="symbol">:default_column</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id default_column">default_column</span>
+      <span class="id options">options</span><span class="lbracket">[</span><span class="symbol">:syntax</span><span class="rbracket">]</span> <span class="op">=</span> <span class="symbol">:query</span>
+    <span class="kw">end</span>
+
+    <span class="id table">table</span><span class="period">.</span><span class="id select">select</span><span class="lparen">(</span><span class="id filter">filter</span><span class="comma">,</span> <span class="id options">options</span><span class="rparen">)</span>
+  <span class="kw">else</span>
+    <span class="id table">table</span><span class="period">.</span><span class="id select">select</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="drilldown-instance_method">
+  
+    - (<tt>Object</tt>) <strong>drilldown</strong>(query, result) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+339
+340
+341
+342
+343</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 339</span>
+
+<span class="kw">def</span> <span class="id drilldown">drilldown</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id result">result</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id needs_drilldown?">needs_drilldown?</span><span class="lparen">(</span><span class="id query">query</span><span class="rparen">)</span>
+    <span class="id drilldown_results">drilldown_results</span> <span class="op">=</span> <span class="id drilldown_result">drilldown_result</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id query">query</span><span class="period">.</span><span class="id drilldown_columns">drilldown_columns</span><span class="comma">,</span> <span class="id query">query</span><span class="rparen">)</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="drilldown_format-instance_method">
+  
+    - (<tt>Object</tt>) <strong>drilldown_format</strong>(query, result) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+334
+335
+336
+337</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 334</span>
+
+<span class="kw">def</span> <span class="id drilldown_format">drilldown_format</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id result">result</span><span class="rparen">)</span>
+  <span class="id columns">columns</span> <span class="op">=</span> <span class="id query">query</span><span class="period">.</span><span class="id drilldown_output_columns">drilldown_output_columns</span> <span class="op">||</span> <span class="const">DEFAULT_DRILLDOWN_OUTPUT_COLUMNS</span>
+  <span class="id format_result">format_result</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id columns">columns</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="drilldown_result-instance_method">
+  
+    - (<tt>Object</tt>) <strong>drilldown_result</strong>(result, drilldown_columns, query) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 345</span>
+
+<span class="kw">def</span> <span class="id drilldown_result">drilldown_result</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id drilldown_columns">drilldown_columns</span><span class="comma">,</span> <span class="id query">query</span><span class="rparen">)</span>
+  <span class="id columns">columns</span> <span class="op">=</span> <span class="id tokenize_column_list">tokenize_column_list</span><span class="lparen">(</span><span class="id drilldown_columns">drilldown_columns</span><span class="rparen">)</span><span class="period">.</span><span class="id uniq">uniq</span>
+  <span class="id columns">columns</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id column">column</span><span class="op">|</span>
+    <span class="id drilldown_result">drilldown_result</span> <span class="op">=</span> <span class="id do_group">do_group</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id column">column</span><span class="rparen">)</span>
+    <span class="id sorted_drilldown_result">sorted_drilldown_result</span> <span class="op">=</span> <span class="id drilldown_sort">drilldown_sort</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id drilldown_result">drilldown_result</span><span class="rparen">)</span>
+    <span class="id formatted_drilldown_result">formatted_drilldown_result</span> <span class="op">=</span> <span class="id drilldown_format">drilldown_format</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id sorted_drilldown_result">sorted_drilldown_result</span> <span class="op">||</span> <span class="id drilldown_result">drilldown_result</span><span class="rparen">)</span>
+
+    <span class="lbrace">{</span>
+      <span class="symbol">:column</span> <span class="op">=&gt;</span> <span class="id column">column</span><span class="comma">,</span>
+      <span class="symbol">:result</span> <span class="op">=&gt;</span> <span class="id drilldown_result">drilldown_result</span><span class="comma">,</span>
+      <span class="symbol">:sort</span> <span class="op">=&gt;</span> <span class="id sorted_drilldown_result">sorted_drilldown_result</span><span class="comma">,</span>
+      <span class="symbol">:format</span> <span class="op">=&gt;</span> <span class="id formatted_drilldown_result">formatted_drilldown_result</span><span class="comma">,</span>
+    <span class="rbrace">}</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="drilldown_sort-instance_method">
+  
+    - (<tt>Object</tt>) <strong>drilldown_sort</strong>(query, result) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 314</span>
+
+<span class="kw">def</span> <span class="id drilldown_sort">drilldown_sort</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id result">result</span><span class="rparen">)</span>
+  <span class="id sort_key">sort_key</span> <span class="op">=</span> <span class="id sort_key">sort_key</span><span class="lparen">(</span><span class="id query">query</span><span class="period">.</span><span class="id drilldown_sort_by">drilldown_sort_by</span> <span class="op">||</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">_key</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+  <span class="id limit">limit</span> <span class="op">=</span> <span class="id query">query</span><span class="period">.</span><span class="id drilldown_limit">drilldown_limit</span> <span class="op">||</span> <span class="const">DEFAULT_DRILLDOWN_LIMIT</span>
+  <span class="id offset">offset</span> <span class="op">=</span> <span class="id query">query</span><span class="period">.</span><span class="id drilldown_offset">drilldown_offset</span>
+
+  <span class="id window_options">window_options</span> <span class="op">=</span> <span class="id create_window_options">create_window_options</span><span class="lparen">(</span><span class="id limit">limit</span><span class="comma">,</span> <span class="id offset">offset</span><span class="rparen">)</span>
+
+  <span class="id sorted_result">sorted_result</span> <span class="op">=</span> <span class="id result">result</span><span class="period">.</span><span class="id sort">sort</span><span class="lparen">(</span><span class="id sort_key">sort_key</span><span class="comma">,</span> <span class="id window_options">window_options</span><span class="rparen">)</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id record">record</span><span class="op">|</span>
+    <span class="id record">record</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="format-instance_method">
+  
+    - (<tt>Object</tt>) <strong>format</strong>(query, result) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+329
+330
+331
+332</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 329</span>
+
+<span class="kw">def</span> <span class="id format">format</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id result">result</span><span class="rparen">)</span>
+  <span class="id columns">columns</span> <span class="op">=</span> <span class="id query">query</span><span class="period">.</span><span class="id output_columns">output_columns</span> <span class="op">||</span> <span class="const">DEFAULT_OUTPUT_COLUMNS</span>
+  <span class="id format_result">format_result</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id columns">columns</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="format_record-instance_method">
+  
+    - (<tt>Object</tt>) <strong>format_record</strong>(column_list, record) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+450
+451
+452
+453
+454
+455</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 450</span>
+
+<span class="kw">def</span> <span class="id format_record">format_record</span><span class="lparen">(</span><span class="id column_list">column_list</span><span class="comma">,</span> <span class="id record">record</span><span class="rparen">)</span>
+  <span class="id column_list">column_list</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id column">column</span><span class="comma">,</span> <span class="id access_column">access_column</span><span class="op">|</span>
+    <span class="id value">value</span> <span class="op">=</span> <span class="id record">record</span><span class="lbracket">[</span><span class="id column">column</span><span class="rbracket">]</span>
+    <span class="id to_json">to_json</span><span class="lparen">(</span><span class="id value">value</span><span class="comma">,</span> <span class="id access_column">access_column</span><span class="rparen">)</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="format_result-instance_method">
+  
+    - (<tt>Object</tt>) <strong>format_result</strong>(result, output_columns) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 437</span>
+
+<span class="kw">def</span> <span class="id format_result">format_result</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id output_columns">output_columns</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id result">result</span><span class="period">.</span><span class="id empty?">empty?</span>
+    <span class="kw">return</span> <span class="lbracket">[</span><span class="rbracket">]</span>
+  <span class="kw">end</span>
+
+  <span class="id column_tokens">column_tokens</span> <span class="op">=</span> <span class="id tokenize_column_list">tokenize_column_list</span><span class="lparen">(</span><span class="id output_columns">output_columns</span><span class="rparen">)</span>
+  <span class="id column_list">column_list</span> <span class="op">=</span> <span class="id build_column_list">build_column_list</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id column_tokens">column_tokens</span><span class="rparen">)</span>
+
+  <span class="id result">result</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id record">record</span><span class="op">|</span>
+    <span class="id format_record">format_record</span><span class="lparen">(</span><span class="id column_list">column_list</span><span class="comma">,</span> <span class="id record">record</span><span class="rparen">)</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="needs_drilldown?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>needs_drilldown?</strong>(query) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+369
+370
+371</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 369</span>
+
+<span class="kw">def</span> <span class="id needs_drilldown?">needs_drilldown?</span><span class="lparen">(</span><span class="id query">query</span><span class="rparen">)</span>
+  <span class="id query">query</span><span class="period">.</span><span class="id drilldown_columns">drilldown_columns</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="needs_sort?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>needs_sort?</strong>(query) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+365
+366
+367</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 365</span>
+
+<span class="kw">def</span> <span class="id needs_sort?">needs_sort?</span><span class="lparen">(</span><span class="id query">query</span><span class="rparen">)</span>
+  <span class="lparen">(</span><span class="id query">query</span><span class="period">.</span><span class="id limit">limit</span><span class="period">.</span><span class="id nil?">nil?</span> <span class="kw">or</span> <span class="id query">query</span><span class="period">.</span><span class="id limit">limit</span> <span class="op">&gt;=</span> <span class="int">0</span><span class="rparen">)</span> <span class="kw">or</span> <span class="id query">query</span><span class="period">.</span><span class="id offset">offset</span> <span class="kw">or</span> <span class="id query">query</span><span class="period">.</span><span class="id sort_by">sort_by</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="select-instance_method">
+  
+    - (<tt>Object</tt>) <strong>select</strong>(query) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 267</span>
+
+<span class="kw">def</span> <span class="id select">select</span><span class="lparen">(</span><span class="id query">query</span><span class="rparen">)</span>
+  <span class="id table">table</span> <span class="op">=</span> <span class="ivar">@context</span><span class="lbracket">[</span><span class="id query">query</span><span class="period">.</span><span class="id table_name">table_name</span><span class="rbracket">]</span>
+  <span class="id filter">filter</span> <span class="op">=</span> <span class="id query">query</span><span class="period">.</span><span class="id filter">filter</span>
+  <span class="kw">if</span> <span class="id query">query</span><span class="period">.</span><span class="id match_columns">match_columns</span>
+    <span class="id default_column">default_column</span> <span class="op">=</span> <span class="id table">table</span><span class="period">.</span><span class="id column">column</span><span class="lparen">(</span><span class="id query">query</span><span class="period">.</span><span class="id match_columns">match_columns</span><span class="rparen">)</span>
+  <span class="kw">end</span>
+
+  <span class="id result">result</span> <span class="op">=</span> <span class="id do_select">do_select</span><span class="lparen">(</span><span class="id filter">filter</span><span class="comma">,</span> <span class="id table">table</span><span class="comma">,</span> <span class="id default_column">default_column</span><span class="rparen">)</span>
+  <span class="id sorted_result">sorted_result</span> <span class="op">=</span> <span class="id sort">sort</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id result">result</span><span class="rparen">)</span>
+  <span class="id formatted_result">formatted_result</span> <span class="op">=</span> <span class="id format">format</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id sorted_result">sorted_result</span> <span class="op">||</span> <span class="id result">result</span><span class="rparen">)</span>
+  <span class="id drilldown_results">drilldown_results</span> <span class="op">=</span> <span class="id drilldown">drilldown</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id result">result</span><span class="rparen">)</span>
+
+  <span class="const">MethodResult</span><span class="period">.</span><span class="id new">new</span><span class="lparen">(</span><span class="id result">result</span><span class="comma">,</span> <span class="id sorted_result">sorted_result</span><span class="comma">,</span> <span class="id formatted_result">formatted_result</span><span class="comma">,</span> <span class="id drilldown_results">drilldown_results</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="sort-instance_method">
+  
+    - (<tt>Object</tt>) <strong>sort</strong>(query, result) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 301</span>
+
+<span class="kw">def</span> <span class="id sort">sort</span><span class="lparen">(</span><span class="id query">query</span><span class="comma">,</span> <span class="id result">result</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id needs_sort?">needs_sort?</span><span class="lparen">(</span><span class="id query">query</span><span class="rparen">)</span>
+    <span class="id sort_key">sort_key</span> <span class="op">=</span> <span class="id sort_key">sort_key</span><span class="lparen">(</span><span class="id query">query</span><span class="period">.</span><span class="id sort_by">sort_by</span><span class="rparen">)</span>
+    <span class="id limit">limit</span> <span class="op">=</span> <span class="id query">query</span><span class="period">.</span><span class="id limit">limit</span> <span class="op">||</span> <span class="const">DEFAULT_LIMIT</span>
+    <span class="id offset">offset</span> <span class="op">=</span> <span class="id query">query</span><span class="period">.</span><span class="id offset">offset</span>
+
+    <span class="id window_options">window_options</span> <span class="op">=</span> <span class="id create_window_options">create_window_options</span><span class="lparen">(</span><span class="id limit">limit</span><span class="comma">,</span> <span class="id offset">offset</span><span class="rparen">)</span>
+    <span class="id sorted_result">sorted_result</span> <span class="op">=</span> <span class="id result">result</span><span class="period">.</span><span class="id sort">sort</span><span class="lparen">(</span><span class="id sort_key">sort_key</span><span class="comma">,</span> <span class="id window_options">window_options</span><span class="rparen">)</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id record">record</span><span class="op">|</span>
+      <span class="id record">record</span><span class="period">.</span><span class="id key">key</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="sort_key-instance_method">
+  
+    - (<tt>Object</tt>) <strong>sort_key</strong>(sort_by) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+374
+375
+376
+377
+378
+379
+380</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 374</span>
+
+<span class="kw">def</span> <span class="id sort_key">sort_key</span><span class="lparen">(</span><span class="id sort_by">sort_by</span><span class="rparen">)</span>
+  <span class="kw">if</span> <span class="id sort_by">sort_by</span>
+    <span class="id build_sort_key">build_sort_key</span><span class="lparen">(</span><span class="id sort_by">sort_by</span><span class="rparen">)</span>
+  <span class="kw">else</span>
+    <span class="id default_sort_key">default_sort_key</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_json-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_json</strong>(value, column) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/select.rb', line 457</span>
+
+<span class="kw">def</span> <span class="id to_json">to_json</span><span class="lparen">(</span><span class="id value">value</span><span class="comma">,</span> <span class="id column">column</span><span class="rparen">)</span>
+  <span class="kw">case</span> <span class="id value">value</span>
+  <span class="kw">when</span> <span class="op">::</span><span class="const">Time</span>
+    <span class="id value">value</span><span class="period">.</span><span class="id to_f">to_f</span>
+  <span class="kw">when</span> <span class="kw">nil</span>
+    <span class="kw">if</span> <span class="id column">column</span><span class="period">.</span><span class="id name">name</span> <span class="op">=~</span> <span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">Int</span><span class="regexp_end">/</span></span>
+      <span class="int">0</span>
+    <span class="kw">else</span>
+      <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_end">"</span></span>
+    <span class="kw">end</span>
+  <span class="kw">when</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Record</span>
+    <span class="id value">value</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">_key</span><span class="tstring_end">"</span></span><span class="rbracket">]</span>
+  <span class="kw">when</span> <span class="const">Array</span>
+    <span class="id value">value</span><span class="period">.</span><span class="id collect">collect</span> <span class="kw">do</span> <span class="op">|</span><span class="id element">element</span><span class="op">|</span>
+      <span class="id to_json">to_json</span><span class="lparen">(</span><span class="id element">element</span><span class="comma">,</span> <span class="id value">value</span><span class="rparen">)</span>
+    <span class="kw">end</span>
+  <span class="kw">else</span>
+    <span class="id value">value</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../tango-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>
