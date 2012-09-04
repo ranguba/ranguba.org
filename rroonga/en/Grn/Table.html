@@ -1,0 +1,3900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Class: Grn::Table
+  
+    &mdash; Documentation by YARD 0.7.5
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../">
+      <span class="title">
+  Class: Grn::Table
+  
+    &mdash; Documentation by YARD 0.7.5
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../rroonga/ja/Grn/Table.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../rroonga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../../rroonga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../../#install-rroonga">Install</a></li>
+    <li id="menu-developer"><a href="../../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (T)</a> &raquo; 
+    <span class='title'>Grn</span>
+     &raquo; 
+    <span class="title">Table</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Grn::Table
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">GrnObject</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">GrnObject</li>
+          
+            <li class="next">Grn::Table</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">Enumerable</dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">ext/groonga/rb-grn-table.c</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Groonga::Record) <strong>[]</strong>(id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>id</em> に対応するGroonga::Recordを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_lock-instance_method" title="#clear_lock (instance method)">- (Object) <strong>clear_lock</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> のロックを強制的に解除する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#column-instance_method" title="#column (instance method)">- (Groonga::Column<sup>?</sup>) <strong>column</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルの <em>name</em> に対応するカラムを返す。カラムが存在しな
+い場合は <ins>nil</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#column_value-instance_method" title="#column_value (instance method)">- (Object) <strong>column_value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>id</em> に対応するカラム <em>name</em> の値を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#columns-instance_method" title="#columns (instance method)">- (Groonga::Columnの配列) <strong>columns</strong>(name = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルの全てのカラムを返す。 <em>name</em> が指定された場合はカ
+ラム名の先頭が <em>name</em> で始まるカラムを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#define_column-instance_method" title="#define_column (instance method)">- (Object) <strong>define_column</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルに名前が <em>name</em> で型が <em>value_type</em> のカラムを定義
+し、新しく定義されたカラムを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#define_index_column-instance_method" title="#define_index_column (instance method)">- (Groonga::IndexColumn) <strong>define_index_column</strong>(name, value_type, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルに名前が <em>name</em> で型が <em>value_type</em> のインデックスカ
+ラムを定義し、新しく定義されたカラムを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#defrag-instance_method" title="#defrag (instance method)">- (Integer) <strong>defrag</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defrags all variable size columns in the table.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">- (Object) <strong>delete</strong>(id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルの <em>id</em> に対応するレコードを削除する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#difference%21-instance_method" title="#difference! (instance method)">- (Groonga::Table) <strong>difference!</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>キーを比較し、 <em>other</em> にも登録されているレコードを <em>table</em>
+から削除する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">- (nil) <strong>each</strong> {|record| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルに登録されているレコードを順番にブロックに渡す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#empty%3F-instance_method" title="#empty? (instance method)">- (Object) <strong>empty?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルにレコードが登録されていなければ <ins>true</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exist%3F-instance_method" title="#exist? (instance method)">- (Object) <strong>exist?</strong>(id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> に <em>id</em> で指定したIDのレコードが存在する場合は <ins>true</ins> 、
+存在しない場合は <ins>false</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#group-instance_method" title="#group (instance method)">- (Object) <strong>group</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> のレコードを <em>key1</em> , <em>key2</em> , <em>&#8230;</em> で指定したキーの
+値でグループ化する。多くの場合、キーにはカラムを指定する。
+カラムはカラム名（文字列）でも指定可能。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#have_column%3F-instance_method" title="#have_column? (instance method)">- (Object) <strong>have_column?</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルが <em>name</em> カラムを持っている場合は <ins>true</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Object) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (String) <strong>inspect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルの中身を人に見やすい文字列で返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#intersection%21-instance_method" title="#intersection! (instance method)">- (Groonga::Table) <strong>intersection!</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>キーを比較し、 <em>other</em> には登録されていないレコードを
+<em>table</em> から削除する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lock-instance_method" title="#lock (instance method)">- (Object) <strong>lock</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> をロックする。ロックに失敗した場合は
+Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#locked%3F-instance_method" title="#locked? (instance method)">- (Object) <strong>locked?</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> がロックされていれば <ins>true</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#merge%21-instance_method" title="#merge! (instance method)">- (Groonga::Table) <strong>merge!</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>キーを比較し、 <em>other</em> にも登録されている <em>table</em> のレコード
+のスコアを <em>other</em> のスコアと同値にする。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_cursor-instance_method" title="#open_cursor (instance method)">- (Object) <strong>open_cursor</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>カーソルを生成して返す。ブロックを指定すると、そのブロッ
+クに生成したカーソルが渡され、ブロックを抜けると自動的に
+カーソルが破棄される。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#records-instance_method" title="#records (instance method)">- (Groonga::Recordの配列) <strong>records</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルに登録されている全てのレコードが入っている配列を
+返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rename-instance_method" title="#rename (instance method)">- (Object) <strong>rename</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Renames the table to name.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select-instance_method" title="#select (instance method)">- (Object) <strong>select</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> からブロックまたは文字列で指定した条件にマッチする
+レコードを返す。返されたテーブルには <ins>expression</ins> という特
+異メソッドがあり、指定した条件を表している
+Groonga::Expressionを取得できる。
+Groonga::Expression#snippetを使うことにより、指定した条件
+用のスニペットを簡単に生成できる。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_column_value-instance_method" title="#set_column_value (instance method)">- (Object) <strong>set_column_value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>id</em> に対応するカラム <em>name</em> の値として <em>value</em> 設定す
+る。既存の値は上書きされる。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_value-instance_method" title="#set_value (instance method)">- (Object) <strong>set_value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>id</em> に対応する値として <em>value</em> 設定する。既存の値は
+上書きされる。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#size-instance_method" title="#size (instance method)">- (Object) <strong>size</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルに登録されているレコード数を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sort-instance_method" title="#sort (instance method)">- (Groonga::Recordの配列) <strong>sort</strong>(keys, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルに登録されているレコードを_keys_で指定されたルー
+ルに従ってソートしたレコードの配列を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#support_key%3F-instance_method" title="#support_key? (instance method)">- (Object) <strong>support_key?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> に主キーが設定されていれば <ins>true</ins> 、されていなければ
+<ins>false</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#support_sub_records%3F-instance_method" title="#support_sub_records? (instance method)">- (Object) <strong>support_sub_records?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>グループ化したとき、テーブルにグループに含まれるレコード
+数を格納できる場合は <ins>true</ins> 、格納できない場合は <ins>false</ins> を返
+す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#truncate-instance_method" title="#truncate (instance method)">- (Object) <strong>truncate</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルの全レコードを一括して削除する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#union%21-instance_method" title="#union! (instance method)">- (Groonga::Table) <strong>union!</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>キーを比較し、 <em>table</em> には登録されていない <em>other</em> のレコー
+ドを <em>table</em> に作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unlock-instance_method" title="#unlock (instance method)">- (Object) <strong>unlock</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> のロックを解除する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#value-instance_method" title="#value (instance method)">- (Object) <strong>value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>id</em> に対応する値を返す。.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt>Object</tt>) <strong>initialize</strong> 
+  
+
+  
+</p>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="[]-instance_method">
+  
+    - (<tt>Groonga::Record</tt>) <strong>[]</strong>(id) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>id</em> に対応するGroonga::Recordを返す。</p>
+<p>0.9.0から値ではなくGroonga::Recordを返すようになった。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Record</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: []
+ *
+ * call-seq:
+ *   table[id] -&gt; Groonga::Record
+ *
+ * _table_ の _id_ に対応するGroonga::Recordを返す。
+ *
+ * 0.9.0から値ではなくGroonga::Recordを返すようになった。
+ */
+VALUE
+rb_grn_table_array_reference (VALUE self, VALUE rb_id)
+{
+if (FIXNUM_P(rb_id)) {
+return rb_grn_record_new_raw(self, rb_id, Qnil);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clear_lock-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clear_lock</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> のロックを強制的に解除する。</p>
+<p>利用可能なオプションは以下の通り。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: clear_lock
+ *
+ * call-seq:
+ *   table.clear_lock(options={})
+ *
+ * _table_ のロックを強制的に解除する。
+ *
+ * 利用可能なオプションは以下の通り。
+ * @param options [::Hash] The name and value
+ *   pairs. Omitted names are initialized as the default value.
+ * @option options :id The id
+ *
+ *   _:id_ で指定したレコードのロックを強制的に解除する。
+ *   （注: groonga側が未実装のため、現在は無視される。実装さ
+ *   れるのではないかと思っているが、実装されないかもしれな
+ *   い。）
+ */
+static VALUE
+rb_grn_table_clear_lock (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id = GRN_ID_NIL;
+    grn_ctx *context;
+    grn_obj *table;
+    VALUE options, rb_id;
+
+    rb_scan_args(argc, argv, &quot;01&quot;,  &amp;options);
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                 NULL, NULL,
+                 NULL, NULL, NULL,
+                 NULL);
+
+    rb_grn_scan_options(options,
+            &quot;id&quot;, &amp;rb_id,
+            NULL);
+
+    if (!NIL_P(rb_id))
+    id = NUM2UINT(rb_id);
+
+    grn_obj_clear_lock(context, table);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="column-instance_method">
+  
+    - (<tt>Groonga::Column</tt><sup>?</sup>) <strong>column</strong>(name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルの <em>name</em> に対応するカラムを返す。カラムが存在しな
+い場合は <ins>nil</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Column</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+VALUE
+rb_grn_table_get_column (VALUE self, VALUE rb_name)
+{
+grn_user_data *user_data;
+grn_ctx *context = NULL;
+grn_obj *table;
+grn_obj *column;
+const char *name = NULL;
+unsigned name_size = 0;
+grn_bool owner;
+VALUE rb_column;
+VALUE columns;
+VALUE *raw_columns;
+long i, n;
+
+rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             &amp;columns);
+
+ruby_object_to_column_name(rb_name, &amp;name, &amp;name_size);
+raw_columns = RARRAY_PTR(columns);
+n = RARRAY_LEN(columns);
+for (i = 0; i &lt; n; i++) {
+VALUE rb_column = raw_columns[i];
+RbGrnNamedObject *rb_grn_named_object;
+
+rb_grn_named_object = RB_GRN_NAMED_OBJECT(DATA_PTR(rb_column));
+if (name_size == rb_grn_named_object-&gt;name_size &amp;&amp;
+    memcmp(name, rb_grn_named_object-&gt;name, name_size) == 0) {
+    return rb_column;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="column_value-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>column_value</strong>(id, name) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>column_value</strong>(id, name, :id) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>id</em> に対応するカラム <em>name</em> の値を返す。</p>
+<p><tt>:id =&gt; true</tt>が指定できるのは利便性のため。
+Groonga::ArrayでもGroonga::HashやGroonga::PatriciaTrieと
+同じ引数で動くようになる。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: column_value
+ *
+ * call-seq:
+ *   table.column_value(id, name) -&gt; 値
+ *   table.column_value(id, name, :id =&gt; true) -&gt; 値
+ *
+ * _table_ の _id_ に対応するカラム _name_ の値を返す。
+ *
+ * &lt;tt&gt;:id =&gt; true&lt;/tt&gt;が指定できるのは利便性のため。
+ * Groonga::ArrayでもGroonga::HashやGroonga::PatriciaTrieと
+ * 同じ引数で動くようになる。
+ */
+static VALUE
+rb_grn_table_get_column_value_convenience (int argc, VALUE *argv, VALUE self)
+{
+VALUE rb_id, rb_name, rb_options;
+
+rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_id, &amp;rb_name, &amp;rb_options);
+if (!NIL_P(rb_options)) {
+VALUE rb_option_id;
+rb_grn_scan_options(rb_options,
+            &quot;id&quot;, &amp;rb_option_id,
+            NULL);
+if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
+    rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
+         rb_grn_inspect(rb_option_id),
+         rb_grn_inspect(rb_ary_new3(2,
+                    self,
+                    rb_ary_new4(argc, argv))));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="columns-instance_method">
+  
+    - (<tt>Groonga::Columnの配列</tt>) <strong>columns</strong>(name = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルの全てのカラムを返す。 <em>name</em> が指定された場合はカ
+ラム名の先頭が <em>name</em> で始まるカラムを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Columnの配列</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_get_columns (int argc, VALUE *argv, VALUE self)
+{
+grn_ctx *context = NULL;
+grn_obj *table;
+grn_obj *columns;
+grn_rc rc;
+int n;
+grn_table_cursor *cursor;
+VALUE rb_name, rb_columns;
+char *name = NULL;
+unsigned name_size = 0;
+
+rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             NULL);
+
+rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_name);
+
+if (!NIL_P(rb_name)) {
+name = StringValuePtr(rb_name);
+name_size = RSTRING_LEN(rb_name);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="define_column-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>define_column</strong>(name, value_type, options = {}) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>Groonga::FixSizeColumn</strong> </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルに名前が <em>name</em> で型が <em>value_type</em> のカラムを定義
+し、新しく定義されたカラムを返す。</p>
+<p><em>options</em> に指定可能な値は以下の通り。</p>
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>:compress The compress
+値の圧縮方法を指定する。省略した場合は、圧縮しない。</p>
+<p><ins>:zlib</ins> 値をzlib圧縮して格納する。
+<ins>:lzo</ins> 値をlzo圧縮して格納する。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_define_column (int argc, VALUE *argv, VALUE self)
+{
+grn_ctx *context = NULL;
+grn_obj *table;
+grn_obj *value_type, *column;
+char *name = NULL, *path = NULL;
+unsigned name_size = 0;
+grn_obj_flags flags = 0;
+VALUE rb_name, rb_value_type;
+VALUE options, rb_path, rb_persistent, rb_compress, rb_type;
+VALUE columns;
+VALUE rb_column;
+
+rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             &amp;columns);
+
+rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_name, &amp;rb_value_type, &amp;options);
+
+name = StringValuePtr(rb_name);
+name_size = RSTRING_LEN(rb_name);
+
+rb_grn_scan_options(options,
+        &quot;path&quot;, &amp;rb_path,
+        &quot;persistent&quot;, &amp;rb_persistent,
+        &quot;type&quot;, &amp;rb_type,
+        &quot;compress&quot;, &amp;rb_compress,
+        NULL);
+
+value_type = RVAL2GRNOBJECT(rb_value_type, &amp;context);
+
+if ((NIL_P(rb_persistent) &amp;&amp; grn_obj_path(context, table)) ||
+RVAL2CBOOL(rb_persistent)) {
+flags |= GRN_OBJ_PERSISTENT;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="define_index_column-instance_method">
+  
+    - (<tt>Groonga::IndexColumn</tt>) <strong>define_index_column</strong>(name, value_type, options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルに名前が <em>name</em> で型が <em>value_type</em> のインデックスカ
+ラムを定義し、新しく定義されたカラムを返す。</p>
+<p><em>options</em> に指定可能な値は以下の通り。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::IndexColumn</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_define_index_column (int argc, VALUE *argv, VALUE self)
+{
+grn_ctx *context = NULL;
+grn_obj *table;
+grn_obj *value_type, *column;
+char *name = NULL, *path = NULL;
+unsigned name_size = 0;
+grn_obj_flags flags = GRN_OBJ_COLUMN_INDEX;
+VALUE rb_name, rb_value_type;
+VALUE options, rb_path, rb_persistent;
+VALUE rb_with_section, rb_with_weight, rb_with_position;
+VALUE rb_column, rb_source, rb_sources;
+VALUE columns;
+
+rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             &amp;columns);
+
+rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_name, &amp;rb_value_type, &amp;options);
+
+name = StringValuePtr(rb_name);
+name_size = RSTRING_LEN(rb_name);
+
+rb_grn_scan_options(options,
+        &quot;path&quot;, &amp;rb_path,
+        &quot;persistent&quot;, &amp;rb_persistent,
+        &quot;with_section&quot;, &amp;rb_with_section,
+        &quot;with_weight&quot;, &amp;rb_with_weight,
+        &quot;with_position&quot;, &amp;rb_with_position,
+        &quot;source&quot;, &amp;rb_source,
+        &quot;sources&quot;, &amp;rb_sources,
+        NULL);
+
+value_type = RVAL2GRNOBJECT(rb_value_type, &amp;context);
+
+if ((NIL_P(rb_persistent) &amp;&amp; grn_obj_path(context, table)) ||
+RVAL2CBOOL(rb_persistent)) {
+flags |= GRN_OBJ_PERSISTENT;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="defrag-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>defrag</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>Defrags all variable size columns in the table.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+  
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the number of defraged segments</p></div>
+      
+    </li>
+  
+</ul>
+<h3>Since:</h3>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.3.0</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: defrag
+ *
+ * call-seq:
+ *   table.defrag(options={}) -&gt; n_segments
+ *
+ * Defrags all variable size columns in the table.
+ *
+ * @return [Integer] the number of defraged segments
+ * @option options [Integer] :threshold (0) the threshold to
+ *   determine whether a segment is defraged. Available
+ *   values are -4..22. -4 means all segments are defraged.
+ *   22 means no segment is defraged.
+ * @since 1.3.0
+ */
+static VALUE
+rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
+{
+grn_ctx *context;
+grn_obj *table;
+int n_segments;
+VALUE options, rb_threshold;
+int threshold = 0;
+
+rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
+rb_grn_scan_options(options,
+        &quot;threshold&quot;, &amp;rb_threshold,
+        NULL);
+if (!NIL_P(rb_threshold)) {
+threshold = NUM2INT(rb_threshold);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="delete-instance_method">
+  
+    - (<tt>Object</tt>) <strong>delete</strong>(id) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルの <em>id</em> に対応するレコードを削除する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+VALUE
+rb_grn_table_delete (VALUE self, VALUE rb_id)
+{
+    grn_ctx *context = NULL;
+    grn_obj *table;
+    grn_id id;
+    grn_rc rc;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                 NULL, NULL,
+                 NULL, NULL, NULL,
+                 NULL);
+
+    id = NUM2UINT(rb_id);
+    rc = grn_table_delete_by_id(context, table, id);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="difference!-instance_method">
+  
+    - (<tt>Groonga::Table</tt>) <strong>difference!</strong>(other) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>キーを比較し、 <em>other</em> にも登録されているレコードを <em>table</em>
+から削除する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Table</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
+{
+    return rb_grn_table_set_operation_bang(self, rb_other, GRN_OP_BUT);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="each-instance_method">
+  
+    - (<tt>nil</tt>) <strong>each</strong> {|record| ... }
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルに登録されているレコードを順番にブロックに渡す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Yields:</h3>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>record</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_each (VALUE self)
+{
+RbGrnTable *rb_table;
+RbGrnObject *rb_grn_object;
+grn_ctx *context = NULL;
+grn_obj *table;
+grn_table_cursor *cursor;
+VALUE rb_cursor;
+grn_id id;
+
+rb_table = SELF(self);
+rb_grn_table_deconstruct(rb_table, &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             NULL);
+cursor = grn_table_cursor_open(context, table, NULL, 0, NULL, 0,
+               0, -1, GRN_CURSOR_ASCENDING);
+rb_cursor = GRNTABLECURSOR2RVAL(Qnil, context, cursor);
+rb_grn_object = RB_GRN_OBJECT(rb_table);
+while (rb_grn_object-&gt;object &amp;&amp;
+   (id = grn_table_cursor_next(context, cursor)) != GRN_ID_NIL) {
+rb_yield(rb_grn_record_new(self, id, Qnil));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="empty?-instance_method">
+  
+    - (<tt>Object</tt>) <strong>empty?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルにレコードが登録されていなければ <ins>true</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_empty_p (VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *table;
+    unsigned int size;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                 NULL, NULL,
+                 NULL, NULL, NULL,
+                 NULL);
+    size = grn_table_size(context, table);
+    return CBOOL2RVAL(size == 0);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="exist?-instance_method">
+  
+    - (<tt>Object</tt>) <strong>exist?</strong>(id) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> に <em>id</em> で指定したIDのレコードが存在する場合は <ins>true</ins> 、
+存在しない場合は <ins>false</ins> を返す。</p>
+<p>注意: 実行には相応のコストがかかるのであまり頻繁に呼ばな
+いようにして下さい。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_exist_p (VALUE self, VALUE id)
+{
+    grn_ctx *context;
+    grn_obj *table;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                 NULL, NULL,
+                 NULL, NULL, NULL,
+                 NULL);
+    return CBOOL2RVAL(grn_table_at(context, table, NUM2UINT(id)));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="group-instance_method">
+  
+    
+      <span class="overload">- (<tt>Array</tt>) <strong>group</strong>([key1, key2, ...], options = {}) </span>
+    
+      <span class="overload">- (<tt>Groonga::Hash</tt>) <strong>group</strong>(key, options = {}) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> のレコードを <em>key1</em> , <em>key2</em> , <em>&#8230;</em> で指定したキーの
+値でグループ化する。多くの場合、キーにはカラムを指定する。
+カラムはカラム名（文字列）でも指定可能。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Array</tt>) <strong>group</strong>([key1, key2, ...], options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Groonga::Hash</tt>) <strong>group</strong>(key, options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_group (int argc, VALUE *argv, VALUE self)
+{
+grn_ctx *context = NULL;
+grn_obj *table;
+grn_table_sort_key *keys;
+grn_table_group_result *results;
+int i, n_keys, n_results;
+grn_rc rc;
+VALUE rb_keys, rb_options;
+VALUE *rb_group_keys;
+VALUE rb_results;
+
+rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             NULL);
+
+rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_keys, &amp;rb_options);
+
+if (TYPE(rb_keys) == T_ARRAY) {
+n_keys = RARRAY_LEN(rb_keys);
+rb_group_keys = RARRAY_PTR(rb_keys);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="have_column?-instance_method">
+  
+    - (<tt>Object</tt>) <strong>have_column?</strong>(name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルが <em>name</em> カラムを持っている場合は <ins>true</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_have_column (VALUE self, VALUE rb_name)
+{
+grn_ctx *context = NULL;
+grn_obj *table;
+grn_obj *column;
+const char *name = NULL;
+unsigned name_size = 0;
+
+rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             NULL);
+
+ruby_object_to_column_name(rb_name, &amp;name, &amp;name_size);
+column = grn_obj_column(context, table, name, name_size);
+if (column) {
+grn_obj_unlink(context, column);
+return Qtrue;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="inspect-instance_method">
+  
+    - (<tt>String</tt>) <strong>inspect</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルの中身を人に見やすい文字列で返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_inspect (VALUE self)
+{
+    VALUE inspected;
+
+    inspected = rb_str_new2(&quot;&quot;);
+    rb_grn_object_inspect_header(self, inspected);
+    rb_grn_object_inspect_content(self, inspected);
+    rb_grn_table_inspect_content(self, inspected);
+    rb_grn_object_inspect_footer(self, inspected);
+
+    return inspected;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="intersection!-instance_method">
+  
+    - (<tt>Groonga::Table</tt>) <strong>intersection!</strong>(other) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>キーを比較し、 <em>other</em> には登録されていないレコードを
+<em>table</em> から削除する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Table</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
+{
+    return rb_grn_table_set_operation_bang(self, rb_other, GRN_OP_AND);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="lock-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>lock</strong>(options = {}) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>lock</strong>(options = ) { ... }</span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> をロックする。ロックに失敗した場合は
+Groonga::ResourceDeadlockAvoided例外が発生する。</p>
+<p>ブロックを指定した場合はブロックを抜けたときにunlockする。</p>
+<p>利用可能なオプションは以下の通り。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>lock</strong>(options = ) { ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Yields:</h3>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>[]</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: lock
+ *
+ * call-seq:
+ *   table.lock(options={})
+ *   table.lock(options={}) {}
+ *
+ * _table_ をロックする。ロックに失敗した場合は
+ * Groonga::ResourceDeadlockAvoided例外が発生する。
+ *
+ * ブロックを指定した場合はブロックを抜けたときにunlockする。
+ *
+ * 利用可能なオプションは以下の通り。
+ * @param options [::Hash] The name and value
+ *   pairs. Omitted names are initialized as the default value.
+ * @option options :timeout The timeout
+ *
+ *   ロックを獲得できなかった場合は _:timeout_ 秒間ロックの獲
+ *   得を試みる。 _:timeout_ 秒以内にロックを獲得できなかった
+ *   場合は例外が発生する。
+ *
+ * @option options :id The id
+ *
+ *   _:id_ で指定したレコードをロックする。（注: groonga側が
+ *   未実装のため、現在は無視される）
+ */
+static VALUE
+rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
+{
+grn_id id = GRN_ID_NIL;
+grn_ctx *context;
+grn_obj *table;
+int timeout = 0;
+grn_rc rc;
+VALUE options, rb_timeout, rb_id;
+
+rb_scan_args(argc, argv, &quot;01&quot;,  &amp;options);
+
+rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             NULL);
+
+rb_grn_scan_options(options,
+        &quot;timeout&quot;, &amp;rb_timeout,
+        &quot;id&quot;, &amp;rb_id,
+        NULL);
+
+if (!NIL_P(rb_timeout))
+timeout = NUM2UINT(rb_timeout);
+
+if (!NIL_P(rb_id))
+id = NUM2UINT(rb_id);
+
+rc = grn_obj_lock(context, table, id, timeout);
+rb_grn_context_check(context, self);
+rb_grn_rc_check(rc, self);
+
+if (rb_block_given_p()) {
+return rb_ensure(rb_yield, Qnil, rb_grn_table_unlock_ensure, self);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="locked?-instance_method">
+  
+    - (<tt>Object</tt>) <strong>locked?</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> がロックされていれば <ins>true</ins> を返す。</p>
+<p>利用可能なオプションは以下の通り。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>options</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: locked?
+ *
+ * call-seq:
+ *   table.locked?(options={})
+ *
+ * _table_ がロックされていれば +true+ を返す。
+ *
+ * 利用可能なオプションは以下の通り。
+ * @param options [options] The name and value
+ *   pairs. Omitted names are initialized as the default value.
+ * @option options :id The id
+ *
+ *   _:id_ で指定したレコードがロックされていれば +true+ を返す。
+ *   （注: groonga側が未実装のため、現在は無視される。実装さ
+ *   れるのではないかと思っているが、実装されないかもしれな
+ *   い。）
+ */
+static VALUE
+rb_grn_table_is_locked (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id = GRN_ID_NIL;
+    grn_ctx *context;
+    grn_obj *table;
+    VALUE options, rb_id;
+
+    rb_scan_args(argc, argv, &quot;01&quot;,  &amp;options);
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                 NULL, NULL,
+                 NULL, NULL, NULL,
+                 NULL);
+
+    rb_grn_scan_options(options,
+            &quot;id&quot;, &amp;rb_id,
+            NULL);
+
+    if (!NIL_P(rb_id))
+    id = NUM2UINT(rb_id);
+
+    return CBOOL2RVAL(grn_obj_is_locked(context, table));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="merge!-instance_method">
+  
+    - (<tt>Groonga::Table</tt>) <strong>merge!</strong>(other) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>キーを比較し、 <em>other</em> にも登録されている <em>table</em> のレコード
+のスコアを <em>other</em> のスコアと同値にする。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Table</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
+{
+    return rb_grn_table_set_operation_bang(self, rb_other, GRN_OP_ADJUST);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="open_cursor-instance_method">
+  
+    
+      <span class="overload">- (<tt>Groonga::TableCursor</tt>) <strong>open_cursor</strong>(options = {}) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>open_cursor</strong>(options = ) { ... }</span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>カーソルを生成して返す。ブロックを指定すると、そのブロッ
+クに生成したカーソルが渡され、ブロックを抜けると自動的に
+カーソルが破棄される。</p>
+<p>_options_に指定可能な値は以下の通り。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Groonga::TableCursor</tt>) <strong>open_cursor</strong>(options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::TableCursor</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>open_cursor</strong>(options = ) { ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Yields:</h3>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>[]</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_table_cursor *cursor;
+    VALUE rb_cursor;
+
+    cursor = rb_grn_table_open_grn_cursor(argc, argv, self, &amp;context);
+    rb_cursor = GRNTABLECURSOR2RVAL(Qnil, context, cursor);
+    rb_iv_set(rb_cursor, &quot;@table&quot;, self); /* FIXME: cursor should mark table */
+    if (rb_block_given_p())
+    return rb_ensure(rb_yield, rb_cursor, rb_grn_object_close, rb_cursor);
+    else
+    return rb_cursor;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="records-instance_method">
+  
+    - (<tt>Groonga::Recordの配列</tt>) <strong>records</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルに登録されている全てのレコードが入っている配列を
+返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Recordの配列</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
+{
+grn_ctx *context = NULL;
+grn_table_cursor *cursor;
+grn_id record_id;
+VALUE records;
+
+cursor = rb_grn_table_open_grn_cursor(argc, argv, self, &amp;context);
+records = rb_ary_new();
+while ((record_id = grn_table_cursor_next(context, cursor))) {
+rb_ary_push(records, rb_grn_record_new(self, record_id, Qnil));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="rename-instance_method">
+  
+    - (<tt>Object</tt>) <strong>rename</strong>(name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>Renames the table to name.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the new name</p></div>
+      
+    </li>
+  
+</ul>
+
+<h3>Since:</h3>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.3.0</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: rename
+ *
+ * call-seq:
+ *   table.rename(name)
+ *
+ * Renames the table to name.
+ *
+ * @param name [String] the new name
+ * @since 1.3.0
+ */
+static VALUE
+rb_grn_table_rename (VALUE self, VALUE rb_name)
+{
+    int rc;
+    grn_ctx *context;
+    grn_obj *table;
+    char *name;
+    int name_size;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                 NULL, NULL, NULL,
+                 NULL, NULL,
+                 NULL);
+
+    name = StringValueCStr(rb_name);
+    name_size = RSTRING_LEN(rb_name);
+
+    rc = grn_table_rename(context, table, name, name_size);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return self;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="select-instance_method">
+  
+    
+      <span class="overload">- (<tt>Groonga::Hash</tt>) <strong>select</strong>(options) {|record| ... }</span>
+    
+      <span class="overload">- (<tt>Groonga::Hash</tt>) <strong>select</strong>(query, options) </span>
+    
+      <span class="overload">- (<tt>Groonga::Hash</tt>) <strong>select</strong>(expression, options) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> からブロックまたは文字列で指定した条件にマッチする
+レコードを返す。返されたテーブルには <ins>expression</ins> という特
+異メソッドがあり、指定した条件を表している
+Groonga::Expressionを取得できる。
+Groonga::Expression#snippetを使うことにより、指定した条件
+用のスニペットを簡単に生成できる。</p>
+<pre class="code ruby"><code><span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_record'>record</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>description</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_snippet'>snippet</span> <span class='op'>=</span> <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_expression'>expression</span><span class='period'>.</span><span class='id identifier rubyid_snippet'>snippet</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;em&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;/em&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_record'>record</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>の説明文の中で「groonga」が含まれる部分</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_snippet'>snippet</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>description</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_snippet'>snippet</span><span class='op'>|</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>---</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_snippet'>snippet</span><span class='rbrace'>}</span><span class='tstring_content'>...</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>---</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+<p>出力例</p>
+<pre class="code c"><code>
+rroongaの説明文の中で「groonga」が含まれる部分
+---
+rroongaは&lt;em&gt;groonga&lt;/em&gt;のいわゆるDB-APIの層の...
+---
+</code></pre>
+<p><em>query</em> には「[カラム名]:[演算子][値]」という書式で条件を
+指定する。演算子は以下の通り。</p>
+<pre class="code c"><code>
+[なし]
+  \[カラム値] == [値]
+[&lt;tt&gt;!&lt;/tt&gt;]
+  \[カラム値] != [値]
+[&lt;tt&gt;&lt;&lt;/tt&gt;]
+  \[カラム値] &lt; [値]
+[&lt;tt&gt;&gt;&lt;/tt&gt;]
+  \[カラム値] &gt; [値]
+[&lt;tt&gt;&lt;=&lt;/tt&gt;]
+  \[カラム値] &lt;= [値]
+[&lt;tt&gt;&gt;=&lt;/tt&gt;]
+  \[カラム値] &gt;= [値]
+[&lt;tt&gt;@&lt;/tt&gt;]
+  \[カラム値]が[値]を含んでいるかどうか
+</code></pre>
+<p>例:</p>
+<pre class="code ruby"><code><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name:daijiro</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># &quot;name&quot;カラムの値が&quot;daijiro&quot;のレコードにマッチ
+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>description:@groonga</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># &quot;description&quot;カラムが
+</span>                       <span class='comment'># &quot;groonga&quot;を含んでいるレコードにマッチ
+</span></code></pre>
+<p><em>expression</em> には既に作成済みのGroonga::Expressionを渡す</p>
+<p>ブロックで条件を指定する場合は
+Groonga::RecordExpressionBuilderを参照。</p>
+<p>Ruby1.9以降では、ブロックで条件を指定する際に
+Groonga::ColumnExpressionBuilderの他に&quot;!=&quot;も使用可能。</p>
+<p>例:</p>
+<pre class="code ruby"><code><span class='id identifier rubyid_comments'>comments</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Comments</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_comments'>comments</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_comments'>comments</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello Good-bye!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_comments'>comments</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_comments'>comments</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_comments'>comments</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='rbrace'>}</span>
+  <span class='comment'># =&gt; [&quot;Hello Good-bye!&quot;, &quot;Hello World&quot;]
+</span></code></pre>
+<p><em>options</em> に指定可能な値は以下の通り。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Groonga::Hash</tt>) <strong>select</strong>(options) {|record| ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Yields:</h3>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>record</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Groonga::Hash</tt>) <strong>select</strong>(query, options) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>Groonga::Hash</tt>) <strong>select</strong>(expression, options) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_select (int argc, VALUE *argv, VALUE self)
+{
+grn_ctx *context;
+grn_obj *table, *result, *expression;
+grn_operator operator = GRN_OP_OR;
+VALUE rb_query = Qnil, condition_or_options, options;
+VALUE rb_name, rb_operator, rb_result, rb_syntax;
+VALUE rb_allow_pragma, rb_allow_column, rb_allow_update;
+VALUE rb_default_column;
+VALUE rb_expression = Qnil, builder;
+
+rb_scan_args(argc, argv, &quot;02&quot;, &amp;condition_or_options, &amp;options);
+
+rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             NULL);
+
+if (RVAL2CBOOL(rb_obj_is_kind_of(condition_or_options, rb_cString))) {
+rb_query = condition_or_options;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="set_column_value-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>set_column_value</strong>(id, name, value) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>set_column_value</strong>(id, name, value, :id) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>id</em> に対応するカラム <em>name</em> の値として <em>value</em> 設定す
+る。既存の値は上書きされる。</p>
+<p><tt>:id =&gt; true</tt>が指定できるのは利便性のため。
+Groonga::ArrayでもGroonga::HashやGroonga::PatriciaTrieと
+同じ引数で動くようになる。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: set_column_value
+ *
+ * call-seq:
+ *   table.set_column_value(id, name, value)
+ *   table.set_column_value(id, name, value, :id =&gt; true)
+ *
+ * _table_ の _id_ に対応するカラム _name_ の値として _value_ 設定す
+ * る。既存の値は上書きされる。
+ *
+ * &lt;tt&gt;:id =&gt; true&lt;/tt&gt;が指定できるのは利便性のため。
+ * Groonga::ArrayでもGroonga::HashやGroonga::PatriciaTrieと
+ * 同じ引数で動くようになる。
+ */
+static VALUE
+rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
+{
+VALUE rb_id, rb_name, rb_value, rb_options;
+
+rb_scan_args(argc, argv, &quot;31&quot;, &amp;rb_id, &amp;rb_name, &amp;rb_value, &amp;rb_options);
+if (!NIL_P(rb_options)) {
+VALUE rb_option_id;
+rb_grn_scan_options(rb_options,
+            &quot;id&quot;, &amp;rb_option_id,
+            NULL);
+if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
+    rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
+         rb_grn_inspect(rb_option_id),
+         rb_grn_inspect(rb_ary_new3(2,
+                    self,
+                    rb_ary_new4(argc, argv))));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="set_value-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>set_value</strong>(id, value) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>set_value</strong>(id, value, :id) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>id</em> に対応する値として <em>value</em> 設定する。既存の値は
+上書きされる。</p>
+<p><tt>:id =&gt; true</tt>が指定できるのは利便性のため。
+Groonga::ArrayでもGroonga::HashやGroonga::PatriciaTrieと
+同じ引数で動くようになる。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: set_value
+ *
+ * call-seq:
+ *   table.set_value(id, value)
+ *   table.set_value(id, value, :id =&gt; true)
+ *
+ * _table_ の _id_ に対応する値として _value_ 設定する。既存の値は
+ * 上書きされる。
+ *
+ * &lt;tt&gt;:id =&gt; true&lt;/tt&gt;が指定できるのは利便性のため。
+ * Groonga::ArrayでもGroonga::HashやGroonga::PatriciaTrieと
+ * 同じ引数で動くようになる。
+ */
+static VALUE
+rb_grn_table_set_value_convenience (int argc, VALUE *argv, VALUE self)
+{
+VALUE rb_id, rb_value, rb_options;
+
+rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_id, &amp;rb_value, &amp;rb_options);
+if (!NIL_P(rb_options)) {
+VALUE rb_option_id;
+rb_grn_scan_options(rb_options,
+            &quot;id&quot;, &amp;rb_option_id,
+            NULL);
+if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
+    rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
+         rb_grn_inspect(rb_option_id),
+         rb_grn_inspect(rb_ary_new3(2,
+                    self, rb_ary_new4(argc, argv))));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="size-instance_method">
+  
+    - (<tt>Object</tt>) <strong>size</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルに登録されているレコード数を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_get_size (VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *table;
+    unsigned int size;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                 NULL, NULL,
+                 NULL, NULL, NULL,
+                 NULL);
+    size = grn_table_size(context, table);
+    return UINT2NUM(size);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="sort-instance_method">
+  
+    - (<tt>Groonga::Recordの配列</tt>) <strong>sort</strong>(keys, options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルに登録されているレコードを_keys_で指定されたルー
+ルに従ってソートしたレコードの配列を返す。</p>
+<p><em>order</em> には <ins>:asc</ins> ,  <ins>:ascending</ins> , <ins>:desc</ins> , <ins>:descending</ins> の
+いずれを指定する。</p>
+<dl>
+	<dt>ハッシュの配列で指定する方法</dt>
+	<dd><p>オーソドックスな指定方法。</p>
+<pre class="code ruby"><code>
+[
+ {:key =&gt; &quot;第1ソートキー&quot;, :order =&gt; order},
+ {:key =&gt; &quot;第2ソートキー&quot;, :order =&gt; order},
+ ...,
+]
+</code></pre></dd>
+</dl>
+<dl>
+	<dt>配列の配列で指定する方法</dt>
+	<dd><p>少し簡単化した指定方法。</p>
+<pre class="code ruby"><code>
+[
+ [&quot;第1ソートキー&quot;, order],
+ [&quot;第2ソートキー&quot;, order],
+ ...,
+]
+</code></pre></dd>
+</dl>
+<dl>
+	<dt>ソートキーの配列で指定する方法</dt>
+	<dd><p><em>order</em> は常に昇順（ <ins>:ascending</ins> ）になるが、最も簡単
+に指定できる。</p>
+<pre class="code ruby"><code>
+[&quot;第1ソートキー&quot;, &quot;第2ソートキー&quot;, ...]
+</code></pre></dd>
+</dl>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Recordの配列</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_sort (int argc, VALUE *argv, VALUE self)
+{
+grn_ctx *context = NULL;
+grn_obj *table;
+grn_obj *result;
+grn_table_sort_key *keys;
+int i, n_keys;
+int offset = 0, limit = -1;
+VALUE rb_keys, options;
+VALUE rb_offset, rb_limit;
+VALUE *rb_sort_keys;
+grn_table_cursor *cursor;
+VALUE rb_result;
+VALUE exception;
+
+rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+             NULL, NULL,
+             NULL, NULL, NULL,
+             NULL);
+
+rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_keys, &amp;options);
+
+if (!RVAL2CBOOL(rb_obj_is_kind_of(rb_keys, rb_cArray)))
+rb_raise(rb_eArgError, &quot;keys should be an array of key: &lt;%s&gt;&quot;,
+     rb_grn_inspect(rb_keys));
+
+n_keys = RARRAY_LEN(rb_keys);
+rb_sort_keys = RARRAY_PTR(rb_keys);
+keys = ALLOCA_N(grn_table_sort_key, n_keys);
+for (i = 0; i &lt; n_keys; i++) {
+VALUE rb_sort_options, rb_key, rb_resolved_key, rb_order;
+
+if (RVAL2CBOOL(rb_obj_is_kind_of(rb_sort_keys[i], rb_cHash))) {
+    rb_sort_options = rb_sort_keys[i];
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="support_key?-instance_method">
+  
+    - (<tt>Object</tt>) <strong>support_key?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> に主キーが設定されていれば <ins>true</ins> 、されていなければ
+<ins>false</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_support_key_p (VALUE self)
+{
+    return Qfalse;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="support_sub_records?-instance_method">
+  
+    - (<tt>Object</tt>) <strong>support_sub_records?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>グループ化したとき、テーブルにグループに含まれるレコード
+数を格納できる場合は <ins>true</ins> 、格納できない場合は <ins>false</ins> を返
+す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_support_sub_records_p (VALUE self)
+{
+    grn_obj *table;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, NULL,
+                 NULL, NULL,
+                 NULL, NULL, NULL,
+                 NULL);
+    return CBOOL2RVAL(table-&gt;header.flags &amp; GRN_OBJ_WITH_SUBREC);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="truncate-instance_method">
+  
+    - (<tt>Object</tt>) <strong>truncate</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>テーブルの全レコードを一括して削除する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_truncate (VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *table;
+    grn_rc rc;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                 NULL, NULL,
+                 NULL, NULL, NULL,
+                 NULL);
+    rc = grn_table_truncate(context, table);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="union!-instance_method">
+  
+    - (<tt>Groonga::Table</tt>) <strong>union!</strong>(other) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>キーを比較し、 <em>table</em> には登録されていない <em>other</em> のレコー
+ドを <em>table</em> に作成する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Groonga::Table</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+static VALUE
+rb_grn_table_union_bang (VALUE self, VALUE rb_other)
+{
+    return rb_grn_table_set_operation_bang(self, rb_other, GRN_OP_OR);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="unlock-instance_method">
+  
+    - (<tt>Object</tt>) <strong>unlock</strong>(options = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> のロックを解除する。</p>
+<p>利用可能なオプションは以下の通り。</p>
+<p>[ <em>:id</em> ]
+  <em>:id</em> で指定したレコードのロックを解除する。（注:
+  groonga側が未実装のため、現在は無視される）</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: unlock
+ *
+ * call-seq:
+ *   table.unlock(options={})
+ *
+ * _table_ のロックを解除する。
+ *
+ * 利用可能なオプションは以下の通り。
+ *
+ * [ _:id_ ]
+ *   _:id_ で指定したレコードのロックを解除する。（注:
+ *   groonga側が未実装のため、現在は無視される）
+ */
+static VALUE
+rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id = GRN_ID_NIL;
+    grn_ctx *context;
+    grn_obj *table;
+    grn_rc rc;
+    VALUE options, rb_id;
+
+    rb_scan_args(argc, argv, &quot;01&quot;,  &amp;options);
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                 NULL, NULL,
+                 NULL, NULL, NULL,
+                 NULL);
+
+    rb_grn_scan_options(options,
+            &quot;id&quot;, &amp;rb_id,
+            NULL);
+
+    if (!NIL_P(rb_id))
+    id = NUM2UINT(rb_id);
+
+    rc = grn_obj_unlock(context, table, id);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="value-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>value</strong>(id) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>value</strong>(id, :id) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>id</em> に対応する値を返す。</p>
+<p><tt>:id =&gt; true</tt>が指定できるのは利便性のため。
+Groonga::ArrayでもGroonga::HashやGroonga::PatriciaTrieと
+同じ引数で動くようになる。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c'</span>
+
+/*
+ * Document-method: value
+ *
+ * call-seq:
+ *   table.value(id) -&gt; 値
+ *   table.value(id, :id =&gt; true) -&gt; 値
+ *
+ * _table_ の _id_ に対応する値を返す。
+ *
+ * &lt;tt&gt;:id =&gt; true&lt;/tt&gt;が指定できるのは利便性のため。
+ * Groonga::ArrayでもGroonga::HashやGroonga::PatriciaTrieと
+ * 同じ引数で動くようになる。
+ */
+static VALUE
+rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)
+{
+VALUE rb_id, rb_options;
+
+rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_id, &amp;rb_options);
+if (!NIL_P(rb_options)) {
+VALUE rb_option_id;
+rb_grn_scan_options(rb_options,
+            &quot;id&quot;, &amp;rb_option_id,
+            NULL);
+if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
+    rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
+         rb_grn_inspect(rb_option_id),
+         rb_grn_inspect(rb_ary_new3(2,
+                    self, rb_ary_new4(argc, argv))));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>

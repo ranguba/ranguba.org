@@ -1,0 +1,811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Class: WikipediaExtractor::Extractor
+  
+    &mdash; rroonga
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../">
+      <span class="title">
+  Class: WikipediaExtractor::Extractor
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../rroonga/ja/WikipediaExtractor/Extractor.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../rroonga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../../rroonga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../../#install-rroonga">Install</a></li>
+    <li id="menu-developer"><a href="../../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (E)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../WikipediaExtractor.html" title="WikipediaExtractor (class)">WikipediaExtractor</a></span></span>
+     &raquo; 
+    <span class="title">Extractor</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: WikipediaExtractor::Extractor
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">WikipediaExtractor::Extractor</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">benchmark/create-wikipedia-database.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cdata_block-instance_method" title="#cdata_block (instance method)">- (Object) <strong>cdata_block</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#characters-instance_method" title="#characters (instance method)">- (Object) <strong>characters</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#comment-instance_method" title="#comment (instance method)">- (Object) <strong>comment</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#end_document-instance_method" title="#end_document (instance method)">- (Object) <strong>end_document</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#end_element_namespace-instance_method" title="#end_element_namespace (instance method)">- (Object) <strong>end_element_namespace</strong>(name, prefix = nil, uri = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#error-instance_method" title="#error (instance method)">- (Object) <strong>error</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Extractor) <strong>initialize</strong>(listener) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of Extractor.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_document-instance_method" title="#start_document (instance method)">- (Object) <strong>start_document</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_element_namespace-instance_method" title="#start_element_namespace (instance method)">- (Object) <strong>start_element_namespace</strong>(name, attrs = [], prefix = nil, uri = nil, ns = []) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#warning-instance_method" title="#warning (instance method)">- (Object) <strong>warning</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#xmldecl-instance_method" title="#xmldecl (instance method)">- (Object) <strong>xmldecl</strong>(*arguments, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="WikipediaExtractor::Extractor (class)">Extractor</a></span></tt>) <strong>initialize</strong>(listener) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>A new instance of Extractor</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id listener'>listener</span><span class='rparen'>)</span>
+  <span class='ivar'>@listener</span> <span class='op'>=</span> <span class='id listener'>listener</span>
+  <span class='ivar'>@name_stack</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@text_stack</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@contributor_stack</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@page</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="cdata_block-instance_method">
+  
+    - (<tt>Object</tt>) <strong>cdata_block</strong>(string) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id cdata_block'>cdata_block</span><span class='lparen'>(</span><span class='id string'>string</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="characters-instance_method">
+  
+    - (<tt>Object</tt>) <strong>characters</strong>(string) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id characters'>characters</span><span class='lparen'>(</span><span class='id string'>string</span><span class='rparen'>)</span>
+  <span class='id elements_without_interested_text'>elements_without_interested_text</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+                                      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>siteinfo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>case</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>namespaces</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>revisions</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>contributor</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                     <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id elements_without_interested_text'>elements_without_interested_text</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@name_stack</span><span class='period'>.</span><span class='id last'>last</span><span class='rparen'>)</span>
+  <span class='ivar'>@text_stack</span><span class='period'>.</span><span class='id last'>last</span> <span class='op'>&lt;&lt;</span> <span class='id string'>string</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="comment-instance_method">
+  
+    - (<tt>Object</tt>) <strong>comment</strong>(string) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id comment'>comment</span><span class='lparen'>(</span><span class='id string'>string</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="end_document-instance_method">
+  
+    - (<tt>Object</tt>) <strong>end_document</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id end_document'>end_document</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="end_element_namespace-instance_method">
+  
+    - (<tt>Object</tt>) <strong>end_element_namespace</strong>(name, prefix = nil, uri = nil) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id end_element_namespace'>end_element_namespace</span><span class='lparen'>(</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id prefix'>prefix</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id uri'>uri</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='ivar'>@name_stack</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki.page</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@listener</span><span class='period'>.</span><span class='id page'>page</span><span class='lparen'>(</span><span class='ivar'>@page</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki.page.title</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id title'>title</span> <span class='op'>=</span> <span class='ivar'>@text_stack</span><span class='period'>.</span><span class='id last'>last</span>
+    <span class='ivar'>@page</span><span class='lbracket'>[</span><span class='symbol'>:title</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@listener</span><span class='period'>.</span><span class='id title'>title</span><span class='lparen'>(</span><span class='id title'>title</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id title'>title</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki.page.revision.timestamp</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id timestamp'>timestamp</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span><span class='ivar'>@text_stack</span><span class='period'>.</span><span class='id last'>last</span><span class='rparen'>)</span>
+    <span class='ivar'>@page</span><span class='lbracket'>[</span><span class='symbol'>:timestamp</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@listener</span><span class='period'>.</span><span class='id timestamp'>timestamp</span><span class='lparen'>(</span><span class='id timestamp'>timestamp</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id timestamp'>timestamp</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki.page.revision.contributor</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id contributor'>contributor</span> <span class='op'>=</span> <span class='ivar'>@contributor_stack</span><span class='period'>.</span><span class='id pop'>pop</span>
+    <span class='ivar'>@page</span><span class='lbracket'>[</span><span class='symbol'>:contributor</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@listener</span><span class='period'>.</span><span class='id contributor'>contributor</span><span class='lparen'>(</span><span class='id contributor'>contributor</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id contributor'>contributor</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki.page.revision.contributor.id</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@contributor_stack</span><span class='period'>.</span><span class='id last'>last</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='ivar'>@text_stack</span><span class='period'>.</span><span class='id last'>last</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki.page.revision.contributor.username</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@contributor_stack</span><span class='period'>.</span><span class='id last'>last</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@text_stack</span><span class='period'>.</span><span class='id last'>last</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki.page.revision.text</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id content'>content</span> <span class='op'>=</span> <span class='ivar'>@text_stack</span><span class='period'>.</span><span class='id last'>last</span>
+    <span class='ivar'>@page</span><span class='lbracket'>[</span><span class='symbol'>:content</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@listener</span><span class='period'>.</span><span class='id content'>content</span><span class='lparen'>(</span><span class='id content'>content</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id content'>content</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@name_stack</span><span class='period'>.</span><span class='id pop'>pop</span>
+  <span class='ivar'>@text_stack</span><span class='period'>.</span><span class='id pop'>pop</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="error-instance_method">
+  
+    - (<tt>Object</tt>) <strong>error</strong>(string) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id error'>error</span><span class='lparen'>(</span><span class='id string'>string</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="start_document-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start_document</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id start_document'>start_document</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="start_element_namespace-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start_element_namespace</strong>(name, attrs = [], prefix = nil, uri = nil, ns = []) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id start_element_namespace'>start_element_namespace</span><span class='lparen'>(</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id attrs'>attrs</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id prefix'>prefix</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id uri'>uri</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id ns'>ns</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@name_stack</span> <span class='op'>&lt;&lt;</span> <span class='id name'>name</span>
+  <span class='ivar'>@text_stack</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>case</span> <span class='ivar'>@name_stack</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki.page</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@page</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mediawiki.page.revision.contributor</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@contributor_stack</span> <span class='op'>&lt;&lt;</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="warning-instance_method">
+  
+    - (<tt>Object</tt>) <strong>warning</strong>(string) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id warning'>warning</span><span class='lparen'>(</span><span class='id string'>string</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="xmldecl-instance_method">
+  
+    - (<tt>Object</tt>) <strong>xmldecl</strong>(*arguments, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'benchmark/create-wikipedia-database.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id xmldecl'>xmldecl</span><span class='lparen'>(</span><span class='op'>*</span><span class='id arguments'>arguments</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>
