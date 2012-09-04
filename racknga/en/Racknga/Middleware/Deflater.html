@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../../';
-  framesUrl = "../../frames.html#!" + escape(window.location.href);
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -59,41 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (D)</a> &raquo;
+    <a href="../../_index.html">Index (D)</a> &raquo; 
     <span class='title'><span class='object_link'><a href="../../Racknga.html" title="Racknga (module)">Racknga</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Middleware.html" title="Racknga::Middleware (module)">Middleware</a></span></span>
      &raquo; 
     <span class="title">Deflater</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link"
-        href="../../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link"
-        href="../../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link"
-        href="../../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: Racknga::Middleware::Deflater
   
   
@@ -139,42 +132,44 @@ Rack::Deflater.</p>
 
 <p>Usage:</p>
 
-<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&quot;racknga&quot;</span>
+<pre class="code"><span class='require identifier id'>require</span> <span class='string val'>&quot;racknga&quot;</span>
 
-<span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleware</span><span class="ruby-operator">::</span><span class="ruby-constant">Deflater</span>
-<span class="ruby-identifier">run</span> <span class="ruby-constant">YourApplication</span>
+<span class='use identifier id'>use</span> <span class='Racknga constant id'>Racknga</span><span class='colon2 op'>::</span><span class='Middleware constant id'>Middleware</span><span class='colon2 op'>::</span><span class='Deflater constant id'>Deflater</span>
+<span class='run identifier id'>run</span> <span class='YourApplication constant id'>YourApplication</span>
 </pre>
 
 <p>You can use this middleware with Racknga::Middleware::Cache. You
-<strong>should</strong> use this middleware before the cache middleware:</p>
+<b>should</b> use this middleware before the cache middleware:</p>
 
-<pre class="ruby"><span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">Deflater</span>
-<span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>, :<span class="ruby-identifier">database_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;var/cache/db&quot;</span>
-<span class="ruby-identifier">run</span> <span class="ruby-constant">YourApplication</span>
+<pre class="code"><span class='use identifier id'>use</span> <span class='Racknga constant id'>Racknga</span><span class='colon2 op'>::</span><span class='Middleawre constant id'>Middleawre</span><span class='colon2 op'>::</span><span class='Deflater constant id'>Deflater</span>
+<span class='use identifier id'>use</span> <span class='Racknga constant id'>Racknga</span><span class='colon2 op'>::</span><span class='Middleawre constant id'>Middleawre</span><span class='colon2 op'>::</span><span class='Cache constant id'>Cache</span><span class='comma token'>,</span> <span class='symbol val'>:database_path</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;var/cache/db&quot;</span>
+<span class='run identifier id'>run</span> <span class='YourApplication constant id'>YourApplication</span>
 </pre>
 
 <p>If you use this middleware after the cache middleware, you get two
-problems. It's the first problem pattern that the cache middleware may
-return deflated response to IE6. It's the second problem pattern that the
+problems. It’s the first problem pattern that the cache middleware may
+return deflated response to IE6. It’s the second problem pattern that the
 cache middleware may return not deflated response to no IE6 user agent.
 Here are examples:</p>
 
 <p>Problem case:</p>
 
-<pre class="ruby"><span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>, :<span class="ruby-identifier">database_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;var/cache/db&quot;</span>
-<span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">Deflater</span>
-<span class="ruby-identifier">run</span> <span class="ruby-constant">YourApplication</span>
+<pre class="code"><span class='use identifier id'>use</span> <span class='Racknga constant id'>Racknga</span><span class='colon2 op'>::</span><span class='Middleawre constant id'>Middleawre</span><span class='colon2 op'>::</span><span class='Cache constant id'>Cache</span><span class='comma token'>,</span> <span class='symbol val'>:database_path</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;var/cache/db&quot;</span>
+<span class='use identifier id'>use</span> <span class='Racknga constant id'>Racknga</span><span class='colon2 op'>::</span><span class='Middleawre constant id'>Middleawre</span><span class='colon2 op'>::</span><span class='Deflater constant id'>Deflater</span>
+<span class='run identifier id'>run</span> <span class='YourApplication constant id'>YourApplication</span>
 </pre>
 
 <p>Problem pattern1:</p>
 
-<pre class="code ruby"><code>http://localhost:9292/ by Firefox -&gt; no cache. cache deflated response.
-http://localhost:9292/ by IE6     -&gt; use deflated response cache.</code></pre>
+<pre class="code"><span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/localhost:9292/</span> <span class='by identifier id'>by</span> <span class='Firefox constant id'>Firefox</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='no identifier id'>no</span> <span class='cache identifier id'>cache</span><span class='dot token'>.</span> <span class='cache identifier id'>cache</span> <span class='deflated identifier id'>deflated</span> <span class='response identifier id'>response</span><span class='dot token'>.</span>
+<span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/localhost:9292/</span> <span class='by identifier id'>by</span> <span class='IE6 constant id'>IE6</span>     <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='use identifier id'>use</span> <span class='deflated identifier id'>deflated</span> <span class='response identifier id'>response</span> <span class='cache identifier id'>cache</span><span class='dot token'>.</span>
+</pre>
 
 <p>Problem pattern2:</p>
 
-<pre class="code ruby"><code>http://localhost:9292/ by IE6     -&gt; no cache. cache not deflated response.
-http://localhost:9292/ by Firefox -&gt; use not deflated response cache.</code></pre>
+<pre class="code"><span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/localhost:9292/</span> <span class='by identifier id'>by</span> <span class='IE6 constant id'>IE6</span>     <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='no identifier id'>no</span> <span class='cache identifier id'>cache</span><span class='dot token'>.</span> <span class='cache identifier id'>cache</span> <span class='not not kw'>not</span> <span class='deflated identifier id'>deflated</span> <span class='response identifier id'>response</span><span class='dot token'>.</span>
+<span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/localhost:9292/</span> <span class='by identifier id'>by</span> <span class='Firefox constant id'>Firefox</span> <span class='minus op'>-</span><span class='gt op'>&gt;</span> <span class='use identifier id'>use</span> <span class='not not kw'>not</span> <span class='deflated identifier id'>deflated</span> <span class='response identifier id'>response</span> <span class='cache identifier id'>cache</span><span class='dot token'>.</span>
+</pre>
 
 
   </div>
@@ -183,8 +178,6 @@ http://localhost:9292/ by Firefox -&gt; use not deflated response cache.</code><
   
 
 </div>
-
-
 
 
 
@@ -211,7 +204,6 @@ http://localhost:9292/ by Firefox -&gt; use not deflated response cache.</code><
   
   
   
-  
 
   
     <span class="summary_desc"><div class='inline'>
@@ -229,7 +221,6 @@ http://localhost:9292/ by Firefox -&gt; use not deflated response cache.</code><
 
     
   </span>
-  
   
     <span class="note title constructor">constructor</span>
   
@@ -254,15 +245,13 @@ http://localhost:9292/ by Firefox -&gt; use not deflated response cache.</code><
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Racknga::Middleware::Deflater (class)">Deflater</a></span></tt>) <strong>initialize</strong>(application, options = {}) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>A new instance of Deflater</p>
@@ -288,11 +277,12 @@ http://localhost:9292/ by Firefox -&gt; use not deflated response cache.</code><
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/middleware/deflater.rb', line 58</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_application'>application</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='ivar'>@application</span> <span class='op'>=</span> <span class='id identifier rubyid_application'>application</span>
-  <span class='ivar'>@deflater</span> <span class='op'>=</span> <span class='const'>Rack</span><span class='op'>::</span><span class='const'>Deflater</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@application</span><span class='rparen'>)</span>
-  <span class='ivar'>@options</span> <span class='op'>=</span> <span class='const'>Utils</span><span class='period'>.</span><span class='id identifier rubyid_normalize_options'>normalize_options</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='application identifier id'>application</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='@application ivar id'>@application</span> <span class='assign token'>=</span> <span class='application identifier id'>application</span>
+  <span class='@deflater ivar id'>@deflater</span> <span class='assign token'>=</span> <span class='Rack constant id'>Rack</span><span class='colon2 op'>::</span><span class='Deflater constant id'>Deflater</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='@application ivar id'>@application</span><span class='rparen token'>)</span>
+  <span class='@options ivar id'>@options</span> <span class='assign token'>=</span> <span class='Utils constant id'>Utils</span><span class='dot token'>.</span><span class='normalize_options identifier id'>normalize_options</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='orop op'>||</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -303,18 +293,16 @@ http://localhost:9292/ by Firefox -&gt; use not deflated response cache.</code><
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="call-instance_method">
+  <p class="signature first" id="call-instance_method">
   
     - (<tt>Object</tt>) <strong>call</strong>(environment) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>For Rack.</p>
@@ -342,13 +330,14 @@ http://localhost:9292/ by Firefox -&gt; use not deflated response cache.</code><
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/middleware/deflater.rb', line 65</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_environment'>environment</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_ie6?'>ie6?</span><span class='lparen'>(</span><span class='id identifier rubyid_environment'>environment</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='kw'>not</span> <span class='id identifier rubyid_valid_accept_encoding?'>valid_accept_encoding?</span><span class='lparen'>(</span><span class='id identifier rubyid_environment'>environment</span><span class='rparen'>)</span>
-    <span class='ivar'>@application</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_environment'>environment</span><span class='rparen'>)</span>
-  <span class='kw'>else</span>
-    <span class='ivar'>@deflater</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_environment'>environment</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
+<span class='def def kw'>def</span> <span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='environment identifier id'>environment</span><span class='rparen token'>)</span>
+  <span class='if if kw'>if</span> <span class='ie6? fid id'>ie6?</span><span class='lparen token'>(</span><span class='environment identifier id'>environment</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='not not kw'>not</span> <span class='valid_accept_encoding? fid id'>valid_accept_encoding?</span><span class='lparen token'>(</span><span class='environment identifier id'>environment</span><span class='rparen token'>)</span>
+    <span class='@application ivar id'>@application</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='environment identifier id'>environment</span><span class='rparen token'>)</span>
+  <span class='else else kw'>else</span>
+    <span class='@deflater ivar id'>@deflater</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='environment identifier id'>environment</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -357,7 +346,7 @@ http://localhost:9292/ by Firefox -&gt; use not deflated response cache.</code><
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../../';
-  framesUrl = "../../frames.html#!" + escape(window.location.href);
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -59,41 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (L)</a> &raquo;
+    <a href="../../_index.html">Index (L)</a> &raquo; 
     <span class='title'><span class='object_link'><a href="../../Racknga.html" title="Racknga (module)">Racknga</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Middleware.html" title="Racknga::Middleware (module)">Middleware</a></span></span>
      &raquo; 
     <span class="title">Log</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link"
-        href="../../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link"
-        href="../../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link"
-        href="../../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: Racknga::Middleware::Log
   
   
@@ -138,8 +131,8 @@ useful for OLAP (OnLine Analytical Processing).</p>
 
 <p>Usage:</p>
 
-<pre class="ruby"><span class="ruby-identifier">use</span> <span class="ruby-constant">Racnkga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleware</span><span class="ruby-operator">::</span><span class="ruby-constant">Log</span>, :<span class="ruby-identifier">database_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;var/log/db&quot;</span>
-<span class="ruby-identifier">run</span> <span class="ruby-constant">YourApplication</span>
+<pre class="code"><span class='use identifier id'>use</span> <span class='Racnkga constant id'>Racnkga</span><span class='colon2 op'>::</span><span class='Middleware constant id'>Middleware</span><span class='colon2 op'>::</span><span class='Log constant id'>Log</span><span class='comma token'>,</span> <span class='symbol val'>:database_path</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;var/log/db&quot;</span>
+<span class='run identifier id'>run</span> <span class='YourApplication constant id'>YourApplication</span>
 </pre>
 
 
@@ -148,14 +141,24 @@ useful for OLAP (OnLine Analytical Processing).</p>
 <div class="tags">
   
 
-  <p class="tag_title">See Also:</p>
+  <h3>See Also:</h3>
   <ul class="see">
     
       <li><span class='object_link'><a href="../LogDatabase.html" title="Racknga::LogDatabase (class)">LogDatabase</a></span></li>
     
   </ul>
 
-</div>
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+   
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Log/Logger.html" title="Racknga::Middleware::Log::Logger (class)">Logger</a></span>
+    
+  
+</p>
+
   <h2>Constant Summary</h2>
   
     <dl class="constants">
@@ -163,12 +166,11 @@ useful for OLAP (OnLine Analytical Processing).</p>
         <dt id="LOGGER-constant" class="">LOGGER =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>racknga.logger</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+        <dd><pre class="code"><span class='string val'>&quot;racknga.logger&quot;</span>
+</pre></dd>
       
     </dl>
   
-
-
 
 
 
@@ -190,7 +192,6 @@ useful for OLAP (OnLine Analytical Processing).</p>
 
     
   </span>
-  
   
   
   
@@ -220,7 +221,6 @@ useful for OLAP (OnLine Analytical Processing).</p>
   
   
   
-  
 
   
     <span class="summary_desc"><div class='inline'>
@@ -238,7 +238,6 @@ useful for OLAP (OnLine Analytical Processing).</p>
 
     
   </span>
-  
   
   
   
@@ -263,7 +262,6 @@ useful for OLAP (OnLine Analytical Processing).</p>
     
   </span>
   
-  
     <span class="note title constructor">constructor</span>
   
   
@@ -287,15 +285,13 @@ useful for OLAP (OnLine Analytical Processing).</p>
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Racknga::Middleware::Log (class)">Log</a></span></tt>) <strong>initialize</strong>(application, options = {}) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>database path to be stored caches.</p>
@@ -304,7 +300,7 @@ useful for OLAP (OnLine Analytical Processing).</p>
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  <h3>Parameters:</h3>
 <ul class="param">
   
     <li>
@@ -332,7 +328,7 @@ useful for OLAP (OnLine Analytical Processing).</p>
     
     
     
-    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <h3>Options Hash (<tt>options</tt>):</h3>
     <ul class="option">
       
         <li>
@@ -341,17 +337,15 @@ useful for OLAP (OnLine Analytical Processing).</p>
           <span class="default">
             
           </span>
-          
-            &mdash; <div class='inline'>
+          &mdash; <div class='inline'>
 <p>the</p>
 </div>
-          
         </li>
       
     </ul>
   
 
-<p class="tag_title">Raises:</p>
+<h3>Raises:</h3>
 <ul class="raise">
   
     <li>
@@ -383,14 +377,15 @@ useful for OLAP (OnLine Analytical Processing).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/middleware/log.rb', line 37</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_application'>application</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='ivar'>@application</span> <span class='op'>=</span> <span class='id identifier rubyid_application'>application</span>
-  <span class='ivar'>@options</span> <span class='op'>=</span> <span class='const'>Utils</span><span class='period'>.</span><span class='id identifier rubyid_normalize_options'>normalize_options</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_database_path'>database_path</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:database_path</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>:database_path is missing</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_database_path'>database_path</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-  <span class='ivar'>@database</span> <span class='op'>=</span> <span class='const'>LogDatabase</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_database_path'>database_path</span><span class='rparen'>)</span>
-  <span class='ivar'>@logger</span> <span class='op'>=</span> <span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@database</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='application identifier id'>application</span><span class='comma token'>,</span> <span class='options identifier id'>options</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='@application ivar id'>@application</span> <span class='assign token'>=</span> <span class='application identifier id'>application</span>
+  <span class='@options ivar id'>@options</span> <span class='assign token'>=</span> <span class='Utils constant id'>Utils</span><span class='dot token'>.</span><span class='normalize_options identifier id'>normalize_options</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='orop op'>||</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='database_path identifier id'>database_path</span> <span class='assign token'>=</span> <span class='@options ivar id'>@options</span><span class='lbrack token'>[</span><span class='symbol val'>:database_path</span><span class='rbrack token'>]</span>
+  <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;:database_path is missing&quot;</span> <span class='if if_mod kw'>if</span> <span class='database_path identifier id'>database_path</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  <span class='@database ivar id'>@database</span> <span class='assign token'>=</span> <span class='LogDatabase constant id'>LogDatabase</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='database_path identifier id'>database_path</span><span class='rparen token'>)</span>
+  <span class='@logger ivar id'>@logger</span> <span class='assign token'>=</span> <span class='Logger constant id'>Logger</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='@database ivar id'>@database</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -401,18 +396,16 @@ useful for OLAP (OnLine Analytical Processing).</p>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="call-instance_method">
+  <p class="signature first" id="call-instance_method">
   
     - (<tt>Object</tt>) <strong>call</strong>(environment) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>For Rack.</p>
@@ -445,33 +438,32 @@ useful for OLAP (OnLine Analytical Processing).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/middleware/log.rb', line 47</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_environment'>environment</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_environment'>environment</span><span class='lbracket'>[</span><span class='const'>LOGGER</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@logger</span>
+<span class='def def kw'>def</span> <span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='environment identifier id'>environment</span><span class='rparen token'>)</span>
+  <span class='environment identifier id'>environment</span><span class='lbrack token'>[</span><span class='LOGGER constant id'>LOGGER</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='@logger ivar id'>@logger</span>
 
-  <span class='id identifier rubyid_start_time'>start_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
-  <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='ivar'>@application</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_environment'>environment</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_end_time'>end_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+  <span class='start_time identifier id'>start_time</span> <span class='assign token'>=</span> <span class='Time constant id'>Time</span><span class='dot token'>.</span><span class='now identifier id'>now</span>
+  <span class='status identifier id'>status</span><span class='comma token'>,</span> <span class='headers identifier id'>headers</span><span class='comma token'>,</span> <span class='body identifier id'>body</span> <span class='assign token'>=</span> <span class='@application ivar id'>@application</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='environment identifier id'>environment</span><span class='rparen token'>)</span>
+  <span class='end_time identifier id'>end_time</span> <span class='assign token'>=</span> <span class='Time constant id'>Time</span><span class='dot token'>.</span><span class='now identifier id'>now</span>
 
-  <span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Rack</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_environment'>environment</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_start_time'>start_time</span><span class='comma'>,</span> <span class='id identifier rubyid_end_time'>end_time</span><span class='comma'>,</span> <span class='id identifier rubyid_request'>request</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='request identifier id'>request</span> <span class='assign token'>=</span> <span class='Rack constant id'>Rack</span><span class='colon2 op'>::</span><span class='Request constant id'>Request</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='environment identifier id'>environment</span><span class='rparen token'>)</span>
+  <span class='log identifier id'>log</span><span class='lparen token'>(</span><span class='start_time identifier id'>start_time</span><span class='comma token'>,</span> <span class='end_time identifier id'>end_time</span><span class='comma token'>,</span> <span class='request identifier id'>request</span><span class='comma token'>,</span> <span class='status identifier id'>status</span><span class='comma token'>,</span> <span class='headers identifier id'>headers</span><span class='comma token'>,</span> <span class='body identifier id'>body</span><span class='rparen token'>)</span>
 
-  <span class='lbracket'>[</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='rbracket'>]</span>
-<span class='kw'>end</span></pre>
+  <span class='lbrack token'>[</span><span class='status identifier id'>status</span><span class='comma token'>,</span> <span class='headers identifier id'>headers</span><span class='comma token'>,</span> <span class='body identifier id'>body</span><span class='rbrack token'>]</span>
+<span class='end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="close_database-instance_method">
+  <p class="signature " id="close_database-instance_method">
   
     - (<tt>Object</tt>) <strong>close_database</strong> 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>close the cache database.</p>
@@ -495,24 +487,23 @@ useful for OLAP (OnLine Analytical Processing).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/middleware/log.rb', line 66</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_close_database'>close_database</span>
-  <span class='ivar'>@database</span><span class='period'>.</span><span class='id identifier rubyid_close_database'>close_database</span>
-<span class='kw'>end</span></pre>
+<span class='def def kw'>def</span> <span class='close_database identifier id'>close_database</span>
+  <span class='@database ivar id'>@database</span><span class='dot token'>.</span><span class='close_database identifier id'>close_database</span>
+<span class='end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="ensure_database-instance_method">
+  <p class="signature " id="ensure_database-instance_method">
   
     - (<tt>Object</tt>) <strong>ensure_database</strong> 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>ensures creating cache database.</p>
@@ -536,9 +527,10 @@ useful for OLAP (OnLine Analytical Processing).</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/middleware/log.rb', line 61</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_ensure_database'>ensure_database</span>
-  <span class='ivar'>@database</span><span class='period'>.</span><span class='id identifier rubyid_ensure_database'>ensure_database</span>
-<span class='kw'>end</span></pre>
+<span class='def def kw'>def</span> <span class='ensure_database identifier id'>ensure_database</span>
+  <span class='@database ivar id'>@database</span><span class='dot token'>.</span><span class='ensure_database identifier id'>ensure_database</span>
+<span class='end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -547,7 +539,7 @@ useful for OLAP (OnLine Analytical Processing).</p>
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

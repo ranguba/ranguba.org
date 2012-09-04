@@ -17,11 +17,9 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
@@ -55,39 +53,40 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-
+    
+    <span class="title"></span>
+  
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link" href="method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link" href="file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1 class="noborder title">racknga</h1>
 <div id="listing">
   <h1 class="alphaindex">Alphabetic Index</h1>
   
   <h2>File Listing</h2>
-  <ul id="files" class="index_inline_list">
+  <ul id="files">
   
   
     <li class="r1"><a href="index.html" title="README">はじめに</a></li>
@@ -114,7 +113,7 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/AccessLogParser.html" title="Racknga::AccessLogParser (class)">AccessLogParser</a></span>
+                <span class="object_link"><a href="Racknga/AccessLogParser.html" title="Racknga::AccessLogParser (class)">AccessLogParser</a></span> 
                 
                   <small>(Racknga)</small>
                 
@@ -129,14 +128,14 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware/Cache.html" title="Racknga::Middleware::Cache (class)">Cache</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/Cache.html" title="Racknga::Middleware::Cache (class)">Cache</a></span> 
                 
                   <small>(Racknga::Middleware)</small>
                 
               </li>
             
               <li>
-                <span class="object_link"><a href="Racknga/CacheDatabase.html" title="Racknga::CacheDatabase (class)">CacheDatabase</a></span>
+                <span class="object_link"><a href="Racknga/CacheDatabase.html" title="Racknga::CacheDatabase (class)">CacheDatabase</a></span> 
                 
                   <small>(Racknga)</small>
                 
@@ -151,7 +150,7 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware/Deflater.html" title="Racknga::Middleware::Deflater (class)">Deflater</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/Deflater.html" title="Racknga::Middleware::Deflater (class)">Deflater</a></span> 
                 
                   <small>(Racknga::Middleware)</small>
                 
@@ -166,14 +165,14 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/ExceptionMailNotifier.html" title="Racknga::ExceptionMailNotifier (class)">ExceptionMailNotifier</a></span>
+                <span class="object_link"><a href="Racknga/ExceptionMailNotifier.html" title="Racknga::ExceptionMailNotifier (class)">ExceptionMailNotifier</a></span> 
                 
                   <small>(Racknga)</small>
                 
               </li>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware/ExceptionNotifier.html" title="Racknga::Middleware::ExceptionNotifier (class)">ExceptionNotifier</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/ExceptionNotifier.html" title="Racknga::Middleware::ExceptionNotifier (class)">ExceptionNotifier</a></span> 
                 
                   <small>(Racknga::Middleware)</small>
                 
@@ -188,7 +187,7 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/AccessLogParser/FormatError.html" title="Racknga::AccessLogParser::FormatError (class)">FormatError</a></span>
+                <span class="object_link"><a href="Racknga/AccessLogParser/FormatError.html" title="Racknga::AccessLogParser::FormatError (class)">FormatError</a></span> 
                 
                   <small>(Racknga::AccessLogParser)</small>
                 
@@ -203,7 +202,7 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Groonga.html" title="Groonga (module)">Groonga</a></span>
+                <span class="object_link"><a href="Groonga.html" title="Groonga (module)">Groonga</a></span> 
                 
               </li>
             
@@ -216,7 +215,7 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware/InstanceName.html" title="Racknga::Middleware::InstanceName (class)">InstanceName</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/InstanceName.html" title="Racknga::Middleware::InstanceName (class)">InstanceName</a></span> 
                 
                   <small>(Racknga::Middleware)</small>
                 
@@ -234,7 +233,7 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware/JSONP.html" title="Racknga::Middleware::JSONP (class)">JSONP</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/JSONP.html" title="Racknga::Middleware::JSONP (class)">JSONP</a></span> 
                 
                   <small>(Racknga::Middleware)</small>
                 
@@ -249,23 +248,30 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware/Log.html" title="Racknga::Middleware::Log (class)">Log</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/Log.html" title="Racknga::Middleware::Log (class)">Log</a></span> 
                 
                   <small>(Racknga::Middleware)</small>
                 
               </li>
             
               <li>
-                <span class="object_link"><a href="Racknga/LogDatabase.html" title="Racknga::LogDatabase (class)">LogDatabase</a></span>
+                <span class="object_link"><a href="Racknga/LogDatabase.html" title="Racknga::LogDatabase (class)">LogDatabase</a></span> 
                 
                   <small>(Racknga)</small>
                 
               </li>
             
               <li>
-                <span class="object_link"><a href="Racknga/LogEntry.html" title="Racknga::LogEntry (class)">LogEntry</a></span>
+                <span class="object_link"><a href="Racknga/LogEntry.html" title="Racknga::LogEntry (class)">LogEntry</a></span> 
                 
                   <small>(Racknga)</small>
+                
+              </li>
+            
+              <li>
+                <span class="object_link"><a href="Racknga/Middleware/Log/Logger.html" title="Racknga::Middleware::Log::Logger (class)">Logger</a></span> 
+                
+                  <small>(Racknga::Middleware::Log)</small>
                 
               </li>
             
@@ -278,7 +284,7 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware.html" title="Racknga::Middleware (module)">Middleware</a></span>
+                <span class="object_link"><a href="Racknga/Middleware.html" title="Racknga::Middleware (module)">Middleware</a></span> 
                 
                   <small>(Racknga)</small>
                 
@@ -293,7 +299,7 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware/NginxRawURI.html" title="Racknga::Middleware::NginxRawURI (class)">NginxRawURI</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/NginxRawURI.html" title="Racknga::Middleware::NginxRawURI (class)">NginxRawURI</a></span> 
                 
                   <small>(Racknga::Middleware)</small>
                 
@@ -308,14 +314,14 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Groonga/Pagination.html" title="Groonga::Pagination (module)">Pagination</a></span>
+                <span class="object_link"><a href="Groonga/Pagination.html" title="Groonga::Pagination (module)">Pagination</a></span> 
                 
                   <small>(Groonga)</small>
                 
               </li>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware/PerUserAgentCache.html" title="Racknga::Middleware::PerUserAgentCache (class)">PerUserAgentCache</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/PerUserAgentCache.html" title="Racknga::Middleware::PerUserAgentCache (class)">PerUserAgentCache</a></span> 
                 
                   <small>(Racknga::Middleware)</small>
                 
@@ -330,26 +336,33 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga.html" title="Racknga (module)">Racknga</a></span>
+                <span class="object_link"><a href="Racknga.html" title="Racknga (module)">Racknga</a></span> 
                 
               </li>
             
               <li>
-                <span class="object_link"><a href="Racknga/Middleware/Range.html" title="Racknga::Middleware::Range (class)">Range</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/Range.html" title="Racknga::Middleware::Range (class)">Range</a></span> 
                 
                   <small>(Racknga::Middleware)</small>
                 
               </li>
             
               <li>
-                <span class="object_link"><a href="Racknga/ReverseLineReader.html" title="Racknga::ReverseLineReader (class)">ReverseLineReader</a></span>
+                <span class="object_link"><a href="Racknga/Middleware/Range/RangeStream.html" title="Racknga::Middleware::Range::RangeStream (class)">RangeStream</a></span> 
+                
+                  <small>(Racknga::Middleware::Range)</small>
+                
+              </li>
+            
+              <li>
+                <span class="object_link"><a href="Racknga/ReverseLineReader.html" title="Racknga::ReverseLineReader (class)">ReverseLineReader</a></span> 
                 
                   <small>(Racknga)</small>
                 
               </li>
             
               <li>
-                <span class="object_link"><a href="Racknga/ReversedAccessLogParser.html" title="Racknga::ReversedAccessLogParser (class)">ReversedAccessLogParser</a></span>
+                <span class="object_link"><a href="Racknga/ReversedAccessLogParser.html" title="Racknga::ReversedAccessLogParser (class)">ReversedAccessLogParser</a></span> 
                 
                   <small>(Racknga)</small>
                 
@@ -364,7 +377,7 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Racknga/Utils.html" title="Racknga::Utils (module)">Utils</a></span>
+                <span class="object_link"><a href="Racknga/Utils.html" title="Racknga::Utils (module)">Utils</a></span> 
                 
                   <small>(Racknga)</small>
                 
@@ -379,9 +392,16 @@
           <ul>
             
               <li>
-                <span class="object_link"><a href="Groonga/WillPaginateAPI.html" title="Groonga::WillPaginateAPI (module)">WillPaginateAPI</a></span>
+                <span class="object_link"><a href="Groonga/WillPaginateAPI.html" title="Groonga::WillPaginateAPI (module)">WillPaginateAPI</a></span> 
                 
                   <small>(Groonga)</small>
+                
+              </li>
+            
+              <li>
+                <span class="object_link"><a href="Racknga/Middleware/JSONP/Writer.html" title="Racknga::Middleware::JSONP::Writer (class)">Writer</a></span> 
+                
+                  <small>(Racknga::Middleware::JSONP)</small>
                 
               </li>
             
@@ -395,7 +415,7 @@
 </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

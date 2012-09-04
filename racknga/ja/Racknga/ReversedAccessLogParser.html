@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  relpath = '..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -59,38 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (R)</a> &raquo;
+    <a href="../_index.html">Index (R)</a> &raquo; 
     <span class="title"><span class="object_link"><a href="../Racknga.html" title="Racknga (module)">Racknga</a></span></span>
      &raquo; 
     <span class="title">ReversedAccessLogParser</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link" href="../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link" href="../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: Racknga::ReversedAccessLogParser
   
   
@@ -134,10 +130,20 @@
   
 
 
+  
+  
+  
+  
+  <h3 class="inherited">Constants inherited from <span class="object_link"><a href="AccessLogParser.html" title="Racknga::AccessLogParser (class)">AccessLogParser</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="AccessLogParser.html#BODY_BYTES_SENT-constant" title="Racknga::AccessLogParser::BODY_BYTES_SENT (constant)">BODY_BYTES_SENT</a></span>, <span class="object_link"><a href="AccessLogParser.html#COMBINED_FORMAT-constant" title="Racknga::AccessLogParser::COMBINED_FORMAT (constant)">COMBINED_FORMAT</a></span>, <span class="object_link"><a href="AccessLogParser.html#HTTP_REFERER-constant" title="Racknga::AccessLogParser::HTTP_REFERER (constant)">HTTP_REFERER</a></span>, <span class="object_link"><a href="AccessLogParser.html#HTTP_USER_AGENT-constant" title="Racknga::AccessLogParser::HTTP_USER_AGENT (constant)">HTTP_USER_AGENT</a></span>, <span class="object_link"><a href="AccessLogParser.html#REMOTE_ADDRESS-constant" title="Racknga::AccessLogParser::REMOTE_ADDRESS (constant)">REMOTE_ADDRESS</a></span>, <span class="object_link"><a href="AccessLogParser.html#REMOTE_USER-constant" title="Racknga::AccessLogParser::REMOTE_USER (constant)">REMOTE_USER</a></span>, <span class="object_link"><a href="AccessLogParser.html#REQUEST-constant" title="Racknga::AccessLogParser::REQUEST (constant)">REQUEST</a></span>, <span class="object_link"><a href="AccessLogParser.html#REQUEST_TIME-constant" title="Racknga::AccessLogParser::REQUEST_TIME (constant)">REQUEST_TIME</a></span>, <span class="object_link"><a href="AccessLogParser.html#RUNTIME-constant" title="Racknga::AccessLogParser::RUNTIME (constant)">RUNTIME</a></span>, <span class="object_link"><a href="AccessLogParser.html#STATUS-constant" title="Racknga::AccessLogParser::STATUS (constant)">STATUS</a></span>, <span class="object_link"><a href="AccessLogParser.html#TIME_LOCAL-constant" title="Racknga::AccessLogParser::TIME_LOCAL (constant)">TIME_LOCAL</a></span></p>
+
+  
 
 
-
-
+  
+  
+  
+  
 
   
     <h2>
@@ -155,7 +161,6 @@
 
     
   </span>
-  
   
     <span class="note title constructor">constructor</span>
   
@@ -184,7 +189,6 @@
   
   
   
-  
   <h3 class="inherited">Methods inherited from <span class="object_link"><a href="AccessLogParser.html" title="Racknga::AccessLogParser (class)">AccessLogParser</a></span></h3>
   <p class="inherited"><span class="object_link"><a href="AccessLogParser.html#each-instance_method" title="Racknga::AccessLogParser#each (method)">#each</a></span></p>
 
@@ -192,15 +196,13 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class="object_link"><a href="" title="Racknga::ReversedAccessLogParser (class)">ReversedAccessLogParser</a></span></tt>) <strong>initialize</strong>(line_reader) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>A new instance of ReversedAccessLogParser</p>
@@ -224,9 +226,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/access_log_parser.rb', line 143</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_line_reader">line_reader</span><span class="rparen">)</span>
-  <span class="ivar">@line_reader</span> <span class="op">=</span> <span class="const">ReverseLineReader</span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_line_reader">line_reader</span><span class="rparen">)</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="initialize identifier id">initialize</span><span class="lparen token">(</span><span class="line_reader identifier id">line_reader</span><span class="rparen token">)</span>
+  <span class="@line_reader ivar id">@line_reader</span> <span class="assign token">=</span> <span class="ReverseLineReader constant id">ReverseLineReader</span><span class="dot token">.</span><span class="new identifier id">new</span><span class="lparen token">(</span><span class="line_reader identifier id">line_reader</span><span class="rparen token">)</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -236,7 +239,7 @@
 
 
 </div>
-
+    
     <div id="footer"></div>
 
   

@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../../';
-  framesUrl = "../../frames.html#!" + escape(window.location.href);
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -59,38 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (J)</a> &raquo;
+    <a href="../../_index.html">Index (J)</a> &raquo; 
     <span class="title"><span class="object_link"><a href="../../Racknga.html" title="Racknga (module)">Racknga</a></span></span> &raquo; <span class="title"><span class="object_link"><a href="../Middleware.html" title="Racknga::Middleware (module)">Middleware</a></span></span>
      &raquo; 
     <span class="title">JSONP</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="../../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link" href="../../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link" href="../../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: Racknga::Middleware::JSONP
   
   
@@ -137,31 +133,32 @@ response.</p>
 
 <p>Usage:</p>
 
-<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">"racknga"</span>
+<pre class="code"><span class="require identifier id">require</span> <span class="string val">"racknga"</span>
 
-<span class="ruby-identifier">use</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">ContentLength</span>
-<span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleware</span><span class="ruby-operator">::</span><span class="ruby-constant">JSONP</span>
-<span class="ruby-identifier">json_application</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">env</span><span class="ruby-operator">|</span>
-  [<span class="ruby-value">200</span>,
-   {<span class="ruby-string">"Content-Type"</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">"application/json"</span>},
-   [<span class="ruby-string">'{"Hello": "World"}'</span>]]
-<span class="ruby-keyword">end</span>
-<span class="ruby-identifier">run</span> <span class="ruby-identifier">json_application</span>
+<span class="use identifier id">use</span> <span class="Rack constant id">Rack</span><span class="colon2 op">::</span><span class="ContentLength constant id">ContentLength</span>
+<span class="use identifier id">use</span> <span class="Racknga constant id">Racknga</span><span class="colon2 op">::</span><span class="Middleware constant id">Middleware</span><span class="colon2 op">::</span><span class="JSONP constant id">JSONP</span>
+<span class="json_application identifier id">json_application</span> <span class="assign token">=</span> <span class="Proc constant id">Proc</span><span class="dot token">.</span><span class="new identifier id">new</span> <span class="do do kw">do</span> <span class="bitor op">|</span><span class="env identifier id">env</span><span class="bitor op">|</span>
+  <span class="lbrack token">[</span><span class="integer val">200</span><span class="comma token">,</span>
+   <span class="lbrace token">{</span><span class="string val">"Content-Type"</span> <span class="assign token">=</span><span class="gt op">&gt;</span> <span class="string val">"application/json"</span><span class="rbrace token">}</span><span class="comma token">,</span>
+   <span class="lbrack token">[</span><span class="string val">'{"Hello": "World"}'</span><span class="rbrack token">]</span><span class="rbrack token">]</span>
+<span class="end end kw">end</span>
+<span class="run identifier id">run</span> <span class="json_application identifier id">json_application</span>
 </pre>
 
 <p>Results:</p>
 
-<pre class="code ruby"><code>% curl 'http://localhost:9292/'
-{"Hello": "World"}
-% curl 'http://localhost:9292/?callback=function'
-function({"Hello": "World"})</code></pre>
+<pre class="code"><span class="string val">% curl </span><span class="string val">'http://localhost:9292/'</span>
+<span class="lbrace token">{</span><span class="string val">"Hello"</span><span class="colon op">:</span> <span class="string val">"World"</span><span class="rbrace token">}</span>
+<span class="string val">% curl </span><span class="string val">'http://localhost:9292/?callback=function'</span>
+<span class="function identifier id">function</span><span class="lparen token">(</span><span class="lbrace token">{</span><span class="string val">"Hello"</span><span class="colon op">:</span> <span class="string val">"World"</span><span class="rbrace token">}</span><span class="rparen token">)</span>
+</pre>
 
 <p>You can use this middleware with Racknga::Middleware::Cache. You
-<strong>should</strong> use this middleware before the cache middleware:</p>
+<b>should</b> use this middleware before the cache middleware:</p>
 
-<pre class="ruby"><span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">JSONP</span>
-<span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>, :<span class="ruby-identifier">database_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">"var/cache/db"</span>
-<span class="ruby-identifier">run</span> <span class="ruby-constant">YourApplication</span>
+<pre class="code"><span class="use identifier id">use</span> <span class="Racknga constant id">Racknga</span><span class="colon2 op">::</span><span class="Middleawre constant id">Middleawre</span><span class="colon2 op">::</span><span class="JSONP constant id">JSONP</span>
+<span class="use identifier id">use</span> <span class="Racknga constant id">Racknga</span><span class="colon2 op">::</span><span class="Middleawre constant id">Middleawre</span><span class="colon2 op">::</span><span class="Cache constant id">Cache</span><span class="comma token">,</span> <span class="symbol val">:database_path</span> <span class="assign token">=</span><span class="gt op">&gt;</span> <span class="string val">"var/cache/db"</span>
+<span class="run identifier id">run</span> <span class="YourApplication constant id">YourApplication</span>
 </pre>
 
 <p>If you use this middleware after the cache middleware, the cache middleware
@@ -170,33 +167,35 @@ Here are examples:</p>
 
 <p>Recommended case:</p>
 
-<pre class="ruby"><span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">JSONP</span>
-<span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>, :<span class="ruby-identifier">database_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">"var/cache/db"</span>
-<span class="ruby-identifier">run</span> <span class="ruby-constant">YourApplication</span>
+<pre class="code"><span class="use identifier id">use</span> <span class="Racknga constant id">Racknga</span><span class="colon2 op">::</span><span class="Middleawre constant id">Middleawre</span><span class="colon2 op">::</span><span class="JSONP constant id">JSONP</span>
+<span class="use identifier id">use</span> <span class="Racknga constant id">Racknga</span><span class="colon2 op">::</span><span class="Middleawre constant id">Middleawre</span><span class="colon2 op">::</span><span class="Cache constant id">Cache</span><span class="comma token">,</span> <span class="symbol val">:database_path</span> <span class="assign token">=</span><span class="gt op">&gt;</span> <span class="string val">"var/cache/db"</span>
+<span class="run identifier id">run</span> <span class="YourApplication constant id">YourApplication</span>
 </pre>
 
 <p>Requests:</p>
 
-<pre class="code ruby"><code>http://localhost:9292/                    -&gt; no cache. cached.
-http://localhost:9292/?callback=function1 -&gt; use cache.
-http://localhost:9292/?callback=function2 -&gt; use cache.
-http://localhost:9292/?callback=function3 -&gt; use cache.
-http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
+<pre class="code"><span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span>                    <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="no identifier id">no</span> <span class="cache identifier id">cache</span><span class="dot token">.</span> <span class="cached identifier id">cached</span><span class="dot token">.</span>
+<span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span><span class="question op">?</span><span class="callback identifier id">callback</span><span class="assign token">=</span><span class="function1 identifier id">function1</span> <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="use identifier id">use</span> <span class="cache identifier id">cache</span><span class="dot token">.</span>
+<span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span><span class="question op">?</span><span class="callback identifier id">callback</span><span class="assign token">=</span><span class="function2 identifier id">function2</span> <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="use identifier id">use</span> <span class="cache identifier id">cache</span><span class="dot token">.</span>
+<span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span><span class="question op">?</span><span class="callback identifier id">callback</span><span class="assign token">=</span><span class="function3 identifier id">function3</span> <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="use identifier id">use</span> <span class="cache identifier id">cache</span><span class="dot token">.</span>
+<span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span><span class="question op">?</span><span class="callback identifier id">callback</span><span class="assign token">=</span><span class="function1 identifier id">function1</span> <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="use identifier id">use</span> <span class="cache identifier id">cache</span><span class="dot token">.</span>
+</pre>
 
 <p>Not recommended case:</p>
 
-<pre class="ruby"><span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>, :<span class="ruby-identifier">database_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">"var/cache/db"</span>
-<span class="ruby-identifier">use</span> <span class="ruby-constant">Racknga</span><span class="ruby-operator">::</span><span class="ruby-constant">Middleawre</span><span class="ruby-operator">::</span><span class="ruby-constant">JSONP</span>
-<span class="ruby-identifier">run</span> <span class="ruby-constant">YourApplication</span>
+<pre class="code"><span class="use identifier id">use</span> <span class="Racknga constant id">Racknga</span><span class="colon2 op">::</span><span class="Middleawre constant id">Middleawre</span><span class="colon2 op">::</span><span class="Cache constant id">Cache</span><span class="comma token">,</span> <span class="symbol val">:database_path</span> <span class="assign token">=</span><span class="gt op">&gt;</span> <span class="string val">"var/cache/db"</span>
+<span class="use identifier id">use</span> <span class="Racknga constant id">Racknga</span><span class="colon2 op">::</span><span class="Middleawre constant id">Middleawre</span><span class="colon2 op">::</span><span class="JSONP constant id">JSONP</span>
+<span class="run identifier id">run</span> <span class="YourApplication constant id">YourApplication</span>
 </pre>
 
 <p>Requests:</p>
 
-<pre class="code ruby"><code>http://localhost:9292/                    -&gt; no cache. cached.
-http://localhost:9292/?callback=function1 -&gt; no cache. cached.
-http://localhost:9292/?callback=function2 -&gt; no cache. cached.
-http://localhost:9292/?callback=function3 -&gt; no cache. cached.
-http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
+<pre class="code"><span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span>                    <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="no identifier id">no</span> <span class="cache identifier id">cache</span><span class="dot token">.</span> <span class="cached identifier id">cached</span><span class="dot token">.</span>
+<span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span><span class="question op">?</span><span class="callback identifier id">callback</span><span class="assign token">=</span><span class="function1 identifier id">function1</span> <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="no identifier id">no</span> <span class="cache identifier id">cache</span><span class="dot token">.</span> <span class="cached identifier id">cached</span><span class="dot token">.</span>
+<span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span><span class="question op">?</span><span class="callback identifier id">callback</span><span class="assign token">=</span><span class="function2 identifier id">function2</span> <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="no identifier id">no</span> <span class="cache identifier id">cache</span><span class="dot token">.</span> <span class="cached identifier id">cached</span><span class="dot token">.</span>
+<span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span><span class="question op">?</span><span class="callback identifier id">callback</span><span class="assign token">=</span><span class="function3 identifier id">function3</span> <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="no identifier id">no</span> <span class="cache identifier id">cache</span><span class="dot token">.</span> <span class="cached identifier id">cached</span><span class="dot token">.</span>
+<span class="http identifier id">http</span><span class="symbol val">:/</span><span class="regexp val">/localhost:9292/</span><span class="question op">?</span><span class="callback identifier id">callback</span><span class="assign token">=</span><span class="function1 identifier id">function1</span> <span class="minus op">-</span><span class="gt op">&gt;</span> <span class="use identifier id">use</span> <span class="cache identifier id">cache</span><span class="dot token">.</span>
+</pre>
 
 
   </div>
@@ -204,8 +203,16 @@ http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
 <div class="tags">
   
 
-</div>
-
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+   
+    
+   
+    
+      <strong class="classes">Classes:</strong> <span class="object_link"><a href="JSONP/Writer.html" title="Racknga::Middleware::JSONP::Writer (class)">Writer</a></span>
+    
+  
+</p>
 
 
 
@@ -233,7 +240,6 @@ http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline">
@@ -251,7 +257,6 @@ http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
 
     
   </span>
-  
   
     <span class="note title constructor">constructor</span>
   
@@ -276,15 +281,13 @@ http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class="object_link"><a href="" title="Racknga::Middleware::JSONP (class)">JSONP</a></span></tt>) <strong>initialize</strong>(application) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>A new instance of JSONP</p>
@@ -308,9 +311,10 @@ http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/middleware/jsonp.rb', line 80</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_application">application</span><span class="rparen">)</span>
-  <span class="ivar">@application</span> <span class="op">=</span> <span class="id identifier rubyid_application">application</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="initialize identifier id">initialize</span><span class="lparen token">(</span><span class="application identifier id">application</span><span class="rparen token">)</span>
+  <span class="@application ivar id">@application</span> <span class="assign token">=</span> <span class="application identifier id">application</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -321,18 +325,16 @@ http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="call-instance_method">
+  <p class="signature first" id="call-instance_method">
   
     - (<tt>Object</tt>) <strong>call</strong>(environment) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>For Rack.</p>
@@ -365,18 +367,19 @@ http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/middleware/jsonp.rb', line 85</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_call">call</span><span class="lparen">(</span><span class="id identifier rubyid_environment">environment</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_request">request</span> <span class="op">=</span> <span class="const">Rack</span><span class="op">::</span><span class="const">Request</span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_environment">environment</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_callback">callback</span> <span class="op">=</span> <span class="id identifier rubyid_request">request</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">callback</span><span class="tstring_end">"</span></span><span class="rbracket">]</span>
-  <span class="id identifier rubyid_update_cache_key">update_cache_key</span><span class="lparen">(</span><span class="id identifier rubyid_request">request</span><span class="rparen">)</span> <span class="kw">if</span> <span class="id identifier rubyid_callback">callback</span>
-  <span class="id identifier rubyid_status">status</span><span class="comma">,</span> <span class="id identifier rubyid_headers">headers</span><span class="comma">,</span> <span class="id identifier rubyid_body">body</span> <span class="op">=</span> <span class="ivar">@application</span><span class="period">.</span><span class="id identifier rubyid_call">call</span><span class="lparen">(</span><span class="id identifier rubyid_environment">environment</span><span class="rparen">)</span>
-  <span class="kw">return</span> <span class="lbracket">[</span><span class="id identifier rubyid_status">status</span><span class="comma">,</span> <span class="id identifier rubyid_headers">headers</span><span class="comma">,</span> <span class="id identifier rubyid_body">body</span><span class="rbracket">]</span> <span class="kw">unless</span> <span class="id identifier rubyid_callback">callback</span>
-  <span class="id identifier rubyid_header_hash">header_hash</span> <span class="op">=</span> <span class="const">Rack</span><span class="op">::</span><span class="const">Utils</span><span class="op">::</span><span class="const">HeaderHash</span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_headers">headers</span><span class="rparen">)</span>
-  <span class="kw">return</span> <span class="lbracket">[</span><span class="id identifier rubyid_status">status</span><span class="comma">,</span> <span class="id identifier rubyid_headers">headers</span><span class="comma">,</span> <span class="id identifier rubyid_body">body</span><span class="rbracket">]</span> <span class="kw">unless</span> <span class="id identifier rubyid_json_response?">json_response?</span><span class="lparen">(</span><span class="id identifier rubyid_header_hash">header_hash</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_body">body</span> <span class="op">=</span> <span class="const">Writer</span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="id identifier rubyid_callback">callback</span><span class="comma">,</span> <span class="id identifier rubyid_body">body</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_update_content_type">update_content_type</span><span class="lparen">(</span><span class="id identifier rubyid_header_hash">header_hash</span><span class="rparen">)</span>
-  <span class="lbracket">[</span><span class="id identifier rubyid_status">status</span><span class="comma">,</span> <span class="id identifier rubyid_header_hash">header_hash</span><span class="comma">,</span> <span class="id identifier rubyid_body">body</span><span class="rbracket">]</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="call identifier id">call</span><span class="lparen token">(</span><span class="environment identifier id">environment</span><span class="rparen token">)</span>
+  <span class="request identifier id">request</span> <span class="assign token">=</span> <span class="Rack constant id">Rack</span><span class="colon2 op">::</span><span class="Request constant id">Request</span><span class="dot token">.</span><span class="new identifier id">new</span><span class="lparen token">(</span><span class="environment identifier id">environment</span><span class="rparen token">)</span>
+  <span class="callback identifier id">callback</span> <span class="assign token">=</span> <span class="request identifier id">request</span><span class="lbrack token">[</span><span class="string val">"callback"</span><span class="rbrack token">]</span>
+  <span class="update_cache_key identifier id">update_cache_key</span><span class="lparen token">(</span><span class="request identifier id">request</span><span class="rparen token">)</span> <span class="if if_mod kw">if</span> <span class="callback identifier id">callback</span>
+  <span class="status identifier id">status</span><span class="comma token">,</span> <span class="headers identifier id">headers</span><span class="comma token">,</span> <span class="body identifier id">body</span> <span class="assign token">=</span> <span class="@application ivar id">@application</span><span class="dot token">.</span><span class="call identifier id">call</span><span class="lparen token">(</span><span class="environment identifier id">environment</span><span class="rparen token">)</span>
+  <span class="return return kw">return</span> <span class="lbrack token">[</span><span class="status identifier id">status</span><span class="comma token">,</span> <span class="headers identifier id">headers</span><span class="comma token">,</span> <span class="body identifier id">body</span><span class="rbrack token">]</span> <span class="unless unless_mod kw">unless</span> <span class="callback identifier id">callback</span>
+  <span class="header_hash identifier id">header_hash</span> <span class="assign token">=</span> <span class="Rack constant id">Rack</span><span class="colon2 op">::</span><span class="Utils constant id">Utils</span><span class="colon2 op">::</span><span class="HeaderHash constant id">HeaderHash</span><span class="dot token">.</span><span class="new identifier id">new</span><span class="lparen token">(</span><span class="headers identifier id">headers</span><span class="rparen token">)</span>
+  <span class="return return kw">return</span> <span class="lbrack token">[</span><span class="status identifier id">status</span><span class="comma token">,</span> <span class="headers identifier id">headers</span><span class="comma token">,</span> <span class="body identifier id">body</span><span class="rbrack token">]</span> <span class="unless unless_mod kw">unless</span> <span class="json_response? fid id">json_response?</span><span class="lparen token">(</span><span class="header_hash identifier id">header_hash</span><span class="rparen token">)</span>
+  <span class="body identifier id">body</span> <span class="assign token">=</span> <span class="Writer constant id">Writer</span><span class="dot token">.</span><span class="new identifier id">new</span><span class="lparen token">(</span><span class="callback identifier id">callback</span><span class="comma token">,</span> <span class="body identifier id">body</span><span class="rparen token">)</span>
+  <span class="update_content_type identifier id">update_content_type</span><span class="lparen token">(</span><span class="header_hash identifier id">header_hash</span><span class="rparen token">)</span>
+  <span class="lbrack token">[</span><span class="status identifier id">status</span><span class="comma token">,</span> <span class="header_hash identifier id">header_hash</span><span class="comma token">,</span> <span class="body identifier id">body</span><span class="rbrack token">]</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -385,7 +388,7 @@ http://localhost:9292/?callback=function1 -&gt; use cache.</code></pre>
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

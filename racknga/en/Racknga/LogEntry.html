@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  relpath = '..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -59,41 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (L)</a> &raquo;
+    <a href="../_index.html">Index (L)</a> &raquo; 
     <span class='title'><span class='object_link'><a href="../Racknga.html" title="Racknga (module)">Racknga</a></span></span>
      &raquo; 
     <span class="title">LogEntry</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link"
-        href="../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: Racknga::LogEntry
   
   
@@ -138,23 +131,22 @@
         <dt id="ATTRIBUTES-constant" class="">ATTRIBUTES =
           
         </dt>
-        <dd><pre class="code"><span class='lbracket'>[</span>
-  <span class='symbol'>:remote_address</span><span class='comma'>,</span>
-  <span class='symbol'>:remote_user</span><span class='comma'>,</span>
-  <span class='symbol'>:time_local</span><span class='comma'>,</span>
-  <span class='symbol'>:runtime</span><span class='comma'>,</span>
-  <span class='symbol'>:request_time</span><span class='comma'>,</span>
-  <span class='symbol'>:request</span><span class='comma'>,</span>
-  <span class='symbol'>:status</span><span class='comma'>,</span>
-  <span class='symbol'>:body_bytes_sent</span><span class='comma'>,</span>
-  <span class='symbol'>:http_referer</span><span class='comma'>,</span>
-  <span class='symbol'>:http_user_agent</span><span class='comma'>,</span>
-<span class='rbracket'>]</span></pre></dd>
+        <dd><pre class="code"><span class='lbrack token'>[</span>
+  <span class='symbol val'>:remote_address</span><span class='comma token'>,</span>
+  <span class='symbol val'>:remote_user</span><span class='comma token'>,</span>
+  <span class='symbol val'>:time_local</span><span class='comma token'>,</span>
+  <span class='symbol val'>:runtime</span><span class='comma token'>,</span>
+  <span class='symbol val'>:request_time</span><span class='comma token'>,</span>
+  <span class='symbol val'>:request</span><span class='comma token'>,</span>
+  <span class='symbol val'>:status</span><span class='comma token'>,</span>
+  <span class='symbol val'>:body_bytes_sent</span><span class='comma token'>,</span>
+  <span class='symbol val'>:http_referer</span><span class='comma token'>,</span>
+  <span class='symbol val'>:http_user_agent</span><span class='comma token'>,</span>
+<span class='rbrack token'>]</span>
+</pre></dd>
       
     </dl>
   
-
-
 
 
 
@@ -182,7 +174,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -204,7 +195,6 @@
   
   
   
-  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -220,7 +210,6 @@
 
     
   </span>
-  
   
     <span class="note title constructor">constructor</span>
   
@@ -245,15 +234,13 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Racknga::LogEntry (class)">LogEntry</a></span></tt>) <strong>initialize</strong>(options = nil) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>A new instance of LogEntry</p>
@@ -287,19 +274,20 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/log_entry.rb', line 36</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_options'>options</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='ivar'>@remote_address</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:remote_address</span><span class='rbracket'>]</span>
-  <span class='ivar'>@remote_user</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_string_value'>normalize_string_value</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:remote_user</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='ivar'>@time_local</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:time_local</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_at'>at</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
-  <span class='ivar'>@runtime</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_float_value'>normalize_float_value</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:runtime</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='ivar'>@request_time</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_float_value'>normalize_float_value</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:request_time</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='ivar'>@request</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:request</span><span class='rbracket'>]</span>
-  <span class='ivar'>@status</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:status</span><span class='rbracket'>]</span>
-  <span class='ivar'>@body_bytes_sent</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_int_value'>normalize_int_value</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:body_bytes_sent</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='ivar'>@http_referer</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_string_value'>normalize_string_value</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:http_referer</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='ivar'>@http_user_agent</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_string_value'>normalize_string_value</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:http_user_agent</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='options identifier id'>options</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='@remote_address ivar id'>@remote_address</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:remote_address</span><span class='rbrack token'>]</span>
+  <span class='@remote_user ivar id'>@remote_user</span> <span class='assign token'>=</span> <span class='normalize_string_value identifier id'>normalize_string_value</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:remote_user</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='@time_local ivar id'>@time_local</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:time_local</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='Time constant id'>Time</span><span class='dot token'>.</span><span class='at identifier id'>at</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='rparen token'>)</span>
+  <span class='@runtime ivar id'>@runtime</span> <span class='assign token'>=</span> <span class='normalize_float_value identifier id'>normalize_float_value</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:runtime</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='@request_time ivar id'>@request_time</span> <span class='assign token'>=</span> <span class='normalize_float_value identifier id'>normalize_float_value</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:request_time</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='@request ivar id'>@request</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:request</span><span class='rbrack token'>]</span>
+  <span class='@status ivar id'>@status</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:status</span><span class='rbrack token'>]</span>
+  <span class='@body_bytes_sent ivar id'>@body_bytes_sent</span> <span class='assign token'>=</span> <span class='normalize_int_value identifier id'>normalize_int_value</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:body_bytes_sent</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='@http_referer ivar id'>@http_referer</span> <span class='assign token'>=</span> <span class='normalize_string_value identifier id'>normalize_string_value</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:http_referer</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='@http_user_agent ivar id'>@http_user_agent</span> <span class='assign token'>=</span> <span class='normalize_string_value identifier id'>normalize_string_value</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:http_user_agent</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -310,18 +298,16 @@
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="==-instance_method">
+  <p class="signature first" id="==-instance_method">
   
     - (<tt>Object</tt>) <strong>==</strong>(other) 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -334,24 +320,23 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/log_entry.rb', line 56</span>
 
-<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
-<span class='kw'>end</span></pre>
+<span class='def def kw'>def</span> <span class='eq op'>==</span><span class='lparen token'>(</span><span class='other identifier id'>other</span><span class='rparen token'>)</span>
+  <span class='other identifier id'>other</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='rparen token'>)</span> <span class='and and kw'>and</span> <span class='attributes identifier id'>attributes</span> <span class='eq op'>==</span> <span class='other identifier id'>other</span><span class='dot token'>.</span><span class='attributes identifier id'>attributes</span>
+<span class='end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="attributes-instance_method">
+  <p class="signature " id="attributes-instance_method">
   
     - (<tt>Object</tt>) <strong>attributes</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -366,11 +351,12 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/log_entry.rb', line 50</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span>
-  <span class='const'>ATTRIBUTES</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attribute'>attribute</span><span class='op'>|</span>
-    <span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
+<span class='def def kw'>def</span> <span class='attributes identifier id'>attributes</span>
+  <span class='ATTRIBUTES constant id'>ATTRIBUTES</span><span class='dot token'>.</span><span class='collect identifier id'>collect</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='attribute identifier id'>attribute</span><span class='bitor op'>|</span>
+    <span class='__send__ identifier id'>__send__</span><span class='lparen token'>(</span><span class='attribute identifier id'>attribute</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -379,7 +365,7 @@
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

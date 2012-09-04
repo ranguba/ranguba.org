@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  relpath = '..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -59,38 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (U)</a> &raquo;
+    <a href="../_index.html">Index (U)</a> &raquo; 
     <span class="title"><span class="object_link"><a href="../Racknga.html" title="Racknga (module)">Racknga</a></span></span>
      &raquo; 
     <span class="title">Utils</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link" href="../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link" href="../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Module: Racknga::Utils
   
   
@@ -117,11 +113,9 @@
 
 
 
-
-
   
     <h2>
-      Class Method Summary
+      Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
@@ -130,12 +124,11 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#normalize_options-class_method" title="normalize_options (class method)">+ (Object) <strong>normalize_options</strong>(options) </a>
+      <a href="#normalize_options-instance_method" title="#normalize_options (instance method)">- (Object) <strong>normalize_options</strong>(options) </a>
     
 
     
   </span>
-  
   
   
   
@@ -152,12 +145,11 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#passenger%3F-class_method" title="passenger? (class method)">+ (Boolean) <strong>passenger?</strong> </a>
+      <a href="#passenger%3F-instance_method" title="#passenger? (instance method)">- (Boolean) <strong>passenger?</strong> </a>
     
 
     
   </span>
-  
   
   
   
@@ -174,12 +166,11 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#production%3F-class_method" title="production? (class method)">+ (Boolean) <strong>production?</strong> </a>
+      <a href="#production%3F-instance_method" title="#production? (instance method)">- (Boolean) <strong>production?</strong> </a>
     
 
     
   </span>
-  
   
   
   
@@ -198,20 +189,18 @@
 
 
 
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="normalize_options-class_method">
+  <p class="signature first" id="normalize_options-instance_method">
   
-    + (<tt>Object</tt>) <strong>normalize_options</strong>(options) 
-  
-
+    - (<tt>Object</tt>) <strong>normalize_options</strong>(options) 
   
 
   
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -229,29 +218,28 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/utils.rb', line 31</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_normalize_options">normalize_options</span><span class="lparen">(</span><span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_normalized_options">normalized_options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="rbrace">}</span>
-  <span class="id identifier rubyid_options">options</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_key">key</span><span class="comma">,</span> <span class="id identifier rubyid_value">value</span><span class="op">|</span>
-    <span class="id identifier rubyid_value">value</span> <span class="op">=</span> <span class="id identifier rubyid_normalize_options">normalize_options</span><span class="lparen">(</span><span class="id identifier rubyid_value">value</span><span class="rparen">)</span> <span class="kw">if</span> <span class="id identifier rubyid_value">value</span><span class="period">.</span><span class="id identifier rubyid_is_a?">is_a?</span><span class="lparen">(</span><span class="const">Hash</span><span class="rparen">)</span>
-    <span class="id identifier rubyid_normalized_options">normalized_options</span><span class="lbracket">[</span><span class="id identifier rubyid_key">key</span><span class="period">.</span><span class="id identifier rubyid_to_sym">to_sym</span><span class="rbracket">]</span> <span class="op">=</span> <span class="id identifier rubyid_value">value</span>
-  <span class="kw">end</span>
-  <span class="id identifier rubyid_normalized_options">normalized_options</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="normalize_options identifier id">normalize_options</span><span class="lparen token">(</span><span class="options identifier id">options</span><span class="rparen token">)</span>
+  <span class="normalized_options identifier id">normalized_options</span> <span class="assign token">=</span> <span class="lbrace token">{</span><span class="rbrace token">}</span>
+  <span class="options identifier id">options</span><span class="dot token">.</span><span class="each identifier id">each</span> <span class="do do kw">do</span> <span class="bitor op">|</span><span class="key identifier id">key</span><span class="comma token">,</span> <span class="value identifier id">value</span><span class="bitor op">|</span>
+    <span class="value identifier id">value</span> <span class="assign token">=</span> <span class="normalize_options identifier id">normalize_options</span><span class="lparen token">(</span><span class="value identifier id">value</span><span class="rparen token">)</span> <span class="if if_mod kw">if</span> <span class="value identifier id">value</span><span class="dot token">.</span><span class="is_a? fid id">is_a?</span><span class="lparen token">(</span><span class="Hash constant id">Hash</span><span class="rparen token">)</span>
+    <span class="normalized_options identifier id">normalized_options</span><span class="lbrack token">[</span><span class="key identifier id">key</span><span class="dot token">.</span><span class="to_sym identifier id">to_sym</span><span class="rbrack token">]</span> <span class="assign token">=</span> <span class="value identifier id">value</span>
+  <span class="end end kw">end</span>
+  <span class="normalized_options identifier id">normalized_options</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="passenger?-class_method">
+  <p class="signature " id="passenger?-instance_method">
   
-    + (<tt>Boolean</tt>) <strong>passenger?</strong> 
-  
-
+    - (<tt>Boolean</tt>) <strong>passenger?</strong> 
   
 
   
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 
@@ -259,7 +247,7 @@
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
@@ -287,25 +275,24 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/utils.rb', line 26</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_passenger?">passenger?</span>
-  <span class="const">ENV</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">PASSENGER_ENVIRONMENT</span><span class="tstring_end">"</span></span><span class="rbracket">]</span> <span class="kw">or</span>
-    <span class="tstring"><span class="regexp_beg">/</span><span class="tstring_content">Phusion_Passenger</span><span class="regexp_end">/</span></span> <span class="op">=~</span> <span class="const">ENV</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">SERVER_SOFTWARE</span><span class="tstring_end">"</span></span><span class="rbracket">]</span><span class="period">.</span><span class="id identifier rubyid_to_s">to_s</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="passenger? fid id">passenger?</span>
+  <span class="ENV constant id">ENV</span><span class="lbrack token">[</span><span class="string val">"PASSENGER_ENVIRONMENT"</span><span class="rbrack token">]</span> <span class="or or kw">or</span>
+    <span class="regexp val">/Phusion_Passenger/</span> <span class="match op">=~</span> <span class="ENV constant id">ENV</span><span class="lbrack token">[</span><span class="string val">"SERVER_SOFTWARE"</span><span class="rbrack token">]</span><span class="dot token">.</span><span class="to_s identifier id">to_s</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="production?-class_method">
+  <p class="signature " id="production?-instance_method">
   
-    + (<tt>Boolean</tt>) <strong>production?</strong> 
-  
-
+    - (<tt>Boolean</tt>) <strong>production?</strong> 
   
 
   
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 
@@ -313,7 +300,7 @@
 </div>
 <div class="tags">
   
-<p class="tag_title">Returns:</p>
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
@@ -340,9 +327,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/utils.rb', line 22</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_production?">production?</span>
-  <span class="const">ENV</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">RACK_ENV</span><span class="tstring_end">"</span></span><span class="rbracket">]</span> <span class="op">==</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">production</span><span class="tstring_end">"</span></span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="production? fid id">production?</span>
+  <span class="ENV constant id">ENV</span><span class="lbrack token">[</span><span class="string val">"RACK_ENV"</span><span class="rbrack token">]</span> <span class="eq op">==</span> <span class="string val">"production"</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -351,7 +339,7 @@
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

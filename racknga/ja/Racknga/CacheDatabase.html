@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  relpath = '..';
+  if (relpath != '') relpath += '/';
 </script>
-
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -59,38 +57,36 @@
 <div class="content">
 
 
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (C)</a> &raquo;
+    <a href="../_index.html">Index (C)</a> &raquo; 
     <span class="title"><span class="object_link"><a href="../Racknga.html" title="Racknga (module)">Racknga</a></span></span>
      &raquo; 
     <span class="title">CacheDatabase</span>
   
-
+  
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="../class_list.html">
-      Class List
-    </a>
+    <a id="class_list_link" href="#">Class List</a>
   
-    <a class="full_list_link" id="method_list_link" href="../method_list.html">
-      Method List
-    </a>
+    <a id="method_list_link" href="#">Method List</a>
   
-    <a class="full_list_link" id="file_list_link" href="../file_list.html">
-      File List
-    </a>
+    <a id="file_list_link" href="#">File List</a>
   
 </div>
       <div class="clear"></div>
     </div>
-
+    
     <iframe id="search_frame"></iframe>
-
+    
     <div id="content"><h1>Class: Racknga::CacheDatabase
   
   
@@ -146,8 +142,6 @@ Racknga::Middleware::Cache.</p>
 
 
 
-
-
   
     <h2>
       Instance Method Summary
@@ -164,7 +158,6 @@ Racknga::Middleware::Cache.</p>
 
     
   </span>
-  
   
   
   
@@ -192,7 +185,6 @@ Racknga::Middleware::Cache.</p>
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline"></div></span>
@@ -208,7 +200,6 @@ Racknga::Middleware::Cache.</p>
 
     
   </span>
-  
   
   
   
@@ -236,7 +227,6 @@ Racknga::Middleware::Cache.</p>
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline"></div></span>
@@ -252,7 +242,6 @@ Racknga::Middleware::Cache.</p>
 
     
   </span>
-  
   
     <span class="note title constructor">constructor</span>
   
@@ -284,7 +273,6 @@ Racknga::Middleware::Cache.</p>
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline">
@@ -308,7 +296,6 @@ Racknga::Middleware::Cache.</p>
   
   
   
-  
 
   
     <span class="summary_desc"><div class="inline"></div></span>
@@ -323,15 +310,13 @@ Racknga::Middleware::Cache.</p>
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
+  <p class="signature first" id="initialize-instance_method">
   
     - (<tt><span class="object_link"><a href="" title="Racknga::CacheDatabase (class)">CacheDatabase</a></span></tt>) <strong>initialize</strong>(database_path) 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>A new instance of CacheDatabase</p>
@@ -340,7 +325,7 @@ Racknga::Middleware::Cache.</p>
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  <h3>Parameters:</h3>
 <ul class="param">
   
     <li>
@@ -377,11 +362,12 @@ Racknga::Middleware::Cache.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/cache_database.rb', line 31</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_database_path">database_path</span><span class="rparen">)</span>
-  <span class="ivar">@database_path</span> <span class="op">=</span> <span class="id identifier rubyid_database_path">database_path</span>
-  <span class="ivar">@context</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Context</span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="symbol">:encoding</span> <span class="op">=&gt;</span> <span class="symbol">:none</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_ensure_database">ensure_database</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="initialize identifier id">initialize</span><span class="lparen token">(</span><span class="database_path identifier id">database_path</span><span class="rparen token">)</span>
+  <span class="@database_path ivar id">@database_path</span> <span class="assign token">=</span> <span class="database_path identifier id">database_path</span>
+  <span class="@context ivar id">@context</span> <span class="assign token">=</span> <span class="Groonga constant id">Groonga</span><span class="colon2 op">::</span><span class="Context constant id">Context</span><span class="dot token">.</span><span class="new identifier id">new</span><span class="lparen token">(</span><span class="symbol val">:encoding</span> <span class="assign token">=</span><span class="gt op">&gt;</span> <span class="symbol val">:none</span><span class="rparen token">)</span>
+  <span class="ensure_database identifier id">ensure_database</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -392,18 +378,16 @@ Racknga::Middleware::Cache.</p>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-
+    
     
       <div class="method_details first">
-  <h3 class="signature first" id="close_database-instance_method">
+  <p class="signature first" id="close_database-instance_method">
   
     - (<tt>Object</tt>) <strong>close_database</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -416,24 +400,23 @@ Racknga::Middleware::Cache.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/cache_database.rb', line 89</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_close_database">close_database</span>
-  <span class="ivar">@database</span><span class="period">.</span><span class="id identifier rubyid_close">close</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="close_database identifier id">close_database</span>
+  <span class="@database ivar id">@database</span><span class="dot token">.</span><span class="close identifier id">close</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="configuration-instance_method">
+  <p class="signature " id="configuration-instance_method">
   
     - (<tt>Object</tt>) <strong>configuration</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -446,24 +429,23 @@ Racknga::Middleware::Cache.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/cache_database.rb', line 45</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_configuration">configuration</span>
-  <span class="id identifier rubyid_configurations">configurations</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">default</span><span class="tstring_end">"</span></span><span class="rbracket">]</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="configuration identifier id">configuration</span>
+  <span class="configurations identifier id">configurations</span><span class="lbrack token">[</span><span class="string val">"default"</span><span class="rbrack token">]</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="configurations-instance_method">
+  <p class="signature " id="configurations-instance_method">
   
     - (<tt>Object</tt>) <strong>configurations</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -476,24 +458,23 @@ Racknga::Middleware::Cache.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/cache_database.rb', line 41</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_configurations">configurations</span>
-  <span class="ivar">@context</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Configurations</span><span class="tstring_end">"</span></span><span class="rbracket">]</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="configurations identifier id">configurations</span>
+  <span class="@context ivar id">@context</span><span class="lbrack token">[</span><span class="string val">"Configurations"</span><span class="rbrack token">]</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="ensure_database-instance_method">
+  <p class="signature " id="ensure_database-instance_method">
   
     - (<tt>Object</tt>) <strong>ensure_database</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -512,37 +493,36 @@ Racknga::Middleware::Cache.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/cache_database.rb', line 79</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_ensure_database">ensure_database</span>
-  <span class="kw">if</span> <span class="const">File</span><span class="period">.</span><span class="id identifier rubyid_exist?">exist?</span><span class="lparen">(</span><span class="ivar">@database_path</span><span class="rparen">)</span>
-    <span class="ivar">@database</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Database</span><span class="period">.</span><span class="id identifier rubyid_open">open</span><span class="lparen">(</span><span class="ivar">@database_path</span><span class="comma">,</span> <span class="symbol">:context</span> <span class="op">=&gt;</span> <span class="ivar">@context</span><span class="rparen">)</span>
-  <span class="kw">else</span>
-    <span class="id identifier rubyid_create_database">create_database</span>
-  <span class="kw">end</span>
-  <span class="id identifier rubyid_ensure_tables">ensure_tables</span>
-  <span class="id identifier rubyid_ensure_default_configuration">ensure_default_configuration</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="ensure_database identifier id">ensure_database</span>
+  <span class="if if kw">if</span> <span class="File constant id">File</span><span class="dot token">.</span><span class="exist? fid id">exist?</span><span class="lparen token">(</span><span class="@database_path ivar id">@database_path</span><span class="rparen token">)</span>
+    <span class="@database ivar id">@database</span> <span class="assign token">=</span> <span class="Groonga constant id">Groonga</span><span class="colon2 op">::</span><span class="Database constant id">Database</span><span class="dot token">.</span><span class="open identifier id">open</span><span class="lparen token">(</span><span class="@database_path ivar id">@database_path</span><span class="comma token">,</span> <span class="symbol val">:context</span> <span class="assign token">=</span><span class="gt op">&gt;</span> <span class="@context ivar id">@context</span><span class="rparen token">)</span>
+  <span class="else else kw">else</span>
+    <span class="create_database identifier id">create_database</span>
+  <span class="end end kw">end</span>
+  <span class="ensure_tables identifier id">ensure_tables</span>
+  <span class="ensure_default_configuration identifier id">ensure_default_configuration</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="purge_old_responses-instance_method">
+  <p class="signature " id="purge_old_responses-instance_method">
   
     - (<tt>Object</tt>) <strong>purge_old_responses</strong> 
   
 
   
-
-  
-</h3><div class="docstring">
+</p><div class="docstring">
   <div class="discussion">
     
 <p>Purges old responses. To clear old caches, you should call this method
 periodically or after data update.</p>
 
 <p>You can call this method by the different process from your Rack
-application process. (e.g. cron.) It's multi process safe.</p>
+application process. (e.g. cron.) It’s multi process safe.</p>
 
 
   </div>
@@ -583,44 +563,43 @@ application process. (e.g. cron.) It's multi process safe.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/cache_database.rb', line 55</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_purge_old_responses">purge_old_responses</span>
-  <span class="id identifier rubyid_age_modulo">age_modulo</span> <span class="op">=</span> <span class="int">2</span> <span class="op">**</span> <span class="int">31</span> <span class="op">-</span> <span class="int">1</span>
-  <span class="id identifier rubyid_age">age</span> <span class="op">=</span> <span class="id identifier rubyid_configuration">configuration</span><span class="period">.</span><span class="id identifier rubyid_age">age</span>
-  <span class="id identifier rubyid_previous_age">previous_age</span> <span class="op">=</span> <span class="lparen">(</span><span class="id identifier rubyid_age">age</span> <span class="op">-</span> <span class="int">1</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_modulo">modulo</span><span class="lparen">(</span><span class="id identifier rubyid_age_modulo">age_modulo</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_next_age">next_age</span> <span class="op">=</span> <span class="lparen">(</span><span class="id identifier rubyid_age">age</span> <span class="op">+</span> <span class="int">1</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_modulo">modulo</span><span class="lparen">(</span><span class="id identifier rubyid_age_modulo">age_modulo</span><span class="rparen">)</span>
+<span class="def def kw">def</span> <span class="purge_old_responses identifier id">purge_old_responses</span>
+  <span class="age_modulo identifier id">age_modulo</span> <span class="assign token">=</span> <span class="integer val">2</span> <span class="pow op">**</span> <span class="integer val">31</span> <span class="minus op">-</span> <span class="integer val">1</span>
+  <span class="age identifier id">age</span> <span class="assign token">=</span> <span class="configuration identifier id">configuration</span><span class="dot token">.</span><span class="age identifier id">age</span>
+  <span class="previous_age identifier id">previous_age</span> <span class="assign token">=</span> <span class="lparen token">(</span><span class="age identifier id">age</span> <span class="minus op">-</span> <span class="integer val">1</span><span class="rparen token">)</span><span class="dot token">.</span><span class="modulo identifier id">modulo</span><span class="lparen token">(</span><span class="age_modulo identifier id">age_modulo</span><span class="rparen token">)</span>
+  <span class="next_age identifier id">next_age</span> <span class="assign token">=</span> <span class="lparen token">(</span><span class="age identifier id">age</span> <span class="plus op">+</span> <span class="integer val">1</span><span class="rparen token">)</span><span class="dot token">.</span><span class="modulo identifier id">modulo</span><span class="lparen token">(</span><span class="age_modulo identifier id">age_modulo</span><span class="rparen token">)</span>
 
-  <span class="id identifier rubyid_target_responses">target_responses</span> <span class="op">=</span> <span class="id identifier rubyid_responses">responses</span><span class="period">.</span><span class="id identifier rubyid_select">select</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_record">record</span><span class="op">|</span>
-    <span class="id identifier rubyid_record">record</span><span class="period">.</span><span class="id identifier rubyid_age">age</span> <span class="op">==</span> <span class="id identifier rubyid_next_age">next_age</span>
-  <span class="kw">end</span>
-  <span class="id identifier rubyid_target_responses">target_responses</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_response">response</span><span class="op">|</span>
-    <span class="id identifier rubyid_response">response</span><span class="period">.</span><span class="id identifier rubyid_key">key</span><span class="period">.</span><span class="id identifier rubyid_delete">delete</span>
-  <span class="kw">end</span>
-  <span class="id identifier rubyid_configuration">configuration</span><span class="period">.</span><span class="id identifier rubyid_age">age</span> <span class="op">=</span> <span class="id identifier rubyid_next_age">next_age</span>
+  <span class="target_responses identifier id">target_responses</span> <span class="assign token">=</span> <span class="responses identifier id">responses</span><span class="dot token">.</span><span class="select identifier id">select</span> <span class="do do kw">do</span> <span class="bitor op">|</span><span class="record identifier id">record</span><span class="bitor op">|</span>
+    <span class="record identifier id">record</span><span class="dot token">.</span><span class="age identifier id">age</span> <span class="eq op">==</span> <span class="next_age identifier id">next_age</span>
+  <span class="end end kw">end</span>
+  <span class="target_responses identifier id">target_responses</span><span class="dot token">.</span><span class="each identifier id">each</span> <span class="do do kw">do</span> <span class="bitor op">|</span><span class="response identifier id">response</span><span class="bitor op">|</span>
+    <span class="response identifier id">response</span><span class="dot token">.</span><span class="key identifier id">key</span><span class="dot token">.</span><span class="delete identifier id">delete</span>
+  <span class="end end kw">end</span>
+  <span class="configuration identifier id">configuration</span><span class="dot token">.</span><span class="age identifier id">age</span> <span class="assign token">=</span> <span class="next_age identifier id">next_age</span>
 
-  <span class="id identifier rubyid_target_responses">target_responses</span> <span class="op">=</span> <span class="id identifier rubyid_responses">responses</span><span class="period">.</span><span class="id identifier rubyid_select">select</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_record">record</span><span class="op">|</span>
-    <span class="id identifier rubyid_record">record</span><span class="period">.</span><span class="id identifier rubyid_age">age</span> <span class="op">&lt;=</span> <span class="id identifier rubyid_previous_age">previous_age</span>
-  <span class="kw">end</span>
-  <span class="id identifier rubyid_target_responses">target_responses</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_response">response</span><span class="op">|</span>
-    <span class="id identifier rubyid_response">response</span><span class="period">.</span><span class="id identifier rubyid_key">key</span><span class="period">.</span><span class="id identifier rubyid_delete">delete</span>
-  <span class="kw">end</span>
+  <span class="target_responses identifier id">target_responses</span> <span class="assign token">=</span> <span class="responses identifier id">responses</span><span class="dot token">.</span><span class="select identifier id">select</span> <span class="do do kw">do</span> <span class="bitor op">|</span><span class="record identifier id">record</span><span class="bitor op">|</span>
+    <span class="record identifier id">record</span><span class="dot token">.</span><span class="age identifier id">age</span> <span class="leq op">&lt;=</span> <span class="previous_age identifier id">previous_age</span>
+  <span class="end end kw">end</span>
+  <span class="target_responses identifier id">target_responses</span><span class="dot token">.</span><span class="each identifier id">each</span> <span class="do do kw">do</span> <span class="bitor op">|</span><span class="response identifier id">response</span><span class="bitor op">|</span>
+    <span class="response identifier id">response</span><span class="dot token">.</span><span class="key identifier id">key</span><span class="dot token">.</span><span class="delete identifier id">delete</span>
+  <span class="end end kw">end</span>
 
-  <span class="id identifier rubyid_responses">responses</span><span class="period">.</span><span class="id identifier rubyid_defrag">defrag</span> <span class="kw">if</span> <span class="id identifier rubyid_responses">responses</span><span class="period">.</span><span class="id identifier rubyid_respond_to?">respond_to?</span><span class="lparen">(</span><span class="symbol">:defrag</span><span class="rparen">)</span>
-<span class="kw">end</span></pre>
+  <span class="responses identifier id">responses</span><span class="dot token">.</span><span class="defrag identifier id">defrag</span> <span class="if if_mod kw">if</span> <span class="responses identifier id">responses</span><span class="dot token">.</span><span class="respond_to? fid id">respond_to?</span><span class="lparen token">(</span><span class="symbol val">:defrag</span><span class="rparen token">)</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="responses-instance_method">
+  <p class="signature " id="responses-instance_method">
   
     - (<tt>Object</tt>) <strong>responses</strong> 
   
 
   
-
-  
-</h3><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -633,9 +612,10 @@ application process. (e.g. cron.) It's multi process safe.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/racknga/cache_database.rb', line 37</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_responses">responses</span>
-  <span class="ivar">@context</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Responses</span><span class="tstring_end">"</span></span><span class="rbracket">]</span>
-<span class="kw">end</span></pre>
+<span class="def def kw">def</span> <span class="responses identifier id">responses</span>
+  <span class="@context ivar id">@context</span><span class="lbrack token">[</span><span class="string val">"Responses"</span><span class="rbrack token">]</span>
+<span class="end end kw">end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -644,7 +624,7 @@ application process. (e.g. cron.) It's multi process safe.</p>
   </div>
 
 </div>
-
+    
     <div id="footer"></div>
 
   

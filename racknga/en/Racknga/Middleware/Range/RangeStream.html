@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../favicon.ico" />
+    <link rel="icon" href="../../../../../favicon.png" />
+    <title>
+  Class: Racknga::Middleware::Range::RangeStream
+  
+    &mdash; racknga
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../../..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../../../">
+      <span class="title">
+  Class: Racknga::Middleware::Range::RangeStream
+  
+    &mdash; racknga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../../../../racknga/ja/Racknga/Middleware/Range/RangeStream.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../../../rroonga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../../../../rroonga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../../../../#install-rroonga">Install</a></li>
+    <li id="menu-developer"><a href="../../../../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../_index.html">Index (R)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../../Racknga.html" title="Racknga (module)">Racknga</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Middleware.html" title="Racknga::Middleware (module)">Middleware</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Range.html" title="Racknga::Middleware::Range (class)">Range</a></span></span>
+     &raquo; 
+    <span class="title">RangeStream</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Racknga::Middleware::Range::RangeStream
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Racknga::Middleware::Range::RangeStream</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/racknga/middleware/range.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (RangeStream) <strong>initialize</strong>(body, first_byte, length) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of RangeStream.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Racknga::Middleware::Range::RangeStream (class)">RangeStream</a></span></tt>) <strong>initialize</strong>(body, first_byte, length) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of RangeStream</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/range.rb', line 123</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='body identifier id'>body</span><span class='comma token'>,</span> <span class='first_byte identifier id'>first_byte</span><span class='comma token'>,</span> <span class='length identifier id'>length</span><span class='rparen token'>)</span>
+  <span class='@body ivar id'>@body</span> <span class='assign token'>=</span> <span class='body identifier id'>body</span>
+  <span class='@first_byte ivar id'>@first_byte</span> <span class='assign token'>=</span> <span class='first_byte identifier id'>first_byte</span>
+  <span class='@length ivar id'>@length</span> <span class='assign token'>=</span> <span class='length identifier id'>length</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="each-instance_method">
+  
+    - (<tt>Object</tt>) <strong>each</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/racknga/middleware/range.rb', line 129</span>
+
+<span class='def def kw'>def</span> <span class='each identifier id'>each</span>
+  <span class='if if kw'>if</span> <span class='@body ivar id'>@body</span><span class='dot token'>.</span><span class='respond_to? fid id'>respond_to?</span><span class='lparen token'>(</span><span class='symbol val'>:seek</span><span class='rparen token'>)</span>
+    <span class='@body ivar id'>@body</span><span class='dot token'>.</span><span class='seek identifier id'>seek</span><span class='lparen token'>(</span><span class='@first_byte ivar id'>@first_byte</span><span class='rparen token'>)</span>
+    <span class='start identifier id'>start</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='else else kw'>else</span>
+    <span class='start identifier id'>start</span> <span class='assign token'>=</span> <span class='@first_byte ivar id'>@first_byte</span>
+  <span class='end end kw'>end</span>
+  <span class='rest identifier id'>rest</span> <span class='assign token'>=</span> <span class='@length ivar id'>@length</span>
+
+  <span class='@body ivar id'>@body</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='chunk identifier id'>chunk</span><span class='bitor op'>|</span>
+    <span class='if if kw'>if</span> <span class='chunk identifier id'>chunk</span><span class='dot token'>.</span><span class='respond_to? fid id'>respond_to?</span><span class='lparen token'>(</span><span class='symbol val'>:encoding</span><span class='rparen token'>)</span>
+      <span class='if if kw'>if</span> <span class='chunk identifier id'>chunk</span><span class='dot token'>.</span><span class='encoding identifier id'>encoding</span> <span class='neq op'>!=</span> <span class='Encoding constant id'>Encoding</span><span class='colon2 op'>::</span><span class='ASCII_8BIT constant id'>ASCII_8BIT</span>
+        <span class='chunk identifier id'>chunk</span> <span class='assign token'>=</span> <span class='chunk identifier id'>chunk</span><span class='dot token'>.</span><span class='dup identifier id'>dup</span><span class='dot token'>.</span><span class='force_encoding identifier id'>force_encoding</span><span class='lparen token'>(</span><span class='Encoding constant id'>Encoding</span><span class='colon2 op'>::</span><span class='ASCII_8BIT constant id'>ASCII_8BIT</span><span class='rparen token'>)</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>
+
+    <span class='chunk_size identifier id'>chunk_size</span> <span class='assign token'>=</span> <span class='chunk identifier id'>chunk</span><span class='dot token'>.</span><span class='size identifier id'>size</span>
+    <span class='if if kw'>if</span> <span class='start identifier id'>start</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span>
+      <span class='if if kw'>if</span> <span class='chunk_size identifier id'>chunk_size</span> <span class='lt op'>&lt;</span> <span class='start identifier id'>start</span>
+        <span class='start identifier id'>start</span> <span class='opasgn op'>-=</span> <span class='chunk_size identifier id'>chunk_size</span>
+        <span class='next next kw'>next</span>
+      <span class='else else kw'>else</span>
+        <span class='chunk identifier id'>chunk</span> <span class='assign token'>=</span> <span class='chunk identifier id'>chunk</span><span class='lbrack token'>[</span><span class='start identifier id'>start</span><span class='dot2 op'>..</span><span class='integer val'>-1</span><span class='rbrack token'>]</span>
+        <span class='chunk_size identifier id'>chunk_size</span> <span class='opasgn op'>-=</span> <span class='start identifier id'>start</span>
+        <span class='start identifier id'>start</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>
+    <span class='if if kw'>if</span> <span class='rest identifier id'>rest</span> <span class='gt op'>&gt;</span> <span class='chunk_size identifier id'>chunk_size</span>
+      <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='chunk identifier id'>chunk</span><span class='rparen token'>)</span>
+      <span class='rest identifier id'>rest</span> <span class='opasgn op'>-=</span> <span class='chunk_size identifier id'>chunk_size</span>
+    <span class='else else kw'>else</span>
+      <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='chunk identifier id'>chunk</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='comma token'>,</span> <span class='rest identifier id'>rest</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+      <span class='rest identifier id'>rest</span> <span class='opasgn op'>-=</span> <span class='rest identifier id'>rest</span>
+    <span class='end end kw'>end</span>
+    <span class='break break kw'>break</span> <span class='if if_mod kw'>if</span> <span class='rest identifier id'>rest</span> <span class='leq op'>&lt;=</span> <span class='integer val'>0</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-rubyforge">
+        <a href="http://rubyforge.org/projects/groonga/">
+          <img src="../../../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
+        </a>
+      </p>
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../../../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../../../../famfamfam-logo.png" />
+        </a>
+      </p>
+
+<!-- Piwik -->
+<a href="http://piwik.org" title="Web analytics" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.clear-code.com/piwik/" : "http://www.clear-code.com/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 2;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Web analytics <img src="http://www.clear-code.com/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+    </div>
+
+</body>
+</html>
