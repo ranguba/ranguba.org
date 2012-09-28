@@ -99,9 +99,15 @@
     
   
   
+    <dt class="r1">Included in:</dt>
+    <dd class="r1"><span class="object_link"><a href="Database.html" title="Groonga::Database (class)">Database</a></span>, <span class="object_link"><a href="Table/KeySupport.html" title="Groonga::Table::KeySupport (module)">Table::KeySupport</a></span></dd>
+    
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">(unknown)</dd>
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/groonga/rb-grn-encoding-support.c<span class="defines">,<br />
+  ext/groonga/rb-grn-encoding-support.c</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -123,7 +129,133 @@
 
 
 
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encoding-instance_method" title="#encoding (instance method)">- (Groonga::Encoding) <strong>encoding</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>オブジェクトのエンコーディングを返す。.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="encoding-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Encoding.html" title="Groonga::Encoding (module)">Groonga::Encoding</a></span></tt>) <strong>encoding</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>オブジェクトのエンコーディングを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="Encoding.html" title="Groonga::Encoding (module)">Groonga::Encoding</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>オブジェクトのエンコーディング</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-encoding-support.c', line 37</span>
+
+static VALUE
+rb_grn_encoding_support_get_encoding (VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *object = NULL;
+    grn_obj *encoding_value;
+    grn_encoding encoding;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+    encoding_value = grn_obj_get_info(context, object, GRN_INFO_ENCODING, NULL);
+    rb_grn_context_check(context, self);
+
+    memcpy(&amp;encoding, GRN_BULK_HEAD(encoding_value), sizeof(encoding));
+    grn_obj_unlink(context, encoding_value);
+
+    return GRNENCODING2RVAL(encoding);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 

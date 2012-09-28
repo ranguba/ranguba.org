@@ -116,7 +116,9 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/groonga/context.rb</dd>
+    <dd class="r2 last">ext/groonga/rb-grn-context.c<span class="defines">,<br />
+  lib/groonga/context.rb,<br /> ext/groonga/rb-grn-context.c</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -149,11 +151,203 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
 
   
     <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default-class_method" title="Groonga::Context.default (class method)">+ (Groonga::Context) <strong>Groonga::Context.default</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>デフォルトのコンテキストを返す。デフォルトのコンテキスト
+が作成されていない場合は暗黙のうちに作成し、それを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default%3D-class_method" title="Groonga::Context.default= (class method)">+ (Object) <strong>Groonga::Context.default=</strong>(context) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>デフォルトのコンテキストを設定する。 <ins>nil</ins> を指定すると、
+デフォルトのコンテキストをリセットする。リセットすると、次
+回Groonga::Context.defaultを呼び出したときに新しくコンテ
+キストが作成される。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_options-class_method" title="Groonga::Context.default_options (class method)">+ (Hash<sup>?</sup>) <strong>Groonga::Context.default_options</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストを作成する時に利用するデフォルトのオプション
+を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_options%3D-class_method" title="Groonga::Context.default_options= (class method)">+ (Object) <strong>Groonga::Context.default_options=</strong>(options) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストを作成する時に利用するデフォルトのオプション
+を設定する。利用可能なオプションは
+Groonga::Context.newを参照。.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
       Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Object) <strong>[]</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキスト管理下にあるオブジェクトを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#close-instance_method" title="#close (instance method)">- (Object) <strong>close</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストを閉じる。</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#closed%3F-instance_method" title="#closed? (instance method)">- (Boolean) <strong>closed?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストが#closeによって閉じられているかどうかを返す。</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect-instance_method" title="#connect (instance method)">- (Object) <strong>connect</strong>(options = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>groongaサーバに接続する。.</p></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -174,6 +368,169 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
   
     <span class="summary_desc"><div class="inline"><p><em>path</em> に新しくデータベースを作成する。 <em>path</em> を省略すると
 一時データベースとなる。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#database-instance_method" title="#database (instance method)">- (Groonga::Database) <strong>database</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストが使うデータベースを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encoding-instance_method" title="#encoding (instance method)">- (Groonga::Encoding) <strong>encoding</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストが使うエンコーディングを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encoding%3D-instance_method" title="#encoding= (instance method)">- (Object) <strong>encoding=</strong>(encoding) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストが使うエンコーディングを設定する。エンコーディ
+ングの指定のしかたはGroonga::Encodingを参照。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#new (instance method)">- (Object) <strong>new</strong>(options = nil) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストを作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (String) <strong>inspect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストの中身を人に見やすい文字列で返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#match_escalation_threshold-instance_method" title="#match_escalation_threshold (instance method)">- (Integer) <strong>match_escalation_threshold</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>このコンテキストを使って検索したときに検索の挙動をエスカレー
+ションする閾値を返します。エスカレーションの詳細はgroonga
+の検索の仕様に関するドキュメントを参照してください。
+http://groonga.org/docs/spec/search.html#spec-search.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#match_escalation_threshold%3D-instance_method" title="#match_escalation_threshold= (instance method)">- (Object) <strong>match_escalation_threshold=</strong>(match_escalation_threshold) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>このコンテキストを使って検索したときに検索の挙動をエスカレー
+ションする閾値を設定します。エスカレーションの詳細はgroonga
+の検索の仕様に関するドキュメントを参照してください。
+http://groonga.org/docs/spec/search.html#spec-search.</p></div></span>
   
 </li>
 
@@ -205,6 +562,28 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#receive-instance_method" title="#receive (instance method)">- ([ID, String]) <strong>receive</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>groongaサーバからクエリ実行結果文字列を受信する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#register_plugin-instance_method" title="#register_plugin (instance method)">- (Object) <strong>register_plugin</strong>(name_or_options) </a>
     
 
@@ -222,6 +601,28 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
     <span class="summary_desc"><div class="inline"><p>groongaのプラグインディレクトリにあるプラグイン <em>name</em>
 を登録する。 <em>path</em> を指定するとプラグインディレクトリ以
 外にあるプラグインを登録することができる。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ruby_encoding-instance_method" title="#ruby_encoding (instance method)">- (::Encoding) <strong>ruby_encoding</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>コンテキストが使っているエンコーディングをRubyのエンコーディングオブジェクトで取得する。</p></div></span>
   
 </li>
 
@@ -250,17 +651,1005 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send-instance_method" title="#send (instance method)">- (Integer) <strong>send</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>groongaサーバにクエリ文字列を送信する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#support_lzo%3F-instance_method" title="#support_lzo? (instance method)">- (Boolean) <strong>support_lzo?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>groongaがLZOサポート付きでビルドされていれば <ins>true</ins> 、そう
+でなければ <ins>false</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#support_zlib%3F-instance_method" title="#support_zlib? (instance method)">- (Boolean) <strong>support_zlib?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>groongaがZlibサポート付きでビルドされていれば <ins>true</ins> 、そう
+でなければ <ins>false</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>new</strong>(options = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストを作成する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:encoding</span>
+          <span class="type">(<tt><span class="object_link"><a href="Encoding.html" title="Groonga::Encoding (module)">Groonga::Encoding</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>The encoding
+エンコーディングを指定する。エンコーディングの指定方法
+はGroonga::Encodingを参照。</p></div>
+          
+        </li>
+      
     </ul>
   
 
 
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 410</span>
+
+static VALUE
+rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
+{
+    RbGrnContext *rb_grn_context;
+    grn_ctx *context;
+    int flags = 0; /* TODO: GRN_CTX_PER_DB */
+    VALUE options, default_options;
+    VALUE rb_encoding;
+
+    rb_scan_args(argc, argv, "01", &amp;options);
+    default_options = rb_grn_context_s_get_default_options(rb_obj_class(self));
+    if (NIL_P(default_options))
+	default_options = rb_hash_new();
+
+    if (NIL_P(options))
+	options = rb_hash_new();
+    options = rb_funcall(default_options, rb_intern("merge"), 1, options);
+
+    rb_grn_scan_options(options,
+			"encoding", &amp;rb_encoding,
+			NULL);
+
+    rb_grn_context = ALLOC(RbGrnContext);
+    DATA_PTR(self) = rb_grn_context;
+    rb_grn_context-&gt;self = self;
+    grn_ctx_init(&amp;(rb_grn_context-&gt;context_entity), flags);
+    context = rb_grn_context-&gt;context = &amp;(rb_grn_context-&gt;context_entity);
+    rb_grn_context_check(context, self);
+
+    GRN_CTX_USER_DATA(context)-&gt;ptr = rb_grn_context;
+    rb_grn_context-&gt;floating_objects = NULL;
+    rb_grn_context_reset_floating_objects(rb_grn_context);
+    grn_ctx_set_finalizer(context, rb_grn_context_finalizer);
+
+    if (!NIL_P(rb_encoding)) {
+	grn_encoding encoding;
+
+	encoding = RVAL2GRNENCODING(rb_encoding, NULL);
+	GRN_CTX_SET_ENCODING(context, encoding);
+    }
+
+    debug("context new: %p\n", context);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="default-class_method">
+  
+    + (<tt><span class="object_link"><a href="" title="Groonga::Context (class)">Groonga::Context</a></span></tt>) <strong>Groonga::Context.default</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>デフォルトのコンテキストを返す。デフォルトのコンテキスト
+が作成されていない場合は暗黙のうちに作成し、それを返す。</p>
+<p>暗黙のうちにコンテキストを作成する場合は、
+Groonga::Context.default_optionsに設定されているオプショ
+ンを利用する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="" title="Groonga::Context (class)">Groonga::Context</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 338</span>
+
+static VALUE
+rb_grn_context_s_get_default (VALUE self)
+{
+    VALUE context;
+
+    context = rb_cv_get(self, "@@default");
+    if (NIL_P(context)) {
+	context = rb_funcall(cGrnContext, rb_intern("new"), 0);
+	rb_cv_set(self, "@@default", context);
+    }
+    return context;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default=-class_method">
+  
+    + (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Context.default=</strong>(context) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>デフォルトのコンテキストを設定する。 <ins>nil</ins> を指定すると、
+デフォルトのコンテキストをリセットする。リセットすると、次
+回Groonga::Context.defaultを呼び出したときに新しくコンテ
+キストが作成される。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+366
+367
+368
+369
+370
+371</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 366</span>
+
+static VALUE
+rb_grn_context_s_set_default (VALUE self, VALUE context)
+{
+    rb_cv_set(self, "@@default", context);
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_options-class_method">
+  
+    + (<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt><sup>?</sup>) <strong>Groonga::Context.default_options</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストを作成する時に利用するデフォルトのオプション
+を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+380
+381
+382
+383
+384</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 380</span>
+
+static VALUE
+rb_grn_context_s_get_default_options (VALUE self)
+{
+    return rb_cv_get(self, "@@default_options");
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_options=-class_method">
+  
+    + (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Context.default_options=</strong>(options) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストを作成する時に利用するデフォルトのオプション
+を設定する。利用可能なオプションは
+Groonga::Context.newを参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+394
+395
+396
+397
+398
+399</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 394</span>
+
+static VALUE
+rb_grn_context_s_set_default_options (VALUE self, VALUE options)
+{
+    rb_cv_set(self, "@@default_options", options);
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="create_database-instance_method">
+  <h3 class="signature first" id="[]-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(name) </span>
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(id) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキスト管理下にあるオブジェクトを返す。</p>
+<p><em>name</em> として文字列を指定した場合はオブジェクト名でオブジェ
+クトを検索する。</p>
+<p><em>id</em> として数値を指定した場合はオブジェクトIDでオブジェク
+トを検索する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(name) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(id) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+870
+871
+872
+873
+874
+875
+876
+877
+878
+879
+880
+881
+882
+883
+884
+885
+886
+887
+888
+889
+890
+891
+892
+893
+894
+895
+896
+897
+898
+899
+900
+901
+902
+903
+904
+905
+906</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 870</span>
+
+static VALUE
+rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    const char *name;
+    unsigned int name_size;
+    grn_id id;
+
+    context = SELF(self);
+    switch (TYPE(name_or_id)) {
+      case T_SYMBOL:
+	name = rb_id2name(SYM2ID(name_or_id));
+	name_size = strlen(name);
+	object = rb_grn_context_get_backward_compatibility(context,
+							   name, name_size);
+	break;
+      case T_STRING:
+	name = StringValuePtr(name_or_id);
+	name_size = RSTRING_LEN(name_or_id);
+	object = rb_grn_context_get_backward_compatibility(context,
+							   name, name_size);
+	break;
+      case T_FIXNUM:
+	id = NUM2UINT(name_or_id);
+	object = grn_ctx_at(context, id);
+	break;
+      default:
+	rb_raise(rb_eArgError,
+		 "should be String, Symbol or unsigned integer: %s",
+		 rb_grn_inspect(name_or_id));
+	break;
+    }
+    rb_grn_context_check(context, name_or_id);
+
+    return GRNOBJECT2RVAL(Qnil, context, object, GRN_FALSE);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="close-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>close</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストを閉じる。閉じられたコンテキストは使用できなくなる。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 463</span>
+
+static VALUE
+rb_grn_context_close (VALUE self)
+{
+    int rc;
+    grn_ctx *context;
+    RbGrnContext *rb_grn_context;
+
+    context = SELF(self);
+    if (context) {
+	rc = grn_ctx_fin(context);
+	Data_Get_Struct(self, RbGrnContext, rb_grn_context);
+	rb_grn_context-&gt;context = NULL;
+	rb_grn_rc_check(rc, self);
+    }
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="closed?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>closed?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストが#closeによって閉じられているかどうかを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+487
+488
+489
+490
+491
+492
+493
+494
+495</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 487</span>
+
+static VALUE
+rb_grn_context_closed_p (VALUE self)
+{
+    RbGrnContext *rb_grn_context;
+
+    Data_Get_Struct(self, RbGrnContext, rb_grn_context);
+
+    return CBOOL2RVAL(rb_grn_context-&gt;context == NULL);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connect-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>connect</strong>(options = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaサーバに接続する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>利用可能なオプションは次の通り。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:host</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>localhost</tt>
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>groongaサーバのホスト名。またはIPアドレス。省略すると
+"localhost"に接続する。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:port</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>10041</tt>
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>groongaサーバのポート番号。省略すると10041番ポートに接
+続する。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+732
+733</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 698</span>
+
+static VALUE
+rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context;
+    const char *host;
+    int port;
+    int flags = 0;
+    grn_rc rc;
+    VALUE options, rb_host, rb_port;
+
+    rb_scan_args(argc, argv, "01", &amp;options);
+    rb_grn_scan_options(options,
+			"host", &amp;rb_host,
+			"port", &amp;rb_port,
+			NULL);
+
+    context = SELF(self);
+
+    if (NIL_P(rb_host)) {
+	host = "localhost";
+    } else {
+	host = StringValueCStr(rb_host);
+    }
+
+    if (NIL_P(rb_port)) {
+	port = 10041;
+    } else {
+	port = NUM2INT(rb_port);
+    }
+
+    rc = grn_ctx_connect(context, host, port, flags);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_database-instance_method">
   
     - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create_database</strong>(path = nil) 
   
@@ -322,6 +1711,457 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="database-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Database.html" title="Groonga::Database (class)">Groonga::Database</a></span></tt>) <strong>database</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストが使うデータベースを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="Database.html" title="Groonga::Database (class)">Groonga::Database</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+678
+679
+680
+681
+682
+683
+684
+685</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 678</span>
+
+static VALUE
+rb_grn_context_get_database (VALUE self)
+{
+    grn_ctx *context;
+
+    context = SELF(self);
+    return GRNDB2RVAL(context, grn_ctx_db(context), GRN_FALSE);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encoding-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Encoding.html" title="Groonga::Encoding (module)">Groonga::Encoding</a></span></tt>) <strong>encoding</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストが使うエンコーディングを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="Encoding.html" title="Groonga::Encoding (module)">Groonga::Encoding</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+543
+544
+545
+546
+547</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 543</span>
+
+static VALUE
+rb_grn_context_get_encoding (VALUE self)
+{
+    return GRNENCODING2RVAL(GRN_CTX_GET_ENCODING(SELF(self)));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encoding=-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>encoding=</strong>(encoding) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストが使うエンコーディングを設定する。エンコーディ
+ングの指定のしかたはGroonga::Encodingを参照。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 556</span>
+
+static VALUE
+rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
+{
+    grn_ctx *context;
+    grn_encoding encoding;
+
+    context = SELF(self);
+    encoding = RVAL2GRNENCODING(rb_encoding, NULL);
+    GRN_CTX_SET_ENCODING(context, encoding);
+
+    return rb_encoding;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    - (<tt>String</tt>) <strong>inspect</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストの中身を人に見やすい文字列で返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 503</span>
+
+static VALUE
+rb_grn_context_inspect (VALUE self)
+{
+    VALUE inspected;
+    grn_ctx *context;
+    grn_obj *database;
+    VALUE rb_database;
+
+    context = SELF(self);
+
+    inspected = rb_str_new2("#&lt;");
+    rb_str_concat(inspected, rb_inspect(rb_obj_class(self)));
+    rb_str_cat2(inspected, " ");
+
+    if (rb_grn_exited) {
+      rb_str_cat2(inspected, "(finished)");
+    } else if (context) {
+      rb_str_cat2(inspected, "encoding: &lt;");
+      rb_str_concat(inspected, rb_inspect(GRNENCODING2RVAL(context-&gt;encoding)));
+      rb_str_cat2(inspected, "&gt;, ");
+
+      rb_str_cat2(inspected, "database: &lt;");
+      database = grn_ctx_db(context);
+      rb_database = GRNDB2RVAL(context, database, GRN_FALSE);
+      rb_str_concat(inspected, rb_inspect(rb_database));
+      rb_str_cat2(inspected, "&gt;");
+    } else {
+      rb_str_cat2(inspected, "(closed)");
+    }
+
+    rb_str_cat2(inspected, "&gt;");
+    return inspected;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="match_escalation_threshold-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>match_escalation_threshold</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>このコンテキストを使って検索したときに検索の挙動をエスカレー
+ションする閾値を返します。エスカレーションの詳細はgroonga
+の検索の仕様に関するドキュメントを参照してください。
+http://groonga.org/docs/spec/search.html#spec-search</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+600
+601
+602
+603
+604</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 600</span>
+
+static VALUE
+rb_grn_context_get_match_escalation_threshold (VALUE self)
+{
+    return LL2NUM(grn_ctx_get_match_escalation_threshold(SELF(self)));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="match_escalation_threshold=-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>match_escalation_threshold=</strong>(match_escalation_threshold) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>このコンテキストを使って検索したときに検索の挙動をエスカレー
+ションする閾値を設定します。エスカレーションの詳細はgroonga
+の検索の仕様に関するドキュメントを参照してください。
+http://groonga.org/docs/spec/search.html#spec-search</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 615</span>
+
+static VALUE
+rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
+{
+    grn_ctx *context;
+
+    context = SELF(self);
+    grn_ctx_set_match_escalation_threshold(context, NUM2LL(threshold));
+
+    return threshold;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="open_database-instance_method">
   
     - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_database</strong>(path, &amp;block) 
@@ -361,6 +2201,99 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
 
   <span class="const">Database</span><span class="period">.</span><span class="id identifier rubyid_open">open</span><span class="lparen">(</span><span class="id identifier rubyid_path">path</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="comma">,</span> <span class="op">&amp;</span><span class="id identifier rubyid_block">block</span><span class="rparen">)</span>
 <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="receive-instance_method">
+  
+    - (<tt>[ID, String]</tt>) <strong>receive</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaサーバからクエリ実行結果文字列を受信する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>[ID, String]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>クエリ実行結果</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 764</span>
+
+static VALUE
+rb_grn_context_receive (VALUE self)
+{
+    grn_ctx *context;
+    char *result = NULL;
+    unsigned result_size;
+    VALUE rb_result;
+    int flags = 0;
+    unsigned int query_id;
+
+    context = SELF(self);
+    query_id = grn_ctx_recv(context, &amp;result, &amp;result_size, &amp;flags);
+    if (result) {
+	rb_result = rb_str_new(result, result_size);
+    } else {
+	rb_result = Qnil;
+    }
+    rb_grn_context_check(context, self);
+
+    return rb_ary_new3(2, UINT2NUM(query_id), rb_result);
+}</pre>
     </td>
   </tr>
 </table>
@@ -420,6 +2353,95 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="ruby_encoding-instance_method">
+  
+    - (<tt>::Encoding</tt>) <strong>ruby_encoding</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>コンテキストが使っているエンコーディングをRubyのエンコーディングオブジェクトで取得する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>::Encoding</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>the encoding used by the context</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class="inline"><p>2.0.5</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 578</span>
+
+static VALUE
+rb_grn_context_get_ruby_encoding (VALUE self)
+{
+#ifdef HAVE_RUBY_ENCODING_H
+    grn_encoding encoding;
+
+    encoding = GRN_CTX_GET_ENCODING(SELF(self));
+    return rb_grn_encoding_to_ruby_encoding_object(encoding);
+#else
+    return Qnil;
+#endif
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="select-instance_method">
   
     - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>select</strong>(table, options = {}) 
@@ -453,8 +2475,7 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
       
       
         &mdash;
-        <div class="inline"><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
       
     </li>
   
@@ -474,8 +2495,10 @@ pairs. Omitted names are initialized as the default value.</p></div>
           <span class="default">
             
           </span>
-          &mdash; <div class="inline"><p>The output_columns</p>
+          
+            &mdash; <div class="inline"><p>The output_columns</p>
 <p>値を取得するカラムを指定する。</p></div>
+          
         </li>
       
         <li>
@@ -484,8 +2507,10 @@ pairs. Omitted names are initialized as the default value.</p></div>
           <span class="default">
             
           </span>
-          &mdash; <div class="inline"><p><span class="caps">TODO</span>
+          
+            &mdash; <div class="inline"><p><span class="caps">TODO</span>
 <span class="caps">TODO</span></p></div>
+          
         </li>
       
     </ul>
@@ -510,6 +2535,276 @@ pairs. Omitted names are initialized as the default value.</p></div>
   <span class="id identifier rubyid_select">select</span> <span class="op">=</span> <span class="const">Command</span><span class="op">::</span><span class="const">Select</span><span class="period">.</span><span class="id identifier rubyid_new">new</span><span class="lparen">(</span><span class="kw">self</span><span class="comma">,</span> <span class="id identifier rubyid_table">table</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="rparen">)</span>
   <span class="id identifier rubyid_select">select</span><span class="period">.</span><span class="id identifier rubyid_exec">exec</span>
 <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>send</strong>(string) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaサーバにクエリ文字列を送信する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">string</span>
+      
+      
+        <span class="type">(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>クエリ文字列</p></div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>ID</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 741</span>
+
+static VALUE
+rb_grn_context_send (VALUE self, VALUE rb_string)
+{
+    grn_ctx *context;
+    char *string;
+    unsigned int string_size;
+    int flags = 0;
+    unsigned int query_id;
+
+    context = SELF(self);
+    string = StringValuePtr(rb_string);
+    string_size = RSTRING_LEN(rb_string);
+    query_id = grn_ctx_send(context, string, string_size, flags);
+    rb_grn_context_check(context, self);
+
+    return UINT2NUM(query_id);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="support_lzo?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>support_lzo?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaがLZOサポート付きでビルドされていれば <ins>true</ins> 、そう
+でなければ <ins>false</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 656</span>
+
+static VALUE
+rb_grn_context_support_lzo_p (VALUE self)
+{
+    VALUE rb_support_p;
+    grn_ctx *context;
+    grn_obj support_p;
+
+    context = SELF(self);
+    GRN_BOOL_INIT(&amp;support_p, 0);
+    grn_obj_get_info(context, NULL, GRN_INFO_SUPPORT_LZO, &amp;support_p);
+    rb_support_p = CBOOL2RVAL(GRN_BOOL_VALUE(&amp;support_p));
+    GRN_OBJ_FIN(context, &amp;support_p);
+
+    return rb_support_p;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="support_zlib?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>support_zlib?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>groongaがZlibサポート付きでビルドされていれば <ins>true</ins> 、そう
+でなければ <ins>false</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 633</span>
+
+static VALUE
+rb_grn_context_support_zlib_p (VALUE self)
+{
+    VALUE rb_support_p;
+    grn_ctx *context;
+    grn_obj support_p;
+
+    context = SELF(self);
+    GRN_BOOL_INIT(&amp;support_p, 0);
+    grn_obj_get_info(context, NULL, GRN_INFO_SUPPORT_ZLIB, &amp;support_p);
+    rb_support_p = CBOOL2RVAL(GRN_BOOL_VALUE(&amp;support_p));
+    GRN_OBJ_FIN(context, &amp;support_p);
+
+    return rb_support_p;
+}</pre>
     </td>
   </tr>
 </table>

@@ -106,11 +106,21 @@
     
   
     
+      <dt class="r1">Includes:</dt>
+      <dd class="r1"><span class='object_link'><a href="../EncodingSupport.html" title="Groonga::EncodingSupport (module)">EncodingSupport</a></span></dd>
+      
+    
   
+  
+    <dt class="r2">Included in:</dt>
+    <dd class="r2"><span class='object_link'><a href="../DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span>, <span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">Hash</a></span>, <span class='object_link'><a href="../PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span></dd>
+    
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">(unknown)</dd>
+    <dd class="r1 last">ext/groonga/rb-grn-table-key-support.c<span class="defines">,<br />
+  ext/groonga/rb-grn-table-key-support.c</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -132,7 +142,1697 @@ Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
 
 
 
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Groonga::Record) <strong>[]</strong>(key) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>key</em> に対応するGroonga::Recordを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong>(key, values) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>key</em> に対応するカラム <em>column_name</em> の値を設定する。
+<em>key</em> に対応するレコードがない場合は新しく作成される。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add-instance_method" title="#add (instance method)">- (Groonga::Recordまたはnil) <strong>add</strong>(key, values = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>主キーが <em>key</em> のレコード追加し、追加したレコードを返す。レ
+コードの追加に失敗した場合は <ins>nil</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#column_value-instance_method" title="#column_value (instance method)">- (Object) <strong>column_value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>key</em> に対応するカラム <em>name</em> の値を設定する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_tokenizer-instance_method" title="#default_tokenizer (instance method)">- (nilまたはGroonga::Procedure) <strong>default_tokenizer</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Groonga::IndexColumnで使用するトークナイザを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_tokenizer%3D-instance_method" title="#default_tokenizer= (instance method)">- (Object) <strong>default_tokenizer=</strong>(tokenizer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Groonga::IndexColumnで使用するトークナイザを設定する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">- (Object) <strong>delete</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルの <em>id</em> または <em>key</em> に対応するレコードを削除する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_key%3F-instance_method" title="#has_key? (instance method)">- (Boolean) <strong>has_key?</strong>(key) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルに主キーが <em>key</em> のレコードがあるならtrueを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#id-instance_method" title="#id (instance method)">- (Object) <strong>id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>key</em> を指定しない場合はテーブルのIDを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key-instance_method" title="#key (instance method)">- (Object) <strong>key</strong>(id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルの <em>id</em> に対応する主キーを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#normalize_key%3F-instance_method" title="#normalize_key? (instance method)">- (Boolean) <strong>normalize_key?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>キーを正規化する場合は <ins>true</ins> 、正規化しない場合は <ins>false</ins> を返
+す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_column_value-instance_method" title="#set_column_value (instance method)">- (Object) <strong>set_column_value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>key</em> に対応するカラム <em>name</em> の値を設定する。
+<em>key</em> に対応するレコードがない場合は新しく作成される。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_value-instance_method" title="#set_value (instance method)">- (Object) <strong>set_value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>id</em> または <em>key</em> に対応する値を <em>value</em> に設定する。
+既存の値は上書きされる。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#support_key%3F-instance_method" title="#support_key? (instance method)">- (Boolean) <strong>support_key?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルでキーを使えるなら <ins>true</ins> 、使えないなら <ins>false</ins> を返
+す。キーを使えないテーブルはGroonga::Arrayだけ。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#value-instance_method" title="#value (instance method)">- (Object) <strong>value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>id</em> または <em>key</em> に対応する値を返す。.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../EncodingSupport.html" title="Groonga::EncodingSupport (module)">EncodingSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../EncodingSupport.html#encoding-instance_method" title="Groonga::EncodingSupport#encoding (method)">#encoding</a></span></p>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Groonga::Record</a></span></tt>) <strong>[]</strong>(key) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>key</em> に対応するGroonga::Recordを返す。</p>
+<p>0.9.0から値ではなくGroonga::Recordを返すようになった。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Groonga::Record</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 310</span>
+
+static VALUE
+rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
+{
+    grn_id id;
+
+    id = rb_grn_table_key_support_get(self, rb_key);
+    if (id == GRN_ID_NIL) {
+	return Qnil;
+    } else {
+	return rb_grn_record_new(self, id, Qnil);
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="[]=-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(key, values) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>key</em> に対応するカラム <em>column_name</em> の値を設定する。
+<em>key</em> に対応するレコードがない場合は新しく作成される。</p>
+<p>0.9.0から値ではなくカラムの値を設定するようになった。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>values</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>keyに対応させるカラムの値。{ :column_name =&gt; value, &#8230; }の形で設定する。</p></div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 362</span>
+
+static VALUE
+rb_grn_table_key_support_array_set (VALUE self, VALUE rb_key, VALUE rb_values)
+{
+    grn_id id;
+    SetValueData data;
+    grn_ctx *context;
+    grn_obj *table;
+
+    rb_grn_table_key_support_deconstruct(SELF(self), &amp;table, &amp;context,
+					 NULL, NULL, NULL,
+					 NULL, NULL, NULL,
+					 NULL);
+
+    id = rb_grn_table_key_support_add_raw(self, rb_key, NULL);
+
+    if (id == GRN_ID_NIL) {
+	rb_raise(rb_eGrnError,
+		 &quot;failed to add record: %s&quot;,
+		 rb_grn_inspect(rb_ary_new3(3, self, rb_key, rb_values)));
+    }
+
+    data.self = self;
+    data.id = id;
+    data.table = table;
+    data.rb_grn_object.context = context;
+    rb_iterate(rb_each, rb_values, set_value, (VALUE)&amp;data);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Groonga::Record</a></span>またはnil</tt>) <strong>add</strong>(key, values = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>主キーが <em>key</em> のレコード追加し、追加したレコードを返す。レ
+コードの追加に失敗した場合は <ins>nil</ins> を返す。</p>
+<p>すでに同じキーのレコードが存在する場合は追加せずに同じレ
+コードを返す。追加されたかどうかは
+<ins>Groonga::Record#added?</ins> で調べることができる。 <ins>true</ins> を返
+したら追加されたということを示す。</p>
+<p><em>values</em> にはレコードのカラムに設定する値を指定する。省略
+した場合または <ins>nil</ins> を指定した場合はカラムは設定しない。カ
+ラムの値は<tt>{:カラム名1 =&gt; 値1, :カラム名2 =&gt; 値2,
+&#8230;}</tt>と指定する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Groonga::Record</a></span>またはnil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 129</span>
+
+static VALUE
+rb_grn_table_key_support_add (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id;
+    VALUE key, values;
+    int added = GRN_FALSE;
+
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;key, &amp;values);
+    id = rb_grn_table_key_support_add_raw(self, key, &amp;added);
+    if (GRN_ID_NIL == id) {
+	return Qnil;
+    } else {
+	if (added) {
+	    return rb_grn_record_new_added(self, id, values);
+	} else {
+	    return rb_grn_record_new(self, id, values);
+	}
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="column_value-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>column_value</strong>(key, name) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>column_value</strong>(id, name, :id = &gt;true) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>key</em> に対応するカラム <em>name</em> の値を設定する。</p>
+<p><span class="caps">TODO</span>: <em>key</em> に対応するレコードがない場合は例外？</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 439</span>
+
+static VALUE
+rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id;
+    VALUE rb_key, rb_id_or_key, rb_name, rb_options;
+
+    rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_id_or_key, &amp;rb_name, &amp;rb_options);
+    if (!NIL_P(rb_options)) {
+	VALUE rb_option_id;
+	rb_grn_scan_options(rb_options,
+			    &quot;id&quot;, &amp;rb_option_id,
+			    NULL);
+	if (RVAL2CBOOL(rb_option_id)) {
+	    VALUE rb_id = rb_id_or_key;
+	    return rb_grn_table_get_column_value(self, rb_id, rb_name);
+	}
+    }
+
+    rb_key = rb_id_or_key;
+    id = rb_grn_table_key_support_get(self, rb_key);
+    if (id == GRN_ID_NIL) {
+	return Qnil;
+    }
+
+    return rb_grn_table_get_column_value_raw(self, id, rb_name);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_tokenizer-instance_method">
+  
+    - (<tt>nilまたは<span class='object_link'><a href="../Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>) <strong>default_tokenizer</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Groonga::IndexColumnで使用するトークナイザを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nilまたは<span class='object_link'><a href="../Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 600</span>
+
+static VALUE
+rb_grn_table_key_support_get_default_tokenizer (VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *table;
+    grn_obj *tokenizer = NULL;
+
+    rb_grn_table_key_support_deconstruct(SELF(self), &amp;table, &amp;context,
+					 NULL, NULL, NULL,
+					 NULL, NULL, NULL,
+					 NULL);
+
+    tokenizer = grn_obj_get_info(context, table, GRN_INFO_DEFAULT_TOKENIZER,
+				 NULL);
+    rb_grn_context_check(context, self);
+
+    return GRNOBJECT2RVAL(Qnil, context, tokenizer, GRN_FALSE);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_tokenizer=-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>default_tokenizer=</strong>(tokenizer) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Groonga::IndexColumnで使用するトークナイザを設定する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><span class='comment'># 2-gramを使用。
+</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_default_tokenizer'>default_tokenizer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span>
+<span class='comment'># オブジェクトで指定
+</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_default_tokenizer'>default_tokenizer</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='comment'># オブジェクトIDで指定
+</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_default_tokenizer'>default_tokenizer</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>BIGRAM</span>
+<span class='comment'># N-gram用のトークナイザを使うときはGroonga::IndexColumn
+</span><span class='comment'># には自動的に:with_section =&gt; trueが指定される。
+</span><span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>blog_content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Blogs</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                  <span class='symbol'>:source</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_index'>index</span> <span class='comment'># -&gt; #&lt;Groonga::IndexColumn ... flags: &lt;WITH_POSITION|...&gt;&gt;
+</span>
+<span class='comment'># MeCabを使用
+</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_default_tokenizer'>default_tokenizer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenMecab</span><span class='tstring_end'>&quot;</span></span></pre>
+    
+  </div>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 640</span>
+
+static VALUE
+rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
+{
+    grn_ctx *context;
+    grn_obj *table;
+    grn_obj *tokenizer;
+    grn_rc rc;
+
+    rb_grn_table_key_support_deconstruct(SELF(self), &amp;table, &amp;context,
+					 NULL, NULL, NULL,
+					 NULL, NULL, NULL,
+					 NULL);
+
+    tokenizer = RVAL2GRNOBJECT(rb_tokenizer, &amp;context);
+    rc = grn_obj_set_info(context, table,
+			  GRN_INFO_DEFAULT_TOKENIZER, tokenizer);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong>(id) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong>(key) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>テーブルの <em>id</em> または <em>key</em> に対応するレコードを削除する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+292
+293
+294
+295
+296
+297
+298
+299
+300</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 292</span>
+
+static VALUE
+rb_grn_table_key_support_delete (VALUE self, VALUE rb_id_or_key)
+{
+    if (FIXNUM_P(rb_id_or_key)) {
+	return rb_grn_table_delete(self, rb_id_or_key);
+    } else {
+	return rb_grn_table_key_support_delete_by_key(self, rb_id_or_key);
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_key?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>has_key?</strong>(key) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>テーブルに主キーが <em>key</em> のレコードがあるならtrueを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 242</span>
+
+static VALUE
+rb_grn_table_key_support_has_key (VALUE self, VALUE rb_key)
+{
+    grn_ctx *context;
+    grn_obj *table, *key, *domain;
+    grn_id id, domain_id;
+
+    rb_grn_table_key_support_deconstruct(SELF(self), &amp;table, &amp;context,
+					 &amp;key, &amp;domain_id, &amp;domain,
+					 NULL, NULL, NULL,
+					 NULL);
+
+    GRN_BULK_REWIND(key);
+    RVAL2GRNKEY(rb_key, context, key, domain_id, domain, self);
+    id = grn_table_get(context, table, GRN_BULK_HEAD(key), GRN_BULK_VSIZE(key));
+
+    return id == GRN_ID_NIL ? Qfalse : Qtrue;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="id-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>id</strong> </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>id</strong>(key) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>key</em> を指定しない場合はテーブルのIDを返す。</p>
+<p><em>key</em> を指定した場合はテーブルの <em>key</em> に対応するレコードの
+IDを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 180</span>
+
+static VALUE
+rb_grn_table_key_support_get_id (int argc, VALUE *argv, VALUE self)
+{
+    VALUE rb_key;
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_key);
+    if (NIL_P(rb_key)) {
+	return rb_grn_object_get_id(self);
+    } else {
+	grn_id id;
+
+	id = rb_grn_table_key_support_get(self, rb_key);
+	if (id == GRN_ID_NIL) {
+	    return Qnil;
+	} else {
+	    return UINT2NUM(id);
+	}
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="key-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>key</strong>(id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>テーブルの <em>id</em> に対応する主キーを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 206</span>
+
+static VALUE
+rb_grn_table_key_support_get_key (VALUE self, VALUE rb_id)
+{
+    grn_ctx *context;
+    grn_obj *table, *key;
+    grn_id id;
+    int key_size;
+    VALUE rb_key;
+
+    rb_grn_table_key_support_deconstruct(SELF(self), &amp;table, &amp;context,
+					 &amp;key, NULL, NULL,
+					 NULL, NULL, NULL,
+					 NULL);
+
+    id = NUM2UINT(rb_id);
+    GRN_BULK_REWIND(key);
+    key_size = grn_table_get_key(context, table, id,
+				 GRN_BULK_HEAD(key), GRN_BULK_VSIZE(key));
+    if (key_size == 0)
+	return Qnil;
+
+    if (GRN_BULK_VSIZE(key) &lt; key_size) {
+	grn_bulk_reserve(context, key, key_size);
+	grn_table_get_key(context, table, id, GRN_BULK_HEAD(key), key_size);
+    }
+
+    rb_key = GRNKEY2RVAL(context, GRN_BULK_HEAD(key), key_size, table, self);
+    return rb_key;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="normalize_key?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>normalize_key?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>キーを正規化する場合は <ins>true</ins> 、正規化しない場合は <ins>false</ins> を返
+す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 669</span>
+
+static VALUE
+rb_grn_table_key_normalize_key_p (VALUE self)
+{
+    grn_obj *table;
+
+    rb_grn_table_key_support_deconstruct(SELF(self), &amp;table, NULL,
+					 NULL, NULL, NULL,
+					 NULL, NULL, NULL,
+					 NULL);
+    return CBOOL2RVAL(table-&gt;header.flags &amp; GRN_OBJ_KEY_NORMALIZE);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_column_value-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>set_column_value</strong>(key, name, value) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>set_column_value</strong>(id, name, value, {:id = &gt;true}) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>key</em> に対応するカラム <em>name</em> の値を設定する。
+<em>key</em> に対応するレコードがない場合は新しく作成される。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 399</span>
+
+static VALUE
+rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id;
+    VALUE rb_key, rb_id_or_key, rb_name, rb_value, rb_options;
+
+    rb_scan_args(argc, argv, &quot;31&quot;,
+		 &amp;rb_id_or_key, &amp;rb_name, &amp;rb_value, &amp;rb_options);
+    if (!NIL_P(rb_options)) {
+	VALUE rb_option_id;
+	rb_grn_scan_options(rb_options,
+			    &quot;id&quot;, &amp;rb_option_id,
+			    NULL);
+	if (RVAL2CBOOL(rb_option_id)) {
+	    VALUE rb_id = rb_id_or_key;
+	    return rb_grn_table_set_column_value(self, rb_id, rb_name, rb_value);
+	}
+    }
+
+    rb_key = rb_id_or_key;
+    id = rb_grn_table_key_support_add_raw(self, rb_key, NULL);
+    if (id == GRN_ID_NIL) {
+	rb_raise(rb_eGrnError,
+		 &quot;failed to add record: %s&quot;,
+		 rb_grn_inspect(rb_ary_new3(4,
+					    self, rb_key,
+					    rb_name, rb_value)));
+    }
+
+    return rb_grn_table_set_column_value_raw(self, id, rb_name, rb_value);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_value-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>set_value</strong>(id, value, :id = &gt;true) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>set_value</strong>(key, value) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>id</em> または <em>key</em> に対応する値を <em>value</em> に設定する。
+既存の値は上書きされる。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 566</span>
+
+static VALUE
+rb_grn_table_key_support_set_value (int argc, VALUE *argv, VALUE self)
+{
+    VALUE rb_id_or_key, rb_value, rb_options;
+    grn_bool use_key;
+
+    rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_id_or_key, &amp;rb_value, &amp;rb_options);
+
+    if (NIL_P(rb_options)) {
+	use_key = GRN_TRUE;
+    } else {
+	VALUE rb_option_id;
+
+	rb_grn_scan_options(rb_options,
+			    &quot;id&quot;, &amp;rb_option_id,
+			    NULL);
+	use_key = !RVAL2CBOOL(rb_option_id);
+    }
+
+    if (use_key) {
+	return rb_grn_table_key_support_set_value_by_key(self,
+							 rb_id_or_key,
+							 rb_value);
+    } else {
+	return rb_grn_table_set_value(self, rb_id_or_key, rb_value);
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="support_key?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>support_key?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>テーブルでキーを使えるなら <ins>true</ins> 、使えないなら <ins>false</ins> を返
+す。キーを使えないテーブルはGroonga::Arrayだけ。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 688</span>
+
+static VALUE
+rb_grn_table_key_support_support_key_p (VALUE self)
+{
+    grn_obj *table;
+
+    rb_grn_table_key_support_deconstruct(SELF(self), &amp;table, NULL,
+					 NULL, NULL, NULL,
+					 NULL, NULL, NULL,
+					 NULL);
+    return table-&gt;header.domain == GRN_ID_NIL ? Qfalse : Qtrue;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="value-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>value</strong>(id, :id = &gt;true) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>value</strong>(key) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> の <em>id</em> または <em>key</em> に対応する値を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p><em>id</em> もしくは <em>key</em> に対応する値</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 496</span>
+
+static VALUE
+rb_grn_table_key_support_get_value (int argc, VALUE *argv, VALUE self)
+{
+    VALUE rb_id_or_key, rb_options;
+    grn_bool use_key;
+
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_id_or_key, &amp;rb_options);
+
+    if (NIL_P(rb_options)) {
+	use_key = GRN_TRUE;
+    } else {
+	VALUE rb_option_id;
+
+	rb_grn_scan_options(rb_options,
+			    &quot;id&quot;, &amp;rb_option_id,
+			    NULL);
+	use_key = !RVAL2CBOOL(rb_option_id);
+    }
+
+    if (use_key) {
+	return rb_grn_table_key_support_get_value_by_key(self, rb_id_or_key);
+    } else {
+	return rb_grn_table_get_value(self, rb_id_or_key);
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 

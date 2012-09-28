@@ -130,16 +130,6 @@
 </dl>
 <div class="clear"></div>
 
-<h2>Defined Under Namespace</h2>
-<p class="children">
-  
-    
-  
-    
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Select/Result.html" title="Groonga::Command::Select::Result (class)">Result</a></span>
-    
-  
-</p>
 
 
 
@@ -231,14 +221,14 @@
       <pre class="lines">
 
 
-54
-55
 56
 57
-58</pre>
+58
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/command.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/command.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='ivar'>@context</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span>
@@ -272,8 +262,6 @@
       <pre class="lines">
 
 
-60
-61
 62
 63
 64
@@ -285,10 +273,12 @@
 70
 71
 72
-73</pre>
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/command.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/command.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_exec'>exec</span>
   <span class='id identifier rubyid_request_id'>request_id</span> <span class='op'>=</span> <span class='ivar'>@context</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>

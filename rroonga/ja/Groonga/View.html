@@ -120,7 +120,9 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">(unknown)</dd>
+    <dd class="r2 last">ext/groonga/rb-grn-view.c<span class="defines">,<br />
+  ext/groonga/rb-grn-view.c</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -142,6 +144,140 @@
 
 
 
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-class_method" title="create (class method)">+ (Object) <strong>create</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>複数のテーブルを1つのテーブルとして扱う仮想的なテーブル
+（ビュー）を生成する。ブロックを指定すると、そのブロック
+に生成したテーブルが渡され、ブロックを抜けると自動的にテー
+ブルが破棄される。.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_table-instance_method" title="#add_table (instance method)">- (Object) <strong>add_table</strong>(table) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p><em>table</em> をビューからアクセスできるようにする。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#column_value-instance_method" title="#column_value (instance method)">- (Object) <strong>column_value</strong>(id, name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p><em>view</em> の <em>id</em> に対応するカラム <em>name</em> のもつ値を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> {|record| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>ビューに登録されているテーブルのレコードを順番にブロック
+に渡す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sort-instance_method" title="#sort (instance method)">- (Object) <strong>sort</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p><span class="caps">FIXME</span>: DON’T <span class="caps">WORK</span>!!!.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
 
   
   
@@ -149,10 +285,10 @@
   
   
   
-  <h2>Method Summary</h2>
+  
   
   <h3 class="inherited">Methods inherited from <span class="object_link"><a href="Table.html" title="Groonga::Table (class)">Table</a></span></h3>
-  <p class="inherited"><span class="object_link"><a href="Table.html#paginate-instance_method" title="Groonga::Table#paginate (method)">#paginate</a></span></p>
+  <p class="inherited"><span class="object_link"><a href="Table.html#%5B%5D-instance_method" title="Groonga::Table#[] (method)">#[]</a></span>, <span class="object_link"><a href="Table.html#clear_lock-instance_method" title="Groonga::Table#clear_lock (method)">#clear_lock</a></span>, <span class="object_link"><a href="Table.html#column-instance_method" title="Groonga::Table#column (method)">#column</a></span>, <span class="object_link"><a href="Table.html#columns-instance_method" title="Groonga::Table#columns (method)">#columns</a></span>, <span class="object_link"><a href="Table.html#define_column-instance_method" title="Groonga::Table#define_column (method)">#define_column</a></span>, <span class="object_link"><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">#define_index_column</a></span>, <span class="object_link"><a href="Table.html#defrag-instance_method" title="Groonga::Table#defrag (method)">#defrag</a></span>, <span class="object_link"><a href="Table.html#delete-instance_method" title="Groonga::Table#delete (method)">#delete</a></span>, <span class="object_link"><a href="Table.html#difference%21-instance_method" title="Groonga::Table#difference! (method)">#difference!</a></span>, <span class="object_link"><a href="Table.html#empty%3F-instance_method" title="Groonga::Table#empty? (method)">#empty?</a></span>, <span class="object_link"><a href="Table.html#exist%3F-instance_method" title="Groonga::Table#exist? (method)">#exist?</a></span>, <span class="object_link"><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">#group</a></span>, <span class="object_link"><a href="Table.html#have_column%3F-instance_method" title="Groonga::Table#have_column? (method)">#have_column?</a></span>, <span class="object_link"><a href="Table.html#initialize-instance_method" title="Groonga::Table#initialize (method)">#initialize</a></span>, <span class="object_link"><a href="Table.html#inspect-instance_method" title="Groonga::Table#inspect (method)">#inspect</a></span>, <span class="object_link"><a href="Table.html#intersection%21-instance_method" title="Groonga::Table#intersection! (method)">#intersection!</a></span>, <span class="object_link"><a href="Table.html#lock-instance_method" title="Groonga::Table#lock (method)">#lock</a></span>, <span class="object_link"><a href="Table.html#locked%3F-instance_method" title="Groonga::Table#locked? (method)">#locked?</a></span>, <span class="object_link"><a href="Table.html#merge%21-instance_method" title="Groonga::Table#merge! (method)">#merge!</a></span>, <span class="object_link"><a href="Table.html#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">#open_cursor</a></span>, <span class="object_link"><a href="Table.html#paginate-instance_method" title="Groonga::Table#paginate (method)">#paginate</a></span>, <span class="object_link"><a href="Table.html#records-instance_method" title="Groonga::Table#records (method)">#records</a></span>, <span class="object_link"><a href="Table.html#rename-instance_method" title="Groonga::Table#rename (method)">#rename</a></span>, <span class="object_link"><a href="Table.html#select-instance_method" title="Groonga::Table#select (method)">#select</a></span>, <span class="object_link"><a href="Table.html#set_column_value-instance_method" title="Groonga::Table#set_column_value (method)">#set_column_value</a></span>, <span class="object_link"><a href="Table.html#set_value-instance_method" title="Groonga::Table#set_value (method)">#set_value</a></span>, <span class="object_link"><a href="Table.html#size-instance_method" title="Groonga::Table#size (method)">#size</a></span>, <span class="object_link"><a href="Table.html#support_key%3F-instance_method" title="Groonga::Table#support_key? (method)">#support_key?</a></span>, <span class="object_link"><a href="Table.html#support_sub_records%3F-instance_method" title="Groonga::Table#support_sub_records? (method)">#support_sub_records?</a></span>, <span class="object_link"><a href="Table.html#truncate-instance_method" title="Groonga::Table#truncate (method)">#truncate</a></span>, <span class="object_link"><a href="Table.html#union%21-instance_method" title="Groonga::Table#union! (method)">#union!</a></span>, <span class="object_link"><a href="Table.html#unlock-instance_method" title="Groonga::Table#unlock (method)">#unlock</a></span>, <span class="object_link"><a href="Table.html#value-instance_method" title="Groonga::Table#value (method)">#value</a></span></p>
 
   
   
@@ -160,6 +296,1061 @@
   
   
   
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class="object_link"><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class="object_link"><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class="object_link"><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class="object_link"><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class="object_link"><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class="object_link"><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class="object_link"><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class="object_link"><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class="object_link"><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class="object_link"><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class="object_link"><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class="object_link"><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class="object_link"><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class="object_link"><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class="object_link"><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class="object_link"><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class="object_link"><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class="object_link"><a href="Table.html#initialize-instance_method" title="Groonga::Table#initialize (method)">Groonga::Table</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create-class_method">
+  
+    
+      <span class="overload">+ (<tt><span class="object_link"><a href="" title="Groonga::View (class)">Groonga::View</a></span></tt>) <strong>create</strong>(options = {}) </span>
+    
+      <span class="overload">+ (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create</strong>(options = {}) {|table| ... }</span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>複数のテーブルを1つのテーブルとして扱う仮想的なテーブル
+（ビュー）を生成する。ブロックを指定すると、そのブロック
+に生成したテーブルが渡され、ブロックを抜けると自動的にテー
+ブルが破棄される。</p>
+<p>ビューにテーブルを追加するときはGroonga::View#add_tableを
+使う。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class="inline"><p>無名一時ビューを生成する。</p></div></p>
+      
+      <pre class="example code"><span class="const">Groonga</span><span class="op">::</span><span class="const">View</span><span class="period">.</span><span class="id identifier rubyid_create">create</span></pre>
+    
+      
+        <p class="example_title"><div class="inline"><p>無名永続ビューを生成する。</p></div></p>
+      
+      <pre class="example code"><span class="const">Groonga</span><span class="op">::</span><span class="const">View</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:path</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">/tmp/view.grn</span><span class="tstring_end">"</span></span><span class="rparen">)</span></pre>
+    
+      
+        <p class="example_title"><div class="inline"><p>名前付き永続ビューを生成する。ただし、ファイル名は気にしない。</p></div></p>
+      
+      <pre class="example code"><span class="const">Groonga</span><span class="op">::</span><span class="const">View</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Entries</span><span class="tstring_end">"</span></span><span class="comma">,</span>
+                     <span class="symbol">:persistent</span> <span class="op">=&gt;</span> <span class="kw">true</span><span class="rparen">)</span></pre>
+    
+      
+        <p class="example_title"><div class="inline"><p><ins>Users</ins> テーブルと <ins>Dogs</ins> テーブルを横断検索するためのビューを生成する。</p></div></p>
+      
+      <pre class="example code"><span class="id identifier rubyid_entries">entries</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">View</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Entries</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class="id identifier rubyid_entries">entries</span><span class="period">.</span><span class="id identifier rubyid_add_table">add_table</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Users</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class="id identifier rubyid_entries">entries</span><span class="period">.</span><span class="id identifier rubyid_add_table">add_table</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Dogs</span><span class="tstring_end">"</span></span><span class="rparen">)</span></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">+ (<tt><span class="object_link"><a href="" title="Groonga::View (class)">Groonga::View</a></span></tt>) <strong>create</strong>(options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ビューが利用するGroonga::Context。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:name</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ビューの名前。名前をつけると、Groonga::Context#[]に名
+前を指定してビューを取得することができる。省略すると
+無名ビューになり、ビューIDでのみ取得できる。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:path</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ビューを保存するパス。パスを指定すると永続ビューとな
+り、プロセス終了後もレコードは保持される。次回起動時に
+Groonga::View.openで保存されたビューを利用することが
+できる。省略すると一時ビューになり、プロセスが終了する
+とビューは破棄される。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:persistent</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p><ins>true</ins> を指定すると永続ビューとなる。 <ins>path</ins> を省略した
+場合は自動的にパスが付加される。 <ins>:context</ins> で指定した
+Groonga::Contextに結びついているデータベースが一時デー
+タベースの場合は例外が発生する。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="" title="Groonga::View (class)">Groonga::View</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">+ (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create</strong>(options = {}) {|table| ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ビューが利用するGroonga::Context。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:name</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ビューの名前。名前をつけると、Groonga::Context#[]に名
+前を指定してビューを取得することができる。省略すると
+無名ビューになり、ビューIDでのみ取得できる。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:path</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ビューを保存するパス。パスを指定すると永続ビューとな
+り、プロセス終了後もレコードは保持される。次回起動時に
+Groonga::View.openで保存されたビューを利用することが
+できる。省略すると一時ビューになり、プロセスが終了する
+とビューは破棄される。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:persistent</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p><ins>true</ins> を指定すると永続ビューとなる。 <ins>path</ins> を省略した
+場合は自動的にパスが付加される。 <ins>:context</ins> で指定した
+Groonga::Contextに結びついているデータベースが一時デー
+タベースの場合は例外が発生する。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>table</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 104</span>
+
+static VALUE
+rb_grn_view_s_create (int argc, VALUE *argv, VALUE klass)
+{
+    grn_ctx *context;
+    grn_obj *table;
+    const char *name = NULL, *path = NULL;
+    unsigned name_size = 0;
+    grn_obj_flags flags = GRN_TABLE_VIEW;
+    VALUE rb_table;
+    VALUE options, rb_context, rb_name, rb_path, rb_persistent;
+
+    rb_scan_args(argc, argv, "01", &amp;options);
+
+    rb_grn_scan_options(options,
+			"context", &amp;rb_context,
+			"name", &amp;rb_name,
+                        "path", &amp;rb_path,
+			"persistent", &amp;rb_persistent,
+			NULL);
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+
+    if (!NIL_P(rb_name)) {
+        name = StringValuePtr(rb_name);
+	name_size = RSTRING_LEN(rb_name);
+	flags |= GRN_OBJ_PERSISTENT;
+    }
+
+    if (!NIL_P(rb_path)) {
+        path = StringValueCStr(rb_path);
+	flags |= GRN_OBJ_PERSISTENT;
+    }
+
+    if (RVAL2CBOOL(rb_persistent))
+	flags |= GRN_OBJ_PERSISTENT;
+
+    table = grn_table_create(context, name, name_size, path, flags, NULL, NULL);
+    if (!table)
+	rb_grn_context_check(context, rb_ary_new4(argc, argv));
+    rb_table = GRNOBJECT2RVAL(klass, context, table, GRN_TRUE);
+
+    if (rb_block_given_p())
+        return rb_ensure(rb_yield, rb_table, rb_grn_object_close, rb_table);
+    else
+        return rb_table;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_table-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>add_table</strong>(table) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>table</em> をビューからアクセスできるようにする。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 157</span>
+
+static VALUE
+rb_grn_view_add_table (VALUE self, VALUE rb_table)
+{
+#ifdef WIN32
+    rb_raise(rb_eNotImpError, "grn_view_add() isn't available on Windows.");
+#else
+    grn_ctx *context = NULL;
+    grn_obj *view, *table;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;view, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL,
+			     NULL);
+    table = RVAL2GRNOBJECT(rb_table, &amp;context);
+    grn_view_add(context, view, table);
+    rb_grn_context_check(context, self);
+#endif
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="column_value-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>column_value</strong>(id, name) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>view</em> の <em>id</em> に対応するカラム <em>name</em> のもつ値を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">id</span>
+      
+      
+        <span class="type">(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p><em>view</em> のもつ <em>id</em></p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class="name">name</span>
+      
+      
+        <span class="type">(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p><em>id</em> に対応するカラム名</p></div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type"></span>
+      
+      
+      
+        
+        <div class="inline"><p>カラム <em>name</em> のもつ値</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 234</span>
+
+static VALUE
+rb_grn_view_get_column_value (VALUE self, VALUE rb_id, VALUE rb_name)
+{
+    VALUE rb_value = Qnil;
+#ifdef WIN32
+    rb_raise(rb_eNotImpError,
+	     "grn_obj_get_value_o() isn't available on Windows.");
+#else
+    RbGrnTable *rb_view;
+    grn_ctx *context = NULL;
+    grn_obj *view, *value, *accessor;
+    grn_obj id;
+
+    rb_view = SELF(self);
+    rb_grn_table_deconstruct(rb_view, &amp;view, &amp;context,
+			     NULL, NULL,
+			     &amp;value, NULL, NULL,
+			     NULL);
+    GRN_BULK_REWIND(value);
+    GRN_TEXT_INIT(&amp;id, 0);
+    GRN_TEXT_PUT(context, &amp;id, RSTRING_PTR(rb_id), RSTRING_LEN(rb_id));
+    accessor = grn_obj_column(context, view,
+			      RSTRING_PTR(rb_name), RSTRING_LEN(rb_name));
+    grn_obj_get_value_o(context, accessor, &amp;id, value);
+    grn_obj_unlink(context, accessor);
+    rb_value = GRNOBJ2RVAL(Qnil, context, value, self);
+    GRN_OBJ_FIN(context, &amp;id);
+#endif
+
+    return rb_value;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>each</strong> {|record| ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>ビューに登録されているテーブルのレコードを順番にブロック
+に渡す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>record</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 185</span>
+
+static VALUE
+rb_grn_view_each (VALUE self)
+{
+#ifdef WIN32
+    rb_raise(rb_eNotImpError,
+	     "grn_table_cursor_next_o() isn't available on Windows.");
+#else
+    RbGrnTable *rb_grn_view;
+    RbGrnObject *rb_grn_object;
+    grn_ctx *context = NULL;
+    grn_obj *view;
+    grn_table_cursor *cursor;
+    VALUE rb_cursor;
+    grn_obj id;
+    grn_rc rc = GRN_SUCCESS;
+
+    rb_grn_view = SELF(self);
+    rb_grn_table_deconstruct(rb_grn_view, &amp;view, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL,
+			     NULL);
+    cursor = grn_table_cursor_open(context, view, NULL, 0, NULL, 0,
+				   0, -1, GRN_CURSOR_ASCENDING);
+    rb_cursor = GRNTABLECURSOR2RVAL(Qnil, context, cursor);
+    rb_grn_object = RB_GRN_OBJECT(rb_grn_view);
+    GRN_TEXT_INIT(&amp;id, 0);
+    while (rb_grn_object-&gt;object &amp;&amp;
+	   (rc = grn_table_cursor_next_o(context, cursor, &amp;id)) == GRN_SUCCESS) {
+	rb_yield(rb_grn_view_record_new(self, &amp;id));
+    }
+    GRN_OBJ_FIN(context, &amp;id);
+    rb_grn_object_close(rb_cursor);
+
+    if (!(rc == GRN_SUCCESS || rc == GRN_END_OF_DATA)) {
+	rb_grn_context_check(context, self);
+    }
+#endif
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sort-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>sort</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><span class="caps">FIXME</span>: DON’T <span class="caps">WORK</span>!!!</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 296</span>
+
+static VALUE
+rb_grn_view_sort (int argc, VALUE *argv, VALUE self)
+{
+    VALUE rb_result = Qnil;
+
+#ifdef WIN32
+    rb_raise(rb_eNotImpError, "grn_view_add() isn't available on Windows.");
+#else
+    grn_ctx *context = NULL;
+    grn_obj *view;
+    grn_obj *result;
+    grn_table_sort_key *keys;
+    int i, n_keys;
+    int offset = 0, limit = -1;
+    VALUE rb_keys, options;
+    VALUE rb_offset, rb_limit;
+    VALUE *rb_sort_keys;
+    grn_table_cursor *cursor;
+    VALUE exception;
+    grn_obj id;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;view, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL,
+			     NULL);
+
+    rb_scan_args(argc, argv, "11", &amp;rb_keys, &amp;options);
+
+    if (!RVAL2CBOOL(rb_obj_is_kind_of(rb_keys, rb_cArray)))
+	rb_raise(rb_eArgError, "keys should be an array of key: &lt;%s&gt;",
+		 rb_grn_inspect(rb_keys));
+
+    n_keys = RARRAY_LEN(rb_keys);
+    rb_sort_keys = RARRAY_PTR(rb_keys);
+    keys = ALLOCA_N(grn_table_sort_key, n_keys);
+    for (i = 0; i &lt; n_keys; i++) {
+	VALUE rb_sort_options, rb_key, rb_resolved_key, rb_order;
+
+	if (RVAL2CBOOL(rb_obj_is_kind_of(rb_sort_keys[i], rb_cHash))) {
+	    rb_sort_options = rb_sort_keys[i];
+	} else if (RVAL2CBOOL(rb_obj_is_kind_of(rb_sort_keys[i], rb_cArray))) {
+	    rb_sort_options = rb_hash_new();
+	    rb_hash_aset(rb_sort_options,
+			 RB_GRN_INTERN("key"),
+			 rb_ary_entry(rb_sort_keys[i], 0));
+	    rb_hash_aset(rb_sort_options,
+			 RB_GRN_INTERN("order"),
+			 rb_ary_entry(rb_sort_keys[i], 1));
+	} else {
+	    rb_sort_options = rb_hash_new();
+	    rb_hash_aset(rb_sort_options,
+			 RB_GRN_INTERN("key"),
+			 rb_sort_keys[i]);
+	}
+	rb_grn_scan_options(rb_sort_options,
+			    "key", &amp;rb_key,
+			    "order", &amp;rb_order,
+			    NULL);
+	if (RVAL2CBOOL(rb_obj_is_kind_of(rb_key, rb_cString))) {
+	    rb_resolved_key = rb_grn_table_get_column(self, rb_key);
+	} else {
+	    rb_resolved_key = rb_key;
+	}
+	keys[i].key = RVAL2GRNOBJECT(rb_resolved_key, &amp;context);
+	if (!keys[i].key) {
+	    rb_raise(rb_eGrnNoSuchColumn,
+		     "no such column: &lt;%s&gt;: &lt;%s&gt;",
+		     rb_grn_inspect(rb_key), rb_grn_inspect(self));
+	}
+	if (NIL_P(rb_order)) {
+	    keys[i].flags = 0;
+	} else if (rb_grn_equal_option(rb_order, "desc") ||
+		   rb_grn_equal_option(rb_order, "descending")) {
+	    keys[i].flags = GRN_TABLE_SORT_DESC;
+	} else if (rb_grn_equal_option(rb_order, "asc") ||
+		   rb_grn_equal_option(rb_order, "ascending")) {
+	    keys[i].flags = GRN_TABLE_SORT_ASC;
+	} else {
+	    rb_raise(rb_eArgError,
+		     "order should be one of "
+		     "[nil, :desc, :descending, :asc, :ascending]: %s",
+		     rb_grn_inspect(rb_order));
+	}
+    }
+
+    rb_grn_scan_options(options,
+			"offset", &amp;rb_offset,
+			"limit", &amp;rb_limit,
+			NULL);
+
+    if (!NIL_P(rb_offset))
+	offset = NUM2INT(rb_offset);
+    if (!NIL_P(rb_limit))
+	limit = NUM2INT(rb_limit);
+
+    result = grn_table_create(context, NULL, 0, NULL, GRN_TABLE_VIEW,
+			      NULL, NULL);
+    /* use n_records that is return value from
+       grn_table_sort() when rroonga user become specifying
+       output table. */
+    grn_table_sort(context, view, offset, limit, result, keys, n_keys);
+    exception = rb_grn_context_to_exception(context, self);
+    if (!NIL_P(exception)) {
+        grn_obj_unlink(context, result);
+        rb_exc_raise(exception);
+    }
+
+    rb_result = rb_ary_new();
+    cursor = grn_table_cursor_open(context, result, NULL, 0, NULL, 0,
+				   0, -1, GRN_CURSOR_ASCENDING);
+    GRN_TEXT_INIT(&amp;id, 0);
+    while (grn_table_cursor_next_o(context, cursor, &amp;id) == GRN_SUCCESS) {
+	rb_ary_push(rb_result, rb_grn_view_record_new(self, &amp;id));
+    }
+    GRN_OBJ_FIN(context, &amp;id);
+    grn_table_cursor_close(context, cursor);
+    grn_obj_unlink(context, result);
+#endif
+
+    return rb_result;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 

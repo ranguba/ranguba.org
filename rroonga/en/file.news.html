@@ -93,6 +93,33 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="2-0-5">2.0.5: 2012-09-28</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 2.0.7.</li>
+	<li>Removed the workaround to install rroonga with old groonga.</li>
+	<li>Added more error checks.</li>
+	<li>Added Database#tables. [Suggested by @temitan]</li>
+	<li>Supported Enumerator for #each on Database, Table, TableCursor and
+  IndexCursor.</li>
+	<li>Added WGS84GeoPoint and TokyoGeoPoint.</li>
+	<li>[dumper] supported dumping of WGS84GeoPoint and TokyoGeoPoint.</li>
+	<li>[dumper] worked on non <span class="caps">UTF</span>-8 extenal output encoding environment.</li>
+	<li>[dumper] sorted table and column names.</li>
+	<li>[dumper] ignored invalid byte.</li>
+	<li>[grndump] showed the warning for invalid character.</li>
+	<li>[grndump] supported database that is created by old groonga.</li>
+	<li>Added Groonga::Context#ruby_encoding.</li>
+	<li>Added many documents in codes but showed no references.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Added missing backslash escape for groonga command.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>@temitan</li>
+</ul>
 <h2 id="2-0-4">2.0.4: 2012-05-02</h2>
 <h3>Fixes</h3>
 <ul>

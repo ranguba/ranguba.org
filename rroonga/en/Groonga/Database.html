@@ -104,10 +104,12 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></li>
           
             <li class="next">Groonga::Database</li>
           
@@ -121,11 +123,17 @@
     
   
     
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">Enumerable, <span class='object_link'><a href="EncodingSupport.html" title="Groonga::EncodingSupport (module)">EncodingSupport</a></span></dd>
+      
+    
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">(unknown)</dd>
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">ext/groonga/rb-grn-database.c<span class="defines">,<br />
+  lib/groonga/database.rb,<br /> ext/groonga/rb-grn-database.c</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -150,7 +158,2210 @@
 
 
 
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-class_method" title="create (class method)">+ (Groonga::Database) <strong>create</strong>(options = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>新しくデータベースを作成する。
+<em>options</em> にはハッシュでオプションを指定する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open-class_method" title="open (class method)">+ (Object) <strong>open</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>既存のデータベースを開く。ブロックを指定した場合はブロッ
+クに開いたデータベースを渡し、ブロックを抜けるときに閉じ
+る。 <em>options</em> にはハッシュでオプションを指定する。.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_lock-instance_method" title="#clear_lock (instance method)">- (Object) <strong>clear_lock</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#close-instance_method" title="#close (instance method)">- (Object) <strong>close</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#defrag-instance_method" title="#defrag (instance method)">- (Integer) <strong>defrag</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defrags all variable size columns in the database.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>データベース内のオブジェクトを順番にブロックに渡す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Object) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>既存のデータベースを開く。ブロックを指定した場合はブロッ
+クに開いたデータベースを渡し、ブロックを抜けるときに閉じ
+る。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lock-instance_method" title="#lock (instance method)">- (Object) <strong>lock</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><em>database</em> をロックする。ロックに失敗した場合は
+Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#locked%3F-instance_method" title="#locked? (instance method)">- (Boolean) <strong>locked?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tables-instance_method" title="#tables (instance method)">- (Array&lt;Groonga::Table] tables defined in the database) <strong>tables</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Array&lt;Groonga::Table] tables defined in the database.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#touch-instance_method" title="#touch (instance method)">- (Object) <strong>touch</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unlock-instance_method" title="#unlock (instance method)">- (Object) <strong>unlock</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="EncodingSupport.html" title="Groonga::EncodingSupport (module)">EncodingSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="EncodingSupport.html#encoding-instance_method" title="Groonga::EncodingSupport#encoding (method)">#encoding</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class='object_link'><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>) <strong>new</strong>(path, options = nil) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>new</strong>(path, options = nil) {|database| ... }</span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>既存のデータベースを開く。ブロックを指定した場合はブロッ
+クに開いたデータベースを渡し、ブロックを抜けるときに閉じ
+る。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>) <strong>new</strong>(path, options = nil) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。省略すると
+Groonga::Context.defaultを利用する。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>new</strong>(path, options = nil) {|database| ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。省略すると
+Groonga::Context.defaultを利用する。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>database</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>database</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>開いたデータベース</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 253</span>
+
+static VALUE
+rb_grn_database_initialize (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *old_database, *database;
+    const char *path;
+    VALUE rb_path, options, rb_context;
+
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_path, &amp;options);
+
+    path = StringValuePtr(rb_path);
+    rb_grn_scan_options(options,
+			&quot;context&quot;, &amp;rb_context,
+			NULL);
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+
+    old_database = grn_ctx_db(context);
+    if (old_database)
+	grn_obj_unlink(context, old_database);
+    reset_floating_objects(rb_context);
+    database = grn_db_open(context, path);
+    rb_grn_object_assign(Qnil, self, rb_context, context, database);
+    rb_grn_context_check(context, self);
+
+    rb_iv_set(self, &quot;@context&quot;, rb_context);
+    if (!NIL_P(rb_context))
+	rb_iv_set(rb_context, &quot;database&quot;, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create-class_method">
+  
+    + (<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>) <strong>create</strong>(options = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>新しくデータベースを作成する。
+<em>options</em> にはハッシュでオプションを指定する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><span class='comment'># 一時データベースを作成:
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span>
+
+<span class='comment'># 永続データベースを作成:
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/db.groonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>option</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>options The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:path</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>データベースを保存するパス。省略すると一時データベース
+となる。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。省略すると
+Groonga::Context.defaultを利用する。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>作成されたデータベース</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 187</span>
+
+static VALUE
+rb_grn_database_s_create (int argc, VALUE *argv, VALUE klass)
+{
+    grn_ctx *context;
+    grn_obj *old_database, *database;
+    grn_db_create_optarg create_args;
+    const char *path = NULL;
+    VALUE rb_database;
+    VALUE rb_path, options, rb_context, builtin_type_names;
+    grn_bool owner;
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
+
+    rb_grn_scan_options(options,
+                        &quot;path&quot;, &amp;rb_path,
+			&quot;context&quot;, &amp;rb_context,
+                        &quot;builtin_type_names&quot;, &amp;builtin_type_names,
+			NULL);
+
+    if (!NIL_P(rb_path))
+        path = StringValuePtr(rb_path);
+    context = rb_grn_context_ensure(&amp;rb_context);
+
+    create_args.builtin_type_names = NULL;
+    create_args.n_builtin_type_names = 0;
+
+    old_database = grn_ctx_db(context);
+    if (old_database)
+	grn_obj_unlink(context, old_database);
+    reset_floating_objects(rb_context);
+    database = grn_db_create(context, path, &amp;create_args);
+    rb_grn_context_check(context, rb_ary_new4(argc, argv));
+    owner = (context-&gt;flags &amp; GRN_CTX_PER_DB) ? GRN_FALSE : GRN_TRUE;
+    rb_database = GRNOBJECT2RVAL(klass, context, database, owner);
+    rb_iv_set(rb_database, &quot;@context&quot;, rb_context);
+    if (!NIL_P(rb_context))
+	rb_iv_set(rb_context, &quot;database&quot;, rb_database);
+    rb_grn_context_check(context, rb_ary_new4(argc, argv));
+
+    if (rb_block_given_p())
+        return rb_ensure(rb_yield, rb_database,
+			 rb_grn_database_close, rb_database);
+    else
+        return rb_database;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open-class_method">
+  
+    
+      <span class="overload">+ (<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>) <strong>open</strong>(path, options = nil) </span>
+    
+      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open</strong>(path, options = nil) {|database| ... }</span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>既存のデータベースを開く。ブロックを指定した場合はブロッ
+クに開いたデータベースを渡し、ブロックを抜けるときに閉じ
+る。 <em>options</em> にはハッシュでオプションを指定する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">+ (<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>) <strong>open</strong>(path, options = nil) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The context
+データベースを結びつけるコンテキスト。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open</strong>(path, options = nil) {|database| ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The context
+データベースを結びつけるコンテキスト。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>database</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>database</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>開いたデータベース</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 303</span>
+
+static VALUE
+rb_grn_database_s_open (int argc, VALUE *argv, VALUE klass)
+{
+    VALUE database;
+
+    database = rb_obj_alloc(klass);
+    rb_grn_database_initialize(argc, argv, database);
+    if (rb_block_given_p())
+        return rb_ensure(rb_yield, database, rb_grn_database_close, database);
+    else
+        return database;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear_lock-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>clear_lock</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  database.clear_lock</p>
+<p><em>database</em> のロックを強制的に解除する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 500</span>
+
+static VALUE
+rb_grn_database_clear_lock (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *database;
+
+    rb_grn_database_deconstruct(SELF(self), &amp;database, &amp;context,
+				NULL, NULL, NULL, NULL);
+
+    grn_obj_clear_lock(context, database);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="close-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>close</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  database.close</p>
+<p><em>database</em> が使用しているリソースを開放する。これ以降 <em>database</em> を
+使うことはできない。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 146</span>
+
+static VALUE
+rb_grn_database_close (VALUE self)
+{
+    VALUE rb_context;
+
+    rb_context = rb_iv_get(self, &quot;@context&quot;);
+    if (!NIL_P(rb_context))
+	rb_iv_set(rb_context, &quot;database&quot;, Qnil);
+
+    return rb_grn_object_close(self);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="defrag-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>defrag</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Defrags all variable size columns in the database.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>option for defrag</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:threshold</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>0</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>the threshold to
+determine whether a segment is defraged. Available
+values are -4..22. -4 means all segments are defraged.
+22 means no segment is defraged.</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the number of defraged segments</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.2.6</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 566</span>
+
+static VALUE
+rb_grn_database_defrag (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *database;
+    int n_segments;
+    VALUE options, rb_threshold;
+    int threshold = 0;
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
+    rb_grn_scan_options(options,
+			&quot;threshold&quot;, &amp;rb_threshold,
+			NULL);
+    if (!NIL_P(rb_threshold)) {
+	threshold = NUM2INT(rb_threshold);
+    }
+
+    rb_grn_database_deconstruct(SELF(self), &amp;database, &amp;context,
+				NULL, NULL, NULL, NULL);
+    n_segments = grn_obj_defrag(context, database, threshold);
+    rb_grn_context_check(context, self);
+
+    return INT2NUM(n_segments);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>each</strong>(options = nil) {|object| ... }</span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>each</strong>(options = nil) {|object| ... }</span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>データベース内のオブジェクトを順番にブロックに渡す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>すべてのオブジェクトの名前を表示する:</p></div></p>
+      
+      <pre class="example code"><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+<span class='kw'>end</span></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>すべてのオブジェクトの名前をID順で表示する:</p></div></p>
+      
+      <pre class="example code"><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='symbol'>:order_by</span> <span class='op'>=&gt;</span> <span class='symbol'>:id</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+<span class='kw'>end</span></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>すべてのオブジェクトの名前をキー名の降順で表示する:</p></div></p>
+      
+      <pre class="example code"><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='symbol'>:order_by</span> <span class='op'>=&gt;</span> <span class='symbol'>:key</span><span class='comma'>,</span> <span class='symbol'>:order</span> <span class='op'>=&gt;</span> <span class='symbol'>:desc</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+<span class='kw'>end</span></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>each</strong>(options = nil) {|object| ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:order</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p><ins>:asc</ins> または <ins>:ascending</ins> を指定すると昇順にレコードを取
+り出す。（デフォルト）
+<ins>:desc</ins> または <ins>:descending</ins> を指定すると降順にレコードを
+取り出す。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:order_by</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:key</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p><ins>:id</ins> を指定するとID順にレコードを取り出す。
+<ins>:key</ins> 指定するとキー順にレコードを取り出す。（デフォル
+ト）</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>object</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>each</strong>(options = nil) {|object| ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:order</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p><ins>:asc</ins> または <ins>:ascending</ins> を指定すると昇順にレコードを取
+り出す。（デフォルト）
+<ins>:desc</ins> または <ins>:descending</ins> を指定すると降順にレコードを
+取り出す。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:order_by</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:key</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p><ins>:id</ins> を指定するとID順にレコードを取り出す。
+<ins>:key</ins> 指定するとキー順にレコードを取り出す。（デフォル
+ト）</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:ignore_missing_object</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Specify <ins>true</ins> to ignore missing object. Otherwise, an exception is
+raised for missing object.</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>object</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>2.0.5</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 356</span>
+
+static VALUE
+rb_grn_database_each (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *database;
+    grn_table_cursor *cursor;
+    VALUE rb_cursor, rb_options, rb_order, rb_order_by;
+    VALUE rb_ignore_missing_object;
+    int flags = 0;
+    grn_id id;
+    VALUE exception;
+
+    RETURN_ENUMERATOR(self, argc, argv);
+
+    rb_grn_database_deconstruct(SELF(self), &amp;database, &amp;context,
+				NULL, NULL, NULL, NULL);
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_options);
+
+    rb_grn_scan_options(rb_options,
+			&quot;order&quot;, &amp;rb_order,
+			&quot;order_by&quot;, &amp;rb_order_by,
+			&quot;ignore_missing_object&quot;, &amp;rb_ignore_missing_object,
+			NULL);
+
+    flags |= rb_grn_table_cursor_order_to_flag(rb_order);
+    flags |= rb_grn_table_cursor_order_by_to_flag(GRN_TABLE_PAT_KEY,
+						  self,
+						  rb_order_by);
+
+    cursor = grn_table_cursor_open(context, database, NULL, 0, NULL, 0,
+				   0, -1,
+				   flags);
+    rb_cursor = GRNTABLECURSOR2RVAL(Qnil, context, cursor);
+    rb_iv_set(self, &quot;cursor&quot;, rb_cursor);
+    while ((id = grn_table_cursor_next(context, cursor)) != GRN_ID_NIL) {
+	grn_obj *object;
+
+	object = grn_ctx_at(context, id);
+	if (!object &amp;&amp; RTEST(rb_ignore_missing_object)) {
+	    context-&gt;rc = GRN_SUCCESS;
+	    continue;
+	}
+
+	exception = rb_grn_context_to_exception(context, self);
+	if (!NIL_P(exception)) {
+	    rb_grn_object_close(rb_cursor);
+	    rb_iv_set(self, &quot;cursor&quot;, Qnil);
+	    rb_exc_raise(exception);
+	}
+
+	if (object) {
+	    rb_yield(GRNOBJECT2RVAL(Qnil, context, object, GRN_FALSE));
+	}
+    }
+    rb_grn_object_close(rb_cursor);
+    rb_iv_set(self, &quot;cursor&quot;, Qnil);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lock-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) { ... }</span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>database</em> をロックする。ロックに失敗した場合は
+Groonga::ResourceDeadlockAvoided例外が発生する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>利用可能なオプションは以下の通り。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:timeout</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>ロックを獲得できなかった場合は <em>:timeout</em> 秒間ロックの獲
+得を試みる。 <em>:timeout</em> 秒以内にロックを獲得できなかった
+場合は例外が発生する。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) { ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>利用可能なオプションは以下の通り。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:timeout</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>ロックを獲得できなかった場合は <em>:timeout</em>秒間ロックの獲
+得を試みる。 <em>:timeout</em>秒以内にロックを獲得できなかった
+場合は例外が発生する。</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>ブロックを指定した場合はブロックを抜けたときにunlockする。</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 460</span>
+
+static VALUE
+rb_grn_database_lock (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *database;
+    int timeout = 0;
+    grn_rc rc;
+    VALUE options, rb_timeout;
+
+    rb_scan_args(argc, argv, &quot;01&quot;,  &amp;options);
+
+    rb_grn_database_deconstruct(SELF(self), &amp;database, &amp;context,
+				NULL, NULL, NULL, NULL);
+
+    rb_grn_scan_options(options,
+			&quot;timeout&quot;, &amp;rb_timeout,
+			NULL);
+
+    if (!NIL_P(rb_timeout))
+	timeout = NUM2UINT(rb_timeout);
+
+    rc = grn_obj_lock(context, database, GRN_ID_NIL, timeout);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    if (rb_block_given_p()) {
+	return rb_ensure(rb_yield, Qnil, rb_grn_database_unlock, self);
+    } else {
+	return Qnil;
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="locked?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>locked?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  database.locked?</p>
+<p><em>database</em> がロックされていれば <ins>true</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 522</span>
+
+static VALUE
+rb_grn_database_is_locked (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *database;
+
+    rb_grn_database_deconstruct(SELF(self), &amp;database, &amp;context,
+				NULL, NULL, NULL, NULL);
+
+    return CBOOL2RVAL(grn_obj_is_locked(context, database));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tables-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span>] tables defined in the database</tt>) <strong>tables</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Array&lt;Groonga::Table] tables defined in the database</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span>] tables defined in the database</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Array&lt;Groonga::Table] tables defined in the database</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/database.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tables'>tables</span>
+  <span class='id identifier rubyid_find_all'>find_all</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+    <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Table</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="touch-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>touch</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  database.touch</p>
+<p><em>database</em> の最終更新時刻を現在時刻にする。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 542</span>
+
+static VALUE
+rb_grn_database_touch (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *database;
+
+    rb_grn_database_deconstruct(SELF(self), &amp;database, &amp;context,
+				NULL, NULL, NULL, NULL);
+
+    grn_db_touch(context, database);
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unlock-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unlock</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  database.unlock</p>
+<p><em>database</em> のロックを解除する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 425</span>
+
+static VALUE
+rb_grn_database_unlock (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *database;
+    grn_rc rc;
+
+    rb_grn_database_deconstruct(SELF(self), &amp;database, &amp;context,
+				NULL, NULL, NULL, NULL);
+
+    rc = grn_obj_unlock(context, database, GRN_ID_NIL);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 

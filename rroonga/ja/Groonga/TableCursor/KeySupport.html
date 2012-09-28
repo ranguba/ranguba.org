@@ -101,7 +101,9 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">(unknown)</dd>
+    <dd class="r1 last">ext/groonga/rb-grn-table-cursor-key-support.c<span class="defines">,<br />
+  ext/groonga/rb-grn-table-cursor-key-support.c</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -124,7 +126,139 @@
 
 
 
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key-instance_method" title="#key (instance method)">- (::Object) <strong>key</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>カレントレコードの主キーを返す。.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="key-instance_method">
+  
+    - (<tt>::Object</tt>) <strong>key</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>カレントレコードの主キーを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>::Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>カレントレコードの主キー</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-cursor-key-support.c', line 39</span>
+
+static VALUE
+rb_grn_table_cursor_get_key (VALUE self)
+{
+    VALUE rb_key = Qnil;
+    grn_ctx *context;
+    grn_table_cursor *cursor;
+
+    rb_grn_table_cursor_deconstruct(SELF(self), &amp;cursor, &amp;context,
+				    NULL, NULL, NULL, NULL);
+    if (context &amp;&amp; cursor) {
+        void *key;
+        int key_size;
+	grn_obj *table;
+
+	table = grn_table_cursor_table(context, cursor);
+        key_size = grn_table_cursor_get_key(context, cursor, &amp;key);
+        rb_key = GRNKEY2RVAL(context, key, key_size, table, self);
+    }
+
+    return rb_key;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 

@@ -73,7 +73,33 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id="filecontents"><h1><span class="caps">お知らせ</span></h1>
+    <div id="content"><div id="filecontents"><h1><span class="caps">NEWS</span></h1>
+<h2 id="2-0-5">2.0.5: 2012-09-28</h2>
+<h3>改良</h3>
+<ul>
+	<li>groonga 2.0.7対応。</li>
+	<li>古いgroongaと一緒に使うときに必要な処理を削除。</li>
+	<li>様々なエラーチェックを追加。</li>
+	<li>Database#tablesを追加。[@temitanさんが提案]</li>
+	<li>Database, Table, TableCursor, IndexCursorの#eachでブロックが指定されてないときにはEnumeratorを返すようにした。</li>
+	<li>WGS84GeoPointクラスとTokyoGeoPointクラスを追加。</li>
+	<li>[dumper] WGS84GeoPointとTokyoGeoPointのダンプに対応。</li>
+	<li>[dumper] 外部エンコーディングがUTF-8以外の環境でも動作するようにした。</li>
+	<li>[dumper] ダンプ時にテーブルとカラム名でソートするようにした。</li>
+	<li>[dumper] 不正なバイトがあったときに無視するようにした。</li>
+	<li>[grndump] 不正な文字があったときに警告を出すようにした。</li>
+	<li>[grndump] 古いgroongaで作ったデータベースも正しくダンプできるようにした。</li>
+	<li>Groonga::Context#ruby_encodingを追加。</li>
+	<li>コード内に書かれていてリファレンスに表示されていなかったドキュメントをリファレンスに追加。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>groongaコマンドにバックスラッシュがあったときにエスケープするように修正した</li>
+</ul>
+<h3>感謝</h3>
+<ul>
+	<li>@temtanさん</li>
+</ul>
 <h2 id="2-0-4">2.0.4: 2012-05-02</h2>
 <h3>修正</h3>
 <ul>
@@ -151,7 +177,7 @@
 	<li>grntestのログを解析するスクリプトを追加。</li>
 	<li><span class="caps">JSON</span>gemへの依存関係を追加。</li>
 	<li>groonga 1.2.8対応。</li>
-	<li>Dropped groonga 1.2.7 or former support.</li>
+	<li>groonga1.2.7以前のサポートを削除。</li>
 	<li>Groonga::Table#defragを追加。</li>
 	<li>Groonga::Table#renameを追加。</li>
 	<li>Groonga::Column#renameを追加。</li>
@@ -315,23 +341,21 @@
 	<li>Groonga::Context#create_databaseを追加。</li>
 	<li>Groonga::Context#open_databaseを追加。</li>
 	<li>Groonga::Column#indexesを追加。</li>
-	<li>Supported a notation for specifying index column as match target in
-  Groonga::Table#select:
-    table.select do |record|
-      record.match(“query”) do |match_record|
-        (match_record.index(“Terms.title”) * 1000) |
-          (match_record.index(“Terms.description”) * 100)
-          match_record.content
-      end
-    end</li>
-	<li>Supported prefix search in Groonga::Table#select:
-    table.select do |record|
-      record.name.prefix_search(“groo”)
-    end</li>
-	<li>Supported suffix search in Groonga::Table#select:
-    table.select do |record|
-      record.name.suffix_search(“nga”)
-    end</li>
+	<li>Groonga::Table#selectでマッチさせるターゲットとしてインデックスカラムを指定するための記法を追加。
+ table.select do |record|
+   record.match(“query”) do |match_record|
+     (match_record.index(“Terms.title”) * 1000) | (match_record.index(“Terms.description”) * 100)
+      match_record.content
+   end
+ end</li>
+	<li>Groonga::Table#selectで前方一致検索に対応。
+ table.select do |record|
+   record.name.prefix_search(“groo”)
+ end</li>
+	<li>Groonga::Table#selectで後方一致検索に対応。
+ table.select do |record|
+   record.name.suffix_search(“nga”)
+ end</li>
 	<li>:default_tokenizerのスキーマダンプに対応。</li>
 	<li>:key_normalizeのスキーマダンプに対応。</li>
 	<li>Groonga::Table#have_column?が擬似カラムに対応。</li>

@@ -118,7 +118,9 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">(unknown)</dd>
+    <dd class="r2 last">ext/groonga/rb-grn-column.c<span class="defines">,<br />
+  ext/groonga/rb-grn-column.c</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
@@ -159,6 +161,313 @@
 
 
 
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_lock-instance_method" title="#clear_lock (instance method)">- (Object) <strong>clear_lock</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p><em>column</em> のロックを強制的に解除する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index%3F-instance_method" title="#index? (instance method)">- (Boolean) <strong>index?</strong> </a>
+    
+
+    
+      (also: #index_column?)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#indexes-instance_method" title="#indexes (instance method)">- (Array&lt;index_column&gt;) <strong>indexes</strong>(operator = Groonga::Operator::MATCH) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p><em>operator</em> を実行できる <em>column</em> のインデックスを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#local_name-instance_method" title="#local_name (instance method)">- (Object) <strong>local_name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lock-instance_method" title="#lock (instance method)">- (Object) <strong>lock</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p><em>column</em> をロックする。ロックに失敗した場合は
+Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#locked%3F-instance_method" title="#locked? (instance method)">- (Boolean) <strong>locked?</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p><em>column</em> がロックされていれば <ins>true</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reference%3F-instance_method" title="#reference? (instance method)">- (Boolean) <strong>reference?</strong> </a>
+    
+
+    
+      (also: #reference_column?)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rename-instance_method" title="#rename (instance method)">- (Object) <strong>rename</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>Renames the table to name.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scalar%3F-instance_method" title="#scalar? (instance method)">- (Boolean) <strong>scalar?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select-instance_method" title="#select (instance method)">- (Groonga::Hash) <strong>select</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>カラムが所属するテーブルからブロックまたは文字列で指定し
+た条件にマッチするレコードを返す。返されたテーブルには
+<ins>expression</ins> という特異メソッドがあり、指定した条件を表し
+ているGroonga::Expressionを取得できる。
+Groonga::Expression#snippetを使うことにより、指定した条件
+用のスニペットを簡単に生成できる。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#table-instance_method" title="#table (instance method)">- (Groonga::Table) <strong>table</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>カラムが所属するテーブルを返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unlock-instance_method" title="#unlock (instance method)">- (Object) <strong>unlock</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p><em>column</em> のロックを解除する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#vector%3F-instance_method" title="#vector? (instance method)">- (Boolean) <strong>vector?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline"><p>call-seq:.</p></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
 
   
   
@@ -166,12 +475,2333 @@
   
   
   
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class="object_link"><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class="object_link"><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class="object_link"><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class="object_link"><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class="object_link"><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class="object_link"><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class="object_link"><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class="object_link"><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class="object_link"><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class="object_link"><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class="object_link"><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class="object_link"><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class="object_link"><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class="object_link"><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class="object_link"><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class="object_link"><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class="object_link"><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear_lock-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>clear_lock</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>column</em> のロックを強制的に解除する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>利用可能なオプションは以下の通り。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:id</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p><em>:id</em>で指定したレコードのロックを強制的に解除する。
+（注: groonga側が未実装のため、現在は無視される。実装さ
+れるのではないかと思っているが、実装されないかもしれな
+い。）</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
 
 </div>
 
-    <div id="footer"></div>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 572</span>
+
+static VALUE
+rb_grn_column_clear_lock (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id = GRN_ID_NIL;
+    grn_ctx *context;
+    grn_obj *column;
+    VALUE options, rb_id;
+
+    rb_scan_args(argc, argv, "01",  &amp;options);
+
+    rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL);
+
+    rb_grn_scan_options(options,
+			"id", &amp;rb_id,
+			NULL);
+
+    if (!NIL_P(rb_id))
+	id = NUM2UINT(rb_id);
+
+    grn_obj_clear_lock(context, column);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="index?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>index?</strong> 
+  
 
   
+    <span class="aliases">Also known as:
+    <span class="names"><span id="index_column?-instance_method">index_column?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  column.index? → true/false</p>
+<p><em>column</em> がGroonga::IndexColumnの場合は <ins>true</ins> を返し、
+そうでない場合は <ins>false</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class="inline"><p>1.0.5</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 681</span>
+
+static VALUE
+rb_grn_column_index_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *column;
+
+    rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL);
+
+    if (column-&gt;header.type == GRN_COLUMN_INDEX) {
+	return Qtrue;
+    } else {
+	return Qfalse;
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="indexes-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;index_column&gt;</tt>) <strong>indexes</strong>(operator = Groonga::Operator::MATCH) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>operator</em> を実行できる <em>column</em> のインデックスを返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">operator</span>
+      
+      
+        <span class="type">(<tt>Groonga::Operator::XXX</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt><span class="object_link"><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;index_column&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p><em>operator</em> を実行できる <em>column</em> のインデックス</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class="inline"><p>1.0.9</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
+806
+807
+808</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 771</span>
+
+static VALUE
+rb_grn_column_get_indexes (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *column;
+    grn_obj **indexes = NULL;
+    int i, n_indexes;
+    grn_operator operator = GRN_OP_MATCH;
+    VALUE rb_operator, rb_indexes;
+
+    rb_scan_args(argc, argv, "01", &amp;rb_operator);
+
+    rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL);
+
+    if (!NIL_P(rb_operator)) {
+	operator = RVAL2GRNOPERATOR(rb_operator);
+    }
+
+    rb_indexes = rb_ary_new();
+    n_indexes = grn_column_index(context, column, operator,
+				 NULL, 0, NULL);
+    if (n_indexes == 0)
+	return rb_indexes;
+
+    indexes = xmalloc(sizeof(grn_obj *) * n_indexes);
+    n_indexes = grn_column_index(context, column, operator,
+				 indexes, n_indexes, NULL);
+    for (i = 0; i &lt; n_indexes; i++) {
+	VALUE rb_index;
+	rb_index = GRNOBJECT2RVAL(Qnil, context, indexes[i], GRN_FALSE);
+	rb_ary_push(rb_indexes, rb_index);
+	grn_obj_unlink(context, indexes[i]);
+    }
+    xfree(indexes);
+    return rb_indexes;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="local_name-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>local_name</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class="inline"><p>テーブル名を除いたカラム名を返す。</p></div></p>
+      
+      <pre class="example code"><span class="id identifier rubyid_items">items</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Array</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Items</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class="id identifier rubyid_title">title</span> <span class="op">=</span> <span class="id identifier rubyid_items">items</span><span class="period">.</span><span class="id identifier rubyid_define_column">define_column</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">title</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ShortText</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class="id identifier rubyid_title">title</span><span class="period">.</span><span class="id identifier rubyid_name">name</span> <span class="comment"># =&gt; "Items.title"
+</span><span class="id identifier rubyid_title">title</span><span class="period">.</span><span class="id identifier rubyid_local_name">local_name</span> <span class="comment"># =&gt; "title"</span></pre>
+    
+  </div>
+
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 144</span>
+
+static VALUE
+rb_grn_column_get_local_name (VALUE self)
+{
+    RbGrnColumn *rb_grn_column;
+    grn_ctx *context = NULL;
+    grn_obj *column;
+    VALUE rb_name;
+    char *name;
+    int name_size;
+
+    rb_grn_column = SELF(self);
+    rb_grn_object_deconstruct(RB_GRN_OBJECT(rb_grn_column), &amp;column, &amp;context,
+			      NULL, NULL,
+			      NULL, NULL);
+    name_size = grn_column_name(context, column, NULL, 0);
+    if (name_size == 0)
+	return Qnil;
+
+    name = xmalloc(name_size);
+    grn_column_name(context, column, name, name_size);
+    rb_name = rb_str_new(name, name_size);
+    xfree(name);
+
+    return rb_name;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lock-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) </span>
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) { ... }</span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>column</em> をロックする。ロックに失敗した場合は
+Groonga::ResourceDeadlockAvoided例外が発生する。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>利用可能なオプションは以下の通り。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:timeout</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ロックを獲得できなかった場合は <em>:timeout</em> 秒間ロックの獲
+得を試みる。 <em>:timeout</em> 秒以内にロックを獲得できなかった
+場合は例外が発生する。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:id</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p><em>:id</em>で指定したレコードをロックする。（注: groonga側が
+未実装のため、現在は無視される）</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) { ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>利用可能なオプションは以下の通り。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:timeout</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p>ロックを獲得できなかった場合は <em>:timeout</em>秒間ロックの獲
+得を試みる。 <em>:timeout</em>秒以内にロックを獲得できなかった
+場合は例外が発生する。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:id</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p><em>:id</em>で指定したレコードをロックする。（注: groonga側が
+未実装のため、現在は無視される）</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class="type"></span>
+      
+      
+      
+        
+        <div class="inline"><p>ブロックを指定した場合はブロックを抜けたときにunlockする。</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 524</span>
+
+static VALUE
+rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id = GRN_ID_NIL;
+    grn_ctx *context;
+    grn_obj *column;
+    int timeout = 0;
+    grn_rc rc;
+    VALUE options, rb_timeout, rb_id;
+
+    rb_scan_args(argc, argv, "01",  &amp;options);
+
+    rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL);
+
+    rb_grn_scan_options(options,
+			"timeout", &amp;rb_timeout,
+			"id", &amp;rb_id,
+			NULL);
+
+    if (!NIL_P(rb_timeout))
+	timeout = NUM2UINT(rb_timeout);
+
+    if (!NIL_P(rb_id))
+	id = NUM2UINT(rb_id);
+
+    rc = grn_obj_lock(context, column, id, timeout);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    if (rb_block_given_p()) {
+	return rb_ensure(rb_yield, Qnil, rb_grn_column_unlock_ensure, self);
+    } else {
+	return Qnil;
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="locked?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>locked?</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><em>column</em> がロックされていれば <ins>true</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">options</span>
+      
+      
+        <span class="type">(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>利用可能なオプションは以下の通り。</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:id</span>
+          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class="inline"><p><em>:id</em>で指定したレコードがロックされていれば <ins>true</ins> を返す。
+（注: groonga側が未実装のため、現在は無視される。実装さ
+れるのではないかと思っているが、実装されないかもしれな
+い。）</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 608</span>
+
+static VALUE
+rb_grn_column_is_locked (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id = GRN_ID_NIL;
+    grn_ctx *context;
+    grn_obj *column;
+    VALUE options, rb_id;
+
+    rb_scan_args(argc, argv, "01",  &amp;options);
+
+    rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL);
+
+    rb_grn_scan_options(options,
+			"id", &amp;rb_id,
+			NULL);
+
+    if (!NIL_P(rb_id))
+	id = NUM2UINT(rb_id);
+
+    return CBOOL2RVAL(grn_obj_is_locked(context, column));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reference?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>reference?</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id="reference_column?-instance_method">reference_column?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  column.reference? → true/false</p>
+<p><em>column</em> の値がテーブルのレコードとなる場合は <ins>true</ins> を返し、
+そうでない場合は <ins>false</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class="inline"><p>1.0.5</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 643</span>
+
+static VALUE
+rb_grn_column_reference_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *column;
+    grn_id range_id;
+    grn_obj *range;
+    unsigned short int type;
+
+    rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL);
+
+    range_id = grn_obj_get_range(context, column);
+    range = grn_ctx_at(context, range_id);
+    type = range-&gt;header.type;
+    grn_obj_unlink(context, range);
+    switch (type) {
+      case GRN_TABLE_HASH_KEY:
+      case GRN_TABLE_PAT_KEY:
+      case GRN_TABLE_NO_KEY:
+	return Qtrue;
+      default:
+	return Qfalse;
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rename-instance_method">
+  
+    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>rename</strong>(name) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Renames the table to name.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class="name">name</span>
+      
+      
+        <span class="type">(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class="inline"><p>the new name</p></div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class="inline"><p>1.3.0</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 816</span>
+
+static VALUE
+rb_grn_column_rename (VALUE self, VALUE rb_name)
+{
+    int rc;
+    grn_ctx *context;
+    grn_obj *column;
+    char *name;
+    int name_size;
+
+    rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
+			      NULL, NULL,
+			      NULL, NULL, NULL);
+
+    name = StringValueCStr(rb_name);
+    name_size = RSTRING_LEN(rb_name);
+
+    rc = grn_column_rename(context, column, name, name_size);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return self;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="scalar?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>scalar?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>call-seq:
+  column.scalar? → true/false</p>
+<p><em>column</em> がスカラーカラムの場合は <ins>true</ins> を返し、
+そうでない場合は <ins>false</ins> を返す。</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class="inline"><p>1.0.5</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 739</span>
+
+static VALUE
+rb_grn_column_scalar_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *column;
+
+    rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
+			     NULL, NULL,
+			     NULL, NULL, NULL);
+
+    switch (column-&gt;header.type) {
+      case GRN_COLUMN_FIX_SIZE:
+	return Qtrue;
+      case GRN_COLUMN_VAR_SIZE:
+	if ((column-&gt;header.flags &amp; GRN_OBJ_COLUMN_TYPE_MASK) ==
+	    GRN_OBJ_COLUMN_SCALAR) {
+	    return Qtrue;
+	} else {
+	    return Qfalse;
+	}
+      default:
+	return Qfalse;
+    }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="select-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(options) {|record| ... }</span>
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(query, options) </span>
+    
+      <span class="overload">- (<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(expression, options) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>カラムが所属するテーブルからブロックまたは文字列で指定し
+た条件にマッチするレコードを返す。返されたテーブルには
+<ins>expression</ins> という特異メソッドがあり、指定した条件を表し
+ているGroonga::Expressionを取得できる。
+Groonga::Expression#snippetを使うことにより、指定した条件
+用のスニペットを簡単に生成できる。</p>
+<pre class="code ruby"><code>  <span class="id identifier rubyid_results">results</span> <span class="op">=</span> <span class="id identifier rubyid_description_column">description_column</span><span class="period">.</span><span class="id identifier rubyid_select">select</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_column">column</span><span class="op">|</span>
+    <span class="id identifier rubyid_column">column</span> <span class="op">=~</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">groonga</span><span class="tstring_end">"</span></span>
+  <span class="kw">end</span>
+  <span class="id identifier rubyid_snippet">snippet</span> <span class="op">=</span> <span class="id identifier rubyid_results">results</span><span class="period">.</span><span class="id identifier rubyid_expression">expression</span><span class="period">.</span><span class="id identifier rubyid_snippet">snippet</span><span class="lparen">(</span><span class="lbracket">[</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">&lt;em&gt;</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">&lt;/em&gt;</span><span class="tstring_end">"</span></span><span class="rbracket">]</span><span class="rbracket">]</span><span class="rparen">)</span>
+  <span class="id identifier rubyid_results">results</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_record">record</span><span class="op">|</span>
+    <span class="id identifier rubyid_puts">puts</span> <span class="tstring"><span class="tstring_beg">"</span><span class="embexpr_beg">#{</span><span class="id identifier rubyid_record">record</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">name</span><span class="tstring_end">'</span></span><span class="rbracket">]</span><span class="rbrace">}</span><span class="tstring_content">の説明文の中で「groonga」が含まれる部分</span><span class="tstring_end">"</span></span>
+    <span class="id identifier rubyid_snippet">snippet</span><span class="period">.</span><span class="id identifier rubyid_execute">execute</span><span class="lparen">(</span><span class="id identifier rubyid_record">record</span><span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">description</span><span class="tstring_end">"</span></span><span class="rbracket">]</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_snippet">snippet</span><span class="op">|</span>
+      <span class="id identifier rubyid_puts">puts</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">---</span><span class="tstring_end">"</span></span>
+      <span class="id identifier rubyid_puts">puts</span> <span class="tstring"><span class="tstring_beg">"</span><span class="embexpr_beg">#{</span><span class="id identifier rubyid_snippet">snippet</span><span class="rbrace">}</span><span class="tstring_content">...</span><span class="tstring_end">"</span></span>
+      <span class="id identifier rubyid_puts">puts</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">---</span><span class="tstring_end">"</span></span>
+    <span class="kw">end</span>
+  <span class="kw">end</span></code></pre>
+<p>出力例
+<pre>
+  rroongaの説明文の中で「groonga」が含まれる部分
+  <del>-</del>
+  rroongaは<em>groonga</em>のいわゆるDB-APIの層の…
+  <del>-</del>
+
+  
+
+
+  
+  Overloads:
+  
+    
+      
+      
+        - (Groonga::Hash) select(options) {|record| ... }
+        
+  
+    
+
+  
+
+
+  Parameters:
+
+  
+    
+      
+        options
+      
+      
+        (::Hash)
+      
+      
+      
+        &mdash;
+        The name and value
+pairs. Omitted names are initialized as the default value.
+      
+    
+  
+
+
+  
+    
+    
+    Options Hash (options):
+    
+      
+        
+          :operator
+          (Object)
+          
+            
+              &mdash; default:
+              Groonga::Operator::OR
+            
+          
+          
+            &mdash; 
+[Groonga::Operator::OR]
+AND]
+BUT]
+ADJUST]
+
+          
+        
+      
+        
+          :result
+          (Object)
+          
+            
+          
+          
+            &mdash; 
+          
+        
+      
+        
+          :name
+          (Object)
+          
+            
+          
+          
+            &mdash; 
+          
+        
+      
+        
+          :syntax
+          (Object)
+          
+            
+              &mdash; default:
+              :query
+            
+          
+          
+            &mdash; query 
+
+          
+        
+      
+        
+          :allow_pragma
+          (Object)
+          
+            
+          
+          
+            &mdash; query
+
+          
+        
+      
+        
+          :allow_column
+          (Object)
+          
+            
+          
+          
+            &mdash; The allow_column
+query
+
+          
+        
+      
+        
+          :allow_update
+          (Object)
+          
+            
+          
+          
+            &mdash; script
+
+          
+        
+      
+    
+  
+
+Yield Parameters:
+
+  
+    
+      
+        record
+      
+      
+        (Groonga::Record)
+      
+      
+      
+    
+  
+
+
+
+      
+    
+      
+      
+        - (Groonga::Hash) select(query, options) 
+        
+  
+    
+
+  
+
+
+  Parameters:
+
+  
+    
+      
+        query
+      
+      
+        (String)
+      
+      
+      
+        &mdash;
+        query 
+
+	
+	[
+	!
+	[
+	
+	[ [
+	
+	[ [
+	=
+	[= [
+	=
+	[= [
+	@
+	[
+
+
+
+	"groonga"
+	column "groonga" 
+	"name:daijiro"
+	column "name" "daijiro" 
+	"description:@groonga"
+	column "description" "groonga" 
+
+      
+    
+  
+    
+      
+        options
+      
+      
+        (::Hash)
+      
+      
+      
+        &mdash;
+        The name and value
+pairs. Omitted names are initialized as the default value.
+      
+    
+  
+
+
+  
+    
+    
+    
+    
+    Options Hash (options):
+    
+      
+        
+          :operator
+          (Object)
+          
+            
+              &mdash; default:
+              Groonga::Operator::OR
+            
+          
+          
+            &mdash; 
+[Groonga::Operator::OR]
+AND]
+BUT]
+ADJUST]
+
+          
+        
+      
+        
+          :result
+          (Object)
+          
+            
+          
+          
+            &mdash; 
+          
+        
+      
+        
+          :name
+          (Object)
+          
+            
+          
+          
+            &mdash; 
+          
+        
+      
+        
+          :syntax
+          (Object)
+          
+            
+              &mdash; default:
+              :query
+            
+          
+          
+            &mdash; query 
+
+          
+        
+      
+        
+          :allow_pragma
+          (Object)
+          
+            
+          
+          
+            &mdash; query
+
+          
+        
+      
+        
+          :allow_column
+          (Object)
+          
+            
+          
+          
+            &mdash; The allow_column
+query
+
+          
+        
+      
+        
+          :allow_update
+          (Object)
+          
+            
+          
+          
+            &mdash; script
+
+          
+        
+      
+    
+  
+
+
+
+      
+    
+      
+      
+        - (Groonga::Hash) select(expression, options) 
+        
+  
+    
+
+  
+
+
+  Parameters:
+
+  
+    
+      
+        expression
+      
+      
+        (Groonga::Expression)
+      
+      
+      
+        &mdash;
+        expression 
+Groonga::ColumnExpressionBuilder 
+      
+    
+  
+    
+      
+        options
+      
+      
+        (::Hash)
+      
+      
+      
+        &mdash;
+        The name and value
+pairs. Omitted names are initialized as the default value.
+      
+    
+  
+
+
+  
+    
+    
+    
+    
+    Options Hash (options):
+    
+      
+        
+          :operator
+          (Object)
+          
+            
+              &mdash; default:
+              Groonga::Operator::OR
+            
+          
+          
+            &mdash; 
+[Groonga::Operator::OR]
+AND]
+BUT]
+ADJUST]
+
+          
+        
+      
+        
+          :result
+          (Object)
+          
+            
+          
+          
+            &mdash; 
+          
+        
+      
+        
+          :name
+          (Object)
+          
+            
+          
+          
+            &mdash; 
+          
+        
+      
+        
+          :syntax
+          (Object)
+          
+            
+              &mdash; default:
+              :query
+            
+          
+          
+            &mdash; query 
+
+          
+        
+      
+        
+          :allow_pragma
+          (Object)
+          
+            
+          
+          
+            &mdash; query
+
+          
+        
+      
+        
+          :allow_column
+          (Object)
+          
+            
+          
+          
+            &mdash; The allow_column
+query
+
+          
+        
+      
+        
+          :allow_update
+          (Object)
+          
+            
+          
+          
+            &mdash; script
+
+          
+        
+      
+    
+  
+
+
+
+      
+    
+  
+
+Returns:
+
+  
+    
+      
+      
+        (Groonga::Hash)
+      
+      
+      
+        &mdash;
+        
+      
+    
+  
+
+
+
+  
+    
+      
+
+
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+    
+    
+      # File 'ext/groonga/rb-grn-column.c', line 374
+
+static VALUE
+rb_grn_column_select (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *table, *column, *result, *expression;
+    grn_operator operator = GRN_OP_OR;
+    VALUE options;
+    VALUE rb_query, condition_or_options;
+    VALUE rb_name, rb_operator, rb_result, rb_syntax;
+    VALUE rb_allow_pragma, rb_allow_column, rb_allow_update;
+    VALUE builder;
+    VALUE rb_expression = Qnil;
+
+    rb_query = Qnil;
+
+    rb_scan_args(argc, argv, 02, condition_or_options, options);
+
+    rb_grn_column_deconstruct(SELF(self), column, context,
+			      NULL, NULL,
+			      NULL, NULL, NULL);
+    table = grn_column_table(context, column);
+
+    if (RVAL2CBOOL(rb_obj_is_kind_of(condition_or_options, rb_cString))) {
+        rb_query = condition_or_options;
+    } else if (RVAL2CBOOL(rb_obj_is_kind_of(condition_or_options,
+                                            rb_cGrnExpression))) {
+        rb_expression = condition_or_options;
+    } else {
+        if (!NIL_P(options))
+            rb_raise(rb_eArgError,
+		     should be [query_string, option_hash], 
+		     [expression, option_hash] 
+		     or [option_hash]: %s,
+		     rb_grn_inspect(rb_ary_new4(argc, argv)));
+        options = condition_or_options;
+    }
+
+    rb_grn_scan_options(options,
+			operator, rb_operator,
+			result, rb_result,
+			name, rb_name,
+			syntax, rb_syntax,
+			allow_pragma, rb_allow_pragma,
+			allow_column, rb_allow_column,
+			allow_update, rb_allow_update,
+			NULL);
+
+    if (!NIL_P(rb_operator))
+	operator = NUM2INT(rb_operator);
+
+    if (NIL_P(rb_result)) {
+	result = grn_table_create(context, NULL, 0, NULL,
+				  GRN_TABLE_HASH_KEY | GRN_OBJ_WITH_SUBREC,
+				  table,
+				  0);
+	rb_result = GRNTABLE2RVAL(context, result, GRN_TRUE);
+    } else {
+	result = RVAL2GRNTABLE(rb_result, context);
+    }
+
+    if (NIL_P(rb_expression)) {
+      builder = rb_grn_column_expression_builder_new(self, rb_name, rb_query);
+      rb_funcall(builder, rb_intern(syntax=), 1, rb_syntax);
+      rb_funcall(builder, rb_intern(allow_pragma=), 1, rb_allow_pragma);
+      rb_funcall(builder, rb_intern(allow_column=), 1, rb_allow_column);
+      rb_funcall(builder, rb_intern(allow_update=), 1, rb_allow_update);
+      rb_expression = rb_grn_column_expression_builder_build(builder);
+    }
+    rb_grn_object_deconstruct(RB_GRN_OBJECT(DATA_PTR(rb_expression)),
+                              expression, NULL,
+                              NULL, NULL, NULL, NULL);
+
+    grn_table_select(context, table, expression, result, operator);
+    rb_grn_context_check(context, self);
+
+    rb_attr(rb_singleton_class(rb_result),
+	    rb_intern(expression),
+	    GRN_TRUE, GRN_FALSE, GRN_FALSE);
+    rb_iv_set(rb_result, @expression, rb_expression);
+
+    return rb_result;
+}
+    
+  
+
+
+    
+      
+  
+  
+    - (Groonga::Table) table 
+  
+
+  
+
+  
+
+  
+    
+
+  
+
+
+  
+  
+  
+    
+
+  
+
+
+  
+Returns:
+
+  
+    
+      
+      
+        (Groonga::Table)
+      
+      
+      
+    
+  
+
+
+
+
+
+
+  
+    
+      
+
+
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+    
+    
+      # File 'ext/groonga/rb-grn-column.c', line 118
+
+static VALUE
+rb_grn_column_get_table (VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *column;
+    grn_obj *table;
+
+    rb_grn_object_deconstruct((RbGrnObject *)(SELF(self)), column, context,
+			      NULL, NULL,
+			      NULL, NULL);
+    table = grn_column_table(context, column);
+    rb_grn_context_check(context, self);
+
+    return GRNOBJECT2RVAL(Qnil, context, table, GRN_FALSE);
+}
+    
+  
+
+
+    
+      
+  
+  
+    - (Object) unlock(options = {}) 
+  
+
+  
+
+  
+
+  
+    column 
+
+  
+
+
+  
+  
+  
+    
+
+  
+
+
+  Parameters:
+
+  
+    
+      
+        options
+      
+      
+        (::Hash)
+      
+      
+      
+        &mdash;
+        
+      
+    
+  
+
+
+  
+    
+    
+    Options Hash (options):
+    
+      
+        
+          :id
+          (Object)
+          
+            
+          
+          
+            &mdash; :id 
+          
+        
+      
+    
+  
+
+
+
+
+
+
+  
+    
+      
+
+
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+    
+    
+      # File 'ext/groonga/rb-grn-column.c', line 465
+
+static VALUE
+rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
+{
+    grn_id id = GRN_ID_NIL;
+    grn_ctx *context;
+    grn_obj *column;
+    grn_rc rc;
+    VALUE options, rb_id;
+
+    rb_scan_args(argc, argv, 01,  options);
+
+    rb_grn_column_deconstruct(SELF(self), column, context,
+			     NULL, NULL,
+			     NULL, NULL, NULL);
+
+    rb_grn_scan_options(options,
+			id, rb_id,
+			NULL);
+
+    if (!NIL_P(rb_id))
+	id = NUM2UINT(rb_id);
+
+    rc = grn_obj_unlock(context, column, id);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}
+    
+  
+
+
+    
+      
+  
+  
+    - (Boolean) vector? 
+  
+
+  
+
+  
+
+  
+    call-seq:
+  column.vector?  true/false
+column true false 
+
+  
+
+
+  
+Returns:
+
+  
+    
+      
+      
+        (Boolean)
+      
+      
+      
+    
+  
+
+Since:
+
+  
+    
+      
+      
+      
+      
+        
+        1.0.5
+      
+    
+  
+
+
+
+  
+    
+      
+
+
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+    
+    
+      # File 'ext/groonga/rb-grn-column.c', line 709
+
+static VALUE
+rb_grn_column_vector_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *column;
+
+    rb_grn_column_deconstruct(SELF(self), column, context,
+			     NULL, NULL,
+			     NULL, NULL, NULL);
+
+    if (column-header.type == GRN_COLUMN_VAR_SIZE 
+	((column-header.flags  GRN_OBJ_COLUMN_TYPE_MASK) ==
+	 GRN_OBJ_COLUMN_VECTOR)) {
+	return Qtrue;
+    } else {
+	return Qfalse;
+    }
+}
+    
+  
+
+
+    
+  
+
+
+
+    
+
+  
+</pre></p></div></div></div></div></div>
     </div>
 
     <div class="sponsors">
@@ -192,5 +2822,4 @@
       </p>
     </div>
 
-</body>
-</html>
+</body></html>
