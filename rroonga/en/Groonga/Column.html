@@ -139,14 +139,16 @@
     <p>テーブルに情報を付加するためのオブジェクト。テーブルに複
 数のカラムを定義することによりレコード毎に複数の情報を付
 加することができる。</p>
-<p>カラムには大きく分けて3種類ある。
-[Groonga::FixSizeColumn]
-  固定長のデータを格納するカラム。
-[Groonga::VariableSizeColumn]
-  可変長のデータを格納するカラム。
-[Groonga::IndexColumn]
-  転置インデックスを格納するカラム。全文検索や参照元レコー
-  ドの検索を行う場合はこのカラムを使用する。</p>
+<p>カラムには大きく分けて3種類ある。</p>
+<dl>
+	<dt><span class='object_link'><a href="FixSizeColumn.html" title="Groonga::FixSizeColumn (class)">FixSizeColumn</a></span></dt>
+	<dd>固定長のデータを格納するカラム。</dd>
+	<dt><span class='object_link'><a href="VariableSizeColumn.html" title="Groonga::VariableSizeColumn (class)">VariableSizeColumn</a></span></dt>
+	<dd>可変長のデータを格納するカラム。</dd>
+	<dt><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span></dt>
+	<dd>転置インデックスを格納するカラム。全文検索や参照元レコー
+ドの検索を行う場合はこのカラムを使用する。</dd>
+</dl>
 <p>固定長データ用カラム・可変長データ用カラムは1つのデータだ
 けを格納するか複数のデータを格納するかを選ぶことができる。
 1つのデータの場合はスカラ値、複数のデータの場合はスカラー
@@ -219,7 +221,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>column</em> が <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> の場合は <ins>true</ins> を返し、
+そうでない場合は <ins>false</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -263,7 +266,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>テーブル名を除いたカラム名を返す。.</p></div></span>
   
 </li>
 
@@ -286,7 +289,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p><em>column</em> をロックする。ロックに失敗した場合は
-Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
+<span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span> 例外が発生する。.</p></div></span>
   
 </li>
 
@@ -332,7 +335,8 @@ Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>column</em> の値がテーブルのレコードとなる場合は <ins>true</ins> を返し、
+そうでない場合は <ins>false</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -376,7 +380,8 @@ Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>column</em> がスカラーカラムの場合は <ins>true</ins> を返し、
+そうでない場合は <ins>false</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -401,8 +406,8 @@ Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
     <span class="summary_desc"><div class='inline'><p>カラムが所属するテーブルからブロックまたは文字列で指定し
 た条件にマッチするレコードを返す。返されたテーブルには
 <ins>expression</ins> という特異メソッドがあり、指定した条件を表し
-ているGroonga::Expressionを取得できる。
-Groonga::Expression#snippetを使うことにより、指定した条件
+ている <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span> を取得できる。
+<span class='object_link'><a href="Expression.html#snippet-instance_method" title="Groonga::Expression#snippet (method)">Expression#snippet</a></span> を使うことにより、指定した条件
 用のスニペットを簡単に生成できる。.</p></div></span>
   
 </li>
@@ -469,7 +474,8 @@ Groonga::Expression#snippetを使うことにより、指定した条件
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>column</em> がベクターカラムの場合は <ins>true</ins> を返し、
+そうでない場合は <ins>false</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -570,34 +576,34 @@ Groonga::Expression#snippetを使うことにより、指定した条件
       <pre class="lines">
 
 
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586
-587
-588
-589
-590
-591
-592
-593
-594
-595
-596</pre>
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 572</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 497</span>
 
 static VALUE
 rb_grn_column_clear_lock (int argc, VALUE *argv, VALUE self)
@@ -644,15 +650,15 @@ rb_grn_column_clear_lock (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  column.index? &#8594; true/false</p>
-<p><em>column</em> がGroonga::IndexColumnの場合は <ins>true</ins> を返し、
+    <p><em>column</em> が <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> の場合は <ins>true</ins> を返し、
 そうでない場合は <ins>false</ins> を返す。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -687,25 +693,25 @@ rb_grn_column_clear_lock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-681
-682
-683
-684
-685
-686
-687
-688
-689
-690
-691
-692
-693
-694
-695
-696</pre>
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 681</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 600</span>
 
 static VALUE
 rb_grn_column_index_p (VALUE self)
@@ -808,47 +814,47 @@ rb_grn_column_index_p (VALUE self)
       <pre class="lines">
 
 
-771
-772
-773
-774
-775
-776
-777
-778
-779
-780
-781
-782
-783
-784
-785
-786
-787
-788
-789
-790
-791
-792
-793
-794
-795
-796
-797
-798
-799
-800
-801
-802
-803
-804
-805
-806
-807
-808</pre>
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 771</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 684</span>
 
 static VALUE
 rb_grn_column_get_indexes (int argc, VALUE *argv, VALUE self)
@@ -904,7 +910,7 @@ rb_grn_column_get_indexes (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
+    <p>テーブル名を除いたカラム名を返す。</p>
 
   </div>
 </div>
@@ -913,8 +919,6 @@ rb_grn_column_get_indexes (int argc, VALUE *argv, VALUE self)
   <div class="examples">
     <p class="tag_title">Examples:</p>
     
-      
-        <p class="example_title"><div class='inline'><p>テーブル名を除いたカラム名を返す。</p></div></p>
       
       <pre class="example code"><span class='id identifier rubyid_items'>items</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Items</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_items'>items</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -932,7 +936,6 @@ rb_grn_column_get_indexes (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-144
 145
 146
 147
@@ -956,10 +959,11 @@ rb_grn_column_get_indexes (int argc, VALUE *argv, VALUE self)
 165
 166
 167
-168</pre>
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 144</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 145</span>
 
 static VALUE
 rb_grn_column_get_local_name (VALUE self)
@@ -1007,7 +1011,7 @@ rb_grn_column_get_local_name (VALUE self)
 </h3><div class="docstring">
   <div class="discussion">
     <p><em>column</em> をロックする。ロックに失敗した場合は
-Groonga::ResourceDeadlockAvoided例外が発生する。</p>
+<span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span> 例外が発生する。</p>
 
   </div>
 </div>
@@ -1125,8 +1129,8 @@ Groonga::ResourceDeadlockAvoided例外が発生する。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>ロックを獲得できなかった場合は <em>:timeout</em>秒間ロックの獲
-得を試みる。 <em>:timeout</em>秒以内にロックを獲得できなかった
+            &mdash; <div class='inline'><p>ロックを獲得できなかった場合は <em>:timeout</em> 秒間ロックの獲
+得を試みる。 <em>:timeout</em> 秒以内にロックを獲得できなかった
 場合は例外が発生する。</p></div>
           
         </li>
@@ -1175,46 +1179,46 @@ Groonga::ResourceDeadlockAvoided例外が発生する。</p>
       <pre class="lines">
 
 
-524
-525
-526
-527
-528
-529
-530
-531
-532
-533
-534
-535
-536
-537
-538
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556
-557
-558
-559
-560</pre>
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 524</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 449</span>
 
 static VALUE
 rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
@@ -1347,32 +1351,32 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-608
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627
-628
-629
-630</pre>
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 608</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 533</span>
 
 static VALUE
 rb_grn_column_is_locked (int argc, VALUE *argv, VALUE self)
@@ -1417,15 +1421,15 @@ rb_grn_column_is_locked (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  column.reference? &#8594; true/false</p>
-<p><em>column</em> の値がテーブルのレコードとなる場合は <ins>true</ins> を返し、
+    <p><em>column</em> の値がテーブルのレコードとなる場合は <ins>true</ins> を返し、
 そうでない場合は <ins>false</ins> を返す。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1460,35 +1464,35 @@ rb_grn_column_is_locked (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-643
-644
-645
-646
-647
-648
-649
-650
-651
-652
-653
-654
-655
-656
-657
-658
-659
-660
-661
-662
-663
-664
-665
-666
-667
-668</pre>
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 643</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 565</span>
 
 static VALUE
 rb_grn_column_reference_p (VALUE self)
@@ -1588,31 +1592,31 @@ rb_grn_column_reference_p (VALUE self)
       <pre class="lines">
 
 
-816
-817
-818
-819
-820
-821
-822
-823
-824
-825
-826
-827
-828
-829
-830
-831
-832
-833
-834
-835
-836
-837</pre>
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 816</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 729</span>
 
 static VALUE
 rb_grn_column_rename (VALUE self, VALUE rb_name)
@@ -1652,15 +1656,15 @@ rb_grn_column_rename (VALUE self, VALUE rb_name)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  column.scalar? &#8594; true/false</p>
-<p><em>column</em> がスカラーカラムの場合は <ins>true</ins> を返し、
+    <p><em>column</em> がスカラーカラムの場合は <ins>true</ins> を返し、
 そうでない場合は <ins>false</ins> を返す。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1695,33 +1699,33 @@ rb_grn_column_rename (VALUE self, VALUE rb_name)
       <pre class="lines">
 
 
-739
-740
-741
-742
-743
-744
-745
-746
-747
-748
-749
-750
-751
-752
-753
-754
-755
-756
-757
-758
-759
-760
-761
-762</pre>
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 739</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 652</span>
 
 static VALUE
 rb_grn_column_scalar_p (VALUE self)
@@ -1772,8 +1776,8 @@ rb_grn_column_scalar_p (VALUE self)
     <p>カラムが所属するテーブルからブロックまたは文字列で指定し
 た条件にマッチするレコードを返す。返されたテーブルには
 <ins>expression</ins> という特異メソッドがあり、指定した条件を表し
-ているGroonga::Expressionを取得できる。
-Groonga::Expression#snippetを使うことにより、指定した条件
+ている <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span> を取得できる。
+<span class='object_link'><a href="Expression.html#snippet-instance_method" title="Groonga::Expression#snippet (method)">Expression#snippet</a></span> を使うことにより、指定した条件
 用のスニペットを簡単に生成できる。</p>
 <pre class="code ruby"><code>  <span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='id identifier rubyid_description_column'>description_column</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_column'>column</span><span class='op'>|</span>
     <span class='id identifier rubyid_column'>column</span> <span class='op'>=~</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span>
@@ -1787,12 +1791,12 @@ Groonga::Expression#snippetを使うことにより、指定した条件
       <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>---</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
   <span class='kw'>end</span></code></pre>
-<p>出力例
-<pre>
-  rroongaの説明文の中で「groonga」が含まれる部分
-  <del>-</del>
-  rroongaは<em>groonga</em>のいわゆるDB-APIの層の&#8230;
-  <del>-</del></p>
+<p>出力例</p>
+<pre class="code text"><code>rroongaの説明文の中で「groonga」が含まれる部分
+---
+rroongaは&lt;em&gt;groonga&lt;/em&gt;のいわゆるDB-APIの層の...
+---
+</code></pre>
 
   </div>
 </div>
@@ -1849,16 +1853,18 @@ pairs. Omitted names are initialized as the default value.</p></div>
           
             &mdash; <div class='inline'><p>マッチしたレコードをどのように扱うか。指定可能な値は以
 下の通り。</p>
-<p>[Groonga::Operator::OR]
-マッチしたレコードを追加。すでにレコードが追加され
-ている場合は何もしない。
-[Groonga::Operator::<span class="caps">AND</span>]
-マッチしたレコードのスコアを増加。マッチしなかった
-レコードを削除。
-[Groonga::Operator::<span class="caps">BUT</span>]
-マッチしたレコードを削除。
-[Groonga::Operator::<span class="caps">ADJUST</span>]
-マッチしたレコードのスコアを増加。</p></div>
+<dl>
+	<dt>Groonga::Operator::OR</dt>
+	<dd>マッチしたレコードを追加。すでにレコードが追加され
+ている場合は何もしない。</dd>
+	<dt>Groonga::Operator::<span class="caps">AND</span></dt>
+	<dd>マッチしたレコードのスコアを増加。マッチしなかった
+レコードを削除。</dd>
+	<dt>Groonga::Operator::<span class="caps">BUT</span></dt>
+	<dd>マッチしたレコードを削除。</dd>
+	<dt>Groonga::Operator::<span class="caps">ADJUST</span></dt>
+	<dd>マッチしたレコードのスコアを増加。</dd>
+</dl></div>
           
         </li>
       
@@ -1896,7 +1902,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p><em>query</em> の構文。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -1909,7 +1915,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
           
             &mdash; <div class='inline'><p>query構文時にプラグマを利用するかどうか。省略した場合は
 利用する。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -1923,7 +1929,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
             &mdash; <div class='inline'><p>The allow_column
 query構文時にカラム指定を利用するかどうか。省略した場合
 は利用する。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -1936,7 +1942,20 @@ query構文時にカラム指定を利用するかどうか。省略した場合
           
             &mdash; <div class='inline'><p>script構文時に更新操作を利用するかどうか。省略した場合
 は利用する。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:allow_leading_not</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>指定語句の先頭に-を付けることで指定した語句を含まないレコードの
+検索を有効にするかどうかを指定する。省略した場合は無効にする。</p>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -1954,6 +1973,18 @@ query構文時にカラム指定を利用するかどうか。省略した場合
         <span class='type'>(<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span></tt>)</span>
       
       
+      
+        &mdash;
+        <div class='inline'><p>検索条件を指定するのに、 <em>record</em> に対して次のメソッドを使って検索条
+件を指定できます。</p>
+<p><code>==</code> 、 <code>=~</code> 、 <code>&lt;</code> 、 <code>&lt;=</code> 、 <code>&gt;</code> 、 <code>&gt;=</code> 、 <code>+</code> 、 <code>-</code> 、
+<code>*</code> 、 <code>/</code> 、 <code>%</code> 、
+<code>match(query, :syntax =&gt; :query/:script, &amp;block)</code>
+（ <em>query</em> に指定した
+<a href="http://groonga.org/ja/docs/reference/grn_expr.html">grn_expr</a>
+とのマッチ）、
+<code>similar_search(text)</code> （ <em>text</em> との類似文書探索）、
+<code>term_extract(text)</code> （ <em>text</em> 内から <em>record</em> の単語を抽出）</p></div>
       
     </li>
   
@@ -2055,16 +2086,18 @@ pairs. Omitted names are initialized as the default value.</p></div>
           
             &mdash; <div class='inline'><p>マッチしたレコードをどのように扱うか。指定可能な値は以
 下の通り。</p>
-<p>[Groonga::Operator::OR]
-マッチしたレコードを追加。すでにレコードが追加され
-ている場合は何もしない。
-[Groonga::Operator::<span class="caps">AND</span>]
-マッチしたレコードのスコアを増加。マッチしなかった
-レコードを削除。
-[Groonga::Operator::<span class="caps">BUT</span>]
-マッチしたレコードを削除。
-[Groonga::Operator::<span class="caps">ADJUST</span>]
-マッチしたレコードのスコアを増加。</p></div>
+<dl>
+	<dt>Groonga::Operator::OR</dt>
+	<dd>マッチしたレコードを追加。すでにレコードが追加され
+ている場合は何もしない。</dd>
+	<dt>Groonga::Operator::<span class="caps">AND</span></dt>
+	<dd>マッチしたレコードのスコアを増加。マッチしなかった
+レコードを削除。</dd>
+	<dt>Groonga::Operator::<span class="caps">BUT</span></dt>
+	<dd>マッチしたレコードを削除。</dd>
+	<dt>Groonga::Operator::<span class="caps">ADJUST</span></dt>
+	<dd>マッチしたレコードのスコアを増加。</dd>
+</dl></div>
           
         </li>
       
@@ -2102,7 +2135,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p><em>query</em> の構文。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -2115,7 +2148,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
           
             &mdash; <div class='inline'><p>query構文時にプラグマを利用するかどうか。省略した場合は
 利用する。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -2129,7 +2162,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
             &mdash; <div class='inline'><p>The allow_column
 query構文時にカラム指定を利用するかどうか。省略した場合
 は利用する。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -2142,7 +2175,20 @@ query構文時にカラム指定を利用するかどうか。省略した場合
           
             &mdash; <div class='inline'><p>script構文時に更新操作を利用するかどうか。省略した場合
 は利用する。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:allow_leading_not</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>指定語句の先頭に-を付けることで指定した語句を含まないレコードの
+検索を有効にするかどうかを指定する。省略した場合は無効にする。</p>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -2177,9 +2223,7 @@ query構文時にカラム指定を利用するかどうか。省略した場合
       
         &mdash;
         <div class='inline'><p>条件を表すオブジェクト
-<em>expression</em> には既に作成済みのGroonga::Expressionを渡す</p>
-<p>ブロックで条件を指定する場合は
-<span class='object_link'><a href="ColumnExpressionBuilder.html" title="Groonga::ColumnExpressionBuilder (class)">Groonga::ColumnExpressionBuilder</a></span> を参照。</p></div>
+<em>expression</em> には既に作成済みの <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span> を渡す。</p></div>
       
     </li>
   
@@ -2220,16 +2264,18 @@ pairs. Omitted names are initialized as the default value.</p></div>
           
             &mdash; <div class='inline'><p>マッチしたレコードをどのように扱うか。指定可能な値は以
 下の通り。</p>
-<p>[Groonga::Operator::OR]
-マッチしたレコードを追加。すでにレコードが追加され
-ている場合は何もしない。
-[Groonga::Operator::<span class="caps">AND</span>]
-マッチしたレコードのスコアを増加。マッチしなかった
-レコードを削除。
-[Groonga::Operator::<span class="caps">BUT</span>]
-マッチしたレコードを削除。
-[Groonga::Operator::<span class="caps">ADJUST</span>]
-マッチしたレコードのスコアを増加。</p></div>
+<dl>
+	<dt>Groonga::Operator::OR</dt>
+	<dd>マッチしたレコードを追加。すでにレコードが追加され
+ている場合は何もしない。</dd>
+	<dt>Groonga::Operator::<span class="caps">AND</span></dt>
+	<dd>マッチしたレコードのスコアを増加。マッチしなかった
+レコードを削除。</dd>
+	<dt>Groonga::Operator::<span class="caps">BUT</span></dt>
+	<dd>マッチしたレコードを削除。</dd>
+	<dt>Groonga::Operator::<span class="caps">ADJUST</span></dt>
+	<dd>マッチしたレコードのスコアを増加。</dd>
+</dl></div>
           
         </li>
       
@@ -2267,7 +2313,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p><em>query</em> の構文。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -2280,7 +2326,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
           
             &mdash; <div class='inline'><p>query構文時にプラグマを利用するかどうか。省略した場合は
 利用する。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -2294,7 +2340,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
             &mdash; <div class='inline'><p>The allow_column
 query構文時にカラム指定を利用するかどうか。省略した場合
 は利用する。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -2307,7 +2353,20 @@ query構文時にカラム指定を利用するかどうか。省略した場合
           
             &mdash; <div class='inline'><p>script構文時に更新操作を利用するかどうか。省略した場合
 は利用する。</p>
-<p>参考: Groonga::Expression#parse.</p></div>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:allow_leading_not</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>指定語句の先頭に-を付けることで指定した語句を含まないレコードの
+検索を有効にするかどうかを指定する。省略した場合は無効にする。</p>
+<p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p></div>
           
         </li>
       
@@ -2343,6 +2402,78 @@ query構文時にカラム指定を利用するかどうか。省略した場合
       <pre class="lines">
 
 
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
 374
 375
 376
@@ -2354,80 +2485,10 @@ query構文時にカラム指定を利用するかどうか。省略した場合
 382
 383
 384
-385
-386
-387
-388
-389
-390
-391
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424
-425
-426
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440
-441
-442
-443
-444
-445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455</pre>
+385</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 374</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 302</span>
 
 static VALUE
 rb_grn_column_select (int argc, VALUE *argv, VALUE self)
@@ -2438,7 +2499,7 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
     VALUE options;
     VALUE rb_query, condition_or_options;
     VALUE rb_name, rb_operator, rb_result, rb_syntax;
-    VALUE rb_allow_pragma, rb_allow_column, rb_allow_update;
+    VALUE rb_allow_pragma, rb_allow_column, rb_allow_update, rb_allow_leading_not;
     VALUE builder;
     VALUE rb_expression = Qnil;
 
@@ -2474,6 +2535,7 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
 			&quot;allow_pragma&quot;, &amp;rb_allow_pragma,
 			&quot;allow_column&quot;, &amp;rb_allow_column,
 			&quot;allow_update&quot;, &amp;rb_allow_update,
+			&quot;allow_leading_not&quot;, &amp;rb_allow_leading_not,
 			NULL);
 
     if (!NIL_P(rb_operator))
@@ -2495,6 +2557,7 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
       rb_funcall(builder, rb_intern(&quot;allow_pragma=&quot;), 1, rb_allow_pragma);
       rb_funcall(builder, rb_intern(&quot;allow_column=&quot;), 1, rb_allow_column);
       rb_funcall(builder, rb_intern(&quot;allow_update=&quot;), 1, rb_allow_update);
+      rb_funcall(builder, rb_intern(&quot;allow_leading_not=&quot;), 1, rb_allow_leading_not);
       rb_expression = rb_grn_column_expression_builder_build(builder);
     }
     rb_grn_object_deconstruct(RB_GRN_OBJECT(DATA_PTR(rb_expression)),
@@ -2564,7 +2627,6 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-118
 119
 120
 121
@@ -2578,10 +2640,11 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
 129
 130
 131
-132</pre>
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 118</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 119</span>
 
 static VALUE
 rb_grn_column_get_table (VALUE self)
@@ -2677,37 +2740,37 @@ rb_grn_column_get_table (VALUE self)
       <pre class="lines">
 
 
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477
-478
-479
-480
-481
-482
-483
-484
-485
-486
-487
-488
-489
-490
-491
-492</pre>
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 465</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 395</span>
 
 static VALUE
 rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
@@ -2753,15 +2816,15 @@ rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  column.vector? &#8594; true/false</p>
-<p><em>column</em> がベクターカラムの場合は <ins>true</ins> を返し、
+    <p><em>column</em> がベクターカラムの場合は <ins>true</ins> を返し、
 そうでない場合は <ins>false</ins> を返す。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -2796,27 +2859,27 @@ rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-709
-710
-711
-712
-713
-714
-715
-716
-717
-718
-719
-720
-721
-722
-723
-724
-725
-726</pre>
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 709</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 625</span>
 
 static VALUE
 rb_grn_column_vector_p (VALUE self)

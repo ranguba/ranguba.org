@@ -74,6 +74,22 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id="filecontents"><h1><span class="caps">NEWS</span></h1>
+<h2 id="2-0-6">2.0.6: 2012-10-25</h2>
+<h3>改良</h3>
+<ul>
+	<li>[dump] インデックスカラム作成のコマンドを最後（loadコマンドの後ろ）に出力するようにした。これは静的インデックス作成にするためのものです。</li>
+	<li>単語抽出機能をサポート。構文は<code>table.select {|record|
+  record.key.term_extract(text)}</code>。</li>
+	<li>selectメソッドを使うときに:allow_leading_notオプションを使用できるようにした。このオプションで「ある単語が含まれない全てのレコード」を検索すると検索が遅くなります。またレコードが多い時にも時間がかかるので注意して使ってください。</li>
+</ul>
+<h3>変更</h3>
+<ul>
+	<li>extconf.rbでデバッグ用ビルドに使うオプションを--with-debugから--enable-debug-logに変更。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>リファレンスの表示崩れを修正。</li>
+</ul>
 <h2 id="2-0-5">2.0.5: 2012-09-28</h2>
 <h3>改良</h3>
 <ul>

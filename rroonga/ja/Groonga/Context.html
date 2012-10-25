@@ -129,13 +129,15 @@
 ケーションでは1つのコンテキストを作成し、それを利用する。
 複数のコンテキストを利用する必要はない。</p>
 <p>デフォルトで使用されるコンテキストは
-Groonga::Context#defaultでアクセスできる。コンテキストを
-指定できる箇所でコンテキストの指定を省略したり <ins>nil</ins> を指定
-した場合はGroonga::Context.defaultが利用される。</p>
+<span class="object_link"><a href="#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> でアクセスできる。コンテキ
+ストを指定できる箇所でコンテキストの指定を省略したり <ins>nil</ins>
+を指定した場合は <span class="object_link"><a href="#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> が利用さ
+れる。</p>
 <p>また、デフォルトのコンテキストは必要になると暗黙のうちに
 作成される。そのため、コンテキストを意識することは少ない。</p>
 <p>暗黙のうちに作成されるコンテキストにオプションを指定する
-場合はGroonga::Context.default_options=を使用する。</p>
+場合は <span class="object_link"><a href="#default_options%3D-class_method" title="Groonga::Context.default_options= (method)">Context.default_options=</a></span> を使用
+する。</p>
 
   </div>
 </div>
@@ -160,7 +162,7 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default-class_method" title="Groonga::Context.default (class method)">+ (Groonga::Context) <strong>Groonga::Context.default</strong> </a>
+      <a href="#default-class_method" title="default (class method)">+ (Groonga::Context) <strong>default</strong> </a>
     
 
     
@@ -183,7 +185,7 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default%3D-class_method" title="Groonga::Context.default= (class method)">+ (Object) <strong>Groonga::Context.default=</strong>(context) </a>
+      <a href="#default%3D-class_method" title="default= (class method)">+ (Object) <strong>default=</strong>(context) </a>
     
 
     
@@ -199,8 +201,8 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
   
     <span class="summary_desc"><div class="inline"><p>デフォルトのコンテキストを設定する。 <ins>nil</ins> を指定すると、
 デフォルトのコンテキストをリセットする。リセットすると、次
-回Groonga::Context.defaultを呼び出したときに新しくコンテ
-キストが作成される。.</p></div></span>
+回 <span class="object_link"><a href="#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を呼び出したときに新しくコ
+ンテキストが作成される。.</p></div></span>
   
 </li>
 
@@ -208,7 +210,7 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_options-class_method" title="Groonga::Context.default_options (class method)">+ (Hash<sup>?</sup>) <strong>Groonga::Context.default_options</strong> </a>
+      <a href="#default_options-class_method" title="default_options (class method)">+ (::Hash or nil) <strong>default_options</strong> </a>
     
 
     
@@ -231,7 +233,7 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_options%3D-class_method" title="Groonga::Context.default_options= (class method)">+ (Object) <strong>Groonga::Context.default_options=</strong>(options) </a>
+      <a href="#default_options%3D-class_method" title="default_options= (class method)">+ (Object) <strong>default_options=</strong>(options) </a>
     
 
     
@@ -247,7 +249,7 @@ Groonga::Context#defaultでアクセスできる。コンテキストを
   
     <span class="summary_desc"><div class="inline"><p>コンテキストを作成する時に利用するデフォルトのオプション
 を設定する。利用可能なオプションは
-Groonga::Context.newを参照。.</p></div></span>
+new を参照。.</p></div></span>
   
 </li>
 
@@ -434,7 +436,7 @@ Groonga::Context.newを参照。.</p></div></span>
 
   
     <span class="summary_desc"><div class="inline"><p>コンテキストが使うエンコーディングを設定する。エンコーディ
-ングの指定のしかたはGroonga::Encodingを参照。.</p></div></span>
+ングの指定のしかたは <span class="object_link"><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。.</p></div></span>
   
 </li>
 
@@ -503,9 +505,10 @@ Groonga::Context.newを参照。.</p></div></span>
 
   
     <span class="summary_desc"><div class="inline"><p>このコンテキストを使って検索したときに検索の挙動をエスカレー
-ションする閾値を返します。エスカレーションの詳細はgroonga
-の検索の仕様に関するドキュメントを参照してください。
-http://groonga.org/docs/spec/search.html#spec-search.</p></div></span>
+ションする閾値を返します。
+エスカレーションの詳細は
+<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a>
+を参照してください。.</p></div></span>
   
 </li>
 
@@ -528,9 +531,10 @@ http://groonga.org/docs/spec/search.html#spec-search.</p></div></span>
 
   
     <span class="summary_desc"><div class="inline"><p>このコンテキストを使って検索したときに検索の挙動をエスカレー
-ションする閾値を設定します。エスカレーションの詳細はgroonga
-の検索の仕様に関するドキュメントを参照してください。
-http://groonga.org/docs/spec/search.html#spec-search.</p></div></span>
+ションする閾値を設定します。
+エスカレーションの詳細は
+<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a>
+を参照してください。.</p></div></span>
   
 </li>
 
@@ -783,7 +787,7 @@ http://groonga.org/docs/spec/search.html#spec-search.</p></div></span>
           
             &mdash; <div class="inline"><p>The encoding
 エンコーディングを指定する。エンコーディングの指定方法
-はGroonga::Encodingを参照。</p></div>
+は <span class="object_link"><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。</p></div>
           
         </li>
       
@@ -909,7 +913,7 @@ rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
       <div class="method_details first">
   <h3 class="signature first" id="default-class_method">
   
-    + (<tt><span class="object_link"><a href="" title="Groonga::Context (class)">Groonga::Context</a></span></tt>) <strong>Groonga::Context.default</strong> 
+    + (<tt><span class="object_link"><a href="" title="Groonga::Context (class)">Groonga::Context</a></span></tt>) <strong>default</strong> 
   
 
   
@@ -920,8 +924,8 @@ rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
     <p>デフォルトのコンテキストを返す。デフォルトのコンテキスト
 が作成されていない場合は暗黙のうちに作成し、それを返す。</p>
 <p>暗黙のうちにコンテキストを作成する場合は、
-Groonga::Context.default_optionsに設定されているオプショ
-ンを利用する。</p>
+<span class="object_link"><a href="#default_options-class_method" title="Groonga::Context.default_options (method)">default_options</a></span> に設定されているオプ
+ションを利用する。</p>
 
   </div>
 </div>
@@ -958,8 +962,6 @@ Groonga::Context.default_optionsに設定されているオプショ
       <pre class="lines">
 
 
-338
-339
 340
 341
 342
@@ -969,10 +971,12 @@ Groonga::Context.default_optionsに設定されているオプショ
 346
 347
 348
-349</pre>
+349
+350
+351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 338</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 340</span>
 
 static VALUE
 rb_grn_context_s_get_default (VALUE self)
@@ -994,7 +998,7 @@ rb_grn_context_s_get_default (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="default=-class_method">
   
-    + (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Context.default=</strong>(context) 
+    + (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>default=</strong>(context) 
   
 
   
@@ -1004,8 +1008,8 @@ rb_grn_context_s_get_default (VALUE self)
   <div class="discussion">
     <p>デフォルトのコンテキストを設定する。 <ins>nil</ins> を指定すると、
 デフォルトのコンテキストをリセットする。リセットすると、次
-回Groonga::Context.defaultを呼び出したときに新しくコンテ
-キストが作成される。</p>
+回 <span class="object_link"><a href="#default-class_method" title="Groonga::Context.default (method)">default</a></span> を呼び出したときに新しくコ
+ンテキストが作成される。</p>
 
   </div>
 </div>
@@ -1020,15 +1024,15 @@ rb_grn_context_s_get_default (VALUE self)
       <pre class="lines">
 
 
-366
 367
 368
 369
 370
-371</pre>
+371
+372</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 366</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 367</span>
 
 static VALUE
 rb_grn_context_s_set_default (VALUE self, VALUE context)
@@ -1044,7 +1048,7 @@ rb_grn_context_s_set_default (VALUE self, VALUE context)
       <div class="method_details ">
   <h3 class="signature " id="default_options-class_method">
   
-    + (<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt><sup>?</sup>) <strong>Groonga::Context.default_options</strong> 
+    + (<tt>::Hash or nil</tt>) <strong>default_options</strong> 
   
 
   
@@ -1073,7 +1077,7 @@ rb_grn_context_s_set_default (VALUE self, VALUE context)
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
+        <span class="type">(<tt>::Hash or nil</tt>)</span>
       
       
       
@@ -1090,14 +1094,14 @@ rb_grn_context_s_set_default (VALUE self, VALUE context)
       <pre class="lines">
 
 
-380
 381
 382
 383
-384</pre>
+384
+385</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 380</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 381</span>
 
 static VALUE
 rb_grn_context_s_get_default_options (VALUE self)
@@ -1112,7 +1116,7 @@ rb_grn_context_s_get_default_options (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="default_options=-class_method">
   
-    + (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>Groonga::Context.default_options=</strong>(options) 
+    + (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>default_options=</strong>(options) 
   
 
   
@@ -1122,7 +1126,7 @@ rb_grn_context_s_get_default_options (VALUE self)
   <div class="discussion">
     <p>コンテキストを作成する時に利用するデフォルトのオプション
 を設定する。利用可能なオプションは
-Groonga::Context.newを参照。</p>
+new を参照。</p>
 
   </div>
 </div>
@@ -1168,9 +1172,9 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
   <h3 class="signature first" id="[]-instance_method">
   
     
-      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(name) </span>
+      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt>) <strong>[]</strong>(name) </span>
     
-      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(id) </span>
+      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt>) <strong>[]</strong>(id) </span>
     
   
 
@@ -1194,7 +1198,7 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(name) </span>
+        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt>) <strong>[]</strong>(name) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1209,7 +1213,7 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt>, <tt>nil</tt>)</span>
+        <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt>)</span>
       
       
       
@@ -1222,7 +1226,7 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt><sup>?</sup>) <strong>[]</strong>(id) </span>
+        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt>) <strong>[]</strong>(id) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1237,7 +1241,7 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span></tt>, <tt>nil</tt>)</span>
+        <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt>)</span>
       
       
       
@@ -1257,6 +1261,9 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
       <pre class="lines">
 
 
+867
+868
+869
 870
 871
 872
@@ -1290,13 +1297,10 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
 900
 901
 902
-903
-904
-905
-906</pre>
+903</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 870</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 867</span>
 
 static VALUE
 rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
@@ -1366,6 +1370,7 @@ rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
       <pre class="lines">
 
 
+462
 463
 464
 465
@@ -1381,11 +1386,10 @@ rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
 475
 476
 477
-478
-479</pre>
+478</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 463</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 462</span>
 
 static VALUE
 rb_grn_context_close (VALUE self)
@@ -1448,18 +1452,18 @@ rb_grn_context_close (VALUE self)
       <pre class="lines">
 
 
+485
+486
 487
 488
 489
 490
 491
 492
-493
-494
-495</pre>
+493</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 487</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 485</span>
 
 static VALUE
 rb_grn_context_closed_p (VALUE self)
@@ -1567,6 +1571,10 @@ rb_grn_context_closed_p (VALUE self)
       <pre class="lines">
 
 
+694
+695
+696
+697
 698
 699
 700
@@ -1598,14 +1606,10 @@ rb_grn_context_closed_p (VALUE self)
 726
 727
 728
-729
-730
-731
-732
-733</pre>
+729</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 698</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 694</span>
 
 static VALUE
 rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
@@ -1758,17 +1762,17 @@ rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+674
+675
+676
+677
 678
 679
 680
-681
-682
-683
-684
-685</pre>
+681</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 678</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 674</span>
 
 static VALUE
 rb_grn_context_get_database (VALUE self)
@@ -1831,14 +1835,14 @@ rb_grn_context_get_database (VALUE self)
       <pre class="lines">
 
 
+541
+542
 543
 544
-545
-546
-547</pre>
+545</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 543</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 541</span>
 
 static VALUE
 rb_grn_context_get_encoding (VALUE self)
@@ -1862,7 +1866,7 @@ rb_grn_context_get_encoding (VALUE self)
 </h3><div class="docstring">
   <div class="discussion">
     <p>コンテキストが使うエンコーディングを設定する。エンコーディ
-ングの指定のしかたはGroonga::Encodingを参照。</p>
+ングの指定のしかたは <span class="object_link"><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。</p>
 
   </div>
 </div>
@@ -1877,6 +1881,9 @@ rb_grn_context_get_encoding (VALUE self)
       <pre class="lines">
 
 
+553
+554
+555
 556
 557
 558
@@ -1885,13 +1892,10 @@ rb_grn_context_get_encoding (VALUE self)
 561
 562
 563
-564
-565
-566
-567</pre>
+564</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 556</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 553</span>
 
 static VALUE
 rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
@@ -1958,6 +1962,8 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
       <pre class="lines">
 
 
+501
+502
 503
 504
 505
@@ -1988,12 +1994,10 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
 530
 531
 532
-533
-534
-535</pre>
+533</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 503</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 501</span>
 
 static VALUE
 rb_grn_context_inspect (VALUE self)
@@ -2045,9 +2049,10 @@ rb_grn_context_inspect (VALUE self)
 </h3><div class="docstring">
   <div class="discussion">
     <p>このコンテキストを使って検索したときに検索の挙動をエスカレー
-ションする閾値を返します。エスカレーションの詳細はgroonga
-の検索の仕様に関するドキュメントを参照してください。
-http://groonga.org/docs/spec/search.html#spec-search</p>
+ションする閾値を返します。
+エスカレーションの詳細は
+<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a>
+を参照してください。</p>
 
   </div>
 </div>
@@ -2084,14 +2089,14 @@ http://groonga.org/docs/spec/search.html#spec-search</p>
       <pre class="lines">
 
 
+598
+599
 600
 601
-602
-603
-604</pre>
+602</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 600</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 598</span>
 
 static VALUE
 rb_grn_context_get_match_escalation_threshold (VALUE self)
@@ -2115,9 +2120,10 @@ rb_grn_context_get_match_escalation_threshold (VALUE self)
 </h3><div class="docstring">
   <div class="discussion">
     <p>このコンテキストを使って検索したときに検索の挙動をエスカレー
-ションする閾値を設定します。エスカレーションの詳細はgroonga
-の検索の仕様に関するドキュメントを参照してください。
-http://groonga.org/docs/spec/search.html#spec-search</p>
+ションする閾値を設定します。
+エスカレーションの詳細は
+<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a>
+を参照してください。</p>
 
   </div>
 </div>
@@ -2132,6 +2138,8 @@ http://groonga.org/docs/spec/search.html#spec-search</p>
       <pre class="lines">
 
 
+613
+614
 615
 616
 617
@@ -2139,12 +2147,10 @@ http://groonga.org/docs/spec/search.html#spec-search</p>
 619
 620
 621
-622
-623
-624</pre>
+622</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 615</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 613</span>
 
 static VALUE
 rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
@@ -2248,6 +2254,10 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
       <pre class="lines">
 
 
+760
+761
+762
+763
 764
 765
 766
@@ -2264,14 +2274,10 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
 777
 778
 779
-780
-781
-782
-783
-784</pre>
+780</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 764</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 760</span>
 
 static VALUE
 rb_grn_context_receive (VALUE self)
@@ -2408,6 +2414,9 @@ rb_grn_context_receive (VALUE self)
       <pre class="lines">
 
 
+575
+576
+577
 578
 579
 580
@@ -2416,13 +2425,10 @@ rb_grn_context_receive (VALUE self)
 583
 584
 585
-586
-587
-588
-589</pre>
+586</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 578</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 575</span>
 
 static VALUE
 rb_grn_context_get_ruby_encoding (VALUE self)
@@ -2609,6 +2615,10 @@ rb_grn_context_get_ruby_encoding (VALUE self)
       <pre class="lines">
 
 
+737
+738
+739
+740
 741
 742
 743
@@ -2621,14 +2631,10 @@ rb_grn_context_get_ruby_encoding (VALUE self)
 750
 751
 752
-753
-754
-755
-756
-757</pre>
+753</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 741</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 737</span>
 
 static VALUE
 rb_grn_context_send (VALUE self, VALUE rb_string)
@@ -2692,6 +2698,10 @@ rb_grn_context_send (VALUE self, VALUE rb_string)
       <pre class="lines">
 
 
+652
+653
+654
+655
 656
 657
 658
@@ -2702,14 +2712,10 @@ rb_grn_context_send (VALUE self, VALUE rb_string)
 663
 664
 665
-666
-667
-668
-669
-670</pre>
+666</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 656</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 652</span>
 
 static VALUE
 rb_grn_context_support_lzo_p (VALUE self)
@@ -2771,6 +2777,9 @@ rb_grn_context_support_lzo_p (VALUE self)
       <pre class="lines">
 
 
+630
+631
+632
 633
 634
 635
@@ -2782,13 +2791,10 @@ rb_grn_context_support_lzo_p (VALUE self)
 641
 642
 643
-644
-645
-646
-647</pre>
+644</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 633</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 630</span>
 
 static VALUE
 rb_grn_context_support_zlib_p (VALUE self)

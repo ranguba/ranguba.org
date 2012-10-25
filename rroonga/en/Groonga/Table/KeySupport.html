@@ -127,8 +127,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>主キーを持つテーブルであるGroonga::Hashと
-Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
+    <p>主キーを持つテーブルである <span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">Hash</a></span> と
+<span class='object_link'><a href="../PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> に主キーの機能を提供するモジュール。</p>
 
   </div>
 </div>
@@ -167,7 +167,7 @@ Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>key</em> に対応するGroonga::Recordを返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>key</em> に対応する <span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Record</a></span> を返す。.</p></div></span>
   
 </li>
 
@@ -257,7 +257,7 @@ Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Groonga::IndexColumnで使用するトークナイザを返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><span class='object_link'><a href="../IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを返す。.</p></div></span>
   
 </li>
 
@@ -279,7 +279,7 @@ Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Groonga::IndexColumnで使用するトークナイザを設定する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><span class='object_link'><a href="../IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを設定する。.</p></div></span>
   
 </li>
 
@@ -353,7 +353,7 @@ Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#key-instance_method" title="#key (instance method)">- (Object) <strong>key</strong>(id) </a>
+      <a href="#key-instance_method" title="#key (instance method)">- (主キー) <strong>key</strong>(id) </a>
     
 
     
@@ -459,7 +459,7 @@ Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
 
   
     <span class="summary_desc"><div class='inline'><p>テーブルでキーを使えるなら <ins>true</ins> 、使えないなら <ins>false</ins> を返
-す。キーを使えないテーブルはGroonga::Arrayだけ。.</p></div></span>
+す。キーを使えないテーブルは <span class='object_link'><a href="../Array.html" title="Groonga::Array (class)">Array</a></span> だけ。.</p></div></span>
   
 </li>
 
@@ -517,8 +517,8 @@ Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>table</em> の <em>key</em> に対応するGroonga::Recordを返す。</p>
-<p>0.9.0から値ではなくGroonga::Recordを返すようになった。</p>
+    <p><em>table</em> の <em>key</em> に対応する <span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Record</a></span> を返す。</p>
+<p>0.9.0から値ではなく <span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Record</a></span> を返すようになった。</p>
 
   </div>
 </div>
@@ -546,6 +546,7 @@ Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
       <pre class="lines">
 
 
+309
 310
 311
 312
@@ -556,11 +557,10 @@ Groonga::PatriciaTrieに主キーの機能を提供するモジュール。</p>
 317
 318
 319
-320
-321</pre>
+320</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 310</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 309</span>
 
 static VALUE
 rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
@@ -634,6 +634,7 @@ rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
       <pre class="lines">
 
 
+361
 362
 363
 364
@@ -661,11 +662,10 @@ rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
 386
 387
 388
-389
-390</pre>
+389</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 362</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 361</span>
 
 static VALUE
 rb_grn_table_key_support_array_set (VALUE self, VALUE rb_key, VALUE rb_values)
@@ -716,12 +716,12 @@ rb_grn_table_key_support_array_set (VALUE self, VALUE rb_key, VALUE rb_values)
 コードの追加に失敗した場合は <ins>nil</ins> を返す。</p>
 <p>すでに同じキーのレコードが存在する場合は追加せずに同じレ
 コードを返す。追加されたかどうかは
-<ins>Groonga::Record#added?</ins> で調べることができる。 <ins>true</ins> を返
+<span class='object_link'><a href="../Record.html#added%3F-instance_method" title="Groonga::Record#added? (method)">Record#added?</a></span> で調べることができる。 <ins>true</ins> を返
 したら追加されたということを示す。</p>
 <p><em>values</em> にはレコードのカラムに設定する値を指定する。省略
 した場合または <ins>nil</ins> を指定した場合はカラムは設定しない。カ
-ラムの値は<tt>{:カラム名1 =&gt; 値1, :カラム名2 =&gt; 値2,
-&#8230;}</tt>と指定する。</p>
+ラムの値は <code>{:カラム名1 =&gt; 値1, :カラム名2 =&gt; 値2,
+...}</code> と指定する。</p>
 
   </div>
 </div>
@@ -834,6 +834,7 @@ rb_grn_table_key_support_add (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+438
 439
 440
 441
@@ -858,11 +859,10 @@ rb_grn_table_key_support_add (int argc, VALUE *argv, VALUE self)
 460
 461
 462
-463
-464</pre>
+463</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 439</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 438</span>
 
 static VALUE
 rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
@@ -906,7 +906,7 @@ rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Groonga::IndexColumnで使用するトークナイザを返す。</p>
+    <p><span class='object_link'><a href="../IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを返す。</p>
 
   </div>
 </div>
@@ -943,6 +943,7 @@ rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+599
 600
 601
 602
@@ -959,11 +960,10 @@ rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
 613
 614
 615
-616
-617</pre>
+616</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 600</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 599</span>
 
 static VALUE
 rb_grn_table_key_support_get_default_tokenizer (VALUE self)
@@ -999,7 +999,7 @@ rb_grn_table_key_support_get_default_tokenizer (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Groonga::IndexColumnで使用するトークナイザを設定する。</p>
+    <p><span class='object_link'><a href="../IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを設定する。</p>
 
   </div>
 </div>
@@ -1035,6 +1035,7 @@ rb_grn_table_key_support_get_default_tokenizer (VALUE self)
       <pre class="lines">
 
 
+639
 640
 641
 642
@@ -1054,11 +1055,10 @@ rb_grn_table_key_support_get_default_tokenizer (VALUE self)
 656
 657
 658
-659
-660</pre>
+659</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 640</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 639</span>
 
 static VALUE
 rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
@@ -1114,6 +1114,7 @@ rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
       <pre class="lines">
 
 
+291
 292
 293
 294
@@ -1121,11 +1122,10 @@ rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
 296
 297
 298
-299
-300</pre>
+299</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 292</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 291</span>
 
 static VALUE
 rb_grn_table_key_support_delete (VALUE self, VALUE rb_id_or_key)
@@ -1229,9 +1229,9 @@ rb_grn_table_key_support_has_key (VALUE self, VALUE rb_key)
   <h3 class="signature " id="id-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>id</strong> </span>
+      <span class="overload">- (<tt>テーブルID</tt>) <strong>id</strong> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>id</strong>(key) </span>
+      <span class="overload">- (<tt>レコードID</tt>) <strong>id</strong>(key) </span>
     
   
 
@@ -1248,6 +1248,67 @@ IDを返す。</p>
 </div>
 <div class="tags">
   
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>テーブルID</tt>) <strong>id</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>テーブルID</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>レコードID</tt>) <strong>id</strong>(key) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>レコードID</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -1255,7 +1316,6 @@ IDを返す。</p>
       <pre class="lines">
 
 
-180
 181
 182
 183
@@ -1273,10 +1333,11 @@ IDを返す。</p>
 195
 196
 197
-198</pre>
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 180</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 181</span>
 
 static VALUE
 rb_grn_table_key_support_get_id (int argc, VALUE *argv, VALUE self)
@@ -1305,7 +1366,7 @@ rb_grn_table_key_support_get_id (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="key-instance_method">
   
-    - (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>key</strong>(id) 
+    - (<tt>主キー</tt>) <strong>key</strong>(id) 
   
 
   
@@ -1319,7 +1380,29 @@ rb_grn_table_key_support_get_id (int argc, VALUE *argv, VALUE self)
 </div>
 <div class="tags">
   
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>主キー</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 
 
 </div><table class="source_code">
@@ -1328,7 +1411,6 @@ rb_grn_table_key_support_get_id (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-206
 207
 208
 209
@@ -1356,10 +1438,11 @@ rb_grn_table_key_support_get_id (int argc, VALUE *argv, VALUE self)
 231
 232
 233
-234</pre>
+234
+235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 206</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 207</span>
 
 static VALUE
 rb_grn_table_key_support_get_key (VALUE self, VALUE rb_id)
@@ -1435,6 +1518,8 @@ rb_grn_table_key_support_get_key (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
+667
+668
 669
 670
 671
@@ -1443,12 +1528,10 @@ rb_grn_table_key_support_get_key (VALUE self, VALUE rb_id)
 674
 675
 676
-677
-678
-679</pre>
+677</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 669</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 667</span>
 
 static VALUE
 rb_grn_table_key_normalize_key_p (VALUE self)
@@ -1495,6 +1578,7 @@ rb_grn_table_key_normalize_key_p (VALUE self)
       <pre class="lines">
 
 
+398
 399
 400
 401
@@ -1524,11 +1608,10 @@ rb_grn_table_key_normalize_key_p (VALUE self)
 425
 426
 427
-428
-429</pre>
+428</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 399</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 398</span>
 
 static VALUE
 rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
@@ -1595,6 +1678,7 @@ rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+565
 566
 567
 568
@@ -1620,11 +1704,10 @@ rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
 588
 589
 590
-591
-592</pre>
+591</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 566</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 565</span>
 
 static VALUE
 rb_grn_table_key_support_set_value (int argc, VALUE *argv, VALUE self)
@@ -1670,7 +1753,7 @@ rb_grn_table_key_support_set_value (int argc, VALUE *argv, VALUE self)
 </h3><div class="docstring">
   <div class="discussion">
     <p>テーブルでキーを使えるなら <ins>true</ins> 、使えないなら <ins>false</ins> を返
-す。キーを使えないテーブルはGroonga::Arrayだけ。</p>
+す。キーを使えないテーブルは <span class='object_link'><a href="../Array.html" title="Groonga::Array (class)">Array</a></span> だけ。</p>
 
   </div>
 </div>
@@ -1698,6 +1781,9 @@ rb_grn_table_key_support_set_value (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+685
+686
+687
 688
 689
 690
@@ -1705,13 +1791,10 @@ rb_grn_table_key_support_set_value (int argc, VALUE *argv, VALUE self)
 692
 693
 694
-695
-696
-697
-698</pre>
+695</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 688</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 685</span>
 
 static VALUE
 rb_grn_table_key_support_support_key_p (VALUE self)
@@ -1773,6 +1856,7 @@ rb_grn_table_key_support_support_key_p (VALUE self)
       <pre class="lines">
 
 
+495
 496
 497
 498
@@ -1796,11 +1880,10 @@ rb_grn_table_key_support_support_key_p (VALUE self)
 516
 517
 518
-519
-520</pre>
+519</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 496</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 495</span>
 
 static VALUE
 rb_grn_table_key_support_get_value (int argc, VALUE *argv, VALUE self)

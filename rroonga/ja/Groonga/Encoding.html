@@ -113,35 +113,59 @@
     <p>groongaがサポートしてるエンコーディングが定義されてい
 るモジュール。</p>
 <p>エンコーディングの指定方法は以下の通り。</p>
-<p><ins>nil</ins>
-  コンテキストと関連付けられているオブジェクトの場合（多
-  くの場合）はコンテキストのエンコーディングを使用。</p>
+<dl>
+	<dt><ins>nil</ins></dt>
+	<dd>コンテキストと関連付けられているオブジェクトの場合（多
+くの場合）はコンテキストのエンコーディングを使用。
 それ以外のオブジェクトの場合（コンテキスト自身など）は
 groongaのビルド時に指定したエンコーディング
-（Groonga::Encoding::DEFAULT）を使用
-<p><ins>:default</ins>
-  groongaのビルド時に指定したエンコーディングを使用。
-  Groonga::Encoding::<span class="caps">DEFAULT</span></p>
-<p><ins>:none</ins>
-  エンコーディングを指定しない。Groonga::Encoding::<span class="caps">NONE</span></p>
-<p><ins>:euc_jp</ins>
-  <span class="caps">EUC</span>-JPを使用。Groonga::Encoding::EUC_JP</p>
-<p>[<tt>“euc-jp”</tt>]
-  <ins>:euc_jp</ins>と同じ。</p>
-<p><ins>:utf8</ins>
-  <span class="caps">UTF</span>-8を使用。Groonga::Encoding::UTF8</p>
-<p>[<tt>“utf-8”</tt>]
-  <ins>:utf8</ins>と同じ。</p>
-<p><ins>:sjis</ins>
-  Shift_JISを使用。Groonga::Encoding::<span class="caps">SJIS</span></p>
-<p><ins>:shift_jis</ins>
-  <ins>:sjis</ins>と同じ。</p>
-<p>[<tt>“shift-jis”</tt>]
-  <ins>:sjis</ins>と同じ。</p>
-<p><ins>:latin1</ins>
-  Latin-1を使用。Groonga::Encoding::LATIN1</p>
-<p><ins>:koi8r</ins>
-  KOI8-Rを使用。Groonga::Encoding::KOI8R</p>
+（ <span class="object_link"><a href="#DEFAULT-constant" title="Groonga::Encoding::DEFAULT (constant)">DEFAULT</a></span> ）を使用</dd>
+</dl>
+<dl>
+	<dt><ins>:default</ins></dt>
+	<dd>groongaのビルド時に指定したエンコーディングを使用。
+<span class="object_link"><a href="#DEFAULT-constant" title="Groonga::Encoding::DEFAULT (constant)">DEFAULT</a></span></dd>
+</dl>
+<dl>
+	<dt><ins>:none</ins></dt>
+	<dd>エンコーディングを指定しない。<span class="object_link"><a href="#NONE-constant" title="Groonga::Encoding::NONE (constant)">NONE</a></span></dd>
+</dl>
+<dl>
+	<dt><ins>:euc_jp</ins></dt>
+	<dd><span class="caps">EUC</span>-JPを使用。<span class="object_link"><a href="#EUC_JP-constant" title="Groonga::Encoding::EUC_JP (constant)">EUC_JP</a></span></dd>
+</dl>
+<dl>
+	<dt><code>"euc-jp"</code></dt>
+	<dd><ins>:euc_jp</ins>と同じ。</dd>
+</dl>
+<dl>
+	<dt><ins>:utf8</ins></dt>
+	<dd><span class="caps">UTF</span>-8を使用。<span class="object_link"><a href="#UTF8-constant" title="Groonga::Encoding::UTF8 (constant)">UTF8</a></span></dd>
+</dl>
+<dl>
+	<dt><code>"utf-8"</code></dt>
+	<dd><ins>:utf8</ins>と同じ。</dd>
+</dl>
+<dl>
+	<dt><ins>:sjis</ins></dt>
+	<dd>Shift_JISを使用。<span class="object_link"><a href="#SJIS-constant" title="Groonga::Encoding::SJIS (constant)">SJIS</a></span></dd>
+</dl>
+<dl>
+	<dt><ins>:shift_jis</ins></dt>
+	<dd><ins>:sjis</ins>と同じ。</dd>
+</dl>
+<dl>
+	<dt><code>"shift-jis"</code></dt>
+	<dd><ins>:sjis</ins>と同じ。</dd>
+</dl>
+<dl>
+	<dt><ins>:latin1</ins></dt>
+	<dd>Latin-1を使用。<span class="object_link"><a href="#LATIN1-constant" title="Groonga::Encoding::LATIN1 (constant)">LATIN1</a></span></dd>
+</dl>
+<dl>
+	<dt><ins>:koi8r</ins></dt>
+	<dd>KOI8-Rを使用。<span class="object_link"><a href="#KOI8R-constant" title="Groonga::Encoding::KOI8R (constant)">KOI8R</a></span></dd>
+</dl>
 
   </div>
 </div>
@@ -420,7 +444,7 @@ rb_grn_encoding_s_get_default (VALUE self)
       
         &mdash;
         <div class="inline"><p>指定するエンコーディング。
-エンコーディングの指定方法はGroonga::Encodingを参照。</p></div>
+エンコーディングの指定方法は <span class="object_link"><a href="" title="Groonga::Encoding (module)">Groonga::Encoding</a></span> を参照。</p></div>
       
     </li>
   

@@ -332,7 +332,7 @@
 （ビュー）を生成する。ブロックを指定すると、そのブロック
 に生成したテーブルが渡され、ブロックを抜けると自動的にテー
 ブルが破棄される。</p>
-<p>ビューにテーブルを追加するときはGroonga::View#add_tableを
+<p>ビューにテーブルを追加するときは <span class="object_link"><a href="#add_table-instance_method" title="Groonga::View#add_table (method)">#add_table</a></span> を
 使う。</p>
 
   </div>
@@ -415,7 +415,7 @@
             
           </span>
           
-            &mdash; <div class="inline"><p>ビューが利用するGroonga::Context。</p></div>
+            &mdash; <div class="inline"><p>ビューが利用する <span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p></div>
           
         </li>
       
@@ -426,7 +426,7 @@
             
           </span>
           
-            &mdash; <div class="inline"><p>ビューの名前。名前をつけると、Groonga::Context#[]に名
+            &mdash; <div class="inline"><p>ビューの名前。名前をつけると、 <span class="object_link"><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
 前を指定してビューを取得することができる。省略すると
 無名ビューになり、ビューIDでのみ取得できる。</p></div>
           
@@ -441,7 +441,7 @@
           
             &mdash; <div class="inline"><p>ビューを保存するパス。パスを指定すると永続ビューとな
 り、プロセス終了後もレコードは保持される。次回起動時に
-Groonga::View.openで保存されたビューを利用することが
+open で保存されたビューを利用することが
 できる。省略すると一時ビューになり、プロセスが終了する
 とビューは破棄される。</p></div>
           
@@ -456,7 +456,7 @@ Groonga::View.openで保存されたビューを利用することが
           
             &mdash; <div class="inline"><p><ins>true</ins> を指定すると永続ビューとなる。 <ins>path</ins> を省略した
 場合は自動的にパスが付加される。 <ins>:context</ins> で指定した
-Groonga::Contextに結びついているデータベースが一時デー
+<span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
 タベースの場合は例外が発生する。</p></div>
           
         </li>
@@ -526,7 +526,7 @@ Groonga::Contextに結びついているデータベースが一時デー
             
           </span>
           
-            &mdash; <div class="inline"><p>ビューが利用するGroonga::Context。</p></div>
+            &mdash; <div class="inline"><p>ビューが利用する <span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p></div>
           
         </li>
       
@@ -537,7 +537,7 @@ Groonga::Contextに結びついているデータベースが一時デー
             
           </span>
           
-            &mdash; <div class="inline"><p>ビューの名前。名前をつけると、Groonga::Context#[]に名
+            &mdash; <div class="inline"><p>ビューの名前。名前をつけると、 <span class="object_link"><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
 前を指定してビューを取得することができる。省略すると
 無名ビューになり、ビューIDでのみ取得できる。</p></div>
           
@@ -552,7 +552,7 @@ Groonga::Contextに結びついているデータベースが一時デー
           
             &mdash; <div class="inline"><p>ビューを保存するパス。パスを指定すると永続ビューとな
 り、プロセス終了後もレコードは保持される。次回起動時に
-Groonga::View.openで保存されたビューを利用することが
+open で保存されたビューを利用することが
 できる。省略すると一時ビューになり、プロセスが終了する
 とビューは破棄される。</p></div>
           
@@ -567,7 +567,7 @@ Groonga::View.openで保存されたビューを利用することが
           
             &mdash; <div class="inline"><p><ins>true</ins> を指定すると永続ビューとなる。 <ins>path</ins> を省略した
 場合は自動的にパスが付加される。 <ins>:context</ins> で指定した
-Groonga::Contextに結びついているデータベースが一時デー
+<span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
 タベースの場合は例外が発生する。</p></div>
           
         </li>
@@ -601,6 +601,22 @@ Groonga::Contextに結びついているデータベースが一時デー
       <pre class="lines">
 
 
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
 104
 105
 106
@@ -630,26 +646,10 @@ Groonga::Contextに結びついているデータベースが一時デー
 130
 131
 132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149</pre>
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 104</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 88</span>
 
 static VALUE
 rb_grn_view_s_create (int argc, VALUE *argv, VALUE klass)
@@ -734,29 +734,29 @@ rb_grn_view_s_create (int argc, VALUE *argv, VALUE klass)
       <pre class="lines">
 
 
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
 157
 158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176</pre>
+159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 157</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 140</span>
 
 static VALUE
 rb_grn_view_add_table (VALUE self, VALUE rb_table)
@@ -866,6 +866,23 @@ rb_grn_view_add_table (VALUE self, VALUE rb_table)
       <pre class="lines">
 
 
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
 234
 235
 236
@@ -879,27 +896,10 @@ rb_grn_view_add_table (VALUE self, VALUE rb_table)
 244
 245
 246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264</pre>
+247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 234</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 217</span>
 
 static VALUE
 rb_grn_view_get_column_value (VALUE self, VALUE rb_id, VALUE rb_name)
@@ -986,6 +986,23 @@ rb_grn_view_get_column_value (VALUE self, VALUE rb_id, VALUE rb_name)
       <pre class="lines">
 
 
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
 185
 186
 187
@@ -1008,27 +1025,10 @@ rb_grn_view_get_column_value (VALUE self, VALUE rb_id, VALUE rb_name)
 204
 205
 206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224</pre>
+207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 185</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 168</span>
 
 static VALUE
 rb_grn_view_each (VALUE self)
@@ -1099,6 +1099,23 @@ rb_grn_view_each (VALUE self)
       <pre class="lines">
 
 
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
 296
 297
 298
@@ -1202,27 +1219,10 @@ rb_grn_view_each (VALUE self)
 396
 397
 398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416</pre>
+399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 296</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-view.c', line 279</span>
 
 static VALUE
 rb_grn_view_sort (int argc, VALUE *argv, VALUE self)

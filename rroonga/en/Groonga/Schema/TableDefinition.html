@@ -136,8 +136,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>スキーマ定義時にGroonga::Schema.create_tableや
-Groonga::Schema#create_tableからブロックに渡されてくる
+    <p>スキーマ定義時に <span class='object_link'><a href="../Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">create_table</a></span> や
+<span class='object_link'><a href="../Schema.html#create_table-instance_method" title="Groonga::Schema#create_table (method)">#create_table</a></span> からブロックに渡されてくる
 オブジェクト</p>
 
   </div>
@@ -585,7 +585,10 @@ Groonga::Schema#create_tableからブロックに渡されてくる
   
 
   
-    <span class="summary_desc"><div class='inline'><p>以下と同様:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>以下と同様:
+<pre class="code ruby"><code><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='id identifier rubyid_“updated_at”'>“updated_at”</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='id identifier rubyid_“created_at”'>“created_at”</span><span class='rparen'>)</span>
+</code></pre>.</p></div></span>
   
 </li>
 
@@ -773,12 +776,12 @@ named <code>name</code>.</p></div></span>
       <pre class="lines">
 
 
-1002
-1003
-1004</pre>
+1019
+1020
+1021</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1002</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1019</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@name</span>
@@ -825,12 +828,12 @@ named <code>name</code>.</p></div></span>
       <pre class="lines">
 
 
-1348
-1349
-1350</pre>
+1366
+1367
+1368</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1348</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1366</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_boolean'>boolean</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bool</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -895,8 +898,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のカラムが
+            &mdash; <div class='inline'><p><ins>true</ins> を指定すると既存の同名のカラムが
 存在していても、強制的に新しいカラムを作成する。</p></div>
           
         </li>
@@ -908,8 +910,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>カラムを保存するパス。</p></div>
+            &mdash; <div class='inline'><p>カラムを保存するパス。</p></div>
           
         </li>
       
@@ -920,8 +921,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p><ins>true</ins> を指定すると永続カラムとなる。+:path+ を省略
+            &mdash; <div class='inline'><p><ins>true</ins> を指定すると永続カラムとなる。 <ins>:path</ins> を省略
 した場合は自動的にパスが付加される。</p></div>
           
         </li>
@@ -936,12 +936,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The type</p>
-<p>カラムの値の格納方法について指定する。
-<b>:scalar</b>
-  スカラ値(単独の値)を格納する。
-<b>:vector</b>
-  値の配列を格納する。</p></div>
+            &mdash; <div class='inline'><p>カラムの値の格納方法について指定する。</p>
+<dl>
+	<dt>:scalar</dt>
+	<dd>スカラ値(単独の値)を格納する。</dd>
+	<dt>:vector</dt>
+	<dd>値の配列を格納する。</dd>
+</dl></div>
           
         </li>
       
@@ -952,12 +953,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The compress</p>
-<p>値の圧縮方法を指定する。省略した場合は、圧縮しない。
-<b>:zlib</b>
-  値をzlib圧縮して格納する。
-<b>:lzo</b>
-  値をlzo圧縮して格納する。</p></div>
+            &mdash; <div class='inline'><p>値の圧縮方法を指定する。省略した場合は、圧縮しない。</p>
+<dl>
+	<dt>:zlib</dt>
+	<dd>値をzlib圧縮して格納する。</dd>
+	<dt>:lzo</dt>
+	<dd>値をlzo圧縮して格納する。</dd>
+</dl></div>
           
         </li>
       
@@ -971,19 +973,19 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-1068
-1069
-1070
-1071
-1072
-1073
-1074
-1075
-1076
-1077</pre>
+1083
+1084
+1085
+1086
+1087
+1088
+1089
+1090
+1091
+1092</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1068</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1083</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnDefinition</span><span class='rbracket'>]</span>
@@ -1027,12 +1029,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-1282
-1283
-1284</pre>
+1297
+1298
+1299</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1282</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1297</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_float'>float</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Float</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1057,15 +1059,22 @@ pairs. Omitted names are initialized as the default value.</p></div>
 スカラムを作成します。複数のカラムを指定することもで
 きます。</p>
 <p><em>target_column_full_name</em> で指定するときはテーブル名
-とカラム名を&quot;.&quot;でつなげます。例えば、「Users」テーブ
-ルの「name」カラムのインデックスカラムを指定する場合
-はこうなります。</p>
-table.index(&#8220;Users.name&#8221;)
+とカラム名を&quot;.&quot;でつなげます。</p>
+<p>例えば、「Users」テーブルの「name」カラムのインデックスカラムを
+指定する場合はこうなります。</p>
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users.name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1116,24 +1125,24 @@ table.index(&#8220;Users.name&#8221;)
       <pre class="lines">
 
 
-1148
-1149
-1150
-1151
-1152
-1153
-1154
-1155
-1156
-1157
-1158
-1159
-1160
-1161
-1162</pre>
+1165
+1166
+1167
+1168
+1169
+1170
+1171
+1172
+1173
+1174
+1175
+1176
+1177
+1178
+1179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1148</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1165</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_target_table_or_target_column_full_name'>target_table_or_target_column_full_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_target_table'>target_table</span><span class='comma'>,</span> <span class='id identifier rubyid_target_columns'>target_columns</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span>
@@ -1214,7 +1223,7 @@ table.index(&#8220;Users.name&#8221;)
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column for available options.</a></span></li>
     
   </ul>
 
@@ -1224,12 +1233,12 @@ table.index(&#8220;Users.name&#8221;)
       <pre class="lines">
 
 
-1212
-1213
-1214</pre>
+1229
+1230
+1231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1212</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1229</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_integer16'>integer16</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int16</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1269,12 +1278,12 @@ table.index(&#8220;Users.name&#8221;)
       <pre class="lines">
 
 
-1221
-1222
-1223</pre>
+1238
+1239
+1240</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1221</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1238</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_integer32'>integer32</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int32</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1314,12 +1323,12 @@ table.index(&#8220;Users.name&#8221;)
       <pre class="lines">
 
 
-1231
-1232
-1233</pre>
+1248
+1249
+1250</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1231</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1248</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_integer64'>integer64</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1388,7 +1397,7 @@ table.index(&#8220;Users.name&#8221;)
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column for available options.</a></span></li>
     
   </ul>
 
@@ -1398,12 +1407,12 @@ table.index(&#8220;Users.name&#8221;)
       <pre class="lines">
 
 
-1201
-1202
-1203</pre>
+1219
+1220
+1221</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1201</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1219</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_integer8'>integer8</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int8</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1440,12 +1449,12 @@ table.index(&#8220;Users.name&#8221;)
       <pre class="lines">
 
 
-1327
-1328
-1329</pre>
+1345
+1346
+1347</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1327</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1345</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_long_text'>long_text</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LongText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1484,13 +1493,13 @@ table.index(&#8220;Users.name&#8221;)
       <pre class="lines">
 
 
-1339
-1340
-1341
-1342</pre>
+1357
+1358
+1359
+1360</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1339</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1357</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reference'>reference</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>||=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_context'>context</span><span class='op'>|</span> <span class='id identifier rubyid_guess_table_name'>guess_table_name</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rbrace'>}</span>
@@ -1526,18 +1535,18 @@ table.index(&#8220;Users.name&#8221;)
       <pre class="lines">
 
 
-1083
-1084
-1085
-1086
-1087
-1088
-1089
-1090
-1091</pre>
+1098
+1099
+1100
+1101
+1102
+1103
+1104
+1105
+1106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1083</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1098</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnRemoveDefinition</span><span class='rbracket'>]</span>
@@ -1567,15 +1576,22 @@ table.index(&#8220;Users.name&#8221;)
     <p><em>target_table</em> の <em>target_column</em> を対象とするインデッ
 クスカラムを削除します。</p>
 <p><em>target_column_full_name</em> で指定するときはテーブル名
-とカラム名を&quot;.&quot;でつなげます。例えば、「Users」テーブ
-ルの「name」カラムのインデックスカラムを削除する場合
-はこうなります。</p>
-table.remove_index(&#8220;Users.name&#8221;)
+とカラム名を&quot;.&quot;でつなげます。</p>
+<p>例えば、「Users」テーブルの「name」カラムのインデックスカラムを
+削除する場合はこうなります。</p>
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_remove_index'>remove_index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users.name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1602,27 +1618,27 @@ table.remove_index(&#8220;Users.name&#8221;)
       <pre class="lines">
 
 
-1176
-1177
-1178
-1179
-1180
-1181
-1182
-1183
-1184
-1185
-1186
-1187
-1188
-1189
-1190
-1191
-1192
-1193</pre>
+1195
+1196
+1197
+1198
+1199
+1200
+1201
+1202
+1203
+1204
+1205
+1206
+1207
+1208
+1209
+1210
+1211
+1212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1176</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1195</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_index'>remove_index</span><span class='lparen'>(</span><span class='id identifier rubyid_target_table_or_target_column_full_name'>target_table_or_target_column_full_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_target_table'>target_table</span><span class='comma'>,</span> <span class='id identifier rubyid_target_columns'>target_columns</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span>
@@ -1720,19 +1736,19 @@ value.</p></div>
       <pre class="lines">
 
 
-1100
-1101
-1102
-1103
-1104
-1105
-1106
-1107
-1108
-1109</pre>
+1115
+1116
+1117
+1118
+1119
+1120
+1121
+1122
+1123
+1124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1100</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnRenameDefinition</span><span class='rbracket'>]</span>
@@ -1780,12 +1796,12 @@ value.</p></div>
       <pre class="lines">
 
 
-1308
-1309
-1310</pre>
+1326
+1327
+1328</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1308</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1326</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1822,12 +1838,12 @@ value.</p></div>
       <pre class="lines">
 
 
-1318
-1319
-1320</pre>
+1336
+1337
+1338</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1318</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1336</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1864,12 +1880,12 @@ value.</p></div>
       <pre class="lines">
 
 
-1291
-1292
-1293</pre>
+1306
+1307
+1308</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1291</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1306</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Time</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1891,8 +1907,9 @@ value.</p></div>
 </h3><div class="docstring">
   <div class="discussion">
     <p>以下と同様:
-  table.time(&#8220;updated_at&#8221;)
-  table.time(&#8220;created_at&#8221;)</p>
+<pre class="code ruby"><code><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='id identifier rubyid_“updated_at”'>“updated_at”</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='id identifier rubyid_“created_at”'>“created_at”</span><span class='rparen'>)</span>
+</code></pre></p>
 
   </div>
 </div>
@@ -1905,13 +1922,13 @@ value.</p></div>
       <pre class="lines">
 
 
-1298
-1299
-1300
-1301</pre>
+1316
+1317
+1318
+1319</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1298</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1316</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_timestamps'>timestamps</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>created_at</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1978,7 +1995,7 @@ named <code>name</code>.</p>
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column for available options.</a></span></li>
     
   </ul>
 
@@ -1988,12 +2005,12 @@ named <code>name</code>.</p>
       <pre class="lines">
 
 
-1360
-1361
-1362</pre>
+1377
+1378
+1379</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1360</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1377</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tokyo_geo_point'>tokyo_geo_point</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokyoGeoPoint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2062,7 +2079,7 @@ named <code>name</code>.</p>
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column for available options.</a></span></li>
     
   </ul>
 
@@ -2072,12 +2089,12 @@ named <code>name</code>.</p>
       <pre class="lines">
 
 
-1253
-1254
-1255</pre>
+1268
+1269
+1270</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1253</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1268</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer16'>unsigned_integer16</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt16</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2117,12 +2134,12 @@ named <code>name</code>.</p>
       <pre class="lines">
 
 
-1262
-1263
-1264</pre>
+1277
+1278
+1279</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1262</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer32'>unsigned_integer32</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt32</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2162,12 +2179,12 @@ named <code>name</code>.</p>
       <pre class="lines">
 
 
-1272
-1273
-1274</pre>
+1287
+1288
+1289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1272</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1287</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer64'>unsigned_integer64</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2236,7 +2253,7 @@ named <code>name</code>.</p>
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column for available options.</a></span></li>
     
   </ul>
 
@@ -2246,12 +2263,12 @@ named <code>name</code>.</p>
       <pre class="lines">
 
 
-1242
-1243
-1244</pre>
+1258
+1259
+1260</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1242</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1258</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer8'>unsigned_integer8</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt8</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2321,7 +2338,7 @@ named <code>name</code>.</p>
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">for available @options@.</a></span></li>
+      <li><span class='object_link'><a href="#column-instance_method" title="Groonga::Schema::TableDefinition#column (method)">#column for available options.</a></span></li>
     
   </ul>
 
@@ -2331,12 +2348,12 @@ named <code>name</code>.</p>
       <pre class="lines">
 
 
-1371
-1372
-1373</pre>
+1387
+1388
+1389</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1371</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1387</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_wgs84_geo_point'>wgs84_geo_point</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WGS84GeoPoint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>

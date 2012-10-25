@@ -239,7 +239,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>database</em> のロックを強制的に解除する。.</p></div></span>
   
 </li>
 
@@ -261,7 +261,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>database</em> が使用しているリソースを開放する。これ以降 <em>database</em> を
+使うことはできない。.</p></div></span>
   
 </li>
 
@@ -354,7 +355,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p><em>database</em> をロックする。ロックに失敗した場合は
-Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
+<span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span> 例外が発生する。.</p></div></span>
   
 </li>
 
@@ -376,7 +377,7 @@ Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>database</em> がロックされていれば <ins>true</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -384,7 +385,7 @@ Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#tables-instance_method" title="#tables (instance method)">- (Array&lt;Groonga::Table] tables defined in the database) <strong>tables</strong> </a>
+      <a href="#tables-instance_method" title="#tables (instance method)">- (Array&lt;Groonga::Table&gt;) <strong>tables</strong> </a>
     
 
     
@@ -398,7 +399,7 @@ Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Array&lt;Groonga::Table] tables defined in the database.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Tables defined in the database.</p></div></span>
   
 </li>
 
@@ -420,7 +421,7 @@ Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>database</em> の最終更新時刻を現在時刻にする。.</p></div></span>
   
 </li>
 
@@ -442,7 +443,7 @@ Groonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>database</em> のロックを解除する。.</p></div></span>
   
 </li>
 
@@ -551,7 +552,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。省略すると
-Groonga::Context.defaultを利用する。</p></div>
+<span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を利用する。</p></div>
           
         </li>
       
@@ -624,7 +625,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。省略すると
-Groonga::Context.defaultを利用する。</p></div>
+<span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を利用する。</p></div>
           
         </li>
       
@@ -675,6 +676,7 @@ Groonga::Context.defaultを利用する。</p></div>
       <pre class="lines">
 
 
+252
 253
 254
 255
@@ -704,11 +706,10 @@ Groonga::Context.defaultを利用する。</p></div>
 279
 280
 281
-282
-283</pre>
+282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 253</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 252</span>
 
 static VALUE
 rb_grn_database_initialize (int argc, VALUE *argv, VALUE self)
@@ -785,7 +786,7 @@ rb_grn_database_initialize (int argc, VALUE *argv, VALUE self)
 
   <div class="docstring">
   <div class="discussion">
-    
+    <p>作成されたデータベースを返す。</p>
 
   </div>
 </div>
@@ -839,15 +840,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。省略すると
-Groonga::Context.defaultを利用する。</p></div>
+<span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を利用する。</p></div>
           
         </li>
       
     </ul>
   
-
-
-</div>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -860,11 +858,14 @@ Groonga::Context.defaultを利用する。</p></div>
       
       
         &mdash;
-        <div class='inline'><p>作成されたデータベース</p></div>
+        <div class='inline'><p>作成されたデータベースを返す。</p></div>
       
     </li>
   
 </ul>
+
+</div>
+
 
 </div><table class="source_code">
   <tr>
@@ -872,6 +873,8 @@ Groonga::Context.defaultを利用する。</p></div>
       <pre class="lines">
 
 
+185
+186
 187
 188
 189
@@ -914,12 +917,10 @@ Groonga::Context.defaultを利用する。</p></div>
 226
 227
 228
-229
-230
-231</pre>
+229</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 187</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 185</span>
 
 static VALUE
 rb_grn_database_s_create (int argc, VALUE *argv, VALUE klass)
@@ -1220,14 +1221,14 @@ rb_grn_database_s_open (int argc, VALUE *argv, VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  database.clear_lock</p>
-<p><em>database</em> のロックを強制的に解除する。</p>
+    <p><em>database</em> のロックを強制的に解除する。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 
 </div><table class="source_code">
   <tr>
@@ -1235,6 +1236,11 @@ rb_grn_database_s_open (int argc, VALUE *argv, VALUE klass)
       <pre class="lines">
 
 
+495
+496
+497
+498
+499
 500
 501
 502
@@ -1242,15 +1248,10 @@ rb_grn_database_s_open (int argc, VALUE *argv, VALUE klass)
 504
 505
 506
-507
-508
-509
-510
-511
-512</pre>
+507</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 500</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 495</span>
 
 static VALUE
 rb_grn_database_clear_lock (VALUE self)
@@ -1281,15 +1282,15 @@ rb_grn_database_clear_lock (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  database.close</p>
-<p><em>database</em> が使用しているリソースを開放する。これ以降 <em>database</em> を
+    <p><em>database</em> が使用しているリソースを開放する。これ以降 <em>database</em> を
 使うことはできない。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 
 </div><table class="source_code">
   <tr>
@@ -1297,6 +1298,9 @@ rb_grn_database_clear_lock (VALUE self)
       <pre class="lines">
 
 
+143
+144
+145
 146
 147
 148
@@ -1304,13 +1308,10 @@ rb_grn_database_clear_lock (VALUE self)
 150
 151
 152
-153
-154
-155
-156</pre>
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 146</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 143</span>
 
 static VALUE
 rb_grn_database_close (VALUE self)
@@ -1437,6 +1438,16 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
 566
 567
 568
@@ -1450,20 +1461,10 @@ values are -4..22. -4 means all segments are defraged.
 576
 577
 578
-579
-580
-581
-582
-583
-584
-585
-586
-587
-588
-589</pre>
+579</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 566</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 556</span>
 
 static VALUE
 rb_grn_database_defrag (int argc, VALUE *argv, VALUE self)
@@ -1746,7 +1747,6 @@ raised for missing object.</p></div>
       <pre class="lines">
 
 
-356
 357
 358
 359
@@ -1805,10 +1805,11 @@ raised for missing object.</p></div>
 412
 413
 414
-415</pre>
+415
+416</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 356</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 357</span>
 
 static VALUE
 rb_grn_database_each (int argc, VALUE *argv, VALUE self)
@@ -1891,7 +1892,7 @@ rb_grn_database_each (int argc, VALUE *argv, VALUE self)
 </h3><div class="docstring">
   <div class="discussion">
     <p><em>database</em> をロックする。ロックに失敗した場合は
-Groonga::ResourceDeadlockAvoided例外が発生する。</p>
+<span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span> 例外が発生する。</p>
 
   </div>
 </div>
@@ -2035,6 +2036,8 @@ Groonga::ResourceDeadlockAvoided例外が発生する。</p>
       <pre class="lines">
 
 
+458
+459
 460
 461
 462
@@ -2063,12 +2066,10 @@ Groonga::ResourceDeadlockAvoided例外が発生する。</p>
 485
 486
 487
-488
-489
-490</pre>
+488</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 460</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 458</span>
 
 static VALUE
 rb_grn_database_lock (int argc, VALUE *argv, VALUE self)
@@ -2117,14 +2118,14 @@ rb_grn_database_lock (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  database.locked?</p>
-<p><em>database</em> がロックされていれば <ins>true</ins> を返す。</p>
+    <p><em>database</em> がロックされていれば <ins>true</ins> を返す。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -2145,20 +2146,20 @@ rb_grn_database_lock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+514
+515
+516
+517
+518
+519
+520
+521
 522
 523
-524
-525
-526
-527
-528
-529
-530
-531
-532</pre>
+524</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 522</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 514</span>
 
 static VALUE
 rb_grn_database_is_locked (VALUE self)
@@ -2179,7 +2180,7 @@ rb_grn_database_is_locked (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="tables-instance_method">
   
-    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span>] tables defined in the database</tt>) <strong>tables</strong> 
+    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span>&gt;</tt>) <strong>tables</strong> 
   
 
   
@@ -2187,7 +2188,7 @@ rb_grn_database_is_locked (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Array&lt;Groonga::Table] tables defined in the database</p>
+    <p>Tables defined in the database.</p>
 
   </div>
 </div>
@@ -2199,12 +2200,12 @@ rb_grn_database_is_locked (VALUE self)
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span>] tables defined in the database</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span>&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>Array&lt;Groonga::Table] tables defined in the database</p></div>
+        <div class='inline'><p>tables defined in the database.</p></div>
       
     </li>
   
@@ -2246,14 +2247,14 @@ rb_grn_database_is_locked (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  database.touch</p>
-<p><em>database</em> の最終更新時刻を現在時刻にする。</p>
+    <p><em>database</em> の最終更新時刻を現在時刻にする。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 
 </div><table class="source_code">
   <tr>
@@ -2261,21 +2262,21 @@ rb_grn_database_is_locked (VALUE self)
       <pre class="lines">
 
 
-542
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553</pre>
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 542</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 531</span>
 
 static VALUE
 rb_grn_database_touch (VALUE self)
@@ -2305,14 +2306,14 @@ rb_grn_database_touch (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  database.unlock</p>
-<p><em>database</em> のロックを解除する。</p>
+    <p><em>database</em> のロックを解除する。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 
 </div><table class="source_code">
   <tr>
@@ -2320,6 +2321,8 @@ rb_grn_database_touch (VALUE self)
       <pre class="lines">
 
 
+423
+424
 425
 426
 427
@@ -2333,12 +2336,10 @@ rb_grn_database_touch (VALUE self)
 435
 436
 437
-438
-439
-440</pre>
+438</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 425</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 423</span>
 
 static VALUE
 rb_grn_database_unlock (VALUE self)

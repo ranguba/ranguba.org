@@ -137,7 +137,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>キー、値、スコアなど種々の値へのアクセスをカプセル化した
-オブジェクト。Groonga::Table#columnで取得できる。</p>
+オブジェクト。 <span class='object_link'><a href="Table.html#column-instance_method" title="Groonga::Table#column (method)">Table#column</a></span> で取得できる。</p>
 
   </div>
 </div>
@@ -213,17 +213,22 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>アクセサ名を返す。</p>
-<pre class="code"><code>
-<span class='id identifier rubyid_items'>items</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Items</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_items'>items</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_id</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='comment'># =&gt; nil
-</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_local_name'>local_name</span> <span class='comment'># =&gt; &quot;_id&quot;
-</span></code></pre>
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><span class='id identifier rubyid_items'>items</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Items</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_items'>items</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_id</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='comment'># =&gt; nil
+</span><span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_local_name'>local_name</span> <span class='comment'># =&gt; &quot;_id&quot;</span></pre>
+    
+  </div>
+
   
 
 
@@ -233,6 +238,8 @@
       <pre class="lines">
 
 
+87
+88
 89
 90
 91
@@ -244,12 +251,10 @@
 97
 98
 99
-100
-101
-102</pre>
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-accessor.c', line 89</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-accessor.c', line 87</span>
 
 static VALUE
 rb_grn_accessor_get_local_name (VALUE self)

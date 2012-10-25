@@ -421,7 +421,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Groonga::Record#==と同じ。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><span class='object_link'><a href="#%3D%3D-instance_method" title="Groonga::Record#== (method)">#==</a></span> と同じ。.</p></div></span>
   
 </li>
 
@@ -513,7 +513,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のカラムが索引カラム
-（Groonga::IndexColumn）であるなら <ins>true</ins> を返す。.</p></div></span>
+（ <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> ）であるなら <ins>true</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -537,7 +537,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>id</em> に対応するレコードを作成する。_values_ には各
+    <span class="summary_desc"><div class='inline'><p><em>table</em> の <em>id</em> に対応するレコードを作成する。 <em>values</em> には各
 カラムに設定する値を以下のような形式で指定する。.</p></div></span>
   
 </li>
@@ -583,7 +583,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p>レコードが所属するテーブルをロックする。ロックに失敗した場
-合はGroonga::ResourceDeadlockAvoided例外が発生する。.</p></div></span>
+合は <span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span> 例外が発生する。.</p></div></span>
   
 </li>
 
@@ -808,9 +808,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のGroonga::IndexColumnの search メソッドを呼ぶ。
+    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> の search メソッドを呼ぶ。
 <em>query</em> と <em>options</em> はそのメソッドにそのまま渡される。詳しく
-はGroonga::IndexColumn#searchを参照。.</p></div></span>
+は <span class='object_link'><a href="IndexColumn.html#search-instance_method" title="Groonga::IndexColumn#search (method)">IndexColumn#search</a></span> を参照。.</p></div></span>
   
 </li>
 
@@ -855,7 +855,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Groonga::Record#scoreが利用できる場合は <ins>true</ins> を
+    <span class="summary_desc"><div class='inline'><p><span class='object_link'><a href="#score-instance_method" title="Groonga::Record#score (method)">#score</a></span> が利用できる場合は <ins>true</ins> を
 返す。.</p></div></span>
   
 </li>
@@ -878,7 +878,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Groonga::Record#n_sub_recordsが利用できる場合は <ins>true</ins> を
+    <span class="summary_desc"><div class='inline'><p><span class='object_link'><a href="#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">#n_sub_records</a></span> が利用できる場合は <ins>true</ins> を
 返す。.</p></div></span>
   
 </li>
@@ -1011,13 +1011,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>table</em> の <em>id</em> に対応するレコードを作成する。_values_ には各
+    <p><em>table</em> の <em>id</em> に対応するレコードを作成する。 <em>values</em> には各
 カラムに設定する値を以下のような形式で指定する。</p>
-[
-[&#8220;カラム名&#8221;, 値],
-[&#8220;カラム名&#8221;, 値],
-&#8230;,
+<pre class="code ruby"><code>[
+ [&quot;カラム名&quot;, 値],
+ [&quot;カラム名&quot;, 値],
+ ...,
 ]
+</code></pre>
 
   </div>
 </div>
@@ -1030,19 +1031,19 @@
       <pre class="lines">
 
 
-32
-33
-34
 35
 36
 37
 38
 39
 40
-41</pre>
+41
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span>
@@ -1082,9 +1083,6 @@
       <pre class="lines">
 
 
-313
-314
-315
 316
 317
 318
@@ -1100,10 +1098,13 @@
 328
 329
 330
-331</pre>
+331
+332
+333
+334</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 313</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 316</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>=\z</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -1208,13 +1209,13 @@
       <pre class="lines">
 
 
-46
-47
-48
-49</pre>
+49
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='kw'>and</span>
@@ -1249,12 +1250,12 @@
       <pre class="lines">
 
 
-63
-64
-65</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_column_value'>column_value</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_column_name'>column_name</span><span class='comma'>,</span> <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -1289,12 +1290,12 @@
       <pre class="lines">
 
 
-69
-70
-71</pre>
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_set_column_value'>set_column_value</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_column_name'>column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -1341,12 +1342,12 @@
       <pre class="lines">
 
 
-292
-293
-294</pre>
+295
+296
+297</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 292</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 295</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_added?'>added?</span>
   <span class='ivar'>@added</span>
@@ -1381,12 +1382,12 @@
       <pre class="lines">
 
 
-75
-76
-77</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_append'>append</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_append'>append</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -1423,13 +1424,13 @@
       <pre class="lines">
 
 
-224
-225
-226
-227</pre>
+227
+228
+229
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 227</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span>
   <span class='id identifier rubyid_accessor'>accessor</span> <span class='op'>=</span> <span class='const'>AttributeHashBuilder</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -1465,12 +1466,12 @@
       <pre class="lines">
 
 
-259
-260
-261</pre>
+262
+263
+264</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 259</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 262</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clear_lock'>clear_lock</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_clear_lock'>clear_lock</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='ivar'>@id</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -1504,12 +1505,12 @@
       <pre class="lines">
 
 
-215
-216
-217</pre>
+218
+219
+220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 215</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_columns'>columns</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_columns'>columns</span>
@@ -1544,12 +1545,12 @@
       <pre class="lines">
 
 
-210
-211
-212</pre>
+213
+214
+215</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 213</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_decrement!'>decrement!</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_delta'>delta</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_decrement!'>decrement!</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_delta'>delta</span><span class='rparen'>)</span>
@@ -1583,12 +1584,12 @@
       <pre class="lines">
 
 
-230
-231
-232</pre>
+233
+234
+235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 230</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 233</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='rparen'>)</span>
@@ -1609,7 +1610,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Groonga::Record#==と同じ。</p>
+    <p><span class='object_link'><a href="#%3D%3D-instance_method" title="Groonga::Record#== (method)">#==</a></span> と同じ。</p>
 
   </div>
 </div>
@@ -1635,12 +1636,12 @@
       <pre class="lines">
 
 
-52
-53
-54</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>self</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span>
@@ -1675,12 +1676,12 @@
       <pre class="lines">
 
 
-58
-59
-60</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_hash'>hash</span> <span class='op'>^</span> <span class='ivar'>@id</span><span class='period'>.</span><span class='id identifier rubyid_hash'>hash</span>
@@ -1728,12 +1729,12 @@
       <pre class="lines">
 
 
-93
-94
-95</pre>
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_have_column?'>have_column?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>not</span> <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_normalize_column_name'>normalize_column_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1768,12 +1769,12 @@
       <pre class="lines">
 
 
-204
-205
-206</pre>
+207
+208
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 204</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 207</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_increment!'>increment!</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_delta'>delta</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_increment!'>increment!</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_delta'>delta</span><span class='rparen'>)</span>
@@ -1795,7 +1796,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>名前が <em>name</em> のカラムが索引カラム
-（Groonga::IndexColumn）であるなら <ins>true</ins> を返す。</p>
+（ <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> ）であるなら <ins>true</ins> を返す。</p>
 
   </div>
 </div>
@@ -1821,12 +1822,12 @@
       <pre class="lines">
 
 
-104
-105
-106</pre>
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index_column?'>index_column?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_index?'>index?</span>
@@ -1848,7 +1849,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>レコードの主キーを返す。</p>
-<p><em>record</em> が所属するテーブルがGroonga:::Arrayの場合は常
+<p><em>record</em> が所属するテーブルが <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> の場合は常
 に <ins>nil</ins> を返す。</p>
 
   </div>
@@ -1862,16 +1863,16 @@
       <pre class="lines">
 
 
-133
-134
-135
 136
 137
 138
-139</pre>
+139
+140
+141
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_key'>key</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_support_key?'>support_key?</span>
@@ -1897,7 +1898,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>レコードが所属するテーブルをロックする。ロックに失敗した場
-合はGroonga::ResourceDeadlockAvoided例外が発生する。</p>
+合は <span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">Groonga::ResourceDeadlockAvoided</a></span> 例外が発生する。</p>
 <p>ブロックを指定した場合はブロックを抜けたときにunlockする。</p>
 <p>利用可能な <em>option</em> は以下の通り。</p>
 
@@ -1957,12 +1958,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-245
-246
-247</pre>
+248
+249
+250</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 245</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 248</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lock'>lock</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_lock'>lock</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='ivar'>@id</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
@@ -2010,12 +2011,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-266
-267
-268</pre>
+269
+270
+271</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 266</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 269</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_locked?'>locked?</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_locked?'>locked?</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='ivar'>@id</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -2038,7 +2039,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
   <div class="discussion">
     <p>主キーの値が同一であったレコードの件数を返す。検索結果とし
 て生成されたテーブルのみに定義される。</p>
-<p>Groonga::Record#support_sub_records?でこの値を利用でき
+<p><span class='object_link'><a href="#support_sub_records%3F-instance_method" title="Groonga::Record#support_sub_records? (method)">#support_sub_records?</a></span> でこの値を利用でき
 るかがわかる。</p>
 
   </div>
@@ -2052,12 +2053,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-182
-183
-184</pre>
+185
+186
+187</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_n_sub_records'>n_sub_records</span>
   <span class='kw'>self</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_nsubrecs</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
@@ -2092,12 +2093,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-81
-82
-83</pre>
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepend'>prepend</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_prepend'>prepend</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -2119,7 +2120,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
 </h3><div class="docstring">
   <div class="discussion">
     <p>レコードを一意に識別するための情報を返す。</p>
-<p><em>record</em> が所属するテーブルがGroonga:::Arrayの場合はID
+<p><em>record</em> が所属するテーブルが <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> の場合はID
 を返し、それ以外の場合は主キーを返す。</p>
 
   </div>
@@ -2133,16 +2134,16 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-144
-145
-146
 147
 148
 149
-150</pre>
+150
+151
+152
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_record_id'>record_id</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_support_key?'>support_key?</span>
@@ -2184,12 +2185,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-153
-154
-155</pre>
+156
+157
+158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 153</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_record_raw_id'>record_raw_id</span>
   <span class='ivar'>@id</span>
@@ -2236,12 +2237,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-98
-99
-100</pre>
+101
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reference_column?'>reference_column?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_reference?'>reference?</span>
@@ -2263,7 +2264,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
 </h3><div class="docstring">
   <div class="discussion">
     <p>名前が <em>name</em> のカラムの値がスカラーであるなら <ins>true</ins> を返す。</p>
-<p>@since: 1.0.5</p>
 
   </div>
 </div>
@@ -2282,6 +2282,20 @@ pairs. Omitted names are initialized as the default value.</p></div>
     </li>
   
 </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.5</p></div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -2289,12 +2303,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-118
-119
-120</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scalar_column?'>scalar_column?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_scalar?'>scalar?</span>
@@ -2329,12 +2343,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-160
-161
-162</pre>
+163
+164
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_score'>score</span>
   <span class='kw'>self</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_score</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
@@ -2386,12 +2400,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-167
-168
-169</pre>
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_score='>score=</span><span class='lparen'>(</span><span class='id identifier rubyid_new_score'>new_score</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_score</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_new_score'>new_score</span>
@@ -2412,9 +2426,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のGroonga::IndexColumnの search メソッドを呼ぶ。
+    <p>名前が <em>name</em> の <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> の search メソッドを呼ぶ。
 <em>query</em> と <em>options</em> はそのメソッドにそのまま渡される。詳しく
-はGroonga::IndexColumn#searchを参照。</p>
+は <span class='object_link'><a href="IndexColumn.html#search-instance_method" title="Groonga::IndexColumn#search (method)">IndexColumn#search</a></span> を参照。</p>
 
   </div>
 </div>
@@ -2427,12 +2441,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-125
-126
-127</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2480,12 +2494,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-87
-88
-89</pre>
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_support_key?'>support_key?</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_support_key?'>support_key?</span>
@@ -2506,7 +2520,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Groonga::Record#scoreが利用できる場合は <ins>true</ins> を
+    <p><span class='object_link'><a href="#score-instance_method" title="Groonga::Record#score (method)">#score</a></span> が利用できる場合は <ins>true</ins> を
 返す。</p>
 
   </div>
@@ -2533,12 +2547,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-173
-174
-175</pre>
+176
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 176</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_support_score?'>support_score?</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_have_column?'>have_column?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_score</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># TODO delegate to Table
@@ -2559,7 +2573,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Groonga::Record#n_sub_recordsが利用できる場合は <ins>true</ins> を
+    <p><span class='object_link'><a href="#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">#n_sub_records</a></span> が利用できる場合は <ins>true</ins> を
 返す。</p>
 
   </div>
@@ -2586,12 +2600,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-188
-189
-190</pre>
+191
+192
+193</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_support_sub_records?'>support_sub_records?</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_support_sub_records?'>support_sub_records?</span>
@@ -2626,12 +2640,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-252
-253
-254</pre>
+255
+256
+257</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 252</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 255</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unlock'>unlock</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_unlock'>unlock</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='ivar'>@id</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -2678,12 +2692,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-271
-272
-273</pre>
+274
+275
+276</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 271</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 274</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_valid_id?'>valid_id?</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='rparen'>)</span>
@@ -2717,12 +2731,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-193
-194
-195</pre>
+196
+197
+198</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 193</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 196</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -2756,12 +2770,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-198
-199
-200</pre>
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 201</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value='>value=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@table</span><span class='period'>.</span><span class='id identifier rubyid_set_value'>set_value</span><span class='lparen'>(</span><span class='ivar'>@id</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -2783,7 +2797,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
 </h3><div class="docstring">
   <div class="discussion">
     <p>名前が <em>name</em> のカラムの値がベクターであるなら <ins>true</ins> を返す。</p>
-<p>@since: 1.0.5</p>
 
   </div>
 </div>
@@ -2802,6 +2815,20 @@ pairs. Omitted names are initialized as the default value.</p></div>
     </li>
   
 </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>1.0.5</p></div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -2809,12 +2836,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-111
-112
-113</pre>
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/record.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_vector_column?'>vector_column?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_vector?'>vector?</span>

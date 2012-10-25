@@ -181,7 +181,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p>IDが <em>id</em> であるレコードを高速に全文検索するため転置索引を作
-成する。多くの場合、Groonga::Table#define_index_columnで
+成する。多くの場合、 <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> で
 <ins>:source</ins> オプションを指定することにより、自動的に全文検索
 用の索引は更新されるので、明示的にこのメソッドを使うこと
 は少ない。.</p></div></span>
@@ -229,7 +229,7 @@
 
   
     <span class="summary_desc"><div class='inline'><p><em>object</em> から <em>query</em> に対応するオブジェクトを検索し、見つかっ
-たオブジェクトのIDがキーになっているGroonga::Hashを返す。.</p></div></span>
+たオブジェクトのIDがキーになっている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。.</p></div></span>
   
 </li>
 
@@ -273,7 +273,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>インデックス対象となっているカラムの配列を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>インデックス対象となっている <span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Column</a></span> の配列を返す。.</p></div></span>
   
 </li>
 
@@ -317,7 +317,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>column</em> が位置情報も格納する場合は <ins>true</ins> を返します。.</p></div></span>
   
 </li>
 
@@ -339,7 +339,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>column</em> が段落情報も格納する場合は <ins>true</ins> を返します。.</p></div></span>
   
 </li>
 
@@ -361,7 +361,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>column</em> がウェイト情報も格納する場合は <ins>true</ins> を返します。.</p></div></span>
   
 </li>
 
@@ -413,7 +413,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>IDが <em>id</em> であるレコードを高速に全文検索するため転置索引を作
-成する。多くの場合、Groonga::Table#define_index_columnで
+成する。多くの場合、 <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> で
 <ins>:source</ins> オプションを指定することにより、自動的に全文検索
 用の索引は更新されるので、明示的にこのメソッドを使うこと
 は少ない。</p>
@@ -548,8 +548,8 @@ pairs. Omitted names are initialized as the default value</p></div>
           
             &mdash; <div class='inline'><p>段落番号を指定する。省略した場合は1を指定したとみなされ
 る。
-Groonga::Table#define_index_columnで
-<tt>{:with_section =&gt; true}</tt>を指定していなければい
+<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> で
+<code>{:with_section =&gt; true}</code> を指定していなければい
 けない。</p></div>
           
         </li>
@@ -574,7 +574,7 @@ Groonga::Table#define_index_columnで
           </span>
           
             &mdash; <div class='inline'><p>新しい値を指定する。 <em>value</em> を指定した場合と <em>options</em> で
-<tt>{:value =&gt; value}</tt>を指定した場合は同じ動作とな
+<code>{:value =&gt; value}</code> を指定した場合は同じ動作とな
 る。</p></div>
           
         </li>
@@ -739,6 +739,18 @@ rb_grn_index_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
 550
 551
 552
@@ -754,22 +766,10 @@ rb_grn_index_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
 562
 563
 564
-565
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577</pre>
+565</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 550</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 538</span>
 
 static VALUE
 rb_grn_index_column_open_cursor (VALUE self, VALUE rb_table_cursor)
@@ -816,7 +816,7 @@ rb_grn_index_column_open_cursor (VALUE self, VALUE rb_table_cursor)
 </h3><div class="docstring">
   <div class="discussion">
     <p><em>object</em> から <em>query</em> に対応するオブジェクトを検索し、見つかっ
-たオブジェクトのIDがキーになっているGroonga::Hashを返す。</p>
+たオブジェクトのIDがキーになっている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。</p>
 
   </div>
 </div>
@@ -824,8 +824,7 @@ rb_grn_index_column_open_cursor (VALUE self, VALUE rb_table_cursor)
   
   <div class="docstring">
   <div class="discussion">
-    <p>[&#8230;]
-  &#8230;</p>
+    
 
   </div>
 </div>
@@ -877,9 +876,9 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>以下のどれかの値を指定する。 <ins>nil</ins> , <tt>&#8220;or&#8221;</tt>, <tt>&#8220;||&#8221;</tt>,
-<tt>&#8220;and&#8221;</tt>, <tt>&#8220;+&#8221;</tt>, <tt>&#8220;&amp;&amp;&#8221;</tt>, <tt>&#8220;but&#8221;</tt>,
-<tt>&#8220;not&#8221;</tt>, <tt>&#8220;-&#8221;</tt>, <tt>&#8220;adjust&#8221;</tt>, <tt>&#8220;&gt;&#8221;</tt>。
+            &mdash; <div class='inline'><p>以下のどれかの値を指定する。 <ins>nil</ins> , <code>"or"</code> , <code>"||"</code> ,
+<code>"and"</code> , <code>"+"</code> , <code>"&amp;&amp;"</code> , <code>"but"</code> ,
+<code>"not"</code> , <code>"-"</code> , <code>"adjust"</code> , <code>"&gt;"</code> 。
 それぞれ以下のようになる。（FIXME: 「以下」）</p></div>
           
         </li>
@@ -946,9 +945,6 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p></div>
     </ul>
   
 
-
-</div>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -963,12 +959,18 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p></div>
   
 </ul>
 
+</div>
+
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+430
+431
+432
 433
 434
 435
@@ -1018,13 +1020,10 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p></div>
 479
 480
 481
-482
-483
-484
-485</pre>
+482</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 433</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 430</span>
 
 static VALUE
 rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
@@ -1137,17 +1136,17 @@ rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+390
 391
 392
 393
 394
 395
 396
-397
-398</pre>
+397</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 391</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 390</span>
 
 static VALUE
 rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
@@ -1173,14 +1172,20 @@ rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>インデックス対象となっているカラムの配列を返す。</p>
+    <p>インデックス対象となっている <span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Column</a></span> の配列を返す。</p>
 
   </div>
 </div>
 <div class="tags">
   
-  
+  <div class="docstring">
+  <div class="discussion">
+    
 
+  </div>
+</div>
+<div class="tags">
+  
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1191,13 +1196,12 @@ rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
       
       
       
-        &mdash;
-        <div class='inline'><p>インデックス対象となっている
-<span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Column</a></span>の配列</p></div>
-      
     </li>
   
 </ul>
+
+</div>
+
 
 </div><table class="source_code">
   <tr>
@@ -1205,6 +1209,7 @@ rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
       <pre class="lines">
 
 
+228
 229
 230
 231
@@ -1245,11 +1250,10 @@ rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
 266
 267
 268
-269
-270</pre>
+269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 229</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 228</span>
 
 static VALUE
 rb_grn_index_column_get_sources (VALUE self)
@@ -1351,6 +1355,7 @@ rb_grn_index_column_get_sources (VALUE self)
       <pre class="lines">
 
 
+342
 343
 344
 345
@@ -1390,11 +1395,10 @@ rb_grn_index_column_get_sources (VALUE self)
 379
 380
 381
-382
-383</pre>
+382</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 343</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 342</span>
 
 static VALUE
 rb_grn_index_column_set_sources (VALUE self, VALUE rb_sources)
@@ -1453,14 +1457,14 @@ rb_grn_index_column_set_sources (VALUE self, VALUE rb_sources)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  column.with_position? &#8594; true/false</p>
-<p><em>column</em> が位置情報も格納する場合は <ins>true</ins> を返します。</p>
+    <p><em>column</em> が位置情報も格納する場合は <ins>true</ins> を返します。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1481,21 +1485,21 @@ rb_grn_index_column_set_sources (VALUE self, VALUE rb_sources)
       <pre class="lines">
 
 
-537
-538
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548</pre>
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 537</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 525</span>
 
 static VALUE
 rb_grn_index_column_with_position_p (VALUE self)
@@ -1525,14 +1529,14 @@ rb_grn_index_column_with_position_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  column.with_section? &#8594; true/false</p>
-<p><em>column</em> が段落情報も格納する場合は <ins>true</ins> を返します。</p>
+    <p><em>column</em> が段落情報も格納する場合は <ins>true</ins> を返します。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1553,21 +1557,21 @@ rb_grn_index_column_with_position_p (VALUE self)
       <pre class="lines">
 
 
+489
+490
+491
+492
+493
+494
 495
 496
 497
 498
 499
-500
-501
-502
-503
-504
-505
-506</pre>
+500</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 495</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 489</span>
 
 static VALUE
 rb_grn_index_column_with_section_p (VALUE self)
@@ -1597,14 +1601,14 @@ rb_grn_index_column_with_section_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  column.with_weight? &#8594; true/false</p>
-<p><em>column</em> がウェイト情報も格納する場合は <ins>true</ins> を返します。</p>
+    <p><em>column</em> がウェイト情報も格納する場合は <ins>true</ins> を返します。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1625,21 +1629,21 @@ rb_grn_index_column_with_section_p (VALUE self)
       <pre class="lines">
 
 
+507
+508
+509
+510
+511
+512
+513
+514
+515
 516
 517
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527</pre>
+518</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 516</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 507</span>
 
 static VALUE
 rb_grn_index_column_with_weight_p (VALUE self)

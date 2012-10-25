@@ -253,7 +253,7 @@ rroongaの操作方法を紹介します。</p>
 プリケーションにしてみましょう。</p>
 <p>まず、ユーザ情報とコメント情報を格納するテーブルを追加して、
 下図のようなテーブル構成にします。</p>
-<p>http://qwik.jp/senna/senna2.files/rect4605.png</p>
+<p><img src="http://qwik.jp/senna/senna2.files/rect4605.png" alt="" /></p>
 <p>まず、 <code>Users</code> テーブルを追加します。</p>
 <pre class="code irb"><code>&gt;&gt; Groonga::Schema.create_table(&quot;Users&quot;, :type =&gt; :hash) do |table|
 ?&gt;     table.text(&quot;name&quot;)
@@ -326,7 +326,7 @@ rroongaの操作方法を紹介します。</p>
 &gt;&gt;   end
 =&gt; nil
 </code></pre>
-<p><code>itmes</code> と <code>comments</code> をインスタンス変数に代入しているのはメ
+<p><code>items</code> と <code>comments</code> をインスタンス変数に代入しているのはメ
 ソッド内からでも見えるようにするためです。</p>
 <p><code>add_bookmark</code> は以下のような手順を実行しています。</p>
 <ul>

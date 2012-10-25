@@ -93,6 +93,28 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="2-0-6">2.0.6: 2012-10-25</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>[dump] Put index columns at the bottom (after loads).
+  It is for using offline index construction.</li>
+	<li>Added term_extract in Table#select by <code>table.select {|record|
+  record.key.term_extract(text)}</code> syntax.</li>
+	<li>Supported :allow_leading_not as a option of #select.
+  You should use this option carefully. It takes a long time to search
+  all records which doesn&#8217;t include a word. In addition, when the
+  number of records is large, to search them with this option is
+  slowly.</li>
+</ul>
+<h3>Changes</h3>
+<ul>
+	<li>Changed option name for debug build in extconf.rb from &#8212;with-debug
+  to &#8212;enable-debug-log.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed display collapse in the references.</li>
+</ul>
 <h2 id="2-0-5">2.0.5: 2012-09-28</h2>
 <h3>Improvements</h3>
 <ul>

@@ -132,8 +132,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>スキーマ定義時にGroonga::Schema.create_viewや
-Groonga::Schema#create_viewからブロックに渡されてくる
+    <p>スキーマ定義時に <span class='object_link'><a href="../Schema.html#create_view-class_method" title="Groonga::Schema.create_view (method)">create_view</a></span> や
+<span class='object_link'><a href="../Schema.html#create_view-instance_method" title="Groonga::Schema#create_view (method)">#create_view</a></span> からブロックに渡されてくる
 オブジェクト</p>
 
   </div>
@@ -208,7 +208,7 @@ Groonga::Schema#create_viewからブロックに渡されてくる
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が_table_のテーブルをビューに追加する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>名前が <em>table</em> のテーブルをビューに追加する。.</p></div></span>
   
 </li>
 
@@ -246,12 +246,12 @@ Groonga::Schema#create_viewからブロックに渡されてくる
       <pre class="lines">
 
 
-1640
-1641
-1642</pre>
+1656
+1657
+1658</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1640</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1656</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@name</span>
@@ -279,7 +279,7 @@ Groonga::Schema#create_viewからブロックに渡されてくる
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が_table_のテーブルをビューに追加する。</p>
+    <p>名前が <em>table</em> のテーブルをビューに追加する。</p>
 
   </div>
 </div>
@@ -292,14 +292,14 @@ Groonga::Schema#create_viewからブロックに渡されてくる
       <pre class="lines">
 
 
-1675
-1676
-1677
-1678
-1679</pre>
+1691
+1692
+1693
+1694
+1695</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1675</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1691</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='kw'>if</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Symbol</span><span class='rparen'>)</span>

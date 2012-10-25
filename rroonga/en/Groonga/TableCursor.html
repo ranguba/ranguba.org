@@ -139,7 +139,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>テーブルに登録されているレコードを順番に取り出すための
-オブジェクト。Groonga::Table#open_cursorで生成できる。</p>
+オブジェクト。 <span class='object_link'><a href="Table.html#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">Groonga::Table#open_cursor</a></span> で生成できる。</p>
 
   </div>
 </div>
@@ -148,7 +148,7 @@
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="ArrayCursor.html" title="Groonga::ArrayCursor (class)">ArrayCursor</a></span>, <span class='object_link'><a href="DoubleArrayCursor.html" title="Groonga::DoubleArrayCursor (class)">DoubleArrayCursor</a></span>, <span class='object_link'><a href="DoubleArrayTrieCursor.html" title="Groonga::DoubleArrayTrieCursor (class)">DoubleArrayTrieCursor</a></span>, <span class='object_link'><a href="HashCursor.html" title="Groonga::HashCursor (class)">HashCursor</a></span>, <span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">PatriciaTrieCursor</a></span>, <span class='object_link'><a href="ViewCursor.html" title="Groonga::ViewCursor (class)">ViewCursor</a></span></p>
+  <p class="children"><span class='object_link'><a href="ArrayCursor.html" title="Groonga::ArrayCursor (class)">ArrayCursor</a></span>, <span class='object_link'><a href="DoubleArrayTrieCursor.html" title="Groonga::DoubleArrayTrieCursor (class)">DoubleArrayTrieCursor</a></span>, <span class='object_link'><a href="HashCursor.html" title="Groonga::HashCursor (class)">HashCursor</a></span>, <span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">PatriciaTrieCursor</a></span>, <span class='object_link'><a href="ViewCursor.html" title="Groonga::ViewCursor (class)">ViewCursor</a></span></p>
 </div>
 <h2>Defined Under Namespace</h2>
 <p class="children">
@@ -192,7 +192,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>object</em> が使用しているリソースを開放する。これ以降 <em>object</em> を
+使うことはできない。.</p></div></span>
   
 </li>
 
@@ -214,7 +215,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>object</em> が開放済みの場合は <ins>true</ins> を返し、そうでない場合は
+<ins>false</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -350,15 +352,15 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  object.close</p>
-<p><em>object</em> が使用しているリソースを開放する。これ以降 <em>object</em> を
+    <p><em>object</em> が使用しているリソースを開放する。これ以降 <em>object</em> を
 使うことはできない。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 
 </div><table class="source_code">
   <tr>
@@ -366,6 +368,9 @@
       <pre class="lines">
 
 
+567
+568
+569
 570
 571
 572
@@ -379,13 +384,10 @@
 580
 581
 582
-583
-584
-585
-586</pre>
+583</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 570</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 567</span>
 
 VALUE
 rb_grn_object_close (VALUE self)
@@ -420,15 +422,15 @@ rb_grn_object_close (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  object.closed? &#8594; true/false</p>
-<p><em>object</em> が開放済みの場合は+true+を返し、そうでない場合は
+    <p><em>object</em> が開放済みの場合は <ins>true</ins> を返し、そうでない場合は
 <ins>false</ins> を返す。</p>
 
   </div>
 </div>
 <div class="tags">
   
+  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -449,21 +451,21 @@ rb_grn_object_close (VALUE self)
       <pre class="lines">
 
 
+616
+617
+618
+619
+620
+621
+622
+623
+624
 625
 626
-627
-628
-629
-630
-631
-632
-633
-634
-635
-636</pre>
+627</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 625</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 616</span>
 
 VALUE
 rb_grn_object_closed_p (VALUE self)
@@ -508,6 +510,7 @@ rb_grn_object_closed_p (VALUE self)
       <pre class="lines">
 
 
+185
 186
 187
 188
@@ -523,11 +526,10 @@ rb_grn_object_closed_p (VALUE self)
 198
 199
 200
-201
-202</pre>
+201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-cursor.c', line 186</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-cursor.c', line 185</span>
 
 static VALUE
 rb_grn_table_cursor_delete (VALUE self)
@@ -599,6 +601,7 @@ rb_grn_table_cursor_delete (VALUE self)
       <pre class="lines">
 
 
+236
 237
 238
 239
@@ -618,11 +621,10 @@ rb_grn_table_cursor_delete (VALUE self)
 253
 254
 255
-256
-257</pre>
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-cursor.c', line 237</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-cursor.c', line 236</span>
 
 static VALUE
 rb_grn_table_cursor_each (VALUE self)
@@ -698,6 +700,7 @@ rb_grn_table_cursor_each (VALUE self)
       <pre class="lines">
 
 
+209
 210
 211
 212
@@ -716,11 +719,10 @@ rb_grn_table_cursor_each (VALUE self)
 225
 226
 227
-228
-229</pre>
+228</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-cursor.c', line 210</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-cursor.c', line 209</span>
 
 static VALUE
 rb_grn_table_cursor_next (VALUE self)
@@ -764,8 +766,14 @@ rb_grn_table_cursor_next (VALUE self)
 </div>
 <div class="tags">
   
-  
+  <div class="docstring">
+  <div class="discussion">
+    <p>カレントレコードの値</p>
 
+  </div>
+</div>
+<div class="tags">
+  
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -782,6 +790,9 @@ rb_grn_table_cursor_next (VALUE self)
     </li>
   
 </ul>
+
+</div>
+
 
 </div><table class="source_code">
   <tr>
