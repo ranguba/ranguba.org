@@ -74,6 +74,19 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id="filecontents"><h1><span class="caps">NEWS</span></h1>
+<h2 id="2-0-7">2.0.7: 2012-11-29</h2>
+<h3>改良</h3>
+<ul>
+	<li>レコードIDに対応するレコードを返すGroonga::Posting#recordを追加。</li>
+	<li>語彙表のIDに対応するレコードを返すGroonga::Posting#termを追加。</li>
+	<li>カラムをinspectしたときに、そのカラムが可変長のサイズであることを示すGRN_OBJ_KEY_VAR_SIZEを出力するようにした。</li>
+	<li>[Type] Groonga::Typeに読み取り用アクセサの#sizeメソッドと#flagsメソッドを追加。</li>
+	<li>[Type] Groonga::Typeに次のメソッドを追加：#fixed_size?, #variable_size?, #unsigned_integer?, #integer?, #float?, #geo_point?</li>
+</ul>
+<h3>変更</h3>
+<ul>
+	<li>クエリログ関連の機能を削除した。クエリログ関連の機能はgroonga-query-logというgemに移動しました。このgemは近日中にリリースする予定です。</li>
+</ul>
 <h2 id="2-0-6">2.0.6: 2012-10-25</h2>
 <h3>改良</h3>
 <ul>

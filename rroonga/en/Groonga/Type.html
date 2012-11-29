@@ -128,7 +128,7 @@
   
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">ext/groonga/rb-grn-type.c<span class="defines">,<br />
-  ext/groonga/rb-grn-type.c</span>
+  ext/groonga/rb-grn-type.c,<br /> ext/groonga/rb-grn-type.c</span>
 </dd>
   
 </dl>
@@ -421,6 +421,94 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#fixed_size%3F-instance_method" title="#fixed_size? (instance method)">- (Boolean) <strong>fixed_size?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flags-instance_method" title="#flags (instance method)">- (Object) <strong>flags</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#float%3F-instance_method" title="#float? (instance method)">- (Boolean) <strong>float?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#geo_point%3F-instance_method" title="#geo_point? (instance method)">- (Boolean) <strong>geo_point?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#initialize-instance_method" title="#new (instance method)">- (Object) <strong>new</strong>(name, options = {}) </a>
     
 
@@ -438,6 +526,98 @@
 
   
     <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> の型を作成する。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#integer%3F-instance_method" title="#integer? (instance method)">- (Boolean) <strong>integer?</strong> </a>
+    
+
+    
+      (also: #int?)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#size-instance_method" title="#size (instance method)">- (Object) <strong>size</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unsigned_integer%3F-instance_method" title="#unsigned_integer? (instance method)">- (Boolean) <strong>unsigned_integer?</strong> </a>
+    
+
+    
+      (also: #uint?)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#variable_size%3F-instance_method" title="#variable_size? (instance method)">- (Boolean) <strong>variable_size?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -710,6 +890,504 @@ rb_grn_type_initialize (int argc, VALUE *argv, VALUE self)
   
 </div>
 
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="fixed_size?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>fixed_size?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-type.c', line 154</span>
+
+static VALUE
+rb_grn_type_fixed_size_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *type;
+
+    type = RVAL2GRNOBJECT(self, &amp;context);
+
+    return CBOOL2RVAL(!(type-&gt;header.flags &amp; GRN_OBJ_KEY_VAR_SIZE));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flags-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>flags</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-type.c', line 143</span>
+
+static VALUE
+rb_grn_type_flags (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *type;
+
+    type = RVAL2GRNOBJECT(self, &amp;context);
+
+    return UINT2NUM(type-&gt;header.flags);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="float?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>float?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-type.c', line 198</span>
+
+static VALUE
+rb_grn_type_float_p (VALUE self)
+{
+    grn_obj *type;
+    grn_obj_flags key_type;
+
+    type = RVAL2GRNOBJECT(self, NULL);
+    key_type = type-&gt;header.flags &amp; GRN_OBJ_KEY_MASK;
+    return CBOOL2RVAL(key_type == GRN_OBJ_KEY_FLOAT);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="geo_point?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>geo_point?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-type.c', line 209</span>
+
+static VALUE
+rb_grn_type_geo_point_p (VALUE self)
+{
+    grn_obj *type;
+    grn_obj_flags key_type;
+
+    type = RVAL2GRNOBJECT(self, NULL);
+    key_type = type-&gt;header.flags &amp; GRN_OBJ_KEY_MASK;
+    return CBOOL2RVAL(key_type == GRN_OBJ_KEY_GEO_POINT);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="integer?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>integer?</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='int?-instance_method'>int?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-type.c', line 187</span>
+
+static VALUE
+rb_grn_type_integer_p (VALUE self)
+{
+    grn_obj *type;
+    grn_obj_flags key_type;
+
+    type = RVAL2GRNOBJECT(self, NULL);
+    key_type = type-&gt;header.flags &amp; GRN_OBJ_KEY_MASK;
+    return CBOOL2RVAL(key_type == GRN_OBJ_KEY_INT);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="size-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>size</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-type.c', line 132</span>
+
+static VALUE
+rb_grn_type_size (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *type;
+
+    type = RVAL2GRNOBJECT(self, &amp;context);
+
+    return UINT2NUM(grn_obj_get_range(context, type));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unsigned_integer?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>unsigned_integer?</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='uint?-instance_method'>uint?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-type.c', line 176</span>
+
+static VALUE
+rb_grn_type_unsigned_integer_p (VALUE self)
+{
+    grn_obj *type;
+    grn_obj_flags key_type;
+
+    type = RVAL2GRNOBJECT(self, NULL);
+    key_type = type-&gt;header.flags &amp; GRN_OBJ_KEY_MASK;
+    return CBOOL2RVAL(key_type == GRN_OBJ_KEY_UINT);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="variable_size?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>variable_size?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-type.c', line 165</span>
+
+static VALUE
+rb_grn_type_variable_size_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *type;
+
+    type = RVAL2GRNOBJECT(self, &amp;context);
+
+    return CBOOL2RVAL(type-&gt;header.flags &amp; GRN_OBJ_KEY_VAR_SIZE);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 

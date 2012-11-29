@@ -93,6 +93,25 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="2-0-7">2.0.7: 2012-11-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Added Groonga::Posting#record. This method returns the record for
+  the record ID in table.</li>
+	<li>Added Groonga::Posting#term. This method returns the record for the
+  term ID in table.</li>
+	<li>Supported GRN_OBJ_KEY_VAR_SIZE for Groonga::Type#inspect.
+  GRN_OBJ_KEY_CAR_SIZE specifies its column is variable size.</li>
+	<li>[Type] Added reader methods to Groonga::Type (#size and #flags).</li>
+	<li>[Type] Added predicate methods to Groonga::Type.
+  Added methods are #fixed_size?, #variable_size?, #unsigned_integer?,
+  #integer?, #float? and #geo_point?.</li>
+</ul>
+<h3>Changes</h3>
+<ul>
+	<li>Removed query log related codes.
+  This feature moved to groonga-query-log gem and it is relased soon.</li>
+</ul>
 <h2 id="2-0-6">2.0.6: 2012-10-25</h2>
 <h3>Improvements</h3>
 <ul>
