@@ -143,14 +143,12 @@ Please see below gemspec example with Gem::Specification.new.</p>
     <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_files'>files</span> <span class='op'>+=</span> <span class='const'>Dir</span><span class='period'>.</span><span class='id identifier rubyid_glob'>glob</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>doc/text/*.*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_homepage'>homepage</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://groonga.rubyforge.org/</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_homepage'>homepage</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://ranguba.org/</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_licenses'>licenses</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LGPLv2</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_require_paths'>require_paths</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>lib</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_rubyforge_project'>rubyforge_project</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_runtime_dependency'>add_runtime_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rake</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_runtime_dependency'>add_runtime_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yard</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_runtime_dependency'>add_runtime_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rubyforge</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_runtime_dependency'>add_runtime_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gettext</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_development_dependency'>add_development_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test-unit</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_development_dependency'>add_development_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test-unit-notify</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -158,8 +156,6 @@ Please see below gemspec example with Gem::Specification.new.</p>
   <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_add_development_dependency'>add_development_dependency</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RedCloth</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span>
 </code></pre>
-<p>If you set the attribute <code>rubyforge_project</code> of <code>spec</code> value,
-&#8220;Packnga::ReleaseTask&#8221; class creates tasks for rubyforge.</p>
 <p>Next, we should get <code>spec</code> value in Rakefile from gemspec,
  so we write below source code in  Rakefile.</p>
 <pre class="code ruby"><code><span class='id identifier rubyid_helper'>helper</span> <span class='op'>=</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>GemHelper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_base_dir'>base_dir</span><span class='rparen'>)</span>
@@ -175,8 +171,7 @@ This source code is written in old Packnga&#8217;s Rakefile.</p>
   <span class='id identifier rubyid_spec'>spec</span> <span class='op'>=</span> <span class='id identifier rubyid__spec'>_spec</span>
   <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>packnga</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='id identifier rubyid_version'>version</span>
-  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_rubyforge_project'>rubyforge_project</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_homepage'>homepage</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://groonga.rubyforge.org/</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_homepage'>homepage</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://ranguba.org/</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_authors'>authors</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Haruka Yoshihara</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kouhei Sutou</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yoshihara@clear-code.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>kou@clear-code.com</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_entries'>entries</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>README.textile</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^h2\.\s(.*)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -203,8 +198,7 @@ It also defines tasks to translate documents with po files.</dd>
 <dl>
 	<dt>Packnga::ReleaseTask</dt>
 	<dd>This class create tasks for uploading references and package and preparing to upload them.
-It defines a task to tag the current version in git and a task to user-install gem for test.
-It also create tasks for uploading rubyforge if you set <code>rubyforge_project</code> in <code>spec</code> .</dd>
+It defines a task to tag the current version in git and a task to user-install gem for test.</dd>
 </dl>
 <p>Please see below for creating tasks.</p>
 <pre class="code ruby"><code>
@@ -235,11 +229,6 @@ Please see Packnga&#8217;s reference manual in detail.</p></div></div>
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="https://github.com/ranguba/">
           <img src="../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />

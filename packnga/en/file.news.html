@@ -93,6 +93,31 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2>0.9.6: 2012-12-19</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>[ReferenceTask] Used GetText::Tools::MsgMerge.run instead of
+   <span class="caps">GNU</span> msgmerge.</li>
+	<li>[DocumentTask] Added #original_language for translation
+   target. Its default value is user&#8217;s current locale.</li>
+	<li>[DocumentTask] Added #translate_languages to translate document.
+   Its default value is English if user&#8217;s current locale isn&#8217;t it,
+   otherwise default value is not specified.</li>
+</ul>
+<h3>Changes</h3>
+<ul>
+	<li>Use user&#8217;s current locale as the default translation targets
+   instead of Japanese.</li>
+	<li>For Ranguba project:</li>
+	<li>[template] Removed needless Piwik tag.</li>
+	<li>Followed the move from rubyforge.org to ranguba.org.</li>
+	<li>[ReleaseTask] Removed rubyforge support.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>[ReferenceTask] Removed needless patch for <span class="caps">YARD</span>. This patch is
+   needless from <span class="caps">YARD</span> 0.8.3.</li>
+</ul>
 <h2>0.9.5: 2012-08-30</h2>
 <h3>Improvements</h3>
 <ul>
@@ -181,11 +206,6 @@
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="https://github.com/ranguba/">
           <img src="../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />

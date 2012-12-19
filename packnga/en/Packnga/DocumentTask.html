@@ -252,6 +252,30 @@ references.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#original_language%3D-instance_method" title="#original_language= (instance method)">- (Object) <strong>original_language=</strong>(language) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets original language which you wrote document.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#reference-instance_method" title="#reference (instance method)">- (Object) <strong>reference</strong> {|@reference_task| ... }</a>
     
 
@@ -268,6 +292,30 @@ references.</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>Runs block to tasks for references.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#translate_languages%3D-instance_method" title="#translate_languages= (instance method)">- (Object) <strong>translate_languages=</strong>(languages) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets translate languages for document.</p>
 </div></span>
   
 </li>
@@ -552,15 +600,93 @@ references.</p>
       <pre class="lines">
 
 
-60
-61
-62</pre>
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_htaccess'>htaccess</span>
   <span class='ivar'>@reference_task</span><span class='period'>.</span><span class='id identifier rubyid_htaccess'>htaccess</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="original_language=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>original_language=</strong>(language) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets original language which you wrote document. Default value is your
+current locale (Locale.current.to_s).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>language</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>language you wrote document</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_original_language='>original_language=</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
+  <span class='ivar'>@reference_task</span><span class='period'>.</span><span class='id identifier rubyid_original_language'>original_language</span> <span class='op'>=</span> <span class='id identifier rubyid_language'>language</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -622,15 +748,94 @@ references.</p>
       <pre class="lines">
 
 
-56
-57
-58</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reference'>reference</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='ivar'>@reference_task</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="translate_languages=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>translate_languages=</strong>(languages) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets translate languages for document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>languages</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>languages to translate</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_translate_languages='>translate_languages=</span><span class='lparen'>(</span><span class='id identifier rubyid_languages'>languages</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_languages'>languages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_languages'>languages</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_languages'>languages</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+  <span class='ivar'>@reference_task</span><span class='period'>.</span><span class='id identifier rubyid_translate_languages'>translate_languages</span> <span class='op'>=</span> <span class='id identifier rubyid_languages'>languages</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -692,12 +897,12 @@ references.</p>
       <pre class="lines">
 
 
-51
-52
-53</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_yard'>yard</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='ivar'>@yard_task</span><span class='rparen'>)</span>
@@ -717,11 +922,6 @@ references.</p>
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="https://github.com/ranguba/">
           <img src="../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />

@@ -199,6 +199,33 @@ publish references.</p>
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#original_language-instance_method" title="#original_language (instance method)">- (String) <strong>original_language</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is used to set the language you wrote original document.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#readme-instance_method" title="#readme (instance method)">- (String) <strong>readme</strong> </a>
     
 
@@ -272,6 +299,33 @@ publish references.</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>This attribute is used to set text files for document.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#translate_languages-instance_method" title="#translate_languages (instance method)">- (Array&lt;String&gt;) <strong>translate_languages</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute is used to set languages for tnanslated document.</p>
 </div></span>
   
 </li>
@@ -385,15 +439,93 @@ publish references.</p>
       <pre class="lines">
 
 
-35
 36
-37</pre>
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_base_dir'>base_dir</span>
   <span class='ivar'>@base_dir</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="original_language=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="original_language-instance_method">
+  
+    - (<tt>String</tt>) <strong>original_language</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is used to set the language you wrote original document. Its
+default value is your current locale.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>language you used to write document</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_original_language'>original_language</span>
+  <span class='ivar'>@original_language</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -462,12 +594,12 @@ publish references.</p>
       <pre class="lines">
 
 
-39
 40
-41</pre>
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_readme'>readme</span>
   <span class='ivar'>@readme</span>
@@ -539,12 +671,12 @@ publish references.</p>
       <pre class="lines">
 
 
-43
 44
-45</pre>
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_files'>source_files</span>
   <span class='ivar'>@source_files</span>
@@ -616,15 +748,94 @@ publish references.</p>
       <pre class="lines">
 
 
-47
 48
-49</pre>
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text_files'>text_files</span>
   <span class='ivar'>@text_files</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="translate_languages=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="translate_languages-instance_method">
+  
+    - (<tt>Array&lt;String&gt;</tt>) <strong>translate_languages</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute is used to set languages for tnanslated document. If
+original_language isn't one, its default value is English. Otherwise, it is
+not specified.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>target languages</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_translate_languages'>translate_languages</span>
+  <span class='ivar'>@translate_languages</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -680,12 +891,12 @@ publish references.</p>
       <pre class="lines">
 
 
-72
-73
-74</pre>
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_htaccess'>htaccess</span>
   <span class='id identifier rubyid_html_reference_dir'>html_reference_dir</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.htaccess</span><span class='tstring_end'>&quot;</span></span>
@@ -705,11 +916,6 @@ publish references.</p>
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="https://github.com/ranguba/">
           <img src="../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />

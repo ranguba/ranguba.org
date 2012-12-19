@@ -139,8 +139,7 @@
     
 <p>This class creates release tasks.</p>
 
-<p>Release tasks tag current version and install gem for test. It also define
-tasks to upload RubyForge whether option.</p>
+<p>Release tasks tag current version and install gem for test.</p>
 
 
   </div>
@@ -203,36 +202,6 @@ tasks to upload RubyForge whether option.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#changes%3D-instance_method" title="#changes= (instance method)">- (Object) <strong>changes</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-    
-      <span class="note title writeonly">writeonly</span>
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>This attribute is text for changes in new release to post news to
-RubyForge.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#index_html_dir%3D-instance_method" title="#index_html_dir= (instance method)">- (Object) <strong>index_html_dir</strong> </a>
     
 
@@ -254,35 +223,6 @@ RubyForge.</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>This attribute is path of HTML files written version and release date.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#publish_options%3D-instance_method" title="#publish_options= (instance method)">- (Object) <strong>publish_options</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-    
-      <span class="note title writeonly">writeonly</span>
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>This attribute is options for uploading RubyForge by rsync.</p>
 </div></span>
   
 </li>
@@ -376,9 +316,7 @@ RubyForge.</p>
   <div class="discussion">
     
 <p>Defines task for preparing to release. Defined tasks update version and
-release-date in index files and tag in git. If you set rubyforge_project of
-Jeweler::Task.new with its given block, it also define tasks to update
-RubyForge.</p>
+release-date in index files and tag in git.</p>
 
 
   </div>
@@ -461,30 +399,26 @@ RubyForge.</p>
       <pre class="lines">
 
 
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64</pre>
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
   <span class='ivar'>@spec</span> <span class='op'>=</span> <span class='id identifier rubyid_spec'>spec</span>
   <span class='ivar'>@index_html_dir</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='ivar'>@rubyforge</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='ivar'>@tag_messsage</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='ivar'>@publish_options</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='ivar'>@changes</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='ivar'>@rubyforge_password</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
   <span class='id identifier rubyid_set_default_values'>set_default_values</span>
   <span class='id identifier rubyid_define_tasks'>define_tasks</span>
@@ -563,95 +497,15 @@ RubyForge.</p>
       <pre class="lines">
 
 
-36
-37
-38</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_base_dir='>base_dir=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@base_dir</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
-  <h3 class="signature " id="changes=-instance_method">
-  
-    - (<tt>Object</tt>) <strong>changes=</strong>(value)  <span class="extras">(writeonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>This attribute is text for changes in new release to post news to
-RubyForge.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>value</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>text for changes.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'>
-<p>0.9.0</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-46
-47
-48</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 46</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_changes='>changes=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
-  <span class='ivar'>@changes</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -722,94 +576,15 @@ RubyForge.</p>
       <pre class="lines">
 
 
-33
-34
-35</pre>
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyidalphabetical_index.html_dir='>index_html_dir=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@index_html_dir</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
-  <h3 class="signature " id="publish_options=-instance_method">
-  
-    - (<tt>Object</tt>) <strong>publish_options=</strong>(value)  <span class="extras">(writeonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>This attribute is options for uploading RubyForge by rsync.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>value</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>options for uploading.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'>
-<p>0.9.0</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-42
-43
-44</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 42</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_publish_options='>publish_options=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
-  <span class='ivar'>@publish_options</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -880,12 +655,12 @@ RubyForge.</p>
       <pre class="lines">
 
 
-39
-40
-41</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/release-task.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tag_message='>tag_message=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@tag_message</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -906,11 +681,6 @@ RubyForge.</p>
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="https://github.com/ranguba/">
           <img src="../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
