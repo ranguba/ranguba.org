@@ -216,7 +216,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>この属性はドキュメントが書かれた言語を指定します。デフォルト値は現在のロケールです。.</p>
+<p>この属性はドキュメントが書かれた言語を指定します。デフォルト値は“en”（英語）です。.</p>
 </div></span>
   
 </li>
@@ -467,7 +467,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>この属性はドキュメントが書かれた言語を指定します。デフォルト値は現在のロケールです。</p>
+<p>この属性はドキュメントが書かれた言語を指定します。デフォルト値は“en”（英語）です。</p>
 
 
   </div>
@@ -492,6 +492,13 @@
     </li>
   
 </ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="DocumentTask.html#original_language%3D-instance_method" title="Packnga::DocumentTask#original_language= (method)">DocumentTask#original_language=</a></span></li>
+    
+  </ul>
 <p class="tag_title">Since:</p>
 <ul class="since">
   
@@ -502,7 +509,7 @@
       
         
         <div class='inline'>
-<p>0.9.0</p>
+<p>0.9.6</p>
 </div>
       
     </li>
@@ -515,12 +522,12 @@
       <pre class="lines">
 
 
-51
-52
-53</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_original_language'>original_language</span>
   <span class='ivar'>@original_language</span>
@@ -794,12 +801,21 @@
       
         &mdash;
         <div class='inline'>
-<p>翻訳する言語</p>
+<p>target languages</p>
 </div>
       
     </li>
   
 </ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="DocumentTask.html#translate_languages%3D-instance_method" title="Packnga::DocumentTask#translate_languages= (method)">この属性に複数の言語を指定するためにはこのページを参照ください。</a></span></li>
+    
+      <li><span class='object_link'><a href="DocumentTask.html#translate_language%3D-instance_method" title="Packnga::DocumentTask#translate_language= (method)">この属性に1つだけ言語を指定するためにはこのページを参照ください。</a></span></li>
+    
+  </ul>
 <p class="tag_title">Since:</p>
 <ul class="since">
   
@@ -810,7 +826,7 @@
       
         
         <div class='inline'>
-<p>0.9.0</p>
+<p>0.9.6</p>
 </div>
       
     </li>
@@ -823,12 +839,12 @@
       <pre class="lines">
 
 
-55
-56
-57</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_translate_languages'>translate_languages</span>
   <span class='ivar'>@translate_languages</span>
@@ -887,12 +903,12 @@
       <pre class="lines">
 
 
-80
-81
-82</pre>
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/reference-task.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_htaccess'>htaccess</span>
   <span class='id identifier rubyid_html_reference_dir'>html_reference_dir</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.htaccess</span><span class='tstring_end'>&quot;</span></span>
@@ -907,7 +923,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Dec 19 17:52:26 2012 by
+  Generated on Wed Dec 26 18:10:27 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>

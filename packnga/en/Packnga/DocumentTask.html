@@ -300,6 +300,30 @@ references.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#translate_language%3D-instance_method" title="#translate_language= (instance method)">- (Object) <strong>translate_language=</strong>(language) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets a translate language for document.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#translate_languages%3D-instance_method" title="#translate_languages= (instance method)">- (Object) <strong>translate_languages=</strong>(languages) </a>
     
 
@@ -600,12 +624,12 @@ references.</p>
       <pre class="lines">
 
 
-74
-75
-76</pre>
+120
+121
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_htaccess'>htaccess</span>
   <span class='ivar'>@reference_task</span><span class='period'>.</span><span class='id identifier rubyid_htaccess'>htaccess</span>
@@ -627,8 +651,8 @@ references.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Sets original language which you wrote document. Default value is your
-current locale (Locale.current.to_s).</p>
+<p>Sets original language which you wrote document. Default value is "en" (as
+English). Specified value is used to define language for translation.</p>
 
 
   </div>
@@ -655,6 +679,13 @@ current locale (Locale.current.to_s).</p>
   
 </ul>
 
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#translate_languages%3D-instance_method" title="Packnga::DocumentTask#translate_languages= (method)">#translate_language(s)= is used to specify languages for translation.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Since:</p>
 <ul class="since">
   
@@ -665,7 +696,7 @@ current locale (Locale.current.to_s).</p>
       
         
         <div class='inline'>
-<p>0.9.0</p>
+<p>0.9.6</p>
 </div>
       
     </li>
@@ -678,12 +709,12 @@ current locale (Locale.current.to_s).</p>
       <pre class="lines">
 
 
-53
-54
-55</pre>
+58
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_original_language='>original_language=</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
   <span class='ivar'>@reference_task</span><span class='period'>.</span><span class='id identifier rubyid_original_language'>original_language</span> <span class='op'>=</span> <span class='id identifier rubyid_language'>language</span>
@@ -748,15 +779,119 @@ current locale (Locale.current.to_s).</p>
       <pre class="lines">
 
 
-70
-71
-72</pre>
+116
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reference'>reference</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='ivar'>@reference_task</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="translate_language=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>translate_language=</strong>(language) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets a translate language for document. This method receives String as
+language code.</p>
+
+<p>If the language specified by <span class='object_link'><a href="#original_language%3D-instance_method" title="Packnga::DocumentTask#original_language= (method)">#original_language=</a></span> isn't English, its
+default value is one. Otherwise, it is not specified.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Specify Japanese.</p>
+</div></p>
+      
+      <pre class="example code"><span class='const'>DocumentTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
+  <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_translate_language'>translate_language</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ja</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>language</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>target language code for translated document</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_parent" title="see &quot;639-1&quot; row in this page for lanugage codes.">see "639-1" row in this page for lanugage codes.</a></li>
+    
+      <li><span class='object_link'><a href="#translate_languages%3D-instance_method" title="Packnga::DocumentTask#translate_languages= (method)">#translate_languages= receives Array of String target languages codes.</a></span></li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>0.9.7</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_translate_language='>translate_language=</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_translate_languages'>translate_languages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_language'>language</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -775,13 +910,31 @@ current locale (Locale.current.to_s).</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Sets translate languages for document.</p>
+<p>Sets translate languages for document. This method receives Array of
+Strings as each language code.</p>
+
+<p>If the language specified by <span class='object_link'><a href="#original_language%3D-instance_method" title="Packnga::DocumentTask#original_language= (method)">#original_language=</a></span> isn't English, its
+default value is one. Otherwise, it is not specified.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Sets Japanese and English.</p>
+</div></p>
+      
+      <pre class="example code"><span class='const'>DocumentTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
+  <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_translate_languages'>translate_languages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ja</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -789,19 +942,28 @@ current locale (Locale.current.to_s).</p>
         <span class='name'>languages</span>
       
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>languages to translate</p>
+<p>target language codes for translated document</p>
 </div>
       
     </li>
   
 </ul>
 
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_parent" title="see &quot;639-1&quot; row in this page for lanugage codes.">see "639-1" row in this page for lanugage codes.</a></li>
+    
+      <li><span class='object_link'><a href="#translate_language%3D-instance_method" title="Packnga::DocumentTask#translate_language= (method)">#translate_language= receives String as target language code.</a></span></li>
+    
+  </ul>
 <p class="tag_title">Since:</p>
 <ul class="since">
   
@@ -812,7 +974,7 @@ current locale (Locale.current.to_s).</p>
       
         
         <div class='inline'>
-<p>0.9.0</p>
+<p>0.9.6</p>
 </div>
       
     </li>
@@ -825,16 +987,14 @@ current locale (Locale.current.to_s).</p>
       <pre class="lines">
 
 
-59
-60
-61
-62</pre>
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_translate_languages='>translate_languages=</span><span class='lparen'>(</span><span class='id identifier rubyid_languages'>languages</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_languages'>languages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_languages'>languages</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_languages'>languages</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
   <span class='ivar'>@reference_task</span><span class='period'>.</span><span class='id identifier rubyid_translate_languages'>translate_languages</span> <span class='op'>=</span> <span class='id identifier rubyid_languages'>languages</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -897,12 +1057,12 @@ current locale (Locale.current.to_s).</p>
       <pre class="lines">
 
 
-65
-66
-67</pre>
+111
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/packnga/document-task.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_yard'>yard</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='ivar'>@yard_task</span><span class='rparen'>)</span>
