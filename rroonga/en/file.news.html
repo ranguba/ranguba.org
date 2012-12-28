@@ -93,6 +93,84 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="2-1-0">2.1.0: 2012-12-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Required groonga 2.1.0.</li>
+	<li>Supported mass record deletion with block.
+  [groonga-dev,01138][Suggested by ongaeshi]</li>
+	<li>Added Groonga::Normalizer.normalize (experimental). It normalize string.
+  e.g.)
+    Groonga::Normalizer.normalize(&#8220;AbC&#8221;) # =&gt; &#8220;abc&#8221;
+  Now, it removes any spaces by default, but it will be customized soon.</li>
+	<li>Supported :normalizer option in DoubleArrayTrie, PatriciaTrie, Hash,
+  Schema when creating tables.</li>
+	<li>[table] Added using normalizer accessor.</li>
+	<li>[table] Used normalizer for checking key normalization is enabled or not.</li>
+	<li>Added groonga-index-dump tool (experimental).
+  This tool dumps infomations for each index from DB.
+  Dumped informations are contained at &#8220;INDEX_NAME.dump&#8221; files in
+  &#8220;TARGET_TABLE_NAME.index_INDEX_COLUMN_NAME&#8221;.
+  e.g.)</li>
+</ul>
+<pre class="code ruby"><code>
+$ cat index-dump.sdf
+table_create —name Video —flags TABLE_HASH_KEY —key_type UInt32
+table_create —name Tag —flags TABLE_HASH_KEY —key_type ShortText
+column_create —table Video —name title —flags COLUMN_SCALAR —type ShortText
+column_create —table Video —name tags —flags COLUMN_VECTOR —type Tag
+column_create —table Tag —name index_tags —flags COLUMN_INDEX —type Video —source tags
+load —table Video
+[
+{&quot;_key&quot;:1,“title”:“groonga Demo”,“tags”:[“IT”,“Server”,“groonga”]},
+{&quot;_key&quot;:2,“title”:“Ultra Baseball”,“tags”:[“Sports”,“Baseball”]},
+]
+$ groonga —file index-dump.sdf -n index-dump.db
+$ groonga-index-dump —output-directory=path/to/index/ index-dump.db
+$ cd path/to/index/
+$ ls Tag.index_tags
+Baseball.dump  IT.dump       Server.dump  Sports.dump  groonga.dump
+$ cat path/to/index/Tag.index_tags/groonga.dump
+index: Tag.index_tags	term: &lt;groonga&gt;	domain: Tag	range: Video	have_section: false	have_weight: false	have_position: false
+weight	position        term_frequency	record
+0    2     1   Video[ 1 ].tags
+</code></pre>
+<ul>
+	<li>Added flag options to Groonga::IndexColumn#open_cursor.
+  The flag options are :with_section, :with_weight, :with_position.
+  They are enabled by default if each option is specified in creating
+  a index column.</li>
+	<li>[Snippet] Showed the error message when specified context wasn&#8217;t
+  associated with a database by Groonga::Database#open or #create.</li>
+	<li>[inspect] Supported to display index column related flags for index
+  column only.
+  &#8220;index column related flags&#8221; are WITH_SECTION, WITH_WEIGHT and
+  WITH_POSITION.</li>
+	<li>[inspect] Added default tokenizer and normalizer infomation.</li>
+	<li>Supported Groonga::QueryLogger. This class is used to log query log.
+  Please see its reference for detail.</li>
+</ul>
+<h3>Changes</h3>
+<ul>
+	<li>Move groonga-query-log-extract to groonga-query-log.
+  Please install groogna-query-log gem to use this tool.
+  how to install:
+      gem install groonga-query-log</li>
+	<li>Returned Groonga::Array instead of Array by Table#sort.
+  [GitHub: #8][Suggested by Genki Takiuchi]
+  <span class="caps">CAUTION</span>: This is backward incompatible change. You need to use
+  record.value to get the original record.
+  The following code shows how to use old style:
+    result_since_2_1_0 = table.sort([&#8220;sort_key&#8221;])
+    result_before_2_1_0 = result_since_2_1_0.collect do |record|
+      record.value
+    end</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>ongaeshi</li>
+	<li>Genki Takiuchi</li>
+</ul>
 <h2 id="2-0-8">2.0.8: 2012-12-02</h2>
 <h3>Improvements</h3>
 <ul>
@@ -727,11 +805,6 @@ end
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="https://github.com/ranguba/">
           <img src="../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />

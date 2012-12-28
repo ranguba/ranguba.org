@@ -357,7 +357,7 @@ rroongaの操作方法を紹介します。</p>
 &gt;&gt;   end
 =&gt; #&lt;Groonga::Hash ...&gt;
 &gt;&gt; records.each do |record|
-?&gt;     comment = record.key
+?&gt;     comment = record.value
 &gt;&gt;   p [comment.id,
 ?&gt;       comment.issued,
 ?&gt;       comment.item.title,
@@ -465,11 +465,6 @@ unionして出力します。</p>
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="https://github.com/ranguba/">
           <img src="../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />

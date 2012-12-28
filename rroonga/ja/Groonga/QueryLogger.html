@@ -1,0 +1,909 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Class: Groonga::QueryLogger
+  
+    &mdash; rroonga
+  
+ - ラングバ</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../ja/">
+      <span class="title">
+  Class: Groonga::QueryLogger
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../rroonga/en/Groonga/QueryLogger.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../rroonga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../../rroonga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../../ja/#install-rroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../../ja/developer.html">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (Q)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
+     &raquo; 
+    <span class="title">QueryLogger</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Groonga::QueryLogger
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Groonga::QueryLogger</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/groonga/rb-grn-query-logger.c<span class="defines">,<br />
+  lib/groonga/query-logger.rb,<br /> ext/groonga/rb-grn-query-logger.c</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>A class for logging query log.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="CallbackQueryLogger.html" title="Groonga::CallbackQueryLogger (class)">CallbackQueryLogger</a></span>, <span class='object_link'><a href="FileQueryLogger.html" title="Groonga::FileQueryLogger (class)">FileQueryLogger</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="QueryLogger/Flags.html" title="Groonga::QueryLogger::Flags (module)">Flags</a></span>
+    
+  
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register-class_method" title="register (class method)">+ (Object) <strong>register</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers a query logger or a callback that is called when a query log
+event is emitted.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reopen-class_method" title="reopen (class method)">+ (Object) <strong>reopen</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sends reopen request to the current query logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unregister-class_method" title="unregister (class method)">+ (Object) <strong>unregister</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fin-instance_method" title="#fin (instance method)">- (Object) <strong>fin</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log-instance_method" title="#log (instance method)">- (Object) <strong>log</strong>(flag, timestamp, info, message) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reopen-instance_method" title="#reopen (instance method)">- (Object) <strong>reopen</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="register-class_method">
+  
+    
+      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(logger, options = {}) </span>
+    
+      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(options = {}) {|action, flag, timestamp, info, message| ... }</span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers a query logger or a callback that is called when a query log
+event is emitted.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(logger, options = {}) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Void</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>logger</span>
+      
+      
+        <span class='type'>(<tt>#log</tt>, <tt>#<span class='object_link'><a href="#reopen-class_method" title="Groonga::QueryLogger.reopen (method)">reopen</a></span></tt>, <tt>#fin</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The query logger. It is easy to inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)">Groonga::QueryLogger</a></span>.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>void</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(options = {}) {|action, flag, timestamp, info, message| ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The options.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:flags</span>
+          <span class="type">(<tt>Symbol</tt>, <tt>String</tt>, <tt>Integer or nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Flags describe what query log should be logged.</p>
+
+<p>@see <span class='object_link'><a href="QueryLogger/Flags.html#parse-class_method" title="Groonga::QueryLogger::Flags.parse (method)">Groonga::QueryLogger::Flags.parse</a></span></p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>action</tt>, <tt>flag</tt>, <tt>timestamp</tt>, <tt>info</tt>, <tt>message</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>...</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 113</span>
+
+static VALUE
+rb_grn_query_logger_s_register (int argc, VALUE *argv, VALUE klass)
+{
+    VALUE rb_context = Qnil;
+    grn_ctx *context;
+    VALUE rb_logger, rb_callback;
+    VALUE rb_options, rb_command, rb_result_code, rb_destination;
+    VALUE rb_cache, rb_size, rb_score, rb_default, rb_all, rb_flags;
+    unsigned int flags = GRN_QUERY_LOG_NONE;
+
+    rb_scan_args(argc, argv, &quot;02&amp;&quot;, &amp;rb_logger, &amp;rb_options, &amp;rb_callback);
+
+    if (rb_block_given_p()) {
+        rb_logger = rb_funcall(cGrnCallbackQueryLogger, id_new, 1, rb_callback);
+    }
+
+    rb_grn_scan_options(rb_options,
+                        &quot;command&quot;,     &amp;rb_command,
+                        &quot;result_code&quot;, &amp;rb_result_code,
+                        &quot;destination&quot;, &amp;rb_destination,
+                        &quot;cache&quot;,       &amp;rb_cache,
+                        &quot;size&quot;,        &amp;rb_size,
+                        &quot;score&quot;,       &amp;rb_score,
+                        &quot;default&quot;,     &amp;rb_default,
+                        &quot;all&quot;,         &amp;rb_all,
+                        &quot;flags&quot;,       &amp;rb_flags,
+                        NULL);
+
+    if (RVAL2CBOOL(rb_command)) {
+        flags |= GRN_QUERY_LOG_COMMAND;
+    }
+    if (RVAL2CBOOL(rb_result_code)) {
+        flags |= GRN_QUERY_LOG_RESULT_CODE;
+    }
+    if (RVAL2CBOOL(rb_destination)) {
+        flags |= GRN_QUERY_LOG_DESTINATION;
+    }
+    if (RVAL2CBOOL(rb_cache)) {
+        flags |= GRN_QUERY_LOG_CACHE;
+    }
+    if (RVAL2CBOOL(rb_size)) {
+        flags |= GRN_QUERY_LOG_SIZE;
+    }
+    if (RVAL2CBOOL(rb_score)) {
+        flags |= GRN_QUERY_LOG_SCORE;
+    }
+    if (RVAL2CBOOL(rb_default)) {
+        flags |= GRN_QUERY_LOG_DEFAULT;
+    }
+    if (RVAL2CBOOL(rb_all)) {
+        flags |= GRN_QUERY_LOG_ALL;
+    }
+    if (!NIL_P(rb_flags)) {
+        flags = rb_funcall(mGrnQueryLoggerFlags, id_parse, 2,
+                           UINT2NUM(flags), rb_flags);
+    }
+
+    rb_grn_query_logger.flags     = flags;
+    rb_grn_query_logger.user_data = (void *)rb_logger;
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+    grn_query_logger_set(context, &amp;rb_grn_query_logger);
+    rb_grn_context_check(context, rb_logger);
+    rb_cv_set(klass, &quot;@@current_logger&quot;, rb_logger);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reopen-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>reopen</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sends reopen request to the current query logger. It is useful for rotating
+log file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>void</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 208</span>
+
+static VALUE
+rb_grn_query_logger_s_reopen (VALUE klass)
+{
+    VALUE rb_context = Qnil;
+    grn_ctx *context;
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+    grn_query_logger_reopen(context);
+    rb_grn_context_check(context, klass);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unregister-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unregister</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 181</span>
+
+static VALUE
+rb_grn_query_logger_s_unregister (VALUE klass)
+{
+    VALUE current_logger;
+    VALUE rb_context = Qnil;
+    grn_ctx *context;
+
+    current_logger = rb_cv_get(klass, &quot;@@current_logger&quot;);
+    if (NIL_P(current_logger))
+        return Qnil;
+
+    rb_cv_set(klass, &quot;@@current_logger&quot;, Qnil);
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+    grn_query_logger_set(context, NULL);
+    rb_grn_context_check(context, klass);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="fin-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>fin</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fin'>fin</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>log</strong>(flag, timestamp, info, message) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_flag'>flag</span><span class='comma'>,</span> <span class='id identifier rubyid_timestamp'>timestamp</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_guard'>guard</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_timestamp'>timestamp</span><span class='rbrace'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_info'>info</span><span class='rbrace'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message'>message</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reopen-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>reopen</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reopen'>reopen</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Fri Dec 28 12:35:01 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.3 (ruby-1.9.3).
+</div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../tango-logo.png" />
+        </a>
+      </p>
+    </div>
+
+</body>
+</html>

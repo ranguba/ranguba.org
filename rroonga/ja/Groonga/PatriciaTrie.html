@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -62,22 +62,31 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (P)</a> &raquo;
-    <span class="title"><span class="object_link"><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
+    <a href="../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">PatriciaTrie</span>
   
 
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">フレーム無し</a><span class="title">)</span></div>
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a class="full_list_link" id="class_list_link" href="../class_list.html">クラスリスト</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
   
-    <a class="full_list_link" id="method_list_link" href="../method_list.html">メソッドリスト</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
   
-    <a class="full_list_link" id="file_list_link" href="../file_list.html">ファイルリスト</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
@@ -95,14 +104,14 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><span class="object_link"><a href="Table.html" title="Groonga::Table (class)">Table</a></span></span>
+      <span class="inheritName"><span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Table</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next"><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></li>
+            <li class="next"><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></li>
           
-            <li class="next"><span class="object_link"><a href="Table.html" title="Groonga::Table (class)">Table</a></span></li>
+            <li class="next"><span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Table</a></span></li>
           
             <li class="next">Groonga::PatriciaTrie</li>
           
@@ -117,7 +126,7 @@
   
     
       <dt class="r2">Includes:</dt>
-      <dd class="r2"><span class="object_link"><a href="Table/KeySupport.html" title="Groonga::Table::KeySupport (module)">Table::KeySupport</a></span></dd>
+      <dd class="r2"><span class='object_link'><a href="Table/KeySupport.html" title="Groonga::Table::KeySupport (module)">Table::KeySupport</a></span></dd>
       
     
   
@@ -133,10 +142,10 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>各レコードをパトリシアトライで管理するテーブル。ハッシュ
-テーブルに比べて完全一致検索の速度がやや遅いが、前方一致
-検索・共通接頭辞探索などの検索ができる。またカーソルを用
-いてキーの昇降順にレコードを取り出すことができる。</p>
+    
+<p>各レコードをパトリシアトライで管理するテーブル。ハッシュ テーブルに比べて完全一致検索の速度がやや遅いが、前方一致
+検索・共通接頭辞探索などの検索ができる。またカーソルを用 いてキーの昇降順にレコードを取り出すことができる。</p>
+
 
   </div>
 </div>
@@ -175,9 +184,10 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p>各レコードをパトリシアトライで管理するテーブルを生成する。
-ブロックを指定すると、そのブロックに生成したテーブルが渡さ
-れ、ブロックを抜けると自動的にテーブルが破棄される。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>各レコードをパトリシアトライで管理するテーブルを生成する。 ブロックを指定すると、そのブロックに生成したテーブルが渡さ
+れ、ブロックを抜けると自動的にテーブルが破棄される。.</p>
+</div></span>
   
 </li>
 
@@ -208,9 +218,10 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p><em>key</em> に近い順にレコードを取り出すカーソルを生成して返す。
-ブロックを指定すると、そのブロックに生成したカーソルが渡され、
-ブロックを抜けると自動的にカーソルが破棄される。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><em>key</em> に近い順にレコードを取り出すカーソルを生成して返す。 ブロックを指定すると、そのブロックに生成したカーソルが渡され、
+ブロックを抜けると自動的にカーソルが破棄される。.</p>
+</div></span>
   
 </li>
 
@@ -232,9 +243,10 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p><em>prefix</em> に前方一致検索をするカーソルを生成して返す。ブロッ
-クを指定すると、そのブロックに生成したカーソルが渡され、ブ
-ロックを抜けると自動的にカーソルが破棄される。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><em>prefix</em> に前方一致検索をするカーソルを生成して返す。ブロッ クを指定すると、そのブロックに生成したカーソルが渡され、ブ
+ロックを抜けると自動的にカーソルが破棄される。.</p>
+</div></span>
   
 </li>
 
@@ -256,12 +268,11 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p><em>table</em> のキーはカタカナである必要がある。また、エンコーディ
-ングはUTF-8である必要がある。ローマ字やひらがなで <em>key</em> を指
-定しても、 <em>key</em> に対応するカタカナのキーを検索するカーソル
-を生成して返す。ブロックを指定すると、そのブロックに生成し
-たカーソルが渡され、ブロックを抜けると自動的にカーソルが破
-棄される。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><em>table</em> のキーはカタカナである必要がある。また、エンコーディ ングはUTF-8である必要がある。ローマ字やひらがなで
+<em>key</em> を指 定しても、 <em>key</em> に対応するカタカナのキーを検索するカーソル
+を生成して返す。ブロックを指定すると、そのブロックに生成し たカーソルが渡され、ブロックを抜けると自動的にカーソルが破 棄される。.</p>
+</div></span>
   
 </li>
 
@@ -283,9 +294,10 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p>キーが <em>prefix</em> に前方一致するレコードのIDがキーに入っている
-<span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。マッチするレコードがない場合は空の
-<span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> が返る。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>キーが <em>prefix</em> に前方一致するレコードのIDがキーに入っている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span>
+を返す。マッチするレコードがない場合は空の <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> が返る。.</p>
+</div></span>
   
 </li>
 
@@ -307,8 +319,10 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p>キーを登録するときに文字列の全suffixも一緒に登録する場合
-は <ins>true</ins> 、登録しない場合は <ins>false</ins> を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>キーを登録するときに文字列の全suffixも一緒に登録する場合 は <tt>true</tt> 、登録しない場合は <tt>false</tt>
+を返す。.</p>
+</div></span>
   
 </li>
 
@@ -330,9 +344,10 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p><em>string</em> を走査し、 <em>patricia_trie</em> 内に格納されているキーに
-マッチした部分文字列の情報をブロックに渡す。複数のキーが
-マッチする場合は最長一致するキーを優先する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><em>string</em> を走査し、 <em>patricia_trie</em> 内に格納されているキーに
+マッチした部分文字列の情報をブロックに渡す。複数のキーが マッチする場合は最長一致するキーを優先する。.</p>
+</div></span>
   
 </li>
 
@@ -354,8 +369,10 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p><em>key</em> にマッチするレコードのIDがキーに入っている <span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。
-マッチするレコードがない場合は空の <span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> が返る。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><em>key</em> にマッチするレコードのIDがキーに入っている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。 マッチするレコードがない場合は空の
+<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> が返る。.</p>
+</div></span>
   
 </li>
 
@@ -377,11 +394,11 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p><em>text</em> を走査し、レコードのキーとマッチする部分文字列ごとに
-そのレコードが <em>record</em> として、その部分文字列が <em>word</em> として、
-ブロックが呼び出される。ブロックから返された文字列が元の部
-分文字列と置換される。全てのヒットに対してのその置換処理が
-行われた文字列が返される。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><em>text</em> を走査し、レコードのキーとマッチする部分文字列ごとに そのレコードが <em>record</em>
+として、その部分文字列が <em>word</em> として、 ブロックが呼び出される。ブロックから返された文字列が元の部
+分文字列と置換される。全てのヒットに対してのその置換処理が 行われた文字列が返される。.</p>
+</div></span>
   
 </li>
 
@@ -398,8 +415,8 @@
   
   
   
-  <h3 class="inherited">Methods included from <span class="object_link"><a href="Table/KeySupport.html" title="Groonga::Table::KeySupport (module)">Table::KeySupport</a></span></h3>
-  <p class="inherited"><span class="object_link"><a href="Table/KeySupport.html#%5B%5D-instance_method" title="Groonga::Table::KeySupport#[] (method)">#[]</a></span>, <span class="object_link"><a href="Table/KeySupport.html#%5B%5D%3D-instance_method" title="Groonga::Table::KeySupport#[]= (method)">#[]=</a></span>, <span class="object_link"><a href="Table/KeySupport.html#add-instance_method" title="Groonga::Table::KeySupport#add (method)">#add</a></span>, <span class="object_link"><a href="Table/KeySupport.html#column_value-instance_method" title="Groonga::Table::KeySupport#column_value (method)">#column_value</a></span>, <span class="object_link"><a href="Table/KeySupport.html#default_tokenizer-instance_method" title="Groonga::Table::KeySupport#default_tokenizer (method)">#default_tokenizer</a></span>, <span class="object_link"><a href="Table/KeySupport.html#default_tokenizer%3D-instance_method" title="Groonga::Table::KeySupport#default_tokenizer= (method)">#default_tokenizer=</a></span>, <span class="object_link"><a href="Table/KeySupport.html#delete-instance_method" title="Groonga::Table::KeySupport#delete (method)">#delete</a></span>, <span class="object_link"><a href="Table/KeySupport.html#has_key%3F-instance_method" title="Groonga::Table::KeySupport#has_key? (method)">#has_key?</a></span>, <span class="object_link"><a href="Table/KeySupport.html#id-instance_method" title="Groonga::Table::KeySupport#id (method)">#id</a></span>, <span class="object_link"><a href="Table/KeySupport.html#key-instance_method" title="Groonga::Table::KeySupport#key (method)">#key</a></span>, <span class="object_link"><a href="Table/KeySupport.html#normalize_key%3F-instance_method" title="Groonga::Table::KeySupport#normalize_key? (method)">#normalize_key?</a></span>, <span class="object_link"><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">#set_column_value</a></span>, <span class="object_link"><a href="Table/KeySupport.html#set_value-instance_method" title="Groonga::Table::KeySupport#set_value (method)">#set_value</a></span>, <span class="object_link"><a href="Table/KeySupport.html#support_key%3F-instance_method" title="Groonga::Table::KeySupport#support_key? (method)">#support_key?</a></span>, <span class="object_link"><a href="Table/KeySupport.html#value-instance_method" title="Groonga::Table::KeySupport#value (method)">#value</a></span></p>
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Table/KeySupport.html" title="Groonga::Table::KeySupport (module)">Table::KeySupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Table/KeySupport.html#%5B%5D-instance_method" title="Groonga::Table::KeySupport#[] (method)">#[]</a></span>, <span class='object_link'><a href="Table/KeySupport.html#%5B%5D%3D-instance_method" title="Groonga::Table::KeySupport#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#add-instance_method" title="Groonga::Table::KeySupport#add (method)">#add</a></span>, <span class='object_link'><a href="Table/KeySupport.html#column_value-instance_method" title="Groonga::Table::KeySupport#column_value (method)">#column_value</a></span>, <span class='object_link'><a href="Table/KeySupport.html#default_tokenizer-instance_method" title="Groonga::Table::KeySupport#default_tokenizer (method)">#default_tokenizer</a></span>, <span class='object_link'><a href="Table/KeySupport.html#default_tokenizer%3D-instance_method" title="Groonga::Table::KeySupport#default_tokenizer= (method)">#default_tokenizer=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#delete-instance_method" title="Groonga::Table::KeySupport#delete (method)">#delete</a></span>, <span class='object_link'><a href="Table/KeySupport.html#has_key%3F-instance_method" title="Groonga::Table::KeySupport#has_key? (method)">#has_key?</a></span>, <span class='object_link'><a href="Table/KeySupport.html#id-instance_method" title="Groonga::Table::KeySupport#id (method)">#id</a></span>, <span class='object_link'><a href="Table/KeySupport.html#inspect-instance_method" title="Groonga::Table::KeySupport#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Table/KeySupport.html#key-instance_method" title="Groonga::Table::KeySupport#key (method)">#key</a></span>, <span class='object_link'><a href="Table/KeySupport.html#normalize_key%3F-instance_method" title="Groonga::Table::KeySupport#normalize_key? (method)">#normalize_key?</a></span>, <span class='object_link'><a href="Table/KeySupport.html#normalizer-instance_method" title="Groonga::Table::KeySupport#normalizer (method)">#normalizer</a></span>, <span class='object_link'><a href="Table/KeySupport.html#normalizer%3D-instance_method" title="Groonga::Table::KeySupport#normalizer= (method)">#normalizer=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">#set_column_value</a></span>, <span class='object_link'><a href="Table/KeySupport.html#set_value-instance_method" title="Groonga::Table::KeySupport#set_value (method)">#set_value</a></span>, <span class='object_link'><a href="Table/KeySupport.html#support_key%3F-instance_method" title="Groonga::Table::KeySupport#support_key? (method)">#support_key?</a></span>, <span class='object_link'><a href="Table/KeySupport.html#value-instance_method" title="Groonga::Table::KeySupport#value (method)">#value</a></span></p>
 
   
   
@@ -409,8 +426,8 @@
   
   
   
-  <h3 class="inherited">Methods included from <span class="object_link"><a href="EncodingSupport.html" title="Groonga::EncodingSupport (module)">EncodingSupport</a></span></h3>
-  <p class="inherited"><span class="object_link"><a href="EncodingSupport.html#encoding-instance_method" title="Groonga::EncodingSupport#encoding (method)">#encoding</a></span></p>
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="EncodingSupport.html" title="Groonga::EncodingSupport (module)">EncodingSupport</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="EncodingSupport.html#encoding-instance_method" title="Groonga::EncodingSupport#encoding (method)">#encoding</a></span></p>
 
   
   
@@ -420,8 +437,8 @@
   
   
   
-  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="Table.html" title="Groonga::Table (class)">Table</a></span></h3>
-  <p class="inherited"><span class="object_link"><a href="Table.html#%5B%5D-instance_method" title="Groonga::Table#[] (method)">#[]</a></span>, <span class="object_link"><a href="Table.html#clear_lock-instance_method" title="Groonga::Table#clear_lock (method)">#clear_lock</a></span>, <span class="object_link"><a href="Table.html#column-instance_method" title="Groonga::Table#column (method)">#column</a></span>, <span class="object_link"><a href="Table.html#column_value-instance_method" title="Groonga::Table#column_value (method)">#column_value</a></span>, <span class="object_link"><a href="Table.html#columns-instance_method" title="Groonga::Table#columns (method)">#columns</a></span>, <span class="object_link"><a href="Table.html#define_column-instance_method" title="Groonga::Table#define_column (method)">#define_column</a></span>, <span class="object_link"><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">#define_index_column</a></span>, <span class="object_link"><a href="Table.html#defrag-instance_method" title="Groonga::Table#defrag (method)">#defrag</a></span>, <span class="object_link"><a href="Table.html#delete-instance_method" title="Groonga::Table#delete (method)">#delete</a></span>, <span class="object_link"><a href="Table.html#difference%21-instance_method" title="Groonga::Table#difference! (method)">#difference!</a></span>, <span class="object_link"><a href="Table.html#each-instance_method" title="Groonga::Table#each (method)">#each</a></span>, <span class="object_link"><a href="Table.html#empty%3F-instance_method" title="Groonga::Table#empty? (method)">#empty?</a></span>, <span class="object_link"><a href="Table.html#exist%3F-instance_method" title="Groonga::Table#exist? (method)">#exist?</a></span>, <span class="object_link"><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">#group</a></span>, <span class="object_link"><a href="Table.html#have_column%3F-instance_method" title="Groonga::Table#have_column? (method)">#have_column?</a></span>, <span class="object_link"><a href="Table.html#initialize-instance_method" title="Groonga::Table#initialize (method)">#initialize</a></span>, <span class="object_link"><a href="Table.html#inspect-instance_method" title="Groonga::Table#inspect (method)">#inspect</a></span>, <span class="object_link"><a href="Table.html#intersection%21-instance_method" title="Groonga::Table#intersection! (method)">#intersection!</a></span>, <span class="object_link"><a href="Table.html#lock-instance_method" title="Groonga::Table#lock (method)">#lock</a></span>, <span class="object_link"><a href="Table.html#locked%3F-instance_method" title="Groonga::Table#locked? (method)">#locked?</a></span>, <span class="object_link"><a href="Table.html#merge%21-instance_method" title="Groonga::Table#merge! (method)">#merge!</a></span>, <span class="object_link"><a href="Table.html#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">#open_cursor</a></span>, <span class="object_link"><a href="Table.html#paginate-instance_method" title="Groonga::Table#paginate (method)">#paginate</a></span>, <span class="object_link"><a href="Table.html#records-instance_method" title="Groonga::Table#records (method)">#records</a></span>, <span class="object_link"><a href="Table.html#rename-instance_method" title="Groonga::Table#rename (method)">#rename</a></span>, <span class="object_link"><a href="Table.html#select-instance_method" title="Groonga::Table#select (method)">#select</a></span>, <span class="object_link"><a href="Table.html#set_column_value-instance_method" title="Groonga::Table#set_column_value (method)">#set_column_value</a></span>, <span class="object_link"><a href="Table.html#set_value-instance_method" title="Groonga::Table#set_value (method)">#set_value</a></span>, <span class="object_link"><a href="Table.html#size-instance_method" title="Groonga::Table#size (method)">#size</a></span>, <span class="object_link"><a href="Table.html#sort-instance_method" title="Groonga::Table#sort (method)">#sort</a></span>, <span class="object_link"><a href="Table.html#support_key%3F-instance_method" title="Groonga::Table#support_key? (method)">#support_key?</a></span>, <span class="object_link"><a href="Table.html#support_sub_records%3F-instance_method" title="Groonga::Table#support_sub_records? (method)">#support_sub_records?</a></span>, <span class="object_link"><a href="Table.html#truncate-instance_method" title="Groonga::Table#truncate (method)">#truncate</a></span>, <span class="object_link"><a href="Table.html#union%21-instance_method" title="Groonga::Table#union! (method)">#union!</a></span>, <span class="object_link"><a href="Table.html#unlock-instance_method" title="Groonga::Table#unlock (method)">#unlock</a></span>, <span class="object_link"><a href="Table.html#value-instance_method" title="Groonga::Table#value (method)">#value</a></span></p>
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Table</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Table.html#%5B%5D-instance_method" title="Groonga::Table#[] (method)">#[]</a></span>, <span class='object_link'><a href="Table.html#clear_lock-instance_method" title="Groonga::Table#clear_lock (method)">#clear_lock</a></span>, <span class='object_link'><a href="Table.html#column-instance_method" title="Groonga::Table#column (method)">#column</a></span>, <span class='object_link'><a href="Table.html#column_value-instance_method" title="Groonga::Table#column_value (method)">#column_value</a></span>, <span class='object_link'><a href="Table.html#columns-instance_method" title="Groonga::Table#columns (method)">#columns</a></span>, <span class='object_link'><a href="Table.html#define_column-instance_method" title="Groonga::Table#define_column (method)">#define_column</a></span>, <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">#define_index_column</a></span>, <span class='object_link'><a href="Table.html#defrag-instance_method" title="Groonga::Table#defrag (method)">#defrag</a></span>, <span class='object_link'><a href="Table.html#delete-instance_method" title="Groonga::Table#delete (method)">#delete</a></span>, <span class='object_link'><a href="Table.html#difference%21-instance_method" title="Groonga::Table#difference! (method)">#difference!</a></span>, <span class='object_link'><a href="Table.html#each-instance_method" title="Groonga::Table#each (method)">#each</a></span>, <span class='object_link'><a href="Table.html#empty%3F-instance_method" title="Groonga::Table#empty? (method)">#empty?</a></span>, <span class='object_link'><a href="Table.html#exist%3F-instance_method" title="Groonga::Table#exist? (method)">#exist?</a></span>, <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">#group</a></span>, <span class='object_link'><a href="Table.html#have_column%3F-instance_method" title="Groonga::Table#have_column? (method)">#have_column?</a></span>, <span class='object_link'><a href="Table.html#initialize-instance_method" title="Groonga::Table#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Table.html#inspect-instance_method" title="Groonga::Table#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Table.html#intersection%21-instance_method" title="Groonga::Table#intersection! (method)">#intersection!</a></span>, <span class='object_link'><a href="Table.html#lock-instance_method" title="Groonga::Table#lock (method)">#lock</a></span>, <span class='object_link'><a href="Table.html#locked%3F-instance_method" title="Groonga::Table#locked? (method)">#locked?</a></span>, <span class='object_link'><a href="Table.html#merge%21-instance_method" title="Groonga::Table#merge! (method)">#merge!</a></span>, <span class='object_link'><a href="Table.html#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">#open_cursor</a></span>, <span class='object_link'><a href="Table.html#paginate-instance_method" title="Groonga::Table#paginate (method)">#paginate</a></span>, <span class='object_link'><a href="Table.html#records-instance_method" title="Groonga::Table#records (method)">#records</a></span>, <span class='object_link'><a href="Table.html#rename-instance_method" title="Groonga::Table#rename (method)">#rename</a></span>, <span class='object_link'><a href="Table.html#select-instance_method" title="Groonga::Table#select (method)">#select</a></span>, <span class='object_link'><a href="Table.html#set_column_value-instance_method" title="Groonga::Table#set_column_value (method)">#set_column_value</a></span>, <span class='object_link'><a href="Table.html#set_value-instance_method" title="Groonga::Table#set_value (method)">#set_value</a></span>, <span class='object_link'><a href="Table.html#size-instance_method" title="Groonga::Table#size (method)">#size</a></span>, <span class='object_link'><a href="Table.html#sort-instance_method" title="Groonga::Table#sort (method)">#sort</a></span>, <span class='object_link'><a href="Table.html#support_key%3F-instance_method" title="Groonga::Table#support_key? (method)">#support_key?</a></span>, <span class='object_link'><a href="Table.html#support_sub_records%3F-instance_method" title="Groonga::Table#support_sub_records? (method)">#support_sub_records?</a></span>, <span class='object_link'><a href="Table.html#truncate-instance_method" title="Groonga::Table#truncate (method)">#truncate</a></span>, <span class='object_link'><a href="Table.html#union%21-instance_method" title="Groonga::Table#union! (method)">#union!</a></span>, <span class='object_link'><a href="Table.html#unlock-instance_method" title="Groonga::Table#unlock (method)">#unlock</a></span>, <span class='object_link'><a href="Table.html#value-instance_method" title="Groonga::Table#value (method)">#value</a></span></p>
 
   
   
@@ -432,12 +449,12 @@
   
   
   
-  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
-  <p class="inherited"><span class="object_link"><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class="object_link"><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class="object_link"><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class="object_link"><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class="object_link"><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class="object_link"><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class="object_link"><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class="object_link"><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class="object_link"><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class="object_link"><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class="object_link"><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class="object_link"><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class="object_link"><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class="object_link"><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class="object_link"><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class="object_link"><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class="object_link"><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class="object_link"><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class='object_link'><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <p class="notice">This class inherits a constructor from <span class="object_link"><a href="Table.html#initialize-instance_method" title="Groonga::Table#initialize (method)">Groonga::Table</a></span></p>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="Table.html#initialize-instance_method" title="Groonga::Table#initialize (method)">Groonga::Table</a></span></p>
   
 </div>
 
@@ -450,9 +467,9 @@
   <h3 class="signature first" id="create-class_method">
   
     
-      <span class="overload">+ (<tt><span class="object_link"><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span></tt>) <strong>create</strong>(options = {}) </span>
+      <span class="overload">+ (<tt><span class='object_link'><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span></tt>) <strong>create</strong>(options = {}) </span>
     
-      <span class="overload">+ (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create</strong>(options = {}) {|table| ... }</span>
+      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create</strong>(options = {}) {|table| ... }</span>
     
   
 
@@ -461,9 +478,10 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>各レコードをパトリシアトライで管理するテーブルを生成する。
-ブロックを指定すると、そのブロックに生成したテーブルが渡さ
+    
+<p>各レコードをパトリシアトライで管理するテーブルを生成する。 ブロックを指定すると、そのブロックに生成したテーブルが渡さ
 れ、ブロックを抜けると自動的にテーブルが破棄される。</p>
+
 
   </div>
 </div>
@@ -473,47 +491,47 @@
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class="comment">#無名一時テーブルを生成する。
-</span><span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span>
+      <pre class="example code"><span class='comment'>#無名一時テーブルを生成する。
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span>
 
-<span class="comment">#無名永続テーブルを生成する。
-</span><span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:path</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">/tmp/hash.grn</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class='comment'>#無名永続テーブルを生成する。
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/hash.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
-<span class="comment">#名前付き永続テーブルを生成する。ただし、ファイル名は気に
-</span><span class="comment">#しない。
-</span><span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Bookmarks</span><span class="tstring_end">"</span></span><span class="comma">,</span>
-                             <span class="symbol">:persistent</span> <span class="op">=&gt;</span> <span class="kw">true</span><span class="rparen">)</span>
+<span class='comment'>#名前付き永続テーブルを生成する。ただし、ファイル名は気に
+</span><span class='comment'>#しない。
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                             <span class='symbol'>:persistent</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
 
-<span class="comment">#それぞれのレコードに512バイトの値を格納できる無名一時テー
-</span><span class="comment">#ブルを生成する。
-</span><span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:value</span> <span class="op">=&gt;</span> <span class="int">512</span><span class="rparen">)</span>
+<span class='comment'>#それぞれのレコードに512バイトの値を格納できる無名一時テー
+</span><span class='comment'>#ブルを生成する。
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:value</span> <span class='op'>=&gt;</span> <span class='int'>512</span><span class='rparen'>)</span>
 
-<span class="comment">#キーとして文字列を使用する無名一時テーブルを生成する。
-</span><span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:key_type</span> <span class="op">=&gt;</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">Type</span><span class="op">::</span><span class="const">SHORT_TEXT</span><span class="rparen">)</span>
+<span class='comment'>#キーとして文字列を使用する無名一時テーブルを生成する。
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>SHORT_TEXT</span><span class='rparen'>)</span>
 
-<span class="comment">#キーとして文字列を使用する無名一時テーブルを生成する。
-</span><span class="comment">#（キーの種類を表すオブジェクトは文字列で指定。）
-</span><span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:key_type</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ShortText</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class='comment'>#キーとして文字列を使用する無名一時テーブルを生成する。
+</span><span class='comment'>#（キーの種類を表すオブジェクトは文字列で指定。）
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
-<span class="comment">#キーとしてBookmarksテーブルのレコードを使用す
-</span><span class="comment">#る無名一時テーブルを生成する。
-</span><span class="id identifier rubyid_bookmarks">bookmarks</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Bookmarks</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
-<span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:key_type</span> <span class="op">=&gt;</span> <span class="id identifier rubyid_bookmarks">bookmarks</span><span class="rparen">)</span>
+<span class='comment'>#キーとしてBookmarksテーブルのレコードを使用す
+</span><span class='comment'>#る無名一時テーブルを生成する。
+</span><span class='id identifier rubyid_bookmarks'>bookmarks</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='rparen'>)</span>
 
-<span class="comment">#キーとしてBookmarksテーブルのレコードを使用す
-</span><span class="comment">#る無名一時テーブルを生成する。
-</span><span class="comment">#（テーブルは文字列で指定。）
-</span><span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Bookmarks</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
-<span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:key_type</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Bookmarks</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
+<span class='comment'>#キーとしてBookmarksテーブルのレコードを使用す
+</span><span class='comment'>#る無名一時テーブルを生成する。
+</span><span class='comment'>#（テーブルは文字列で指定。）
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
-<span class="comment">#全文検索用のトークンをバイグラムで切り出す無名一時テーブ
-</span><span class="comment">#ルを生成する。
-</span><span class="id identifier rubyid_bookmarks">bookmarks</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Bookmarks</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
-<span class="id identifier rubyid_bookmarks">bookmarks</span><span class="period">.</span><span class="id identifier rubyid_define_column">define_column</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">comment</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Text</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
-<span class="id identifier rubyid_terms">terms</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:name</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Terms</span><span class="tstring_end">"</span></span><span class="comma">,</span>
-                                     <span class="symbol">:default_tokenizer</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">TokenBigram</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
-<span class="id identifier rubyid_terms">terms</span><span class="period">.</span><span class="id identifier rubyid_define_index_column">define_index_column</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">content</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="id identifier rubyid_bookmarks">bookmarks</span><span class="comma">,</span>
-                          <span class="symbol">:source</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">Bookmarks.comment</span><span class="tstring_end">"</span></span><span class="rparen">)</span></pre>
+<span class='comment'>#全文検索用のトークンをバイグラムで切り出す無名一時テーブ
+</span><span class='comment'>#ルを生成する。
+</span><span class='id identifier rubyid_bookmarks'>bookmarks</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comment</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_terms'>terms</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                     <span class='symbol'>:default_tokenizer</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_terms'>terms</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='comma'>,</span>
+                          <span class='symbol'>:source</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks.comment</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre>
     
   </div>
 
@@ -522,7 +540,7 @@
     
       
       <li class="overload_item">
-        <span class="signature">+ (<tt><span class="object_link"><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span></tt>) <strong>create</strong>(options = {}) </span>
+        <span class="signature">+ (<tt><span class='object_link'><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span></tt>) <strong>create</strong>(options = {}) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -535,15 +553,17 @@
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -557,7 +577,7 @@
       
         <li>
           <span class="name">:context</span>
-          <span class="type">(<tt><span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Groonga::Context</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Groonga::Context</a></span></tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -565,136 +585,165 @@
             
           </span>
           
-            &mdash; <div class="inline"><p>テーブルが利用する <span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p></div>
+            &mdash; <div class='inline'>
+<p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:name</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>テーブルの名前。名前をつけると、 <span class="object_link"><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
-前を指定してテーブルを取得することができる。省略すると
-無名テーブルになり、テーブルIDでのみ取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名 前を指定してテーブルを取得することができる。省略すると
+無名テーブルになり、テーブルIDでのみ取得できる。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:path</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>テーブルを保存するパス。パスを指定すると永続テーブルとな
-り、プロセス終了後もレコードは保持される。次回起動時に
-<span class="object_link"><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する
-ことができる。省略すると一時テーブルになり、プロセスが終
-了するとレコードは破棄される。</p></div>
+            &mdash; <div class='inline'>
+<p>テーブルを保存するパス。パスを指定すると永続テーブルとな り、プロセス終了後もレコードは保持される。次回起動時に
+<span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する ことができる。省略すると一時テーブルになり、プロセスが終
+了するとレコードは破棄される。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:persistent</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると永続テーブルとなる。 <ins>path</ins> を省略した
-場合は自動的にパスが付加される。 <ins>:context</ins> で指定した
-<span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
-タベースの場合は例外が発生する。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると永続テーブルとなる。 <tt>path</tt> を省略した 場合は自動的にパスが付加される。
+<tt>:context</tt> で指定した <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
+タベースの場合は例外が発生する。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_normalize</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定するとキーを正規化する。</p></div>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
+
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_with_sis</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定するとキーの文字列の全suffixが自動的に登
-録される。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定するとキーの文字列の全suffixが自動的に登 録される。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_type</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>キーの種類を示すオブジェクトを指定する。キーの種類には型
-名（"Int32"や"ShortText"など）または <span class="object_link"><a href="Type.html" title="Groonga::Type (class)">Type</a></span> または
-テーブル（ <span class="object_link"><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、
-<span class="object_link"><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span> のどれか）を指定する。</p>
-<p><span class="object_link"><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の値をキー
-として使用する。ただし、キーの最大サイズは4096バイトで
-あるため、 <span class="object_link"><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class="object_link"><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span>
-は使用できない。</p>
-<p>テーブルを指定した場合はレコードIDをキーとして使用する。
-指定したテーブルの <span class="object_link"><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用するこ
-ともでき、その場合は自動的に <span class="object_link"><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコード
-IDを取得する。</p>
-<p>省略した場合はShortText型をキーとして使用する。この場合、
-4096バイトまで使用可能である。</p></div>
+            &mdash; <div class='inline'>
+<p>キーの種類を示すオブジェクトを指定する。キーの種類には型 名（“Int32”や“ShortText”など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
+または テーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span>
+のどれか）を指定する。</p>
+
+<p><span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の値をキー として使用する。ただし、キーの最大サイズは4096バイトで あるため、
+<span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。</p>
+
+<p>テーブルを指定した場合はレコードIDをキーとして使用する。 指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用するこ
+ともでき、その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコード IDを取得する。</p>
+
+<p>省略した場合はShortText型をキーとして使用する。この場合、 4096バイトまで使用可能である。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:value_type</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p>
-<p>参考: Type.new</p></div>
+            &mdash; <div class='inline'>
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
+
+<p>参考: Type.new</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:default_tokenizer</span>
-          <span class="type">(<tt><span class="object_link"><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>で使用するトークナイザを指定する。
-デフォルトでは何も設定されていないので、テーブルに
-<span class="object_link"><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
-<code>"TokenBigram"</code> などを指定する必要がある。</p></div>
+            &mdash; <div class='inline'>
+<p>で使用するトークナイザを指定する。 デフォルトでは何も設定されていないので、テーブルに <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
+@“TokenBigram”@ などを指定する必要がある。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:sub_records</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <span class="object_link"><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
-<span class="object_link"><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに含まれるレコー
-ドの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>
+でグループに含まれるレコー ドの件数を取得できる。</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:normalizer</span>
+          <span class="type">(<tt>String</tt>, <tt><span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
+</div>
           
         </li>
       
@@ -707,7 +756,7 @@ IDを取得する。</p>
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span></tt>)</span>
       
       
       
@@ -720,7 +769,7 @@ IDを取得する。</p>
     
       
       <li class="overload_item">
-        <span class="signature">+ (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create</strong>(options = {}) {|table| ... }</span>
+        <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create</strong>(options = {}) {|table| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -733,15 +782,17 @@ IDを取得する。</p>
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -755,7 +806,7 @@ IDを取得する。</p>
       
         <li>
           <span class="name">:context</span>
-          <span class="type">(<tt><span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Groonga::Context</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Groonga::Context</a></span></tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -763,136 +814,165 @@ IDを取得する。</p>
             
           </span>
           
-            &mdash; <div class="inline"><p>テーブルが利用する <span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p></div>
+            &mdash; <div class='inline'>
+<p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:name</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>テーブルの名前。名前をつけると、 <span class="object_link"><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
-前を指定してテーブルを取得することができる。省略すると
-無名テーブルになり、テーブルIDでのみ取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名 前を指定してテーブルを取得することができる。省略すると
+無名テーブルになり、テーブルIDでのみ取得できる。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:path</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>テーブルを保存するパス。パスを指定すると永続テーブルとな
-り、プロセス終了後もレコードは保持される。次回起動時に
-<span class="object_link"><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する
-ことができる。省略すると一時テーブルになり、プロセスが終
-了するとレコードは破棄される。</p></div>
+            &mdash; <div class='inline'>
+<p>テーブルを保存するパス。パスを指定すると永続テーブルとな り、プロセス終了後もレコードは保持される。次回起動時に
+<span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する ことができる。省略すると一時テーブルになり、プロセスが終
+了するとレコードは破棄される。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:persistent</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると永続テーブルとなる。 <ins>path</ins> を省略した
-場合は自動的にパスが付加される。 <ins>:context</ins> で指定した
-<span class="object_link"><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
-タベースの場合は例外が発生する。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると永続テーブルとなる。 <tt>path</tt> を省略した 場合は自動的にパスが付加される。
+<tt>:context</tt> で指定した <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
+タベースの場合は例外が発生する。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_normalize</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定するとキーを正規化する。</p></div>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
+
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_with_sis</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定するとキーの文字列の全suffixが自動的に登
-録される。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定するとキーの文字列の全suffixが自動的に登 録される。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_type</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>キーの種類を示すオブジェクトを指定する。キーの種類には型
-名（"Int32"や"ShortText"など）または <span class="object_link"><a href="Type.html" title="Groonga::Type (class)">Type</a></span> または
-テーブル（ <span class="object_link"><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、
-<span class="object_link"><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span> のどれか）を指定する。</p>
-<p><span class="object_link"><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の値をキー
-として使用する。ただし、キーの最大サイズは4096バイトで
-あるため、 <span class="object_link"><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class="object_link"><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span>
-は使用できない。</p>
-<p>テーブルを指定した場合はレコードIDをキーとして使用する。
-指定したテーブルの <span class="object_link"><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用するこ
-ともでき、その場合は自動的に <span class="object_link"><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコード
-IDを取得する。</p>
-<p>省略した場合はShortText型をキーとして使用する。この場合、
-4096バイトまで使用可能である。</p></div>
+            &mdash; <div class='inline'>
+<p>キーの種類を示すオブジェクトを指定する。キーの種類には型 名（“Int32”や“ShortText”など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
+または テーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="" title="Groonga::PatriciaTrie (class)">Groonga::PatriciaTrie</a></span>
+のどれか）を指定する。</p>
+
+<p><span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の値をキー として使用する。ただし、キーの最大サイズは4096バイトで あるため、
+<span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。</p>
+
+<p>テーブルを指定した場合はレコードIDをキーとして使用する。 指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用するこ
+ともでき、その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコード IDを取得する。</p>
+
+<p>省略した場合はShortText型をキーとして使用する。この場合、 4096バイトまで使用可能である。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:value_type</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p>
-<p>参考: Type.new</p></div>
+            &mdash; <div class='inline'>
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
+
+<p>参考: Type.new</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:default_tokenizer</span>
-          <span class="type">(<tt><span class="object_link"><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>で使用するトークナイザを指定する。
-デフォルトでは何も設定されていないので、テーブルに
-<span class="object_link"><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
-<code>"TokenBigram"</code> などを指定する必要がある。</p></div>
+            &mdash; <div class='inline'>
+<p>で使用するトークナイザを指定する。 デフォルトでは何も設定されていないので、テーブルに <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
+@“TokenBigram”@ などを指定する必要がある。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:sub_records</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <span class="object_link"><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
-<span class="object_link"><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに含まれるレコー
-ドの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>
+でグループに含まれるレコー ドの件数を取得できる。</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:normalizer</span>
+          <span class="type">(<tt>String</tt>, <tt><span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
+</div>
           
         </li>
       
@@ -905,7 +985,7 @@ IDを取得する。</p>
     <li>
       
       
-        <span class="type">(<tt>table</tt>)</span>
+        <span class='type'>(<tt>table</tt>)</span>
       
       
       
@@ -925,15 +1005,6 @@ IDを取得する。</p>
       <pre class="lines">
 
 
-149
-150
-151
-152
-153
-154
-155
-156
-157
 158
 159
 160
@@ -1002,10 +1073,24 @@ IDを取得する。</p>
 223
 224
 225
-226</pre>
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 149</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 158</span>
 
 static VALUE
 rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
@@ -1020,20 +1105,22 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
     VALUE rb_key_normalize, rb_key_with_sis, rb_key_type;
     VALUE rb_value_type;
     VALUE rb_default_tokenizer, rb_sub_records;
+    VALUE rb_normalizer;
 
-    rb_scan_args(argc, argv, "01", &amp;options);
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
 
     rb_grn_scan_options(options,
-			"context", &amp;rb_context,
-			"name", &amp;rb_name,
-                        "path", &amp;rb_path,
-			"persistent", &amp;rb_persistent,
-			"key_normalize", &amp;rb_key_normalize,
-			"key_with_sis", &amp;rb_key_with_sis,
-			"key_type", &amp;rb_key_type,
-			"value_type", &amp;rb_value_type,
-			"default_tokenizer", &amp;rb_default_tokenizer,
-			"sub_records", &amp;rb_sub_records,
+			&quot;context&quot;, &amp;rb_context,
+			&quot;name&quot;, &amp;rb_name,
+                        &quot;path&quot;, &amp;rb_path,
+			&quot;persistent&quot;, &amp;rb_persistent,
+			&quot;key_normalize&quot;, &amp;rb_key_normalize,
+			&quot;key_with_sis&quot;, &amp;rb_key_with_sis,
+			&quot;key_type&quot;, &amp;rb_key_type,
+			&quot;value_type&quot;, &amp;rb_value_type,
+			&quot;default_tokenizer&quot;, &amp;rb_default_tokenizer,
+			&quot;sub_records&quot;, &amp;rb_sub_records,
+			&quot;normalizer&quot;, &amp;rb_normalizer,
 			NULL);
 
     context = rb_grn_context_ensure(&amp;rb_context);
@@ -1077,8 +1164,11 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
     rb_table = GRNOBJECT2RVAL(klass, context, table, GRN_TRUE);
 
     if (!NIL_P(rb_default_tokenizer))
-	rb_funcall(rb_table, rb_intern("default_tokenizer="), 1,
+	rb_funcall(rb_table, rb_intern(&quot;default_tokenizer=&quot;), 1,
 		   rb_default_tokenizer);
+    if (!NIL_P(rb_normalizer))
+	rb_funcall(rb_table, rb_intern(&quot;normalizer=&quot;), 1,
+		   rb_normalizer);
 
     if (rb_block_given_p())
         return rb_ensure(rb_yield, rb_table, rb_grn_object_close, rb_table);
@@ -1100,9 +1190,9 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
   <h3 class="signature first" id="open_near_cursor-instance_method">
   
     
-      <span class="overload">- (<tt><span class="object_link"><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_near_cursor</strong>(key, options = {}) </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_near_cursor</strong>(key, options = {}) </span>
     
-      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_near_cursor</strong>(key, options = {}) {|cursor| ... }</span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_near_cursor</strong>(key, options = {}) {|cursor| ... }</span>
     
   
 
@@ -1111,9 +1201,10 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>key</em> に近い順にレコードを取り出すカーソルを生成して返す。
-ブロックを指定すると、そのブロックに生成したカーソルが渡され、
+    
+<p><em>key</em> に近い順にレコードを取り出すカーソルを生成して返す。 ブロックを指定すると、そのブロックに生成したカーソルが渡され、
 ブロックを抜けると自動的にカーソルが破棄される。</p>
+
 
   </div>
 </div>
@@ -1124,7 +1215,7 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_near_cursor</strong>(key, options = {}) </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_near_cursor</strong>(key, options = {}) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1137,15 +1228,17 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1161,61 +1254,67 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
       
         <li>
           <span class="name">:size</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><em>size</em> バイト以降のデータが同じキーのレコードに限定する。</p></div>
+            &mdash; <div class='inline'>
+<p><em>size</em> バイト以降のデータが同じキーのレコードに限定する。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:offset</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目
-からレコードを取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目 からレコードを取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:limit</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
-省略された場合または-1が指定された場合は、全件が指定され
-たものとみなす。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。 省略された場合または-1が指定された場合は、全件が指定され
+たものとみなす。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:greater_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>key</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>key</em> で指定した値に一致した [ <tt>key</tt> ] を 範囲に含まない。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:less_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>key</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>key</em> で指定した値に一致した [ <tt>key</tt> ] を 範囲に含まない。</p>
+</div>
           
         </li>
       
@@ -1228,7 +1327,7 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>)</span>
       
       
       
@@ -1241,7 +1340,7 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_near_cursor</strong>(key, options = {}) {|cursor| ... }</span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_near_cursor</strong>(key, options = {}) {|cursor| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1254,15 +1353,17 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1278,61 +1379,67 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
       
         <li>
           <span class="name">:size</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><em>size</em> バイト以降のデータが同じキーのレコードに限定する。</p></div>
+            &mdash; <div class='inline'>
+<p><em>size</em> バイト以降のデータが同じキーのレコードに限定する。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:offset</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目
-からレコードを取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目 からレコードを取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:limit</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
-省略された場合または-1が指定された場合は、全件が指定され
-たものとみなす。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。 省略された場合または-1が指定された場合は、全件が指定され
+たものとみなす。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:greater_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>key</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>key</em> で指定した値に一致した [ <tt>key</tt> ] を 範囲に含まない。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:less_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>key</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>key</em> で指定した値に一致した [ <tt>key</tt> ] を 範囲に含まない。</p>
+</div>
           
         </li>
       
@@ -1345,7 +1452,7 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
     <li>
       
       
-        <span class="type">(<tt>cursor</tt>)</span>
+        <span class='type'>(<tt>cursor</tt>)</span>
       
       
       
@@ -1365,25 +1472,25 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
       <pre class="lines">
 
 
-830
-831
-832
-833
-834
-835
-836
-837
-838
-839
-840
 841
 842
 843
 844
-845</pre>
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 830</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 841</span>
 
 static VALUE
 rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
@@ -1395,7 +1502,7 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
     cursor = rb_grn_patricia_trie_open_grn_near_cursor(argc, argv,
 						       self, &amp;context, GRN_CURSOR_RK);
     rb_cursor = GRNTABLECURSOR2RVAL(Qnil, context, cursor);
-    rb_iv_set(rb_cursor, "@table", self); /* FIXME: cursor should mark table */
+    rb_iv_set(rb_cursor, &quot;@table&quot;, self); /* FIXME: cursor should mark table */
     if (rb_block_given_p())
 	return rb_ensure(rb_yield, rb_cursor, rb_grn_object_close, rb_cursor);
     else
@@ -1410,9 +1517,9 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
   <h3 class="signature " id="open_prefix_cursor-instance_method">
   
     
-      <span class="overload">- (<tt><span class="object_link"><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) </span>
     
-      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) {|cursor| ... }</span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) {|cursor| ... }</span>
     
   
 
@@ -1421,9 +1528,10 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>prefix</em> に前方一致検索をするカーソルを生成して返す。ブロッ
-クを指定すると、そのブロックに生成したカーソルが渡され、ブ
+    
+<p><em>prefix</em> に前方一致検索をするカーソルを生成して返す。ブロッ クを指定すると、そのブロックに生成したカーソルが渡され、ブ
 ロックを抜けると自動的にカーソルが破棄される。</p>
+
 
   </div>
 </div>
@@ -1434,7 +1542,7 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1447,15 +1555,17 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1471,68 +1581,74 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
       
         <li>
           <span class="name">:key_bytes</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><em>prefix</em> のサイズ（byte）</p></div>
+            &mdash; <div class='inline'>
+<p><em>prefix</em> のサイズ（byte）</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_bits</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><em>prefix</em> のサイズ（bit）</p></div>
+            &mdash; <div class='inline'>
+<p><em>prefix</em> のサイズ（bit）</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:offset</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目
-からレコードを取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目 からレコードを取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:limit</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
-省略された場合または-1が指定された場合は、全件が指定され
-たものとみなす。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。 省略された場合または-1が指定された場合は、全件が指定され
+たものとみなす。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:order</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>:asc</ins> または <ins>:ascending</ins> を指定すると昇順にレコードを取
-り出す。
-<ins>:desc</ins> または <ins>:descending</ins> を指定すると降順にレコードを
-取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>:asc</tt> または <tt>:ascending</tt> を指定すると昇順にレコードを取 り出す。 <tt>:desc</tt>
+または <tt>:descending</tt> を指定すると降順にレコードを 取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:order_by</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -1540,32 +1656,37 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>:id</ins> を指定するとID順にレコードを取り出す。（デフォルト）
-<ins>:key</ins>指定するとキー順にレコードを取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>:id</tt> を指定するとID順にレコードを取り出す。（デフォルト） <tt>:key</tt>指定するとキー順にレコードを取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:greater_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>prefix</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>prefix</em> で指定した値に一致した [ <tt>key</tt> ] を
+範囲に含まない。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:less_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>prefix</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>prefix</em> で指定した値に一致した [ <tt>key</tt> ] を
+範囲に含まない。</p>
+</div>
           
         </li>
       
@@ -1578,7 +1699,7 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>)</span>
       
       
       
@@ -1591,7 +1712,7 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) {|cursor| ... }</span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) {|cursor| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1604,15 +1725,17 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1628,68 +1751,74 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
       
         <li>
           <span class="name">:key_bytes</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><em>prefix</em> のサイズ（byte）</p></div>
+            &mdash; <div class='inline'>
+<p><em>prefix</em> のサイズ（byte）</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_bits</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><em>prefix</em> のサイズ（bit）</p></div>
+            &mdash; <div class='inline'>
+<p><em>prefix</em> のサイズ（bit）</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:offset</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目
-からレコードを取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目 からレコードを取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:limit</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
-省略された場合または-1が指定された場合は、全件が指定され
-たものとみなす。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。 省略された場合または-1が指定された場合は、全件が指定され
+たものとみなす。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:order</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>:asc</ins> または <ins>:ascending</ins> を指定すると昇順にレコードを取
-り出す。
-<ins>:desc</ins> または <ins>:descending</ins> を指定すると降順にレコードを
-取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>:asc</tt> または <tt>:ascending</tt> を指定すると昇順にレコードを取 り出す。 <tt>:desc</tt>
+または <tt>:descending</tt> を指定すると降順にレコードを 取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:order_by</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -1697,32 +1826,37 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>:id</ins> を指定するとID順にレコードを取り出す。（デフォルト）
-<ins>:key</ins>指定するとキー順にレコードを取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>:id</tt> を指定するとID順にレコードを取り出す。（デフォルト） <tt>:key</tt>指定するとキー順にレコードを取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:greater_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>prefix</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>prefix</em> で指定した値に一致した [ <tt>key</tt> ] を
+範囲に含まない。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:less_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>prefix</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>prefix</em> で指定した値に一致した [ <tt>key</tt> ] を
+範囲に含まない。</p>
+</div>
           
         </li>
       
@@ -1735,7 +1869,7 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
     <li>
       
       
-        <span class="type">(<tt>cursor</tt>)</span>
+        <span class='type'>(<tt>cursor</tt>)</span>
       
       
       
@@ -1755,25 +1889,25 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
 621
 622
 623
-624</pre>
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 609</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 621</span>
 
 static VALUE
 rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
@@ -1785,7 +1919,7 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
     cursor = rb_grn_patricia_trie_open_grn_prefix_cursor(argc, argv,
 							 self, &amp;context);
     rb_cursor = GRNTABLECURSOR2RVAL(Qnil, context, cursor);
-    rb_iv_set(rb_cursor, "@table", self); /* FIXME: cursor should mark table */
+    rb_iv_set(rb_cursor, &quot;@table&quot;, self); /* FIXME: cursor should mark table */
     if (rb_block_given_p())
 	return rb_ensure(rb_yield, rb_cursor, rb_grn_object_close, rb_cursor);
     else
@@ -1800,9 +1934,9 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
   <h3 class="signature " id="open_rk_cursor-instance_method">
   
     
-      <span class="overload">- (<tt><span class="object_link"><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_rk_cursor</strong>(key, options = {}) </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_rk_cursor</strong>(key, options = {}) </span>
     
-      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_rk_cursor</strong>(key, options = {}) {|cursor| ... }</span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_rk_cursor</strong>(key, options = {}) {|cursor| ... }</span>
     
   
 
@@ -1811,12 +1945,11 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>table</em> のキーはカタカナである必要がある。また、エンコーディ
-ングはUTF-8である必要がある。ローマ字やひらがなで <em>key</em> を指
-定しても、 <em>key</em> に対応するカタカナのキーを検索するカーソル
-を生成して返す。ブロックを指定すると、そのブロックに生成し
-たカーソルが渡され、ブロックを抜けると自動的にカーソルが破
-棄される。</p>
+    
+<p><em>table</em> のキーはカタカナである必要がある。また、エンコーディ ングはUTF-8である必要がある。ローマ字やひらがなで
+<em>key</em> を指 定しても、 <em>key</em> に対応するカタカナのキーを検索するカーソル
+を生成して返す。ブロックを指定すると、そのブロックに生成し たカーソルが渡され、ブロックを抜けると自動的にカーソルが破 棄される。</p>
+
 
   </div>
 </div>
@@ -1827,7 +1960,7 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_rk_cursor</strong>(key, options = {}) </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>) <strong>open_rk_cursor</strong>(key, options = {}) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1840,15 +1973,17 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class="inline"><p>pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -1864,71 +1999,80 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
       
         <li>
           <span class="name">:key_bytes</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>_key_のサイズ（byte）</p></div>
+            &mdash; <div class='inline'>
+<p><em>key</em>のサイズ（byte）</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_bits</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>_key_のサイズ（bit）（現在は未サポート）</p></div>
+            &mdash; <div class='inline'>
+<p><em>key</em>のサイズ（bit）（現在は未サポート）</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:offset</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目から
-レコードを取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目から レコードを取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:limit</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
-省略された場合または-1が指定された場合は、全件が指定されたものとみなす。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
+省略された場合または-1が指定された場合は、全件が指定されたものとみなす。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:greater_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>key</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>key</em> で指定した値に一致した [ <tt>key</tt> ] を 範囲に含まない。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:less_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>key</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>key</em> で指定した値に一致した [ <tt>key</tt> ] を 範囲に含まない。</p>
+</div>
           
         </li>
       
@@ -1941,7 +2085,7 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="PatriciaTrieCursor.html" title="Groonga::PatriciaTrieCursor (class)">Groonga::PatriciaTrieCursor</a></span></tt>)</span>
       
       
       
@@ -1954,7 +2098,7 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_rk_cursor</strong>(key, options = {}) {|cursor| ... }</span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_rk_cursor</strong>(key, options = {}) {|cursor| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1967,15 +2111,17 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class="inline"><p>pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -1991,71 +2137,80 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
       
         <li>
           <span class="name">:key_bytes</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>_key_のサイズ（byte）</p></div>
+            &mdash; <div class='inline'>
+<p><em>key</em>のサイズ（byte）</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:key_bits</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>_key_のサイズ（bit）（現在は未サポート）</p></div>
+            &mdash; <div class='inline'>
+<p><em>key</em>のサイズ（bit）（現在は未サポート）</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:offset</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目から
-レコードを取り出す。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目から レコードを取り出す。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:limit</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
-省略された場合または-1が指定された場合は、全件が指定されたものとみなす。</p></div>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
+省略された場合または-1が指定された場合は、全件が指定されたものとみなす。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:greater_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>key</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>key</em> で指定した値に一致した [ <tt>key</tt> ] を 範囲に含まない。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:less_than</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p><ins>true</ins> を指定すると <em>key</em> で指定した値に一致した [ <ins>key</ins> ] を
-範囲に含まない。</p></div>
+            &mdash; <div class='inline'>
+<p><tt>true</tt> を指定すると <em>key</em> で指定した値に一致した [ <tt>key</tt> ] を 範囲に含まない。</p>
+</div>
           
         </li>
       
@@ -2068,7 +2223,7 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
     <li>
       
       
-        <span class="type">(<tt>cursor</tt>)</span>
+        <span class='type'>(<tt>cursor</tt>)</span>
       
       
       
@@ -2088,25 +2243,25 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-721
-722
-723
-724
-725
-726
-727
-728
-729
-730
-731
-732
 733
 734
 735
-736</pre>
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 721</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 733</span>
 
 static VALUE
 rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
@@ -2118,7 +2273,7 @@ rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
     cursor = rb_grn_patricia_trie_open_grn_rk_cursor(argc, argv,
 								self, &amp;context);
     rb_cursor = GRNTABLECURSOR2RVAL(Qnil, context, cursor);
-    rb_iv_set(rb_cursor, "@table", self); /* FIXME: cursor should mark table */
+    rb_iv_set(rb_cursor, &quot;@table&quot;, self); /* FIXME: cursor should mark table */
     if (rb_block_given_p())
 	return rb_ensure(rb_yield, rb_cursor, rb_grn_object_close, rb_cursor);
     else
@@ -2132,7 +2287,7 @@ rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="prefix_search-instance_method">
   
-    - (<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>prefix_search</strong>(prefix) 
+    - (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>prefix_search</strong>(prefix) 
   
 
   
@@ -2140,9 +2295,10 @@ rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>キーが <em>prefix</em> に前方一致するレコードのIDがキーに入っている
-<span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。マッチするレコードがない場合は空の
-<span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> が返る。</p>
+    
+<p>キーが <em>prefix</em> に前方一致するレコードのIDがキーに入っている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span>
+を返す。マッチするレコードがない場合は空の <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> が返る。</p>
+
 
   </div>
 </div>
@@ -2162,7 +2318,7 @@ rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>)</span>
       
       
       
@@ -2179,19 +2335,6 @@ rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-426
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
 439
 440
 441
@@ -2206,10 +2349,23 @@ rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
 450
 451
 452
-453</pre>
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 426</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 439</span>
 
 static VALUE
 rb_grn_patricia_trie_prefix_search (VALUE self, VALUE rb_prefix)
@@ -2255,8 +2411,10 @@ rb_grn_patricia_trie_prefix_search (VALUE self, VALUE rb_prefix)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>キーを登録するときに文字列の全suffixも一緒に登録する場合
-は <ins>true</ins> 、登録しない場合は <ins>false</ins> を返す。</p>
+    
+<p>キーを登録するときに文字列の全suffixも一緒に登録する場合 は <tt>true</tt> 、登録しない場合は <tt>false</tt>
+を返す。</p>
+
 
   </div>
 </div>
@@ -2270,7 +2428,7 @@ rb_grn_patricia_trie_prefix_search (VALUE self, VALUE rb_prefix)
     <li>
       
       
-        <span class="type">(<tt>Boolean</tt>)</span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -2284,20 +2442,20 @@ rb_grn_patricia_trie_prefix_search (VALUE self, VALUE rb_prefix)
       <pre class="lines">
 
 
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471</pre>
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 461</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 474</span>
 
 static VALUE
 rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
@@ -2319,9 +2477,9 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
   <h3 class="signature " id="scan-instance_method">
   
     
-      <span class="overload">- (<tt><span class="object_link"><a href="Array.html" title="Groonga::Array (class)">Array</a></span></tt>) <strong>scan</strong>(string) </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span></tt>) <strong>scan</strong>(string) </span>
     
-      <span class="overload">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>scan</strong>(string) {|record, word, start, length| ... }</span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>scan</strong>(string) {|record, word, start, length| ... }</span>
     
   
 
@@ -2330,11 +2488,12 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>string</em> を走査し、 <em>patricia_trie</em> 内に格納されているキーに
-マッチした部分文字列の情報をブロックに渡す。複数のキーが
-マッチする場合は最長一致するキーを優先する。</p>
-<p>ブロックを指定しない場合は、マッチした部分文字列の情報を
-まとめて配列として返す。</p>
+    
+<p><em>string</em> を走査し、 <em>patricia_trie</em> 内に格納されているキーに
+マッチした部分文字列の情報をブロックに渡す。複数のキーが マッチする場合は最長一致するキーを優先する。</p>
+
+<p>ブロックを指定しない場合は、マッチした部分文字列の情報を まとめて配列として返す。</p>
+
 
   </div>
 </div>
@@ -2344,26 +2503,26 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class="id identifier rubyid_words">words</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:key_type</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ShortText</span><span class="tstring_end">"</span></span><span class="comma">,</span>
-                                     <span class="symbol">:key_normalize</span> <span class="op">=&gt;</span> <span class="kw">true</span><span class="rparen">)</span>
-<span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_add">add</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">リンク</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
-<span class="id identifier rubyid_adventure_of_link">adventure_of_link</span> <span class="op">=</span> <span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_add">add</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">リンクの冒険</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
-<span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_add">add</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">冒険</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
-<span class="id identifier rubyid_gaxtu">gaxtu</span> <span class="op">=</span> <span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_add">add</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">ｶﾞｯ</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
-<span class="id identifier rubyid_muteki">muteki</span> <span class="op">=</span> <span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_add">add</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">ＭＵＴＥＫＩ</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
+      <pre class="example code"><span class='id identifier rubyid_words'>words</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                     <span class='symbol'>:key_normalize</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>リンク</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_adventure_of_link'>adventure_of_link</span> <span class='op'>=</span> <span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>リンクの冒険</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>冒険</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_gaxtu'>gaxtu</span> <span class='op'>=</span> <span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ｶﾞｯ</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_muteki'>muteki</span> <span class='op'>=</span> <span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ＭＵＴＥＫＩ</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
 
-<span class="id identifier rubyid_text">text</span> <span class="op">=</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">muTEki リンクの冒険 ミリバール ガッ</span><span class="tstring_end">'</span></span>
-<span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_scan">scan</span><span class="lparen">(</span><span class="id identifier rubyid_text">text</span><span class="rparen">)</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_record">record</span><span class="comma">,</span> <span class="id identifier rubyid_word">word</span><span class="comma">,</span> <span class="id identifier rubyid_start">start</span><span class="comma">,</span> <span class="id identifier rubyid_length">length</span><span class="op">|</span>
-  <span class="id identifier rubyid_p">p</span> <span class="lbracket">[</span><span class="id identifier rubyid_record">record</span><span class="period">.</span><span class="id identifier rubyid_key">key</span><span class="comma">,</span> <span class="id identifier rubyid_word">word</span><span class="comma">,</span> <span class="id identifier rubyid_start">start</span><span class="comma">,</span> <span class="id identifier rubyid_length">length</span><span class="rbracket">]</span>
-    <span class="comment"># -&gt; ["ＭＵＴＥＫＩ", "muTEki", 0, 6]
-</span>    <span class="comment"># -&gt; ["リンクの冒険", "リンクの冒険", 7, 18]
-</span>    <span class="comment"># -&gt; ["ｶﾞｯ", "ガッ", 42, 6]
-</span><span class="kw">end</span>
+<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>muTEki リンクの冒険 ミリバール ガッ</span><span class='tstring_end'>'</span></span>
+<span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='comma'>,</span> <span class='id identifier rubyid_word'>word</span><span class='comma'>,</span> <span class='id identifier rubyid_start'>start</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='op'>|</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='lbracket'>[</span><span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_word'>word</span><span class='comma'>,</span> <span class='id identifier rubyid_start'>start</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='rbracket'>]</span>
+    <span class='comment'># -&gt; [&quot;ＭＵＴＥＫＩ&quot;, &quot;muTEki&quot;, 0, 6]
+</span>    <span class='comment'># -&gt; [&quot;リンクの冒険&quot;, &quot;リンクの冒険&quot;, 7, 18]
+</span>    <span class='comment'># -&gt; [&quot;ｶﾞｯ&quot;, &quot;ガッ&quot;, 42, 6]
+</span><span class='kw'>end</span>
 
-<span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_scan">scan</span><span class="lparen">(</span><span class="id identifier rubyid_text">text</span><span class="rparen">)</span>
-  <span class="comment"># -&gt; [[muteki, "muTEki", 0, 6],
-</span>  <span class="comment">#     [adventure_of_link, "リンクの冒険", 7, 18],
-</span>  <span class="comment">#     [gaxtu, "ガッ", 42, 6]]</span></pre>
+<span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+  <span class='comment'># -&gt; [[muteki, &quot;muTEki&quot;, 0, 6],
+</span>  <span class='comment'>#     [adventure_of_link, &quot;リンクの冒険&quot;, 7, 18],
+</span>  <span class='comment'>#     [gaxtu, &quot;ガッ&quot;, 42, 6]]</span></pre>
     
   </div>
 
@@ -2372,7 +2531,7 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="Array.html" title="Groonga::Array (class)">Array</a></span></tt>) <strong>scan</strong>(string) </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span></tt>) <strong>scan</strong>(string) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -2387,7 +2546,7 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="Array.html" title="Groonga::Array (class)">Array</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span></tt>)</span>
       
       
       
@@ -2400,7 +2559,7 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>scan</strong>(string) {|record, word, start, length| ... }</span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>scan</strong>(string) {|record, word, start, length| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -2415,7 +2574,7 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
     <li>
       
       
-        <span class="type">(<tt>record</tt>, <tt>word</tt>, <tt>start</tt>, <tt>length</tt>)</span>
+        <span class='type'>(<tt>record</tt>, <tt>word</tt>, <tt>start</tt>, <tt>length</tt>)</span>
       
       
       
@@ -2427,57 +2586,65 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
   
     <li>
       
-        <span class="name">record</span>
+        <span class='name'>record</span>
       
       
-        <span class="type"></span>
+        <span class='type'></span>
       
       
       
         &mdash;
-        <div class="inline"><p>マッチしたキーの <span class="object_link"><a href="Record.html" title="Groonga::Record (class)">Record</a></span> 。</p></div>
+        <div class='inline'>
+<p>マッチしたキーの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> 。</p>
+</div>
       
     </li>
   
     <li>
       
-        <span class="name">word</span>
+        <span class='name'>word</span>
       
       
-        <span class="type"></span>
+        <span class='type'></span>
       
       
       
         &mdash;
-        <div class="inline"><p>マッチした部分文字列。</p></div>
+        <div class='inline'>
+<p>マッチした部分文字列。</p>
+</div>
       
     </li>
   
     <li>
       
-        <span class="name">start</span>
+        <span class='name'>start</span>
       
       
-        <span class="type"></span>
+        <span class='type'></span>
       
       
       
         &mdash;
-        <div class="inline"><p><em>string</em> 内での <em>word</em> の出現位置。（バイト単位）</p></div>
+        <div class='inline'>
+<p><em>string</em> 内での <em>word</em> の出現位置。（バイト単位）</p>
+</div>
       
     </li>
   
     <li>
       
-        <span class="name">length</span>
+        <span class='name'>length</span>
       
       
-        <span class="type"></span>
+        <span class='type'></span>
       
       
       
         &mdash;
-        <div class="inline"><p><em>word</em> の長さ。（バイト単位）</p></div>
+        <div class='inline'>
+<p><em>word</em> の長さ。（バイト単位）</p>
+</div>
       
     </li>
   
@@ -2495,19 +2662,6 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
       <pre class="lines">
 
 
-357
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
 370
 371
 372
@@ -2554,10 +2708,23 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
 413
 414
 415
-416</pre>
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 357</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 370</span>
 
 static VALUE
 rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
@@ -2627,7 +2794,7 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
       <div class="method_details ">
   <h3 class="signature " id="search-instance_method">
   
-    - (<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>search</strong>(key, options = nil) 
+    - (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>search</strong>(key, options = nil) 
   
 
   
@@ -2635,11 +2802,13 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>key</em> にマッチするレコードのIDがキーに入っている <span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。
-マッチするレコードがない場合は空の <span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> が返る。</p>
-<p><em>options</em> で <ins>:result</ins> を指定することにより、そのテーブルにマッチした
-レコードIDがキーのレコードを追加することができる。
-<ins>:result</ins> にテーブルを指定した場合は、そのテーブルが返る。</p>
+    
+<p><em>key</em> にマッチするレコードのIDがキーに入っている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。 マッチするレコードがない場合は空の
+<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> が返る。</p>
+
+<p><em>options</em> で <tt>:result</tt> を指定することにより、そのテーブルにマッチした
+レコードIDがキーのレコードを追加することができる。 <tt>:result</tt> にテーブルを指定した場合は、そのテーブルが返る。</p>
+
 
   </div>
 </div>
@@ -2649,17 +2818,19 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class="inline"><p>複数のキーで検索し、結果を1つのテーブルに集める。</p></div></p>
+        <p class="example_title"><div class='inline'>
+<p>複数のキーで検索し、結果を1つのテーブルに集める。</p>
+</div></p>
       
-      <pre class="example code"><span class="id identifier rubyid_result">result</span> <span class="op">=</span> <span class="kw">nil</span>
-<span class="id identifier rubyid_keys">keys</span> <span class="op">=</span> <span class="lbracket">[</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">morita</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">gunyara-kun</span><span class="tstring_end">"</span></span><span class="comma">,</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">yu</span><span class="tstring_end">"</span></span><span class="rbracket">]</span>
-<span class="id identifier rubyid_keys">keys</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_key">key</span><span class="op">|</span>
-  <span class="id identifier rubyid_result">result</span> <span class="op">=</span> <span class="id identifier rubyid_users">users</span><span class="period">.</span><span class="id identifier rubyid_search">search</span><span class="lparen">(</span><span class="id identifier rubyid_key">key</span><span class="comma">,</span> <span class="symbol">:result</span> <span class="op">=&gt;</span> <span class="id identifier rubyid_result">result</span><span class="rparen">)</span>
-<span class="kw">end</span>
-<span class="id identifier rubyid_result">result</span><span class="period">.</span><span class="id identifier rubyid_each">each</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_record">record</span><span class="op">|</span>
-  <span class="id identifier rubyid_user">user</span> <span class="op">=</span> <span class="id identifier rubyid_record">record</span><span class="period">.</span><span class="id identifier rubyid_key">key</span>
-  <span class="id identifier rubyid_p">p</span> <span class="id identifier rubyid_user">user</span><span class="period">.</span><span class="id identifier rubyid_key">key</span> <span class="comment"># -&gt; "morita"または"gunyara-kun"または"yu"
-</span><span class="kw">end</span></pre>
+      <pre class="example code"><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='id identifier rubyid_keys'>keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>morita</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gunyara-kun</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yu</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='symbol'>:result</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span> <span class='comment'># -&gt; &quot;morita&quot;または&quot;gunyara-kun&quot;または&quot;yu&quot;
+</span><span class='kw'>end</span></pre>
     
   </div>
 
@@ -2675,15 +2846,17 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
         &mdash;
-        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -2699,18 +2872,20 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
       
         <li>
           <span class="name">:result</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class="inline"><p>結果を格納するテーブル。</p></div>
+            &mdash; <div class='inline'>
+<p>結果を格納するテーブル。</p>
+</div>
           
         </li>
       
         <li>
           <span class="name">:operator</span>
-          <span class="type">(<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -2718,22 +2893,20 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
             
           </span>
           
-            &mdash; <div class="inline"><p>マッチしたレコードをどのように扱うか。指定可能な値は以
-下の通り。</p>
-<dl>
-	<dt>Groonga::Operator::OR</dt>
-	<dd>マッチしたレコードを追加。すでにレコードが追加され
-ている場合は何もしない。</dd>
-	<dt>Groonga::Operator::<span class="caps">AND</span></dt>
-	<dd>マッチしたレコードのスコアを増加。マッチしなかった
-レコードを削除。</dd>
-	<dt>Groonga::Operator::<span class="caps">BUT</span></dt>
-	<dd>マッチしたレコードを削除。</dd>
-	<dt>Groonga::Operator::<span class="caps">ADJUST</span></dt>
-	<dd>マッチしたレコードのスコアを増加。</dd>
-	<dt><ins>:type</ins></dt>
-	<dd><cite>?</cite></dd>
-</dl></div>
+            &mdash; <div class='inline'>
+<p>マッチしたレコードをどのように扱うか。指定可能な値は以 下の通り。</p>
+<ul><li>
+<p>Groonga::Operator::OR := マッチしたレコードを追加。すでにレコードが追加され ている場合は何もしない。 =:</p>
+</li><li>
+<p>Groonga::Operator::AND := マッチしたレコードのスコアを増加。マッチしなかった レコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::BUT := マッチしたレコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::ADJUST := マッチしたレコードのスコアを増加。 =:</p>
+</li><li>
+<p><tt>:type</tt> := ????? =:</p>
+</li></ul>
+</div>
           
         </li>
       
@@ -2746,7 +2919,7 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
     <li>
       
       
-        <span class="type">(<tt><span class="object_link"><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>)</span>
       
       
       
@@ -2763,19 +2936,6 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
       <pre class="lines">
 
 
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
 283
 284
 285
@@ -2809,10 +2969,23 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
 313
 314
 315
-316</pre>
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 270</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 283</span>
 
 static VALUE
 rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
@@ -2832,14 +3005,14 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
 					 NULL, NULL, NULL,
 					 NULL);
 
-    rb_scan_args(argc, argv, "11", &amp;rb_key, &amp;options);
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_key, &amp;options);
 
     RVAL2GRNKEY(rb_key, context, key, domain_id, domain, self);
 
     rb_grn_scan_options(options,
-			"result", &amp;rb_result,
-			"operator", &amp;rb_operator,
-			"type", &amp;rb_type,
+			&quot;result&quot;, &amp;rb_result,
+			&quot;operator&quot;, &amp;rb_operator,
+			&quot;type&quot;, &amp;rb_type,
 			NULL);
 
     if (NIL_P(rb_result)) {
@@ -2869,7 +3042,7 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="tag_keys-instance_method">
   
-    - (<tt><span class="object_link"><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>tag_keys</strong>(text, options = {}) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>tag_keys</strong>(text, options = {}) 
   
 
   
@@ -2877,11 +3050,11 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>text</em> を走査し、レコードのキーとマッチする部分文字列ごとに
-そのレコードが <em>record</em> として、その部分文字列が <em>word</em> として、
-ブロックが呼び出される。ブロックから返された文字列が元の部
-分文字列と置換される。全てのヒットに対してのその置換処理が
-行われた文字列が返される。</p>
+    
+<p><em>text</em> を走査し、レコードのキーとマッチする部分文字列ごとに そのレコードが <em>record</em>
+として、その部分文字列が <em>word</em> として、 ブロックが呼び出される。ブロックから返された文字列が元の部
+分文字列と置換される。全てのヒットに対してのその置換処理が 行われた文字列が返される。</p>
+
 
   </div>
 </div>
@@ -2891,24 +3064,24 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class="id identifier rubyid_include">include</span> <span class="const">ERB</span><span class="op">::</span><span class="const">Util</span>
-<span class="const">Groonga</span><span class="op">::</span><span class="const">Context</span><span class="period">.</span><span class="id identifier rubyid_default_options">default_options</span> <span class="op">=</span> <span class="lbrace">{</span><span class="symbol">:encoding</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">utf-8</span><span class="tstring_end">"</span></span><span class="rbrace">}</span>
-<span class="id identifier rubyid_words">words</span> <span class="op">=</span> <span class="const">Groonga</span><span class="op">::</span><span class="const">PatriciaTrie</span><span class="period">.</span><span class="id identifier rubyid_create">create</span><span class="lparen">(</span><span class="symbol">:key_type</span> <span class="op">=&gt;</span> <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ShortText</span><span class="tstring_end">"</span></span><span class="comma">,</span>
-                                     <span class="symbol">:key_normalize</span> <span class="op">=&gt;</span> <span class="kw">true</span><span class="rparen">)</span>
-<span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_add">add</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">ｶﾞｯ</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
-<span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_add">add</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">ＭＵＴＥＫＩ</span><span class="tstring_end">'</span></span><span class="rparen">)</span>
+      <pre class="example code"><span class='id identifier rubyid_include'>include</span> <span class='const'>ERB</span><span class='op'>::</span><span class='const'>Util</span>
+<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_default_options'>default_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>utf-8</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+<span class='id identifier rubyid_words'>words</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                                     <span class='symbol'>:key_normalize</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ｶﾞｯ</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ＭＵＴＥＫＩ</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
 
-<span class="id identifier rubyid_text">text</span> <span class="op">=</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">muTEki マッチしない &lt;&gt; ガッ</span><span class="tstring_end">'</span></span>
-<span class="id identifier rubyid_other_text_handler">other_text_handler</span> <span class="op">=</span> <span class="const">Proc</span><span class="period">.</span><span class="id identifier rubyid_new">new</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_string">string</span><span class="op">|</span>
-  <span class="id identifier rubyid_h">h</span><span class="lparen">(</span><span class="id identifier rubyid_string">string</span><span class="rparen">)</span>
-<span class="kw">end</span>
-<span class="id identifier rubyid_words">words</span><span class="period">.</span><span class="id identifier rubyid_tag_keys">tag_keys</span><span class="lparen">(</span><span class="id identifier rubyid_text">text</span><span class="rparen">)</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_record">record</span><span class="comma">,</span> <span class="id identifier rubyid_word">word</span><span class="op">|</span>
-  <span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">&lt;span class=\"keyword\"&gt;</span><span class="embexpr_beg">#{</span><span class="id identifier rubyid_h">h</span><span class="lparen">(</span><span class="id identifier rubyid_word">word</span><span class="rparen">)</span><span class="rbrace">}</span><span class="tstring_content">(</span><span class="embexpr_beg">#{</span><span class="id identifier rubyid_h">h</span><span class="lparen">(</span><span class="id identifier rubyid_record">record</span><span class="period">.</span><span class="id identifier rubyid_key">key</span><span class="rparen">)</span><span class="rbrace">}</span><span class="tstring_content">)&lt;/span&gt;\n</span><span class="tstring_end">"</span></span>
-<span class="kw">end</span>
-<span class="comment"># =&gt;
-</span><span class="comment"># "&lt;span class=\"keyword\"&gt;muTEki(muteki)&lt;/span&gt;\n" +
-</span><span class="comment"># " マッチしない &amp;lt;&amp;gt; " +
-</span><span class="comment"># "&lt;span class=\"keyword\"&gt;ガッ(ガッ)&lt;/span&gt;\n"</span></pre>
+<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>muTEki マッチしない &lt;&gt; ガッ</span><span class='tstring_end'>'</span></span>
+<span class='id identifier rubyid_other_text_handler'>other_text_handler</span> <span class='op'>=</span> <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_string'>string</span><span class='op'>|</span>
+  <span class='id identifier rubyid_h'>h</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_tag_keys'>tag_keys</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='comma'>,</span> <span class='id identifier rubyid_word'>word</span><span class='op'>|</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;span class=\&quot;keyword\&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_h'>h</span><span class='lparen'>(</span><span class='id identifier rubyid_word'>word</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_h'>h</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>)&lt;/span&gt;\n</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+<span class='comment'># =&gt;
+</span><span class='comment'># &quot;&lt;span class=\&quot;keyword\&quot;&gt;muTEki(muteki)&lt;/span&gt;\n&quot; +
+</span><span class='comment'># &quot; マッチしない &amp;lt;&amp;gt; &quot; +
+</span><span class='comment'># &quot;&lt;span class=\&quot;keyword\&quot;&gt;ガッ(ガッ)&lt;/span&gt;\n&quot;</span></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2916,17 +3089,19 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
   
     <li>
       
-        <span class="name">options</span>
+        <span class='name'>options</span>
       
       
-        <span class="type">(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
-        <div class="inline"><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -2947,8 +3122,11 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
             
           </span>
           
-            &mdash; <div class="inline"><p>The other_text_handler</p>
-<p>マッチした部分文字列の前後の文字列を変換するProcを指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The other_text_handler</p>
+
+<p>マッチした部分文字列の前後の文字列を変換するProcを指定する。</p>
+</div>
           
         </li>
       
@@ -2962,6 +3140,7 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+50
 51
 52
 53
@@ -2990,42 +3169,41 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
 76
 77
 78
-79
-80</pre>
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/patricia-trie.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/patricia-trie.rb', line 50</span>
 
-<span class="kw">def</span> <span class="id identifier rubyid_tag_keys">tag_keys</span><span class="lparen">(</span><span class="id identifier rubyid_text">text</span><span class="comma">,</span> <span class="id identifier rubyid_options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
-  <span class="id identifier rubyid_options">options</span> <span class="op">||=</span> <span class="lbrace">{</span><span class="rbrace">}</span>
-  <span class="id identifier rubyid_other_text_handler">other_text_handler</span> <span class="op">=</span> <span class="id identifier rubyid_options">options</span><span class="lbracket">[</span><span class="symbol">:other_text_handler</span><span class="rbracket">]</span>
-  <span class="id identifier rubyid_position">position</span> <span class="op">=</span> <span class="int">0</span>
-  <span class="id identifier rubyid_result">result</span> <span class="op">=</span> <span class="tstring"><span class="tstring_beg">'</span><span class="tstring_end">'</span></span>
-  <span class="kw">if</span> <span class="id identifier rubyid_text">text</span><span class="period">.</span><span class="id identifier rubyid_respond_to?">respond_to?</span><span class="lparen">(</span><span class="symbol">:encoding</span><span class="rparen">)</span>
-    <span class="id identifier rubyid_encoding">encoding</span> <span class="op">=</span> <span class="id identifier rubyid_text">text</span><span class="period">.</span><span class="id identifier rubyid_encoding">encoding</span>
-    <span class="id identifier rubyid_bytes">bytes</span> <span class="op">=</span> <span class="id identifier rubyid_text">text</span><span class="period">.</span><span class="id identifier rubyid_dup">dup</span><span class="period">.</span><span class="id identifier rubyid_force_encoding">force_encoding</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">ascii-8bit</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
-  <span class="kw">else</span>
-    <span class="id identifier rubyid_encoding">encoding</span> <span class="op">=</span> <span class="kw">nil</span>
-    <span class="id identifier rubyid_bytes">bytes</span> <span class="op">=</span> <span class="id identifier rubyid_text">text</span>
-  <span class="kw">end</span>
-  <span class="id identifier rubyid_scan">scan</span><span class="lparen">(</span><span class="id identifier rubyid_text">text</span><span class="rparen">)</span> <span class="kw">do</span> <span class="op">|</span><span class="id identifier rubyid_record">record</span><span class="comma">,</span> <span class="id identifier rubyid_word">word</span><span class="comma">,</span> <span class="id identifier rubyid_start">start</span><span class="comma">,</span> <span class="id identifier rubyid_length">length</span><span class="op">|</span>
-    <span class="id identifier rubyid_previous_text">previous_text</span> <span class="op">=</span> <span class="id identifier rubyid_bytes">bytes</span><span class="lbracket">[</span><span class="id identifier rubyid_position">position</span><span class="op">...</span><span class="id identifier rubyid_start">start</span><span class="rbracket">]</span>
-    <span class="id identifier rubyid_previous_text">previous_text</span><span class="period">.</span><span class="id identifier rubyid_force_encoding">force_encoding</span><span class="lparen">(</span><span class="id identifier rubyid_encoding">encoding</span><span class="rparen">)</span> <span class="kw">if</span> <span class="id identifier rubyid_encoding">encoding</span>
-    <span class="kw">if</span> <span class="id identifier rubyid_other_text_handler">other_text_handler</span>
-      <span class="id identifier rubyid_previous_text">previous_text</span> <span class="op">=</span> <span class="id identifier rubyid_other_text_handler">other_text_handler</span><span class="period">.</span><span class="id identifier rubyid_call">call</span><span class="lparen">(</span><span class="id identifier rubyid_previous_text">previous_text</span><span class="rparen">)</span>
-    <span class="kw">end</span>
-    <span class="id identifier rubyid_result">result</span> <span class="op">&lt;&lt;</span> <span class="id identifier rubyid_previous_text">previous_text</span>
-    <span class="id identifier rubyid_result">result</span> <span class="op">&lt;&lt;</span> <span class="kw">yield</span><span class="lparen">(</span><span class="id identifier rubyid_record">record</span><span class="comma">,</span> <span class="id identifier rubyid_word">word</span><span class="rparen">)</span>
-    <span class="id identifier rubyid_position">position</span> <span class="op">=</span> <span class="id identifier rubyid_start">start</span> <span class="op">+</span> <span class="id identifier rubyid_length">length</span>
-  <span class="kw">end</span>
-  <span class="id identifier rubyid_last_text">last_text</span> <span class="op">=</span> <span class="id identifier rubyid_bytes">bytes</span><span class="lbracket">[</span><span class="id identifier rubyid_position">position</span><span class="op">..</span><span class="op">-</span><span class="int">1</span><span class="rbracket">]</span>
-  <span class="kw">unless</span> <span class="id identifier rubyid_last_text">last_text</span><span class="period">.</span><span class="id identifier rubyid_empty?">empty?</span>
-    <span class="id identifier rubyid_last_text">last_text</span><span class="period">.</span><span class="id identifier rubyid_force_encoding">force_encoding</span><span class="lparen">(</span><span class="id identifier rubyid_encoding">encoding</span><span class="rparen">)</span> <span class="kw">if</span> <span class="id identifier rubyid_encoding">encoding</span>
-    <span class="id identifier rubyid_last_text">last_text</span> <span class="op">=</span> <span class="id identifier rubyid_other_text_handler">other_text_handler</span><span class="period">.</span><span class="id identifier rubyid_call">call</span><span class="lparen">(</span><span class="id identifier rubyid_last_text">last_text</span><span class="rparen">)</span> <span class="kw">if</span> <span class="id identifier rubyid_other_text_handler">other_text_handler</span>
-    <span class="id identifier rubyid_result">result</span> <span class="op">&lt;&lt;</span> <span class="id identifier rubyid_last_text">last_text</span>
-  <span class="kw">end</span>
-  <span class="id identifier rubyid_result">result</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_tag_keys'>tag_keys</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_other_text_handler'>other_text_handler</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:other_text_handler</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_position'>position</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:encoding</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_encoding'>encoding</span>
+    <span class='id identifier rubyid_bytes'>bytes</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ascii-8bit</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_bytes'>bytes</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='comma'>,</span> <span class='id identifier rubyid_word'>word</span><span class='comma'>,</span> <span class='id identifier rubyid_start'>start</span><span class='comma'>,</span> <span class='id identifier rubyid_length'>length</span><span class='op'>|</span>
+    <span class='id identifier rubyid_previous_text'>previous_text</span> <span class='op'>=</span> <span class='id identifier rubyid_bytes'>bytes</span><span class='lbracket'>[</span><span class='id identifier rubyid_position'>position</span><span class='op'>...</span><span class='id identifier rubyid_start'>start</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_previous_text'>previous_text</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_encoding'>encoding</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_other_text_handler'>other_text_handler</span>
+      <span class='id identifier rubyid_previous_text'>previous_text</span> <span class='op'>=</span> <span class='id identifier rubyid_other_text_handler'>other_text_handler</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_previous_text'>previous_text</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_previous_text'>previous_text</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>&lt;&lt;</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='comma'>,</span> <span class='id identifier rubyid_word'>word</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_position'>position</span> <span class='op'>=</span> <span class='id identifier rubyid_start'>start</span> <span class='op'>+</span> <span class='id identifier rubyid_length'>length</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_last_text'>last_text</span> <span class='op'>=</span> <span class='id identifier rubyid_bytes'>bytes</span><span class='lbracket'>[</span><span class='id identifier rubyid_position'>position</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_last_text'>last_text</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_last_text'>last_text</span><span class='period'>.</span><span class='id identifier rubyid_force_encoding'>force_encoding</span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_encoding'>encoding</span>
+    <span class='id identifier rubyid_last_text'>last_text</span> <span class='op'>=</span> <span class='id identifier rubyid_other_text_handler'>other_text_handler</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_last_text'>last_text</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_other_text_handler'>other_text_handler</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_last_text'>last_text</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -3035,17 +3213,16 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
 
 </div>
 
-    <div id="footer"></div>
+    <div id="footer">
+  Generated on Fri Dec 28 12:35:02 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.3 (ruby-1.9.3).
+</div>
 
   
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="http://github.com/ranguba/">
           <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
