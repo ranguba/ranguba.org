@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,9 +19,11 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -32,7 +34,7 @@
   <body>
 <div class="header">
   <div class="title">
-    <a href="../../../ja/">
+    <a href="../../../index.html.ja">
       <span class="title">
   Class: ActiveGroonga::MigrationEntry
   
@@ -49,44 +51,49 @@
   <ul class="menu">
     <li id="menu-reference"><a href="../../../activegroonga/ja/">リファレンスマニュアル</a></li>
     <li id="menu-tutorial"><a href="../../../activegroonga/ja/file.tutorial.html">チュートリアル</a></li>
-    <li id="menu-install"><a href="../../../ja/#install-activegroonga">インストール</a></li>
-    <li id="menu-developer"><a href="../../../ja/developer.html">開発者向け情報</a></li>
+    <li id="menu-install"><a href="../../../index.html.ja#install-activegroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../../developer.html.ja">開発者向け情報</a></li>
   </ul>
 </div>
 
 <div class="content">
 
 
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (M)</a> &raquo; 
-    <span class="title"><span class="object_link"><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
+    <a href="../alphabetical_index.html">Index (M)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
      &raquo; 
     <span class="title">MigrationEntry</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: ActiveGroonga::MigrationEntry
   
   
@@ -125,6 +132,8 @@
 
 
 
+
+
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
     
@@ -138,7 +147,10 @@
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -147,7 +159,7 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p>Returns the value of attribute path.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute path.</p></div></span>
   
 </li>
 
@@ -162,7 +174,10 @@
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -171,7 +186,7 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p>Returns the value of attribute version.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute version.</p></div></span>
   
 </li>
 
@@ -198,6 +213,7 @@
     
   </span>
   
+  
     <span class="note title constructor">constructor</span>
   
   
@@ -207,7 +223,7 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p>A new instance of MigrationEntry.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>A new instance of MigrationEntry.</p></div></span>
   
 </li>
 
@@ -226,9 +242,10 @@
   
   
   
+  
 
   
-    <span class="summary_desc"><div class="inline"></div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -247,9 +264,10 @@
   
   
   
+  
 
   
-    <span class="summary_desc"><div class="inline"></div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -261,13 +279,15 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class="object_link"><a href="" title="ActiveGroonga::MigrationEntry (class)">MigrationEntry</a></span></tt>) <strong>initialize</strong>(migration, version, path) 
+    - (<tt><span class='object_link'><a href="" title="ActiveGroonga::MigrationEntry (class)">MigrationEntry</a></span></tt>) <strong>initialize</strong>(migration, version, path) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>A new instance of MigrationEntry</p>
 
@@ -291,11 +311,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/migrator.rb', line 28</span>
 
-<span class="kw">def</span> <span class="id initialize">initialize</span><span class="lparen">(</span><span class="id migration">migration</span><span class="comma">,</span> <span class="id version">version</span><span class="comma">,</span> <span class="id path">path</span><span class="rparen">)</span>
-  <span class="ivar">@migration</span> <span class="op">=</span> <span class="id migration">migration</span>
-  <span class="ivar">@version</span> <span class="op">=</span> <span class="id version">version</span>
-  <span class="ivar">@path</span> <span class="op">=</span> <span class="id path">path</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_migration'>migration</span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+  <span class='ivar'>@migration</span> <span class='op'>=</span> <span class='id identifier rubyid_migration'>migration</span>
+  <span class='ivar'>@version</span> <span class='op'>=</span> <span class='id identifier rubyid_version'>version</span>
+  <span class='ivar'>@path</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -308,15 +328,16 @@
     
       
       <span id=""></span>
-      <span id="path-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="path-instance_method">
+  <h3 class="signature first" id="path-instance_method">
   
     - (<tt>Object</tt>) <strong>path</strong>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>Returns the value of attribute path</p>
 
@@ -338,9 +359,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/migrator.rb', line 27</span>
 
-<span class="kw">def</span> <span class="id path">path</span>
-  <span class="ivar">@path</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_path'>path</span>
+  <span class='ivar'>@path</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -348,15 +369,16 @@
     
       
       <span id=""></span>
-      <span id="version-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="version-instance_method">
+  <h3 class="signature " id="version-instance_method">
   
     - (<tt>Object</tt>) <strong>version</strong>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>Returns the value of attribute version</p>
 
@@ -378,9 +400,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/migrator.rb', line 27</span>
 
-<span class="kw">def</span> <span class="id version">version</span>
-  <span class="ivar">@version</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
+  <span class='ivar'>@version</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -391,16 +413,18 @@
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="migrate-instance_method">
+  <h3 class="signature first" id="migrate-instance_method">
   
     - (<tt>Object</tt>) <strong>migrate</strong>(direction, schema) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -414,23 +438,25 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/migrator.rb', line 38</span>
 
-<span class="kw">def</span> <span class="id migrate">migrate</span><span class="lparen">(</span><span class="id direction">direction</span><span class="comma">,</span> <span class="id schema">schema</span><span class="rparen">)</span>
-  <span class="id migration">migration</span> <span class="op">=</span> <span class="ivar">@migration</span><span class="period">.</span><span class="id new">new</span><span class="lparen">(</span><span class="ivar">@version</span><span class="comma">,</span> <span class="ivar">@path</span><span class="comma">,</span> <span class="id schema">schema</span><span class="rparen">)</span>
-  <span class="id migration">migration</span><span class="period">.</span><span class="id migrate">migrate</span><span class="lparen">(</span><span class="id direction">direction</span><span class="rparen">)</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_migrate'>migrate</span><span class='lparen'>(</span><span class='id identifier rubyid_direction'>direction</span><span class='comma'>,</span> <span class='id identifier rubyid_schema'>schema</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_migration'>migration</span> <span class='op'>=</span> <span class='ivar'>@migration</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@version</span><span class='comma'>,</span> <span class='ivar'>@path</span><span class='comma'>,</span> <span class='id identifier rubyid_schema'>schema</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_migration'>migration</span><span class='period'>.</span><span class='id identifier rubyid_migrate'>migrate</span><span class='lparen'>(</span><span class='id identifier rubyid_direction'>direction</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="name-instance_method">
+  <h3 class="signature " id="name-instance_method">
   
     - (<tt>Object</tt>) <strong>name</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -443,9 +469,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/migrator.rb', line 34</span>
 
-<span class="kw">def</span> <span class="id name">name</span>
-  <span class="ivar">@migration</span><span class="period">.</span><span class="id migration_name">migration_name</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@migration</span><span class='period'>.</span><span class='id identifier rubyid_migration_name'>migration_name</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -454,18 +480,17 @@
   </div>
 
 </div>
-    
-    <div id="footer"></div>
+
+    <div id="footer">
+  Generated on Wed Jan  9 12:24:56 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.3 (ruby-1.9.3).
+</div>
 
   
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="http://github.com/ranguba/">
           <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />

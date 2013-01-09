@@ -19,9 +19,11 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '../..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -57,36 +59,41 @@
 <div class="content">
 
 
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../../alphabetical_index.html">Index (B)</a> &raquo; 
+    <a href="../../alphabetical_index.html">Index (B)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Generators.html" title="ActiveGroonga::Generators (module)">Generators</a></span></span>
      &raquo; 
     <span class="title">Base</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: ActiveGroonga::Generators::Base
   
   
@@ -138,18 +145,12 @@
 <div class="tags">
   
 
-</div><div id="subclasses">
-  <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="MigrationGenerator.html" title="ActiveGroonga::Generators::MigrationGenerator (class)">MigrationGenerator</a></span>, <span class='object_link'><a href="ModelGenerator.html" title="ActiveGroonga::Generators::ModelGenerator (class)">ModelGenerator</a></span></p>
 </div>
 
 
-  
-  
 
 
-  
-  
+
 
   
     <h2>
@@ -167,6 +168,7 @@
 
     
   </span>
+  
   
   
   
@@ -194,6 +196,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'><p>:nodoc:.</p></div></span>
@@ -210,16 +213,18 @@
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="base_root-class_method">
+  <h3 class="signature first" id="base_root-class_method">
   
     + (<tt>Object</tt>) <strong>base_root</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -232,8 +237,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rails/generators/active_groonga.rb', line 27</span>
 
-<span class='kw'>def</span> <span class='id base_root'>base_root</span>
-  <span class='const'>File</span><span class='period'>.</span><span class='id dirname'>dirname</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_base_root'>base_root</span>
+  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -241,13 +246,15 @@
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="next_migration_number-class_method">
+  <h3 class="signature " id="next_migration_number-class_method">
   
     + (<tt>Object</tt>) <strong>next_migration_number</strong>(dirname) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>:nodoc:</p>
 
@@ -269,8 +276,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rails/generators/active_groonga.rb', line 31</span>
 
-<span class='kw'>def</span> <span class='id next_migration_number'>next_migration_number</span><span class='lparen'>(</span><span class='id dirname'>dirname</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
-</span>  <span class='const'>Time</span><span class='period'>.</span><span class='id now'>now</span><span class='period'>.</span><span class='id utc'>utc</span><span class='period'>.</span><span class='id strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y%m%d%H%M%S</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_next_migration_number'>next_migration_number</span><span class='lparen'>(</span><span class='id identifier rubyid_dirname'>dirname</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_utc'>utc</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y%m%d%H%M%S</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -280,18 +287,13 @@
   </div>
 
 </div>
-    
+
     <div id="footer"></div>
 
   
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="https://github.com/ranguba/">
           <img src="../../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />

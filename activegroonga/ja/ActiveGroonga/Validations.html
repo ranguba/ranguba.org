@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,9 +19,11 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -32,7 +34,7 @@
   <body>
 <div class="header">
   <div class="title">
-    <a href="../../../ja/">
+    <a href="../../../index.html.ja">
       <span class="title">
   Module: ActiveGroonga::Validations
   
@@ -49,44 +51,49 @@
   <ul class="menu">
     <li id="menu-reference"><a href="../../../activegroonga/ja/">リファレンスマニュアル</a></li>
     <li id="menu-tutorial"><a href="../../../activegroonga/ja/file.tutorial.html">チュートリアル</a></li>
-    <li id="menu-install"><a href="../../../ja/#install-activegroonga">インストール</a></li>
-    <li id="menu-developer"><a href="../../../ja/developer.html">開発者向け情報</a></li>
+    <li id="menu-install"><a href="../../../index.html.ja#install-activegroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../../developer.html.ja">開発者向け情報</a></li>
   </ul>
 </div>
 
 <div class="content">
 
 
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (V)</a> &raquo; 
-    <span class="title"><span class="object_link"><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
+    <a href="../alphabetical_index.html">Index (V)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
      &raquo; 
     <span class="title">Validations</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Module: ActiveGroonga::Validations
   
   
@@ -110,7 +117,7 @@
   
   
     <dt class="r1">Included in:</dt>
-    <dd class="r1"><span class="object_link"><a href="Base.html" title="ActiveGroonga::Base (class)">Base</a></span></dd>
+    <dd class="r1"><span class='object_link'><a href="Base.html" title="ActiveGroonga::Base (class)">Base</a></span></dd>
     
   
   
@@ -122,22 +129,20 @@
 
 <h2>Defined Under Namespace</h2>
 <p class="children">
-   
+  
     
-      <strong class="modules">Modules:</strong> <span class="object_link"><a href="Validations/ClassMethods.html" title="ActiveGroonga::Validations::ClassMethods (module)">ClassMethods</a></span>
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Validations/ClassMethods.html" title="ActiveGroonga::Validations::ClassMethods (module)">ClassMethods</a></span>
     
-   
+  
     
   
 </p>
 
 
-  
-  
 
 
-  
-  
+
+
 
   
     <h2>
@@ -161,9 +166,10 @@
   
   
   
+  
 
   
-    <span class="summary_desc"><div class="inline"></div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -182,9 +188,10 @@
   
   
   
+  
 
   
-    <span class="summary_desc"><div class="inline"></div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -203,9 +210,10 @@
   
   
   
+  
 
   
-    <span class="summary_desc"><div class="inline"></div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -219,16 +227,18 @@
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="save-instance_method">
+  <h3 class="signature first" id="save-instance_method">
   
     - (<tt>Object</tt>) <strong>save</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -241,22 +251,24 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/validations.rb', line 52</span>
 
-<span class="kw">def</span> <span class="id save">save</span><span class="lparen">(</span><span class="id options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
-  <span class="id validate">validate</span><span class="lparen">(</span><span class="id options">options</span><span class="rparen">)</span> <span class="op">?</span> <span class="kw">super</span> <span class="op">:</span> <span class="kw">false</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_save'>save</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>super</span> <span class='op'>:</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="save!-instance_method">
+  <h3 class="signature " id="save!-instance_method">
   
     - (<tt>Object</tt>) <strong>save!</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -269,22 +281,24 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/validations.rb', line 56</span>
 
-<span class="kw">def</span> <span class="id save!">save!</span><span class="lparen">(</span><span class="id options">options</span><span class="op">=</span><span class="lbrace">{</span><span class="rbrace">}</span><span class="rparen">)</span>
-  <span class="id validate">validate</span><span class="lparen">(</span><span class="id options">options</span><span class="rparen">)</span> <span class="op">?</span> <span class="kw">super</span> <span class="op">:</span> <span class="id raise">raise</span><span class="lparen">(</span><span class="const">RecordInvalid</span><span class="period">.</span><span class="id new">new</span><span class="lparen">(</span><span class="kw">self</span><span class="rparen">)</span><span class="rparen">)</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_save!'>save!</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>super</span> <span class='op'>:</span> <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='const'>RecordInvalid</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="valid?-instance_method">
+  <h3 class="signature " id="valid?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>valid?</strong>(context = nil) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -292,13 +306,13 @@
 </div>
 <div class="tags">
   
-<h3>戻り値:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class="type">(<tt>Boolean</tt>)</span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
@@ -321,11 +335,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/validations.rb', line 60</span>
 
-<span class="kw">def</span> <span class="id valid?">valid?</span><span class="lparen">(</span><span class="id context">context</span><span class="op">=</span><span class="kw">nil</span><span class="rparen">)</span>
-  <span class="id context">context</span> <span class="op">||=</span> <span class="lparen">(</span><span class="id new_record?">new_record?</span> <span class="op">?</span> <span class="symbol">:create</span> <span class="op">:</span> <span class="symbol">:update</span><span class="rparen">)</span>
-  <span class="id valid">valid</span> <span class="op">=</span> <span class="kw">super</span><span class="lparen">(</span><span class="id context">context</span><span class="rparen">)</span>
-  <span class="id errors">errors</span><span class="period">.</span><span class="id empty?">empty?</span> <span class="kw">and</span> <span class="id valid">valid</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_context'>context</span> <span class='op'>||=</span> <span class='lparen'>(</span><span class='id identifier rubyid_new_record?'>new_record?</span> <span class='op'>?</span> <span class='symbol'>:create</span> <span class='op'>:</span> <span class='symbol'>:update</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_valid'>valid</span> <span class='op'>=</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='kw'>and</span> <span class='id identifier rubyid_valid'>valid</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -334,18 +348,17 @@
   </div>
 
 </div>
-    
-    <div id="footer"></div>
+
+    <div id="footer">
+  Generated on Wed Jan  9 12:24:55 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.3 (ruby-1.9.3).
+</div>
 
   
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="http://github.com/ranguba/">
           <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />

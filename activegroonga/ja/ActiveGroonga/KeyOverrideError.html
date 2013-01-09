@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,9 +19,11 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -32,7 +34,7 @@
   <body>
 <div class="header">
   <div class="title">
-    <a href="../../../ja/">
+    <a href="../../../index.html.ja">
       <span class="title">
   Exception: ActiveGroonga::KeyOverrideError
   
@@ -49,44 +51,49 @@
   <ul class="menu">
     <li id="menu-reference"><a href="../../../activegroonga/ja/">リファレンスマニュアル</a></li>
     <li id="menu-tutorial"><a href="../../../activegroonga/ja/file.tutorial.html">チュートリアル</a></li>
-    <li id="menu-install"><a href="../../../ja/#install-activegroonga">インストール</a></li>
-    <li id="menu-developer"><a href="../../../ja/developer.html">開発者向け情報</a></li>
+    <li id="menu-install"><a href="../../../index.html.ja#install-activegroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../../developer.html.ja">開発者向け情報</a></li>
   </ul>
 </div>
 
 <div class="content">
 
 
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (K)</a> &raquo; 
-    <span class="title"><span class="object_link"><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
+    <a href="../alphabetical_index.html">Index (K)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
      &raquo; 
     <span class="title">KeyOverrideError</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Exception: ActiveGroonga::KeyOverrideError
   
   
@@ -97,14 +104,14 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><span class="object_link"><a href="Error.html" title="ActiveGroonga::Error (class)">Error</a></span></span>
+      <span class="inheritName"><span class='object_link'><a href="Error.html" title="ActiveGroonga::Error (class)">Error</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
           
             <li class="next">StandardError</li>
           
-            <li class="next"><span class="object_link"><a href="Error.html" title="ActiveGroonga::Error (class)">Error</a></span></li>
+            <li class="next"><span class='object_link'><a href="Error.html" title="ActiveGroonga::Error (class)">Error</a></span></li>
           
             <li class="next">ActiveGroonga::KeyOverrideError</li>
           
@@ -129,11 +136,8 @@
 
 
 
-  
-  
-  
-  
-  
+
+
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
     
@@ -147,7 +151,10 @@
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -156,7 +163,7 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p>Returns the value of attribute key.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute key.</p></div></span>
   
 </li>
 
@@ -171,7 +178,10 @@
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -180,7 +190,7 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p>Returns the value of attribute table.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute table.</p></div></span>
   
 </li>
 
@@ -189,10 +199,6 @@
 
 
 
-  
-  
-  
-  
 
   
     <h2>
@@ -211,6 +217,7 @@
     
   </span>
   
+  
     <span class="note title constructor">constructor</span>
   
   
@@ -220,7 +227,7 @@
   
 
   
-    <span class="summary_desc"><div class="inline"><p>A new instance of KeyOverrideError.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>A new instance of KeyOverrideError.</p></div></span>
   
 </li>
 
@@ -234,17 +241,20 @@
   
   
   
+  
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class="object_link"><a href="" title="ActiveGroonga::KeyOverrideError (class)">KeyOverrideError</a></span></tt>) <strong>initialize</strong>(table, key) 
+    - (<tt><span class='object_link'><a href="" title="ActiveGroonga::KeyOverrideError (class)">KeyOverrideError</a></span></tt>) <strong>initialize</strong>(table, key) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>A new instance of KeyOverrideError</p>
 
@@ -268,11 +278,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/error.rb', line 34</span>
 
-<span class="kw">def</span> <span class="id initialize">initialize</span><span class="lparen">(</span><span class="id table">table</span><span class="comma">,</span> <span class="id key">key</span><span class="rparen">)</span>
-  <span class="ivar">@table</span> <span class="op">=</span> <span class="id table">table</span>
-  <span class="ivar">@key</span> <span class="op">=</span> <span class="id key">key</span>
-  <span class="kw">super</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">"</span><span class="tstring_content">can't override existing record key: </span><span class="embexpr_beg">#{</span><span class="ivar">@table</span><span class="rbrace">}</span><span class="tstring_content">: &lt;</span><span class="embexpr_beg">#{</span><span class="ivar">@key</span><span class="rbrace">}</span><span class="tstring_content">&gt;</span><span class="tstring_end">"</span></span><span class="rparen">)</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+  <span class='ivar'>@table</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span>
+  <span class='ivar'>@key</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>can't override existing record key: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@table</span><span class='rbrace'>}</span><span class='tstring_content'>: &lt;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@key</span><span class='rbrace'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -285,15 +295,16 @@
     
       
       <span id=""></span>
-      <span id="key-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="key-instance_method">
+  <h3 class="signature first" id="key-instance_method">
   
     - (<tt>Object</tt>) <strong>key</strong>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>Returns the value of attribute key</p>
 
@@ -315,9 +326,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/error.rb', line 33</span>
 
-<span class="kw">def</span> <span class="id key">key</span>
-  <span class="ivar">@key</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_key'>key</span>
+  <span class='ivar'>@key</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -325,15 +336,16 @@
     
       
       <span id=""></span>
-      <span id="table-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="table-instance_method">
+  <h3 class="signature " id="table-instance_method">
   
     - (<tt>Object</tt>) <strong>table</strong>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>Returns the value of attribute table</p>
 
@@ -355,9 +367,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_groonga/error.rb', line 33</span>
 
-<span class="kw">def</span> <span class="id table">table</span>
-  <span class="ivar">@table</span>
-<span class="kw">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_table'>table</span>
+  <span class='ivar'>@table</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -367,18 +379,17 @@
 
 
 </div>
-    
-    <div id="footer"></div>
+
+    <div id="footer">
+  Generated on Wed Jan  9 12:24:56 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.3 (ruby-1.9.3).
+</div>
 
   
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="ラングバプロジェクトはRubyForge.orgにホスティングしてもらっています。" />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="http://github.com/ranguba/">
           <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />

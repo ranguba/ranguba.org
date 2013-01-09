@@ -19,9 +19,11 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -57,36 +59,41 @@
 <div class="content">
 
 
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (B)</a> &raquo; 
+    <a href="../alphabetical_index.html">Index (B)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../ActiveGroonga.html" title="ActiveGroonga (module)">ActiveGroonga</a></span></span>
      &raquo; 
     <span class="title">Base</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: ActiveGroonga::Base
   
   
@@ -131,6 +138,10 @@
 </dl>
 <div class="clear"></div>
 
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Generators/MigrationGenerator.html" title="ActiveGroonga::Generators::MigrationGenerator (class)">Generators::MigrationGenerator</a></span>, <span class='object_link'><a href="Generators/ModelGenerator.html" title="ActiveGroonga::Generators::ModelGenerator (class)">Generators::ModelGenerator</a></span></p>
+</div>
 
   <h2>Constant Summary</h2>
   
@@ -155,24 +166,8 @@
   
 
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
   <h2>Class Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
     
@@ -184,6 +179,7 @@
 
     
   </span>
+  
   
   
     
@@ -211,6 +207,7 @@
   </span>
   
   
+  
     
     
   
@@ -230,21 +227,6 @@
 
 
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
   
     <h2>
@@ -262,6 +244,7 @@
 
     
   </span>
+  
   
   
   
@@ -289,6 +272,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -304,6 +288,7 @@
 
     
   </span>
+  
   
   
   
@@ -331,6 +316,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -346,6 +332,7 @@
 
     
   </span>
+  
   
   
   
@@ -373,6 +360,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -388,6 +376,7 @@
 
     
   </span>
+  
   
   
   
@@ -415,6 +404,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -430,6 +420,7 @@
 
     
   </span>
+  
   
   
   
@@ -457,6 +448,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -472,6 +464,7 @@
 
     
   </span>
+  
   
   
   
@@ -499,6 +492,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -514,6 +508,7 @@
 
     
   </span>
+  
   
   
   
@@ -541,6 +536,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -556,6 +552,7 @@
 
     
   </span>
+  
   
   
   
@@ -583,6 +580,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -598,6 +596,7 @@
 
     
   </span>
+  
   
   
   
@@ -625,6 +624,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -640,6 +640,7 @@
 
     
   </span>
+  
   
   
   
@@ -667,6 +668,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -688,6 +690,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -703,6 +706,7 @@
 
     
   </span>
+  
   
   
   
@@ -739,6 +743,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -754,6 +759,7 @@
 
     
   </span>
+  
   
   
   
@@ -781,6 +787,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -796,6 +803,7 @@
 
     
   </span>
+  
   
   
   
@@ -823,6 +831,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -844,6 +853,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -859,6 +869,7 @@
 
     
   </span>
+  
   
     <span class="note title constructor">constructor</span>
   
@@ -888,6 +899,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -903,6 +915,7 @@
 
     
   </span>
+  
   
   
   
@@ -930,6 +943,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -945,6 +959,7 @@
 
     
   </span>
+  
   
   
   
@@ -972,6 +987,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -987,6 +1003,7 @@
 
     
   </span>
+  
   
   
   
@@ -1014,6 +1031,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -1029,6 +1047,7 @@
 
     
   </span>
+  
   
   
   
@@ -1056,6 +1075,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -1071,6 +1091,7 @@
 
     
   </span>
+  
   
   
   
@@ -1098,6 +1119,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -1117,9 +1139,11 @@
   
   
   
+  
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Callbacks.html" title="ActiveGroonga::Callbacks (module)">Callbacks</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Callbacks.html#destroy-instance_method" title="ActiveGroonga::Callbacks#destroy (method)">#destroy</a></span></p>
 
+  
   
   
   
@@ -1140,6 +1164,7 @@
   
   
   
+  
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Persistence.html" title="ActiveGroonga::Persistence (module)">Persistence</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Persistence.html#becomes-instance_method" title="ActiveGroonga::Persistence#becomes (method)">#becomes</a></span>, <span class='object_link'><a href="Persistence.html#delete-instance_method" title="ActiveGroonga::Persistence#delete (method)">#delete</a></span>, <span class='object_link'><a href="Persistence.html#destroy-instance_method" title="ActiveGroonga::Persistence#destroy (method)">#destroy</a></span>, <span class='object_link'><a href="Persistence.html#destroyed%3F-instance_method" title="ActiveGroonga::Persistence#destroyed? (method)">#destroyed?</a></span>, <span class='object_link'><a href="Persistence.html#new_record%3F-instance_method" title="ActiveGroonga::Persistence#new_record? (method)">#new_record?</a></span>, <span class='object_link'><a href="Persistence.html#persisted%3F-instance_method" title="ActiveGroonga::Persistence#persisted? (method)">#persisted?</a></span>, <span class='object_link'><a href="Persistence.html#reload-instance_method" title="ActiveGroonga::Persistence#reload (method)">#reload</a></span>, <span class='object_link'><a href="Persistence.html#save-instance_method" title="ActiveGroonga::Persistence#save (method)">#save</a></span>, <span class='object_link'><a href="Persistence.html#save%21-instance_method" title="ActiveGroonga::Persistence#save! (method)">#save!</a></span>, <span class='object_link'><a href="Persistence.html#update_attribute-instance_method" title="ActiveGroonga::Persistence#update_attribute (method)">#update_attribute</a></span>, <span class='object_link'><a href="Persistence.html#update_attributes-instance_method" title="ActiveGroonga::Persistence#update_attributes (method)">#update_attributes</a></span>, <span class='object_link'><a href="Persistence.html#update_attributes%21-instance_method" title="ActiveGroonga::Persistence#update_attributes! (method)">#update_attributes!</a></span></p>
 
@@ -1148,13 +1173,15 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="ActiveGroonga::Base (class)">Base</a></span></tt>) <strong>initialize</strong>(record_or_attributes = nil) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>A new instance of Base</p>
 
@@ -1169,8 +1196,6 @@
       <pre class="lines">
 
 
-260
-261
 262
 263
 264
@@ -1184,25 +1209,27 @@
 272
 273
 274
-275</pre>
+275
+276
+277</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 260</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 262</span>
 
-<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id record_or_attributes'>record_or_attributes</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id define_column_accessors'>define_column_accessors</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_record_or_attributes'>record_or_attributes</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_define_column_accessors'>define_column_accessors</span>
   <span class='ivar'>@id</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='ivar'>@key</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='ivar'>@score</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='ivar'>@new_record</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='ivar'>@destroyed</span> <span class='op'>=</span> <span class='kw'>false</span>
-  <span class='ivar'>@attributes</span> <span class='op'>=</span> <span class='id initial_attributes'>initial_attributes</span>
+  <span class='ivar'>@attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_initial_attributes'>initial_attributes</span>
   <span class='ivar'>@attributes_cache</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='kw'>if</span> <span class='id record_or_attributes'>record_or_attributes</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Record</span><span class='rparen'>)</span>
-    <span class='id reload_attributes'>reload_attributes</span><span class='lparen'>(</span><span class='id record_or_attributes'>record_or_attributes</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_record_or_attributes'>record_or_attributes</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Record</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_reload_attributes'>reload_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_record_or_attributes'>record_or_attributes</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
-    <span class='id reload_attributes'>reload_attributes</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id attributes'>attributes</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id record_or_attributes'>record_or_attributes</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_reload_attributes'>reload_attributes</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_record_or_attributes'>record_or_attributes</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1217,15 +1244,16 @@
     
       
       <span id="limit=-class_method"></span>
-      <span id="limit-class_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="limit-class_method">
+  <h3 class="signature first" id="limit-class_method">
   
     + (<tt>Integer</tt>) <strong>limit</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>The default limit for <span class='object_link'><a href="ResultSet.html#sort-instance_method" title="ActiveGroonga::ResultSet#sort (method)">ResultSet#sort</a></span> and
 <span class='object_link'><a href="ResultSet.html#paginate-instance_method" title="ActiveGroonga::ResultSet#paginate (method)">ResultSet#paginate</a></span>.</p>
@@ -1235,18 +1263,18 @@
 <div class="tags">
   
   <div class="examples">
-    <h3>Examples:</h3>
+    <p class="tag_title">Examples:</p>
     
-      <h4><div class='inline'></div></h4>
+      
       <pre class="example code"><span class='comment'># Limits sorted records by default.
-</span><span class='const'>User</span><span class='period'>.</span><span class='id limit'>limit</span> <span class='op'>=</span> <span class='int'>20</span>
+</span><span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_limit'>limit</span> <span class='op'>=</span> <span class='int'>20</span>
 
 <span class='comment'># Doesn't limit sorted records by default.
-</span><span class='const'>User</span><span class='period'>.</span><span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span></pre>
+</span><span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span></pre>
     
   </div>
 
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -1262,7 +1290,7 @@
     </li>
   
 </ul>
-<h3>Since:</h3>
+<p class="tag_title">Since:</p>
 <ul class="since">
   
     <li>
@@ -1283,12 +1311,12 @@
       <pre class="lines">
 
 
-78</pre>
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 77</span>
 
-<span class='id class_attribute'>class_attribute</span> <span class='symbol'>:limit</span></pre>
+<span class='id identifier rubyid_class_attribute'>class_attribute</span> <span class='symbol'>:limit</span></pre>
     </td>
   </tr>
 </table>
@@ -1296,15 +1324,16 @@
     
       
       <span id="sort_keys=-class_method"></span>
-      <span id="sort_keys-class_method"></span>
       <div class="method_details ">
-  <p class="signature " id="sort_keys-class_method">
+  <h3 class="signature " id="sort_keys-class_method">
   
     + (<tt>Array&lt;Array&lt;String, Symbol&gt;&gt;</tt>) <strong>sort_keys</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>The default sort keys for <span class='object_link'><a href="ResultSet.html#sort-instance_method" title="ActiveGroonga::ResultSet#sort (method)">ResultSet#sort</a></span> and
 <span class='object_link'><a href="ResultSet.html#paginate-instance_method" title="ActiveGroonga::ResultSet#paginate (method)">ResultSet#paginate</a></span>.</p>
@@ -1314,23 +1343,23 @@
 <div class="tags">
   
   <div class="examples">
-    <h3>Examples:</h3>
+    <p class="tag_title">Examples:</p>
     
-      <h4><div class='inline'></div></h4>
+      
       <pre class="example code"><span class='comment'># Sorts by &quot;name&quot; column value in ascending order by default.
-</span><span class='const'>User</span><span class='period'>.</span><span class='id sort_keys'>sort_keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:ascending</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+</span><span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_sort_keys'>sort_keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:ascending</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
 
 <span class='comment'># Sorts by &quot;name&quot; column value in ascending order and
 </span><span class='comment'># sorts by &quot;age&quot; column value in descending order for
 </span><span class='comment'># the same name records by default.
-</span><span class='const'>User</span><span class='period'>.</span><span class='id sort_keys'>sort_keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:ascending</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>age</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:descending</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+</span><span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_sort_keys'>sort_keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:ascending</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>age</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:descending</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
 
 <span class='comment'># Sorts by id value in ascending order by default.
-</span><span class='const'>User</span><span class='period'>.</span><span class='id sort_keys'>sort_keys</span> <span class='op'>=</span> <span class='kw'>nil</span></pre>
+</span><span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_sort_keys'>sort_keys</span> <span class='op'>=</span> <span class='kw'>nil</span></pre>
     
   </div>
 
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -1348,7 +1377,7 @@ column name and order.</p></div>
     </li>
   
 </ul>
-<h3>Since:</h3>
+<p class="tag_title">Since:</p>
 <ul class="since">
   
     <li>
@@ -1369,12 +1398,12 @@ column name and order.</p></div>
       <pre class="lines">
 
 
-62</pre>
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 61</span>
 
-<span class='id class_attribute'>class_attribute</span> <span class='symbol'>:sort_keys</span></pre>
+<span class='id identifier rubyid_class_attribute'>class_attribute</span> <span class='symbol'>:sort_keys</span></pre>
     </td>
   </tr>
 </table>
@@ -1385,30 +1414,32 @@ column name and order.</p></div>
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="all-class_method">
+  <h3 class="signature first" id="all-class_method">
   
     + (<tt>Object</tt>) <strong>all</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+144
 145
-146
-147</pre>
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 144</span>
 
-<span class='kw'>def</span> <span class='id all'>all</span><span class='lparen'>(</span><span class='id options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id create_result_set'>create_result_set</span><span class='lparen'>(</span><span class='id table'>table</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_all'>all</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_create_result_set'>create_result_set</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1416,18 +1447,21 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="configure-class_method">
+  <h3 class="signature " id="configure-class_method">
   
     + (<tt>Object</tt>) <strong>configure</strong>(configuration) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+80
 81
 82
 83
@@ -1435,19 +1469,18 @@ column name and order.</p></div>
 85
 86
 87
-88
-89</pre>
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 80</span>
 
-<span class='kw'>def</span> <span class='id configure'>configure</span><span class='lparen'>(</span><span class='id configuration'>configuration</span><span class='rparen'>)</span>
-  <span class='kw'>case</span> <span class='id configuration'>configuration</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_configure'>configure</span><span class='lparen'>(</span><span class='id identifier rubyid_configuration'>configuration</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_configuration'>configuration</span>
   <span class='kw'>when</span> <span class='const'>String</span><span class='comma'>,</span> <span class='const'>Symbol</span>
-    <span class='id configure'>configure</span><span class='lparen'>(</span><span class='id configurations'>configurations</span><span class='lbracket'>[</span><span class='id configuration'>configuration</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_configure'>configure</span><span class='lparen'>(</span><span class='id identifier rubyid_configurations'>configurations</span><span class='lbracket'>[</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='kw'>when</span> <span class='const'>Hash</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id database_path'>database_path</span> <span class='op'>=</span> <span class='id configuration'>configuration</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>database</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id encoding'>encoding</span> <span class='op'>=</span> <span class='id configuration'>configuration</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>encoding</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_database_path'>database_path</span> <span class='op'>=</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>database</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_encoding'>encoding</span> <span class='op'>=</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>encoding</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1456,27 +1489,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="context-class_method">
+  <h3 class="signature " id="context-class_method">
   
     + (<tt>Object</tt>) <strong>context</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+152
 153
-154
-155</pre>
+154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 153</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 152</span>
 
-<span class='kw'>def</span> <span class='id context'>context</span>
-  <span class='cvar'>@@context</span> <span class='op'>||=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id default'>default</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_context'>context</span>
+  <span class='cvar'>@@context</span> <span class='op'>||=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1484,27 +1519,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="count-class_method">
+  <h3 class="signature " id="count-class_method">
   
     + (<tt>Object</tt>) <strong>count</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+148
 149
-150
-151</pre>
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 149</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 148</span>
 
-<span class='kw'>def</span> <span class='id count'>count</span>
-  <span class='id table'>table</span><span class='period'>.</span><span class='id size'>size</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_count'>count</span>
+  <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1512,18 +1549,21 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="create-class_method">
+  <h3 class="signature " id="create-class_method">
   
     + (<tt>Object</tt>) <strong>create</strong>(attributes = nil, &amp;block) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+94
 95
 96
 97
@@ -1534,22 +1574,21 @@ column name and order.</p></div>
 102
 103
 104
-105
-106</pre>
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 94</span>
 
-<span class='kw'>def</span> <span class='id create'>create</span><span class='lparen'>(</span><span class='id attributes'>attributes</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id attributes'>attributes</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
-    <span class='id attributes'>attributes</span><span class='period'>.</span><span class='id collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id nested_attributes'>nested_attributes</span><span class='op'>|</span>
-      <span class='id create'>create</span><span class='lparen'>(</span><span class='id nested_attributes'>nested_attributes</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_nested_attributes'>nested_attributes</span><span class='op'>|</span>
+      <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_nested_attributes'>nested_attributes</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>else</span>
-    <span class='id object'>object</span> <span class='op'>=</span> <span class='id new'>new</span><span class='lparen'>(</span><span class='id attributes'>attributes</span><span class='rparen'>)</span>
-    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id object'>object</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id block_given?'>block_given?</span>
-    <span class='id object'>object</span><span class='period'>.</span><span class='id save'>save</span>
-    <span class='id object'>object</span>
+    <span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+    <span class='id identifier rubyid_object'>object</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1558,31 +1597,33 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="custom_reference_class-class_method">
+  <h3 class="signature " id="custom_reference_class-class_method">
   
     + (<tt>Object</tt>) <strong>custom_reference_class</strong>(column_name) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-235
-236
 237
 238
-239</pre>
+239
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 235</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 237</span>
 
-<span class='kw'>def</span> <span class='id custom_reference_class'>custom_reference_class</span><span class='lparen'>(</span><span class='id column_name'>column_name</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_custom_reference_class'>custom_reference_class</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
   <span class='ivar'>@reference_mapping</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id column_name'>column_name</span> <span class='op'>=</span> <span class='id column_name'>column_name</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-  <span class='ivar'>@reference_mapping</span><span class='lbracket'>[</span><span class='id column_name'>column_name</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_column_name'>column_name</span> <span class='op'>=</span> <span class='id identifier rubyid_column_name'>column_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='ivar'>@reference_mapping</span><span class='lbracket'>[</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1590,27 +1631,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="database-class_method">
+  <h3 class="signature " id="database-class_method">
   
     + (<tt>Object</tt>) <strong>database</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+90
 91
-92
-93</pre>
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 90</span>
 
-<span class='kw'>def</span> <span class='id database'>database</span>
-  <span class='cvar'>@@database</span> <span class='op'>||=</span> <span class='const'>Database</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id database_path'>database_path</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_database'>database</span>
+  <span class='cvar'>@@database</span> <span class='op'>||=</span> <span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_database_path'>database_path</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1618,30 +1661,32 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="database_path=-class_method">
+  <h3 class="signature " id="database_path=-class_method">
   
     + (<tt>Object</tt>) <strong>database_path=</strong>(path) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-223
-224
 225
 226
-227</pre>
+227
+228
+229</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 223</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 225</span>
 
-<span class='kw'>def</span> <span class='id database_path='>database_path=</span><span class='lparen'>(</span><span class='id path'>path</span><span class='rparen'>)</span>
-  <span class='id path'>path</span> <span class='op'>=</span> <span class='const'>Pathname</span><span class='lparen'>(</span><span class='id path'>path</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id path'>path</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
-  <span class='cvar'>@@database_path</span> <span class='op'>=</span> <span class='id path'>path</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_database_path='>database_path=</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='const'>Pathname</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+  <span class='cvar'>@@database_path</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span>
   <span class='cvar'>@@database</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1650,33 +1695,35 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="define_column_accessors-class_method">
+  <h3 class="signature " id="define_column_accessors-class_method">
   
     + (<tt>Object</tt>) <strong>define_column_accessors</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+181
 182
 183
 184
 185
-186
-187</pre>
+186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 181</span>
 
-<span class='kw'>def</span> <span class='id define_column_accessors'>define_column_accessors</span>
-  <span class='id attribute_names'>attribute_names</span> <span class='op'>=</span> <span class='id table'>table</span><span class='period'>.</span><span class='id columns'>columns</span><span class='period'>.</span><span class='id collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id column'>column</span><span class='op'>|</span>
-    <span class='id column'>column</span><span class='period'>.</span><span class='id local_name'>local_name</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_define_column_accessors'>define_column_accessors</span>
+  <span class='id identifier rubyid_attribute_names'>attribute_names</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_columns'>columns</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_column'>column</span><span class='op'>|</span>
+    <span class='id identifier rubyid_column'>column</span><span class='period'>.</span><span class='id identifier rubyid_local_name'>local_name</span>
   <span class='kw'>end</span>
-  <span class='id define_attribute_methods'>define_attribute_methods</span><span class='lparen'>(</span><span class='id attribute_names'>attribute_names</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_define_attribute_methods'>define_attribute_methods</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_names'>attribute_names</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1684,33 +1731,35 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="define_method_attribute-class_method">
+  <h3 class="signature " id="define_method_attribute-class_method">
   
     + (<tt>Object</tt>) <strong>define_method_attribute</strong>(name) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-207
-208
 209
 210
 211
 212
-213</pre>
+213
+214
+215</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 207</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 209</span>
 
-<span class='kw'>def</span> <span class='id define_method_attribute'>define_method_attribute</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span>
-  <span class='id generated_attribute_methods'>generated_attribute_methods</span><span class='period'>.</span><span class='id module_eval'>module_eval</span> <span class='kw'>do</span>
-    <span class='id define_method'>define_method</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span>
-      <span class='id read_attribute'>read_attribute</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_define_method_attribute'>define_method_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_generated_attribute_methods'>generated_attribute_methods</span><span class='period'>.</span><span class='id identifier rubyid_module_eval'>module_eval</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_read_attribute'>read_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -1720,33 +1769,35 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="define_method_attribute=-class_method">
+  <h3 class="signature " id="define_method_attribute=-class_method">
   
     + (<tt>Object</tt>) <strong>define_method_attribute=</strong>(name) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-215
-216
 217
 218
 219
 220
-221</pre>
+221
+222
+223</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 215</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 217</span>
 
-<span class='kw'>def</span> <span class='id define_method_attribute='>define_method_attribute=</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span>
-  <span class='id generated_attribute_methods'>generated_attribute_methods</span><span class='period'>.</span><span class='id module_eval'>module_eval</span> <span class='kw'>do</span>
-    <span class='id define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id new_value'>new_value</span><span class='op'>|</span>
-      <span class='id write_attribute'>write_attribute</span><span class='lparen'>(</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id new_value'>new_value</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_define_method_attribute='>define_method_attribute=</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_generated_attribute_methods'>generated_attribute_methods</span><span class='period'>.</span><span class='id identifier rubyid_module_eval'>module_eval</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_new_value'>new_value</span><span class='op'>|</span>
+      <span class='id identifier rubyid_write_attribute'>write_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_value'>new_value</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -1756,37 +1807,39 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="encoding=-class_method">
+  <h3 class="signature " id="encoding=-class_method">
   
     + (<tt>Object</tt>) <strong>encoding=</strong>(new_encoding) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+156
 157
 158
 159
 160
 161
 162
-163
-164</pre>
+163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 156</span>
 
-<span class='kw'>def</span> <span class='id encoding='>encoding=</span><span class='lparen'>(</span><span class='id new_encoding'>new_encoding</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>if</span> <span class='cvar'>@@encoding</span> <span class='op'>==</span> <span class='id new_encoding'>new_encoding</span>
-  <span class='cvar'>@@encoding</span> <span class='op'>=</span> <span class='id new_encoding'>new_encoding</span>
-  <span class='id database_opened'>database_opened</span> <span class='op'>=</span> <span class='op'>!</span><span class='id context'>context</span><span class='period'>.</span><span class='id database'>database</span><span class='period'>.</span><span class='id nil?'>nil?</span>
-  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id default'>default</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id default_options'>default_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='cvar'>@@encoding</span><span class='rbrace'>}</span>
-  <span class='id database'>database</span><span class='period'>.</span><span class='id reopen'>reopen</span> <span class='kw'>if</span> <span class='id database_opened'>database_opened</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_encoding='>encoding=</span><span class='lparen'>(</span><span class='id identifier rubyid_new_encoding'>new_encoding</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='cvar'>@@encoding</span> <span class='op'>==</span> <span class='id identifier rubyid_new_encoding'>new_encoding</span>
+  <span class='cvar'>@@encoding</span> <span class='op'>=</span> <span class='id identifier rubyid_new_encoding'>new_encoding</span>
+  <span class='id identifier rubyid_database_opened'>database_opened</span> <span class='op'>=</span> <span class='op'>!</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_default_options'>default_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='cvar'>@@encoding</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_reopen'>reopen</span> <span class='kw'>if</span> <span class='id identifier rubyid_database_opened'>database_opened</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1794,13 +1847,15 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="exists?-class_method">
+  <h3 class="signature " id="exists?-class_method">
   
     + (<tt>Boolean</tt>) <strong>exists?</strong>(record_id) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -1808,7 +1863,7 @@ column name and order.</p></div>
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -1828,6 +1883,7 @@ column name and order.</p></div>
       <pre class="lines">
 
 
+122
 123
 124
 125
@@ -1839,23 +1895,22 @@ column name and order.</p></div>
 131
 132
 133
-134
-135</pre>
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 122</span>
 
-<span class='kw'>def</span> <span class='id exists?'>exists?</span><span class='lparen'>(</span><span class='id record_id'>record_id</span><span class='rparen'>)</span>
-  <span class='id record_id'>record_id</span> <span class='op'>=</span> <span class='id record_id'>record_id</span><span class='period'>.</span><span class='id record_id'>record_id</span> <span class='kw'>if</span> <span class='id record_id'>record_id</span><span class='period'>.</span><span class='id respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:record_id</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id table'>table</span><span class='period'>.</span><span class='id support_key?'>support_key?</span>
-    <span class='kw'>not</span> <span class='id table'>table</span><span class='lbracket'>[</span><span class='id record_id'>record_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id nil?'>nil?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='id identifier rubyid_record_id'>record_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record_id'>record_id</span> <span class='op'>=</span> <span class='id identifier rubyid_record_id'>record_id</span><span class='period'>.</span><span class='id identifier rubyid_record_id'>record_id</span> <span class='kw'>if</span> <span class='id identifier rubyid_record_id'>record_id</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:record_id</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_support_key?'>support_key?</span>
+    <span class='kw'>not</span> <span class='id identifier rubyid_table'>table</span><span class='lbracket'>[</span><span class='id identifier rubyid_record_id'>record_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='kw'>else</span>
     <span class='kw'>begin</span>
-      <span class='id record_id'>record_id</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id record_id'>record_id</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_record_id'>record_id</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_record_id'>record_id</span><span class='rparen'>)</span>
     <span class='kw'>rescue</span> <span class='const'>ArgumentError</span>
       <span class='kw'>return</span> <span class='kw'>false</span>
     <span class='kw'>end</span>
-    <span class='id table'>table</span><span class='period'>.</span><span class='id exist?'>exist?</span><span class='lparen'>(</span><span class='id record_id'>record_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='id identifier rubyid_record_id'>record_id</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1864,18 +1919,21 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="find-class_method">
+  <h3 class="signature " id="find-class_method">
   
     + (<tt>Object</tt>) <strong>find</strong>(record_id, options = {}) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+107
 108
 109
 110
@@ -1888,25 +1946,24 @@ column name and order.</p></div>
 117
 118
 119
-120
-121</pre>
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 107</span>
 
-<span class='kw'>def</span> <span class='id find'>find</span><span class='lparen'>(</span><span class='id record_id'>record_id</span><span class='comma'>,</span> <span class='id options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id record_id'>record_id</span> <span class='op'>=</span> <span class='id record_id'>record_id</span><span class='period'>.</span><span class='id record_id'>record_id</span> <span class='kw'>if</span> <span class='id record_id'>record_id</span><span class='period'>.</span><span class='id respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:record_id</span><span class='rparen'>)</span>
-  <span class='kw'>unless</span> <span class='id table'>table</span><span class='period'>.</span><span class='id support_key?'>support_key?</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_record_id'>record_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record_id'>record_id</span> <span class='op'>=</span> <span class='id identifier rubyid_record_id'>record_id</span><span class='period'>.</span><span class='id identifier rubyid_record_id'>record_id</span> <span class='kw'>if</span> <span class='id identifier rubyid_record_id'>record_id</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:record_id</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_support_key?'>support_key?</span>
     <span class='kw'>begin</span>
-      <span class='id record_id'>record_id</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id record_id'>record_id</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_record_id'>record_id</span> <span class='op'>=</span> <span class='const'>Integer</span><span class='lparen'>(</span><span class='id identifier rubyid_record_id'>record_id</span><span class='rparen'>)</span>
     <span class='kw'>rescue</span> <span class='const'>ArgumentError</span>
       <span class='kw'>return</span> <span class='kw'>nil</span>
     <span class='kw'>end</span>
-    <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id table'>table</span><span class='period'>.</span><span class='id exist?'>exist?</span><span class='lparen'>(</span><span class='id record_id'>record_id</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='id identifier rubyid_record_id'>record_id</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-  <span class='id record'>record</span> <span class='op'>=</span> <span class='id table'>table</span><span class='lbracket'>[</span><span class='id record_id'>record_id</span><span class='rbracket'>]</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id record'>record</span><span class='period'>.</span><span class='id nil?'>nil?</span>
-  <span class='id instantiate'>instantiate</span><span class='lparen'>(</span><span class='id record'>record</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record'>record</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='lbracket'>[</span><span class='id identifier rubyid_record_id'>record_id</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_instantiate'>instantiate</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1914,26 +1971,28 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="i18n_scope-class_method">
+  <h3 class="signature " id="i18n_scope-class_method">
   
     + (<tt>Object</tt>) <strong>i18n_scope</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-241
-242
-243</pre>
+243
+244
+245</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 241</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 243</span>
 
-<span class='kw'>def</span> <span class='id i18n_scope'>i18n_scope</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_i18n_scope'>i18n_scope</span>
   <span class='symbol'>:activegroonga</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1942,35 +2001,43 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="inspect-class_method">
+  <h3 class="signature " id="inspect-class_method">
   
     + (<tt>Object</tt>) <strong>inspect</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+188
 189
 190
 191
 192
 193
 194
-195</pre>
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 188</span>
 
-<span class='kw'>def</span> <span class='id inspect'>inspect</span>
-  <span class='kw'>return</span> <span class='kw'>super</span> <span class='kw'>if</span> <span class='id table'>table</span><span class='period'>.</span><span class='id nil?'>nil?</span>
-  <span class='id columns_info'>columns_info</span> <span class='op'>=</span> <span class='id table'>table</span><span class='period'>.</span><span class='id columns'>columns</span><span class='period'>.</span><span class='id collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id column'>column</span><span class='op'>|</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id column'>column</span><span class='period'>.</span><span class='id local_name'>local_name</span><span class='rbrace'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id column'>column</span><span class='period'>.</span><span class='id range'>range</span><span class='period'>.</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='kw'>return</span> <span class='kw'>super</span> <span class='kw'>if</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_sorted_columns'>sorted_columns</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_columns'>columns</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_column'>column</span><span class='op'>|</span>
+    <span class='id identifier rubyid_column'>column</span><span class='period'>.</span><span class='id identifier rubyid_local_name'>local_name</span>
   <span class='kw'>end</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id columns_info'>columns_info</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>, </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_columns_info'>columns_info</span> <span class='op'>=</span> <span class='id identifier rubyid_sorted_columns'>sorted_columns</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_column'>column</span><span class='op'>|</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_column'>column</span><span class='period'>.</span><span class='id identifier rubyid_local_name'>local_name</span><span class='rbrace'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_column'>column</span><span class='period'>.</span><span class='id identifier rubyid_range'>range</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_columns_info'>columns_info</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>, </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1978,39 +2045,41 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="instantiate-class_method">
+  <h3 class="signature " id="instantiate-class_method">
   
     + (<tt>Object</tt>) <strong>instantiate</strong>(record) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-197
-198
 199
 200
 201
 202
 203
 204
-205</pre>
+205
+206
+207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 199</span>
 
-<span class='kw'>def</span> <span class='id instantiate'>instantiate</span><span class='lparen'>(</span><span class='id record'>record</span><span class='rparen'>)</span>
-  <span class='id object'>object</span> <span class='op'>=</span> <span class='id new'>new</span><span class='lparen'>(</span><span class='id record'>record</span><span class='rparen'>)</span>
-  <span class='id object'>object</span><span class='period'>.</span><span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id record'>record</span><span class='period'>.</span><span class='id id'>id</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id record'>record</span><span class='period'>.</span><span class='id support_key?'>support_key?</span>
-    <span class='id object'>object</span><span class='period'>.</span><span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@key</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id record'>record</span><span class='period'>.</span><span class='id key'>key</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_instantiate'>instantiate</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_support_key?'>support_key?</span>
+    <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@key</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-  <span class='id object'>object</span><span class='period'>.</span><span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@new_record</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='id object'>object</span>
+  <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@new_record</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_object'>object</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2018,31 +2087,33 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="reference_class-class_method">
+  <h3 class="signature " id="reference_class-class_method">
   
     + (<tt>Object</tt>) <strong>reference_class</strong>(column_name, klass) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-229
-230
 231
 232
-233</pre>
+233
+234
+235</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 231</span>
 
-<span class='kw'>def</span> <span class='id reference_class'>reference_class</span><span class='lparen'>(</span><span class='id column_name'>column_name</span><span class='comma'>,</span> <span class='id klass'>klass</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_reference_class'>reference_class</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
   <span class='ivar'>@reference_mapping</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id column_name'>column_name</span> <span class='op'>=</span> <span class='id column_name'>column_name</span><span class='period'>.</span><span class='id to_s'>to_s</span>
-  <span class='ivar'>@reference_mapping</span><span class='lbracket'>[</span><span class='id column_name'>column_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id klass'>klass</span>
+  <span class='id identifier rubyid_column_name'>column_name</span> <span class='op'>=</span> <span class='id identifier rubyid_column_name'>column_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='ivar'>@reference_mapping</span><span class='lbracket'>[</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_klass'>klass</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2050,35 +2121,37 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="select-class_method">
+  <h3 class="signature " id="select-class_method">
   
     + (<tt>Object</tt>) <strong>select</strong>(options = {}) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+136
 137
 138
 139
 140
 141
-142
-143</pre>
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 136</span>
 
-<span class='kw'>def</span> <span class='id select'>select</span><span class='lparen'>(</span><span class='id options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='id all'>all</span><span class='lparen'>(</span><span class='id options'>options</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id block_given?'>block_given?</span>
-  <span class='id records'>records</span> <span class='op'>=</span> <span class='id table'>table</span><span class='period'>.</span><span class='id select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id record'>record</span><span class='op'>|</span>
-    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id record'>record</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_all'>all</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+  <span class='id identifier rubyid_records'>records</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-  <span class='id create_result_set'>create_result_set</span><span class='lparen'>(</span><span class='id records'>records</span><span class='comma'>,</span> <span class='symbol'>:expression</span> <span class='op'>=&gt;</span> <span class='id records'>records</span><span class='period'>.</span><span class='id expression'>expression</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_create_result_set'>create_result_set</span><span class='lparen'>(</span><span class='id identifier rubyid_records'>records</span><span class='comma'>,</span> <span class='symbol'>:expression</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_records'>records</span><span class='period'>.</span><span class='id identifier rubyid_expression'>expression</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2086,27 +2159,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="table-class_method">
+  <h3 class="signature " id="table-class_method">
   
     + (<tt>Object</tt>) <strong>table</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+177
 178
-179
-180</pre>
+179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 177</span>
 
-<span class='kw'>def</span> <span class='id table'>table</span>
-  <span class='ivar'>@table</span> <span class='op'>||=</span> <span class='id context'>context</span><span class='lbracket'>[</span><span class='id table_name'>table_name</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_table'>table</span>
+  <span class='ivar'>@table</span> <span class='op'>||=</span> <span class='id identifier rubyid_context'>context</span><span class='lbracket'>[</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2114,34 +2189,36 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="table_name-class_method">
+  <h3 class="signature " id="table_name-class_method">
   
     + (<tt>Object</tt>) <strong>table_name</strong>(name = nil) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+165
 166
 167
 168
 169
 170
-171
-172</pre>
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 165</span>
 
-<span class='kw'>def</span> <span class='id table_name'>table_name</span><span class='lparen'>(</span><span class='id name'>name</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id name'>name</span><span class='period'>.</span><span class='id nil?'>nil?</span>
-    <span class='ivar'>@table_name</span> <span class='op'>||=</span> <span class='id model_name'>model_name</span><span class='period'>.</span><span class='id plural'>plural</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_table_name'>table_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@table_name</span> <span class='op'>||=</span> <span class='id identifier rubyid_model_name'>model_name</span><span class='period'>.</span><span class='id identifier rubyid_plural'>plural</span>
   <span class='kw'>else</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id table_name'>table_name</span> <span class='op'>=</span> <span class='id name'>name</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_table_name'>table_name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2150,27 +2227,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="table_name=-class_method">
+  <h3 class="signature " id="table_name=-class_method">
   
     + (<tt>Object</tt>) <strong>table_name=</strong>(name) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+173
 174
-175
-176</pre>
+175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 173</span>
 
-<span class='kw'>def</span> <span class='id table_name='>table_name=</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span>
-  <span class='ivar'>@table_name</span> <span class='op'>=</span> <span class='id name'>name</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_table_name='>table_name=</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='ivar'>@table_name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2181,30 +2260,32 @@ column name and order.</p></div>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="==-instance_method">
+  <h3 class="signature first" id="==-instance_method">
   
     - (<tt>Object</tt>) <strong>==</strong>(other) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-329
-330
-331</pre>
+331
+332
+333</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 329</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 331</span>
 
-<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id other'>other</span><span class='rparen'>)</span>
-  <span class='id other'>other</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id other'>other</span><span class='period'>.</span><span class='id id'>id</span> <span class='op'>==</span> <span class='id id'>id</span>
+<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_id'>id</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2212,26 +2293,28 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="attributes-instance_method">
+  <h3 class="signature " id="attributes-instance_method">
   
     - (<tt>Object</tt>) <strong>attributes</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-319
-320
-321</pre>
+321
+322
+323</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 319</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 321</span>
 
-<span class='kw'>def</span> <span class='id attributes'>attributes</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span>
   <span class='ivar'>@attributes</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2240,30 +2323,32 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="attributes=-instance_method">
+  <h3 class="signature " id="attributes=-instance_method">
   
     - (<tt>Object</tt>) <strong>attributes=</strong>(attributes) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-323
-324
 325
 326
-327</pre>
+327
+328
+329</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 323</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 325</span>
 
-<span class='kw'>def</span> <span class='id attributes='>attributes=</span><span class='lparen'>(</span><span class='id attributes'>attributes</span><span class='rparen'>)</span>
-  <span class='id attributes'>attributes</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id key'>key</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
-    <span class='id send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_attributes='>attributes=</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2272,27 +2357,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="hash-instance_method">
+  <h3 class="signature " id="hash-instance_method">
   
     - (<tt>Object</tt>) <strong>hash</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-333
-334
-335</pre>
+335
+336
+337</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 333</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 335</span>
 
-<span class='kw'>def</span> <span class='id hash'>hash</span>
-  <span class='id id'>id</span><span class='period'>.</span><span class='id hash'>hash</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span>
+  <span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_hash'>hash</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2300,13 +2387,15 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="have_column?-instance_method">
+  <h3 class="signature " id="have_column?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>have_column?</strong>(name) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -2314,7 +2403,7 @@ column name and order.</p></div>
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -2334,15 +2423,15 @@ column name and order.</p></div>
       <pre class="lines">
 
 
-277
-278
-279</pre>
+279
+280
+281</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 277</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 279</span>
 
-<span class='kw'>def</span> <span class='id have_column?'>have_column?</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span>
-  <span class='id table'>table</span><span class='period'>.</span><span class='id have_column?'>have_column?</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_have_column?'>have_column?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_have_column?'>have_column?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2350,26 +2439,28 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="id-instance_method">
+  <h3 class="signature " id="id-instance_method">
   
     - (<tt>Object</tt>) <strong>id</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-281
-282
-283</pre>
+283
+284
+285</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 281</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 283</span>
 
-<span class='kw'>def</span> <span class='id id'>id</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
   <span class='ivar'>@id</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2378,20 +2469,20 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="inspect-instance_method">
+  <h3 class="signature " id="inspect-instance_method">
   
     - (<tt>Object</tt>) <strong>inspect</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-345
-346
 347
 348
 349
@@ -2401,22 +2492,30 @@ column name and order.</p></div>
 353
 354
 355
-356</pre>
+356
+357
+358
+359
+360
+361</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 345</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 347</span>
 
-<span class='kw'>def</span> <span class='id inspect'>inspect</span>
-  <span class='id inspected_attributes'>inspected_attributes</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='kw'>if</span> <span class='id table'>table</span><span class='period'>.</span><span class='id support_key?'>support_key?</span>
-    <span class='id inspected_attributes'>inspected_attributes</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key: </span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='id identifier rubyid_inspected_attributes'>inspected_attributes</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_support_key?'>support_key?</span>
+    <span class='id identifier rubyid_inspected_attributes'>inspected_attributes</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>else</span>
-    <span class='id inspected_attributes'>inspected_attributes</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>id: </span><span class='embexpr_beg'>#{</span><span class='id id'>id</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_inspected_attributes'>inspected_attributes</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>id: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
-  <span class='ivar'>@attributes</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id key'>key</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
-    <span class='id inspected_attributes'>inspected_attributes</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id value'>value</span><span class='period'>.</span><span class='id inspect'>inspect</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_sorted_attributes'>sorted_attributes</span> <span class='op'>=</span> <span class='ivar'>@attributes</span><span class='period'>.</span><span class='id identifier rubyid_sort_by'>sort_by</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='op'>|</span>
+    <span class='id identifier rubyid_key'>key</span>
   <span class='kw'>end</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id inspected_attributes'>inspected_attributes</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>, </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_sorted_attributes'>sorted_attributes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+    <span class='id identifier rubyid_inspected_attributes'>inspected_attributes</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_inspected_attributes'>inspected_attributes</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>, </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2424,26 +2523,28 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="key-instance_method">
+  <h3 class="signature " id="key-instance_method">
   
     - (<tt>Object</tt>) <strong>key</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-285
-286
-287</pre>
+287
+288
+289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 285</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 287</span>
 
-<span class='kw'>def</span> <span class='id key'>key</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_key'>key</span>
   <span class='ivar'>@key</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2452,13 +2553,15 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="key=-instance_method">
+  <h3 class="signature " id="key=-instance_method">
   
     - (<tt>Object</tt>) <strong>key=</strong>(key) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -2466,7 +2569,7 @@ column name and order.</p></div>
 </div>
 <div class="tags">
   
-<h3>Raises:</h3>
+<p class="tag_title">Raises:</p>
 <ul class="raise">
   
     <li>
@@ -2486,19 +2589,19 @@ column name and order.</p></div>
       <pre class="lines">
 
 
-289
-290
 291
 292
-293</pre>
+293
+294
+295</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 289</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 291</span>
 
-<span class='kw'>def</span> <span class='id key='>key=</span><span class='lparen'>(</span><span class='id key'>key</span><span class='rparen'>)</span>
-  <span class='id raise'>raise</span> <span class='const'>NoKeyTableError</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id table'>table</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id table'>table</span><span class='period'>.</span><span class='id support_key?'>support_key?</span>
-  <span class='id raise'>raise</span> <span class='const'>KeyOverrideError</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id table'>table</span><span class='comma'>,</span> <span class='id key'>key</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id new_record?'>new_record?</span>
-  <span class='ivar'>@key</span> <span class='op'>=</span> <span class='id key'>key</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_key='>key=</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NoKeyTableError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_support_key?'>support_key?</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>KeyOverrideError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_new_record?'>new_record?</span>
+  <span class='ivar'>@key</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2506,27 +2609,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="read_attribute-instance_method">
+  <h3 class="signature " id="read_attribute-instance_method">
   
     - (<tt>Object</tt>) <strong>read_attribute</strong>(name) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-337
-338
-339</pre>
+339
+340
+341</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 337</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 339</span>
 
-<span class='kw'>def</span> <span class='id read_attribute'>read_attribute</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span>
-  <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_read_attribute'>read_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2534,34 +2639,36 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="record_id-instance_method">
+  <h3 class="signature " id="record_id-instance_method">
   
     - (<tt>Object</tt>) <strong>record_id</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-303
-304
 305
 306
 307
 308
-309</pre>
+309
+310
+311</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 303</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 305</span>
 
-<span class='kw'>def</span> <span class='id record_id'>record_id</span>
-  <span class='kw'>if</span> <span class='id table'>table</span><span class='period'>.</span><span class='id support_key?'>support_key?</span>
-    <span class='id key'>key</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_record_id'>record_id</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_support_key?'>support_key?</span>
+    <span class='id identifier rubyid_key'>key</span>
   <span class='kw'>else</span>
-    <span class='id id'>id</span>
+    <span class='id identifier rubyid_id'>id</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2570,27 +2677,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="record_raw_id-instance_method">
+  <h3 class="signature " id="record_raw_id-instance_method">
   
     - (<tt>Object</tt>) <strong>record_raw_id</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-311
-312
-313</pre>
+313
+314
+315</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 311</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 313</span>
 
-<span class='kw'>def</span> <span class='id record_raw_id'>record_raw_id</span>
-  <span class='id id'>id</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_record_raw_id'>record_raw_id</span>
+  <span class='id identifier rubyid_id'>id</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2598,26 +2707,28 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="score-instance_method">
+  <h3 class="signature " id="score-instance_method">
   
     - (<tt>Object</tt>) <strong>score</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-295
-296
-297</pre>
+297
+298
+299</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 295</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 297</span>
 
-<span class='kw'>def</span> <span class='id score'>score</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_score'>score</span>
   <span class='ivar'>@score</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2626,27 +2737,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="score=-instance_method">
+  <h3 class="signature " id="score=-instance_method">
   
     - (<tt>Object</tt>) <strong>score=</strong>(score) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-299
-300
-301</pre>
+301
+302
+303</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 299</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 301</span>
 
-<span class='kw'>def</span> <span class='id score='>score=</span><span class='lparen'>(</span><span class='id score'>score</span><span class='rparen'>)</span>
-  <span class='ivar'>@score</span> <span class='op'>=</span> <span class='id score'>score</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_score='>score=</span><span class='lparen'>(</span><span class='id identifier rubyid_score'>score</span><span class='rparen'>)</span>
+  <span class='ivar'>@score</span> <span class='op'>=</span> <span class='id identifier rubyid_score'>score</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2654,27 +2767,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="table-instance_method">
+  <h3 class="signature " id="table-instance_method">
   
     - (<tt>Object</tt>) <strong>table</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-358
-359
-360</pre>
+363
+364
+365</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 358</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 363</span>
 
-<span class='kw'>def</span> <span class='id table'>table</span>
-  <span class='ivar'>@table</span> <span class='op'>||=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id table'>table</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_table'>table</span>
+  <span class='ivar'>@table</span> <span class='op'>||=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_table'>table</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2682,27 +2797,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="to_key-instance_method">
+  <h3 class="signature " id="to_key-instance_method">
   
     - (<tt>Object</tt>) <strong>to_key</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-315
-316
-317</pre>
+317
+318
+319</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 315</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 317</span>
 
-<span class='kw'>def</span> <span class='id to_key'>to_key</span>
-  <span class='id persisted?'>persisted?</span> <span class='op'>?</span> <span class='lbracket'>[</span><span class='id record_id'>record_id</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='kw'>nil</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_key'>to_key</span>
+  <span class='id identifier rubyid_persisted?'>persisted?</span> <span class='op'>?</span> <span class='lbracket'>[</span><span class='id identifier rubyid_record_id'>record_id</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2710,27 +2827,29 @@ column name and order.</p></div>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="write_attribute-instance_method">
+  <h3 class="signature " id="write_attribute-instance_method">
   
     - (<tt>Object</tt>) <strong>write_attribute</strong>(name, value) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-341
-342
-343</pre>
+343
+344
+345</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 341</span>
+      <pre class="code"><span class="info file"># File 'lib/active_groonga/base.rb', line 343</span>
 
-<span class='kw'>def</span> <span class='id write_attribute'>write_attribute</span><span class='lparen'>(</span><span class='id name'>name</span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span>
-  <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='id name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id value'>value</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_write_attribute'>write_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2740,18 +2859,13 @@ column name and order.</p></div>
   </div>
 
 </div>
-    
+
     <div id="footer"></div>
 
   
     </div>
 
     <div class="sponsors">
-      <p id="sponsor-rubyforge">
-        <a href="http://rubyforge.org/projects/groonga/">
-          <img src="../../../rubyforge.png" width="120" height="24" border="0" alt="The Ranguba project is hosted on RubyForge.org." />
-        </a>
-      </p>
       <p id="sponsor-github">
         <a href="https://github.com/ranguba/">
           <img src="../../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
