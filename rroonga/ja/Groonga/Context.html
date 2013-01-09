@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (C)</a> &raquo;
+    <a href="../alphabetical_index.html">Index (C)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Context</span>
@@ -850,28 +850,6 @@ href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groon
       <pre class="lines">
 
 
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424
-425
-426
-427
-428
-429
-430
 431
 432
 433
@@ -894,10 +872,32 @@ href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groon
 450
 451
 452
-453</pre>
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 409</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 431</span>
 
 static VALUE
 rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
@@ -1009,21 +1009,21 @@ rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351</pre>
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 340</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 362</span>
 
 static VALUE
 rb_grn_context_s_get_default (VALUE self)
@@ -1071,15 +1071,15 @@ rb_grn_context_s_get_default (VALUE self)
       <pre class="lines">
 
 
-367
-368
-369
-370
-371
-372</pre>
+389
+390
+391
+392
+393
+394</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 367</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 389</span>
 
 static VALUE
 rb_grn_context_s_set_default (VALUE self, VALUE context)
@@ -1142,14 +1142,14 @@ rb_grn_context_s_set_default (VALUE self, VALUE context)
       <pre class="lines">
 
 
-381
-382
-383
-384
-385</pre>
+403
+404
+405
+406
+407</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 381</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 403</span>
 
 static VALUE
 rb_grn_context_s_get_default_options (VALUE self)
@@ -1189,15 +1189,15 @@ rb_grn_context_s_get_default_options (VALUE self)
       <pre class="lines">
 
 
-394
-395
-396
-397
-398
-399</pre>
+416
+417
+418
+419
+420
+421</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 394</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 416</span>
 
 static VALUE
 rb_grn_context_s_set_default_options (VALUE self, VALUE options)
@@ -1311,28 +1311,6 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
       <pre class="lines">
 
 
-865
-866
-867
-868
-869
-870
-871
-872
-873
-874
-875
-876
-877
-878
-879
-880
-881
-882
-883
-884
-885
-886
 887
 888
 889
@@ -1347,10 +1325,32 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
 898
 899
 900
-901</pre>
+901
+902
+903
+904
+905
+906
+907
+908
+909
+910
+911
+912
+913
+914
+915
+916
+917
+918
+919
+920
+921
+922
+923</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 865</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 887</span>
 
 static VALUE
 rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
@@ -1422,26 +1422,26 @@ rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
       <pre class="lines">
 
 
-460
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476</pre>
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 460</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 482</span>
 
 static VALUE
 rb_grn_context_close (VALUE self)
@@ -1506,18 +1506,18 @@ rb_grn_context_close (VALUE self)
       <pre class="lines">
 
 
-483
-484
-485
-486
-487
-488
-489
-490
-491</pre>
+505
+506
+507
+508
+509
+510
+511
+512
+513</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 483</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 505</span>
 
 static VALUE
 rb_grn_context_closed_p (VALUE self)
@@ -1631,28 +1631,6 @@ rb_grn_context_closed_p (VALUE self)
       <pre class="lines">
 
 
-692
-693
-694
-695
-696
-697
-698
-699
-700
-701
-702
-703
-704
-705
-706
-707
-708
-709
-710
-711
-712
-713
 714
 715
 716
@@ -1666,10 +1644,32 @@ rb_grn_context_closed_p (VALUE self)
 724
 725
 726
-727</pre>
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 692</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 714</span>
 
 static VALUE
 rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
@@ -1825,17 +1825,17 @@ rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-672
-673
-674
-675
-676
-677
-678
-679</pre>
+694
+695
+696
+697
+698
+699
+700
+701</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 672</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 694</span>
 
 static VALUE
 rb_grn_context_get_database (VALUE self)
@@ -1900,14 +1900,14 @@ rb_grn_context_get_database (VALUE self)
       <pre class="lines">
 
 
-539
-540
-541
-542
-543</pre>
+561
+562
+563
+564
+565</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 539</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 561</span>
 
 static VALUE
 rb_grn_context_get_encoding (VALUE self)
@@ -1947,21 +1947,21 @@ rb_grn_context_get_encoding (VALUE self)
       <pre class="lines">
 
 
-551
-552
-553
-554
-555
-556
-557
-558
-559
-560
-561
-562</pre>
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 551</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 573</span>
 
 static VALUE
 rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
@@ -2030,28 +2030,6 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
       <pre class="lines">
 
 
-499
-500
-501
-502
-503
-504
-505
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517
-518
-519
-520
 521
 522
 523
@@ -2062,10 +2040,32 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
 528
 529
 530
-531</pre>
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 499</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 521</span>
 
 static VALUE
 rb_grn_context_inspect (VALUE self)
@@ -2158,14 +2158,14 @@ href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groon
       <pre class="lines">
 
 
-596
-597
-598
-599
-600</pre>
+618
+619
+620
+621
+622</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 596</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 618</span>
 
 static VALUE
 rb_grn_context_get_match_escalation_threshold (VALUE self)
@@ -2208,19 +2208,19 @@ href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groon
       <pre class="lines">
 
 
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620</pre>
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 611</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 633</span>
 
 static VALUE
 rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
@@ -2329,30 +2329,30 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
       <pre class="lines">
 
 
-758
-759
-760
-761
-762
-763
-764
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775
-776
-777
-778</pre>
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 758</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 780</span>
 
 static VALUE
 rb_grn_context_receive (VALUE self)
@@ -2496,21 +2496,21 @@ rb_grn_context_receive (VALUE self)
       <pre class="lines">
 
 
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584</pre>
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 573</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 595</span>
 
 static VALUE
 rb_grn_context_get_ruby_encoding (VALUE self)
@@ -2711,26 +2711,26 @@ rb_grn_context_get_ruby_encoding (VALUE self)
       <pre class="lines">
 
 
-735
-736
-737
-738
-739
-740
-741
-742
-743
-744
-745
-746
-747
-748
-749
-750
-751</pre>
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 735</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 757</span>
 
 static VALUE
 rb_grn_context_send (VALUE self, VALUE rb_string)
@@ -2795,24 +2795,24 @@ rb_grn_context_send (VALUE self, VALUE rb_string)
       <pre class="lines">
 
 
-650
-651
-652
-653
-654
-655
-656
-657
-658
-659
-660
-661
-662
-663
-664</pre>
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 650</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 672</span>
 
 static VALUE
 rb_grn_context_support_lzo_p (VALUE self)
@@ -2875,24 +2875,24 @@ rb_grn_context_support_lzo_p (VALUE self)
       <pre class="lines">
 
 
-628
-629
-630
-631
-632
-633
-634
-635
-636
-637
-638
-639
-640
-641
-642</pre>
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 628</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 650</span>
 
 static VALUE
 rb_grn_context_support_zlib_p (VALUE self)
@@ -2919,7 +2919,7 @@ rb_grn_context_support_zlib_p (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Fri Dec 28 12:35:02 2012 by
+  Generated on Wed Jan  9 18:33:56 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>
