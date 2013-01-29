@@ -93,6 +93,39 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2 id="2-1-3">2.1.3: 2013-01-29</h2>
+<h3>改善</h3>
+<ul>
+	<li>groonga 2.1.2で削除されたGroonga::Viewの機能を削除。</li>
+	<li>[doc] 英訳したチュートリアルを追加。
+	<ul>
+		<li>英語版:  http://ranguba.org/rroonga/en/file.tutorial.html</li>
+		<li>日本語版: http://ranguba.org/rroonga/ja/file.tutorial.html</li>
+	</ul></li>
+	<li>[context] Context#restoreを追加。このメソッドはgroongaに搭載されている&quot;grndump&quot;コマンドによってダンプされたコマンドをリストアできます。
+例：
+<pre class="code ruby"><code><span class='id identifier rubyid_dumped_commands'>dumped_commands</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_“dump'>“dump</span><span class='period'>.</span><span class='id identifier rubyid_grn”'>grn”</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='rparen'>)</span>
+</code></pre></li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>Groonga::Loggerが削除されていたのを追加した。</li>
+	<li>[dumper] ダンプしたコマンドに余計な改行が含まれていたのを削除。</li>
+	<li>rroongaをインストール時にgroongaをインストールする際：
+	<ul>
+		<li>必要のないドキュメントがインストールされるのを修正した。</li>
+		<li>必要のない静的ライブラリをビルドしないようにした。</li>
+	</ul></li>
+</ul>
+<ul>
+	<li>ラングバプロジェクト向け：
+	<ul>
+		<li>[template] rubyforgeスポンサーのタグを削除。</li>
+		<li>[template] piwikのタグを削除。</li>
+		<li>[template] 日本語のリファレンスのURLを修正。</li>
+	</ul></li>
+</ul>
 <h2 id="2-1-2">2.1.2: 2013-01-04</h2>
 <h3>修正</h3>
 <ul>
@@ -760,7 +793,7 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Wed Jan  9 18:33:53 2013 by
+  Generated on Tue Jan 29 16:06:03 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>

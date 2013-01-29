@@ -126,7 +126,7 @@
   
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">ext/groonga/rb-grn-logger.c<span class="defines">,<br />
-  ext/groonga/rb-grn-logger.c</span>
+  lib/groonga/logger.rb,<br /> ext/groonga/rb-grn-logger.c</span>
 </dd>
   
 </dl>
@@ -143,7 +143,24 @@
 <div class="tags">
   
 
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="CallbackLogger.html" title="Groonga::CallbackLogger (class)">CallbackLogger</a></span>, <span class='object_link'><a href="FileLogger.html" title="Groonga::FileLogger (class)">FileLogger</a></span></p>
 </div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Logger/Flags.html" title="Groonga::Logger::Flags (module)">Flags</a></span>
+    
+  
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+
 
 
 
@@ -296,7 +313,31 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>groongaのデフォルトロガーがログを出力するファイルを再オー プンする。ログファイルのバックアップ時などに使用する。.</p>
+<p>現在のロガーに再オープンのリクエストを送ります。ログファイルの使い分けに便利です。.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unregister-class_method" title="unregister (class method)">+ (Object) <strong>unregister</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Unregister the registered logger.</p>
 </div></span>
   
 </li>
@@ -314,14 +355,56 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Object) <strong>initialize</strong> </a>
+      <a href="#fin-instance_method" title="#fin (instance method)">- (Object) <strong>fin</strong> </a>
     
 
     
   </span>
   
   
-    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log-instance_method" title="#log (instance method)">- (Object) <strong>log</strong>(level, timestamp, title, message, location) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reopen-instance_method" title="#reopen (instance method)">- (Object) <strong>reopen</strong> </a>
+    
+
+    
+  </span>
+  
   
   
   
@@ -338,118 +421,6 @@
     </ul>
   
 
-<div id="constructor_details" class="method_details_list">
-  <h2>Constructor Details</h2>
-  
-    <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
-  
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>initialize</strong> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246
-247
-248
-249</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 208</span>
-
-static VALUE
-rb_grn_logger_initialize (int argc, VALUE *argv, VALUE self)
-{
-    rb_grn_logger_info_wrapper *wrapper;
-    grn_logger_info *logger;
-    grn_log_level level;
-    int flags = 0;
-    VALUE options, rb_level, rb_time, rb_title, rb_message, rb_location;
-    VALUE rb_handler;
-
-    rb_scan_args(argc, argv, &quot;01&amp;&quot;, &amp;options, &amp;rb_handler);
-
-    rb_grn_scan_options(options,
-                        &quot;level&quot;, &amp;rb_level,
-                        &quot;time&quot;, &amp;rb_time,
-                        &quot;title&quot;, &amp;rb_title,
-                        &quot;message&quot;, &amp;rb_message,
-                        &quot;location&quot;, &amp;rb_location,
-                        NULL);
-
-    level = RVAL2GRNLOGLEVEL(rb_level);
-
-    if (NIL_P(rb_time) || RVAL2CBOOL(rb_time))
-        flags |= GRN_LOG_TIME;
-    if (NIL_P(rb_title) || RVAL2CBOOL(rb_title))
-        flags |= GRN_LOG_TITLE;
-    if (NIL_P(rb_message) || RVAL2CBOOL(rb_message))
-        flags |= GRN_LOG_MESSAGE;
-    if (NIL_P(rb_location) || RVAL2CBOOL(rb_location))
-        flags |= GRN_LOG_LOCATION;
-
-    wrapper = ALLOC(rb_grn_logger_info_wrapper);
-    logger = ALLOC(grn_logger_info);
-    wrapper-&gt;logger = logger;
-    DATA_PTR(self) = wrapper;
-
-    logger-&gt;max_level = level;
-    logger-&gt;flags = flags;
-    rb_grn_logger_set_handler(self, rb_handler);
-
-    return Qnil;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-  
-</div>
 
 
   <div id="class_method_details" class="method_details_list">
@@ -506,37 +477,33 @@ rb_grn_logger_initialize (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-386
-387
-388
-389
-390
-391
-392
-393
-394
-395
-396
-397
-398
-399</pre>
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 386</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 346</span>
 
 static VALUE
 rb_grn_logger_s_get_log_path (VALUE klass)
 {
-#ifdef WIN32
-    rb_raise(rb_eNotImpError, &quot;grn_log_path isn't available on Windows.&quot;);
-    return Qnil;
-#else
-    if (grn_log_path) {
-	return rb_str_new2(grn_log_path);
+    const char *path;
+
+    path = grn_default_logger_get_path();
+    if (path) {
+	return rb_str_new2(path);
     } else {
 	return Qnil;
     }
-#endif
 }</pre>
     </td>
   </tr>
@@ -573,29 +540,61 @@ rb_grn_logger_s_get_log_path (VALUE klass)
       <pre class="lines">
 
 
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419</pre>
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 410</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 368</span>
 
 static VALUE
-rb_grn_logger_s_set_log_path (VALUE klass, VALUE path)
+rb_grn_logger_s_set_log_path (VALUE klass, VALUE rb_path)
 {
-#ifdef WIN32
-    rb_raise(rb_eNotImpError, &quot;grn_qlog_path isn't available on Windows.&quot;);
+    grn_bool need_reopen = GRN_FALSE;
+    const char *current_path;
+
+    current_path = grn_default_logger_get_path();
+    if (NIL_P(rb_path)) {
+	need_reopen = current_path != NULL;
+	grn_default_logger_set_path(NULL);
+    } else {
+	const char *new_path;
+	new_path = RSTRING_PTR(rb_path);
+	if (!current_path || strcmp(new_path, current_path) != 0) {
+	    need_reopen = GRN_TRUE;
+	}
+	grn_default_logger_set_path(new_path);
+    }
+    rb_cv_set(klass, &quot;@@log_path&quot;, rb_path);
+
+    if (need_reopen) {
+	rb_grn_logger_s_reopen_with_related_object(klass, rb_path);
+    }
+
     return Qnil;
-#else
-    return rb_grn_logger_s_set_path(klass, path, &amp;grn_log_path, &quot;@@log_path&quot;);
-#endif
 }</pre>
     </td>
   </tr>
@@ -652,37 +651,33 @@ rb_grn_logger_s_set_log_path (VALUE klass, VALUE path)
       <pre class="lines">
 
 
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440</pre>
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 427</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 401</span>
 
 static VALUE
 rb_grn_logger_s_get_query_log_path (VALUE klass)
 {
-#ifdef WIN32
-    rb_raise(rb_eNotImpError, &quot;grn_qlog_path isn't available on Windows.&quot;);
-    return Qnil;
-#else
-    if (grn_qlog_path) {
-	return rb_str_new2(grn_qlog_path);
+    const char *path;
+
+    path = grn_default_query_logger_get_path();
+    if (path) {
+	return rb_str_new2(path);
     } else {
 	return Qnil;
     }
-#endif
 }</pre>
     </td>
   </tr>
@@ -719,31 +714,61 @@ rb_grn_logger_s_get_query_log_path (VALUE klass)
       <pre class="lines">
 
 
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461</pre>
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 451</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 423</span>
 
 static VALUE
-rb_grn_logger_s_set_query_log_path (VALUE klass, VALUE path)
+rb_grn_logger_s_set_query_log_path (VALUE klass, VALUE rb_path)
 {
-#ifdef WIN32
-    rb_raise(rb_eNotImpError, &quot;grn_qlog_path isn't available on Windows.&quot;);
+    grn_bool need_reopen = GRN_FALSE;
+    const char *current_path;
+
+    current_path = grn_default_query_logger_get_path();
+    if (NIL_P(rb_path)) {
+	need_reopen = current_path != NULL;
+	grn_default_query_logger_set_path(NULL);
+    } else {
+	const char *new_path;
+	new_path = RSTRING_PTR(rb_path);
+	if (!current_path || strcmp(new_path, current_path) != 0) {
+	    need_reopen = GRN_TRUE;
+	}
+	grn_default_query_logger_set_path(new_path);
+    }
+    rb_cv_set(klass, &quot;@@query_log_path&quot;, rb_path);
+
+    if (need_reopen) {
+	rb_grn_logger_s_reopen_with_related_object(klass, rb_path);
+    }
+
     return Qnil;
-#else
-    return rb_grn_logger_s_set_path(klass, path, &amp;grn_qlog_path,
-				    &quot;@@query_log_path&quot;);
-#endif
 }</pre>
     </td>
   </tr>
@@ -909,37 +934,123 @@ groongaで実装されていない?)</p>
       <pre class="lines">
 
 
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294</pre>
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 280</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 221</span>
 
 static VALUE
 rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
 {
-    VALUE logger, rb_context = Qnil;
+    VALUE rb_context = Qnil;
     grn_ctx *context;
+    VALUE rb_logger, rb_callback;
+    VALUE rb_options, rb_max_level;
+    VALUE rb_time, rb_title, rb_message, rb_location;
+    VALUE rb_flags;
+    grn_log_level max_level = GRN_LOG_DEFAULT_LEVEL;
+    int flags = 0;
 
-    logger = rb_funcall2(klass, rb_intern(&quot;new&quot;), argc, argv);
-    rb_grn_logger_set_handler(logger, rb_block_proc());
+    rb_scan_args(argc, argv, &quot;02&amp;&quot;, &amp;rb_logger, &amp;rb_options, &amp;rb_callback);
+
+    if (rb_block_given_p()) {
+        rb_logger = rb_funcall(cGrnCallbackLogger, id_new, 1, rb_callback);
+    }
+
+    rb_grn_scan_options(rb_options,
+                        &quot;max_level&quot;, &amp;rb_max_level,
+                        &quot;time&quot;,	     &amp;rb_time,
+                        &quot;title&quot;,     &amp;rb_title,
+                        &quot;message&quot;,   &amp;rb_message,
+                        &quot;location&quot;,  &amp;rb_location,
+                        &quot;flags&quot;,     &amp;rb_flags,
+                        NULL);
+    if (!NIL_P(rb_max_level)) {
+	max_level = RVAL2GRNLOGLEVEL(rb_max_level);
+    }
+
+    if (NIL_P(rb_time) || CBOOL2RVAL(rb_time)) {
+	flags |= GRN_LOG_TIME;
+    }
+    if (NIL_P(rb_title) || CBOOL2RVAL(rb_title)) {
+	flags |= GRN_LOG_TITLE;
+    }
+    if (NIL_P(rb_message) || CBOOL2RVAL(rb_message)) {
+	flags |= GRN_LOG_MESSAGE;
+    }
+    if (NIL_P(rb_location) || CBOOL2RVAL(rb_location)) {
+	flags |= GRN_LOG_LOCATION;
+    }
+    if (!NIL_P(rb_flags)) {
+        flags = rb_funcall(mGrnLoggerFlags, id_parse, 2,
+                           INT2NUM(flags), rb_flags);
+    }
+
+    rb_grn_logger.max_level = max_level;
+    rb_grn_logger.flags = flags;
+    rb_grn_logger.user_data = (void *)rb_logger;
+
     context = rb_grn_context_ensure(&amp;rb_context);
-    grn_logger_info_set(context, RVAL2GRNLOGGER(logger));
-    rb_grn_context_check(context, logger);
-    rb_cv_set(klass, &quot;@@current_logger&quot;, logger);
+    grn_logger_set(context, &amp;rb_grn_logger);
+    rb_grn_context_check(context, rb_logger);
+    rb_cv_set(klass, &quot;@@current_logger&quot;, rb_logger);
 
     return Qnil;
 }</pre>
@@ -960,16 +1071,43 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>groongaのデフォルトロガーがログを出力するファイルを再オー プンする。ログファイルのバックアップ時などに使用する。</p>
-
-<p><span class='object_link'><a href="#register-class_method" title="Groonga::Logger.register (method)">register</a></span> で独自のロガーを設定している場合 は例外が発生する。</p>
+<p>現在のロガーに再オープンのリクエストを送ります。ログファイルの使い分けに便利です。</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Void</p>
+
+
+  </div>
+</div>
+<div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>void</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 
 
 </div><table class="source_code">
@@ -978,20 +1116,235 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
       <pre class="lines">
 
 
-347
-348
-349
-350
-351</pre>
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 347</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 327</span>
 
 static VALUE
 rb_grn_logger_s_reopen (VALUE klass)
 {
-    return rb_grn_logger_s_reopen_with_related_object(klass, klass);
+    VALUE rb_context = Qnil;
+    grn_ctx *context;
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+    grn_logger_reopen(context);
+    rb_grn_context_check(context, klass);
+
+    return Qnil;
 }</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unregister-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unregister</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Unregister the registered logger. The default logger is used after
+unregistering.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Void</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>void</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 287</span>
+
+static VALUE
+rb_grn_logger_s_unregister (VALUE klass)
+{
+    VALUE current_logger;
+    VALUE rb_context = Qnil;
+    grn_ctx *context;
+
+    current_logger = rb_cv_get(klass, &quot;@@current_logger&quot;);
+    if (NIL_P(current_logger))
+        return Qnil;
+
+    rb_cv_set(klass, &quot;@@current_logger&quot;, Qnil);
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+    grn_logger_set(context, NULL);
+    rb_grn_context_check(context, klass);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="fin-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>fin</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fin'>fin</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>log</strong>(level, timestamp, title, message, location) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 45</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='comma'>,</span> <span class='id identifier rubyid_timestamp'>timestamp</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_guard'>guard</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_timestamp'>timestamp</span><span class='rbrace'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_mark'>mark</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_title'>title</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message'>message</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_location'>location</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reopen-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>reopen</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reopen'>reopen</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1002,7 +1355,7 @@ rb_grn_logger_s_reopen (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Wed Jan  9 18:34:03 2013 by
+  Generated on Tue Jan 29 16:06:05 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.3 (ruby-1.9.3).
 </div>
