@@ -14,9 +14,9 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabeticalalphabeticalalphabeticalalphabeticalalphabetical_index.html">Index (A)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (A)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Array</span>
@@ -217,6 +217,50 @@ IDで識別する。</p>
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pull-instance_method" title="#pull (instance method)">- (Groonga::Record or nil) <strong>pull</strong>(options = {}) {|record| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Pulles a record from the array.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push-instance_method" title="#push (instance method)">- (Groonga::Record or nil) <strong>push</strong> {|record| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Pushes a record to the array.</p></div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -282,7 +326,7 @@ IDで識別する。</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class='comment'>#無名一時テーブルを生成する。
+      <pre class="example code"><code><span class='comment'>#無名一時テーブルを生成する。
 </span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span>
 
 <span class='comment'>#無名永続テーブルを生成する。
@@ -293,7 +337,7 @@ IDで識別する。</p>
                       <span class='symbol'>:persistent</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
 
 <span class='comment'>#それぞれのレコードに512バイトの値を格納できる無名一時テーブルを生成する。
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:value</span> <span class='op'>=&gt;</span> <span class='int'>512</span><span class='rparen'>)</span></pre>
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:value</span> <span class='op'>=&gt;</span> <span class='int'>512</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -320,6 +364,8 @@ IDで識別する。</p>
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -462,6 +508,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -753,7 +801,7 @@ rb_grn_array_s_create (int argc, VALUE *argv, VALUE klass)
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class='comment'>#以下のようなユーザを格納するGroonga::Arrayが
+      <pre class="example code"><code><span class='comment'>#以下のようなユーザを格納するGroonga::Arrayが
 </span><span class='comment'>#定義されているものとする。
 </span><span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -766,7 +814,7 @@ rb_grn_array_s_create (int argc, VALUE *argv, VALUE klass)
 
 <span class='comment'>#gunyara-kunユーザを追加する。
 </span><span class='id identifier rubyid_gunyara_kun'>gunyara_kun</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gunyara-kun</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                        <span class='symbol'>:uri</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://d.hatena.ne.jp/tasukuchan/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre>
+                        <span class='symbol'>:uri</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://d.hatena.ne.jp/tasukuchan/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -846,6 +894,477 @@ rb_grn_array_add (int argc, VALUE *argv, VALUE self)
     } else {
 	return rb_grn_record_new_added(self, id, values);
     }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pull-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span> or nil</tt>) <strong>pull</strong>(options = {}) {|record| ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Pulles a record from the array. The required values should be
+retrieved in the given block.</p>
+<p>If <span class='object_link'><a href="#push-instance_method" title="Groonga::Array#push (method)">#push</a></span> failes to fill values of the pushed
+record, the pulled record may be uncompleted. It should be handled
+by your application.</p>
+<p>If you passes <code>:block? =&gt; true</code> option, the pull operation blocks
+until a pushed record is pushed. It is the default behavior.</p>
+<p>If you passes <code>:block? =&gt; false</code> option, the pull operation returns
+immediately, the given block isn&#8217;t called and returns nil when no
+record exist in the array.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>A program that pulls with non-block mode</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='comment'># The case for no pushed records in the array.
+</span>  <span class='id identifier rubyid_pulled_record'>pulled_record</span> <span class='op'>=</span> <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_pull'>pull</span><span class='lparen'>(</span><span class='symbol'>:block?</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+    <span class='comment'># This block isn't called
+</span>    <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
+    <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_pulled_record'>pulled_record</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='comment'># =&gt; true
+</span><span class='kw'>end</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>A pulled record that is yielded.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The option parameters.</p></div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:block?</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether the pull operation is blocked or not when no record exist
+in the array.</p></div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>record</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Gets required values for a pull record in the given block.</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>record</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span> or nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A pulled record. It is nil when no records exist in the array
+and <code>block?</code> parameter is not <code>true</code>.</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span> or nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A pulled record that is yielded.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#push-instance_method" title="Groonga::Array#push (method)">Examples exist in the push documentation.</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-array.c', line 370</span>
+
+static VALUE
+rb_grn_array_pull (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *table;
+    VALUE options;
+    VALUE rb_block_p;
+    YieldRecordCallbackData data;
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
+
+    rb_grn_scan_options(options,
+			&quot;block?&quot;, &amp;rb_block_p,
+			NULL);
+
+    if (!rb_block_given_p()) {
+	rb_raise(rb_eArgError,
+                 &quot;tried to call Groonga::Array#pull without a block&quot;);
+    }
+
+    table = SELF(self, &amp;context);
+
+    if (NIL_P(rb_block_p)) {
+        rb_block_p = Qtrue;
+    }
+
+    data.self = self;
+    data.record = Qnil;
+    data.status = 0;
+    grn_array_pull(context, (grn_array *)table, RVAL2CBOOL(rb_block_p),
+                   yield_record_callback, &amp;data);
+    if (data.status != 0) {
+	rb_jump_tag(data.status);
+    }
+    rb_grn_context_check(context, self);
+
+    return data.record;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="push-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span> or nil</tt>) <strong>push</strong> {|record| ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Pushes a record to the array. The record should be filled in the
+given block. The pushed record can be pulled by
+<span class='object_link'><a href="#pull-instance_method" title="Groonga::Array#pull (method)">#pull</a></span>.</p>
+<p>The record that is passed to the given block may be nil. You need
+to handle the case. For example, just ignoring it or reports an
+error.</p>
+<p>If an error is occurred in the given block, the pushed record may
+not be filled completely. You should handle the case in pull side.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>A program that pushes a job without error handling</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_urls'>urls</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://groonga.org/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://ranguba.org/</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_urls'>urls</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='op'>|</span>
+  <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+    <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>A program that pulls a job without error handling</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_pull'>pull</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+    <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
+    <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span>
+  <span class='kw'>end</span>
+  <span class='comment'># Crawl URL
+</span><span class='kw'>end</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>A program that pushes a job with error handling</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_urls'>urls</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://groonga.org/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://ranguba.org/</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_urls'>urls</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='op'>|</span>
+  <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+    <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span> <span class='kw'>if</span> <span class='id identifier rubyid_record'>record</span> <span class='comment'># check record is not nil
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>A program that has an error in push block</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_urls'>urls</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://groonga.org/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://ranguba.org/</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_urls'>urls</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='op'>|</span>
+  <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+    <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_uri'>uri</span> <span class='comment'># Typo! It should be ur*l* not ur*i*
+</span>    <span class='comment'># record.url isn't set
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>A program that pulls a job with error handling</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_pull'>pull</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+    <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='comment'># record.url is nil!
+</span>    <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span>
+  <span class='kw'>end</span>
+  <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='comment'># Ignore an uncompleted added job
+</span>  <span class='comment'># Crawl URL
+</span><span class='kw'>end</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>A pushed record that is yielded.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>record</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Filles columns of a pushed record in the given block.</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>record</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span> or nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A pushed record. It is nil when pushing is failed.</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span> or nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A pushed record that is yielded.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-array.c', line 302</span>
+
+static VALUE
+rb_grn_array_push (VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *table;
+    YieldRecordCallbackData data;
+
+    if (!rb_block_given_p()) {
+	rb_raise(rb_eArgError,
+                 &quot;tried to call Groonga::Array#push without a block&quot;);
+    }
+
+    table = SELF(self, &amp;context);
+
+    data.self = self;
+    data.record = Qnil;
+    data.status = 0;
+    grn_array_push(context, (grn_array *)table, yield_record_callback, &amp;data);
+    if (data.status != 0) {
+	rb_jump_tag(data.status);
+    }
+    rb_grn_context_check(context, self);
+
+    return data.record;
 }</pre>
     </td>
   </tr>

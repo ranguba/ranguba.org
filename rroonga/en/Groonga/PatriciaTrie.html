@@ -14,9 +14,9 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabeticalalphabeticalalphabeticalalphabeticalalphabetical_index.html">Index (P)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (P)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">PatriciaTrie</span>
@@ -134,7 +134,7 @@
   
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">ext/groonga/rb-grn-patricia-trie.c<span class="defines">,<br />
-  lib/groonga/patricia-trie.rb,<br /> ext/groonga/rb-grn-patricia-trie.c,<br /> ext/groonga/rb-grn-patricia-trie.c</span>
+  lib/groonga/patricia-trie.rb,<br /> ext/groonga/rb-grn-patricia-trie.c</span>
 </dd>
   
 </dl>
@@ -482,7 +482,7 @@
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class='comment'>#無名一時テーブルを生成する。
+      <pre class="example code"><code><span class='comment'>#無名一時テーブルを生成する。
 </span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span>
 
 <span class='comment'>#無名永続テーブルを生成する。
@@ -522,7 +522,7 @@
 <span class='id identifier rubyid_terms'>terms</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                      <span class='symbol'>:default_tokenizer</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_terms'>terms</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='comma'>,</span>
-                          <span class='symbol'>:source</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks.comment</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre>
+                          <span class='symbol'>:source</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks.comment</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -549,6 +549,8 @@
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -767,6 +769,8 @@ can specify this by normalizer name as String such as
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'><p>The name and value
@@ -972,16 +976,6 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
 159
 160
 161
@@ -1049,10 +1043,25 @@ can specify this by normalizer name as String such as
 223
 224
 225
-226</pre>
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 149</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 159</span>
 
 static VALUE
 rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
@@ -1067,6 +1076,7 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
     VALUE rb_key_normalize, rb_key_with_sis, rb_key_type;
     VALUE rb_value_type;
     VALUE rb_default_tokenizer, rb_sub_records;
+    VALUE rb_normalizer;
 
     rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
 
@@ -1081,6 +1091,7 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
 			&quot;value_type&quot;, &amp;rb_value_type,
 			&quot;default_tokenizer&quot;, &amp;rb_default_tokenizer,
 			&quot;sub_records&quot;, &amp;rb_sub_records,
+			&quot;normalizer&quot;, &amp;rb_normalizer,
 			NULL);
 
     context = rb_grn_context_ensure(&amp;rb_context);
@@ -1126,6 +1137,9 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
     if (!NIL_P(rb_default_tokenizer))
 	rb_funcall(rb_table, rb_intern(&quot;default_tokenizer=&quot;), 1,
 		   rb_default_tokenizer);
+    if (!NIL_P(rb_normalizer))
+	rb_funcall(rb_table, rb_intern(&quot;normalizer=&quot;), 1,
+		   rb_normalizer);
 
     if (rb_block_given_p())
         return rb_ensure(rb_yield, rb_table, rb_grn_object_close, rb_table);
@@ -1189,6 +1203,8 @@ rb_grn_patricia_trie_s_create (int argc, VALUE *argv, VALUE klass)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -1308,6 +1324,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'><p>The name and value
@@ -1414,25 +1432,25 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-830
-831
-832
-833
-834
-835
-836
-837
-838
-839
-840
-841
-842
-843
-844
-845</pre>
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 830</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 845</span>
 
 static VALUE
 rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
@@ -1501,6 +1519,8 @@ rb_grn_patricia_trie_open_near_cursor (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -1660,6 +1680,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'><p>The name and value
@@ -1806,25 +1828,25 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624</pre>
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 609</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 624</span>
 
 static VALUE
 rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
@@ -1896,6 +1918,8 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -2024,6 +2048,8 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'><p>pairs. Omitted names are initialized as the default value.</p></div>
@@ -2139,25 +2165,25 @@ rb_grn_patricia_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-721
-722
-723
-724
-725
-726
-727
-728
-729
-730
-731
-732
-733
-734
-735
-736</pre>
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 721</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 736</span>
 
 static VALUE
 rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
@@ -2230,21 +2256,6 @@ rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-426
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440
 441
 442
 443
@@ -2257,10 +2268,25 @@ rb_grn_patricia_trie_open_rk_cursor (int argc, VALUE *argv, VALUE self)
 450
 451
 452
-453</pre>
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 426</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 441</span>
 
 static VALUE
 rb_grn_patricia_trie_prefix_search (VALUE self, VALUE rb_prefix)
@@ -2335,20 +2361,20 @@ rb_grn_patricia_trie_prefix_search (VALUE self, VALUE rb_prefix)
       <pre class="lines">
 
 
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471</pre>
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 461</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 476</span>
 
 static VALUE
 rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
@@ -2395,7 +2421,7 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class='id identifier rubyid_words'>words</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <pre class="example code"><code><span class='id identifier rubyid_words'>words</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                      <span class='symbol'>:key_normalize</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
 <span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>リンク</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_adventure_of_link'>adventure_of_link</span> <span class='op'>=</span> <span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>リンクの冒険</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
@@ -2414,7 +2440,7 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
 <span class='id identifier rubyid_words'>words</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='comment'># -&gt; [[muteki, &quot;muTEki&quot;, 0, 6],
 </span>  <span class='comment'>#     [adventure_of_link, &quot;リンクの冒険&quot;, 7, 18],
-</span>  <span class='comment'>#     [gaxtu, &quot;ガッ&quot;, 42, 6]]</span></pre>
+</span>  <span class='comment'>#     [gaxtu, &quot;ガッ&quot;, 42, 6]]</span></code></pre>
     
   </div>
 
@@ -2546,21 +2572,6 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
       <pre class="lines">
 
 
-357
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370
-371
 372
 373
 374
@@ -2605,10 +2616,25 @@ rb_grn_patricia_trie_register_key_with_sis_p (VALUE self)
 413
 414
 415
-416</pre>
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 357</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 372</span>
 
 static VALUE
 rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
@@ -2702,7 +2728,7 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
       
         <p class="example_title"><div class='inline'><p>複数のキーで検索し、結果を1つのテーブルに集める。</p></div></p>
       
-      <pre class="example code"><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='id identifier rubyid_keys'>keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>morita</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gunyara-kun</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yu</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='symbol'>:result</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
@@ -2710,7 +2736,7 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
 <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
   <span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span>
   <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span> <span class='comment'># -&gt; &quot;morita&quot;または&quot;gunyara-kun&quot;または&quot;yu&quot;
-</span><span class='kw'>end</span></pre>
+</span><span class='kw'>end</span></code></pre>
     
   </div>
 
@@ -2731,6 +2757,8 @@ rb_grn_patricia_trie_scan (VALUE self, VALUE rb_string)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
         &mdash;
@@ -2815,21 +2843,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
 285
 286
 287
@@ -2861,10 +2874,25 @@ pairs. Omitted names are initialized as the default value.</p></div>
 313
 314
 315
-316</pre>
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 270</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-patricia-trie.c', line 285</span>
 
 static VALUE
 rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
@@ -2943,7 +2971,7 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class='id identifier rubyid_include'>include</span> <span class='const'>ERB</span><span class='op'>::</span><span class='const'>Util</span>
+      <pre class="example code"><code><span class='id identifier rubyid_include'>include</span> <span class='const'>ERB</span><span class='op'>::</span><span class='const'>Util</span>
 <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_default_options'>default_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:encoding</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>utf-8</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
 <span class='id identifier rubyid_words'>words</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>PatriciaTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                      <span class='symbol'>:key_normalize</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -2960,7 +2988,7 @@ rb_grn_patricia_trie_search (int argc, VALUE *argv, VALUE self)
 <span class='comment'># =&gt;
 </span><span class='comment'># &quot;&lt;span class=\&quot;keyword\&quot;&gt;muTEki(muteki)&lt;/span&gt;\n&quot; +
 </span><span class='comment'># &quot; マッチしない &amp;lt;&amp;gt; &quot; +
-</span><span class='comment'># &quot;&lt;span class=\&quot;keyword\&quot;&gt;ガッ(ガッ)&lt;/span&gt;\n&quot;</span></pre>
+</span><span class='comment'># &quot;&lt;span class=\&quot;keyword\&quot;&gt;ガッ(ガッ)&lt;/span&gt;\n&quot;</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>

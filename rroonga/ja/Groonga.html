@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
@@ -14,9 +14,9 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="alphabetical_index.html">Index (G)</a> &raquo;
+    <a href="_index.html">Index (G)</a> &raquo;
     
     
     <span class="title">Groonga</span>
@@ -110,8 +110,8 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/groonga/view-record.rb<span class="defines">,<br />
-  lib/groonga/posting.rb,<br /> lib/groonga/index-column.rb,<br /> lib/groonga/expression-builder.rb,<br /> lib/groonga/record.rb,<br /> lib/groonga/dumper.rb,<br /> lib/groonga/database.rb,<br /> lib/groonga/expression-builder-19.rb,<br /> lib/groonga/query-logger.rb,<br /> lib/groonga/logger.rb,<br /> lib/groonga/patricia-trie.rb,<br /> lib/groonga/context.rb,<br /> lib/groonga/grntest-log.rb,<br /> lib/groonga/geo-point.rb,<br /> lib/groonga/pagination.rb,<br /> lib/groonga/command.rb,<br /> lib/groonga/schema.rb,<br /> lib/groonga.rb,<br /> ext/groonga/rb-groonga.c</span>
+    <dd class="r1 last">lib/groonga/database.rb<span class="defines">,<br />
+  lib/groonga/schema.rb,<br /> lib/groonga/geo-point.rb,<br /> lib/groonga/expression-builder-19.rb,<br /> lib/groonga/pagination.rb,<br /> lib/groonga/index-column.rb,<br /> lib/groonga/view-record.rb,<br /> lib/groonga/patricia-trie.rb,<br /> lib/groonga/grntest-log.rb,<br /> lib/groonga/command.rb,<br /> lib/groonga/dumper.rb,<br /> lib/groonga/posting.rb,<br /> lib/groonga/query-logger.rb,<br /> lib/groonga/context.rb,<br /> lib/groonga/record.rb,<br /> lib/groonga/expression-builder.rb,<br /> lib/groonga/logger.rb,<br /> lib/groonga.rb,<br /> ext/groonga/rb-groonga.c</span>
 </dd>
   
 </dl>
@@ -144,42 +144,6 @@
   <h2>Constant Summary</h2>
   
     <dl class="constants">
-      
-        <dt id="Operation-constant" class="deprecated">Operation =
-          <div class="docstring">
-  <div class="discussion">
-    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
-<p>後方互換性のために残してあります。</p>
-</div></div>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-        </dt>
-        <dd><pre class="code"><span class='id identifier rubyid_rb_mGrnOperator'>rb_mGrnOperator</span></pre></dd>
-      
-        <dt id="ObjectClosed-constant" class="deprecated">ObjectClosed =
-          <div class="docstring">
-  <div class="discussion">
-    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
-<p>Use <span class='object_link'><a href="Groonga/Closed.html" title="Groonga::Closed (class)">Closed</a></span> instead since 1.2.3.</p>
-</div></div>
-
-<p>groongaレベルでは破棄されているが、Rubyレベルでは生き ているオブジェクトにアクセスすると発生する。</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-        </dt>
-        <dd><pre class="code"><span class='id identifier rubyid_rb_eGrnClosed'>rb_eGrnClosed</span></pre></dd>
       
         <dt id="VERSION-constant" class="">VERSION =
           <div class="docstring">
@@ -228,6 +192,42 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='id identifier rubyid_bindings_version'>bindings_version</span></pre></dd>
+      
+        <dt id="ObjectClosed-constant" class="deprecated">ObjectClosed =
+          <div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>Use <span class='object_link'><a href="Groonga/Closed.html" title="Groonga::Closed (class)">Closed</a></span> instead since 1.2.3.</p>
+</div></div>
+
+<p>groongaレベルでは破棄されているが、Rubyレベルでは生き ているオブジェクトにアクセスすると発生する。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_eGrnClosed'>rb_eGrnClosed</span></pre></dd>
+      
+        <dt id="Operation-constant" class="deprecated">Operation =
+          <div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>後方互換性のために残してあります。</p>
+</div></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_mGrnOperator'>rb_mGrnOperator</span></pre></dd>
       
     </dl>
   
@@ -288,8 +288,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>BINDINGS_VERSIONを“.”で結合して<tt>&quot;メジャーバージョン.マ
-イナーバージョン.マイクロバージョン&quot;</tt>という形式の文 字列にしたもの。.</p>
+<p>BINDINGS_VERSIONを“.”で結合して“メジャーバージョン.マ イナーバージョン.マイクロバージョン”という形式の文 字列にしたもの。.</p>
 </div></span>
   
 </li>
@@ -313,8 +312,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>BUILD_VERSIONを“.”で結合して<tt>&quot;メジャーバージョン.マ
-イナーバージョン.マイクロバージョン&quot;</tt>という形式の 文字列にしたもの。.</p>
+<p>BUILD_VERSIONを“.”で結合して“メジャーバージョン.マ イナーバージョン.マイクロバージョン”という形式の 文字列にしたもの。.</p>
 </div></span>
   
 </li>
@@ -338,7 +336,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>VERSIONを“.”で結合して、<tt>”メジャーバージョン.マイナーバージョン.マイクロバージョン”</tt>という形式の文字列にしたもの。もしVERSIONにタグが含まれる場合、<tt>”メジャーバージョン.マイナーバージョン.マイクロバージョン-タグ”</tt>という形式の文字列になる。.</p>
+<p>VERSIONを“.”で結合して、”メジャーバージョン.マイナーバージョン.マイクロバージョン”という形式の文字列にしたもの。もしVERSIONにタグが含まれる場合、”メジャーバージョン.マイナーバージョン.マイクロバージョン-タグ”という形式の文字列になる。.</p>
 </div></span>
   
 </li>
@@ -367,7 +365,7 @@
     
 <p>call-seq:</p>
 
-<pre class="code ruby"><code>Groonga[name] -&gt; Groonga::Object or nil
+<pre class="code ruby"><code class="ruby">Groonga[name] -&gt; Groonga::Object or nil
 Groonga[id]   -&gt; Groonga::Object or nil</code></pre>
 
 <p><a href="http://name">便利メソッド。Groonga::Context.default</a>と同じ。</p>
@@ -567,9 +565,9 @@ Groonga[id]   -&gt; Groonga::Object or nil</code></pre>
 </div>
 
     <div id="footer">
-  Generated on Tue Jan 29 16:06:03 2013 by
+  Generated on Wed May  1 17:23:02 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.6.1 (ruby-1.9.3).
 </div>
 
   

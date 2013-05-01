@@ -14,9 +14,9 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabeticalalphabeticalalphabeticalalphabeticalalphabetical_index.html">Index (I)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (I)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">IndexCursor</span>
@@ -131,9 +131,7 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">ext/groonga/rb-grn-index-cursor.c<span class="defines">,<br />
-  ext/groonga/rb-grn-index-cursor.c</span>
-</dd>
+    <dd class="r1 last">ext/groonga/rb-grn-index-cursor.c</dd>
   
 </dl>
 <div class="clear"></div>
@@ -233,55 +231,78 @@
       <pre class="lines">
 
 
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
 94
 95
 96
-97</pre>
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-cursor.c', line 76</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-cursor.c', line 94</span>
 
-<span class='rubyid_static identifier id'>static</span> <span class='rubyid_VALUE constant id'>VALUE</span>
-<span class='rubyid_rb_grn_index_cursor_each identifier id'>rb_grn_index_cursor_each</span> <span class='lparen token'>(</span><span class='rubyid_VALUE constant id'>VALUE</span> <span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span>
-<span class='lbrace token'>{</span>
-    <span class='rubyid_grn_obj identifier id'>grn_obj</span> <span class='mult op'>*</span><span class='rubyid_cursor identifier id'>cursor</span><span class='semicolon token'>;</span>
-    <span class='rubyid_grn_ctx identifier id'>grn_ctx</span> <span class='mult op'>*</span><span class='rubyid_context identifier id'>context</span><span class='semicolon token'>;</span>
+static VALUE
+rb_grn_index_cursor_each (VALUE self)
+{
+    grn_obj *cursor;
+    grn_ctx *context;
+    VALUE rb_table;
+    VALUE rb_lexicon;
 
-    <span class='rubyid_RETURN_ENUMERATOR constant id'>RETURN_ENUMERATOR</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='comma token'>,</span> <span class='rubyid_NULL constant id'>NULL</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+    RETURN_ENUMERATOR(self, 0, NULL);
 
-    <span class='rubyid_rb_grn_index_cursor_deconstruct identifier id'>rb_grn_index_cursor_deconstruct</span><span class='lparen token'>(</span><span class='rubyid_SELF constant id'>SELF</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_cursor identifier id'>cursor</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_context identifier id'>context</span><span class='comma token'>,</span>
-            <span class='rubyid_NULL constant id'>NULL</span><span class='comma token'>,</span> <span class='rubyid_NULL constant id'>NULL</span><span class='comma token'>,</span> <span class='rubyid_NULL constant id'>NULL</span><span class='comma token'>,</span> <span class='rubyid_NULL constant id'>NULL</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+    rb_grn_index_cursor_deconstruct(SELF(self), &amp;cursor, &amp;context,
+				    NULL, NULL, NULL, NULL);
 
-    <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_context identifier id'>context</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_cursor identifier id'>cursor</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
-  <span class='rubyid_grn_posting identifier id'>grn_posting</span> <span class='mult op'>*</span><span class='rubyid_posting identifier id'>posting</span><span class='semicolon token'>;</span>
-  <span class='rubyid_grn_id identifier id'>grn_id</span> <span class='rubyid_tid identifier id'>tid</span><span class='semicolon token'>;</span>
+    if (!context) {
+	return Qnil;
+    }
 
-  <span class='rubyid_while while kw'>while</span> <span class='lparen token'>(</span><span class='lparen token'>(</span><span class='rubyid_posting identifier id'>posting</span> <span class='assign token'>=</span> <span class='rubyid_grn_index_cursor_next identifier id'>grn_index_cursor_next</span><span class='lparen token'>(</span><span class='rubyid_context identifier id'>context</span><span class='comma token'>,</span> <span class='rubyid_cursor identifier id'>cursor</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_tid identifier id'>tid</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
-      <span class='rubyid_rb_yield identifier id'>rb_yield</span><span class='lparen token'>(</span><span class='rubyid_rb_grn_posting_new identifier id'>rb_grn_posting_new</span><span class='lparen token'>(</span><span class='rubyid_posting identifier id'>posting</span><span class='comma token'>,</span> <span class='rubyid_tid identifier id'>tid</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
-  <span class='rbrace token'>}</span>
-    <span class='rbrace token'>}</span>
+    if (!cursor) {
+	return Qnil;
+    }
 
-    <span class='rubyid_return return kw'>return</span> <span class='rubyid_Qnil constant id'>Qnil</span><span class='semicolon token'>;</span>
-<span class='rbrace token'>}</span>
-</pre>
+    rb_table = rb_iv_get(self, &quot;@table&quot;);
+    rb_lexicon = rb_iv_get(self, &quot;@lexicon&quot;);
+    while (GRN_TRUE) {
+	VALUE rb_posting;
+	rb_posting = next_value(context, cursor, rb_table, rb_lexicon);
+	if (NIL_P(rb_posting)) {
+	    break;
+	}
+	rb_yield(rb_posting);
+    }
+
+    return Qnil;
+}</pre>
     </td>
   </tr>
 </table>
@@ -302,59 +323,50 @@
       <pre class="lines">
 
 
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
 73
-74</pre>
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-cursor.c', line 51</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-cursor.c', line 73</span>
 
-<span class='rubyid_static identifier id'>static</span> <span class='rubyid_VALUE constant id'>VALUE</span>
-<span class='rubyid_rb_grn_index_cursor_next identifier id'>rb_grn_index_cursor_next</span> <span class='lparen token'>(</span><span class='rubyid_VALUE constant id'>VALUE</span> <span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span>
-<span class='lbrace token'>{</span>
-    <span class='rubyid_VALUE constant id'>VALUE</span> <span class='rubyid_rb_posting identifier id'>rb_posting</span> <span class='assign token'>=</span> <span class='rubyid_Qnil constant id'>Qnil</span><span class='semicolon token'>;</span>
-    <span class='rubyid_grn_obj identifier id'>grn_obj</span> <span class='mult op'>*</span><span class='rubyid_cursor identifier id'>cursor</span><span class='semicolon token'>;</span>
-    <span class='rubyid_grn_ctx identifier id'>grn_ctx</span> <span class='mult op'>*</span><span class='rubyid_context identifier id'>context</span><span class='semicolon token'>;</span>
+static VALUE
+rb_grn_index_cursor_next (VALUE self)
+{
+    VALUE rb_posting = Qnil;
+    grn_obj *cursor;
+    grn_ctx *context;
 
-    <span class='rubyid_rb_grn_index_cursor_deconstruct identifier id'>rb_grn_index_cursor_deconstruct</span><span class='lparen token'>(</span><span class='rubyid_SELF constant id'>SELF</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_cursor identifier id'>cursor</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_context identifier id'>context</span><span class='comma token'>,</span>
-            <span class='rubyid_NULL constant id'>NULL</span><span class='comma token'>,</span> <span class='rubyid_NULL constant id'>NULL</span><span class='comma token'>,</span> <span class='rubyid_NULL constant id'>NULL</span><span class='comma token'>,</span> <span class='rubyid_NULL constant id'>NULL</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
+    rb_grn_index_cursor_deconstruct(SELF(self), &amp;cursor, &amp;context,
+				    NULL, NULL, NULL, NULL);
+    if (context &amp;&amp; cursor) {
+	VALUE rb_table;
+	VALUE rb_lexicon;
+	rb_table = rb_iv_get(self, &quot;@table&quot;);
+	rb_lexicon = rb_iv_get(self, &quot;@lexicon&quot;);
+	rb_posting = next_value(context, cursor, rb_table, rb_lexicon);
+    }
 
-    <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_context identifier id'>context</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_cursor identifier id'>cursor</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
-  <span class='rubyid_grn_posting identifier id'>grn_posting</span> <span class='mult op'>*</span><span class='rubyid_posting identifier id'>posting</span><span class='semicolon token'>;</span>
-  <span class='rubyid_grn_id identifier id'>grn_id</span> <span class='rubyid_tid identifier id'>tid</span><span class='semicolon token'>;</span>
+    return rb_posting;
 
-  <span class='rubyid_posting identifier id'>posting</span> <span class='assign token'>=</span> <span class='rubyid_grn_index_cursor_next identifier id'>grn_index_cursor_next</span><span class='lparen token'>(</span><span class='rubyid_context identifier id'>context</span><span class='comma token'>,</span> <span class='rubyid_cursor identifier id'>cursor</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_tid identifier id'>tid</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
-
-  <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_posting identifier id'>posting</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
-      <span class='rubyid_rb_posting identifier id'>rb_posting</span> <span class='assign token'>=</span> <span class='rubyid_rb_grn_posting_new identifier id'>rb_grn_posting_new</span><span class='lparen token'>(</span><span class='rubyid_posting identifier id'>posting</span><span class='comma token'>,</span> <span class='rubyid_tid identifier id'>tid</span><span class='rparen token'>)</span><span class='semicolon token'>;</span>
-  <span class='rbrace token'>}</span>
-    <span class='rbrace token'>}</span>
-
-    <span class='rubyid_return return kw'>return</span> <span class='rubyid_rb_posting identifier id'>rb_posting</span><span class='semicolon token'>;</span>
-
-<span class='rbrace token'>}</span>
-</pre>
+}</pre>
     </td>
   </tr>
 </table>

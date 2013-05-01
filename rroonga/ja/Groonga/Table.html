@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
@@ -14,9 +14,9 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (T)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (T)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Table</span>
@@ -811,7 +811,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_column_value-instance_method" title="#set_column_value (instance method)">- (Object) <strong>set_column_value</strong> </a>
+      <a href="#set_column_value-instance_method" title="#set_column_value (instance method)">- (void) <strong>set_column_value</strong> </a>
     
 
     
@@ -826,8 +826,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p><em>table</em> の <em>id</em> に対応するカラム <em>name</em> の値として <em>value</em>
-設定す る。既存の値は上書きされる。.</p>
+<p>Sets @value@ as the value of column @name@ of the record that has @id@ ID.</p>
 </div></span>
   
 </li>
@@ -1181,9 +1180,9 @@ VALUE
 rb_grn_table_array_reference (VALUE self, VALUE rb_id)
 {
     if (FIXNUM_P(rb_id)) {
-	return rb_grn_record_new_raw(self, rb_id, Qnil);
+        return rb_grn_record_new_raw(self, rb_id, Qnil);
     } else {
-	return Qnil;
+        return Qnil;
     }
 }</pre>
     </td>
@@ -1228,6 +1227,8 @@ rb_grn_table_array_reference (VALUE self, VALUE rb_id)
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -1271,35 +1272,35 @@ rb_grn_table_array_reference (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
-1706
-1707
-1708
-1709
-1710
-1711
-1712
-1713
-1714
-1715
-1716
-1717
-1718
-1719
-1720
-1721
-1722
-1723
-1724
-1725
-1726
-1727
-1728
-1729
-1730
-1731</pre>
+1853
+1854
+1855
+1856
+1857
+1858
+1859
+1860
+1861
+1862
+1863
+1864
+1865
+1866
+1867
+1868
+1869
+1870
+1871
+1872
+1873
+1874
+1875
+1876
+1877
+1878</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1706</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1853</span>
 
 static VALUE
 rb_grn_table_clear_lock (int argc, VALUE *argv, VALUE self)
@@ -1312,16 +1313,16 @@ rb_grn_table_clear_lock (int argc, VALUE *argv, VALUE self)
     rb_scan_args(argc, argv, &quot;01&quot;,  &amp;options);
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
 
     rb_grn_scan_options(options,
-			&quot;id&quot;, &amp;rb_id,
-			NULL);
+                        &quot;id&quot;, &amp;rb_id,
+                        NULL);
 
     if (!NIL_P(rb_id))
-	id = NUM2UINT(rb_id);
+        id = NUM2UINT(rb_id);
 
     grn_obj_clear_lock(context, table);
 
@@ -1461,46 +1462,46 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
     long i, n;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     &amp;columns);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             &amp;columns);
 
     ruby_object_to_column_name(rb_name, &amp;name, &amp;name_size);
     raw_columns = RARRAY_PTR(columns);
     n = RARRAY_LEN(columns);
     for (i = 0; i &lt; n; i++) {
-	VALUE rb_column = raw_columns[i];
-	RbGrnNamedObject *rb_grn_named_object;
+        VALUE rb_column = raw_columns[i];
+        RbGrnNamedObject *rb_grn_named_object;
 
-	rb_grn_named_object = RB_GRN_NAMED_OBJECT(DATA_PTR(rb_column));
-	if (name_size == rb_grn_named_object-&gt;name_size &amp;&amp;
-	    memcmp(name, rb_grn_named_object-&gt;name, name_size) == 0) {
-	    return rb_column;
-	}
+        rb_grn_named_object = RB_GRN_NAMED_OBJECT(DATA_PTR(rb_column));
+        if (name_size == rb_grn_named_object-&gt;name_size &amp;&amp;
+            memcmp(name, rb_grn_named_object-&gt;name, name_size) == 0) {
+            return rb_column;
+        }
     }
 
     column = grn_obj_column(context, table, name, name_size);
     rb_grn_context_check(context, self);
     if (!column)
-	return Qnil;
+        return Qnil;
 
     user_data = grn_obj_user_data(context, column);
     if (user_data) {
-	RbGrnObject *rb_grn_object;
-	rb_grn_object = user_data-&gt;ptr;
-	if (rb_grn_object) {
-	    rb_ary_push(columns, rb_grn_object-&gt;self);
-	    return rb_grn_object-&gt;self;
-	}
+        RbGrnObject *rb_grn_object;
+        rb_grn_object = user_data-&gt;ptr;
+        if (rb_grn_object) {
+            rb_ary_push(columns, rb_grn_object-&gt;self);
+            return rb_grn_object-&gt;self;
+        }
     }
 
     owner = column-&gt;header.type == GRN_ACCESSOR;
     rb_column = GRNCOLUMN2RVAL(Qnil, context, column, owner);
     if (owner) {
-	rb_iv_set(rb_column, &quot;table&quot;, self);
+        rb_iv_set(rb_column, &quot;table&quot;, self);
     }
     rb_grn_named_object_set_name(RB_GRN_NAMED_OBJECT(DATA_PTR(rb_column)),
-				 name, name_size);
+                                 name, name_size);
 
     return rb_column;
 }</pre>
@@ -1636,17 +1637,17 @@ rb_grn_table_get_column_value_convenience (int argc, VALUE *argv, VALUE self)
 
     rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_id, &amp;rb_name, &amp;rb_options);
     if (!NIL_P(rb_options)) {
-	VALUE rb_option_id;
-	rb_grn_scan_options(rb_options,
-			    &quot;id&quot;, &amp;rb_option_id,
-			    NULL);
-	if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
-	    rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
-		     rb_grn_inspect(rb_option_id),
-		     rb_grn_inspect(rb_ary_new3(2,
-						self,
-						rb_ary_new4(argc, argv))));
-	}
+        VALUE rb_option_id;
+        rb_grn_scan_options(rb_options,
+                            &quot;id&quot;, &amp;rb_option_id,
+                            NULL);
+        if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
+            rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
+                     rb_grn_inspect(rb_option_id),
+                     rb_grn_inspect(rb_ary_new3(2,
+                                                self,
+                                                rb_ary_new4(argc, argv))));
+        }
     }
 
     return rb_grn_table_get_column_value(self, rb_id, rb_name);
@@ -1793,55 +1794,55 @@ rb_grn_table_get_columns (int argc, VALUE *argv, VALUE self)
     VALUE exception;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
 
     rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_name);
 
     if (!NIL_P(rb_name)) {
-	name = StringValuePtr(rb_name);
-	name_size = RSTRING_LEN(rb_name);
+        name = StringValuePtr(rb_name);
+        name_size = RSTRING_LEN(rb_name);
     }
 
     columns = grn_table_create(context, NULL, 0, NULL, GRN_TABLE_HASH_KEY,
-			       NULL, 0);
+                               NULL, 0);
     n = grn_table_columns(context, table, name, name_size, columns);
     rb_grn_context_check(context, self);
 
     rb_columns = rb_ary_new2(n);
     if (n == 0) {
-	grn_obj_unlink(context, columns);
-	return rb_columns;
+        grn_obj_unlink(context, columns);
+        return rb_columns;
     }
 
     cursor = grn_table_cursor_open(context, columns, NULL, 0, NULL, 0,
-				   0, -1, GRN_CURSOR_ASCENDING);
+                                   0, -1, GRN_CURSOR_ASCENDING);
     rb_grn_context_check(context, self);
     while (grn_table_cursor_next(context, cursor) != GRN_ID_NIL) {
-	void *key;
-	grn_id *column_id;
-	grn_obj *column;
-	VALUE rb_column;
+        void *key;
+        grn_id *column_id;
+        grn_obj *column;
+        VALUE rb_column;
 
-	grn_table_cursor_get_key(context, cursor, &amp;key);
-	column_id = key;
-	column = grn_ctx_at(context, *column_id);
-	exception = rb_grn_context_to_exception(context, self);
-	if (!NIL_P(exception)) {
-	    grn_table_cursor_close(context, cursor);
-	    grn_obj_unlink(context, columns);
-	    rb_exc_raise(exception);
-	}
+        grn_table_cursor_get_key(context, cursor, &amp;key);
+        column_id = key;
+        column = grn_ctx_at(context, *column_id);
+        exception = rb_grn_context_to_exception(context, self);
+        if (!NIL_P(exception)) {
+            grn_table_cursor_close(context, cursor);
+            grn_obj_unlink(context, columns);
+            rb_exc_raise(exception);
+        }
 
-	rb_column = GRNOBJECT2RVAL(Qnil, context, column, GRN_FALSE);
-	rb_ary_push(rb_columns, rb_column);
+        rb_column = GRNOBJECT2RVAL(Qnil, context, column, GRN_FALSE);
+        rb_ary_push(rb_columns, rb_column);
     }
     rc = grn_table_cursor_close(context, cursor);
     grn_obj_unlink(context, columns);
     if (rc != GRN_SUCCESS) {
-	rb_grn_context_check(context, self);
-	rb_grn_rc_check(rc, self);
+        rb_grn_context_check(context, self);
+        rb_grn_rc_check(rc, self);
     }
 
     return rb_columns;
@@ -1887,6 +1888,8 @@ rb_grn_table_get_columns (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -2108,9 +2111,9 @@ rb_grn_table_define_column (int argc, VALUE *argv, VALUE self)
     VALUE rb_column;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     &amp;columns);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             &amp;columns);
 
     rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_name, &amp;rb_value_type, &amp;options);
 
@@ -2118,64 +2121,64 @@ rb_grn_table_define_column (int argc, VALUE *argv, VALUE self)
     name_size = RSTRING_LEN(rb_name);
 
     rb_grn_scan_options(options,
-			&quot;path&quot;, &amp;rb_path,
-			&quot;persistent&quot;, &amp;rb_persistent,
-			&quot;type&quot;, &amp;rb_type,
-			&quot;compress&quot;, &amp;rb_compress,
-			NULL);
+                        &quot;path&quot;, &amp;rb_path,
+                        &quot;persistent&quot;, &amp;rb_persistent,
+                        &quot;type&quot;, &amp;rb_type,
+                        &quot;compress&quot;, &amp;rb_compress,
+                        NULL);
 
     value_type = RVAL2GRNOBJECT(rb_value_type, &amp;context);
 
     if ((NIL_P(rb_persistent) &amp;&amp; grn_obj_path(context, table)) ||
-	RVAL2CBOOL(rb_persistent)) {
-	flags |= GRN_OBJ_PERSISTENT;
+        RVAL2CBOOL(rb_persistent)) {
+        flags |= GRN_OBJ_PERSISTENT;
     }
 
     if (!NIL_P(rb_path)) {
-	path = StringValueCStr(rb_path);
-	if ((flags &amp; GRN_OBJ_PERSISTENT) != GRN_OBJ_PERSISTENT) {
-	    rb_raise(rb_eArgError,
-		     &quot;should not pass :path if :persistent is false: &lt;%s&gt;&quot;,
-		     path);
-	}
-	flags |= GRN_OBJ_PERSISTENT;
+        path = StringValueCStr(rb_path);
+        if ((flags &amp; GRN_OBJ_PERSISTENT) != GRN_OBJ_PERSISTENT) {
+            rb_raise(rb_eArgError,
+                     &quot;should not pass :path if :persistent is false: &lt;%s&gt;&quot;,
+                     path);
+        }
+        flags |= GRN_OBJ_PERSISTENT;
     }
 
     if (NIL_P(rb_type) ||
-	(rb_grn_equal_option(rb_type, &quot;scalar&quot;))) {
-	flags |= GRN_OBJ_COLUMN_SCALAR;
+        (rb_grn_equal_option(rb_type, &quot;scalar&quot;))) {
+        flags |= GRN_OBJ_COLUMN_SCALAR;
     } else if (rb_grn_equal_option(rb_type, &quot;vector&quot;)) {
-	flags |= GRN_OBJ_COLUMN_VECTOR;
+        flags |= GRN_OBJ_COLUMN_VECTOR;
     } else {
-	rb_raise(rb_eArgError,
-		 &quot;invalid column type: %s: &quot;
-		 &quot;available types: [:scalar, :vector, nil]&quot;,
-		 rb_grn_inspect(rb_type));
+        rb_raise(rb_eArgError,
+                 &quot;invalid column type: %s: &quot;
+                 &quot;available types: [:scalar, :vector, nil]&quot;,
+                 rb_grn_inspect(rb_type));
     }
 
     if (NIL_P(rb_compress)) {
     } else if (rb_grn_equal_option(rb_compress, &quot;zlib&quot;)) {
-	flags |= GRN_OBJ_COMPRESS_ZLIB;
+        flags |= GRN_OBJ_COMPRESS_ZLIB;
     } else if (rb_grn_equal_option(rb_compress, &quot;lzo&quot;)) {
-	flags |= GRN_OBJ_COMPRESS_LZO;
+        flags |= GRN_OBJ_COMPRESS_LZO;
     } else {
-	rb_raise(rb_eArgError,
-		 &quot;invalid compress type: %s: &quot;
-		 &quot;available types: [:zlib, :lzo, nil]&quot;,
-		 rb_grn_inspect(rb_compress));
+        rb_raise(rb_eArgError,
+                 &quot;invalid compress type: %s: &quot;
+                 &quot;available types: [:zlib, :lzo, nil]&quot;,
+                 rb_grn_inspect(rb_compress));
     }
 
     column = grn_column_create(context, table, name, name_size,
-			       path, flags, value_type);
+                               path, flags, value_type);
     if (context-&gt;rc) {
-	rb_grn_context_check(context,
-			     rb_ary_new3(2, self, rb_ary_new4(argc, argv)));
+        rb_grn_context_check(context,
+                             rb_ary_new3(2, self, rb_ary_new4(argc, argv)));
     }
 
     rb_column = GRNCOLUMN2RVAL(Qnil, context, column, GRN_TRUE);
     rb_ary_push(columns, rb_column);
     rb_grn_named_object_set_name(RB_GRN_NAMED_OBJECT(DATA_PTR(rb_column)),
-				 name, name_size);
+                                 name, name_size);
 
     return rb_column;
 }</pre>
@@ -2221,6 +2224,8 @@ rb_grn_table_define_column (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -2484,9 +2489,9 @@ rb_grn_table_define_index_column (int argc, VALUE *argv, VALUE self)
     VALUE columns;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     &amp;columns);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             &amp;columns);
 
     rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_name, &amp;rb_value_type, &amp;options);
 
@@ -2494,78 +2499,78 @@ rb_grn_table_define_index_column (int argc, VALUE *argv, VALUE self)
     name_size = RSTRING_LEN(rb_name);
 
     rb_grn_scan_options(options,
-			&quot;path&quot;, &amp;rb_path,
-			&quot;persistent&quot;, &amp;rb_persistent,
-			&quot;with_section&quot;, &amp;rb_with_section,
-			&quot;with_weight&quot;, &amp;rb_with_weight,
-			&quot;with_position&quot;, &amp;rb_with_position,
-			&quot;source&quot;, &amp;rb_source,
-			&quot;sources&quot;, &amp;rb_sources,
-			NULL);
+                        &quot;path&quot;, &amp;rb_path,
+                        &quot;persistent&quot;, &amp;rb_persistent,
+                        &quot;with_section&quot;, &amp;rb_with_section,
+                        &quot;with_weight&quot;, &amp;rb_with_weight,
+                        &quot;with_position&quot;, &amp;rb_with_position,
+                        &quot;source&quot;, &amp;rb_source,
+                        &quot;sources&quot;, &amp;rb_sources,
+                        NULL);
 
     value_type = RVAL2GRNOBJECT(rb_value_type, &amp;context);
 
     if ((NIL_P(rb_persistent) &amp;&amp; grn_obj_path(context, table)) ||
-	RVAL2CBOOL(rb_persistent)) {
-	flags |= GRN_OBJ_PERSISTENT;
+        RVAL2CBOOL(rb_persistent)) {
+        flags |= GRN_OBJ_PERSISTENT;
     }
 
     if (!NIL_P(rb_path)) {
-	path = StringValueCStr(rb_path);
-	if ((flags &amp; GRN_OBJ_PERSISTENT) != GRN_OBJ_PERSISTENT) {
-	    rb_raise(rb_eArgError,
-		     &quot;should not pass :path if :persistent is false: &lt;%s&gt;&quot;,
-		     path);
-	}
-	flags |= GRN_OBJ_PERSISTENT;
+        path = StringValueCStr(rb_path);
+        if ((flags &amp; GRN_OBJ_PERSISTENT) != GRN_OBJ_PERSISTENT) {
+            rb_raise(rb_eArgError,
+                     &quot;should not pass :path if :persistent is false: &lt;%s&gt;&quot;,
+                     path);
+        }
+        flags |= GRN_OBJ_PERSISTENT;
     }
 
     if (NIL_P(rb_with_section)) {
-	if (TYPE(rb_sources) == T_ARRAY &amp;&amp; RARRAY_LEN(rb_sources) &gt; 1) {
-	    flags |= GRN_OBJ_WITH_SECTION;
-	}
+        if (TYPE(rb_sources) == T_ARRAY &amp;&amp; RARRAY_LEN(rb_sources) &gt; 1) {
+            flags |= GRN_OBJ_WITH_SECTION;
+        }
     } else if (RVAL2CBOOL(rb_with_section)) {
-	flags |= GRN_OBJ_WITH_SECTION;
+        flags |= GRN_OBJ_WITH_SECTION;
     }
 
 
     if (RVAL2CBOOL(rb_with_weight))
-	flags |= GRN_OBJ_WITH_WEIGHT;
+        flags |= GRN_OBJ_WITH_WEIGHT;
 
     if (NIL_P(rb_with_position) &amp;&amp;
-	(table-&gt;header.type == GRN_TABLE_HASH_KEY ||
-	 table-&gt;header.type == GRN_TABLE_PAT_KEY)) {
-	grn_obj *tokenizer;
+        (table-&gt;header.type == GRN_TABLE_HASH_KEY ||
+         table-&gt;header.type == GRN_TABLE_PAT_KEY)) {
+        grn_obj *tokenizer;
 
-	tokenizer = grn_obj_get_info(context, table,
-				     GRN_INFO_DEFAULT_TOKENIZER,
-				     NULL);
-	if (tokenizer &amp;&amp; n_gram_tokenizer_p(context, tokenizer)) {
-	    rb_with_position = Qtrue;
-	}
+        tokenizer = grn_obj_get_info(context, table,
+                                     GRN_INFO_DEFAULT_TOKENIZER,
+                                     NULL);
+        if (tokenizer &amp;&amp; n_gram_tokenizer_p(context, tokenizer)) {
+            rb_with_position = Qtrue;
+        }
     }
     if (RVAL2CBOOL(rb_with_position))
-	flags |= GRN_OBJ_WITH_POSITION;
+        flags |= GRN_OBJ_WITH_POSITION;
 
     if (!NIL_P(rb_source) &amp;&amp; !NIL_P(rb_sources))
-	rb_raise(rb_eArgError, &quot;should not pass both of :source and :sources.&quot;);
+        rb_raise(rb_eArgError, &quot;should not pass both of :source and :sources.&quot;);
 
     column = grn_column_create(context, table, name, name_size,
-			       path, flags, value_type);
+                               path, flags, value_type);
     if (context-&gt;rc) {
-	rb_grn_context_check(context,
-			     rb_ary_new3(2, self, rb_ary_new4(argc, argv)));
+        rb_grn_context_check(context,
+                             rb_ary_new3(2, self, rb_ary_new4(argc, argv)));
     }
 
     rb_column = GRNCOLUMN2RVAL(Qnil, context, column, GRN_TRUE);
     if (!NIL_P(rb_source))
-	rb_funcall(rb_column, rb_intern(&quot;source=&quot;), 1, rb_source);
+        rb_funcall(rb_column, rb_intern(&quot;source=&quot;), 1, rb_source);
     if (!NIL_P(rb_sources))
-	rb_funcall(rb_column, rb_intern(&quot;sources=&quot;), 1, rb_sources);
+        rb_funcall(rb_column, rb_intern(&quot;sources=&quot;), 1, rb_sources);
 
     rb_ary_push(columns, rb_column);
     rb_grn_named_object_set_name(RB_GRN_NAMED_OBJECT(DATA_PTR(rb_column)),
-				 name, name_size);
+                                 name, name_size);
 
     return rb_column;
 }</pre>
@@ -2610,6 +2615,8 @@ rb_grn_table_define_index_column (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -2692,35 +2699,35 @@ defraged.</p>
       <pre class="lines">
 
 
-2128
-2129
-2130
-2131
-2132
-2133
-2134
-2135
-2136
-2137
-2138
-2139
-2140
-2141
-2142
-2143
-2144
-2145
-2146
-2147
-2148
-2149
-2150
-2151
-2152
-2153</pre>
+2275
+2276
+2277
+2278
+2279
+2280
+2281
+2282
+2283
+2284
+2285
+2286
+2287
+2288
+2289
+2290
+2291
+2292
+2293
+2294
+2295
+2296
+2297
+2298
+2299
+2300</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2128</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2275</span>
 
 static VALUE
 rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
@@ -2733,16 +2740,16 @@ rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
 
     rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
     rb_grn_scan_options(options,
-			&quot;threshold&quot;, &amp;rb_threshold,
-			NULL);
+                        &quot;threshold&quot;, &amp;rb_threshold,
+                        NULL);
     if (!NIL_P(rb_threshold)) {
-	threshold = NUM2INT(rb_threshold);
+        threshold = NUM2INT(rb_threshold);
     }
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL, NULL,
-			     NULL, NULL,
-			     NULL);
+                             NULL, NULL, NULL,
+                             NULL, NULL,
+                             NULL);
     n_segments = grn_obj_defrag(context, table, threshold);
     rb_grn_context_check(context, self);
 
@@ -2853,9 +2860,9 @@ rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
 <p>Delete users that are younger than 20.</p>
 </div></p>
       
-      <pre class="example code"><span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_recod'>recod</span><span class='op'>|</span>
+      <pre class="example code"><code><span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_recod'>recod</span><span class='op'>|</span>
   <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_age'>age</span> <span class='op'>&lt;</span> <span class='int'>20</span>
-<span class='kw'>end</span></pre>
+<span class='kw'>end</span></code></pre>
     
   </div>
 
@@ -2973,9 +2980,9 @@ rb_grn_table_delete (int argc, VALUE *argv, VALUE self)
     rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_id);
 
     if (rb_block_given_p()) {
-	rb_grn_table_delete_by_expression(self);
+        rb_grn_table_delete_by_expression(self);
     } else {
-	rb_grn_table_delete_by_id(self, rb_id);
+        rb_grn_table_delete_by_id(self, rb_id);
     }
 
     return Qnil;
@@ -3035,14 +3042,14 @@ rb_grn_table_delete (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2044
-2045
-2046
-2047
-2048</pre>
+2191
+2192
+2193
+2194
+2195</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2044</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2191</span>
 
 static VALUE
 rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
@@ -3218,8 +3225,8 @@ rb_grn_table_each (int argc, VALUE *argv, VALUE self)
     rb_table = SELF(self);
     rb_grn_object = RB_GRN_OBJECT(rb_table);
     while (rb_grn_object-&gt;object &amp;&amp;
-	   (id = grn_table_cursor_next(context, cursor)) != GRN_ID_NIL) {
-	rb_yield(rb_grn_record_new(self, id, Qnil));
+           (id = grn_table_cursor_next(context, cursor)) != GRN_ID_NIL) {
+        rb_yield(rb_grn_record_new(self, id, Qnil));
     }
     rb_grn_object_close(rb_cursor);
 
@@ -3297,9 +3304,9 @@ rb_grn_table_empty_p (VALUE self)
     unsigned int size;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
     size = grn_table_size(context, table);
     return CBOOL2RVAL(size == 0);
 }</pre>
@@ -3352,21 +3359,21 @@ rb_grn_table_empty_p (VALUE self)
       <pre class="lines">
 
 
-2103
-2104
-2105
-2106
-2107
-2108
-2109
-2110
-2111
-2112
-2113
-2114</pre>
+2250
+2251
+2252
+2253
+2254
+2255
+2256
+2257
+2258
+2259
+2260
+2261</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2103</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2250</span>
 
 static VALUE
 rb_grn_table_exist_p (VALUE self, VALUE id)
@@ -3375,9 +3382,9 @@ rb_grn_table_exist_p (VALUE self, VALUE id)
     grn_obj *table;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
     return CBOOL2RVAL(grn_table_at(context, table, NUM2UINT(id)));
 }</pre>
     </td>
@@ -3585,71 +3592,71 @@ rb_grn_table_group (int argc, VALUE *argv, VALUE self)
     VALUE rb_results;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
 
     rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_keys, &amp;rb_options);
 
     if (TYPE(rb_keys) == T_ARRAY) {
-	n_keys = RARRAY_LEN(rb_keys);
-	rb_group_keys = RARRAY_PTR(rb_keys);
+        n_keys = RARRAY_LEN(rb_keys);
+        rb_group_keys = RARRAY_PTR(rb_keys);
     } else {
-	n_keys = 1;
-	rb_group_keys = &amp;rb_keys;
+        n_keys = 1;
+        rb_group_keys = &amp;rb_keys;
     }
 
     keys = ALLOCA_N(grn_table_sort_key, n_keys);
     for (i = 0; i &lt; n_keys; i++) {
-	VALUE rb_sort_options, rb_key;
+        VALUE rb_sort_options, rb_key;
 
-	if (RVAL2CBOOL(rb_obj_is_kind_of(rb_group_keys[i], rb_cHash))) {
-	    rb_sort_options = rb_group_keys[i];
-	} else {
-	    rb_sort_options = rb_hash_new();
-	    rb_hash_aset(rb_sort_options,
-			 RB_GRN_INTERN(&quot;key&quot;),
-			 rb_group_keys[i]);
-	}
-	rb_grn_scan_options(rb_sort_options,
-			    &quot;key&quot;, &amp;rb_key,
-			    NULL);
-	if (RVAL2CBOOL(rb_obj_is_kind_of(rb_key, rb_cString))) {
-	    VALUE resolved_rb_key;
-	    resolved_rb_key = rb_grn_table_get_column(self, rb_key);
-	    if (NIL_P(resolved_rb_key)) {
-		rb_raise(rb_eArgError,
-			 &quot;unknown group key: &lt;%s&gt;: &lt;%s&gt;&quot;,
-			 rb_grn_inspect(rb_key),
-			 rb_grn_inspect(self));
-	    }
-	    rb_key = resolved_rb_key;
-	}
-	keys[i].key = RVAL2GRNOBJECT(rb_key, &amp;context);
-	keys[i].flags = 0;
+        if (RVAL2CBOOL(rb_obj_is_kind_of(rb_group_keys[i], rb_cHash))) {
+            rb_sort_options = rb_group_keys[i];
+        } else {
+            rb_sort_options = rb_hash_new();
+            rb_hash_aset(rb_sort_options,
+                         RB_GRN_INTERN(&quot;key&quot;),
+                         rb_group_keys[i]);
+        }
+        rb_grn_scan_options(rb_sort_options,
+                            &quot;key&quot;, &amp;rb_key,
+                            NULL);
+        if (RVAL2CBOOL(rb_obj_is_kind_of(rb_key, rb_cString))) {
+            VALUE resolved_rb_key;
+            resolved_rb_key = rb_grn_table_get_column(self, rb_key);
+            if (NIL_P(resolved_rb_key)) {
+                rb_raise(rb_eArgError,
+                         &quot;unknown group key: &lt;%s&gt;: &lt;%s&gt;&quot;,
+                         rb_grn_inspect(rb_key),
+                         rb_grn_inspect(self));
+            }
+            rb_key = resolved_rb_key;
+        }
+        keys[i].key = RVAL2GRNOBJECT(rb_key, &amp;context);
+        keys[i].flags = 0;
     }
 
     n_results = n_keys;
     results = ALLOCA_N(grn_table_group_result, n_results);
     rb_results = rb_ary_new();
     for (i = 0; i &lt; n_results; i++) {
-	grn_obj *result;
-	grn_id range_id;
-	VALUE rb_result;
+        grn_obj *result;
+        grn_id range_id;
+        VALUE rb_result;
 
-	range_id = grn_obj_get_range(context, keys[i].key);
-	result = grn_table_create(context, NULL, 0, NULL,
-				  GRN_TABLE_HASH_KEY | GRN_OBJ_WITH_SUBREC,
-				  grn_ctx_at(context, range_id), 0);
-	results[i].table = result;
-	results[i].key_begin = 0;
-	results[i].key_end = 0;
-	results[i].limit = 0;
-	results[i].flags = 0;
-	results[i].op = GRN_OP_OR;
+        range_id = grn_obj_get_range(context, keys[i].key);
+        result = grn_table_create(context, NULL, 0, NULL,
+                                  GRN_TABLE_HASH_KEY | GRN_OBJ_WITH_SUBREC,
+                                  grn_ctx_at(context, range_id), 0);
+        results[i].table = result;
+        results[i].key_begin = 0;
+        results[i].key_end = 0;
+        results[i].limit = 0;
+        results[i].flags = 0;
+        results[i].op = GRN_OP_OR;
 
-	rb_result = GRNOBJECT2RVAL(Qnil, context, result, GRN_TRUE);
-	rb_ary_push(rb_results, rb_result);
+        rb_result = GRNOBJECT2RVAL(Qnil, context, result, GRN_TRUE);
+        rb_ary_push(rb_results, rb_result);
     }
 
     rc = grn_table_group(context, table, keys, n_keys, results, n_results);
@@ -3657,9 +3664,9 @@ rb_grn_table_group (int argc, VALUE *argv, VALUE self)
     rb_grn_rc_check(rc, self);
 
     if (n_results == 1)
-	return rb_ary_pop(rb_results);
+        return rb_ary_pop(rb_results);
     else
-	return rb_results;
+        return rb_results;
 }</pre>
     </td>
   </tr>
@@ -3744,17 +3751,17 @@ rb_grn_table_have_column (VALUE self, VALUE rb_name)
     unsigned name_size = 0;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
 
     ruby_object_to_column_name(rb_name, &amp;name, &amp;name_size);
     column = grn_obj_column(context, table, name, name_size);
     if (column) {
-	grn_obj_unlink(context, column);
-	return Qtrue;
+        grn_obj_unlink(context, column);
+        return Qtrue;
     } else {
-	return Qfalse;
+        return Qfalse;
     }
 }</pre>
     </td>
@@ -3897,14 +3904,14 @@ rb_grn_table_inspect (VALUE self)
       <pre class="lines">
 
 
-2031
-2032
-2033
-2034
-2035</pre>
+2178
+2179
+2180
+2181
+2182</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2031</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2178</span>
 
 static VALUE
 rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
@@ -3965,6 +3972,8 @@ rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -4036,6 +4045,8 @@ rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -4114,47 +4125,47 @@ rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
       <pre class="lines">
 
 
-1656
-1657
-1658
-1659
-1660
-1661
-1662
-1663
-1664
-1665
-1666
-1667
-1668
-1669
-1670
-1671
-1672
-1673
-1674
-1675
-1676
-1677
-1678
-1679
-1680
-1681
-1682
-1683
-1684
-1685
-1686
-1687
-1688
-1689
-1690
-1691
-1692
-1693</pre>
+1803
+1804
+1805
+1806
+1807
+1808
+1809
+1810
+1811
+1812
+1813
+1814
+1815
+1816
+1817
+1818
+1819
+1820
+1821
+1822
+1823
+1824
+1825
+1826
+1827
+1828
+1829
+1830
+1831
+1832
+1833
+1834
+1835
+1836
+1837
+1838
+1839
+1840</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1656</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1803</span>
 
 static VALUE
 rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
@@ -4169,29 +4180,29 @@ rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
     rb_scan_args(argc, argv, &quot;01&quot;,  &amp;options);
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
 
     rb_grn_scan_options(options,
-			&quot;timeout&quot;, &amp;rb_timeout,
-			&quot;id&quot;, &amp;rb_id,
-			NULL);
+                        &quot;timeout&quot;, &amp;rb_timeout,
+                        &quot;id&quot;, &amp;rb_id,
+                        NULL);
 
     if (!NIL_P(rb_timeout))
-	timeout = NUM2UINT(rb_timeout);
+        timeout = NUM2UINT(rb_timeout);
 
     if (!NIL_P(rb_id))
-	id = NUM2UINT(rb_id);
+        id = NUM2UINT(rb_id);
 
     rc = grn_obj_lock(context, table, id, timeout);
     rb_grn_context_check(context, self);
     rb_grn_rc_check(rc, self);
 
     if (rb_block_given_p()) {
-	return rb_ensure(rb_yield, Qnil, rb_grn_table_unlock_ensure, self);
+        return rb_ensure(rb_yield, Qnil, rb_grn_table_unlock_ensure, self);
     } else {
-	return Qnil;
+        return Qnil;
     }
 }</pre>
     </td>
@@ -4235,6 +4246,8 @@ rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>options</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -4292,33 +4305,33 @@ groonga側が未実装のため、現在は無視される。実装さ れるの
       <pre class="lines">
 
 
-1744
-1745
-1746
-1747
-1748
-1749
-1750
-1751
-1752
-1753
-1754
-1755
-1756
-1757
-1758
-1759
-1760
-1761
-1762
-1763
-1764
-1765
-1766
-1767</pre>
+1891
+1892
+1893
+1894
+1895
+1896
+1897
+1898
+1899
+1900
+1901
+1902
+1903
+1904
+1905
+1906
+1907
+1908
+1909
+1910
+1911
+1912
+1913
+1914</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1744</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1891</span>
 
 static VALUE
 rb_grn_table_is_locked (int argc, VALUE *argv, VALUE self)
@@ -4331,16 +4344,16 @@ rb_grn_table_is_locked (int argc, VALUE *argv, VALUE self)
     rb_scan_args(argc, argv, &quot;01&quot;,  &amp;options);
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
 
     rb_grn_scan_options(options,
-			&quot;id&quot;, &amp;rb_id,
-			NULL);
+                        &quot;id&quot;, &amp;rb_id,
+                        NULL);
 
     if (!NIL_P(rb_id))
-	id = NUM2UINT(rb_id);
+        id = NUM2UINT(rb_id);
 
     return CBOOL2RVAL(grn_obj_is_locked(context, table));
 }</pre>
@@ -4400,14 +4413,14 @@ rb_grn_table_is_locked (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2057
-2058
-2059
-2060
-2061</pre>
+2204
+2205
+2206
+2207
+2208</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2057</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2204</span>
 
 static VALUE
 rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
@@ -4465,6 +4478,8 @@ rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -4632,6 +4647,8 @@ rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -4818,9 +4835,9 @@ rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
     rb_cursor = GRNTABLECURSOR2RVAL(Qnil, context, cursor);
     rb_iv_set(rb_cursor, &quot;@table&quot;, self); /* FIXME: cursor should mark table */
     if (rb_block_given_p())
-	return rb_ensure(rb_yield, rb_cursor, rb_grn_object_close, rb_cursor);
+        return rb_ensure(rb_yield, rb_cursor, rb_grn_object_close, rb_cursor);
     else
-	return rb_cursor;
+        return rb_cursor;
 }</pre>
     </td>
   </tr>
@@ -4848,11 +4865,11 @@ rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
 href="http://"entries"">Groonga</a> selected_entries = entries.select do
 |record|</p>
 
-<pre class="code ruby"><code><span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span> <span class='op'>=~</span> <span class='id identifier rubyid_query'>query</span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span> <span class='op'>=~</span> <span class='id identifier rubyid_query'>query</span></code></pre>
 
 <p>end paged_entries = selected_entries.paginate([[“_score”, :desc]],</p>
 
-<pre class="code ruby"><code>:page =&gt; 1,
+<pre class="code ruby"><code class="ruby">:page =&gt; 1,
 :size =&gt; 10)</code></pre>
 
 <p>&lt;/pre&gt;</p>
@@ -4864,7 +4881,7 @@ href="http://"entries"">Groonga</a> selected_entries = entries.select do
 “#Groonga::Table.paged_entriespaged_entries.start_offset-#Groonga::Table.paged_entriespaged_entries.end_offset件を表示”
 paged_entries.each do |entry|</p>
 
-<pre class="code ruby"><code><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span></code></pre>
 
 <p>end &lt;/pre&gt;</p>
 
@@ -5087,7 +5104,7 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
     cursor = rb_grn_table_open_grn_cursor(argc, argv, self, &amp;context);
     records = rb_ary_new();
     while ((record_id = grn_table_cursor_next(context, cursor))) {
-	rb_ary_push(records, rb_grn_record_new(self, record_id, Qnil));
+        rb_ary_push(records, rb_grn_record_new(self, record_id, Qnil));
     }
     grn_table_cursor_close(context, cursor);
 
@@ -5171,32 +5188,32 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2162
-2163
-2164
-2165
-2166
-2167
-2168
-2169
-2170
-2171
-2172
-2173
-2174
-2175
-2176
-2177
-2178
-2179
-2180
-2181
-2182
-2183
-2184</pre>
+2309
+2310
+2311
+2312
+2313
+2314
+2315
+2316
+2317
+2318
+2319
+2320
+2321
+2322
+2323
+2324
+2325
+2326
+2327
+2328
+2329
+2330
+2331</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2162</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2309</span>
 
 static VALUE
 rb_grn_table_rename (VALUE self, VALUE rb_name)
@@ -5208,9 +5225,9 @@ rb_grn_table_rename (VALUE self, VALUE rb_name)
     int name_size;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL, NULL,
-			     NULL, NULL,
-			     NULL);
+                             NULL, NULL, NULL,
+                             NULL, NULL,
+                             NULL);
 
     name = StringValueCStr(rb_name);
     name_size = RSTRING_LEN(rb_name);
@@ -5250,12 +5267,12 @@ rb_grn_table_rename (VALUE self, VALUE rb_name)
 
 <p>&lt;pre&gt; !!!ruby results = table.select do |record|</p>
 
-<pre class="code"><code><span class='id identifier rubyid_record'>record</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>description</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span></code></pre>
+<pre class="code"><code class=""><span class='id identifier rubyid_record'>record</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>description</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span></code></pre>
 
 <p>end snippet = results.expression.snippet([[“<em>”, “</em>”]]) results.each
 do |record|</p>
 
-<pre class="code"><code><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_record'>record</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>の説明文の中で「groonga」が含まれる部分</span><span class='tstring_end'>&quot;</span></span>
+<pre class="code"><code class=""><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_record'>record</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>の説明文の中で「groonga」が含まれる部分</span><span class='tstring_end'>&quot;</span></span>
 <span class='id identifier rubyid_snippet'>snippet</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>description</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_snippet'>snippet</span><span class='op'>|</span>
   <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>---</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_snippet'>snippet</span><span class='rbrace'>}</span><span class='tstring_content'>...</span><span class='tstring_end'>&quot;</span></span>
@@ -5316,11 +5333,11 @@ do |record|</p>
 =&gt; “Hello Good-bye!”) comments.add(:content =&gt; “Hello World”)
 comments.add(:content =&gt; “test”) result = comments.select do |record|</p>
 
-<pre class="code"><code><span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test</span><span class='tstring_end'>&quot;</span></span></code></pre>
+<pre class="code"><code class=""><span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test</span><span class='tstring_end'>&quot;</span></span></code></pre>
 
 <p>end p result.collect {|record| record.content}</p>
 
-<pre class="code"><code><span class='comment'># =&gt; [&quot;Hello Good-bye!&quot;, &quot;Hello World&quot;]</span></code></pre>
+<pre class="code"><code class=""><span class='comment'># =&gt; [&quot;Hello Good-bye!&quot;, &quot;Hello World&quot;]</span></code></pre>
 
 <p>&lt;/pre&gt;</p>
 </div>
@@ -5361,7 +5378,7 @@ href="http://値">演算子]</a>」という書式で条件を 指定する。�
 <p>&lt;pre&gt; !!!ruby “name:daijiro” # “name”カラムの値が“daijiro”のレコードにマッチ
 “description:@groonga” # “description”カラムが</p>
 
-<pre class="code"><code><span class='comment'># &quot;groonga&quot;を含んでいるレコードにマッチ</span></code></pre>
+<pre class="code"><code class=""><span class='comment'># &quot;groonga&quot;を含んでいるレコードにマッチ</span></code></pre>
 
 <p>&lt;/pre&gt;</p>
 
@@ -5723,93 +5740,93 @@ href="http://値">演算子]</a>」という書式で条件を 指定する。�
       <pre class="lines">
 
 
-1901
-1902
-1903
-1904
-1905
-1906
-1907
-1908
-1909
-1910
-1911
-1912
-1913
-1914
-1915
-1916
-1917
-1918
-1919
-1920
-1921
-1922
-1923
-1924
-1925
-1926
-1927
-1928
-1929
-1930
-1931
-1932
-1933
-1934
-1935
-1936
-1937
-1938
-1939
-1940
-1941
-1942
-1943
-1944
-1945
-1946
-1947
-1948
-1949
-1950
-1951
-1952
-1953
-1954
-1955
-1956
-1957
-1958
-1959
-1960
-1961
-1962
-1963
-1964
-1965
-1966
-1967
-1968
-1969
-1970
-1971
-1972
-1973
-1974
-1975
-1976
-1977
-1978
-1979
-1980
-1981
-1982
-1983
-1984</pre>
+2048
+2049
+2050
+2051
+2052
+2053
+2054
+2055
+2056
+2057
+2058
+2059
+2060
+2061
+2062
+2063
+2064
+2065
+2066
+2067
+2068
+2069
+2070
+2071
+2072
+2073
+2074
+2075
+2076
+2077
+2078
+2079
+2080
+2081
+2082
+2083
+2084
+2085
+2086
+2087
+2088
+2089
+2090
+2091
+2092
+2093
+2094
+2095
+2096
+2097
+2098
+2099
+2100
+2101
+2102
+2103
+2104
+2105
+2106
+2107
+2108
+2109
+2110
+2111
+2112
+2113
+2114
+2115
+2116
+2117
+2118
+2119
+2120
+2121
+2122
+2123
+2124
+2125
+2126
+2127
+2128
+2129
+2130
+2131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1901</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2048</span>
 
 static VALUE
 rb_grn_table_select (int argc, VALUE *argv, VALUE self)
@@ -5826,48 +5843,48 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
     rb_scan_args(argc, argv, &quot;02&quot;, &amp;condition_or_options, &amp;options);
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
 
     if (RVAL2CBOOL(rb_obj_is_kind_of(condition_or_options, rb_cString))) {
-	rb_query = condition_or_options;
+        rb_query = condition_or_options;
     } else if (RVAL2CBOOL(rb_obj_is_kind_of(condition_or_options,
-					    rb_cGrnExpression))) {
-	rb_expression = condition_or_options;
+                                            rb_cGrnExpression))) {
+        rb_expression = condition_or_options;
     } else {
-	if (!NIL_P(options))
-	    rb_raise(rb_eArgError,
-		     &quot;should be [query_string, option_hash], &quot;
-		     &quot;[expression, opion_hash] &quot;
-		     &quot;or [option_hash]: %s&quot;,
-		     rb_grn_inspect(rb_ary_new4(argc, argv)));
-	options = condition_or_options;
+        if (!NIL_P(options))
+            rb_raise(rb_eArgError,
+                     &quot;should be [query_string, option_hash], &quot;
+                     &quot;[expression, opion_hash] &quot;
+                     &quot;or [option_hash]: %s&quot;,
+                     rb_grn_inspect(rb_ary_new4(argc, argv)));
+        options = condition_or_options;
     }
 
     rb_grn_scan_options(options,
-			&quot;operator&quot;, &amp;rb_operator,
-			&quot;result&quot;, &amp;rb_result,
-			&quot;name&quot;, &amp;rb_name,
-			&quot;syntax&quot;, &amp;rb_syntax,
-			&quot;allow_pragma&quot;, &amp;rb_allow_pragma,
-			&quot;allow_column&quot;, &amp;rb_allow_column,
-			&quot;allow_update&quot;, &amp;rb_allow_update,
-			&quot;allow_leading_not&quot;, &amp;rb_allow_leading_not,
-			&quot;default_column&quot;, &amp;rb_default_column,
-			NULL);
+                        &quot;operator&quot;, &amp;rb_operator,
+                        &quot;result&quot;, &amp;rb_result,
+                        &quot;name&quot;, &amp;rb_name,
+                        &quot;syntax&quot;, &amp;rb_syntax,
+                        &quot;allow_pragma&quot;, &amp;rb_allow_pragma,
+                        &quot;allow_column&quot;, &amp;rb_allow_column,
+                        &quot;allow_update&quot;, &amp;rb_allow_update,
+                        &quot;allow_leading_not&quot;, &amp;rb_allow_leading_not,
+                        &quot;default_column&quot;, &amp;rb_default_column,
+                        NULL);
 
     if (!NIL_P(rb_operator))
-	operator = NUM2INT(rb_operator);
+        operator = NUM2INT(rb_operator);
 
     if (NIL_P(rb_result)) {
-	result = grn_table_create(context, NULL, 0, NULL,
-				  GRN_TABLE_HASH_KEY | GRN_OBJ_WITH_SUBREC,
-				  table,
-				  NULL);
-	rb_result = GRNTABLE2RVAL(context, result, GRN_TRUE);
+        result = grn_table_create(context, NULL, 0, NULL,
+                                  GRN_TABLE_HASH_KEY | GRN_OBJ_WITH_SUBREC,
+                                  table,
+                                  NULL);
+        rb_result = GRNTABLE2RVAL(context, result, GRN_TRUE);
     } else {
-	result = RVAL2GRNTABLE(rb_result, &amp;context);
+        result = RVAL2GRNTABLE(rb_result, &amp;context);
     }
 
     if (NIL_P(rb_expression)) {
@@ -5883,14 +5900,14 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
     }
     rb_grn_object_deconstruct(RB_GRN_OBJECT(DATA_PTR(rb_expression)),
                               &amp;expression, NULL,
-			      NULL, NULL, NULL, NULL);
+                              NULL, NULL, NULL, NULL);
 
     grn_table_select(context, table, expression, result, operator);
     rb_grn_context_check(context, self);
 
     rb_attr(rb_singleton_class(rb_result),
-	    rb_intern(&quot;expression&quot;),
-	    GRN_TRUE, GRN_FALSE, GRN_FALSE);
+            rb_intern(&quot;expression&quot;),
+            GRN_TRUE, GRN_FALSE, GRN_FALSE);
     rb_iv_set(rb_result, &quot;@expression&quot;, rb_expression);
 
     return rb_result;
@@ -5904,9 +5921,13 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
   <h3 class="signature " id="set_column_value-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>set_column_value</strong>(id, name, value) </span>
+      <span class="overload">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, value) </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>set_column_value</strong>(id, name, valuf, :id = &gt;true) </span>
+      <span class="overload">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, vector_value_with_weight) </span>
+    
+      <span class="overload">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, value, options) </span>
+    
+      <span class="overload">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, vector_value_with_weight, options) </span>
     
   
 
@@ -5915,18 +5936,524 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p><em>table</em> の <em>id</em> に対応するカラム <em>name</em> の値として <em>value</em>
-設定す る。既存の値は上書きされる。</p>
-
-<p>@:id =&gt; true@ が指定できるのは利便性のため。 <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> でも <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> や
-<span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> と 同じ引数で動くようになる。</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Sets @value@ as the value of column @name@ of the record that has @id@ ID.
+It overwrites the previous value.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, value) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target record.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the target column.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>::Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The new value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, vector_value_with_weight) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>To use weight, there are two requirements. They are using vector column and
+using index column with weight support. Weight supported index column can
+be created with @:with_weight =&gt; true@ option. See
+<span class='object_link'><a href="#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">#define_index_column</a></span>.</p>
+</div>
+  </div>
+
+
+<p>Sets the vector column value and its weight. Weight is used when fulltext
+search. In fulltext search, score @1@ is added when a record is matched
+against a query. If weight is set, score @1 + weight@ is added when a
+record is matched against a query.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Sets vector value with weight</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tags</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:vector</span><span class='rparen'>)</span> <span class='comment'># It must be vector
+</span>  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tags</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='symbol'>:type</span>     <span class='op'>=&gt;</span> <span class='symbol'>:patricia_trie</span><span class='comma'>,</span>
+                      <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites.tags</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                <span class='symbol'>:with_weight</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='comment'># Don't forget :with_weight =&gt; true!
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_sites'>sites</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+
+<span class='id identifier rubyid_groonga_org_id'>groonga_org_id</span> <span class='op'>=</span> <span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+<span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_set_column_value'>set_column_value</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga_org_id'>groonga_org_id</span><span class='comma'>,</span>
+                       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga.org</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_set_column_value'>set_column_value</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga_org_id'>groonga_org_id</span><span class='comma'>,</span>
+                       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tags</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                       <span class='lbracket'>[</span>
+                         <span class='comment'># 10 weight is set
+</span>                         <span class='lbrace'>{</span>
+                           <span class='symbol'>:value</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                           <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span>
+                         <span class='rbrace'>}</span><span class='comma'>,</span>
+                         <span class='comment'># No :weight. The default weight is used.
+</span>                         <span class='lbrace'>{</span>
+                           <span class='symbol'>:value</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>search engine</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                         <span class='rbrace'>}</span><span class='comma'>,</span>
+                         <span class='comment'># Value only. The default weight is used.
+</span>                         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>fulltext search</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                       <span class='rbracket'>]</span><span class='rparen'>)</span>
+
+<span class='comment'># &quot;groonga&quot; tag has 10 weight.
+</span><span class='id identifier rubyid_records'>records</span> <span class='op'>=</span> <span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span> <span class='op'>=~</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_records'>records</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:score</span><span class='rparen'>)</span> <span class='comment'># =&gt; [11] (1 + 10 weight)
+</span>
+<span class='comment'># &quot;search engine&quot; tag has the default weight. (0 weight)
+</span><span class='id identifier rubyid_records'>records</span> <span class='op'>=</span> <span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span> <span class='op'>=~</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>search engine</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_records'>records</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:score</span><span class='rparen'>)</span> <span class='comment'># =&gt; [1] (1 + 0 weight)
+</span>
+<span class='comment'># &quot;fulltext search&quot; tag has the default weight. (0 weight)
+</span><span class='id identifier rubyid_records'>records</span> <span class='op'>=</span> <span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span> <span class='op'>=~</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>fulltext search</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_records'>records</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:score</span><span class='rparen'>)</span> <span class='comment'># =&gt; [1] (1 + 0 weight)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target record.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the target column.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector_value_with_weight</span>
+      
+      
+        <span class='type'>(<tt>::Array&lt;::Hash{:value =&gt; ::Object, :weight =&gt; Integer}, ::Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The new vector value with weight. The vector value can contain both ::Hash
+and value. If a contained element uses ::Hash style, it can specify its
+weight. If a contained element doesn't use ::Hash style, it can't specify
+its weight.</p>
+
+<p>If ::Hash contains @:weight@ key, its value is used as weight for @:value@
+key's value. If ::Hash contains only @:value@ or @:weight@ value is nil,
+the default weight is used. The default weight is 0.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, value, options) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>This usage is just for convenience. #set_column_value is overrided by
+<span class='object_link'><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">Groonga::Table::KeySupport#set_column_value</a></span>.
+<span class='object_link'><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">Groonga::Table::KeySupport#set_column_value</a></span> accepts not only ID but also
+key value as the first argument. If you specify @:id =&gt; true@ as
+@options, you can use both this <span class='object_link'><a href="#set_column_value-instance_method" title="Groonga::Table#set_column_value (method)">#set_column_value</a></span> method and
+<span class='object_link'><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">Groonga::Table::KeySupport#set_column_value</a></span> with the same way.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Uses @:id =&gt; true@ for polymorphic usage</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='symbol'>:type</span>     <span class='op'>=&gt;</span> <span class='symbol'>:hash</span><span class='comma'>,</span>
+                      <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Logs</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_sites'>sites</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_logs'>logs</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Logs</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+
+<span class='id identifier rubyid_groonga_org_key'>groonga_org_key</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://groonga.org/</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_groonga_org_id'>groonga_org_id</span> <span class='op'>=</span> <span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga_org_key'>groonga_org_key</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='comment'># =&gt; Groonga::Hash
+</span><span class='comment'># :id =&gt; true is required!
+</span><span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_set_column_value'>set_column_value</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga_org_id'>groonga_org_id</span><span class='comma'>,</span>
+                       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The official groonga site</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                       <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_sites'>sites</span><span class='lbracket'>[</span><span class='id identifier rubyid_groonga_org_key'>groonga_org_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='comment'># =&gt; &quot;The official groonga site&quot;
+</span>
+<span class='id identifier rubyid_log_id'>log_id</span> <span class='op'>=</span> <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='comment'># =&gt; Groonga::Array
+</span><span class='comment'># :id =&gt; true is optional. It is just ignored.
+</span><span class='id identifier rubyid_logs'>logs</span><span class='period'>.</span><span class='id identifier rubyid_set_column_value'>set_column_value</span><span class='lparen'>(</span><span class='id identifier rubyid_log_id'>log_id</span><span class='comma'>,</span>
+                      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>127.0.0.1 - - [...]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_logs'>logs</span><span class='lbracket'>[</span><span class='id identifier rubyid_log_id'>log_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='comment'># =&gt; &quot;127.0.0.1 - - [...]&quot;</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target record.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the target column.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>::Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The new value.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:id</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>It is just for convenience. Specify @true@ for polymorphic usage.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, vector_value_with_weight, options) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>It is weight supported vector value variable of @:id =&gt; true@ option.
+See other signature for usage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The ID of the target record.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String or Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the target column.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>vector_value_with_weight</span>
+      
+      
+        <span class='type'>(<tt>::Array&lt;::Hash{:value =&gt; ::Object, :weight =&gt; Integer}, ::Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The new vector value with weight. The vector value can contain both ::Hash
+and value. If a contained element uses ::Hash style, it can specify its
+weight. If a contained element doesn't use ::Hash style, it can't specify
+its weight.</p>
+
+<p>If ::Hash contains @:weight@ key, its value is used as weight for @:value@
+key's value. If ::Hash contains only @:value@ or @:weight@ value is nil,
+the default weight is used. The default weight is 0.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:id</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>It is just for convenience. Specify @true@ for polymorphic usage.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+      </li>
+    
+  </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -5934,31 +6461,31 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1562
-1563
-1564
-1565
-1566
-1567
-1568
-1569
-1570
-1571
-1572
-1573
-1574
-1575
-1576
-1577
-1578
-1579
-1580
-1581
-1582
-1583</pre>
+1709
+1710
+1711
+1712
+1713
+1714
+1715
+1716
+1717
+1718
+1719
+1720
+1721
+1722
+1723
+1724
+1725
+1726
+1727
+1728
+1729
+1730</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1562</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1709</span>
 
 static VALUE
 rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -5967,17 +6494,17 @@ rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
 
     rb_scan_args(argc, argv, &quot;31&quot;, &amp;rb_id, &amp;rb_name, &amp;rb_value, &amp;rb_options);
     if (!NIL_P(rb_options)) {
-	VALUE rb_option_id;
-	rb_grn_scan_options(rb_options,
-			    &quot;id&quot;, &amp;rb_option_id,
-			    NULL);
-	if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
-	    rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
-		     rb_grn_inspect(rb_option_id),
-		     rb_grn_inspect(rb_ary_new3(2,
-						self,
-						rb_ary_new4(argc, argv))));
-	}
+        VALUE rb_option_id;
+        rb_grn_scan_options(rb_options,
+                            &quot;id&quot;, &amp;rb_option_id,
+                            NULL);
+        if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
+            rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
+                     rb_grn_inspect(rb_option_id),
+                     rb_grn_inspect(rb_ary_new3(2,
+                                                self,
+                                                rb_ary_new4(argc, argv))));
+        }
     }
 
     return rb_grn_table_set_column_value(self, rb_id, rb_name, rb_value);
@@ -6052,16 +6579,16 @@ rb_grn_table_set_value_convenience (int argc, VALUE *argv, VALUE self)
 
     rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_id, &amp;rb_value, &amp;rb_options);
     if (!NIL_P(rb_options)) {
-	VALUE rb_option_id;
-	rb_grn_scan_options(rb_options,
-			    &quot;id&quot;, &amp;rb_option_id,
-			    NULL);
-	if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
-	    rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
-		     rb_grn_inspect(rb_option_id),
-		     rb_grn_inspect(rb_ary_new3(2,
-						self, rb_ary_new4(argc, argv))));
-	}
+        VALUE rb_option_id;
+        rb_grn_scan_options(rb_options,
+                            &quot;id&quot;, &amp;rb_option_id,
+                            NULL);
+        if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
+            rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
+                     rb_grn_inspect(rb_option_id),
+                     rb_grn_inspect(rb_ary_new3(2,
+                                                self, rb_ary_new4(argc, argv))));
+        }
     }
 
     return rb_grn_table_set_value(self, rb_id, rb_value);
@@ -6147,9 +6674,9 @@ rb_grn_table_get_size (VALUE self)
     unsigned int size;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
     size = grn_table_size(context, table);
     return UINT2NUM(size);
 }</pre>
@@ -6191,46 +6718,6 @@ rb_grn_table_get_size (VALUE self)
 </div>
   </div>
 
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'></div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'>
-<p>@example Describe incompatible API change</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'>
-<p>result_since_2_1_0 = <a href="http://"sort_key"">table.sort(</a>)</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'>
-<p>result_before_2_1_0 = result_since_2_1_0.collect do |record|</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'>
-<p>record.value</p>
-</div>
-  </div>
-
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'>
-<p>end</p>
-</div>
-  </div>
-
 
 <p>テーブルに登録されているレコードを <em>keys</em> で指定されたルー ルに従ってソートしたレコードの配列を返す。</p>
 
@@ -6244,7 +6731,7 @@ rb_grn_table_get_size (VALUE self)
 
 <p>&lt;pre&gt; !!!ruby [</p>
 
-<pre class="code"><code>{:key =&gt; &quot;第1ソートキー&quot;, :order =&gt; order},
+<pre class="code"><code class="">{:key =&gt; &quot;第1ソートキー&quot;, :order =&gt; order},
 {:key =&gt; &quot;第2ソートキー&quot;, :order =&gt; order},
 # ...,</code></pre>
 
@@ -6259,7 +6746,7 @@ rb_grn_table_get_size (VALUE self)
 
 <p>&lt;pre&gt; !!!ruby [</p>
 
-<pre class="code"><code>[&quot;第1ソートキー&quot;, order],
+<pre class="code"><code class="">[&quot;第1ソートキー&quot;, order],
 [&quot;第2ソートキー&quot;, order],
 # ...,</code></pre>
 
@@ -6285,6 +6772,21 @@ rb_grn_table_get_size (VALUE self)
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Describe incompatible API change</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_result_since_2_1_0'>result_since_2_1_0</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sort_key</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_result_before_2_1_0'>result_before_2_1_0</span> <span class='op'>=</span> <span class='id identifier rubyid_result_since_2_1_0'>result_since_2_1_0</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
   <div class="docstring">
   <div class="discussion">
     
@@ -6302,6 +6804,8 @@ rb_grn_table_get_size (VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -6727,80 +7231,80 @@ rb_grn_table_sort (int argc, VALUE *argv, VALUE self)
     VALUE exception;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
 
     rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_keys, &amp;options);
 
     if (!RVAL2CBOOL(rb_obj_is_kind_of(rb_keys, rb_cArray)))
-	rb_raise(rb_eArgError, &quot;keys should be an array of key: &lt;%s&gt;&quot;,
-		 rb_grn_inspect(rb_keys));
+        rb_raise(rb_eArgError, &quot;keys should be an array of key: &lt;%s&gt;&quot;,
+                 rb_grn_inspect(rb_keys));
 
     n_keys = RARRAY_LEN(rb_keys);
     rb_sort_keys = RARRAY_PTR(rb_keys);
     keys = ALLOCA_N(grn_table_sort_key, n_keys);
     for (i = 0; i &lt; n_keys; i++) {
-	VALUE rb_sort_options, rb_key, rb_resolved_key, rb_order;
+        VALUE rb_sort_options, rb_key, rb_resolved_key, rb_order;
 
-	if (RVAL2CBOOL(rb_obj_is_kind_of(rb_sort_keys[i], rb_cHash))) {
-	    rb_sort_options = rb_sort_keys[i];
-	} else if (RVAL2CBOOL(rb_obj_is_kind_of(rb_sort_keys[i], rb_cArray))) {
-	    rb_sort_options = rb_hash_new();
-	    rb_hash_aset(rb_sort_options,
-			 RB_GRN_INTERN(&quot;key&quot;),
-			 rb_ary_entry(rb_sort_keys[i], 0));
-	    rb_hash_aset(rb_sort_options,
-			 RB_GRN_INTERN(&quot;order&quot;),
-			 rb_ary_entry(rb_sort_keys[i], 1));
-	} else {
-	    rb_sort_options = rb_hash_new();
-	    rb_hash_aset(rb_sort_options,
-			 RB_GRN_INTERN(&quot;key&quot;),
-			 rb_sort_keys[i]);
-	}
-	rb_grn_scan_options(rb_sort_options,
-			    &quot;key&quot;, &amp;rb_key,
-			    &quot;order&quot;, &amp;rb_order,
-			    NULL);
-	if (RVAL2CBOOL(rb_obj_is_kind_of(rb_key, rb_cString))) {
-	    rb_resolved_key = rb_grn_table_get_column(self, rb_key);
-	} else {
-	    rb_resolved_key = rb_key;
-	}
-	keys[i].key = RVAL2GRNOBJECT(rb_resolved_key, &amp;context);
-	if (!keys[i].key) {
-	    rb_raise(rb_eGrnNoSuchColumn,
-		     &quot;no such column: &lt;%s&gt;: &lt;%s&gt;&quot;,
-		     rb_grn_inspect(rb_key), rb_grn_inspect(self));
-	}
-	if (NIL_P(rb_order) ||
-	    rb_grn_equal_option(rb_order, &quot;asc&quot;) ||
-	    rb_grn_equal_option(rb_order, &quot;ascending&quot;)) {
-	    keys[i].flags = GRN_TABLE_SORT_ASC;
-	} else if (rb_grn_equal_option(rb_order, &quot;desc&quot;) ||
-		   rb_grn_equal_option(rb_order, &quot;descending&quot;)) {
-	    keys[i].flags = GRN_TABLE_SORT_DESC;
-	} else {
-	    rb_raise(rb_eArgError,
-		     &quot;order should be one of &quot;
-		     &quot;[nil, :desc, :descending, :asc, :ascending]: %s&quot;,
-		     rb_grn_inspect(rb_order));
-	}
+        if (RVAL2CBOOL(rb_obj_is_kind_of(rb_sort_keys[i], rb_cHash))) {
+            rb_sort_options = rb_sort_keys[i];
+        } else if (RVAL2CBOOL(rb_obj_is_kind_of(rb_sort_keys[i], rb_cArray))) {
+            rb_sort_options = rb_hash_new();
+            rb_hash_aset(rb_sort_options,
+                         RB_GRN_INTERN(&quot;key&quot;),
+                         rb_ary_entry(rb_sort_keys[i], 0));
+            rb_hash_aset(rb_sort_options,
+                         RB_GRN_INTERN(&quot;order&quot;),
+                         rb_ary_entry(rb_sort_keys[i], 1));
+        } else {
+            rb_sort_options = rb_hash_new();
+            rb_hash_aset(rb_sort_options,
+                         RB_GRN_INTERN(&quot;key&quot;),
+                         rb_sort_keys[i]);
+        }
+        rb_grn_scan_options(rb_sort_options,
+                            &quot;key&quot;, &amp;rb_key,
+                            &quot;order&quot;, &amp;rb_order,
+                            NULL);
+        if (RVAL2CBOOL(rb_obj_is_kind_of(rb_key, rb_cString))) {
+            rb_resolved_key = rb_grn_table_get_column(self, rb_key);
+        } else {
+            rb_resolved_key = rb_key;
+        }
+        keys[i].key = RVAL2GRNOBJECT(rb_resolved_key, &amp;context);
+        if (!keys[i].key) {
+            rb_raise(rb_eGrnNoSuchColumn,
+                     &quot;no such column: &lt;%s&gt;: &lt;%s&gt;&quot;,
+                     rb_grn_inspect(rb_key), rb_grn_inspect(self));
+        }
+        if (NIL_P(rb_order) ||
+            rb_grn_equal_option(rb_order, &quot;asc&quot;) ||
+            rb_grn_equal_option(rb_order, &quot;ascending&quot;)) {
+            keys[i].flags = GRN_TABLE_SORT_ASC;
+        } else if (rb_grn_equal_option(rb_order, &quot;desc&quot;) ||
+                   rb_grn_equal_option(rb_order, &quot;descending&quot;)) {
+            keys[i].flags = GRN_TABLE_SORT_DESC;
+        } else {
+            rb_raise(rb_eArgError,
+                     &quot;order should be one of &quot;
+                     &quot;[nil, :desc, :descending, :asc, :ascending]: %s&quot;,
+                     rb_grn_inspect(rb_order));
+        }
     }
 
     rb_grn_scan_options(options,
-			&quot;offset&quot;, &amp;rb_offset,
-			&quot;limit&quot;, &amp;rb_limit,
-			NULL);
+                        &quot;offset&quot;, &amp;rb_offset,
+                        &quot;limit&quot;, &amp;rb_limit,
+                        NULL);
 
     if (!NIL_P(rb_offset))
-	offset = NUM2INT(rb_offset);
+        offset = NUM2INT(rb_offset);
     if (!NIL_P(rb_limit))
-	limit = NUM2INT(rb_limit);
+        limit = NUM2INT(rb_limit);
 
     result = grn_table_create(context, NULL, 0, NULL, GRN_TABLE_NO_KEY,
-			      NULL, table);
+                              NULL, table);
     /* use n_records that is return value from
        grn_table_sort() when rroonga user become specifying
        output table. */
@@ -6859,14 +7363,14 @@ rb_grn_table_sort (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2069
-2070
-2071
-2072
-2073</pre>
+2216
+2217
+2218
+2219
+2220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2069</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2216</span>
 
 static VALUE
 rb_grn_table_support_key_p (VALUE self)
@@ -6920,20 +7424,20 @@ rb_grn_table_support_key_p (VALUE self)
       <pre class="lines">
 
 
-2082
-2083
-2084
-2085
-2086
-2087
-2088
-2089
-2090
-2091
-2092</pre>
+2229
+2230
+2231
+2232
+2233
+2234
+2235
+2236
+2237
+2238
+2239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2082</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2229</span>
 
 static VALUE
 rb_grn_table_support_sub_records_p (VALUE self)
@@ -6941,9 +7445,9 @@ rb_grn_table_support_sub_records_p (VALUE self)
     grn_obj *table;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, NULL,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
     return CBOOL2RVAL(table-&gt;header.flags &amp; GRN_OBJ_WITH_SUBREC);
 }</pre>
     </td>
@@ -7007,9 +7511,9 @@ rb_grn_table_truncate (VALUE self)
     grn_rc rc;
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
     rc = grn_table_truncate(context, table);
     rb_grn_rc_check(rc, self);
 
@@ -7071,14 +7575,14 @@ rb_grn_table_truncate (VALUE self)
       <pre class="lines">
 
 
-2017
-2018
-2019
-2020
-2021</pre>
+2164
+2165
+2166
+2167
+2168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2017</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2164</span>
 
 static VALUE
 rb_grn_table_union_bang (VALUE self, VALUE rb_other)
@@ -7127,6 +7631,8 @@ rb_grn_table_union_bang (VALUE self, VALUE rb_other)
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -7169,38 +7675,38 @@ rb_grn_table_union_bang (VALUE self, VALUE rb_other)
       <pre class="lines">
 
 
-1594
-1595
-1596
-1597
-1598
-1599
-1600
-1601
-1602
-1603
-1604
-1605
-1606
-1607
-1608
-1609
-1610
-1611
-1612
-1613
-1614
-1615
-1616
-1617
-1618
-1619
-1620
-1621
-1622</pre>
+1741
+1742
+1743
+1744
+1745
+1746
+1747
+1748
+1749
+1750
+1751
+1752
+1753
+1754
+1755
+1756
+1757
+1758
+1759
+1760
+1761
+1762
+1763
+1764
+1765
+1766
+1767
+1768
+1769</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1594</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1741</span>
 
 static VALUE
 rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
@@ -7214,16 +7720,16 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
     rb_scan_args(argc, argv, &quot;01&quot;,  &amp;options);
 
     rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
-			     NULL, NULL,
-			     NULL, NULL, NULL,
-			     NULL);
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
 
     rb_grn_scan_options(options,
-			&quot;id&quot;, &amp;rb_id,
-			NULL);
+                        &quot;id&quot;, &amp;rb_id,
+                        NULL);
 
     if (!NIL_P(rb_id))
-	id = NUM2UINT(rb_id);
+        id = NUM2UINT(rb_id);
 
     rc = grn_obj_unlock(context, table, id);
     rb_grn_context_check(context, self);
@@ -7362,16 +7868,16 @@ rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)
 
     rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_id, &amp;rb_options);
     if (!NIL_P(rb_options)) {
-	VALUE rb_option_id;
-	rb_grn_scan_options(rb_options,
-			    &quot;id&quot;, &amp;rb_option_id,
-			    NULL);
-	if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
-	    rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
-		     rb_grn_inspect(rb_option_id),
-		     rb_grn_inspect(rb_ary_new3(2,
-						self, rb_ary_new4(argc, argv))));
-	}
+        VALUE rb_option_id;
+        rb_grn_scan_options(rb_options,
+                            &quot;id&quot;, &amp;rb_option_id,
+                            NULL);
+        if (!(NIL_P(rb_option_id) || RVAL2CBOOL(rb_option_id))) {
+            rb_raise(rb_eArgError, &quot;:id options must be true or nil: %s: %s&quot;,
+                     rb_grn_inspect(rb_option_id),
+                     rb_grn_inspect(rb_ary_new3(2,
+                                                self, rb_ary_new4(argc, argv))));
+        }
     }
 
     return rb_grn_table_get_value(self, rb_id);
@@ -7386,9 +7892,9 @@ rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Tue Jan 29 16:06:07 2013 by
+  Generated on Wed May  1 17:23:06 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.6.1 (ruby-1.9.3).
 </div>
 
   

@@ -14,9 +14,9 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabeticalalphabeticalalphabeticalalphabeticalalphabetical_index.html">Index (S)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (S)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Snippet</span>
@@ -128,7 +128,7 @@
   
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">ext/groonga/rb-grn-snippet.c<span class="defines">,<br />
-  ext/groonga/rb-grn-snippet.c,<br /> ext/groonga/rb-grn-snippet.c</span>
+  ext/groonga/rb-grn-snippet.c</span>
 </dd>
   
 </dl>
@@ -277,6 +277,8 @@
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -486,7 +488,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
 148
 149
 150
-151</pre>
+151
+152
+153
+154
+155
+156
+157</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-snippet.c', line 82</span>
@@ -523,6 +531,12 @@ rb_grn_snippet_initialize (int argc, VALUE *argv, VALUE self)
                         NULL);
 
     context = rb_grn_context_ensure(&amp;rb_context);
+    if (!grn_ctx_db(context)) {
+	rb_raise(rb_eArgError,
+		 &quot;Groonga::Context should be associated with a database by &quot;
+		 &quot;Groonga::Database#open or #create: %s&quot;,
+		 rb_grn_inspect(rb_context));
+    }
 
     if (RVAL2CBOOL(rb_normalize))
         flags |= GRN_SNIP_NORMALIZE;
@@ -622,6 +636,8 @@ rb_grn_snippet_initialize (int argc, VALUE *argv, VALUE self)
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'><p>The name and value
@@ -682,12 +698,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-167
-168
-169
-170
-171
-172
 173
 174
 175
@@ -722,10 +732,16 @@ pairs. Omitted names are initialized as the default value.</p></div>
 204
 205
 206
-207</pre>
+207
+208
+209
+210
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-snippet.c', line 167</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-snippet.c', line 173</span>
 
 static VALUE
 rb_grn_snippet_add_keyword (int argc, VALUE *argv, VALUE self)
@@ -842,12 +858,6 @@ rb_grn_snippet_add_keyword (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-216
-217
-218
-219
-220
-221
 222
 223
 224
@@ -887,10 +897,16 @@ rb_grn_snippet_add_keyword (int argc, VALUE *argv, VALUE self)
 258
 259
 260
-261</pre>
+261
+262
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-snippet.c', line 216</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-snippet.c', line 222</span>
 
 static VALUE
 rb_grn_snippet_execute (VALUE self, VALUE rb_string)

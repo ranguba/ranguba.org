@@ -14,9 +14,9 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="alphabetical_index.html">Index</a> &raquo; 
+    <a href="_index.html">Index</a> &raquo; 
     <span class="title">File: tutorial</span>
   
 
@@ -96,22 +96,22 @@
 <p>This page introduce how to use rroonga via a simple application making.</p>
 <h2>Install</h2>
 <p>You can install rroonga in your compter with RubyGems.</p>
-<pre class="code command_line"><code>% sudo gem install rroonga
+<pre class="code command_line"><code class="command_line">% sudo gem install rroonga
 </code></pre>
 <h2>Create Database</h2>
 <p>Let&#8217;s create database for simple bookmark application.
 Please execute irb with loading rroonga with this command:</p>
-<pre class="code irb"><code>% irb --simple-prompt -rubygems -rgroonga
+<pre class="code irb"><code class="irb">% irb --simple-prompt -rubygems -rgroonga
 &gt;&gt;
 </code></pre>
 <p>Now you use <span class="caps">UTF</span>-8 as the encoding of database.</p>
-<pre class="code irb"><code>&gt;&gt; $KCODE = &quot;UTF-8&quot;
+<pre class="code irb"><code class="irb">&gt;&gt; $KCODE = &quot;UTF-8&quot;
 =&gt; &quot;UTF-8&quot;
 &gt;&gt; Groonga::Context.default_options = {:encoding =&gt; :utf8}
 =&gt; {:encoding=&gt;:utf8}
 </code></pre>
 <p>Then, try to create database in a file.</p>
-<pre class="code irb"><code>&gt;&gt; Groonga::Database.create(:path =&gt; &quot;/tmp/bookmark.db&quot;)
+<pre class="code irb"><code class="irb">&gt;&gt; Groonga::Database.create(:path =&gt; &quot;/tmp/bookmark.db&quot;)
 =&gt; #&lt;Groonga::Database ...&gt;
 </code></pre>
 <p>From now, the created database is used implicitly.
@@ -143,51 +143,51 @@ like Groonga::PatriciaTrie.</dd>
 </dl>
 <p>Now, you use Groonga::Hash and create the table named <code>Items</code>. The type
 of its primary key is String.</p>
-<pre class="code irb"><code>&gt;&gt; Groonga::Schema.create_table(&quot;Items&quot;, :type =&gt; :hash)
+<pre class="code irb"><code class="irb">&gt;&gt; Groonga::Schema.create_table(&quot;Items&quot;, :type =&gt; :hash)
 =&gt; [...]
 </code></pre>
 <p>You have <code>Items</code> table by this code.
 You can refer the defined table with Groonga.[] like below:</p>
-<pre class="code irb"><code>&gt;&gt; items = Groonga[&quot;Items&quot;]
+<pre class="code irb"><code class="irb">&gt;&gt; items = Groonga[&quot;Items&quot;]
 =&gt; #&lt;Groonga::Hash ...&gt;
 </code></pre>
 <p>You can treat it like Hash.
 For example, let&#8217;s type <code>items.size</code> to get the number of records in
 the table.</p>
-<pre class="code irb"><code>&gt;&gt; items.size
+<pre class="code irb"><code class="irb">&gt;&gt; items.size
 =&gt; 0
 </code></pre>
 <h2>Add records</h2>
 <p>Let&#8217;s add records to <code>Items</code> table.</p>
-<pre class="code irb"><code>&gt;&gt; items.add(&quot;http://en.wikipedia.org/wiki/Ruby&quot;)
+<pre class="code irb"><code class="irb">&gt;&gt; items.add(&quot;http://en.wikipedia.org/wiki/Ruby&quot;)
 =&gt; #&lt;Groonga::Record ...&gt;
 &gt;&gt; items.add(&quot;http://www.ruby-lang.org/&quot;)
 =&gt; #&lt;Groonga::Record ...&gt;
 </code></pre>
 <p>Please check the number of records. It increases from 0 to 2.</p>
-<pre class="code irb"><code>&gt;&gt; items.size
+<pre class="code irb"><code class="irb">&gt;&gt; items.size
 =&gt; 2
 </code></pre>
 <p>If you can get record by primary key, type like below:</p>
-<pre class="code irb"><code>&gt;&gt; items[&quot;http://en.wikipedia.org/wiki/Ruby&quot;]
+<pre class="code irb"><code class="irb">&gt;&gt; items[&quot;http://en.wikipedia.org/wiki/Ruby&quot;]
 =&gt; #&lt;Groonga::Record ...&gt;
 </code></pre>
 <h2>Full text search</h2>
 <p>Let&#8217;s add item&#8217;s title to full text search.</p>
 <p>first, you add the <code>Text</code> type column &#8220;<code>title</code>&#8221; to <code>Items</code> table.</p>
-<pre class="code irb"><code>&gt;&gt; Groonga::Schema.change_table(&quot;Items&quot;) do |table|
+<pre class="code irb"><code class="irb">&gt;&gt; Groonga::Schema.change_table(&quot;Items&quot;) do |table|
 ?&gt;     table.text(&quot;title&quot;)
 &gt;&gt;   end
 =&gt; [...]
 </code></pre>
 <p>Defined columns is named as <code>#{TABLE_NAME}.#{COLUMN_NAME}</code>.
 You can refer them with <span class='object_link'><a href="Groonga.html#%5B%5D-class_method" title="Groonga.[] (method)">Groonga.[]</a></span> as same as tables.</p>
-<pre class="code irb"><code>&gt;&gt; title_column = Groonga[&quot;Items.title&quot;]
+<pre class="code irb"><code class="irb">&gt;&gt; title_column = Groonga[&quot;Items.title&quot;]
 =&gt; #&lt;Groonga::VariableSizeColumn ...&gt;
 </code></pre>
 <p>Secondly, let&#8217;s add the table containing terms from splited from texts.
 Then you define the <code>Terms</code> for it.</p>
-<pre class="code irb"><code>&gt;&gt; Groonga::Schema.create_table(&quot;Terms&quot;,
+<pre class="code irb"><code class="irb">&gt;&gt; Groonga::Schema.create_table(&quot;Terms&quot;,
 ?&gt;                              :type =&gt; :patricia_trie,
 ?&gt;                              :normalizer =&gt; :NormalizerAuto,
 ?&gt;                              :default_tokenizer =&gt; &quot;TokenBigram&quot;)
@@ -205,7 +205,7 @@ Groonga supports Unigram (N=1), Bigram (N=2) and Trigram (N=3).</p>
 ignoring the case.</p>
 <p>Now, you ready table for terms, so you define the index of
 <code>Items.tiltle</code> column.</p>
-<pre class="code irb"><code>&gt;&gt; Groonga::Schema.change_table(&quot;Terms&quot;) do |table|
+<pre class="code irb"><code class="irb">&gt;&gt; Groonga::Schema.change_table(&quot;Terms&quot;) do |table|
 ?&gt;     table.index(&quot;Items.title&quot;)
 &gt;&gt;   end
 =&gt; [...]
@@ -219,24 +219,24 @@ table such as <code>Terms</code> and manage many attributes of each terms. It is
 very useful to process particular search.</p>
 <p>Now, you finished table definition.
 Let&#8217;s put some values to <code>title</code> of each record you added before.</p>
-<pre class="code irb"><code>&gt;&gt; items[&quot;http://en.wikipedia.org/wiki/Ruby&quot;].title = &quot;Ruby&quot;
+<pre class="code irb"><code class="irb">&gt;&gt; items[&quot;http://en.wikipedia.org/wiki/Ruby&quot;].title = &quot;Ruby&quot;
 =&gt; &quot;Ruby&quot;
 &gt;&gt; items[&quot;http://www.ruby-lang.org/&quot;].title = &quot;Ruby Programming Language&quot;
 &quot;Ruby Programming Language&quot;
 </code></pre>
 <p>Now, you can do full text search like above:</p>
-<pre class="code irb"><code>&gt;&gt; ruby_items = items.select {|record| record.title =~ &quot;Ruby&quot;}
+<pre class="code irb"><code class="irb">&gt;&gt; ruby_items = items.select {|record| record.title =~ &quot;Ruby&quot;}
 =&gt; #&lt;Groonga::Hash ..., normalizer: (nil)&gt;
 </code></pre>
 <p>Groonga returns the search result as Groonga::Hash.
 Keys in this hash table is records of hitted <code>Items</code>.</p>
-<pre class="code irb"><code>&gt;&gt; ruby_items.collect {|record| record.key.key}
+<pre class="code irb"><code class="irb">&gt;&gt; ruby_items.collect {|record| record.key.key}
 =&gt; [&quot;http://en.wikipedia.org/wiki/Ruby&quot;, &quot;http://www.ruby-lang.org/&quot;]
 </code></pre>
 <p>In above example, you get records in <code>Items</code> with <code>record.key</code>, and
 keys of them with <code>record.key.key</code>.</p>
 <p>You can access a refered key in records briefly with <code>record["_key"]</code>.</p>
-<pre class="code irb"><code>&gt;&gt; ruby_items.collect {|record| record[&quot;_key&quot;]}
+<pre class="code irb"><code class="irb">&gt;&gt; ruby_items.collect {|record| record[&quot;_key&quot;]}
 =&gt; [&quot;http://en.wikipedia.org/wiki/Ruby&quot;, &quot;http://www.ruby-lang.org/&quot;]
 </code></pre>
 <h2>Improve the simple bookmark application</h2>
@@ -246,13 +246,13 @@ bookmarks.</p>
 <p>First, you add tables for users and for comments like below:</p>
 <p><img src="http://qwik.jp/senna/senna2.files/rect4605.png" alt="" /></p>
 <p>Let&#8217;s add the table for users, <code>Users</code>.</p>
-<pre class="code irb"><code>&gt;&gt; Groonga::Schema.create_table(&quot;Users&quot;, :type =&gt; :hash) do |table|
+<pre class="code irb"><code class="irb">&gt;&gt; Groonga::Schema.create_table(&quot;Users&quot;, :type =&gt; :hash) do |table|
 ?&gt;     table.text(&quot;name&quot;)
 &gt;&gt;   end
 =&gt; [...]
 </code></pre>
 <p>Next, let&#8217;s add the table for comments as <code>Comments</code>.</p>
-<pre class="code irb"><code>&gt;&gt; Groonga::Schema.create_table(&quot;Comments&quot;) do |table|
+<pre class="code irb"><code class="irb">&gt;&gt; Groonga::Schema.create_table(&quot;Comments&quot;) do |table|
 ?&gt;     table.reference(&quot;item&quot;)
 &gt;&gt;   table.reference(&quot;author&quot;, &quot;Users&quot;)
 &gt;&gt;   table.text(&quot;content&quot;)
@@ -262,14 +262,14 @@ bookmarks.</p>
 </code></pre>
 <p>Then you define the index of <code>content</code> column in <code>Comments</code> for full
 text search.</p>
-<pre class="code irb"><code>&gt;&gt; Groonga::Schema.change_table(&quot;Terms&quot;) do |table|
+<pre class="code irb"><code class="irb">&gt;&gt; Groonga::Schema.change_table(&quot;Terms&quot;) do |table|
 ?&gt;     table.index(&quot;Comments.content&quot;)
 &gt;&gt;   end
 =&gt; [...]
 </code></pre>
 <p>You finish table definition by above code.</p>
 <p>Secondly, you add some users to <code>Users</code>.</p>
-<pre class="code irb"><code>&gt;&gt; users = Groonga[&quot;Users&quot;]
+<pre class="code irb"><code class="irb">&gt;&gt; users = Groonga[&quot;Users&quot;]
 =&gt; #&lt;Groonga::Hash ...&gt;
 &gt;&gt; users.add(&quot;alice&quot;, :name =&gt; &quot;Alice&quot;)
 =&gt; #&lt;Groonga::Record ...&gt;
@@ -280,17 +280,17 @@ text search.</p>
 You assume that the user, <code>moritan</code>, bookmark a page including
 infomation related Ruby.</p>
 <p>First, you check if the page has been added <code>Items</code> already.</p>
-<pre class="code irb"><code>&gt;&gt; items.has_key?(&quot;http://www.ruby-doc.org/&quot;)
+<pre class="code irb"><code class="irb">&gt;&gt; items.has_key?(&quot;http://www.ruby-doc.org/&quot;)
 =&gt; false
 </code></pre>
 <p>The page hasn&#8217;t been added, so you add it to <code>Items</code>.</p>
-<pre class="code irb"><code>&gt;&gt; items.add(&quot;http://www.ruby-doc.org/&quot;,
+<pre class="code irb"><code class="irb">&gt;&gt; items.add(&quot;http://www.ruby-doc.org/&quot;,
 ?&gt;           :title =&gt; &quot;Ruby-Doc.org: Documenting the Ruby Language&quot;)
 =&gt; #&lt;Groonga::Record ...&gt;
 </code></pre>
 <p>Next, you add the record to <code>Comments</code>. This record contains this page
 as its <code>item</code> column.</p>
-<pre class="code irb"><code>&gt;&gt; require &quot;time&quot;
+<pre class="code irb"><code class="irb">&gt;&gt; require &quot;time&quot;
 =&gt; true
 &gt;&gt; comments = Groonga[&quot;Comments&quot;]
 =&gt; #&lt;Groonga::Array ...&gt;
@@ -302,7 +302,7 @@ as its <code>item</code> column.</p>
 </code></pre>
 <h2>Define methods for this process</h2>
 <p>For usefull, you define methods for above processes.</p>
-<pre class="code irb"><code>&gt;&gt; @items = items
+<pre class="code irb"><code class="irb">&gt;&gt; @items = items
 =&gt; #&lt;Groonga::Hash ...&gt;
 &gt;&gt; @comments = comments
 =&gt; #&lt;Groonga::Array ...&gt;
@@ -324,7 +324,7 @@ use them in <code>add_bookmark</code> method.</p>
 	<li>Add the record to <code>Comments</code> table.</li>
 </ul>
 <p>With this method, lets bookmark some pages.</p>
-<pre class="code irb"><code>&gt;&gt; add_bookmark(&quot;https://rubygems.org/&quot;,
+<pre class="code irb"><code class="irb">&gt;&gt; add_bookmark(&quot;https://rubygems.org/&quot;,
 ?&gt;              &quot;RubyGems.org | your community gem host&quot;, &quot;alice&quot;, &quot;Ruby gems&quot;,
 ?&gt;              Time.parse(&quot;2010-10-07T14:18:28+09:00&quot;))
 =&gt; #&lt;Groonga::Record ...&gt;
@@ -340,7 +340,7 @@ use them in <code>add_bookmark</code> method.</p>
 </code></pre>
 <h2>Full text search part 2</h2>
 <p>Let&#8217;s do full text search for added records.</p>
-<pre class="code irb"><code>&gt;&gt; records = comments.select do |record|
+<pre class="code irb"><code class="irb">&gt;&gt; records = comments.select do |record|
 ?&gt;     record[&quot;content&quot;] =~ &quot;Ruby&quot;
 &gt;&gt;   end
 =&gt; #&lt;Groonga::Hash ...&gt;
@@ -363,12 +363,12 @@ These methods suport to access the complex data type.
 <code>Users</code>.)</p>
 <p>The search is finished when the first sentence in this codes. The
 results of this search is the object as records set.</p>
-<pre class="code irb"><code>&gt;&gt; records
+<pre class="code irb"><code class="irb">&gt;&gt; records
 #&lt;Groonga::Hash ..., size: &lt;4&gt;&gt;
 </code></pre>
 <p>You can arrange this records set before output.
 For example, sort these records in the descending order by date.</p>
-<pre class="code irb"><code>&gt;&gt; records.sort([{:key =&gt; &quot;issued&quot;, :order =&gt; &quot;descending&quot;}]).each do |record|
+<pre class="code irb"><code class="irb">&gt;&gt; records.sort([{:key =&gt; &quot;issued&quot;, :order =&gt; &quot;descending&quot;}]).each do |record|
 ?&gt;     comment = record
 &gt;&gt;   p [comment.id,
 ?&gt;       comment.issued,
@@ -383,7 +383,7 @@ For example, sort these records in the descending order by date.</p>
 =&gt; [...]
 </code></pre>
 <p>Let&#8217;s group the result by each item for easy view.</p>
-<pre class="code irb"><code>&gt;&gt; records.group(&quot;item&quot;).each do |record|
+<pre class="code irb"><code class="irb">&gt;&gt; records.group(&quot;item&quot;).each do |record|
 ?&gt;     item = record.key
 &gt;&gt;   p [record.n_sub_records,
 ?&gt;       item.key,
@@ -414,7 +414,7 @@ application.</p>
   of scores of each <code>coments</code> as score of the item.</li>
 </ul>
 <p>On this policy, you try to type below:</p>
-<pre class="code irb"><code>&gt;&gt; ruby_comments = @comments.select {|record| record.content =~ &quot;Ruby&quot;}
+<pre class="code irb"><code class="irb">&gt;&gt; ruby_comments = @comments.select {|record| record.content =~ &quot;Ruby&quot;}
 =&gt; #&lt;Groonga::Hash ..., size: &lt;4&gt;
 &gt;&gt; ruby_items = @items.select do |record|
 ?&gt;     target = record.match_target do |match_record|
@@ -426,7 +426,7 @@ application.</p>
 </code></pre>
 <p>You group the results of <em>ruby_comments</em> in each item and union
 <em>ruby_items</em> .</p>
-<pre class="code irb"><code>&gt;&gt; ruby_items = ruby_comments.group(&quot;item&quot;).union!(ruby_items)
+<pre class="code irb"><code class="irb">&gt;&gt; ruby_items = ruby_comments.group(&quot;item&quot;).union!(ruby_items)
 #&lt;Groonga::Hash ..., size: &lt;5&gt;&gt;
 &gt;&gt; ruby_items.sort([{:key =&gt; &quot;_score&quot;, :order =&gt; &quot;descending&quot;}]).each do |record|
 &gt;&gt;   p [record.score, record.title]

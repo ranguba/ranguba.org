@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
@@ -14,9 +14,9 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (D)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (D)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">DoubleArrayTrie</span>
@@ -350,7 +350,7 @@ fGroongafGroonga::Hash が返る。 <em>options</em> で <tt>:result</tt>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class='comment'>#無名一時テーブルを生成する。
+      <pre class="example code"><code><span class='comment'>#無名一時テーブルを生成する。
 </span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span>
 
 <span class='comment'>#無名永続テーブルを生成する。
@@ -390,7 +390,7 @@ fGroongafGroonga::Hash が返る。 <em>options</em> で <tt>:result</tt>
 <span class='id identifier rubyid_terms'>terms</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                         <span class='symbol'>:default_tokenizer</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_terms'>terms</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='comma'>,</span>
-                          <span class='symbol'>:source</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks.comment</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre>
+                          <span class='symbol'>:source</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks.comment</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -417,6 +417,8 @@ fGroongafGroonga::Hash が返る。 <em>options</em> で <tt>:result</tt>
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -645,6 +647,8 @@ object.</p>
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -1109,6 +1113,8 @@ rb_grn_double_array_trie_s_create (int argc, VALUE *argv, VALUE klass)
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -1294,6 +1300,8 @@ rb_grn_double_array_trie_s_create (int argc, VALUE *argv, VALUE klass)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -1524,7 +1532,7 @@ Groonga::DoubleArrayTrie.fGroongafGroonga::Hash が返る。 <em>options</em> �
 <p>複数のキーで検索し、結果を1つのテーブルに集める。</p>
 </div></p>
       
-      <pre class="example code"><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='id identifier rubyid_keys'>keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>morita</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gunyara-kun</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yu</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='symbol'>:result</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
@@ -1532,7 +1540,7 @@ Groonga::DoubleArrayTrie.fGroongafGroonga::Hash が返る。 <em>options</em> �
 <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
   <span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span>
   <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span> <span class='comment'># -&gt; &quot;morita&quot;または&quot;gunyara-kun&quot;または&quot;yu&quot;
-</span><span class='kw'>end</span></pre>
+</span><span class='kw'>end</span></code></pre>
     
   </div>
 
@@ -1569,6 +1577,8 @@ Groonga::DoubleArrayTrie.fGroongafGroonga::Hash が返る。 <em>options</em> �
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
         &mdash;
@@ -1762,9 +1772,9 @@ rb_grn_double_array_trie_search (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Tue Jan 29 16:06:13 2013 by
+  Generated on Wed May  1 17:23:09 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.6.1 (ruby-1.9.3).
 </div>
 
   

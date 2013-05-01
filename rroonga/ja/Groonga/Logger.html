@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
@@ -14,9 +14,9 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (L)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (L)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Logger</span>
@@ -175,10 +175,10 @@
 
     <ul class="summary">
       
-        <li class="public ">
+        <li class="public deprecated">
   <span class="summary_signature">
     
-      <a href="#log_path-class_method" title="log_path (class method)">+ (String) <strong>log_path</strong> </a>
+      <a href="#log_path-class_method" title="log_path (class method)">+ (Object) <strong>log_path</strong> </a>
     
 
     
@@ -188,18 +188,18 @@
   
   
   
-  
+  <span class="deprecated note title">deprecated</span>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>groongaのデフォルトロガーがログを出力するファイルのパスを返す。.</p>
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>since 3.0.1. Use <span class='object_link'><a href="#path-class_method" title="Groonga::Logger.path (method)">Logger.path</a></span></p>
 </div></span>
   
 </li>
 
       
-        <li class="public ">
+        <li class="public deprecated">
   <span class="summary_signature">
     
       <a href="#log_path%3D-class_method" title="log_path= (class method)">+ (Object) <strong>log_path=</strong>(path) </a>
@@ -212,12 +212,12 @@
   
   
   
-  
+  <span class="deprecated note title">deprecated</span>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>groongaのデフォルトロガーがログを出力するファイルのパスを 指定する。.</p>
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>since 3.0.1. Use <span class='object_link'><a href="#path%3D-class_method" title="Groonga::Logger.path= (method)">Logger.path=</a></span></p>
 </div></span>
   
 </li>
@@ -226,7 +226,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#query_log_path-class_method" title="query_log_path (class method)">+ (String) <strong>query_log_path</strong> </a>
+      <a href="#path-class_method" title="path (class method)">+ (String or nil) <strong>path</strong> </a>
     
 
     
@@ -241,13 +241,61 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>groongaのデフォルトロガーがクエリログを出力するファイルのパスを返す。.</p>
+<p>Gets the current log path that is used the default logger.</p>
 </div></span>
   
 </li>
 
       
         <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#path%3D-class_method" title="path= (class method)">+ (Object) <strong>path=</strong>(path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the log path that is used the default logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#query_log_path-class_method" title="query_log_path (class method)">+ (Object) <strong>query_log_path</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>since 3.0.1. Use <span class='object_link'><a href="QueryLogger.html#path-class_method" title="Groonga::QueryLogger.path (method)">QueryLogger.path</a></span></p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
   <span class="summary_signature">
     
       <a href="#query_log_path%3D-class_method" title="query_log_path= (class method)">+ (Object) <strong>query_log_path=</strong>(path) </a>
@@ -260,12 +308,12 @@
   
   
   
-  
+  <span class="deprecated note title">deprecated</span>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>groongaのデフォルトロガーがクエリログを出力するファイルの パスを指定する。.</p>
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>since 3.0.1. Use <span class='object_link'><a href="QueryLogger.html#path%3D-class_method" title="Groonga::QueryLogger.path= (method)">QueryLogger.path=</a></span></p>
 </div></span>
   
 </li>
@@ -430,7 +478,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="log_path-class_method">
   
-    + (<tt>String</tt>) <strong>log_path</strong> 
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>log_path</strong> 
   
 
   
@@ -438,38 +486,15 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>groongaのデフォルトロガーがログを出力するファイルのパスを返す。</p>
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>since 3.0.1. Use <span class='object_link'><a href="#path-class_method" title="Groonga::Logger.path (method)">path</a></span></p>
+</div></div>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
 
 </div><table class="source_code">
   <tr>
@@ -477,34 +502,16 @@
       <pre class="lines">
 
 
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357</pre>
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 346</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 48</span>
 
-static VALUE
-rb_grn_logger_s_get_log_path (VALUE klass)
-{
-    const char *path;
-
-    path = grn_default_logger_get_path();
-    if (path) {
-	return rb_str_new2(path);
-    } else {
-	return Qnil;
-    }
-}</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_log_path'>log_path</span>
+  <span class='id identifier rubyid_path'>path</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -521,18 +528,15 @@ rb_grn_logger_s_get_log_path (VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>groongaのデフォルトロガーがログを出力するファイルのパスを 指定する。</p>
-
-<p><span class='object_link'><a href="#register-class_method" title="Groonga::Logger.register (method)">register</a></span> で独自のロガーを設定している場合、 設定している独自ロガーは無効になる。</p>
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>since 3.0.1. Use <span class='object_link'><a href="#path%3D-class_method" title="Groonga::Logger.path= (method)">path=</a></span></p>
+</div></div>
 
 
   </div>
 </div>
 <div class="tags">
   
-  
-
 
 </div><table class="source_code">
   <tr>
@@ -540,20 +544,244 @@ rb_grn_logger_s_get_log_path (VALUE klass)
       <pre class="lines">
 
 
-368
-369
-370
-371
-372
-373
-374
-375
-376
-377
-378
-379
-380
-381
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_log_path='>log_path=</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="path-class_method">
+  
+    + (<tt>String or nil</tt>) <strong>path</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets the current log path that is used the default logger.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>The current log path</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String or nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The current log path</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>3.0.1</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 348</span>
+
+static VALUE
+rb_grn_logger_s_get_path (VALUE klass)
+{
+    const char *path;
+    VALUE rb_path = Qnil;
+
+    path = grn_default_logger_get_path();
+    if (path) {
+	rb_path = rb_str_new2(path);
+    }
+    return rb_path;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="path=-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>path=</strong>(path) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets the log path that is used the default logger. If you're using custom
+logger by <span class='object_link'><a href="#register-class_method" title="Groonga::Logger.register (method)">register</a></span>, the log path isn't used. Because it is for the
+default logger.</p>
+
+<p>If you specify nil as path, logging by the default logger is disabled.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Changes the log path for the default logger</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/groonga.log</span><span class='tstring_end'>&quot;</span></span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Disables log by the default logger</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='kw'>nil</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Void</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>path</span>
+      
+      
+        <span class='type'>(<tt>String or nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The log path for the default logger. If nil is specified, logging by the
+default logger is disabled.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>void</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>3.0.1</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
 382
 383
 384
@@ -565,30 +793,42 @@ rb_grn_logger_s_get_log_path (VALUE klass)
 390
 391
 392
-393</pre>
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 368</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 382</span>
 
 static VALUE
-rb_grn_logger_s_set_log_path (VALUE klass, VALUE rb_path)
+rb_grn_logger_s_set_path (VALUE klass, VALUE rb_path)
 {
     grn_bool need_reopen = GRN_FALSE;
-    const char *current_path;
+    const char *old_path = NULL;
+    const char *path = NULL;
 
-    current_path = grn_default_logger_get_path();
-    if (NIL_P(rb_path)) {
-	need_reopen = current_path != NULL;
-	grn_default_logger_set_path(NULL);
-    } else {
-	const char *new_path;
-	new_path = RSTRING_PTR(rb_path);
-	if (!current_path || strcmp(new_path, current_path) != 0) {
-	    need_reopen = GRN_TRUE;
-	}
-	grn_default_logger_set_path(new_path);
+    rb_path = rb_grn_check_convert_to_string(rb_path);
+    if (!NIL_P(rb_path)) {
+        path = StringValuePtr(rb_path);
     }
-    rb_cv_set(klass, &quot;@@log_path&quot;, rb_path);
+
+    old_path = grn_default_logger_get_path();
+    if (!rb_grn_equal_string(old_path, path)) {
+        need_reopen = GRN_TRUE;
+    }
+
+    grn_default_logger_set_path(path);
 
     if (need_reopen) {
 	rb_grn_logger_s_reopen_with_related_object(klass, rb_path);
@@ -604,7 +844,7 @@ rb_grn_logger_s_set_log_path (VALUE klass, VALUE rb_path)
       <div class="method_details ">
   <h3 class="signature " id="query_log_path-class_method">
   
-    + (<tt>String</tt>) <strong>query_log_path</strong> 
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>query_log_path</strong> 
   
 
   
@@ -612,38 +852,15 @@ rb_grn_logger_s_set_log_path (VALUE klass, VALUE rb_path)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>groongaのデフォルトロガーがクエリログを出力するファイルのパスを返す。</p>
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>since 3.0.1. Use <span class='object_link'><a href="QueryLogger.html#path-class_method" title="Groonga::QueryLogger.path (method)">QueryLogger.path</a></span></p>
+</div></div>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div>
-
 
 </div><table class="source_code">
   <tr>
@@ -651,34 +868,16 @@ rb_grn_logger_s_set_log_path (VALUE klass, VALUE rb_path)
       <pre class="lines">
 
 
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 401</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 60</span>
 
-static VALUE
-rb_grn_logger_s_get_query_log_path (VALUE klass)
-{
-    const char *path;
-
-    path = grn_default_query_logger_get_path();
-    if (path) {
-	return rb_str_new2(path);
-    } else {
-	return Qnil;
-    }
-}</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_query_log_path'>query_log_path</span>
+  <span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -695,18 +894,15 @@ rb_grn_logger_s_get_query_log_path (VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>groongaのデフォルトロガーがクエリログを出力するファイルの パスを指定する。</p>
-
-<p><span class='object_link'><a href="#register-class_method" title="Groonga::Logger.register (method)">register</a></span> で独自のロガーを設定している場合、 設定している独自ロガーは無効になる。</p>
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>since 3.0.1. Use <span class='object_link'><a href="QueryLogger.html#path%3D-class_method" title="Groonga::QueryLogger.path= (method)">QueryLogger.path=</a></span></p>
+</div></div>
 
 
   </div>
 </div>
 <div class="tags">
   
-  
-
 
 </div><table class="source_code">
   <tr>
@@ -714,62 +910,16 @@ rb_grn_logger_s_get_query_log_path (VALUE klass)
       <pre class="lines">
 
 
-423
-424
-425
-426
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440
-441
-442
-443
-444
-445
-446
-447
-448</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 423</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 66</span>
 
-static VALUE
-rb_grn_logger_s_set_query_log_path (VALUE klass, VALUE rb_path)
-{
-    grn_bool need_reopen = GRN_FALSE;
-    const char *current_path;
-
-    current_path = grn_default_query_logger_get_path();
-    if (NIL_P(rb_path)) {
-	need_reopen = current_path != NULL;
-	grn_default_query_logger_set_path(NULL);
-    } else {
-	const char *new_path;
-	new_path = RSTRING_PTR(rb_path);
-	if (!current_path || strcmp(new_path, current_path) != 0) {
-	    need_reopen = GRN_TRUE;
-	}
-	grn_default_query_logger_set_path(new_path);
-    }
-    rb_cv_set(klass, &quot;@@query_log_path&quot;, rb_path);
-
-    if (need_reopen) {
-	rb_grn_logger_s_reopen_with_related_object(klass, rb_path);
-    }
-
-    return Qnil;
-}</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_query_log_path='>query_log_path=</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+  <span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -811,6 +961,8 @@ rb_grn_logger_s_set_query_log_path (VALUE klass, VALUE rb_path)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -1016,7 +1168,7 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
 
     rb_grn_scan_options(rb_options,
                         &quot;max_level&quot;, &amp;rb_max_level,
-                        &quot;time&quot;,	     &amp;rb_time,
+                        &quot;time&quot;,      &amp;rb_time,
                         &quot;title&quot;,     &amp;rb_title,
                         &quot;message&quot;,   &amp;rb_message,
                         &quot;location&quot;,  &amp;rb_location,
@@ -1275,11 +1427,11 @@ rb_grn_logger_s_unregister (VALUE klass)
       <pre class="lines">
 
 
-54
-55</pre>
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fin'>fin</span>
 <span class='kw'>end</span></pre>
@@ -1303,14 +1455,14 @@ rb_grn_logger_s_unregister (VALUE klass)
       <pre class="lines">
 
 
-45
-46
-47
-48
-49</pre>
+71
+72
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='comma'>,</span> <span class='id identifier rubyid_timestamp'>timestamp</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guard'>guard</span> <span class='kw'>do</span>
@@ -1337,11 +1489,11 @@ rb_grn_logger_s_unregister (VALUE klass)
       <pre class="lines">
 
 
-51
-52</pre>
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reopen'>reopen</span>
 <span class='kw'>end</span></pre>
@@ -1355,9 +1507,9 @@ rb_grn_logger_s_unregister (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Tue Jan 29 16:06:05 2013 by
+  Generated on Wed May  1 17:23:08 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.6.1 (ruby-1.9.3).
 </div>
 
   

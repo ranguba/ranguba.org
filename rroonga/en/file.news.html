@@ -14,9 +14,9 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="alphabetical_index.html">Index</a> &raquo; 
+    <a href="_index.html">Index</a> &raquo; 
     <span class="title">File: news</span>
   
 
@@ -93,6 +93,43 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="3-0-1">3.0.1: 2013-05-01</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Required groonga &gt;= 3.0.3.</li>
+	<li>Supported assigning weight to value. See <span class='object_link'><a href="Groonga/Table.html#set_column_value-instance_method" title="Groonga::Table#set_column_value (method)">Groonga::Table#set_column_value</a></span>,
+  <span class='object_link'><a href="Groonga/Record.html#initialize-instance_method" title="Groonga::Record#initialize (method)">Groonga::Record#initialize</a></span> and <span class='object_link'><a href="Groonga/Record.html#%5B%5D%3D-instance_method" title="Groonga::Record#[]= (method)">Groonga::Record#[]=</a></span> for details.</li>
+	<li>Renamed to <span class='object_link'><a href="Groonga/QueryLogger.html#path-class_method" title="Groonga::QueryLogger.path (method)">Groonga::QueryLogger.path</a></span> from <span class='object_link'><a href="Groonga/Logger.html#query_log_path-class_method" title="Groonga::Logger.query_log_path (method)">Groonga::Logger.query_log_path</a></span>.</li>
+	<li>Renamed to <span class='object_link'><a href="Groonga/QueryLogger.html#path%3D-class_method" title="Groonga::QueryLogger.path= (method)">Groonga::QueryLogger.path=</a></span> from <span class='object_link'><a href="Groonga/Logger.html#query_log_path%3D-class_method" title="Groonga::Logger.query_log_path= (method)">Groonga::Logger.query_log_path=</a></span>.</li>
+	<li>Renamed to <span class='object_link'><a href="Groonga/Logger.html#path-class_method" title="Groonga::Logger.path (method)">Groonga::Logger.path</a></span> from <span class='object_link'><a href="Groonga/Logger.html#log_path-class_method" title="Groonga::Logger.log_path (method)">Groonga::Logger.log_path</a></span>.</li>
+	<li>Renamed to <span class='object_link'><a href="Groonga/Logger.html#path%3D-class_method" title="Groonga::Logger.path= (method)">Groonga::Logger.path=</a></span> from <span class='object_link'><a href="Groonga/Logger.html#log_path%3D-class_method" title="Groonga::Logger.log_path= (method)">Groonga::Logger.log_path=</a></span>.</li>
+	<li>Added missing &#8220;Packnga &gt;= 0.9.7&#8221; requirement. [Reported by takkanm]</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a memory leak on error.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>takkanm</li>
+</ul>
+<h2 id="3-0-0">3.0.0: 2013-03-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Required groonga &gt;= 3.0.2.</li>
+	<li>Added block support to <span class='object_link'><a href="Groonga/Context.html#create_database-instance_method" title="Groonga::Context#create_database (method)">Groonga::Context#create_database</a></span>. If a
+  block is given, created database is closed on block exit.</li>
+	<li>[experimental] Added <span class='object_link'><a href="Groonga/Array.html#push-instance_method" title="Groonga::Array#push (method)">Groonga::Array#push</a></span>.</li>
+	<li>[experimental] Added <span class='object_link'><a href="Groonga/Array.html#pull-instance_method" title="Groonga::Array#pull (method)">Groonga::Array#pull</a></span>.</li>
+	<li>Added more closed object checks.
+  [GitHub #8][Reported by <span class="caps">KITAITI</span> Makoto]</li>
+	<li>Added block support to <span class='object_link'><a href="Groonga/Context.html#restore-instance_method" title="Groonga::Context#restore (method)">Groonga::Context#restore</a></span>. If a block is
+  given, command and its response are yielded.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li><span class="caps">KITAITI</span> Makoto</li>
+</ul>
 <h2 id="2-1-3">2.1.3: 2013-01-29</h2>
 <h3>Improvements</h3>
 <ul>
@@ -104,19 +141,19 @@
 	</ul></li>
 	<li>[context] Added Context#restore. This method restores command dumped
   by &#8220;grndump&#8221; command. Please see example below:
-<pre class="code ruby"><code><span class='id identifier rubyid_dumped_commands'>dumped_commands</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_“dump'>“dump</span><span class='period'>.</span><span class='id identifier rubyid_grn”'>grn”</span><span class='rparen'>)</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_dumped_commands'>dumped_commands</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_“dump'>“dump</span><span class='period'>.</span><span class='id identifier rubyid_grn”'>grn”</span><span class='rparen'>)</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='rparen'>)</span>
 </code></pre></li>
+	<li>Supported new logger <span class="caps">API</span> in groonga. Old <span class="caps">API</span> isn&#8217;t used anymore.</li>
+	<li>For installing groonga with this gem:
+	<ul>
+		<li>Stopped to install documentation about groonga. See <a href="http://groonga.org/docs/">Web site</a> instead.</li>
+		<li>Stopped to build static library because it isn&#8217;t used by rroonga.</li>
+	</ul></li>
 </ul>
 <h3>Fixes</h3>
 <ul>
-	<li>Added missing Groonga::Logger.</li>
 	<li>[dumper] Reduced needless new lines in dumped commands.</li>
-	<li>For installing groonga with this gem:
-	<ul>
-		<li>Fix the needless install of documents.</li>
-		<li>Fix the needless build of static library.</li>
-	</ul></li>
 </ul>
 <ul>
 	<li>For ranguba project:
@@ -157,7 +194,7 @@
   &#8220;TARGET_TABLE_NAME.index_INDEX_COLUMN_NAME&#8221;.
   e.g.)</li>
 </ul>
-<pre class="code ruby"><code>
+<pre class="code ruby"><code class="ruby">
 $ cat index-dump.sdf
 table_create —name Video —flags TABLE_HASH_KEY —key_type UInt32
 table_create —name Tag —flags TABLE_HASH_KEY —key_type ShortText

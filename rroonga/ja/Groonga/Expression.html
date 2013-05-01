@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
@@ -14,9 +14,9 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (E)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (E)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Expression</span>
@@ -757,6 +757,8 @@ rb_grn_expression_array_reference (VALUE self, VALUE rb_name_or_offset)
         <span class='type'>(<tt>Groonga::Operator::XXX</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>Groonga::Operator::PUSH</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -772,6 +774,8 @@ rb_grn_expression_array_reference (VALUE self, VALUE rb_name_or_offset)
       
         <span class='type'>(<tt>Integer</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
       
       
         &mdash;
@@ -934,6 +938,8 @@ rb_grn_expression_append_constant (int argc, VALUE *argv, VALUE self)
         <span class='type'>(<tt>Groonga::Operator::XXX</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>Groonga::Operator::PUSH</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -949,6 +955,8 @@ rb_grn_expression_append_constant (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>Integer</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
       
       
         &mdash;
@@ -1233,6 +1241,8 @@ rb_grn_expression_compile (VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -1642,6 +1652,8 @@ rb_grn_expression_inspect (VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -2068,7 +2080,7 @@ rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
 
 <p>&lt;pre&gt; !!!ruby</p>
 
-<pre class="code"><code><span class='lbracket'>[</span>
+<pre class="code"><code class=""><span class='lbracket'>[</span>
  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>キーワード前に挿入する文字列1</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>キーワード後に挿入する文字列1</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>キーワード前に挿入する文字列2</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>キーワード後に挿入する文字列2</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
  <span class='comment'># ...,
@@ -2081,7 +2093,7 @@ rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
 
 <p>&lt;pre&gt; !!!ruby</p>
 
-<pre class="code"><code><span class='id identifier rubyid_expression'>expression</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Ruby groonga 検索</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<pre class="code"><code class=""><span class='id identifier rubyid_expression'>expression</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Ruby groonga 検索</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;tag1&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;/tag1&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;tag2&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;/tag2&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_snippet'>snippet</span> <span class='op'>=</span> <span class='id identifier rubyid_expression'>expression</span><span class='period'>.</span><span class='id identifier rubyid_snippet'>snippet</span><span class='lparen'>(</span><span class='id identifier rubyid_tags'>tags</span><span class='rparen'>)</span>
 <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_snippet'>snippet</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Rubyでgroonga使って全文検索、高速検索。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -2462,9 +2474,9 @@ rb_grn_expression_snippet (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Tue Jan 29 16:06:11 2013 by
+  Generated on Wed May  1 17:23:12 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.6.1 (ruby-1.9.3).
 </div>
 
   

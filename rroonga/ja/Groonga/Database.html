@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
@@ -14,9 +14,9 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (D)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (D)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Database</span>
@@ -209,8 +209,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>既存のデータベースを開く。ブロックを指定した場合はブロッ クに開いたデータベースを渡し、ブロックを抜けるときに閉じ る。
-<em>options</em> にはハッシュでオプションを指定する。.</p>
+<p>既存のデータベースを開く。ブロックを指定した場合はブロッ クに開いたデータベースを渡し、ブロックを抜けるときに閉じ る。.</p>
 </div></span>
   
 </li>
@@ -566,6 +565,8 @@
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -603,19 +604,6 @@
     </ul>
   
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="" title="Groonga::Database (class)">Groonga::Database</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 
 </div>
       </li>
@@ -640,6 +628,8 @@
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
         &mdash;
@@ -825,11 +815,11 @@ rb_grn_database_initialize (int argc, VALUE *argv, VALUE self)
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><span class='comment'># 一時データベースを作成:
+      <pre class="example code"><code><span class='comment'># 一時データベースを作成:
 </span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span>
 
 <span class='comment'># 永続データベースを作成:
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/db.groonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre>
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/db.groonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -1044,8 +1034,7 @@ rb_grn_database_s_create (int argc, VALUE *argv, VALUE klass)
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>既存のデータベースを開く。ブロックを指定した場合はブロッ クに開いたデータベースを渡し、ブロックを抜けるときに閉じ る。
-<em>options</em> にはハッシュでオプションを指定する。</p>
+<p>既存のデータベースを開く。ブロックを指定した場合はブロッ クに開いたデータベースを渡し、ブロックを抜けるときに閉じ る。</p>
 
 
   </div>
@@ -1075,6 +1064,8 @@ rb_grn_database_s_create (int argc, VALUE *argv, VALUE klass)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
         &mdash;
@@ -1150,6 +1141,8 @@ rb_grn_database_s_create (int argc, VALUE *argv, VALUE klass)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
         &mdash;
@@ -1432,6 +1425,8 @@ rb_grn_database_close (VALUE self)
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -1637,27 +1632,27 @@ rb_grn_database_defrag (int argc, VALUE *argv, VALUE self)
 <p>すべてのオブジェクトの名前を表示する:</p>
 </div></p>
       
-      <pre class="example code"><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+      <pre class="example code"><code><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
   <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
-<span class='kw'>end</span></pre>
+<span class='kw'>end</span></code></pre>
     
       
         <p class="example_title"><div class='inline'>
 <p>すべてのオブジェクトの名前をID順で表示する:</p>
 </div></p>
       
-      <pre class="example code"><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='symbol'>:order_by</span> <span class='op'>=&gt;</span> <span class='symbol'>:id</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+      <pre class="example code"><code><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='symbol'>:order_by</span> <span class='op'>=&gt;</span> <span class='symbol'>:id</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
   <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
-<span class='kw'>end</span></pre>
+<span class='kw'>end</span></code></pre>
     
       
         <p class="example_title"><div class='inline'>
 <p>すべてのオブジェクトの名前をキー名の降順で表示する:</p>
 </div></p>
       
-      <pre class="example code"><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='symbol'>:order_by</span> <span class='op'>=&gt;</span> <span class='symbol'>:key</span><span class='comma'>,</span> <span class='symbol'>:order</span> <span class='op'>=&gt;</span> <span class='symbol'>:desc</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+      <pre class="example code"><code><span class='id identifier rubyid_database'>database</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='symbol'>:order_by</span> <span class='op'>=&gt;</span> <span class='symbol'>:key</span><span class='comma'>,</span> <span class='symbol'>:order</span> <span class='op'>=&gt;</span> <span class='symbol'>:desc</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
   <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
-<span class='kw'>end</span></pre>
+<span class='kw'>end</span></code></pre>
     
   </div>
 
@@ -1684,6 +1679,8 @@ rb_grn_database_defrag (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
     </li>
@@ -1766,6 +1763,8 @@ rb_grn_database_defrag (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
     </li>
@@ -2047,6 +2046,8 @@ rb_grn_database_each (int argc, VALUE *argv, VALUE self)
         <span class='type'>(<tt>::Hash</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
       
         &mdash;
         <div class='inline'>
@@ -2104,6 +2105,8 @@ rb_grn_database_each (int argc, VALUE *argv, VALUE self)
       
         <span class='type'>(<tt>::Hash</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
       
       
         &mdash;
@@ -2510,9 +2513,9 @@ rb_grn_database_unlock (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Tue Jan 29 16:06:05 2013 by
+  Generated on Wed May  1 17:23:04 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.6.1 (ruby-1.9.3).
 </div>
 
   
