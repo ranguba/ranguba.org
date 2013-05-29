@@ -134,10 +134,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>プラグイン。現在のところ、Rubyでgroongaのプラグインを作成 することはできず、Cで作成された既存のプラグインを登録する
+    <p>プラグイン。現在のところ、Rubyでgroongaのプラグインを作成
+することはできず、Cで作成された既存のプラグインを登録する
 ことができるだけです。</p>
-
 
   </div>
 </div>
@@ -176,9 +175,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>既存のプラグインをデータベースに登録する。.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'><p>既存のプラグインをデータベースに登録する。.</p></div></span>
   
 </li>
 
@@ -200,9 +197,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the plugin file suffix.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the plugin file suffix.</p></div></span>
   
 </li>
 
@@ -224,9 +219,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the system plugins directory.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the system plugins directory.</p></div></span>
   
 </li>
 
@@ -255,9 +248,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>既存のプラグインをデータベースに登録する。</p>
-
+    <p>既存のプラグインをデータベースに登録する。</p>
 
   </div>
 </div>
@@ -271,9 +262,7 @@
         <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(name, options = nil) </span>
         <div class="docstring">
   <div class="discussion">
-    
-<p><em>name</em> で指定した名前のプラグインを登録する。</p>
-
+    <p><em>name</em> で指定した名前のプラグインを登録する。</p>
 
   </div>
 </div>
@@ -291,9 +280,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>登録するプラグインの名前</p>
-</div>
+        <div class='inline'><p>登録するプラグインの名前</p></div>
       
     </li>
   
@@ -309,9 +296,8 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
-</div>
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p></div>
       
     </li>
   
@@ -335,9 +321,7 @@
             
           </span>
           
-            &mdash; <div class='inline'>
-<p>データベースを結びつけるコンテキスト。</p>
-</div>
+            &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。</p></div>
           
         </li>
       
@@ -353,11 +337,8 @@
         <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>({:path = &gt; path, :context =&gt; nil}) </span>
         <div class="docstring">
   <div class="discussion">
-    
-<p><em>:path</em> で指定したパスのプラグインを登録する。</p>
-
+    <p><em>:path</em> で指定したパスのプラグインを登録する。</p>
 <p><em>:context</em> については <em>name</em> を設定した時と同様。</p>
-
 
   </div>
 </div>
@@ -375,9 +356,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p><em>:path</em> と <em>:context</em> を指定したハッシュを指定する。</p>
-</div>
+        <div class='inline'><p><em>:path</em> と <em>:context</em> を指定したハッシュを指定する。</p></div>
       
     </li>
   
@@ -396,7 +375,6 @@
       <pre class="lines">
 
 
-82
 83
 84
 85
@@ -435,10 +413,11 @@
 118
 119
 120
-121</pre>
+121
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 82</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 83</span>
 
 static VALUE
 rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
@@ -496,9 +475,7 @@ rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the plugin file suffix. (e.g. ".so", ".dll" and so on.)</p>
-
+    <p>Returns the plugin file suffix. (e.g. &#8220;.so&#8221;, &#8220;.dll&#8221; and so on.)</p>
 
   </div>
 </div>
@@ -535,14 +512,14 @@ rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
       <pre class="lines">
 
 
-141
 142
 143
 144
-145</pre>
+145
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 141</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 142</span>
 
 static VALUE
 rb_grn_plugin_s_suffix (VALUE klass)
@@ -565,9 +542,7 @@ rb_grn_plugin_s_suffix (VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the system plugins directory.</p>
-
+    <p>Returns the system plugins directory.</p>
 
   </div>
 </div>
@@ -604,14 +579,14 @@ rb_grn_plugin_s_suffix (VALUE klass)
       <pre class="lines">
 
 
-129
 130
 131
 132
-133</pre>
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 129</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 130</span>
 
 static VALUE
 rb_grn_plugin_s_system_plugins_dir (VALUE klass)
@@ -628,7 +603,7 @@ rb_grn_plugin_s_system_plugins_dir (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Wed May  1 17:23:12 2013 by
+  Generated on Wed May 29 16:30:45 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.1 (ruby-1.9.3).
 </div>

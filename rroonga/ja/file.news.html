@@ -93,6 +93,24 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2 id="3-0-2">3.0.2: 2013-05-29</h2>
+<h3>改善</h3>
+<ul>
+	<li>groonga &gt;= 3.0.4を必須にした。</li>
+	<li>Timeのベクターを設定・取得できるようにした。</li>
+	<li>[grndump] インデックスのみのテーブルはダンプしないようにした。これはダンプする必要がないためである。</li>
+	<li><span class='object_link'><a href="Groonga/Record.html#to_json-instance_method" title="Groonga::Record#to_json (method)">Groonga::Record#to_json</a></span>を追加。</li>
+	<li><span class='object_link'><a href="Groonga/IndexColumn.html#add-instance_method" title="Groonga::IndexColumn#add (method)">Groonga::IndexColumn#add</a></span>を追加。</li>
+	<li><span class='object_link'><a href="Groonga/IndexColumn.html#delete-instance_method" title="Groonga::IndexColumn#delete (method)">Groonga::IndexColumn#delete</a></span>を追加。</li>
+	<li><span class='object_link'><a href="Groonga/IndexColumn.html#update-instance_method" title="Groonga::IndexColumn#update (method)">Groonga::IndexColumn#update</a></span>を追加。</li>
+	<li><span class='object_link'><a href="Groonga/IndexColumn.html#%5B%5D%3D-instance_method" title="Groonga::IndexColumn#[]= (method)">Groonga::IndexColumn#[]=</a></span>を非推奨にした。代わりに<span class='object_link'><a href="Groonga/IndexColumn.html#add-instance_method" title="Groonga::IndexColumn#add (method)">Groonga::IndexColumn#add</a></span>、<span class='object_link'><a href="Groonga/IndexColumn.html#delete-instance_method" title="Groonga::IndexColumn#delete (method)">Groonga::IndexColumn#delete</a></span>、<span class='object_link'><a href="Groonga/IndexColumn.html#update-instance_method" title="Groonga::IndexColumn#update (method)">Groonga::IndexColumn#update</a></span>を使うこと。</li>
+	<li><span class='object_link'><a href="Groonga/Table.html#have_n_sub_records_space%3F-instance_method" title="Groonga::Table#have_n_sub_records_space? (method)">Groonga::Table#have_n_sub_records_space?</a></span>を追加。</li>
+	<li>[grndump] スキーマのダンプを無効にしているときは&quot;register PLUGIN&quot;もダンプしないようにした。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>[grndump] 参照されているテーブルよりも前に参照しているテーブルがダンプされることがある問題を修正。</li>
+</ul>
 <h2 id="3-0-1">3.0.1: 2013-05-01</h2>
 <h3>改善</h3>
 <ul>
@@ -827,7 +845,7 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Wed May  1 17:23:02 2013 by
+  Generated on Wed May 29 16:30:39 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.1 (ruby-1.9.3).
 </div>

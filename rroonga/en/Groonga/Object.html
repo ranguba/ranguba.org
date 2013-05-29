@@ -811,7 +811,7 @@ rb_grn_object_array_reference (VALUE self, VALUE rb_id)
     context = rb_grn_object-&gt;context;
     object = rb_grn_object-&gt;object;
     if (!object)
-	return Qnil;
+        return Qnil;
 
     id = NUM2UINT(rb_id);
     range_id = grn_obj_get_range(context, object);
@@ -822,43 +822,43 @@ rb_grn_object_array_reference (VALUE self, VALUE rb_id)
       case GRN_TABLE_PAT_KEY:
       case GRN_TABLE_DAT_KEY:
       case GRN_TABLE_NO_KEY:
-	GRN_OBJ_INIT(&amp;value, GRN_BULK, 0, GRN_ID_NIL);
-	break;
+        GRN_OBJ_INIT(&amp;value, GRN_BULK, 0, GRN_ID_NIL);
+        break;
       case GRN_TYPE:
       case GRN_ACCESSOR: /* FIXME */
-	GRN_OBJ_INIT(&amp;value, GRN_BULK, 0, range_id);
-	break;
+        GRN_OBJ_INIT(&amp;value, GRN_BULK, 0, range_id);
+        break;
       case GRN_COLUMN_VAR_SIZE:
       case GRN_COLUMN_FIX_SIZE:
-	switch (object-&gt;header.flags &amp; GRN_OBJ_COLUMN_TYPE_MASK) {
-	  case GRN_OBJ_COLUMN_VECTOR:
-	    GRN_OBJ_INIT(&amp;value, GRN_VECTOR, 0, range_id);
-	    break;
-	  case GRN_OBJ_COLUMN_SCALAR:
-	    GRN_OBJ_INIT(&amp;value, GRN_BULK, 0, range_id);
-	    break;
-	  default:
-	    rb_raise(rb_eGrnError, &quot;unsupported column type: %u: %s&quot;,
-		     range_type, rb_grn_inspect(self));
-	    break;
-	}
-	break;
+        switch (object-&gt;header.flags &amp; GRN_OBJ_COLUMN_TYPE_MASK) {
+          case GRN_OBJ_COLUMN_VECTOR:
+            GRN_OBJ_INIT(&amp;value, GRN_VECTOR, 0, range_id);
+            break;
+          case GRN_OBJ_COLUMN_SCALAR:
+            GRN_OBJ_INIT(&amp;value, GRN_BULK, 0, range_id);
+            break;
+          default:
+            rb_raise(rb_eGrnError, &quot;unsupported column type: %u: %s&quot;,
+                     range_type, rb_grn_inspect(self));
+            break;
+        }
+        break;
       case GRN_COLUMN_INDEX:
-	GRN_UINT32_INIT(&amp;value, 0);
-	break;
+        GRN_UINT32_INIT(&amp;value, 0);
+        break;
       default:
-	rb_raise(rb_eGrnError,
-		 &quot;unsupported type: %s&quot;, rb_grn_inspect(self));
-	break;
+        rb_raise(rb_eGrnError,
+                 &quot;unsupported type: %s&quot;, rb_grn_inspect(self));
+        break;
     }
 
     grn_obj_get_value(context, object, id, &amp;value);
     exception = rb_grn_context_to_exception(context, self);
     if (NIL_P(exception))
-	rb_value = GRNVALUE2RVAL(context, &amp;value, range, self);
+        rb_value = GRNVALUE2RVAL(context, &amp;value, range, self);
     grn_obj_unlink(context, &amp;value);
     if (!NIL_P(exception))
-	rb_exc_raise(exception);
+        rb_exc_raise(exception);
 
     return rb_value;
 }</pre>
@@ -894,14 +894,14 @@ rb_grn_object_array_reference (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
-1355
-1356
-1357
-1358
-1359</pre>
+1390
+1391
+1392
+1393
+1394</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1355</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1390</span>
 
 static VALUE
 rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -939,14 +939,14 @@ rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1366
-1367
-1368
-1369
-1370</pre>
+1401
+1402
+1403
+1404
+1405</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1366</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1401</span>
 
 static VALUE
 rb_grn_object_append_value (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -995,25 +995,25 @@ rb_grn_object_append_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1409
-1410
-1411
-1412
-1413
-1414
-1415
-1416
-1417
-1418
-1419
-1420
-1421
-1422
-1423
-1424</pre>
+1444
+1445
+1446
+1447
+1448
+1449
+1450
+1451
+1452
+1453
+1454
+1455
+1456
+1457
+1458
+1459</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1409</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1444</span>
 
 static VALUE
 rb_grn_object_builtin_p (VALUE self)
@@ -1023,10 +1023,10 @@ rb_grn_object_builtin_p (VALUE self)
     grn_bool builtin = GRN_FALSE;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
-			      NULL, NULL, NULL, NULL);
+                              NULL, NULL, NULL, NULL);
 
     if (context &amp;&amp; object) {
-	builtin = grn_obj_is_builtin(context, object);
+        builtin = grn_obj_is_builtin(context, object);
     }
 
     return CBOOL2RVAL(builtin);
@@ -1093,10 +1093,10 @@ rb_grn_object_close (VALUE self)
 
     rb_grn_object = SELF(self);
     rb_grn_object_deconstruct(rb_grn_object, &amp;object, &amp;context,
-			      NULL, NULL, NULL, NULL);
+                              NULL, NULL, NULL, NULL);
     if (object &amp;&amp; context) {
-	rb_grn_object_run_finalizer(context, object, rb_grn_object);
-	grn_obj_close(context, object);
+        rb_grn_object_run_finalizer(context, object, rb_grn_object);
+        grn_obj_close(context, object);
     }
 
     return Qnil;
@@ -1271,20 +1271,20 @@ rb_grn_object_get_domain (VALUE self)
     rb_grn_object = SELF(self);
     object = rb_grn_object-&gt;object;
     if (!object)
-	return Qnil;
+        return Qnil;
 
     context = rb_grn_object-&gt;context;
     domain = object-&gt;header.domain;
     if (domain == GRN_ID_NIL) {
-	return Qnil;
+        return Qnil;
     } else {
-	grn_obj *domain_object;
+        grn_obj *domain_object;
 
-	domain_object = grn_ctx_at(context, domain);
-	if (domain_object)
-	    return GRNOBJECT2RVAL(Qnil, context, domain_object, GRN_FALSE);
-	else
-	    return UINT2NUM(domain);
+        domain_object = grn_ctx_at(context, domain);
+        if (domain_object)
+            return GRNOBJECT2RVAL(Qnil, context, domain_object, GRN_FALSE);
+        else
+            return UINT2NUM(domain);
     }
 }</pre>
     </td>
@@ -1369,11 +1369,11 @@ rb_grn_object_get_id (VALUE self)
 
     rb_grn_object = SELF(self);
     if (!rb_grn_object-&gt;object)
-	return Qnil;
+        return Qnil;
 
     id = grn_obj_id(rb_grn_object-&gt;context, rb_grn_object-&gt;object);
     if (id == GRN_ID_NIL)
-	return Qnil;
+        return Qnil;
     else
         return UINT2NUM(id);
 }</pre>
@@ -1550,16 +1550,16 @@ rb_grn_object_get_name (VALUE self)
 
     rb_grn_object = SELF(self);
     if (!rb_grn_object-&gt;object)
-	return Qnil;
+        return Qnil;
 
     name_size = grn_obj_name(rb_grn_object-&gt;context, rb_grn_object-&gt;object,
-			     NULL, 0);
+                             NULL, 0);
     if (name_size == 0)
-	return Qnil;
+        return Qnil;
 
     name = xmalloc(name_size);
     grn_obj_name(rb_grn_object-&gt;context, rb_grn_object-&gt;object,
-		 name, name_size);
+                 name, name_size);
     rb_name = rb_str_new(name, name_size);
     xfree(name);
 
@@ -1648,14 +1648,14 @@ rb_grn_object_get_path (VALUE self)
 
     rb_grn_object = SELF(self);
     if (!rb_grn_object-&gt;object)
-	return Qnil;
+        return Qnil;
 
     path = grn_obj_path(rb_grn_object-&gt;context, rb_grn_object-&gt;object);
 
     if (!path)
-	return Qnil;
+        return Qnil;
     else
-	return rb_str_new2(path);
+        return rb_str_new2(path);
 }</pre>
     </td>
   </tr>
@@ -1724,7 +1724,7 @@ rb_grn_object_persistent_p (VALUE self)
 
     rb_grn_object = SELF(self);
     if (!rb_grn_object-&gt;object)
-	return Qnil;
+        return Qnil;
 
     return CBOOL2RVAL(rb_grn_object-&gt;object-&gt;header.flags &amp; GRN_OBJ_PERSISTENT);
 }</pre>
@@ -1759,14 +1759,14 @@ rb_grn_object_persistent_p (VALUE self)
       <pre class="lines">
 
 
-1377
-1378
-1379
-1380
-1381</pre>
+1412
+1413
+1414
+1415
+1416</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1377</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1412</span>
 
 static VALUE
 rb_grn_object_prepend_value (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -1872,20 +1872,20 @@ rb_grn_object_get_range (VALUE self)
     rb_grn_object = SELF(self);
     object = rb_grn_object-&gt;object;
     if (!object)
-	return Qnil;
+        return Qnil;
 
     context = rb_grn_object-&gt;context;
     range = grn_obj_get_range(context, object);
     if (range == GRN_ID_NIL) {
-	return Qnil;
+        return Qnil;
     } else {
-	grn_obj *range_object;
+        grn_obj *range_object;
 
-	range_object = grn_ctx_at(context, range);
-	if (range_object)
-	    return GRNOBJECT2RVAL(Qnil, context, range_object, GRN_FALSE);
-	else
-	    return UINT2NUM(range);
+        range_object = grn_ctx_at(context, range);
+        if (range_object)
+            return GRNOBJECT2RVAL(Qnil, context, range_object, GRN_FALSE);
+        else
+            return UINT2NUM(range);
     }
 }</pre>
     </td>
@@ -1920,28 +1920,28 @@ rb_grn_object_get_range (VALUE self)
       <pre class="lines">
 
 
-1389
-1390
-1391
-1392
-1393
-1394
-1395
-1396
-1397
-1398
-1399
-1400
-1401
-1402
-1403
-1404
-1405
-1406
-1407</pre>
+1424
+1425
+1426
+1427
+1428
+1429
+1430
+1431
+1432
+1433
+1434
+1435
+1436
+1437
+1438
+1439
+1440
+1441
+1442</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1389</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1424</span>
 
 static VALUE
 rb_grn_object_remove (VALUE self)
@@ -1952,7 +1952,7 @@ rb_grn_object_remove (VALUE self)
 
     rb_grn_object = SELF(self);
     if (!rb_grn_object-&gt;object)
-	return Qnil;
+        return Qnil;
 
     context = rb_grn_object-&gt;context;
     rc = grn_obj_remove(context, rb_grn_object-&gt;object);
@@ -2029,7 +2029,7 @@ rb_grn_object_temporary_p (VALUE self)
 
     rb_grn_object = SELF(self);
     if (!rb_grn_object-&gt;object)
-	return Qnil;
+        return Qnil;
 
     return CBOOL2RVAL(!(rb_grn_object-&gt;object-&gt;header.flags &amp; GRN_OBJ_PERSISTENT));
 }</pre>
@@ -2096,12 +2096,12 @@ rb_grn_object_unlink (VALUE self)
 
     rb_grn_object = SELF(self);
     rb_grn_object_deconstruct(rb_grn_object, &amp;object, &amp;context,
-			      NULL, NULL, NULL, NULL);
+                              NULL, NULL, NULL, NULL);
     if (object &amp;&amp; context) {
-	if (!(rb_grn_object-&gt;object-&gt;header.flags &amp; GRN_OBJ_PERSISTENT)) {
-	    rb_grn_object_run_finalizer(context, object, rb_grn_object);
-	}
-	grn_obj_unlink(context, object);
+        if (!(rb_grn_object-&gt;object-&gt;header.flags &amp; GRN_OBJ_PERSISTENT)) {
+            rb_grn_object_run_finalizer(context, object, rb_grn_object);
+        }
+        grn_obj_unlink(context, object);
     }
 
     return Qnil;
