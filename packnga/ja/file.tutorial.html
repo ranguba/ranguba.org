@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
@@ -14,9 +14,9 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -96,14 +96,14 @@
 <p>このページでは、実際のPackngaのRakefileを参考に、Packngaの使用方法を紹介します。</p>
 <h2>インストール</h2>
 <p>PackngaはRubygemsからインストールできます。</p>
-<pre class="code command_line"><code>% sudo gem install packnga
+<pre class="code command_line"><code class="command_line">% sudo gem install packnga
 </code></pre>
 <h2>タスク生成の準備</h2>
 <p>Packngaを使用する前に、Gem::Specification.newメソッドにて <code>spec</code> を作成します。この <code>spec</code> を用いてPackngaはタスクを生成します。次にその例を示します。</p>
 <h3>Gem::Specification.newメソッドを用いたspecの作成</h3>
 <p>ここではgemspecファイルにてGem::Specification.newメソッドを使ってspecを作成する方法を紹介します。
 次の例を見てください。</p>
-<pre class="code ruby"><code><span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='const'>Packnga</span><span class='op'>::</span><span class='const'>VERSION</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='const'>Packnga</span><span class='op'>::</span><span class='const'>VERSION</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
 
 <span class='id identifier rubyid_readme_path'>readme_path</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_base_dir'>base_dir</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>README.textile</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_entries'>entries</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_readme_path'>readme_path</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^h2\.\s(.*)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -156,14 +156,14 @@
 </code></pre>
 <p>次に、Rakefileでgemspecファイルで作成したspecを取得します。
 次のようなコードをRakefileに書くとspecを取得できます。</p>
-<pre class="code ruby"><code><span class='id identifier rubyid_helper'>helper</span> <span class='op'>=</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>GemHelper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_base_dir'>base_dir</span><span class='rparen'>)</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_helper'>helper</span> <span class='op'>=</span> <span class='const'>Bundler</span><span class='op'>::</span><span class='const'>GemHelper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_base_dir'>base_dir</span><span class='rparen'>)</span>
 <span class='id identifier rubyid_helper'>helper</span><span class='period'>.</span><span class='id identifier rubyid_install'>install</span>
 <span class='id identifier rubyid_spec'>spec</span> <span class='op'>=</span> <span class='id identifier rubyid_helper'>helper</span><span class='period'>.</span><span class='id identifier rubyid_gemspec'>gemspec</span>
 </code></pre>
 <h3>Jeweler::Task.newによって生成されるオブジェクト</h3>
 <p>RakefileでJeweler::Tasks.newメソッドを使ってspecを作成する場合は、次の例を見てください。
 この例のコードはPackngaの以前のRakefileに書かれていたものです。</p>
-<pre class="code ruby"><code><span class='id identifier rubyid_spec'>spec</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_spec'>spec</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='const'>Jeweler</span><span class='op'>::</span><span class='const'>Tasks</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__spec'>_spec</span><span class='op'>|</span>
   <span class='id identifier rubyid_spec'>spec</span> <span class='op'>=</span> <span class='id identifier rubyid__spec'>_spec</span>
   <span class='id identifier rubyid_spec'>spec</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>packnga</span><span class='tstring_end'>&quot;</span></span>
@@ -194,7 +194,7 @@
 	<dd>リファレンスやパッケージをアップロードしたり、そこまでの準備を行うタスクを定義します。gitへのリリースのタグを打ったり、gemをユーザインストールしてテストを実行するためのタスクを定義します。</dd>
 </dl>
 <p>それぞれ、タスクを生成するためには次のようにします。</p>
-<pre class="code ruby"><code>
+<pre class="code ruby"><code class="ruby">
 <span class='const'>Packnga</span><span class='op'>::</span><span class='const'>DocumentTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
 <span class='const'>Packnga</span><span class='op'>::</span><span class='const'>ReleaseTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span>
 </code></pre>
@@ -202,7 +202,7 @@
 <p>DocumentTaskやReleaseTaskのオブジェクトを生成する際に、ブロックにて変更できるパラメータがあります。
 ここでは例として、ドキュメントのベースとなるようなディレクトリの設定を行います。このディレクトリの下に、ドキュメント関係のファイルが生成されるようになります。この値を独自に設定したい場合には次のようにRakefileに記述します。</p>
 <p>また、このベースディレクトリの値は両方のクラスにて同じものを指定してください。</p>
-<pre class="code ruby"><code>
+<pre class="code ruby"><code class="ruby">
 <span class='const'>Packnga</span><span class='op'>::</span><span class='const'>DocumentTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
   <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_base_dir'>base_dir</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>doc/</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span>
@@ -214,9 +214,9 @@
 <p>他にも設定できるパラメータがあります。詳しくはリファレンスマニュアルをご覧ください。</p></div></div>
 
     <div id="footer">
-  Generated on Wed Dec 26 18:10:27 2012 by
+  Generated on Fri Jun  7 17:02:59 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.6.1 (ruby-1.9.3).
 </div>
 
   

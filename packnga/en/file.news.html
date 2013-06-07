@@ -14,9 +14,9 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -93,6 +93,37 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2>0.9.8: 2013-06-07</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>[ReferenceTask] Used <span class="caps">YARD</span> I18n feature for translating references.
+   For it, <span class="caps">YARD</span> 0.8.6.1 or later is required.</li>
+	<li>[ReferenceTask] Supported replacing filenames which aren&#8217;t
+   supported by GitHub Pages in &#8220;reference:publication:generate&#8221; task.
+   This task renames the fimename &#8220;_index.html&#8221; (methods list page) to
+   &#8220;alphabetical_index.html&#8221;, because GitHub Pages doesn&#8217;t support
+   files which their filenames start with &#8220;_&#8221;.</li>
+	<li>[ReferenceTask] Added the task (&#8220;release:references:upload&#8221;) to
+   copy generated references to a <span class="caps">HTML</span> directory.
+   A <span class="caps">HTML</span> directory, for example, is a repository of GitHub Pages. In
+   this case, this task is used to commit references to GitHub Pages.</li>
+	<li>[Referencetask] Dropped support to upload .htaccess.</li>
+	<li>[ReleaseTask] Used the version in your gemspec as a new version
+   when no version is specified as an argument by &#8220;release:info:update&#8221;
+   task. A new version is used to replace <span class="caps">HTML</span> index files.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>[ReferenceTask] Generated &#8220;reference path&#8221; correctly in merged PO
+   files.
+  &#8220;reference path&#8221; is a path of a file including translated message
+   (msgid) and it&#8217;s attached to its corresponded msgid.</li>
+	<li>[ReleaseTask] Removed needless replaces in <span class="caps">HTML</span> files in the
+   task &#8220;release:info:update&#8221;.</li>
+	<li>[ReferenceTask] Added missing description for the task
+   &#8220;reference:publication:generate&#8221; to generate references for
+   publication.</li>
+</ul>
 <h2>0.9.7: 2012-12-26</h2>
 <h3>Improvements</h3>
 <ul>

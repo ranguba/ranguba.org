@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
@@ -14,9 +14,9 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -95,21 +95,25 @@
     <div id="content"><div id='filecontents'><h1>リリース手順</h1>
 <h2>news.textileに変更点のまとめ</h2>
 <p>前回のリリース時から現在までの変更点をnews.textileにまとめるため、下記コマンドを実行してgitのコミットログを表示する。</p>
-<pre class="code command_line"><code>$ git log -p --reverse （前回のリリースバージョン)..
+<pre class="code command_line"><code class="command_line">$ git log -p --reverse （前回のリリースバージョン)..
 </code></pre>
-<p>ログを&quot;Author:&#8220;で検索しながら、ユーザにとって知る必要があるもの（ユーザに見える情報）のコミットログのみを抜き出す。
-次に、抜き出したコミットログを１つずつ見て、その先頭にカテゴリ名がある場合は、&#8221;:&#8220;を削除してカテゴリ名を&#8221;[&#8220;と&#8221;]&quot;で囲む。
+<p>ログを&quot;Author:&quot;で検索しながら、ユーザにとって知る必要があるもののコミットログのみを抜き出す。</p>
+<p>ユーザにとって必要な情報とは、仕様の変更や新しい機能の追加など、ユーザーがリリースするライブラリを使う上で影響ある情報である。
+逆に、リファクタリング、テストの変更、変数名の変更など、ユーザーが直接意識しない部分については書く必要はない。</p>
+<p>次に、抜き出したコミットログを１つずつ見て、その先頭にカテゴリ名がある場合は、&quot;:&#8220;を削除してカテゴリ名を&#8221;[&#8220;と&#8221;]&quot;で囲む。
 カテゴリ名を除いたログの先頭にある単語を過去形にし、頭文字を大文字にする。
-その後、ログを次のように分類する。
-機能などに新しく追加されたものに関してはImprovement,
-動作の変更などはChanges,
-バグの修正など前バージョンまでにあった問題を修正したものはFixesに記述する。
-また、コミットログの行末に[人名]がある場合はその人名をThanks以下に書く。
+その後、ログを次のように分類する。</p>
+<ul>
+	<li>Improvements: 機能などを新しく追加したコミットのログ</li>
+	<li>Changes: 動作の変更など、今まであったものを変更したログ</li>
+	<li>Fixes: バグの修正など前バージョンまでにあった問題を修正したログ</li>
+</ul>
+<p>また、コミットログの行末に[人名]がある場合は、Thanksという分類を作って、その人名をThanks以下に書く。
 さらにREADMEにあるThanks以下にも名前を追加する。</p>
 <p>この作業をリリース予定日よりも前に行った場合は、目に見えるところにコミットIDをメモしておく。
 ただし、news.textileだと次のrake reference:po:updateで翻訳対象になってしまいノイズになってしまうので注意すること。</p>
 <h3>news.textileの1リリース分のテンプレート</h3>
-<pre class="code ruby"><code>
+<pre class="code ruby"><code class="ruby">
 h2. （リリースするバージョン）: リリース日（yyyy-mm-dd）
 
 h3. 改良
@@ -124,77 +128,103 @@ h3. 修正
 
 * 
 
-h3. Thanks
+h3. 感謝
+
+* 
 </code></pre>
 <h2>日本語訳の作成</h2>
 <p>下記コマンドを実行してja.poを更新する。</p>
-<pre class="code command_line"><code>$ rake reference:po:update
+<pre class="code command_line"><code class="command_line">$ rake reference:po:update
 </code></pre>
 <p>その後、ja.poを開いて、各msgid（翻訳対象となる文章）に対応するmsgstrに対応する和訳を作成する。
 fuzzyを検索して見つかったら訳を確認し必要なら修正を行う。その後fuzzyを消す。</p>
 <h2>リファレンスの確認</h2>
 <p>下記コマンドを実行して、リファレンスの翻訳を行う。</p>
-<pre class="code command_line"><code>$ rake reference:translate
+<pre class="code command_line"><code class="command_line">$ rake reference:translate
 </code></pre>
 <p>doc/reference/ja/file.news.htmlなどのja.poを編集した箇所が正しく翻訳されているか確認する。</p>
 <h2>バージョンとリリース日の更新</h2>
-<p>下記コマンドを入力して、プロジェクトページ（html/index.html、html/index.html.ja）の最新バージョンとリリース日をそれぞれ今回のリリースに合わせたものに更新する。</p>
-<pre class="code command_line"><code>$ rake release:info:update OLD_VERSION=（前回リリース時のバージョン） OLD_RELEASE_DATE=（前回リリース日） RELEASE_DATE=（今回のリリース日）
+<p>ranguba.orgのindexページ（index.html、ja/index.html）の最新バージョンとリリース日をそれぞれ今回のリリースに合わせたものに更新する。</p>
+<p>まず、任意の位置で次のコマンドを実行して、ranguba.orgのリポジトリをcloneする。</p>
+<pre class="code command_line"><code class="command_line">$ git clone git@github.com:ranguba/ranguba.org.git
 </code></pre>
+<p>そして、リリースするライブラリのRakefileに次を追加する。</p>
+<pre class="code ruby"><code class="ruby"><span class='const'>Packnga</span><span class='op'>::</span><span class='const'>ReleaseTask</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_spec'>spec</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_task'>task</span><span class='op'>|</span>
+  <span class='id identifier rubyid_task'>task</span><span class='period'>.</span><span class='id identifier rubyid_index_html_dir'>index_html_dir</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/path/to/ranguba.org</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+</code></pre>
+<p>その後、次のコマンドを実行して最新バージョンとリリース日を更新する。</p>
+<pre class="code command_line"><code class="command_line">$ rake release:info:update OLD_VERSION=（前回リリース時のバージョン） OLD_RELEASE_DATE=（前回リリース日） RELEASE_DATE=（今回のリリース日）
+</code></pre>
+<h2>.gemspecの確認</h2>
+<p>（パッケージ名）.gemspecの中身が問題ないか確認する。特に初めてリリースするときは注意すること。</p>
+<ul>
+	<li>.yardoptsをspec.filesに指定しているか（rubydoc.infoでドキュメントを閲覧するときに必要）</li>
+	<li>spec.files+=のつもりでspec.files=になっていないか</li>
+	<li>その他、spec.files=へ指定するファイルは過不足ないか・間違っていないか（diredなどでファイル一覧を見ながら作業する）</li>
+	<li>依存関係（add_runtime/developement_dependency）は間違っていないか</li>
+</ul>
 <h2>gemパッケージの作成</h2>
 <p>下記コマンドを打ってアップロード用のgemパッケージをビルドする。</p>
-<pre class="code command_line"><code>$ make clean
+<pre class="code command_line"><code class="command_line">$ make clean  # rroongaのみ必要
 $ rake build
 </code></pre>
 <h2>gemパッケージの動作確認</h2>
 <p>そのgemパッケージの動作を確認するため、下記コマンドを打ってローカル環境にインストールする。</p>
-<pre class="code command_line"><code>$ gem1.9.1 install pkg/（パッケージ名）-（今回リリースバージョン番号）.gem --user-install
+<pre class="code command_line"><code class="command_line">$ gem1.9.1 install pkg/（パッケージ名）-（今回リリースバージョン番号）.gem --user-install
 </code></pre>
 <p>インストールが成功すると/home/(ユーザ名)/.gem/ruby/1.9.1/gems/（パッケージ名）-（今回リリースバージョン番号）/にインストールされる。
 このディレクトリに移動して、テストを実行し動作を確認する。</p>
-<pre class="code command_line"><code>$ NO_MAKE=yes ruby1.9.1 test/run-test.rb
+<pre class="code command_line"><code class="command_line">$ NO_MAKE=yes ruby1.9.1 test/run-test.rb
 </code></pre>
 <h2>news.textileの最終的なまとめとリファレンス作成</h2>
-<p>コミットIDをメモしていた場合、下記コマンドを実行してログを表示する。</p>
-<pre class="code command_line"><code>git log --reverse -p （前回のリリース時のバージョン）..（メモしていたコミットID）
+<p>前回のリリース時から現在までの変更点をnews.textileにまとめるため、下記コマンドを実行してgitのコミットログを表示する。</p>
+<pre class="code command_line"><code class="command_line">$ git log -p --reverse （前回のリリースバージョン)..
 </code></pre>
-<p>ログを&quot;Author:&#8220;で検索しながら、ユーザにとって知る必要があるもの（ユーザに見える情報）のコミットログのみを抜き出す。
-次に、抜き出したコミットログを１つずつ見て、その先頭にカテゴリ名がある場合は、&#8221;:&#8220;を削除してカテゴリ名を&#8221;[&#8220;と&#8221;]&quot;で囲む。
+<p>ログを&quot;Author:&quot;で検索しながら、ユーザにとって知る必要があるもののコミットログのみを抜き出す。</p>
+<p>ユーザにとって必要な情報とは、仕様の変更や新しい機能の追加など、ユーザーがリリースするライブラリを使う上で影響ある情報である。
+逆に、リファクタリング、テストの変更、変数名の変更など、ユーザーが直接意識しない部分については書く必要はない。</p>
+<p>次に、抜き出したコミットログを１つずつ見て、その先頭にカテゴリ名がある場合は、&quot;:&#8220;を削除してカテゴリ名を&#8221;[&#8220;と&#8221;]&quot;で囲む。
 カテゴリ名を除いたログの先頭にある単語を過去形にし、頭文字を大文字にする。
-その後、ログを次のように分類する。
-機能などに新しく追加されたものに関してはImprovement,
-動作の変更などはChanges,
-バグの修正など前バージョンまでにあった問題を修正したものはFixesに記述する。
-また、コミットログの行末に[人名]がある場合はその人名をThanks以下に書く。
+その後、ログを次のように分類する。</p>
+<ul>
+	<li>Improvements: 機能などを新しく追加したコミットのログ</li>
+	<li>Changes: 動作の変更など、今まであったものを変更したログ</li>
+	<li>Fixes: バグの修正など前バージョンまでにあった問題を修正したログ</li>
+</ul>
+<p>また、コミットログの行末に[人名]がある場合は、Thanksという分類を作って、その人名をThanks以下に書く。
 さらにREADMEにあるThanks以下にも名前を追加する。</p>
 <p>下記コマンドを実行してja.poを更新する。</p>
-<pre class="code command_line"><code>$ rake reference:po:update
+<pre class="code command_line"><code class="command_line">$ rake reference:po:update
 </code></pre>
 <p>その後、ja.poを開いて、各msgid（翻訳対象となる文章）に対応するmsgstrに対応する和訳を作成する。
 fuzzyを検索して見つかったら訳を確認し必要なら修正を行う。その後fuzzyを消す。</p>
 <p>さらに下記コマンドを実行して、リファレンスの翻訳を行う。</p>
-<pre class="code command_line"><code>$ rake reference:translate
+<pre class="code command_line"><code class="command_line">$ rake reference:translate
 </code></pre>
 <p>doc/reference/ja/file.news.htmlなどのja.poを編集した箇所が正しく翻訳されているか確認する。</p>
 <h2>これまでの変更をpush</h2>
-<p>ここまでに行った変更をcommitしてgit pushする。</p>
+<p>ここまでに行った変更をcommitしてpushする。</p>
 <h2>リリースバージョンのタグの作成とrubygems.orgへのパッケージのアップロード</h2>
 <p>下記コマンドを実行してリリースバージョンのタグを作成し、パッケージをrubygems.orgへアップロードする。</p>
-<pre class="code command_line"><code>$ rake release
+<pre class="code command_line"><code class="command_line">$ rake release
 </code></pre>
-<h2>rubyforgeにパッケージをアップロード</h2>
-<p>下記コマンドを実行してアップロードする。</p>
-<pre class="code command_line"><code>$ ruby1.8 -S rake release:rubyforge:upload
-$ ruby1.8 -S rake release:reference:publish
+<h2>リファレンスをranguba.orgにアップロード</h2>
+<p>次のコマンドを実行して、リファレンスをranguba.orgのリポジトリ内にコピーする。</p>
+<pre class="code command_line"><code class="command_line">$ rake reference:publication:generate
+$ rake release:references:upload
 </code></pre>
-<p>rroonga以外の場合、index.html関連はrake release:html:publishでアップロードされないので、rroongaに移動してから下記コマンドを実行する。</p>
-<pre class="code command_line"><code>$ ruby1.9.1 -S rake release:html:publish
+<p>その後、 次のコマンドを実行してranguba.orgのリポジトリをcloneしたディレクトリに移動する。</p>
+<pre class="code ruby"><code class="ruby">
+$ cd /path/to/ranguba.org
 </code></pre>
-<h2>メーリングリストにリリースの周知</h2>
+<p>そして、コピーにより生じた変更をranguba.orgのリポジトリにpushする。
+ranguba.orgはGithub Pagesを使っているので、pushすると自動的にranguba.orgのサイトも更新される。
+h2. メーリングリストにリリースの周知</p>
 <p>メーリングリストにリリースした旨を書いたメールを流す。
 日本語の他、英語のメーリングリストにもリリースした旨を英語で書いたメールを流す。</p>
-<p>h3.日本語でのメールの具体例</p>
-<pre class="code ruby"><code>
+<h3>日本語でのメールの具体例</h3>
+<pre class="code ruby"><code class="ruby">
 吉原です。
 
 （最新バージョンをリリースしたことを書く）
@@ -252,7 +282,7 @@ irbを使ったrroongaのチュートリアルはこちらにあります。
     mallowlabsさん
 </code></pre>
 <h3>英語でのメールの具体例</h3>
-<pre class="code ruby"><code>
+<pre class="code ruby"><code class="ruby">
 Everyone,
 
 （rroongaの最新バージョンをリリースしたことを書く）
@@ -318,18 +348,13 @@ Please see below changes since ver.1.2.1.
 yoshihara
 (yoshihara at clear-code.com)
 </code></pre>
-<h2>rubyforgeのニュースを更新</h2>
-<p>rroonga以外の場合、もとのディレクトリに戻る。
-下記コマンドを入力してrubyforgeの最新ニュースを更新する。</p>
-<pre class="code command_line"><code>$ rake releace:rubyforge:news:post
-</code></pre>
 <h2>次回リリース時のバージョン番号の設定</h2>
-<p>rroongaはext/groonga/rb-grn.h、それ以外はlib/（パッケージ名）/version.rbにある、RB_GRN_MAJOR_VERSION,RB_GRN_MINOR_VERSION,RB_GRN_MICRO_VERSIONの値を次回リリース時のバージョンの値に変更する。</p></div></div>
+<p>rroongaはext/groonga/rb-grn.h、それ以外はlib/（パッケージ名）/version.rbにある、RB_GRN_MAJOR_VERSION,RB_GRN_MINOR_VERSION,RB_GRN_MICRO_VERSIONの値を次回リリース時のバージョンの値に変更し、コミットする。</p></div></div>
 
     <div id="footer">
-  Generated on Wed Dec 26 18:10:27 2012 by
+  Generated on Fri Jun  7 17:02:59 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.6.1 (ruby-1.9.3).
 </div>
 
   

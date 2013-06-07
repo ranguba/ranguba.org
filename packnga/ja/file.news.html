@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
@@ -14,9 +14,9 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
@@ -93,6 +93,21 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2>0.9.8: 2013-06-07</h2>
+<h3>改良</h3>
+<ul>
+	<li>[ReferenceTask] YARDのi18nの機能をリファレンス翻訳に使うようにした。この機能を使うにはYARDの0.8.6.1以上が必要になります。</li>
+	<li>[ReferenceTask] &#8220;reference:publication:generate&#8221;タスクでGitHub Pagesに対応していないファイル名の置き換えをサポートした。このタスクはメソッド一覧ページである&quot;_index.html&quot;を&quot;alphabetical_index.html&quot;にリネームします。&quot;_&quot;から始まるファイル名はGitHub Pagesで対応していないためです。</li>
+	<li>[ReferenceTask] 作成したリファレンスをHTMLのディレクトリにコピーするための&quot;release:references:upload&quot;タスクを追加した。HTMLのディレクトリとは例えばGitHub Pagesのリポジトリで、この場合、このタスクはGitHub Pagesにリファレンスをコピーするために使用します。</li>
+	<li>[Referencetask] .htaccessをアップロードする機能を削除した。</li>
+	<li>[ReleaseTask] &#8220;release:info:update&#8221;タスクでVERSIONが引数で指定されていない場合、gemspecのversion(spec.version)を新しいバージョンとして使うようにした。新しいバージョンはHTMLのインデックスファイルを置き換えるために使います。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>[ReferenceTask] マージされたPOファイル内の&quot;reference path&quot;を正しく生成するように修正した。&quot;reference path&quot;は翻訳されるメッセージ(msgid)をふくむファイルのパスのことで、対応するmsgidに付属します。</li>
+	<li>[ReleaseTask] &#8220;release:info:update&#8221;タスクで余計なHTMLファイルの置き換えをしないようにした。</li>
+	<li>[ReferenceTask] 公開用のリファレンスを生成するための&quot;reference:publication:generate&quot;タスクに説明がなかったのを追加した。</li>
+</ul>
 <h2>0.9.7: 2012-12-26</h2>
 <h3>改良</h3>
 <ul>
@@ -210,9 +225,9 @@
 <p>The first release!</p></div></div>
 
     <div id="footer">
-  Generated on Wed Dec 26 18:10:27 2012 by
+  Generated on Fri Jun  7 17:02:59 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.3 (ruby-1.9.3).
+  0.8.6.1 (ruby-1.9.3).
 </div>
 
   
