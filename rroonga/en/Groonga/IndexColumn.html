@@ -163,7 +163,7 @@
 
     <ul class="summary">
       
-        <li class="public deprecated">
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong> </a>
@@ -176,57 +176,15 @@
   
   
   
-  <span class="deprecated note title">deprecated</span>
-  
-
-  
-    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Since 3.0.2. Use <span class='object_link'><a href="#add-instance_method" title="Groonga::IndexColumn#add (method)">#add</a></span>, <span class='object_link'><a href="#delete-instance_method" title="Groonga::IndexColumn#delete (method)">#delete</a></span> or <span class='object_link'><a href="#update-instance_method" title="Groonga::IndexColumn#update (method)">#update</a></span> instead.</p></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#add-instance_method" title="#add (instance method)">- (void) <strong>add</strong>(record, value, options = {}) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
   
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Adds a record that has <code>value</code> content to inverted index for fast
-fulltext serach.</p></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#delete-instance_method" title="#delete (instance method)">- (void) <strong>delete</strong>(record, value, options = {}) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Deletes a record that has <code>value</code> content from inverted
-index.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>IDが <em>id</em> であるレコードを高速に全文検索するため転置索引を作
+成する。多くの場合、 <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> で
+<ins>:source</ins> オプションを指定することにより、自動的に全文検索
+用の索引は更新されるので、明示的にこのメソッドを使うこと
+は少ない。.</p></div></span>
   
 </li>
 
@@ -367,29 +325,6 @@ index.</p></div></span>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update-instance_method" title="#update (instance method)">- (void) <strong>update</strong>(record, old_value, new_value, options = {}) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Updates a record that has <code>new_value</code> as new content and
-<code>old_value</code> as old content in inverted index.</p></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#with_position%3F-instance_method" title="#with_position? (instance method)">- (Boolean) <strong>with_position?</strong> </a>
     
 
@@ -499,8 +434,7 @@ index.</p></div></span>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Since 3.0.2. Use <span class='object_link'><a href="#add-instance_method" title="Groonga::IndexColumn#add (method)">#add</a></span>, <span class='object_link'><a href="#delete-instance_method" title="Groonga::IndexColumn#delete (method)">#delete</a></span> or <span class='object_link'><a href="#update-instance_method" title="Groonga::IndexColumn#update (method)">#update</a></span> instead.</p></div></div>
-<p>IDが <em>id</em> であるレコードを高速に全文検索するため転置索引を作
+    <p>IDが <em>id</em> であるレコードを高速に全文検索するため転置索引を作
 成する。多くの場合、 <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> で
 <ins>:source</ins> オプションを指定することにより、自動的に全文検索
 用の索引は更新されるので、明示的にこのメソッドを使うこと
@@ -683,6 +617,8 @@ pairs. Omitted names are initialized as the default value</p></div>
       <pre class="lines">
 
 
+161
+162
 163
 164
 165
@@ -740,12 +676,10 @@ pairs. Omitted names are initialized as the default value</p></div>
 217
 218
 219
-220
-221
-222</pre>
+220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 163</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 161</span>
 
 static VALUE
 rb_grn_index_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -806,553 +740,6 @@ rb_grn_index_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
     rb_grn_rc_check(rc, self);
 
     return original_rb_value;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="add-instance_method">
-  
-    - (<tt>void</tt>) <strong>add</strong>(record, value, options = {}) 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Adds a record that has <code>value</code> content to inverted index for fast
-fulltext serach. Normally, this method is not used
-explicitly. Inverted index for fulltext search is updated
-automatically by using <code>:source</code> option of
-<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span>.</p>
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-        <p class="example_title"><div class='inline'><p>Adds sentences of an article to index</p></div></p>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_articles'>articles</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Articles</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_terms'>terms</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                             <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                             <span class='symbol'>:default_tokenizer</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_content_index'>content_index</span> <span class='op'>=</span> <span class='id identifier rubyid_terms'>terms</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_articles'>articles</span><span class='comma'>,</span>
-                                          <span class='symbol'>:with_position</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
-                                          <span class='symbol'>:with_section</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;-CONTENT</span>
-<span class='tstring_content'>Groonga is a fast and accurate full text search engine based on
-inverted index. One of the characteristics of groonga is that a
-newly registered document instantly appears in search
-results. Also, groonga allows updates without read locks. These
-characteristics result in superior performance on real-time
-applications.
-
-Groonga is also a column-oriented database management system
-(DBMS). Compared with well-known row-oriented systems, such as
-MySQL and PostgreSQL, column-oriented systems are more suited for
-aggregate queries. Due to this advantage, groonga can cover
-weakness of row-oriented systems.
-
-The basic functions of groonga are provided in a C library. Also,
-libraries for using groonga in other languages, such as Ruby, are
-provided by related projects. In addition, groonga-based storage
-engines are provided for MySQL and PostgreSQL. These libraries
-and storage engines allow any application to use groonga. See
-usage examples.
-</span><span class='heredoc_end'>CONTENT
-</span>
-<span class='id identifier rubyid_groonga'>groonga</span> <span class='op'>=</span> <span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:title</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_content'>content</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n{2,}</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sentence'>sentence</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
-  <span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga'>groonga</span><span class='comma'>,</span> <span class='id identifier rubyid_sentence'>sentence</span><span class='comma'>,</span> <span class='symbol'>:section</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span>
-<span class='kw'>end</span>
-
-<span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>engine</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
-  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># -&gt; &quot;groonga&quot;
-</span><span class='kw'>end</span></code></pre>
-    
-  </div>
-
-  <div class="docstring">
-  <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>record</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span></tt>, <tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The record that has a <code>value</code> as its value. It can be Integer as
-record id.</p></div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>value</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The value of the <code>record</code>.</p></div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>::Hash</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>{}</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>The options.</p></div>
-      
-    </li>
-  
-</ul>
-
-  
-    
-    
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">:section</span>
-          <span class="type">(<tt>Integer</tt>)</span>
-          <span class="default">
-            
-              &mdash; default:
-              <tt>1</tt>
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>The section number. It is one-origin.</p>
-<p>You must specify <code>{:with_section =&gt; true}</code> in
-<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> to use this option.</p></div>
-          
-        </li>
-      
-    </ul>
-  
-
-
-</div>
-
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'><p>3.0.2</p></div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315
-316
-317
-318
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 292</span>
-
-static VALUE
-rb_grn_index_column_add (int argc, VALUE *argv, VALUE self)
-{
-    grn_ctx *context = NULL;
-    grn_obj *column, *range;
-    grn_rc rc;
-    grn_id id;
-    unsigned int section;
-    grn_obj *new_value;
-    VALUE rb_record, rb_value, rb_options, rb_section;
-
-    rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_record, &amp;rb_value, &amp;rb_options);
-
-    rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
-                                    NULL, NULL,
-                                    &amp;new_value, NULL,
-                                    NULL, &amp;range,
-                                    NULL, NULL);
-
-    id = RVAL2GRNID(rb_record, context, range, self);
-
-    GRN_BULK_REWIND(new_value);
-    RVAL2GRNBULK(rb_value, context, new_value);
-
-    rb_grn_scan_options(rb_options,
-                        &quot;section&quot;, &amp;rb_section,
-                        NULL);
-
-    if (NIL_P(rb_section)) {
-	section = 1;
-    } else {
-	section = NUM2UINT(rb_section);
-    }
-
-    rc = grn_column_index_update(context, column, id, section, NULL, new_value);
-    rb_grn_context_check(context, self);
-    rb_grn_rc_check(rc, self);
-
-    return self;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="delete-instance_method">
-  
-    - (<tt>void</tt>) <strong>delete</strong>(record, value, options = {}) 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Deletes a record that has <code>value</code> content from inverted
-index. Normally, this method is not used explicitly. Inverted index
-for fulltext search is updated automatically by using <code>:source</code>
-option of <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span>.</p>
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-        <p class="example_title"><div class='inline'><p>Deletes sentences of an article to index</p></div></p>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_articles'>articles</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Articles</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_terms'>terms</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                             <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                             <span class='symbol'>:default_tokenizer</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_content_index'>content_index</span> <span class='op'>=</span> <span class='id identifier rubyid_terms'>terms</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_articles'>articles</span><span class='comma'>,</span>
-                                          <span class='symbol'>:with_position</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
-                                          <span class='symbol'>:with_section</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;-CONTENT</span>
-<span class='tstring_content'>Groonga is a fast and accurate full text search engine based on
-inverted index. One of the characteristics of groonga is that a
-newly registered document instantly appears in search
-results. Also, groonga allows updates without read locks. These
-characteristics result in superior performance on real-time
-applications.
-
-Groonga is also a column-oriented database management system
-(DBMS). Compared with well-known row-oriented systems, such as
-MySQL and PostgreSQL, column-oriented systems are more suited for
-aggregate queries. Due to this advantage, groonga can cover
-weakness of row-oriented systems.
-
-The basic functions of groonga are provided in a C library. Also,
-libraries for using groonga in other languages, such as Ruby, are
-provided by related projects. In addition, groonga-based storage
-engines are provided for MySQL and PostgreSQL. These libraries
-and storage engines allow any application to use groonga. See
-usage examples.
-</span><span class='heredoc_end'>CONTENT
-</span>
-<span class='id identifier rubyid_groonga'>groonga</span> <span class='op'>=</span> <span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:title</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_content'>content</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n{2,}</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sentence'>sentence</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
-  <span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga'>groonga</span><span class='comma'>,</span> <span class='id identifier rubyid_sentence'>sentence</span><span class='comma'>,</span> <span class='symbol'>:section</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span>
-<span class='kw'>end</span>
-
-<span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>engine</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
-  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># -&gt; &quot;groonga&quot;
-</span><span class='kw'>end</span>
-
-<span class='id identifier rubyid_content'>content</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n{2,}</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sentence'>sentence</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
-  <span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga'>groonga</span><span class='comma'>,</span> <span class='id identifier rubyid_sentence'>sentence</span><span class='comma'>,</span> <span class='symbol'>:section</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span>
-<span class='kw'>end</span>
-
-<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>engine</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='comment'># -&gt; 0</span></code></pre>
-    
-  </div>
-
-  <div class="docstring">
-  <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>record</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span></tt>, <tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The record that has a <code>value</code> as its value. It can be Integer as
-record id.</p></div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>value</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The value of the <code>record</code>.</p></div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>::Hash</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>{}</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>The options.</p></div>
-      
-    </li>
-  
-</ul>
-
-  
-    
-    
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">:section</span>
-          <span class="type">(<tt>Integer</tt>)</span>
-          <span class="default">
-            
-              &mdash; default:
-              <tt>1</tt>
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>The section number. It is one-origin.</p>
-<p>You must specify <code>{:with_section =&gt; true}</code> in
-<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> to use this option.</p></div>
-          
-        </li>
-      
-    </ul>
-  
-
-
-</div>
-
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'><p>3.0.2</p></div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424
-425
-426
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440
-441
-442
-443
-444
-445</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 406</span>
-
-static VALUE
-rb_grn_index_column_delete (int argc, VALUE *argv, VALUE self)
-{
-    grn_ctx *context = NULL;
-    grn_obj *column, *range;
-    grn_rc rc;
-    grn_id id;
-    unsigned int section;
-    grn_obj *old_value;
-    VALUE rb_record, rb_value, rb_options, rb_section;
-
-    rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_record, &amp;rb_value, &amp;rb_options);
-
-    rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
-                                    NULL, NULL,
-                                    NULL, &amp;old_value,
-                                    NULL, &amp;range,
-                                    NULL, NULL);
-
-    id = RVAL2GRNID(rb_record, context, range, self);
-
-    GRN_BULK_REWIND(old_value);
-    RVAL2GRNBULK(rb_value, context, old_value);
-
-    rb_grn_scan_options(rb_options,
-                        &quot;section&quot;, &amp;rb_section,
-                        NULL);
-
-    if (NIL_P(rb_section)) {
-	section = 1;
-    } else {
-	section = NUM2UINT(rb_section);
-    }
-
-    rc = grn_column_index_update(context, column, id, section, old_value, NULL);
-    rb_grn_context_check(context, self);
-    rb_grn_rc_check(rc, self);
-
-    return self;
 }</pre>
     </td>
   </tr>
@@ -1521,72 +908,72 @@ the index column is created with <code>:with_position</code> flag.</p></div>
       <pre class="lines">
 
 
-902
-903
-904
-905
-906
-907
-908
-909
-910
-911
-912
-913
-914
-915
-916
-917
-918
-919
-920
-921
-922
-923
-924
-925
-926
-927
-928
-929
-930
-931
-932
-933
-934
-935
-936
-937
-938
-939
-940
-941
-942
-943
-944
-945
-946
-947
-948
-949
-950
-951
-952
-953
-954
-955
-956
-957
-958
-959
-960
-961
-962
-963
-964</pre>
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 902</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 557</span>
 
 static VALUE
 rb_grn_index_column_open_cursor (int argc, VALUE *argv, VALUE self)
@@ -1822,62 +1209,62 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p></div>
       <pre class="lines">
 
 
-775
-776
-777
-778
-779
-780
-781
-782
-783
-784
-785
-786
-787
-788
-789
-790
-791
-792
-793
-794
-795
-796
-797
-798
-799
-800
-801
-802
-803
-804
-805
-806
-807
-808
-809
-810
-811
-812
-813
-814
-815
-816
-817
-818
-819
-820
-821
-822
-823
-824
-825
-826
-827</pre>
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 775</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 430</span>
 
 static VALUE
 rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
@@ -1990,17 +1377,17 @@ rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-735
-736
-737
-738
-739
-740
-741
-742</pre>
+390
+391
+392
+393
+394
+395
+396
+397</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 735</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 390</span>
 
 static VALUE
 rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
@@ -2063,51 +1450,51 @@ rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
       <pre class="lines">
 
 
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586
-587
-588
-589
-590
-591
-592
-593
-594
-595
-596
-597
-598
-599
-600
-601
-602
-603
-604
-605
-606
-607
-608
-609
-610
-611
-612
-613
-614</pre>
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 573</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 228</span>
 
 static VALUE
 rb_grn_index_column_get_sources (VALUE self)
@@ -2209,50 +1596,50 @@ rb_grn_index_column_get_sources (VALUE self)
       <pre class="lines">
 
 
-687
-688
-689
-690
-691
-692
-693
-694
-695
-696
-697
-698
-699
-700
-701
-702
-703
-704
-705
-706
-707
-708
-709
-710
-711
-712
-713
-714
-715
-716
-717
-718
-719
-720
-721
-722
-723
-724
-725
-726
-727</pre>
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 687</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 342</span>
 
 static VALUE
 rb_grn_index_column_set_sources (VALUE self, VALUE rb_sources)
@@ -2301,315 +1688,6 @@ rb_grn_index_column_set_sources (VALUE self, VALUE rb_sources)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="update-instance_method">
-  
-    - (<tt>void</tt>) <strong>update</strong>(record, old_value, new_value, options = {}) 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Updates a record that has <code>new_value</code> as new content and
-<code>old_value</code> as old content in inverted index. Normally, this method
-is not used explicitly. Inverted index for fulltext search is
-updated automatically by using <code>:source</code> option of
-<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span>.</p>
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-        <p class="example_title"><div class='inline'><p>Updates sentences of an article to index</p></div></p>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_articles'>articles</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Articles</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_terms'>terms</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                             <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                             <span class='symbol'>:default_tokenizer</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_content_index'>content_index</span> <span class='op'>=</span> <span class='id identifier rubyid_terms'>terms</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_articles'>articles</span><span class='comma'>,</span>
-                                          <span class='symbol'>:with_position</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
-                                          <span class='symbol'>:with_section</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_old_sentence'>old_sentence</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;-SENTENCE</span>
-<span class='tstring_content'>Groonga is a fast and accurate full text search engine based on
-inverted index. One of the characteristics of groonga is that a
-newly registered document instantly appears in search
-results. Also, groonga allows updates without read locks. These
-characteristics result in superior performance on real-time
-applications.
-</span><span class='heredoc_end'>SENTENCE
-</span>
-<span class='id identifier rubyid_new_sentence'>new_sentence</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;-SENTENCE</span>
-<span class='tstring_content'>Groonga is also a column-oriented database management system
-(DBMS). Compared with well-known row-oriented systems, such as
-MySQL and PostgreSQL, column-oriented systems are more suited for
-aggregate queries. Due to this advantage, groonga can cover
-weakness of row-oriented systems.
-</span><span class='heredoc_end'>SENTENCE
-</span>
-<span class='id identifier rubyid_groonga'>groonga</span> <span class='op'>=</span> <span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:title</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_old_sentence'>old_sentence</span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga'>groonga</span><span class='comma'>,</span> <span class='id identifier rubyid_old_sentence'>old_sentence</span><span class='comma'>,</span> <span class='symbol'>:section</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>engine</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='comment'># -&gt; 1
-</span><span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MySQL</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>  <span class='comment'># -&gt; 0
-</span>
-<span class='id identifier rubyid_groonga'>groonga</span><span class='lbracket'>[</span><span class='symbol'>:content</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_new_sentence'>new_sentence</span>
-<span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga'>groonga</span><span class='comma'>,</span> <span class='id identifier rubyid_old_sentence'>old_sentence</span><span class='comma'>,</span> <span class='id identifier rubyid_new_sentence'>new_sentence</span><span class='comma'>,</span> <span class='symbol'>:section</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>engine</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='comment'># -&gt; 0
-</span><span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MySQL</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>  <span class='comment'># -&gt; 1</span></code></pre>
-    
-  </div>
-
-  <div class="docstring">
-  <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>record</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span></tt>, <tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The record that has a <code>new_value</code> as its new value and
-<code>old_value</code> as its old value. It can be Integer as record id.</p></div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>old_value</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The old value of the <code>record</code>.</p></div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>new_value</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The new value of the <code>record</code>.</p></div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>::Hash</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>{}</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>The options.</p></div>
-      
-    </li>
-  
-</ul>
-
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">:section</span>
-          <span class="type">(<tt>Integer</tt>)</span>
-          <span class="default">
-            
-              &mdash; default:
-              <tt>1</tt>
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>The section number. It is one-origin.</p>
-<p>You must specify <code>{:with_section =&gt; true}</code> in
-<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> to use this option.</p></div>
-          
-        </li>
-      
-    </ul>
-  
-
-
-</div>
-
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'><p>3.0.2</p></div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-513
-514
-515
-516
-517
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528
-529
-530
-531
-532
-533
-534
-535
-536
-537
-538
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556
-557
-558
-559
-560
-561
-562
-563
-564
-565</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 513</span>
-
-static VALUE
-rb_grn_index_column_update (int argc, VALUE *argv, VALUE self)
-{
-    grn_ctx *context = NULL;
-    grn_obj *column, *range;
-    grn_rc rc;
-    grn_id id;
-    unsigned int section;
-    grn_obj *old_value, *new_value;
-    VALUE rb_record, rb_old_value, rb_new_value, rb_options, rb_section;
-
-    rb_scan_args(argc, argv, &quot;31&quot;,
-                 &amp;rb_record, &amp;rb_old_value, &amp;rb_new_value, &amp;rb_options);
-
-    rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
-                                    NULL, NULL,
-                                    &amp;new_value, &amp;old_value,
-                                    NULL, &amp;range,
-                                    NULL, NULL);
-
-    id = RVAL2GRNID(rb_record, context, range, self);
-
-    if (NIL_P(rb_old_value)) {
-        old_value = NULL;
-    } else {
-        GRN_BULK_REWIND(old_value);
-        RVAL2GRNBULK(rb_old_value, context, old_value);
-    }
-
-    if (NIL_P(rb_new_value)) {
-        new_value = NULL;
-    } else {
-        GRN_BULK_REWIND(new_value);
-        RVAL2GRNBULK(rb_new_value, context, new_value);
-    }
-
-    rb_grn_scan_options(rb_options,
-                        &quot;section&quot;, &amp;rb_section,
-                        NULL);
-
-    if (NIL_P(rb_section)) {
-	section = 1;
-    } else {
-	section = NUM2UINT(rb_section);
-    }
-
-    rc = grn_column_index_update(context, column, id, section,
-                                 old_value, new_value);
-    rb_grn_context_check(context, self);
-    rb_grn_rc_check(rc, self);
-
-    return self;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="with_position?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>with_position?</strong> 
@@ -2648,21 +1726,21 @@ rb_grn_index_column_update (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-870
-871
-872
-873
-874
-875
-876
-877
-878
-879
-880
-881</pre>
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 870</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 525</span>
 
 static VALUE
 rb_grn_index_column_with_position_p (VALUE self)
@@ -2720,21 +1798,21 @@ rb_grn_index_column_with_position_p (VALUE self)
       <pre class="lines">
 
 
-834
-835
-836
-837
-838
-839
-840
-841
-842
-843
-844
-845</pre>
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 834</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 489</span>
 
 static VALUE
 rb_grn_index_column_with_section_p (VALUE self)
@@ -2792,21 +1870,21 @@ rb_grn_index_column_with_section_p (VALUE self)
       <pre class="lines">
 
 
-852
-853
-854
-855
-856
-857
-858
-859
-860
-861
-862
-863</pre>
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 852</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 507</span>
 
 static VALUE
 rb_grn_index_column_with_weight_p (VALUE self)

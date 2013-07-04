@@ -138,8 +138,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>テーブルに登録されているレコードを順番に取り出すための
-オブジェクト。 <span class='object_link'><a href="Table.html#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">Groonga::Table#open_cursor</a></span> で生成できる。</p>
+    
+<p>テーブルに登録されているレコードを順番に取り出すための オブジェクト。 <span class='object_link'><a href="Table.html#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">Groonga::Table#open_cursor</a></span> で生成できる。</p>
+
 
   </div>
 </div>
@@ -192,8 +193,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>object</em> が使用しているリソースを開放する。これ以降 <em>object</em> を
-使うことはできない。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><em>object</em> が使用しているリソースを開放する。これ以降 <em>object</em> を 使うことはできない。.</p>
+</div></span>
   
 </li>
 
@@ -215,8 +217,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>object</em> が開放済みの場合は <ins>true</ins> を返し、そうでない場合は
-<ins>false</ins> を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><em>object</em> が開放済みの場合は <tt>true</tt> を返し、そうでない場合は <tt>false</tt> を返す。.</p>
+</div></span>
   
 </li>
 
@@ -238,7 +241,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>カレントレコードを削除する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>カレントレコードを削除する。.</p>
+</div></span>
   
 </li>
 
@@ -260,7 +265,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>カーソルの範囲内にあるレコードを順番にブロックに渡す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>カーソルの範囲内にあるレコードを順番にブロックに渡す。.</p>
+</div></span>
   
 </li>
 
@@ -282,7 +289,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>カレントレコードを一件進めてそのレコードを返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>カレントレコードを一件進めてそのレコードを返す。.</p>
+</div></span>
   
 </li>
 
@@ -304,7 +313,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>カレントレコードの値を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>カレントレコードの値を返す。.</p>
+</div></span>
   
 </li>
 
@@ -326,7 +337,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>カレントレコードの値を設定する。既存の値は上書きされる。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>カレントレコードの値を設定する。既存の値は上書きされる。.</p>
+</div></span>
   
 </li>
 
@@ -352,8 +365,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>object</em> が使用しているリソースを開放する。これ以降 <em>object</em> を
-使うことはできない。</p>
+    
+<p><em>object</em> が使用しているリソースを開放する。これ以降 <em>object</em> を 使うことはできない。</p>
+
 
   </div>
 </div>
@@ -398,10 +412,10 @@ rb_grn_object_close (VALUE self)
 
     rb_grn_object = SELF(self);
     rb_grn_object_deconstruct(rb_grn_object, &amp;object, &amp;context,
-                              NULL, NULL, NULL, NULL);
+			      NULL, NULL, NULL, NULL);
     if (object &amp;&amp; context) {
-        rb_grn_object_run_finalizer(context, object, rb_grn_object);
-        grn_obj_close(context, object);
+	rb_grn_object_run_finalizer(context, object, rb_grn_object);
+	grn_obj_close(context, object);
     }
 
     return Qnil;
@@ -422,8 +436,9 @@ rb_grn_object_close (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>object</em> が開放済みの場合は <ins>true</ins> を返し、そうでない場合は
-<ins>false</ins> を返す。</p>
+    
+<p><em>object</em> が開放済みの場合は <tt>true</tt> を返し、そうでない場合は <tt>false</tt> を返す。</p>
+
 
   </div>
 </div>
@@ -495,7 +510,9 @@ rb_grn_object_closed_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>カレントレコードを削除する。</p>
+    
+<p>カレントレコードを削除する。</p>
+
 
   </div>
 </div>
@@ -564,7 +581,9 @@ rb_grn_table_cursor_delete (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>カーソルの範囲内にあるレコードを順番にブロックに渡す。</p>
+    
+<p>カーソルの範囲内にあるレコードを順番にブロックに渡す。</p>
+
 
   </div>
 </div>
@@ -663,7 +682,9 @@ rb_grn_table_cursor_each (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>カレントレコードを一件進めてそのレコードを返す。</p>
+    
+<p>カレントレコードを一件進めてそのレコードを返す。</p>
+
 
   </div>
 </div>
@@ -760,7 +781,9 @@ rb_grn_table_cursor_next (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>カレントレコードの値を返す。</p>
+    
+<p>カレントレコードの値を返す。</p>
+
 
   </div>
 </div>
@@ -768,7 +791,9 @@ rb_grn_table_cursor_next (VALUE self)
   
   <div class="docstring">
   <div class="discussion">
-    <p>カレントレコードの値</p>
+    
+<p>カレントレコードの値</p>
+
 
   </div>
 </div>
@@ -785,7 +810,9 @@ rb_grn_table_cursor_next (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>カレントレコードの値</p></div>
+        <div class='inline'>
+<p>カレントレコードの値</p>
+</div>
       
     </li>
   
@@ -858,7 +885,9 @@ rb_grn_table_cursor_get_value (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>カレントレコードの値を設定する。既存の値は上書きされる。</p>
+    
+<p>カレントレコードの値を設定する。既存の値は上書きされる。</p>
+
 
   </div>
 </div>
@@ -884,7 +913,9 @@ rb_grn_table_cursor_get_value (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>カレントレコードに設定する値</p></div>
+        <div class='inline'>
+<p>カレントレコードに設定する値</p>
+</div>
       
     </li>
   
@@ -954,7 +985,7 @@ rb_grn_table_cursor_set_value (VALUE self, VALUE value)
 </div>
 
     <div id="footer">
-  Generated on Wed May 29 16:30:47 2013 by
+  Generated on Wed May  1 17:23:12 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.1 (ruby-1.9.3).
 </div>

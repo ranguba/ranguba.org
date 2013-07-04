@@ -138,7 +138,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>可変長データ用のカラム。</p>
+    
+<p>可変長データ用のカラム。</p>
+
 
   </div>
 </div>
@@ -177,7 +179,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>カラムが圧縮されているかどうかを返します。もし <code>type</code> が指定されているなら、カラムが <code>type</code> によって圧縮されているかどうかを返します。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>カラムが圧縮されているかどうかを返します。もし @type@ が指定されているなら、カラムが @type@
+によって圧縮されているかどうかを返します。.</p>
+</div></span>
   
 </li>
 
@@ -199,7 +204,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>カラムをデフラグします。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>カラムをデフラグします。.</p>
+</div></span>
   
 </li>
 
@@ -250,7 +257,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>カラムが圧縮されているかどうかを返します。もし <code>type</code> が指定されているなら、カラムが <code>type</code> によって圧縮されているかどうかを返します。</p>
+    
+<p>カラムが圧縮されているかどうかを返します。もし @type@ が指定されているなら、カラムが @type@ によって圧縮されているかどうかを返します。</p>
+
 
   </div>
 </div>
@@ -264,7 +273,9 @@
         <span class="signature">- (<tt>Boolean</tt>) <strong>compressed?</strong> </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Whether the column is compressed or not.</p>
+    
+<p>Whether the column is compressed or not.</p>
+
 
   </div>
 </div>
@@ -281,7 +292,9 @@
       
       
         &mdash;
-        <div class='inline'><p>whether the column is compressed or not.</p></div>
+        <div class='inline'>
+<p>whether the column is compressed or not.</p>
+</div>
       
     </li>
   
@@ -295,7 +308,9 @@
         <span class="signature">- (<tt>Boolean</tt>) <strong>compressed?</strong>(type) </span>
         <div class="docstring">
   <div class="discussion">
-    <p>Whether specified compressed type is used or not.</p>
+    
+<p>Whether specified compressed type is used or not.</p>
+
 
   </div>
 </div>
@@ -313,7 +328,9 @@
       
       
         &mdash;
-        <div class='inline'><p>(nil)</p></div>
+        <div class='inline'>
+<p>(nil)</p>
+</div>
       
     </li>
   
@@ -330,7 +347,9 @@
       
       
         &mdash;
-        <div class='inline'><p>whether specified compressed type is used or not.</p></div>
+        <div class='inline'>
+<p>whether specified compressed type is used or not.</p>
+</div>
       
     </li>
   
@@ -363,7 +382,9 @@
       
       
         
-        <div class='inline'><p>1.3.1</p></div>
+        <div class='inline'>
+<p>1.3.1</p>
+</div>
       
     </li>
   
@@ -375,6 +396,8 @@
       <pre class="lines">
 
 
+40
+41
 42
 43
 44
@@ -428,12 +451,10 @@
 92
 93
 94
-95
-96
-97</pre>
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 42</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 40</span>
 
 static VALUE
 rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
@@ -507,7 +528,9 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>カラムをデフラグします。</p>
+    
+<p>カラムをデフラグします。</p>
+
 
   </div>
 </div>
@@ -535,8 +558,9 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -558,10 +582,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>the threshold to
-determine whether a segment is defraged. Available
-values are -4..22. -4 means all segments are defraged.
-22 means no segment is defraged.</p></div>
+            &mdash; <div class='inline'>
+<p>the threshold to determine whether a segment is defraged. Available values
+are -4..22. -4 means all segments are defraged. 22 means no segment is
+defraged.</p>
+</div>
           
         </li>
       
@@ -582,7 +607,9 @@ values are -4..22. -4 means all segments are defraged.
       
       
         &mdash;
-        <div class='inline'><p>the number of defraged segments</p></div>
+        <div class='inline'>
+<p>デフラグされたセグメントの数</p>
+</div>
       
     </li>
   
@@ -596,7 +623,9 @@ values are -4..22. -4 means all segments are defraged.
       
       
         
-        <div class='inline'><p>1.2.6</p></div>
+        <div class='inline'>
+<p>1.2.6</p>
+</div>
       
     </li>
   
@@ -608,6 +637,9 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
+109
+110
+111
 112
 113
 114
@@ -631,13 +663,10 @@ values are -4..22. -4 means all segments are defraged.
 132
 133
 134
-135
-136
-137
-138</pre>
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 112</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 109</span>
 
 static VALUE
 rb_grn_variable_size_column_defrag (int argc, VALUE *argv, VALUE self)
@@ -676,7 +705,7 @@ rb_grn_variable_size_column_defrag (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Wed May 29 16:30:47 2013 by
+  Generated on Wed May  1 17:23:11 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.1 (ruby-1.9.3).
 </div>

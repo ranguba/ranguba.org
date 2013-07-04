@@ -132,10 +132,13 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>groongaのスキーマ（データ構造）を管理するクラス。</p>
-<p><span class='object_link'><a href="" title="Groonga::Schema (class)">Schema</a></span> を使うことにより簡単にテーブルやカラムを
-追加・削除することができる。</p>
-<p><img src="http://qwik.jp/senna/senna2.files/rect4605.png" alt="" /></p>
+    
+<p>groongaのスキーマ（データ構造）を管理するクラス。</p>
+
+<p><span class='object_link'><a href="" title="Groonga::Schema (class)">Schema</a></span> を使うことにより簡単にテーブルやカラムを 追加・削除することができる。</p>
+
+<p>!<img src="http://qwik.jp/senna/senna2.files/rect4605.png" />!</p>
+
 
   </div>
 </div>
@@ -145,7 +148,9 @@
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>上図のようなスキーマを定義する場合は以下のようになる。</p></div></p>
+        <p class="example_title"><div class='inline'>
+<p>上図のようなスキーマを定義する場合は以下のようになる。</p>
+</div></p>
       
       <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
   <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Items</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -212,7 +217,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のテーブルを変更する。以下の省略形。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のテーブルを変更する。以下の省略形。.</p>
+</div></span>
   
 </li>
 
@@ -234,7 +241,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のビューを変更する。以下の省略形。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のビューを変更する。以下の省略形。.</p>
+</div></span>
   
 </li>
 
@@ -256,7 +265,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のテーブルを作成する。以下の省略形。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のテーブルを作成する。以下の省略形。.</p>
+</div></span>
   
 </li>
 
@@ -278,7 +289,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が_name_のビューを作成する。以下の省略形。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が<em>name</em>のビューを作成する。以下の省略形。.</p>
+</div></span>
   
 </li>
 
@@ -300,9 +313,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>スキーマを定義する。ブロックには <span class='object_link'><a href="" title="Groonga::Schema (class)">Schema</a></span> オブ
-ジェクトがわたるので、そのオブジェクトを利用してスキー
-マを定義する。以下の省略形。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>スキーマを定義する。ブロックには <span class='object_link'><a href="" title="Groonga::Schema (class)">Schema</a></span> オブ ジェクトがわたるので、そのオブジェクトを利用してスキー
+マを定義する。以下の省略形。.</p>
+</div></span>
   
 </li>
 
@@ -324,11 +338,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>スキーマの内容を文字列をRubyスクリプト形式またはgrn式
-形式で返す。デフォルトはRubyスクリプト形式である。
-Rubyスクリプト形式で返された値は
-<span class='object_link'><a href="#restore-class_method" title="Groonga::Schema.restore (method)">Schema.restore</a></span> することによりスキーマ内に組み
-込むことができる。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>スキーマの内容を文字列をRubyスクリプト形式またはgrn式 形式で返す。デフォルトはRubyスクリプト形式である。
+Rubyスクリプト形式で返された値は <span class='object_link'><a href="#restore-class_method" title="Groonga::Schema.restore (method)">Schema.restore</a></span> することによりスキーマ内に組み 込むことができる。.</p>
+</div></span>
   
 </li>
 
@@ -350,7 +363,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>以下と同様:.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>以下と同様:.</p>
+</div></span>
   
 </li>
 
@@ -372,7 +387,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のテーブルを削除する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のテーブルを削除する。.</p>
+</div></span>
   
 </li>
 
@@ -394,7 +411,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のテーブルを削除する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のテーブルを削除する。.</p>
+</div></span>
   
 </li>
 
@@ -416,7 +435,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>This is a syntax sugar of the following:.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>This is a syntax sugar of the following:.</p>
+</div></span>
   
 </li>
 
@@ -438,7 +459,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>(See Groonga::Schema#rename_table).</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>(See Groonga::Schema#rename_table).</p>
+</div></span>
   
 </li>
 
@@ -460,7 +483,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p><span class='object_link'><a href="#dump-class_method" title="Groonga::Schema.dump (method)">Schema.dump</a></span> で文字列化したスキーマを組み込む。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><span class='object_link'><a href="#dump-class_method" title="Groonga::Schema.dump (method)">Schema.dump</a></span> で文字列化したスキーマを組み込む。.</p>
+</div></span>
   
 </li>
 
@@ -491,7 +516,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のテーブルを変更する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のテーブルを変更する。.</p>
+</div></span>
   
 </li>
 
@@ -513,7 +540,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のビューを変更する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のビューを変更する。.</p>
+</div></span>
   
 </li>
 
@@ -535,7 +564,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のテーブルを作成する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のテーブルを作成する。.</p>
+</div></span>
   
 </li>
 
@@ -557,7 +588,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のビューを作成する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のビューを作成する。.</p>
+</div></span>
   
 </li>
 
@@ -579,7 +612,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>定義されたスキーマ定義を実際に実行する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>定義されたスキーマ定義を実際に実行する。.</p>
+</div></span>
   
 </li>
 
@@ -601,8 +636,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>スキーマの内容を文字列で返す。返された値は
-<span class='object_link'><a href="#restore-instance_method" title="Groonga::Schema#restore (method)">#restore</a></span> することによりスキーマ内に組み込むことができる。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>スキーマの内容を文字列で返す。返された値は <span class='object_link'><a href="#restore-instance_method" title="Groonga::Schema#restore (method)">#restore</a></span> することによりスキーマ内に組み込むことができる。.</p>
+</div></span>
   
 </li>
 
@@ -626,7 +662,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>スキーマ定義を開始する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>スキーマ定義を開始する。.</p>
+</div></span>
   
 </li>
 
@@ -648,7 +686,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>以下と同様:.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>以下と同様:.</p>
+</div></span>
   
 </li>
 
@@ -670,7 +710,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のテーブルを削除する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のテーブルを削除する。.</p>
+</div></span>
   
 </li>
 
@@ -692,7 +734,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>name</em> のビューを削除する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>name</em> のビューを削除する。.</p>
+</div></span>
   
 </li>
 
@@ -714,7 +758,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It is a syntax sugar of the following:.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>It is a syntax sugar of the following:.</p>
+</div></span>
   
 </li>
 
@@ -736,7 +782,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p>テーブルの名前を <em>current_name</em> から <em>new_name</em> に変更します。 .</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>テーブルの名前を <em>current_name</em> から <em>new_name</em> に変更します。 .</p>
+</div></span>
   
 </li>
 
@@ -760,7 +808,9 @@ Rubyスクリプト形式で返された値は
   
 
   
-    <span class="summary_desc"><div class='inline'><p><span class='object_link'><a href="#dump-instance_method" title="Groonga::Schema#dump (method)">#dump</a></span> で返されたスキーマの内容を読み込む。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><span class='object_link'><a href="#dump-instance_method" title="Groonga::Schema#dump (method)">#dump</a></span> で返されたスキーマの内容を読み込む。.</p>
+</div></span>
   
 </li>
 
@@ -782,7 +832,9 @@ Rubyスクリプト形式で返された値は
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>スキーマ定義を開始する。</p>
+    
+<p>スキーマ定義を開始する。</p>
+
 
   </div>
 </div>
@@ -802,8 +854,9 @@ Rubyスクリプト形式で返された値は
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -825,8 +878,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context
-スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -840,14 +894,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-729
-730
-731
-732
-733</pre>
+717
+718
+719
+720
+721</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 729</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 717</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -877,16 +931,20 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のテーブルを変更する。以下の省略形。</p>
-<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
-  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
-<span class='kw'>end</span>
-</code></pre>
-<p>ブロックには <span class='object_link'><a href="Schema/TableDefinition.html" title="Groonga::Schema::TableDefinition (class)">TableDefinition</a></span> オブジェ
-クトがわたるので、そのオブジェクトを利用してテーブル
+    
+<p>名前が <em>name</em> のテーブルを変更する。以下の省略形。</p>
+
+<p>&lt;pre&gt; !!!ruby Groonga::Schema.define do |schema|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+  <span class='comment'># ...
+</span><span class='kw'>end</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
+<p>ブロックには <span class='object_link'><a href="Schema/TableDefinition.html" title="Groonga::Schema::TableDefinition (class)">TableDefinition</a></span> オブジェ クトがわたるので、そのオブジェクトを利用してテーブル
 の詳細を定義する。</p>
+
 
   </div>
 </div>
@@ -906,8 +964,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -931,8 +990,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -948,14 +1010,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-451
-452
-453
-454
-455</pre>
+444
+445
+446
+447
+448</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 451</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 444</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -978,16 +1040,20 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のビューを変更する。以下の省略形。</p>
-<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
-  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_change_view'>change_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_view'>view</span><span class='op'>|</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
-<span class='kw'>end</span>
-</code></pre>
-<p>ブロックには <span class='object_link'><a href="Schema/ViewDefinition.html" title="Groonga::Schema::ViewDefinition (class)">ViewDefinition</a></span> オブジェ
-クトがわたるので、そのオブジェクトを利用してテーブル
+    
+<p>名前が <em>name</em> のビューを変更する。以下の省略形。</p>
+
+<p>&lt;pre&gt; !!!ruby Groonga::Schema.define do |schema|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_change_view'>change_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_view'>view</span><span class='op'>|</span>
+  <span class='comment'># ...
+</span><span class='kw'>end</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
+<p>ブロックには <span class='object_link'><a href="Schema/ViewDefinition.html" title="Groonga::Schema::ViewDefinition (class)">ViewDefinition</a></span> オブジェ クトがわたるので、そのオブジェクトを利用してテーブル
 の詳細を定義する。</p>
+
 
   </div>
 </div>
@@ -1007,8 +1073,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1032,8 +1099,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -1049,14 +1119,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-543
-544
-545
-546
-547</pre>
+533
+534
+535
+536
+537</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 543</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 533</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_change_view'>change_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -1087,17 +1157,22 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のテーブルを作成する。以下の省略形。</p>
-<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
-  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
-<span class='kw'>end</span>
-</code></pre>
-<p>ブロックには <span class='object_link'><a href="Schema/TableDefinition.html" title="Groonga::Schema::TableDefinition (class)">TableDefinition</a></span> オブジェ
-クトがわたるので、そのオブジェクトを利用してテーブル
+    
+<p>名前が <em>name</em> のテーブルを作成する。以下の省略形。</p>
+
+<p>&lt;pre&gt; !!!ruby Groonga::Schema.define do |schema|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+  <span class='comment'># ...
+</span><span class='kw'>end</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
+<p>ブロックには <span class='object_link'><a href="Schema/TableDefinition.html" title="Groonga::Schema::TableDefinition (class)">TableDefinition</a></span> オブジェ クトがわたるので、そのオブジェクトを利用してテーブル
 の詳細を定義する。</p>
+
 <p><em>options</em> に指定可能な値は以下の通り。</p>
+
 
   </div>
 </div>
@@ -1131,8 +1206,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1153,9 +1229,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のテーブルが
-存在していても、強制的にテーブルを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名のテーブルが 存在していても、強制的にテーブルを作成する。</p>
+</div>
           
         </li>
       
@@ -1169,11 +1247,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The type</p>
-<p>テーブルの型を指定する。
-<ins>:array</ins> , <ins>:hash</ins> , <ins>:patricia_trie</ins> ,
-<ins>:double_array_trie</ins> のいずれかを指定する。
-(:key_typeの項も参照)</p></div>
+            &mdash; <div class='inline'>
+<p>The type</p>
+
+<p>テーブルの型を指定する。 <tt>:array</tt> , <tt>:hash</tt> , <tt>:patricia_trie</tt> ,
+<tt>:double_array_trie</tt> のいずれかを指定する。 (:key_typeの項も参照)</p>
+</div>
           
         </li>
       
@@ -1187,8 +1266,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -1199,9 +1281,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>テーブルを保存するパスを指定する。
-パスを指定すると永続テーブルになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>テーブルを保存するパスを指定する。 パスを指定すると永続テーブルになる。</p>
+</div>
           
         </li>
       
@@ -1215,9 +1299,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>テーブルを永続テーブルとする。 <ins>:path</ins> を省略した場合は
-パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>テーブルを永続テーブルとする。 <tt>:path</tt> を省略した場合は パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p>
+</div>
           
         </li>
       
@@ -1231,9 +1317,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The value_type</p>
-<p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p></div>
+            &mdash; <div class='inline'>
+<p>The value_type</p>
+
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
+</div>
           
         </li>
       
@@ -1244,10 +1332,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The sub_records</p>
-<p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で
-グループ化したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに
-含まれるレコードの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>The sub_records</p>
+
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で グループ化したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに 含まれるレコードの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -1285,8 +1375,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1307,9 +1398,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のテーブルが
-存在していても、強制的にテーブルを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名のテーブルが 存在していても、強制的にテーブルを作成する。</p>
+</div>
           
         </li>
       
@@ -1323,11 +1416,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The type</p>
-<p>テーブルの型を指定する。
-<ins>:array</ins> , <ins>:hash</ins> , <ins>:patricia_trie</ins> ,
-<ins>:double_array_trie</ins> のいずれかを指定する。
-(:key_typeの項も参照)</p></div>
+            &mdash; <div class='inline'>
+<p>The type</p>
+
+<p>テーブルの型を指定する。 <tt>:array</tt> , <tt>:hash</tt> , <tt>:patricia_trie</tt> ,
+<tt>:double_array_trie</tt> のいずれかを指定する。 (:key_typeの項も参照)</p>
+</div>
           
         </li>
       
@@ -1341,8 +1435,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -1353,9 +1450,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>テーブルを保存するパスを指定する。
-パスを指定すると永続テーブルになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>テーブルを保存するパスを指定する。 パスを指定すると永続テーブルになる。</p>
+</div>
           
         </li>
       
@@ -1369,9 +1468,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>テーブルを永続テーブルとする。 <ins>:path</ins> を省略した場合は
-パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>テーブルを永続テーブルとする。 <tt>:path</tt> を省略した場合は パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p>
+</div>
           
         </li>
       
@@ -1385,9 +1486,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The value_type</p>
-<p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p></div>
+            &mdash; <div class='inline'>
+<p>The value_type</p>
+
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
+</div>
           
         </li>
       
@@ -1398,10 +1501,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The sub_records</p>
-<p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で
-グループ化したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに
-含まれるレコードの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>The sub_records</p>
+
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で グループ化したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに 含まれるレコードの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -1412,19 +1517,17 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The key_type</p>
-<p>キーの種類を示すオブジェクトを指定する。
-キーの種類には型名（&quot;Int32&quot;や&quot;ShortText&quot;など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
-またはテーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、
-<span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> の
-どれか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の
-値をキーとして使用する。ただし、キーの最大サイズは4096バイトで
-あるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない
-。テーブルを指定した場合はレコードIDをキーとして使用する。
-指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、
-その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。
-省略した場合は文字列をキーとして使用する。
-この場合、4096バイトまで使用可能である。</p></div>
+            &mdash; <div class='inline'>
+<p>The key_type</p>
+
+<p>キーの種類を示すオブジェクトを指定する。 キーの種類には型名（“Int32”や“ShortText”など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
+またはテーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、
+<span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> の どれか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の
+値をキーとして使用する。ただし、キーの最大サイズは4096バイトで あるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
+<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない 。テーブルを指定した場合はレコードIDをキーとして使用する。 指定したテーブルの
+<span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、 その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span>
+からレコードIDを取得する。 省略した場合は文字列をキーとして使用する。 この場合、4096バイトまで使用可能である。</p>
+</div>
           
         </li>
       
@@ -1435,12 +1538,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The default_tokenizer</p>
-<p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で
-使用するトークナイザを指定する。デフォルトでは
-何も設定されていないので、テーブルに
-<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は <code>"TokenBigram"</code>
-などを指定する必要がある。</p></div>
+            &mdash; <div class='inline'>
+<p>The default_tokenizer</p>
+
+<p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で 使用するトークナイザを指定する。デフォルトでは 何も設定されていないので、テーブルに
+<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は @“TokenBigram”@ などを指定する必要がある。</p>
+</div>
           
         </li>
       
@@ -1454,9 +1557,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>Keys are normalized
-if this value is <code>true</code>.</p>
-<p><code>deprecated Use @:normalizer =&gt; "NormalizerAuto"</code> instead.</p></div>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
+
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
+</div>
           
         </li>
       
@@ -1467,9 +1572,11 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You
-can specify this by normalizer name as String such as
-<code>"NormalizerAuto"</code> or normalizer object.</p></div>
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
+</div>
           
         </li>
       
@@ -1507,8 +1614,9 @@ can specify this by normalizer name as String such as
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1529,9 +1637,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のテーブルが
-存在していても、強制的にテーブルを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名のテーブルが 存在していても、強制的にテーブルを作成する。</p>
+</div>
           
         </li>
       
@@ -1545,11 +1655,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The type</p>
-<p>テーブルの型を指定する。
-<ins>:array</ins> , <ins>:hash</ins> , <ins>:patricia_trie</ins> ,
-<ins>:double_array_trie</ins> のいずれかを指定する。
-(:key_typeの項も参照)</p></div>
+            &mdash; <div class='inline'>
+<p>The type</p>
+
+<p>テーブルの型を指定する。 <tt>:array</tt> , <tt>:hash</tt> , <tt>:patricia_trie</tt> ,
+<tt>:double_array_trie</tt> のいずれかを指定する。 (:key_typeの項も参照)</p>
+</div>
           
         </li>
       
@@ -1563,8 +1674,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -1575,9 +1689,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>テーブルを保存するパスを指定する。
-パスを指定すると永続テーブルになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>テーブルを保存するパスを指定する。 パスを指定すると永続テーブルになる。</p>
+</div>
           
         </li>
       
@@ -1591,9 +1707,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>テーブルを永続テーブルとする。 <ins>:path</ins> を省略した場合は
-パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>テーブルを永続テーブルとする。 <tt>:path</tt> を省略した場合は パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p>
+</div>
           
         </li>
       
@@ -1607,9 +1725,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The value_type</p>
-<p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p></div>
+            &mdash; <div class='inline'>
+<p>The value_type</p>
+
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
+</div>
           
         </li>
       
@@ -1620,10 +1740,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The sub_records</p>
-<p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で
-グループ化したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに
-含まれるレコードの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>The sub_records</p>
+
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で グループ化したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに 含まれるレコードの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -1637,9 +1759,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>Keys are normalized
-if this value is <code>true</code>.</p>
-<p><code>deprecated Use @:normalizer =&gt; "NormalizerAuto"</code> instead.</p></div>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
+
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
+</div>
           
         </li>
       
@@ -1650,9 +1774,11 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You
-can specify this by normalizer name as String such as
-<code>"NormalizerAuto"</code> or normalizer object.</p></div>
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
+</div>
           
         </li>
       
@@ -1663,9 +1789,11 @@ can specify this by normalizer name as String such as
             
           </span>
           
-            &mdash; <div class='inline'><p>The key_with_sis</p>
-<p><ins>true</ins> を指定するとキーの文字列の
-全suffixが自動的に登録される。</p></div>
+            &mdash; <div class='inline'>
+<p>The key_with_sis</p>
+
+<p><tt>true</tt> を指定するとキーの文字列の 全suffixが自動的に登録される。</p>
+</div>
           
         </li>
       
@@ -1683,7 +1811,9 @@ can specify this by normalizer name as String such as
         <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create_table</strong>(name, options = {:type =&gt; :double_array_trie}) </span>
         <div class="docstring">
   <div class="discussion">
-    <p>:typeに:double_array_trieを使用した場合</p>
+    
+<p>:typeに:double_array_trieを使用した場合</p>
+
 
   </div>
 </div>
@@ -1703,8 +1833,9 @@ can specify this by normalizer name as String such as
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1725,9 +1856,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のテーブルが
-存在していても、強制的にテーブルを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名のテーブルが 存在していても、強制的にテーブルを作成する。</p>
+</div>
           
         </li>
       
@@ -1738,11 +1871,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。
-省略した場合は new で指定した
-<span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を使用する。 new で指
-定していない場合は <span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を使用する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。 省略した場合は new で指定した
+<span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を使用する。 new で指 定していない場合は
+<span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を使用する。</p>
+</div>
           
         </li>
       
@@ -1753,9 +1888,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>テーブルを保存するパスを指定する。パスを指定すると
-永続テーブルになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>テーブルを保存するパスを指定する。パスを指定すると 永続テーブルになる。</p>
+</div>
           
         </li>
       
@@ -1769,10 +1906,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>テーブルを永続テーブルとする。 <ins>:path:</ins> を省略した場
-合はパス名は自動的に作成される。デフォルトでは永続
-テーブルとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>テーブルを永続テーブルとする。 <tt>:path:</tt> を省略した場 合はパス名は自動的に作成される。デフォルトでは永続 テーブルとなる。</p>
+</div>
           
         </li>
       
@@ -1783,10 +1921,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The value_type</p>
-<p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。
-参考: Type.new</p></div>
+            &mdash; <div class='inline'>
+<p>The value_type</p>
+
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。 参考: Type.new</p>
+</div>
           
         </li>
       
@@ -1797,10 +1936,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The sub_records</p>
-<p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化
-したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに
-含まれるレコードの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>The sub_records</p>
+
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化 したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに 含まれるレコードの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -1814,9 +1955,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>Keys are normalized
-if this value is <code>true</code>.</p>
-<p><code>deprecated Use @:normalizer =&gt; "NormalizerAuto"</code> instead.</p></div>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
+
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
+</div>
           
         </li>
       
@@ -1827,22 +1970,21 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The key_type</p>
-<p>キーの種類を示すオブジェクトを指定する。
-キーの種類には型名（&quot;Int32&quot;や&quot;ShortText&quot;など）または
-<span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> またはテーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、
-<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、
+            &mdash; <div class='inline'>
+<p>The key_type</p>
+
+<p>キーの種類を示すオブジェクトを指定する。 キーの種類には型名（“Int32”や“ShortText”など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
+またはテーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、
 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> のどれか）を指定する。</p>
-<p><span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の
-値をキーとして使用する。ただし、キーの最大サイズは
-4096バイトであるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
-<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。</p>
-<p>テーブルを指定した場合はレコードIDをキーとして使用
-する。指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとし
-て使用することもでき、その場合は自動的に
-<span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。</p>
-<p>省略した場合は文字列をキーとして使用する。この場合、
-4096バイトまで使用可能である。</p></div>
+
+<p><span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の 値をキーとして使用する。ただし、キーの最大サイズは 4096バイトであるため、
+<span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。</p>
+
+<p>テーブルを指定した場合はレコードIDをキーとして使用 する。指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとし
+て使用することもでき、その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。</p>
+
+<p>省略した場合は文字列をキーとして使用する。この場合、 4096バイトまで使用可能である。</p>
+</div>
           
         </li>
       
@@ -1853,11 +1995,12 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The default_tokenizer</p>
-<p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを指定する。
-デフォルトでは何も設定されていないので、テーブルに
-<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
-<code>"TokenBigram"</code> などを指定する必要がある。</p></div>
+            &mdash; <div class='inline'>
+<p>The default_tokenizer</p>
+
+<p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを指定する。 デフォルトでは何も設定されていないので、テーブルに
+<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は @“TokenBigram”@ などを指定する必要がある。</p>
+</div>
           
         </li>
       
@@ -1868,9 +2011,11 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You
-can specify this by normalizer name as String such as
-<code>"NormalizerAuto"</code> or normalizer object.</p></div>
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
+</div>
           
         </li>
       
@@ -1890,14 +2035,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
-414
-415
-416
-417
-418</pre>
+409
+410
+411
+412
+413</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 414</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 409</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -1920,16 +2065,18 @@ can specify this by normalizer name as String such as
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が_name_のビューを作成する。以下の省略形。</p>
-<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
-  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_view'>create_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_view'>view</span><span class='op'>|</span>
-    <span class='comment'># ...
-</span>  <span class='kw'>end</span>
-<span class='kw'>end</span>
-</code></pre>
-<p>ブロックには <span class='object_link'><a href="Schema/ViewDefinition.html" title="Groonga::Schema::ViewDefinition (class)">ViewDefinition</a></span> オブジェ
-クトがわたるので、そのオブジェクトを利用してビュー
-の詳細を定義する。</p>
+    
+<p>名前が<em>name</em>のビューを作成する。以下の省略形。</p>
+
+<p>&lt;pre&gt; !!!ruby Groonga::Schema.define do |schema|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_view'>create_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_view'>view</span><span class='op'>|</span>
+  <span class='comment'># ...
+</span><span class='kw'>end</span></code></pre>
+
+<p>end &lt;/pre&gt; ブロックには <span class='object_link'><a href="Schema/ViewDefinition.html" title="Groonga::Schema::ViewDefinition (class)">ViewDefinition</a></span> オブジェ
+クトがわたるので、そのオブジェクトを利用してビュー の詳細を定義する。</p>
+
 
   </div>
 </div>
@@ -1949,8 +2096,9 @@ can specify this by normalizer name as String such as
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -1971,9 +2119,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のビューが
-存在していても、強制的にビューを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名のビューが 存在していても、強制的にビューを作成する。</p>
+</div>
           
         </li>
       
@@ -1987,8 +2137,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -1999,9 +2152,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>ビューを保存するパスを指定する。
-パスを指定すると永続ビューになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>ビューを保存するパスを指定する。 パスを指定すると永続ビューになる。</p>
+</div>
           
         </li>
       
@@ -2015,10 +2170,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>ビューを永続ビューとする。 <ins>:path:</ins> を省略した場
-合はパス名は自動的に作成される。デフォルトでは永続
-ビューとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>ビューを永続ビューとする。 <tt>:path:</tt> を省略した場 合はパス名は自動的に作成される。デフォルトでは永続 ビューとなる。</p>
+</div>
           
         </li>
       
@@ -2034,14 +2190,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-505
-506
-507
-508
-509</pre>
+497
+498
+499
+500
+501</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 505</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 497</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_view'>create_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2064,13 +2220,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>スキーマを定義する。ブロックには <span class='object_link'><a href="" title="Groonga::Schema (class)">Groonga::Schema</a></span> オブ
-ジェクトがわたるので、そのオブジェクトを利用してスキー
+    
+<p>スキーマを定義する。ブロックには <span class='object_link'><a href="" title="Groonga::Schema (class)">Groonga::Schema</a></span> オブ ジェクトがわたるので、そのオブジェクトを利用してスキー
 マを定義する。以下の省略形。</p>
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Scheme</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='comment'># ...
-</span><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span>
-</code></pre>
+
+<p>&lt;pre&gt; !!!ruby schema = Groonga::Scheme.new(options) # … schema.define
+&lt;/pre&gt;</p>
+
 
   </div>
 </div>
@@ -2090,8 +2246,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -2113,8 +2270,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -2141,14 +2301,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
+166
 167
 168
 169
-170
-171</pre>
+170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_define'>define</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_schema'>schema</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2171,31 +2331,37 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>スキーマの内容を文字列をRubyスクリプト形式またはgrn式
-形式で返す。デフォルトはRubyスクリプト形式である。
-Rubyスクリプト形式で返された値は
-<span class='object_link'><a href="#restore-class_method" title="Groonga::Schema.restore (method)">restore</a></span> することによりスキーマ内に組み
-込むことができる。</p>
-<p>dump.rb:</p>
-<pre class="code ruby"><code class="ruby"><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/groonga-schema.rb</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>w</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
-  <span class='id identifier rubyid_dumped_text'>dumped_text</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span>
-<span class='kw'>end</span>
-</code></pre>
-<p>restore.rb:</p>
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_dumped_text'>dumped_text</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span>
-<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/new-db.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_text'>dumped_text</span><span class='rparen'>)</span>
-</code></pre>
-<p>grn式形式で返された値はgroongaコマンドで読み込むこと
-ができる。</p>
-<p>dump.rb:</p>
-<pre class="code ruby"><code class="ruby"><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/groonga-schema.grn</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>w</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
-  <span class='id identifier rubyid_dumped_text'>dumped_text</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='symbol'>:syntax</span> <span class='op'>=&gt;</span> <span class='symbol'>:command</span><span class='rparen'>)</span>
-<span class='kw'>end</span>
-</code></pre>
+    
+<p>スキーマの内容を文字列をRubyスクリプト形式またはgrn式 形式で返す。デフォルトはRubyスクリプト形式である。
+Rubyスクリプト形式で返された値は <span class='object_link'><a href="#restore-class_method" title="Groonga::Schema.restore (method)">restore</a></span> することによりスキーマ内に組み 込むことができる。</p>
 
-<pre class="code text"><code class="text">% groonga db/path &lt; /tmp/groonga-schema.grn
-</code></pre>
+<p>dump.rb:</p>
+
+<p>&lt;pre&gt; !!!ruby File.open(“/tmp/groonga-schema.rb”, “w”) do |schema|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_dumped_text'>dumped_text</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
+<p>restore.rb:</p>
+
+<p>&lt;pre&gt; !!!ruby dumped_text = Groonga::Schema.dump
+Groonga::Database.create(:path =&gt; “/tmp/new-db.grn”)
+Groonga::Schema.restore(dumped_text) &lt;/pre&gt;</p>
+
+<p>grn式形式で返された値はgroongaコマンドで読み込むこと ができる。</p>
+
+<p>dump.rb:</p>
+
+<p>&lt;pre&gt; !!!ruby File.open(“/tmp/groonga-schema.grn”, “w”) do |schema|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_dumped_text'>dumped_text</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='symbol'>:syntax</span> <span class='op'>=&gt;</span> <span class='symbol'>:command</span><span class='rparen'>)</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
+<p>&lt;pre&gt; !!!text % groonga db/path &lt; /tmp/groonga-schema.grn
+&lt;/pre&gt;</p>
+
 
   </div>
 </div>
@@ -2215,8 +2381,9 @@ Rubyスクリプト形式で返された値は
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -2238,8 +2405,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -2250,12 +2420,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The syntax</p>
-<p>スキーマの文字列の形式を指定する。指定可能な値は以下の通り。
-<ins>:ruby</ins> Rubyスクリプト形式。省略した場合、+nil+ の場合も
-Rubyスクリプト形式になる。
-<ins>:command</ins> groongaコマンド形式。groongaコマンドで読み込む
-ことができる。</p></div>
+            &mdash; <div class='inline'>
+<p>The syntax</p>
+
+<p>スキーマの文字列の形式を指定する。指定可能な値は以下の通り。 <tt>:ruby</tt>
+Rubyスクリプト形式。省略した場合、<tt>nil</tt> の場合も Rubyスクリプト形式になる。 <tt>:command</tt>
+groongaコマンド形式。groongaコマンドで読み込む ことができる。</p>
+</div>
           
         </li>
       
@@ -2269,14 +2440,14 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
-631
-632
-633
-634
-635</pre>
+620
+621
+622
+623
+624</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 631</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 620</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_schema'>schema</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span><span class='comma'>,</span>
@@ -2299,11 +2470,15 @@ Rubyスクリプト形式になる。
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>以下と同様:</p>
-<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
-  <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
-<span class='kw'>end</span>
-</code></pre>
+    
+<p>以下と同様:</p>
+
+<p>&lt;pre&gt; !!!ruby Groonga::Schema.change_table(table_name) do |table|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
 
   </div>
 </div>
@@ -2316,14 +2491,14 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
-557
-558
-559
-560
-561</pre>
+547
+548
+549
+550
+551</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 557</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 547</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -2346,7 +2521,9 @@ Rubyスクリプト形式になる。
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のテーブルを削除する。</p>
+    
+<p>名前が <em>name</em> のテーブルを削除する。</p>
+
 
   </div>
 </div>
@@ -2366,8 +2543,9 @@ Rubyスクリプト形式になる。
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -2391,7 +2569,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -2405,14 +2585,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-425
-426
-427
-428
-429</pre>
+419
+420
+421
+422
+423</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 425</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 419</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_table'>remove_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2435,7 +2615,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のテーブルを削除する。</p>
+    
+<p>名前が <em>name</em> のテーブルを削除する。</p>
+
 
   </div>
 </div>
@@ -2455,8 +2637,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -2480,8 +2663,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context
-スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -2495,14 +2679,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-517
-518
-519
-520
-521</pre>
+508
+509
+510
+511
+512</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 517</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 508</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_view'>remove_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2525,12 +2709,16 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>This is a syntax sugar of the following:</p>
-<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
-  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span>
-                       <span class='id identifier rubyid_current_column_name'>current_column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_column_name'>new_column_name</span><span class='rparen'>)</span>
-<span class='kw'>end</span>
-</code></pre>
+    
+<p>This is a syntax sugar of the following:</p>
+
+<p>&lt;pre&gt; !!!ruby Groonga::Schema.define do |schema|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span>
+                     <span class='id identifier rubyid_current_column_name'>current_column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_column_name'>new_column_name</span><span class='rparen'>)</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
 
   </div>
 </div>
@@ -2543,14 +2731,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-572
-573
-574
-575
-576</pre>
+562
+563
+564
+565
+566</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 572</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 562</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_current_column_name'>current_column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_column_name'>new_column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2573,12 +2761,17 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>(See Groonga::Schema#rename_table)</p>
+    
+<p>(See Groonga::Schema#rename_table)</p>
+
 <p>This is a syntax sugar of the following code:</p>
-<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
-  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_rename_table'>rename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='kw'>end</span>
-</code></pre>
+
+<p>&lt;pre&gt; !!!ruby Groonga::Schema.define do |schema|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_rename_table'>rename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
 
   </div>
 </div>
@@ -2591,14 +2784,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-467
-468
-469
-470
-471</pre>
+460
+461
+462
+463
+464</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 467</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 460</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_table'>rename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2621,7 +2814,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><span class='object_link'><a href="#dump-class_method" title="Groonga::Schema.dump (method)">dump</a></span> で文字列化したスキーマを組み込む。</p>
+    
+<p><span class='object_link'><a href="#dump-class_method" title="Groonga::Schema.dump (method)">dump</a></span> で文字列化したスキーマを組み込む。</p>
+
 
   </div>
 </div>
@@ -2634,14 +2829,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-638
-639
-640
-641
-642</pre>
+627
+628
+629
+630
+631</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 638</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 627</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_text'>dumped_text</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2670,9 +2865,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のテーブルを変更する。</p>
-<p>テーブルの変更は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないこ
-とに注意すること。</p>
+    
+<p>名前が <em>name</em> のテーブルを変更する。</p>
+
+<p>テーブルの変更は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないこ とに注意すること。</p>
+
 
   </div>
 </div>
@@ -2692,8 +2889,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -2717,8 +2915,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -2745,15 +2946,15 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-806
-807
-808
-809
-810
-811</pre>
+792
+793
+794
+795
+796
+797</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 806</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 792</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:change</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -2777,9 +2978,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のビューを変更する。</p>
-<p>ビューの変更は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないこ
-とに注意すること。</p>
+    
+<p>名前が <em>name</em> のビューを変更する。</p>
+
+<p>ビューの変更は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないこ とに注意すること。</p>
+
 
   </div>
 </div>
@@ -2799,8 +3002,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -2824,8 +3028,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -2852,15 +3059,15 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-884
-885
-886
-887
-888
-889</pre>
+865
+866
+867
+868
+869
+870</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 884</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 865</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_change_view'>change_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:change</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -2892,9 +3099,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のテーブルを作成する。</p>
-<p>テーブルの作成は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないこ
-とに注意すること。</p>
+    
+<p>名前が <em>name</em> のテーブルを作成する。</p>
+
+<p>テーブルの作成は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないこ とに注意すること。</p>
+
 
   </div>
 </div>
@@ -2928,8 +3137,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -2950,9 +3160,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のテーブルが
-存在していても、強制的にテーブルを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名のテーブルが 存在していても、強制的にテーブルを作成する。</p>
+</div>
           
         </li>
       
@@ -2966,11 +3178,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The type</p>
-<p>テーブルの型を指定する。
-<ins>:array</ins> , <ins>:hash</ins> , <ins>:patricia_trie</ins> ,
-<ins>:double_array_trie</ins> のいずれかを指定する。
-(:key_typeの項も参照)</p></div>
+            &mdash; <div class='inline'>
+<p>The type</p>
+
+<p>テーブルの型を指定する。 <tt>:array</tt> , <tt>:hash</tt> , <tt>:patricia_trie</tt> ,
+<tt>:double_array_trie</tt> のいずれかを指定する。 (:key_typeの項も参照)</p>
+</div>
           
         </li>
       
@@ -2984,8 +3197,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -2996,9 +3212,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>テーブルを保存するパスを指定する。
-パスを指定すると永続テーブルになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>テーブルを保存するパスを指定する。 パスを指定すると永続テーブルになる。</p>
+</div>
           
         </li>
       
@@ -3012,9 +3230,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>テーブルを永続テーブルとする。 <ins>:path</ins> を省略した場合は
-パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>テーブルを永続テーブルとする。 <tt>:path</tt> を省略した場合は パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p>
+</div>
           
         </li>
       
@@ -3028,9 +3248,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The value_type</p>
-<p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p></div>
+            &mdash; <div class='inline'>
+<p>The value_type</p>
+
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
+</div>
           
         </li>
       
@@ -3041,10 +3263,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The sub_records</p>
-<p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で
-グループ化したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに
-含まれるレコードの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>The sub_records</p>
+
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で グループ化したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに 含まれるレコードの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -3082,8 +3306,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -3104,9 +3329,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のテーブルが
-存在していても、強制的にテーブルを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名のテーブルが 存在していても、強制的にテーブルを作成する。</p>
+</div>
           
         </li>
       
@@ -3120,11 +3347,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The type</p>
-<p>テーブルの型を指定する。
-<ins>:array</ins> , <ins>:hash</ins> , <ins>:patricia_trie</ins> ,
-<ins>:double_array_trie</ins> のいずれかを指定する。
-(:key_typeの項も参照)</p></div>
+            &mdash; <div class='inline'>
+<p>The type</p>
+
+<p>テーブルの型を指定する。 <tt>:array</tt> , <tt>:hash</tt> , <tt>:patricia_trie</tt> ,
+<tt>:double_array_trie</tt> のいずれかを指定する。 (:key_typeの項も参照)</p>
+</div>
           
         </li>
       
@@ -3138,8 +3366,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -3150,9 +3381,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>テーブルを保存するパスを指定する。
-パスを指定すると永続テーブルになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>テーブルを保存するパスを指定する。 パスを指定すると永続テーブルになる。</p>
+</div>
           
         </li>
       
@@ -3166,9 +3399,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>テーブルを永続テーブルとする。 <ins>:path</ins> を省略した場合は
-パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>テーブルを永続テーブルとする。 <tt>:path</tt> を省略した場合は パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p>
+</div>
           
         </li>
       
@@ -3182,9 +3417,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The value_type</p>
-<p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p></div>
+            &mdash; <div class='inline'>
+<p>The value_type</p>
+
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
+</div>
           
         </li>
       
@@ -3195,10 +3432,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The sub_records</p>
-<p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で
-グループ化したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに
-含まれるレコードの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>The sub_records</p>
+
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で グループ化したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに 含まれるレコードの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -3209,19 +3448,17 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The key_type</p>
-<p>キーの種類を示すオブジェクトを指定する。
-キーの種類には型名（&quot;Int32&quot;や&quot;ShortText&quot;など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
-またはテーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、
-<span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> の
-どれか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の
-値をキーとして使用する。ただし、キーの最大サイズは4096バイトで
-あるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない
-。テーブルを指定した場合はレコードIDをキーとして使用する。
-指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、
-その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。
-省略した場合は文字列をキーとして使用する。
-この場合、4096バイトまで使用可能である。</p></div>
+            &mdash; <div class='inline'>
+<p>The key_type</p>
+
+<p>キーの種類を示すオブジェクトを指定する。 キーの種類には型名（“Int32”や“ShortText”など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
+またはテーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、
+<span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> の どれか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の
+値をキーとして使用する。ただし、キーの最大サイズは4096バイトで あるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
+<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない 。テーブルを指定した場合はレコードIDをキーとして使用する。 指定したテーブルの
+<span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、 その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span>
+からレコードIDを取得する。 省略した場合は文字列をキーとして使用する。 この場合、4096バイトまで使用可能である。</p>
+</div>
           
         </li>
       
@@ -3232,12 +3469,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The default_tokenizer</p>
-<p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で
-使用するトークナイザを指定する。デフォルトでは
-何も設定されていないので、テーブルに
-<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は <code>"TokenBigram"</code>
-などを指定する必要がある。</p></div>
+            &mdash; <div class='inline'>
+<p>The default_tokenizer</p>
+
+<p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で 使用するトークナイザを指定する。デフォルトでは 何も設定されていないので、テーブルに
+<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は @“TokenBigram”@ などを指定する必要がある。</p>
+</div>
           
         </li>
       
@@ -3251,9 +3488,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>Keys are normalized
-if this value is <code>true</code>.</p>
-<p><code>deprecated Use @:normalizer =&gt; "NormalizerAuto"</code> instead.</p></div>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
+
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
+</div>
           
         </li>
       
@@ -3264,9 +3503,11 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You
-can specify this by normalizer name as String such as
-<code>"NormalizerAuto"</code> or normalizer object.</p></div>
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
+</div>
           
         </li>
       
@@ -3304,8 +3545,9 @@ can specify this by normalizer name as String such as
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -3326,9 +3568,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のテーブルが
-存在していても、強制的にテーブルを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名のテーブルが 存在していても、強制的にテーブルを作成する。</p>
+</div>
           
         </li>
       
@@ -3342,11 +3586,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The type</p>
-<p>テーブルの型を指定する。
-<ins>:array</ins> , <ins>:hash</ins> , <ins>:patricia_trie</ins> ,
-<ins>:double_array_trie</ins> のいずれかを指定する。
-(:key_typeの項も参照)</p></div>
+            &mdash; <div class='inline'>
+<p>The type</p>
+
+<p>テーブルの型を指定する。 <tt>:array</tt> , <tt>:hash</tt> , <tt>:patricia_trie</tt> ,
+<tt>:double_array_trie</tt> のいずれかを指定する。 (:key_typeの項も参照)</p>
+</div>
           
         </li>
       
@@ -3360,8 +3605,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -3372,9 +3620,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>テーブルを保存するパスを指定する。
-パスを指定すると永続テーブルになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>テーブルを保存するパスを指定する。 パスを指定すると永続テーブルになる。</p>
+</div>
           
         </li>
       
@@ -3388,9 +3638,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>テーブルを永続テーブルとする。 <ins>:path</ins> を省略した場合は
-パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>テーブルを永続テーブルとする。 <tt>:path</tt> を省略した場合は パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p>
+</div>
           
         </li>
       
@@ -3404,9 +3656,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The value_type</p>
-<p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p></div>
+            &mdash; <div class='inline'>
+<p>The value_type</p>
+
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
+</div>
           
         </li>
       
@@ -3417,10 +3671,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The sub_records</p>
-<p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で
-グループ化したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに
-含まれるレコードの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>The sub_records</p>
+
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> で グループ化したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに 含まれるレコードの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -3434,9 +3690,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>Keys are normalized
-if this value is <code>true</code>.</p>
-<p><code>deprecated Use @:normalizer =&gt; "NormalizerAuto"</code> instead.</p></div>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
+
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
+</div>
           
         </li>
       
@@ -3447,9 +3705,11 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You
-can specify this by normalizer name as String such as
-<code>"NormalizerAuto"</code> or normalizer object.</p></div>
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
+</div>
           
         </li>
       
@@ -3460,9 +3720,11 @@ can specify this by normalizer name as String such as
             
           </span>
           
-            &mdash; <div class='inline'><p>The key_with_sis</p>
-<p><ins>true</ins> を指定するとキーの文字列の
-全suffixが自動的に登録される。</p></div>
+            &mdash; <div class='inline'>
+<p>The key_with_sis</p>
+
+<p><tt>true</tt> を指定するとキーの文字列の 全suffixが自動的に登録される。</p>
+</div>
           
         </li>
       
@@ -3480,7 +3742,9 @@ can specify this by normalizer name as String such as
         <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create_table</strong>(name, options = {:type =&gt; :double_array_trie}) </span>
         <div class="docstring">
   <div class="discussion">
-    <p>:typeに:double_array_trieを使用した場合</p>
+    
+<p>:typeに:double_array_trieを使用した場合</p>
+
 
   </div>
 </div>
@@ -3500,8 +3764,9 @@ can specify this by normalizer name as String such as
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -3522,9 +3787,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名のテーブルが
-存在していても、強制的にテーブルを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名のテーブルが 存在していても、強制的にテーブルを作成する。</p>
+</div>
           
         </li>
       
@@ -3535,11 +3802,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。
-省略した場合は new で指定した
-<span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を使用する。 new で指
-定していない場合は <span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を使用する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。 省略した場合は new で指定した
+<span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を使用する。 new で指 定していない場合は
+<span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を使用する。</p>
+</div>
           
         </li>
       
@@ -3550,9 +3819,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>テーブルを保存するパスを指定する。パスを指定すると
-永続テーブルになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>テーブルを保存するパスを指定する。パスを指定すると 永続テーブルになる。</p>
+</div>
           
         </li>
       
@@ -3566,10 +3837,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>テーブルを永続テーブルとする。 <ins>:path:</ins> を省略した場
-合はパス名は自動的に作成される。デフォルトでは永続
-テーブルとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>テーブルを永続テーブルとする。 <tt>:path:</tt> を省略した場 合はパス名は自動的に作成される。デフォルトでは永続 テーブルとなる。</p>
+</div>
           
         </li>
       
@@ -3580,10 +3852,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The value_type</p>
-<p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。
-参考: Type.new</p></div>
+            &mdash; <div class='inline'>
+<p>The value_type</p>
+
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。 参考: Type.new</p>
+</div>
           
         </li>
       
@@ -3594,10 +3867,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The sub_records</p>
-<p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化
-したときに、 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに
-含まれるレコードの件数を取得できる。</p></div>
+            &mdash; <div class='inline'>
+<p>The sub_records</p>
+
+<p><tt>true</tt> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化 したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに 含まれるレコードの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -3611,9 +3886,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>Keys are normalized
-if this value is <code>true</code>.</p>
-<p><code>deprecated Use @:normalizer =&gt; "NormalizerAuto"</code> instead.</p></div>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
+
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
+</div>
           
         </li>
       
@@ -3624,22 +3901,21 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The key_type</p>
-<p>キーの種類を示すオブジェクトを指定する。
-キーの種類には型名（&quot;Int32&quot;や&quot;ShortText&quot;など）または
-<span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> またはテーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、
-<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、
+            &mdash; <div class='inline'>
+<p>The key_type</p>
+
+<p>キーの種類を示すオブジェクトを指定する。 キーの種類には型名（“Int32”や“ShortText”など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
+またはテーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、 <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、
 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> のどれか）を指定する。</p>
-<p><span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の
-値をキーとして使用する。ただし、キーの最大サイズは
-4096バイトであるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
-<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。</p>
-<p>テーブルを指定した場合はレコードIDをキーとして使用
-する。指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとし
-て使用することもでき、その場合は自動的に
-<span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。</p>
-<p>省略した場合は文字列をキーとして使用する。この場合、
-4096バイトまで使用可能である。</p></div>
+
+<p><span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の 値をキーとして使用する。ただし、キーの最大サイズは 4096バイトであるため、
+<span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。</p>
+
+<p>テーブルを指定した場合はレコードIDをキーとして使用 する。指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとし
+て使用することもでき、その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。</p>
+
+<p>省略した場合は文字列をキーとして使用する。この場合、 4096バイトまで使用可能である。</p>
+</div>
           
         </li>
       
@@ -3650,11 +3926,12 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The default_tokenizer</p>
-<p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを指定する。
-デフォルトでは何も設定されていないので、テーブルに
-<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
-<code>"TokenBigram"</code> などを指定する必要がある。</p></div>
+            &mdash; <div class='inline'>
+<p>The default_tokenizer</p>
+
+<p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを指定する。 デフォルトでは何も設定されていないので、テーブルに
+<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は @“TokenBigram”@ などを指定する必要がある。</p>
+</div>
           
         </li>
       
@@ -3665,9 +3942,11 @@ if this value is <code>true</code>.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You
-can specify this by normalizer name as String such as
-<code>"NormalizerAuto"</code> or normalizer object.</p></div>
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
+</div>
           
         </li>
       
@@ -3700,14 +3979,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
-775
-776
-777
-778
-779</pre>
+763
+764
+765
+766
+767</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 775</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 763</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>TableDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -3730,9 +4009,11 @@ can specify this by normalizer name as String such as
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のビューを作成する。</p>
-<p>ビューの作成は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないこ
-とに注意すること。</p>
+    
+<p>名前が <em>name</em> のビューを作成する。</p>
+
+<p>ビューの作成は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないこ とに注意すること。</p>
+
 
   </div>
 </div>
@@ -3752,8 +4033,9 @@ can specify this by normalizer name as String such as
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -3774,9 +4056,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The force</p>
-<p><ins>true</ins> を指定すると既存の同名の
-ビューが存在していても、強制的にビューを作成する。</p></div>
+            &mdash; <div class='inline'>
+<p>The force</p>
+
+<p><tt>true</tt> を指定すると既存の同名の ビューが存在していても、強制的にビューを作成する。</p>
+</div>
           
         </li>
       
@@ -3790,10 +4074,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。
-new で指定していない場合は
-<span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を使用する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。 new で指定していない場合は
+<span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を使用する。</p>
+</div>
           
         </li>
       
@@ -3804,9 +4090,11 @@ new で指定していない場合は
             
           </span>
           
-            &mdash; <div class='inline'><p>The path</p>
-<p>テーブルを保存するパスを指定する。パスを指定すると
-永続テーブルになる。</p></div>
+            &mdash; <div class='inline'>
+<p>The path</p>
+
+<p>テーブルを保存するパスを指定する。パスを指定すると 永続テーブルになる。</p>
+</div>
           
         </li>
       
@@ -3820,9 +4108,11 @@ new で指定していない場合は
             
           </span>
           
-            &mdash; <div class='inline'><p>The persistent</p>
-<p>テーブルを永続テーブルとする。 <ins>:path:</ins> を省略した場合は
-パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p></div>
+            &mdash; <div class='inline'>
+<p>The persistent</p>
+
+<p>テーブルを永続テーブルとする。 <tt>:path:</tt> を省略した場合は パス名は自動的に作成される。デフォルトでは永続テーブルとなる。</p>
+</div>
           
         </li>
       
@@ -3849,14 +4139,14 @@ new で指定していない場合は
       <pre class="lines">
 
 
-852
-853
-854
-855
-856</pre>
+835
+836
+837
+838
+839</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 852</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 835</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_view'>create_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>ViewDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -3879,7 +4169,9 @@ new で指定していない場合は
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>定義されたスキーマ定義を実際に実行する。</p>
+    
+<p>定義されたスキーマ定義を実際に実行する。</p>
+
 
   </div>
 </div>
@@ -3892,14 +4184,14 @@ new で指定していない場合は
       <pre class="lines">
 
 
-736
-737
-738
-739
-740</pre>
+724
+725
+726
+727
+728</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 736</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 724</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_define'>define</span>
   <span class='ivar'>@definitions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_definition'>definition</span><span class='op'>|</span>
@@ -3922,8 +4214,9 @@ new で指定していない場合は
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>スキーマの内容を文字列で返す。返された値は
-<span class='object_link'><a href="#restore-instance_method" title="Groonga::Schema#restore (method)">#restore</a></span> することによりスキーマ内に組み込むことができる。</p>
+    
+<p>スキーマの内容を文字列で返す。返された値は <span class='object_link'><a href="#restore-instance_method" title="Groonga::Schema#restore (method)">#restore</a></span> することによりスキーマ内に組み込むことができる。</p>
+
 
   </div>
 </div>
@@ -3936,14 +4229,14 @@ new で指定していない場合は
       <pre class="lines">
 
 
-755
-756
-757
-758
-759</pre>
+743
+744
+745
+746
+747</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 755</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 743</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span>
   <span class='id identifier rubyid_dumper'>dumper</span> <span class='op'>=</span> <span class='const'>SchemaDumper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span><span class='comma'>,</span>
@@ -3966,11 +4259,15 @@ new で指定していない場合は
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>以下と同様:</p>
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
-  <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
-<span class='kw'>end</span>
-</code></pre>
+    
+<p>以下と同様:</p>
+
+<p>&lt;pre&gt; !!!ruby schema.change_table(table_name) do |table|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
 
   </div>
 </div>
@@ -3983,14 +4280,14 @@ new で指定していない場合は
       <pre class="lines">
 
 
-899
-900
-901
-902
-903</pre>
+880
+881
+882
+883
+884</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 899</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 880</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -4013,9 +4310,11 @@ new で指定していない場合は
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のテーブルを削除する。</p>
-<p>テーブルの削除は# <span class='object_link'><a href="#define-class_method" title="Groonga::Schema.define (method)">define</a></span> を呼び出すまでは実行されないこ
-とに注意すること。</p>
+    
+<p>名前が <em>name</em> のテーブルを削除する。</p>
+
+<p>テーブルの削除は# <span class='object_link'><a href="#define-class_method" title="Groonga::Schema.define (method)">define</a></span> を呼び出すまでは実行されないこ とに注意すること。</p>
+
 
   </div>
 </div>
@@ -4035,8 +4334,9 @@ new で指定していない場合は
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -4060,8 +4360,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -4075,13 +4378,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-791
-792
-793
-794</pre>
+778
+779
+780
+781</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 791</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 778</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_table'>remove_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>TableRemoveDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -4103,9 +4406,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>name</em> のビューを削除する。</p>
-<p>ビューの削除は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないことに
-注意すること。</p>
+    
+<p>名前が <em>name</em> のビューを削除する。</p>
+
+<p>ビューの削除は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されないことに 注意すること。</p>
+
 
   </div>
 </div>
@@ -4125,8 +4430,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -4150,8 +4456,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The context</p>
-<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p></div>
+            &mdash; <div class='inline'>
+<p>The context</p>
+
+<p>スキーマ定義時に使用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> を指定する。</p>
+</div>
           
         </li>
       
@@ -4165,13 +4474,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-869
-870
-871
-872</pre>
+851
+852
+853
+854</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 869</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 851</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_view'>remove_view</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>ViewRemoveDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -4193,11 +4502,15 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>It is a syntax sugar of the following:</p>
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
-  <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_current_column_name'>current_column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_column_name'>new_column_name</span><span class='rparen'>)</span>
-<span class='kw'>end</span>
-</code></pre>
+    
+<p>It is a syntax sugar of the following:</p>
+
+<p>&lt;pre&gt; !!!ruby schema.change_table(table_name) do |table|</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_current_column_name'>current_column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_column_name'>new_column_name</span><span class='rparen'>)</span></code></pre>
+
+<p>end &lt;/pre&gt;</p>
+
 
   </div>
 </div>
@@ -4210,14 +4523,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-913
-914
-915
-916
-917</pre>
+894
+895
+896
+897
+898</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 913</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 894</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_current_column_name'>current_column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_column_name'>new_column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -4240,8 +4553,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>テーブルの名前を <em>current_name</em> から <em>new_name</em> に変更します。</p>
+    
+<p>テーブルの名前を <em>current_name</em> から <em>new_name</em> に変更します。</p>
+
 <p><span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> が呼ばれるまで名前の変更は実行されないことに注意してください。</p>
+
 
   </div>
 </div>
@@ -4261,8 +4577,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+        <div class='inline'>
+<p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
+</div>
       
     </li>
   
@@ -4288,7 +4605,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>The <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> to be used in renaming.</p></div>
+            &mdash; <div class='inline'>
+<p>The <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> to be used in renaming.</p>
+</div>
           
         </li>
       
@@ -4302,14 +4621,14 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-822
-823
-824
-825
-826</pre>
+806
+807
+808
+809
+810</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 822</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 806</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_table'>rename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -4336,9 +4655,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><span class='object_link'><a href="#dump-instance_method" title="Groonga::Schema#dump (method)">#dump</a></span> で返されたスキーマの内容を読み込む。</p>
-<p>読み込まれた内容は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されない
-ことに注意すること。</p>
+    
+<p><span class='object_link'><a href="#dump-instance_method" title="Groonga::Schema#dump (method)">#dump</a></span> で返されたスキーマの内容を読み込む。</p>
+
+<p>読み込まれた内容は <span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> を呼び出すまでは実行されない ことに注意すること。</p>
+
 
   </div>
 </div>
@@ -4351,12 +4672,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-746
-747
-748</pre>
+734
+735
+736</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 746</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 734</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_text'>dumped_text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_text'>dumped_text</span><span class='rparen'>)</span>
@@ -4371,7 +4692,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
 </div>
 
     <div id="footer">
-  Generated on Wed May 29 16:30:41 2013 by
+  Generated on Wed May  1 17:23:03 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.1 (ruby-1.9.3).
 </div>

@@ -110,8 +110,8 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/groonga.rb<span class="defines">,<br />
-  lib/groonga/dumper.rb,<br /> lib/groonga/logger.rb,<br /> lib/groonga/record.rb,<br /> lib/groonga/schema.rb,<br /> lib/groonga/command.rb,<br /> lib/groonga/context.rb,<br /> lib/groonga/posting.rb,<br /> lib/groonga/database.rb,<br /> lib/groonga/geo-point.rb,<br /> lib/groonga/pagination.rb,<br /> lib/groonga/grntest-log.rb,<br /> lib/groonga/view-record.rb,<br /> lib/groonga/index-column.rb,<br /> lib/groonga/query-logger.rb,<br /> lib/groonga/patricia-trie.rb,<br /> lib/groonga/expression-builder.rb,<br /> lib/groonga/expression-builder-19.rb,<br /> ext/groonga/rb-groonga.c</span>
+    <dd class="r1 last">lib/groonga/database.rb<span class="defines">,<br />
+  lib/groonga/schema.rb,<br /> lib/groonga/geo-point.rb,<br /> lib/groonga/expression-builder-19.rb,<br /> lib/groonga/pagination.rb,<br /> lib/groonga/index-column.rb,<br /> lib/groonga/view-record.rb,<br /> lib/groonga/patricia-trie.rb,<br /> lib/groonga/grntest-log.rb,<br /> lib/groonga/command.rb,<br /> lib/groonga/dumper.rb,<br /> lib/groonga/posting.rb,<br /> lib/groonga/query-logger.rb,<br /> lib/groonga/context.rb,<br /> lib/groonga/record.rb,<br /> lib/groonga/expression-builder.rb,<br /> lib/groonga/logger.rb,<br /> lib/groonga.rb,<br /> ext/groonga/rb-groonga.c</span>
 </dd>
   
 </dl>
@@ -119,17 +119,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Copyright &#169; 2011  Kouhei Sutou &lt;kou@clear-code.com&gt;</p>
-<p>This library is free software; you can redistribute it and/or
-modify it under the terms of the <span class="caps">GNU</span> Lesser General Public
-License version 2.1 as published by the Free Software Foundation.</p>
-<p>This library is distributed in the hope that it will be useful,
-but <span class="caps">WITHOUT</span> <span class="caps">ANY</span> <span class="caps">WARRANTY</span>; without even the implied warranty of
-<span class="caps">MERCHANTABILITY</span> or <span class="caps">FITNESS</span> <span class="caps">FOR</span> A <span class="caps">PARTICULAR</span> <span class="caps">PURPOSE</span>.  See the <span class="caps">GNU</span>
-Lesser General Public License for more details.</p>
-<p>You should have received a copy of the <span class="caps">GNU</span> Lesser General Public
-License along with this library; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span class="caps">USA</span></p>
+    
+<p>rroonga用のネームスペース。rroongaのクラスやメソッ ドなどはこのモジュール以下に定義される。</p>
+
 
   </div>
 </div>
@@ -156,9 +148,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
         <dt id="VERSION-constant" class="">VERSION =
           <div class="docstring">
   <div class="discussion">
-    <p>利用しているgroongaのバージョン。 <code>[メジャーバージョ
-ン, マイナーバージョン, マイクロバージョン, タグ]</code> の
-配列。</p>
+    
+<p>利用しているgroongaのバージョン。 @[メジャーバージョ ン, マイナーバージョン, マイクロバージョン, タグ]@ の 配列。</p>
+
 
   </div>
 </div>
@@ -172,8 +164,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
         <dt id="BUILD_VERSION-constant" class="">BUILD_VERSION =
           <div class="docstring">
   <div class="discussion">
-    <p>ビルドしたgroongaのバージョン。 <code>[メジャーバージョン,
-マイナーバージョン, マイクロバージョン]</code> の配列。</p>
+    
+<p>ビルドしたgroongaのバージョン。 @[メジャーバージョン, マイナーバージョン, マイクロバージョン]@ の配列。</p>
+
 
   </div>
 </div>
@@ -187,8 +180,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
         <dt id="BINDINGS_VERSION-constant" class="">BINDINGS_VERSION =
           <div class="docstring">
   <div class="discussion">
-    <p>rroongaのバージョン。 <code>[メジャーバージョン, マ
-イナーバージョン, マイクロバージョン]</code> の配列。</p>
+    
+<p>rroongaのバージョン。 @[メジャーバージョン, マ イナーバージョン, マイクロバージョン]@ の配列。</p>
+
 
   </div>
 </div>
@@ -199,10 +193,31 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
         </dt>
         <dd><pre class="code"><span class='id identifier rubyid_bindings_version'>bindings_version</span></pre></dd>
       
+        <dt id="ObjectClosed-constant" class="deprecated">ObjectClosed =
+          <div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>Use <span class='object_link'><a href="Groonga/Closed.html" title="Groonga::Closed (class)">Closed</a></span> instead since 1.2.3.</p>
+</div></div>
+
+<p>groongaレベルでは破棄されているが、Rubyレベルでは生き ているオブジェクトにアクセスすると発生する。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_eGrnClosed'>rb_eGrnClosed</span></pre></dd>
+      
         <dt id="Operation-constant" class="deprecated">Operation =
           <div class="docstring">
   <div class="discussion">
-    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>backward compatibility.</p></div></div>
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>後方互換性のために残してあります。</p>
+</div></div>
 
 
   </div>
@@ -213,22 +228,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
 </div>
         </dt>
         <dd><pre class="code"><span class='id identifier rubyid_rb_mGrnOperator'>rb_mGrnOperator</span></pre></dd>
-      
-        <dt id="ObjectClosed-constant" class="deprecated">ObjectClosed =
-          <div class="docstring">
-  <div class="discussion">
-    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Use <span class='object_link'><a href="Groonga/Closed.html" title="Groonga::Closed (class)">Closed</a></span> instead since 1.2.3.</p></div></div>
-<p>groongaレベルでは破棄されているが、Rubyレベルでは生き
-ているオブジェクトにアクセスすると発生する。</p>
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-        </dt>
-        <dd><pre class="code"><span class='id identifier rubyid_rb_eGrnClosed'>rb_eGrnClosed</span></pre></dd>
       
     </dl>
   
@@ -264,7 +263,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 
   
-    <span class="summary_desc"><div class='inline'><p>call-seq:.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq:.</p>
+</div></span>
   
 </li>
 
@@ -286,9 +287,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 
   
-    <span class="summary_desc"><div class='inline'><p>BINDINGS_VERSIONを&quot;.&quot;で結合して&quot;メジャーバージョン.マ
-イナーバージョン.マイクロバージョン&quot;という形式の文
-字列にしたもの。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>BINDINGS_VERSIONを“.”で結合して“メジャーバージョン.マ イナーバージョン.マイクロバージョン”という形式の文 字列にしたもの。.</p>
+</div></span>
   
 </li>
 
@@ -310,9 +311,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 
   
-    <span class="summary_desc"><div class='inline'><p>BUILD_VERSIONを&quot;.&quot;で結合して&quot;メジャーバージョン.マ
-イナーバージョン.マイクロバージョン&quot;という形式の
-文字列にしたもの。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>BUILD_VERSIONを“.”で結合して“メジャーバージョン.マ イナーバージョン.マイクロバージョン”という形式の 文字列にしたもの。.</p>
+</div></span>
   
 </li>
 
@@ -334,7 +335,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 
   
-    <span class="summary_desc"><div class='inline'><p>VERSIONを&quot;.&quot;で結合して、”メジャーバージョン.マイナーバージョン.マイクロバージョン”という形式の文字列にしたもの。もしVERSIONにタグが含まれる場合、”メジャーバージョン.マイナーバージョン.マイクロバージョン-タグ”という形式の文字列になる。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>VERSIONを“.”で結合して、”メジャーバージョン.マイナーバージョン.マイクロバージョン”という形式の文字列にしたもの。もしVERSIONにタグが含まれる場合、”メジャーバージョン.マイナーバージョン.マイクロバージョン-タグ”という形式の文字列になる。.</p>
+</div></span>
   
 </li>
 
@@ -359,10 +362,14 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>call-seq:
-  Groonga[name] &#8594; Groonga::Object or nil
-  Groonga[id]   &#8594; Groonga::Object or nil</p>
-<p>便利メソッド。Groonga::Context.default[name]と同じ。</p>
+    
+<p>call-seq:</p>
+
+<pre class="code ruby"><code class="ruby">Groonga[name] -&gt; Groonga::Object or nil
+Groonga[id]   -&gt; Groonga::Object or nil</code></pre>
+
+<p><a href="http://name">便利メソッド。Groonga::Context.default</a>と同じ。</p>
+
 
   </div>
 </div>
@@ -401,9 +408,10 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>BINDINGS_VERSIONを&quot;.&#8220;で結合して<tt>&#8221;メジャーバージョン.マ
-イナーバージョン.マイクロバージョン&quot;</tt>という形式の文
-字列にしたもの。</p>
+    
+<p>BINDINGS_VERSIONを“.”で結合して<tt>&quot;メジャーバージョン.マ
+イナーバージョン.マイクロバージョン&quot;</tt>という形式の文 字列にしたもの。</p>
+
 
   </div>
 </div>
@@ -442,9 +450,10 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>BUILD_VERSIONを&quot;.&#8220;で結合して<tt>&#8221;メジャーバージョン.マ
-イナーバージョン.マイクロバージョン&quot;</tt>という形式の
-文字列にしたもの。</p>
+    
+<p>BUILD_VERSIONを“.”で結合して<tt>&quot;メジャーバージョン.マ
+イナーバージョン.マイクロバージョン&quot;</tt>という形式の 文字列にしたもの。</p>
+
 
   </div>
 </div>
@@ -483,7 +492,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>VERSIONを&quot;.&quot;で結合して、<tt>”メジャーバージョン.マイナーバージョン.マイクロバージョン”</tt>という形式の文字列にしたもの。もしVERSIONにタグが含まれる場合、<tt>”メジャーバージョン.マイナーバージョン.マイクロバージョン-タグ”</tt>という形式の文字列になる。</p>
+    
+<p>VERSIONを“.”で結合して、<tt>”メジャーバージョン.マイナーバージョン.マイクロバージョン”</tt>という形式の文字列にしたもの。もしVERSIONにタグが含まれる場合、<tt>”メジャーバージョン.マイナーバージョン.マイクロバージョン-タグ”</tt>という形式の文字列になる。</p>
+
 
   </div>
 </div>
@@ -500,8 +511,23 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
       
       
         &mdash;
-        <div class='inline'><p>If Groonga::<span class="caps">VERSION</span> has tag,
-<code>MAJOR.MINOR.MICRO-TAG</code>. Otherwise, <code>MAJOR.MINOR.MICRO</code>.</p></div>
+        <div class='inline'>
+<p>If Groonga::VERSION has tag,</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>@MAJOR.MINOR.MICRO-TAG@. Otherwise, @MAJOR.MINOR.MICRO@.</p>
+</div>
       
     </li>
   
@@ -539,7 +565,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
 </div>
 
     <div id="footer">
-  Generated on Wed May 29 16:30:39 2013 by
+  Generated on Wed May  1 17:23:02 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.1 (ruby-1.9.3).
 </div>

@@ -132,9 +132,10 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>スキーマ定義時に <span class='object_link'><a href="../Schema.html#create_view-class_method" title="Groonga::Schema.create_view (method)">create_view</a></span> や
-<span class='object_link'><a href="../Schema.html#create_view-instance_method" title="Groonga::Schema#create_view (method)">#create_view</a></span> からブロックに渡されてくる
-オブジェクト</p>
+    
+<p>スキーマ定義時に <span class='object_link'><a href="../Schema.html#create_view-class_method" title="Groonga::Schema.create_view (method)">create_view</a></span> や <span class='object_link'><a href="../Schema.html#create_view-instance_method" title="Groonga::Schema#create_view (method)">#create_view</a></span>
+からブロックに渡されてくる オブジェクト</p>
+
 
   </div>
 </div>
@@ -173,7 +174,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>ビューの名前.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>ビューの名前.</p>
+</div></span>
   
 </li>
 
@@ -208,7 +211,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>名前が <em>table</em> のテーブルをビューに追加する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>名前が <em>table</em> のテーブルをビューに追加する。.</p>
+</div></span>
   
 </li>
 
@@ -233,7 +238,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>ビューの名前</p>
+    
+<p>ビューの名前</p>
+
 
   </div>
 </div>
@@ -246,12 +253,12 @@
       <pre class="lines">
 
 
-1599
-1600
-1601</pre>
+1577
+1578
+1579</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1599</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1577</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@name</span>
@@ -279,7 +286,9 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>名前が <em>table</em> のテーブルをビューに追加する。</p>
+    
+<p>名前が <em>table</em> のテーブルをビューに追加する。</p>
+
 
   </div>
 </div>
@@ -292,14 +301,14 @@
       <pre class="lines">
 
 
-1634
-1635
-1636
-1637
-1638</pre>
+1612
+1613
+1614
+1615
+1616</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1634</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1612</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='kw'>if</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Symbol</span><span class='rparen'>)</span>
@@ -316,7 +325,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed May 29 16:30:41 2013 by
+  Generated on Wed May  1 17:23:04 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.1 (ruby-1.9.3).
 </div>
