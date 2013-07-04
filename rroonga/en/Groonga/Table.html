@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href=../alphabetical_index.html">Index (T)</a> &raquo;
+    <a href="../alphabetical_index.html">Index (T)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Table</span>
@@ -428,6 +428,28 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#each_sub_record-instance_method" title="#each_sub_record (instance method)">- (void) <strong>each_sub_record</strong>(id) {|sub_record| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Iterates each sub records for the record <em>id</em>.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#empty%3F-instance_method" title="#empty? (instance method)">- (Boolean) <strong>empty?</strong> </a>
     
 
@@ -512,6 +534,29 @@
 
   
     <span class="summary_desc"><div class='inline'><p>テーブルが <em>name</em> カラムを持っている場合は <ins>true</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#have_n_sub_records_space%3F-instance_method" title="#have_n_sub_records_space? (instance method)">- (Boolean) <strong>have_n_sub_records_space?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p><span class='object_link'><a href="#group-instance_method" title="Groonga::Table#group (method)">#group</a></span> returns a table that contains grouped
+records.</p></div></span>
   
 </li>
 
@@ -1109,18 +1154,18 @@ rb_grn_table_initialize (VALUE self)
       <pre class="lines">
 
 
-1360
-1361
-1362
-1363
-1364
-1365
-1366
-1367
-1368</pre>
+1406
+1407
+1408
+1409
+1410
+1411
+1412
+1413
+1414</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1360</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1406</span>
 
 VALUE
 rb_grn_table_array_reference (VALUE self, VALUE rb_id)
@@ -1215,35 +1260,35 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-1862
-1863
-1864
-1865
-1866
-1867
-1868
-1869
-1870
-1871
-1872
-1873
-1874
-1875
-1876
-1877
-1878
-1879
-1880
-1881
-1882
-1883
-1884
-1885
-1886
-1887</pre>
+1908
+1909
+1910
+1911
+1912
+1913
+1914
+1915
+1916
+1917
+1918
+1919
+1920
+1921
+1922
+1923
+1924
+1925
+1926
+1927
+1928
+1929
+1930
+1931
+1932
+1933</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1862</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1908</span>
 
 static VALUE
 rb_grn_table_clear_lock (int argc, VALUE *argv, VALUE self)
@@ -1544,31 +1589,31 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
       <pre class="lines">
 
 
-1513
-1514
-1515
-1516
-1517
-1518
-1519
-1520
-1521
-1522
-1523
-1524
-1525
-1526
-1527
-1528
-1529
-1530
-1531
-1532
-1533
-1534</pre>
+1559
+1560
+1561
+1562
+1563
+1564
+1565
+1566
+1567
+1568
+1569
+1570
+1571
+1572
+1573
+1574
+1575
+1576
+1577
+1578
+1579
+1580</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1513</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1559</span>
 
 static VALUE
 rb_grn_table_get_column_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -2608,35 +2653,35 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
-2287
-2288
-2289
-2290
-2291
-2292
-2293
-2294
-2295
-2296
-2297
-2298
-2299
-2300
-2301
-2302
-2303
-2304
-2305
-2306
-2307
-2308
-2309
-2310
-2311
-2312</pre>
+2376
+2377
+2378
+2379
+2380
+2381
+2382
+2383
+2384
+2385
+2386
+2387
+2388
+2389
+2390
+2391
+2392
+2393
+2394
+2395
+2396
+2397
+2398
+2399
+2400
+2401</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2287</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2376</span>
 
 static VALUE
 rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
@@ -2933,19 +2978,19 @@ rb_grn_table_delete (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2202
-2203
-2204
-2205
-2206</pre>
+2254
+2255
+2256
+2257
+2258</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2202</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2254</span>
 
 static VALUE
 rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
 {
-    return rb_grn_table_set_operation_bang(self, rb_other, GRN_OP_BUT);
+    return rb_grn_table_set_operation_bang(self, rb_other, GRN_OP_AND_NOT);
 }</pre>
     </td>
   </tr>
@@ -3126,6 +3171,154 @@ rb_grn_table_each (int argc, VALUE *argv, VALUE self)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="each_sub_record-instance_method">
+  
+    - (<tt>void</tt>) <strong>each_sub_record</strong>(id) {|sub_record| ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Iterates each sub records for the record <em>id</em>.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>sub_record</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Gives a sub record for the record <em>id</em> to the block.</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>sub_record</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A sub record for the record <em>id</em>.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>3.0.3</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1369
+1370
+1371
+1372
+1373
+1374
+1375
+1376
+1377
+1378
+1379
+1380
+1381
+1382
+1383
+1384
+1385
+1386
+1387
+1388
+1389
+1390
+1391
+1392
+1393
+1394
+1395
+1396</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1369</span>
+
+static VALUE
+rb_grn_table_each_sub_record (VALUE self, VALUE rb_id)
+{
+    VALUE rb_range;
+    grn_obj *table, *range;
+    grn_ctx *context = NULL;
+    grn_id *sub_records_buffer;
+    unsigned int i, n_sub_records, max_n_sub_records;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                             NULL, NULL,
+                             NULL, NULL, &amp;range,
+                             NULL);
+    max_n_sub_records = grn_table_max_n_subrecs(context, table);
+    if (max_n_sub_records == 0) {
+        return Qnil;
+    }
+    RETURN_ENUMERATOR(self, 0, NULL);
+    sub_records_buffer = ALLOCA_N(grn_id, max_n_sub_records);
+    n_sub_records = grn_table_get_subrecs(context, table, NUM2UINT(rb_id),
+                                          sub_records_buffer, NULL,
+                                          (int)max_n_sub_records);
+    rb_range = GRNOBJECT2RVAL(Qnil, context, range, GRN_FALSE);
+    for (i = 0; i &lt; n_sub_records; i++) {
+        rb_yield(rb_grn_record_new(rb_range, sub_records_buffer[i], Qnil));
+    }
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="empty?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>empty?</strong> 
@@ -3243,21 +3436,21 @@ rb_grn_table_empty_p (VALUE self)
       <pre class="lines">
 
 
-2261
-2262
-2263
-2264
-2265
-2266
-2267
-2268
-2269
-2270
-2271
-2272</pre>
+2350
+2351
+2352
+2353
+2354
+2355
+2356
+2357
+2358
+2359
+2360
+2361</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2261</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2350</span>
 
 static VALUE
 rb_grn_table_exist_p (VALUE self, VALUE id)
@@ -3360,6 +3553,8 @@ rb_grn_table_exist_p (VALUE self, VALUE id)
     
   </ul>
 
+  
+
 
 </div><table class="source_code">
   <tr>
@@ -3367,9 +3562,6 @@ rb_grn_table_exist_p (VALUE self, VALUE id)
       <pre class="lines">
 
 
-1261
-1262
-1263
 1264
 1265
 1266
@@ -3456,10 +3648,17 @@ rb_grn_table_exist_p (VALUE self, VALUE id)
 1347
 1348
 1349
-1350</pre>
+1350
+1351
+1352
+1353
+1354
+1355
+1356
+1357</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1261</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1264</span>
 
 static VALUE
 rb_grn_table_group (int argc, VALUE *argv, VALUE self)
@@ -3468,9 +3667,9 @@ rb_grn_table_group (int argc, VALUE *argv, VALUE self)
     grn_obj *table;
     grn_table_sort_key *keys;
     grn_table_group_result *results;
-    int i, n_keys, n_results;
+    int i, n_keys, n_results, max_n_sub_records = 0;
     grn_rc rc;
-    VALUE rb_keys, rb_options;
+    VALUE rb_keys, rb_options, rb_max_n_sub_records;
     VALUE *rb_group_keys;
     VALUE rb_results;
 
@@ -3488,6 +3687,13 @@ rb_grn_table_group (int argc, VALUE *argv, VALUE self)
         n_keys = 1;
         rb_group_keys = &amp;rb_keys;
     }
+
+    rb_grn_scan_options(rb_options,
+                        &quot;max_n_sub_records&quot;, &amp;rb_max_n_sub_records,
+                        NULL);
+
+    if (!NIL_P(rb_max_n_sub_records))
+        max_n_sub_records = NUM2INT(rb_max_n_sub_records);
 
     keys = ALLOCA_N(grn_table_sort_key, n_keys);
     for (i = 0; i &lt; n_keys; i++) {
@@ -3524,13 +3730,10 @@ rb_grn_table_group (int argc, VALUE *argv, VALUE self)
     rb_results = rb_ary_new();
     for (i = 0; i &lt; n_results; i++) {
         grn_obj *result;
-        grn_id range_id;
         VALUE rb_result;
 
-        range_id = grn_obj_get_range(context, keys[i].key);
-        result = grn_table_create(context, NULL, 0, NULL,
-                                  GRN_TABLE_HASH_KEY | GRN_OBJ_WITH_SUBREC,
-                                  grn_ctx_at(context, range_id), 0);
+        result = grn_table_create_for_group(context, NULL, 0, NULL,
+                                            keys[i].key, table, max_n_sub_records);
         results[i].table = result;
         results[i].key_begin = 0;
         results[i].key_end = 0;
@@ -3644,6 +3847,114 @@ rb_grn_table_have_column (VALUE self, VALUE rb_name)
     } else {
         return Qfalse;
     }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="have_n_sub_records_space?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>have_n_sub_records_space?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p><span class='object_link'><a href="#group-instance_method" title="Groonga::Table#group (method)">#group</a></span> returns a table that contains grouped
+records. If grouped table has a space to store the number of
+records for each group, the number of records is stored to
+it. Records for each group are called as &#8220;sub records&#8221;.</p>
+<p>Normally, you don&#8217;t need to care about the space because rroonga
+creates a table with the space automatically. Normal tables
+(persistent tables) don&#8217;t have the space because they don&#8217;t need
+it.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>A normal table don&#8217;t have the space</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># A normal table
+</span><span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_have_n_sub_records_space?'>have_n_sub_records_space?</span> <span class='comment'># =&gt; false</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>A grouped table has the space</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>                <span class='comment'># A normal table
+</span><span class='id identifier rubyid_grouped_users'>grouped_users</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_group'>group</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_key</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>     <span class='comment'># A grouped table
+</span><span class='id identifier rubyid_grouped_users'>grouped_users</span><span class='period'>.</span><span class='id identifier rubyid_have_n_sub_records_space?'>have_n_sub_records_space?</span> <span class='comment'># =&gt; true</span></code></pre>
+    
+  </div>
+
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the table has a space for storing
+the number of sub records, <code>false</code> otherwise.</p></div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2329
+2330
+2331
+2332
+2333
+2334
+2335
+2336
+2337
+2338
+2339</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2329</span>
+
+static VALUE
+rb_grn_table_have_n_sub_records_space_p (VALUE self)
+{
+    grn_obj *table;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, NULL,
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
+    return CBOOL2RVAL(table-&gt;header.flags &amp; GRN_OBJ_WITH_SUBREC);
 }</pre>
     </td>
   </tr>
@@ -3782,14 +4093,14 @@ rb_grn_table_inspect (VALUE self)
       <pre class="lines">
 
 
-2189
-2190
-2191
-2192
-2193</pre>
+2241
+2242
+2243
+2244
+2245</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2189</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2241</span>
 
 static VALUE
 rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
@@ -3992,47 +4303,47 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-1811
-1812
-1813
-1814
-1815
-1816
-1817
-1818
-1819
-1820
-1821
-1822
-1823
-1824
-1825
-1826
-1827
-1828
-1829
-1830
-1831
-1832
-1833
-1834
-1835
-1836
-1837
-1838
-1839
-1840
-1841
-1842
-1843
-1844
-1845
-1846
-1847
-1848</pre>
+1857
+1858
+1859
+1860
+1861
+1862
+1863
+1864
+1865
+1866
+1867
+1868
+1869
+1870
+1871
+1872
+1873
+1874
+1875
+1876
+1877
+1878
+1879
+1880
+1881
+1882
+1883
+1884
+1885
+1886
+1887
+1888
+1889
+1890
+1891
+1892
+1893
+1894</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1811</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1857</span>
 
 static VALUE
 rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
@@ -4169,33 +4480,33 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-1901
-1902
-1903
-1904
-1905
-1906
-1907
-1908
-1909
-1910
-1911
-1912
-1913
-1914
-1915
-1916
-1917
-1918
-1919
-1920
-1921
-1922
-1923
-1924</pre>
+1947
+1948
+1949
+1950
+1951
+1952
+1953
+1954
+1955
+1956
+1957
+1958
+1959
+1960
+1961
+1962
+1963
+1964
+1965
+1966
+1967
+1968
+1969
+1970</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1901</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1947</span>
 
 static VALUE
 rb_grn_table_is_locked (int argc, VALUE *argv, VALUE self)
@@ -4275,14 +4586,14 @@ rb_grn_table_is_locked (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2215
-2216
-2217
-2218
-2219</pre>
+2267
+2268
+2269
+2270
+2271</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2215</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2267</span>
 
 static VALUE
 rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
@@ -5013,32 +5324,32 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2321
-2322
-2323
-2324
-2325
-2326
-2327
-2328
-2329
-2330
-2331
-2332
-2333
-2334
-2335
-2336
-2337
-2338
-2339
-2340
-2341
-2342
-2343</pre>
+2410
+2411
+2412
+2413
+2414
+2415
+2416
+2417
+2418
+2419
+2420
+2421
+2422
+2423
+2424
+2425
+2426
+2427
+2428
+2429
+2430
+2431
+2432</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2321</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2410</span>
 
 static VALUE
 rb_grn_table_rename (VALUE self, VALUE rb_name)
@@ -5255,7 +5566,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
 は何もしない。</dd>
 	<dt>Groonga::Operator::<span class="caps">AND</span></dt>
 	<dd>マッチしたレコードのスコアを増加。マッチしなかったレコードを削除。</dd>
-	<dt>Groonga::Operator::<span class="caps">BUT</span></dt>
+	<dt>Groonga::Operator::AND_NOT</dt>
 	<dd>マッチしたレコードを削除。</dd>
 	<dt>Groonga::Operator::<span class="caps">ADJUST</span></dt>
 	<dd>マッチしたレコードのスコアを増加。</dd>
@@ -5412,7 +5723,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
 は何もしない。</dd>
 	<dt>Groonga::Operator::<span class="caps">AND</span></dt>
 	<dd>マッチしたレコードのスコアを増加。マッチしなかったレコードを削除。</dd>
-	<dt>Groonga::Operator::<span class="caps">BUT</span></dt>
+	<dt>Groonga::Operator::AND_NOT</dt>
 	<dd>マッチしたレコードを削除。</dd>
 	<dt>Groonga::Operator::<span class="caps">ADJUST</span></dt>
 	<dd>マッチしたレコードのスコアを増加。</dd>
@@ -5522,52 +5833,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-2059
-2060
-2061
-2062
-2063
-2064
-2065
-2066
-2067
-2068
-2069
-2070
-2071
-2072
-2073
-2074
-2075
-2076
-2077
-2078
-2079
-2080
-2081
-2082
-2083
-2084
-2085
-2086
-2087
-2088
-2089
-2090
-2091
-2092
-2093
-2094
-2095
-2096
-2097
-2098
-2099
-2100
-2101
-2102
-2103
-2104
 2105
 2106
 2107
@@ -5605,10 +5870,62 @@ pairs. Omitted names are initialized as the default value.</p></div>
 2139
 2140
 2141
-2142</pre>
+2142
+2143
+2144
+2145
+2146
+2147
+2148
+2149
+2150
+2151
+2152
+2153
+2154
+2155
+2156
+2157
+2158
+2159
+2160
+2161
+2162
+2163
+2164
+2165
+2166
+2167
+2168
+2169
+2170
+2171
+2172
+2173
+2174
+2175
+2176
+2177
+2178
+2179
+2180
+2181
+2182
+2183
+2184
+2185
+2186
+2187
+2188
+2189
+2190
+2191
+2192
+2193
+2194</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2059</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2105</span>
 
 static VALUE
 rb_grn_table_select (int argc, VALUE *argv, VALUE self)
@@ -5664,6 +5981,12 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
                                   GRN_TABLE_HASH_KEY | GRN_OBJ_WITH_SUBREC,
                                   table,
                                   NULL);
+        rb_grn_context_check(context, self);
+        if (!result) {
+            rb_raise(rb_eGrnNoMemoryAvailable,
+                     &quot;failed to create result table: %s&quot;,
+                     rb_grn_inspect(rb_ary_new4(argc, argv)));
+        }
         rb_result = GRNTABLE2RVAL(context, result, GRN_TRUE);
     } else {
         result = RVAL2GRNTABLE(rb_result, &amp;context);
@@ -6198,31 +6521,31 @@ Specify <code>true</code> for polymorphic usage.</p></div>
       <pre class="lines">
 
 
-1714
-1715
-1716
-1717
-1718
-1719
-1720
-1721
-1722
-1723
-1724
-1725
-1726
-1727
-1728
-1729
-1730
-1731
-1732
-1733
-1734
-1735</pre>
+1760
+1761
+1762
+1763
+1764
+1765
+1766
+1767
+1768
+1769
+1770
+1771
+1772
+1773
+1774
+1775
+1776
+1777
+1778
+1779
+1780
+1781</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1714</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1760</span>
 
 static VALUE
 rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -6283,30 +6606,30 @@ rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1462
-1463
-1464
-1465
-1466
-1467
-1468
-1469
-1470
-1471
-1472
-1473
-1474
-1475
-1476
-1477
-1478
-1479
-1480
-1481
-1482</pre>
+1508
+1509
+1510
+1511
+1512
+1513
+1514
+1515
+1516
+1517
+1518
+1519
+1520
+1521
+1522
+1523
+1524
+1525
+1526
+1527
+1528</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1462</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1508</span>
 
 static VALUE
 rb_grn_table_set_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -6842,14 +7165,14 @@ rb_grn_table_sort (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2227
-2228
-2229
-2230
-2231</pre>
+2279
+2280
+2281
+2282
+2283</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2227</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2279</span>
 
 static VALUE
 rb_grn_table_support_key_p (VALUE self)
@@ -6902,31 +7225,33 @@ rb_grn_table_support_key_p (VALUE self)
       <pre class="lines">
 
 
-2240
-2241
-2242
-2243
-2244
-2245
-2246
-2247
-2248
-2249
-2250</pre>
+2292
+2293
+2294
+2295
+2296
+2297
+2298
+2299
+2300
+2301
+2302
+2303</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2240</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2292</span>
 
 static VALUE
 rb_grn_table_support_sub_records_p (VALUE self)
 {
     grn_obj *table;
+    grn_ctx *context;
 
-    rb_grn_table_deconstruct(SELF(self), &amp;table, NULL,
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
                              NULL, NULL,
                              NULL, NULL, NULL,
                              NULL);
-    return CBOOL2RVAL(table-&gt;header.flags &amp; GRN_OBJ_WITH_SUBREC);
+    return CBOOL2RVAL(grn_table_is_grouped(context, table));
 }</pre>
     </td>
   </tr>
@@ -7049,14 +7374,14 @@ rb_grn_table_truncate (VALUE self)
       <pre class="lines">
 
 
-2175
-2176
-2177
-2178
-2179</pre>
+2227
+2228
+2229
+2230
+2231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2175</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2227</span>
 
 static VALUE
 rb_grn_table_union_bang (VALUE self, VALUE rb_other)
@@ -7145,38 +7470,38 @@ groonga側が未実装のため、現在は無視される）</p></div>
       <pre class="lines">
 
 
-1747
-1748
-1749
-1750
-1751
-1752
-1753
-1754
-1755
-1756
-1757
-1758
-1759
-1760
-1761
-1762
-1763
-1764
-1765
-1766
-1767
-1768
-1769
-1770
-1771
-1772
-1773
-1774
-1775</pre>
+1793
+1794
+1795
+1796
+1797
+1798
+1799
+1800
+1801
+1802
+1803
+1804
+1805
+1806
+1807
+1808
+1809
+1810
+1811
+1812
+1813
+1814
+1815
+1816
+1817
+1818
+1819
+1820
+1821</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1747</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1793</span>
 
 static VALUE
 rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
@@ -7304,30 +7629,30 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1404
-1405
-1406
-1407
-1408
-1409
-1410
-1411
-1412
-1413
-1414
-1415
-1416
-1417
-1418
-1419
-1420
-1421
-1422
-1423
-1424</pre>
+1450
+1451
+1452
+1453
+1454
+1455
+1456
+1457
+1458
+1459
+1460
+1461
+1462
+1463
+1464
+1465
+1466
+1467
+1468
+1469
+1470</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1404</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1450</span>
 
 static VALUE
 rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)

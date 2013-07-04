@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href=../alphabetical_index.html">Index (E)</a> &raquo;
+    <a href="../alphabetical_index.html">Index (E)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Expression</span>
@@ -607,13 +607,6 @@ rb_grn_expression_initialize (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-499
-500
-501
-502
-503
-504
-505
 506
 507
 508
@@ -638,16 +631,21 @@ rb_grn_expression_initialize (int argc, VALUE *argv, VALUE self)
 527
 528
 529
-530</pre>
+530
+531
+532
+533
+534
+535</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 499</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 506</span>
 
 static VALUE
 rb_grn_expression_array_reference (VALUE self, VALUE rb_name_or_offset)
 {
     grn_ctx *context = NULL;
-    grn_obj *expression, *variable, *value;
+    grn_obj *expression, *variable;
     char *name = NULL;
     unsigned name_size = 0;
     int offset;
@@ -661,19 +659,17 @@ rb_grn_expression_array_reference (VALUE self, VALUE rb_name_or_offset)
         name = RSTRING_PTR(rb_name_or_offset);
         name_size = RSTRING_LEN(rb_name_or_offset);
         variable = grn_expr_get_var(context, expression, name, name_size);
-        return GRNBULK2RVAL(context, variable, NULL, self);
         break;
     case T_FIXNUM:
         offset = NUM2INT(rb_name_or_offset);
-        value = grn_expr_get_var_by_offset(context, expression, offset);
-        return GRNBULK2RVAL(context, value, NULL, self);
+        variable = grn_expr_get_var_by_offset(context, expression, offset);
         break;
     default:
         rb_raise(rb_eArgError, &quot;xxx&quot;);
         break;
     }
 
-    return Qnil;
+    return GRNVARIABLE2RVAL(context, variable);
 }</pre>
     </td>
   </tr>
@@ -781,13 +777,6 @@ rb_grn_expression_array_reference (VALUE self, VALUE rb_name_or_offset)
       <pre class="lines">
 
 
-206
-207
-208
-209
-210
-211
-212
 213
 214
 215
@@ -810,10 +799,17 @@ rb_grn_expression_array_reference (VALUE self, VALUE rb_name_or_offset)
 232
 233
 234
-235</pre>
+235
+236
+237
+238
+239
+240
+241
+242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 206</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 213</span>
 
 static VALUE
 rb_grn_expression_append_constant (int argc, VALUE *argv, VALUE self)
@@ -951,13 +947,6 @@ rb_grn_expression_append_constant (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-169
-170
-171
-172
-173
-174
-175
 176
 177
 178
@@ -977,10 +966,17 @@ rb_grn_expression_append_constant (int argc, VALUE *argv, VALUE self)
 192
 193
 194
-195</pre>
+195
+196
+197
+198
+199
+200
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 169</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 176</span>
 
 static VALUE
 rb_grn_expression_append_object (int argc, VALUE *argv, VALUE self)
@@ -1040,13 +1036,6 @@ rb_grn_expression_append_object (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-242
-243
-244
-245
-246
-247
-248
 249
 250
 251
@@ -1058,10 +1047,17 @@ rb_grn_expression_append_object (int argc, VALUE *argv, VALUE self)
 257
 258
 259
-260</pre>
+260
+261
+262
+263
+264
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 242</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 249</span>
 
 static VALUE
 rb_grn_expression_append_operation (VALUE self, VALUE rb_operation,
@@ -1113,13 +1109,6 @@ rb_grn_expression_append_operation (VALUE self, VALUE rb_operation,
       <pre class="lines">
 
 
-471
-472
-473
-474
-475
-476
-477
 478
 479
 480
@@ -1129,10 +1118,17 @@ rb_grn_expression_append_operation (VALUE self, VALUE rb_operation,
 484
 485
 486
-487</pre>
+487
+488
+489
+490
+491
+492
+493
+494</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 471</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 478</span>
 
 static VALUE
 rb_grn_expression_compile (VALUE self)
@@ -1210,11 +1206,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
         <li>
           <span class="name">:name</span>
-          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
               &mdash; default:
-              <tt>false</tt>
+              <tt>nil</tt>
             
           </span>
           
@@ -1224,12 +1220,31 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
         <li>
           <span class="name">:domain</span>
-          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span></tt>)</span>
           <span class="default">
+            
+              &mdash; default:
+              <tt>nil</tt>
             
           </span>
           
             &mdash; <div class='inline'><p>テーブルを指定すると、そのテーブル用のレコードとして初期化する。</p></div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:reference</span>
+          <span class="type">(<tt>Bool</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>nil</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Initializes this variable as reference hold variable if
+<code>:reference</code> is true. Reference hold variable is GRN_PTR type
+in groonga. You can&#8217;t use <code>:reference</code> with <code>:domain</code>.</p></div>
           
         </li>
       
@@ -1259,10 +1274,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-122
-123
-124
-125
 126
 127
 128
@@ -1294,10 +1305,17 @@ pairs. Omitted names are initialized as the default value.</p></div>
 154
 155
 156
-157</pre>
+157
+158
+159
+160
+161
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 122</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 126</span>
 
 static VALUE
 rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
@@ -1306,7 +1324,7 @@ rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
     grn_obj *expression, *variable;
     char *name = NULL;
     unsigned name_size = 0;
-    VALUE options, rb_name, rb_domain, rb_variable;
+    VALUE options, rb_name, rb_domain, rb_variable, rb_reference;
 
     rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
 
@@ -1317,6 +1335,7 @@ rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
     rb_grn_scan_options(options,
 			&quot;name&quot;, &amp;rb_name,
 			&quot;domain&quot;, &amp;rb_domain,
+                        &quot;reference&quot;, &amp;rb_reference,
 			NULL);
 
     if (!NIL_P(rb_name)) {
@@ -1331,6 +1350,8 @@ rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
 	grn_id domain_id;
 	domain_id = NUM2UINT(rb_funcall(rb_domain, rb_intern(&quot;id&quot;), 0));
 	GRN_RECORD_INIT(variable, 0, domain_id);
+    } else if (!NIL_P(rb_reference) &amp;&amp; RVAL2CBOOL(rb_reference)) {
+        GRN_PTR_INIT(variable, 0, GRN_DB_OBJECT);
     }
 
     return rb_variable;
@@ -1388,13 +1409,6 @@ rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-449
-450
-451
-452
-453
-454
-455
 456
 457
 458
@@ -1403,10 +1417,17 @@ rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
 461
 462
 463
-464</pre>
+464
+465
+466
+467
+468
+469
+470
+471</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 449</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 456</span>
 
 static VALUE
 rb_grn_expression_execute (VALUE self)
@@ -1477,11 +1498,6 @@ rb_grn_expression_execute (VALUE self)
       <pre class="lines">
 
 
-541
-542
-543
-544
-545
 546
 547
 548
@@ -1503,10 +1519,15 @@ rb_grn_expression_execute (VALUE self)
 564
 565
 566
-567</pre>
+567
+568
+569
+570
+571
+572</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 541</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 546</span>
 
 static VALUE
 rb_grn_expression_inspect (VALUE self)
@@ -1638,7 +1659,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
 	<dd>レコードはいずれかの条件にマッチすればいい。</dd>
 	<dt>Groonga::Operator::<span class="caps">AND</span></dt>
 	<dd>レコードは全ての条件にマッチしなければならない。</dd>
-	<dt>Groonga::Operator::<span class="caps">BUT</span></dt>
+	<dt>Groonga::Operator::AND_NOT</dt>
 	<dd>最初の条件にレコードはマッチし、残りの条件にレコードは
 マッチしてはならない。</dd>
 </dl></div>
@@ -1748,13 +1769,6 @@ pragmaを利用できるようにする。script構文を用いている
       <pre class="lines">
 
 
-329
-330
-331
-332
-333
-334
-335
 336
 337
 338
@@ -1860,10 +1874,17 @@ pragmaを利用できるようにする。script構文を用いている
 438
 439
 440
-441</pre>
+441
+442
+443
+444
+445
+446
+447
+448</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 329</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 336</span>
 
 static VALUE
 rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
@@ -2167,11 +2188,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-617
-618
-619
-620
-621
 622
 623
 624
@@ -2263,10 +2279,15 @@ pairs. Omitted names are initialized as the default value.</p></div>
 710
 711
 712
-713</pre>
+713
+714
+715
+716
+717
+718</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 617</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 622</span>
 
 static VALUE
 rb_grn_expression_snippet (int argc, VALUE *argv, VALUE self)

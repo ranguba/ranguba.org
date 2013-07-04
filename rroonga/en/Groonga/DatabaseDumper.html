@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href=../alphabetical_index.html">Index (D)</a> &raquo;
+    <a href="../alphabetical_index.html">Index (D)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">DatabaseDumper</span>
@@ -378,10 +378,7 @@
 77
 78
 79
-80
-81
-82
-83</pre>
+80</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 48</span>
@@ -395,15 +392,12 @@
     <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span>
     <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:database</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_database'>database</span>
   <span class='kw'>end</span>
-  <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_plugins</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_plugins</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_schema</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_schema</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_tables</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_tables</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_schema</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_dump_plugins'>dump_plugins</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_schema_dumper'>schema_dumper</span> <span class='op'>=</span> <span class='const'>SchemaDumper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:syntax</span> <span class='op'>=&gt;</span> <span class='symbol'>:command</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-  <span class='id identifier rubyid_dump_plugins'>dump_plugins</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_plugins</span><span class='rbracket'>]</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_schema</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_schema_dumper'>schema_dumper</span><span class='period'>.</span><span class='id identifier rubyid_dump_tables'>dump_tables</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_schema_dumper'>schema_dumper</span><span class='period'>.</span><span class='id identifier rubyid_have_reference_columns?'>have_reference_columns?</span>
       <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:output</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
