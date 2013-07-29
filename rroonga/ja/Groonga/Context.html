@@ -550,6 +550,28 @@ new を参照。.</p></div></span>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#object_created-instance_method" title="#object_created (instance method)">- (Object) <strong>object_created</strong>(object) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#open_database-instance_method" title="#open_database (instance method)">- (Object) <strong>open_database</strong>(path, &amp;block) </a>
     
 
@@ -567,6 +589,50 @@ new を参照。.</p></div></span>
     <span class="summary_desc"><div class='inline'><p><em>path</em> にある既存のデータベースを開く。ブロックを指定した場
 合はブロックに開いたデータベースを渡し、ブロックを抜けると
 きに閉じる。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pop_memory_pool-instance_method" title="#pop_memory_pool (instance method)">- (void) <strong>pop_memory_pool</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Pops the pushed memory pool.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push_memory_pool-instance_method" title="#push_memory_pool (instance method)">- (Object) <strong>push_memory_pool</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Pushes a new memory pool to the context.</p></div></span>
   
 </li>
 
@@ -881,7 +947,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
 473
 474
 475
-476</pre>
+476
+477
+478</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 432</span>
@@ -926,6 +994,8 @@ rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
 	encoding = RVAL2GRNENCODING(rb_encoding, NULL);
 	GRN_CTX_SET_ENCODING(context, encoding);
     }
+
+    rb_iv_set(self, &quot;@memory_pools&quot;, rb_ary_new());
 
     debug(&quot;context new: %p\n&quot;, context);
 
@@ -1294,8 +1364,6 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
       <pre class="lines">
 
 
-889
-890
 891
 892
 893
@@ -1330,10 +1398,12 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
 922
 923
 924
-925</pre>
+925
+926
+927</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 889</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 891</span>
 
 static VALUE
 rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
@@ -1403,8 +1473,6 @@ rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
       <pre class="lines">
 
 
-484
-485
 486
 487
 488
@@ -1419,10 +1487,12 @@ rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
 497
 498
 499
-500</pre>
+500
+501
+502</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 484</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 486</span>
 
 static VALUE
 rb_grn_context_close (VALUE self)
@@ -1485,18 +1555,18 @@ rb_grn_context_close (VALUE self)
       <pre class="lines">
 
 
-507
-508
 509
 510
 511
 512
 513
 514
-515</pre>
+515
+516
+517</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 507</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 509</span>
 
 static VALUE
 rb_grn_context_closed_p (VALUE self)
@@ -1606,8 +1676,6 @@ rb_grn_context_closed_p (VALUE self)
       <pre class="lines">
 
 
-716
-717
 718
 719
 720
@@ -1641,10 +1709,12 @@ rb_grn_context_closed_p (VALUE self)
 748
 749
 750
-751</pre>
+751
+752
+753</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 716</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 718</span>
 
 static VALUE
 rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
@@ -2043,17 +2113,17 @@ returned value from this method.</p></div>
       <pre class="lines">
 
 
-99
-100
 101
 102
 103
 104
 105
-106</pre>
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_database'>create_database</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
@@ -2116,17 +2186,17 @@ returned value from this method.</p></div>
       <pre class="lines">
 
 
-696
-697
 698
 699
 700
 701
 702
-703</pre>
+703
+704
+705</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 696</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 698</span>
 
 static VALUE
 rb_grn_context_get_database (VALUE self)
@@ -2189,14 +2259,14 @@ rb_grn_context_get_database (VALUE self)
       <pre class="lines">
 
 
-563
-564
 565
 566
-567</pre>
+567
+568
+569</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 563</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 565</span>
 
 static VALUE
 rb_grn_context_get_encoding (VALUE self)
@@ -2235,8 +2305,6 @@ rb_grn_context_get_encoding (VALUE self)
       <pre class="lines">
 
 
-575
-576
 577
 578
 579
@@ -2246,10 +2314,12 @@ rb_grn_context_get_encoding (VALUE self)
 583
 584
 585
-586</pre>
+586
+587
+588</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 575</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 577</span>
 
 static VALUE
 rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
@@ -2316,8 +2386,6 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
       <pre class="lines">
 
 
-523
-524
 525
 526
 527
@@ -2348,10 +2416,12 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
 552
 553
 554
-555</pre>
+555
+556
+557</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 523</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 525</span>
 
 static VALUE
 rb_grn_context_inspect (VALUE self)
@@ -2443,14 +2513,14 @@ rb_grn_context_inspect (VALUE self)
       <pre class="lines">
 
 
-620
-621
 622
 623
-624</pre>
+624
+625
+626</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 620</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 622</span>
 
 static VALUE
 rb_grn_context_get_match_escalation_threshold (VALUE self)
@@ -2492,8 +2562,6 @@ rb_grn_context_get_match_escalation_threshold (VALUE self)
       <pre class="lines">
 
 
-635
-636
 637
 638
 639
@@ -2501,10 +2569,12 @@ rb_grn_context_get_match_escalation_threshold (VALUE self)
 641
 642
 643
-644</pre>
+644
+645
+646</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 635</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 637</span>
 
 static VALUE
 rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
@@ -2516,6 +2586,53 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
 
     return threshold;
 }</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="object_created-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>object_created</strong>(object) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+310
+311
+312
+313
+314</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 310</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_object_created'>object_created</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@memory_pools</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='id identifier rubyid_memory_pool'>memory_pool</span> <span class='op'>=</span> <span class='ivar'>@memory_pools</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
+  <span class='id identifier rubyid_memory_pool'>memory_pool</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -2547,19 +2664,319 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
       <pre class="lines">
 
 
-25
-26
 27
 28
-29</pre>
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_open_database'>open_database</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
 
   <span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pop_memory_pool-instance_method">
+  
+    - (<tt>void</tt>) <strong>pop_memory_pool</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Pops the pushed memory pool.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>push_memory_pool</li>
+    
+  </ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>3.0.5</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+304
+305
+306
+307</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 304</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pop_memory_pool'>pop_memory_pool</span>
+  <span class='id identifier rubyid_memory_pool'>memory_pool</span> <span class='op'>=</span> <span class='ivar'>@memory_pools</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+  <span class='id identifier rubyid_memory_pool'>memory_pool</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="push_memory_pool-instance_method">
+  
+    
+      <span class="overload">- (<tt>void</tt>) <strong>push_memory_pool</strong> </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>push_memory_pool</strong>({}) { ... }</span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Pushes a new memory pool to the context. Temporary objects that
+are created between pushing a new memory pool and popping the
+new memory pool are closed automatically when popping the new
+memory pool.</p>
+<p>It is useful for request and response style applications. These
+style applications can close temporary objects between a request
+and resopnse pair. There are some merits for closing temporary
+objects explicilty rather than closing implicitly by GC:</p>
+<ul>
+	<li>Less memory consumption</li>
+	<li>Faster</li>
+</ul>
+<p>The &#8220;less memory consumption&#8221; merit is caused by temporary
+objects are closed each request and response pair. The max
+memory consumption in these applications is the same as the max
+memory consumption in a request and response pair. If temporary
+objects are closed by GC, the max memory consumption in these
+applications is the same as the max memory consumption between
+the current GC and the next GC. These applications process many
+request and response pairs during two GCs.</p>
+<p>The &#8220;faster&#8221; merit is caused by reducing GC. You can reduce GC,
+your application run faster because GC is a heavy process. You
+can reduce GC because memory consumption is reduced.</p>
+<p>You can nest <span class='object_link'><a href="#push_memory_pool-instance_method" title="Groonga::Context#push_memory_pool (method)">#push_memory_pool</a></span> and <span class='object_link'><a href="#pop_memory_pool-instance_method" title="Groonga::Context#pop_memory_pool (method)">#pop_memory_pool</a></span> pair.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Pushes a new memory pool with block</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_user'>user</span><span class='op'>|</span>
+    <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_age'>age</span> <span class='op'>&gt;=</span> <span class='int'>20</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_temporary?'>temporary?</span> <span class='comment'># =&gt; true
+</span>  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>    <span class='comment'># =&gt; false
+</span><span class='kw'>end</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>      <span class='comment'># =&gt; true</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Pushes a new memory pool without block</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span>
+<span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_user'>user</span><span class='op'>|</span>
+  <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_age'>age</span> <span class='op'>&gt;=</span> <span class='int'>20</span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_temporary?'>temporary?</span> <span class='comment'># =&gt; true
+</span><span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>    <span class='comment'># =&gt; false
+</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_pop_memory_pool'>pop_memory_pool</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>    <span class='comment'># =&gt; true</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Nesting push and pop pair</p></div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_user'>user</span><span class='op'>|</span>
+    <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_age'>age</span> <span class='op'>&gt;=</span> <span class='int'>20</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_grouped_adults'>grouped_adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_grouped_adults'>grouped_adults</span> <span class='op'>=</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_group'>group</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hobby</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_grouped_adults'>grouped_adults</span><span class='period'>.</span><span class='id identifier rubyid_temporary?'>temporary?</span> <span class='comment'># =&gt; true
+</span>    <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_grouped_adults'>grouped_adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>    <span class='comment'># =&gt; false
+</span>  <span class='kw'>end</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_grouped_adults'>grouped_adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>      <span class='comment'># =&gt; true
+</span>  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_temporary?'>temporary?</span>           <span class='comment'># =&gt; true
+</span>  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>              <span class='comment'># =&gt; false
+</span><span class='kw'>end</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>                <span class='comment'># =&gt; true</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt>void</tt>) <strong>push_memory_pool</strong> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Pushes a new memory pool to the context. You need to pop the
+memory pool explicitly by yourself.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>push_memory_pool</strong>({}) { ... }</span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>Closes temporary objects created in the given block
+automatically.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>[]
+Yields the block. Temporary objects created in the block
+are closed automatically when the block is exited.</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Yield Returns:</p>
+<ul class="yieldreturn">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>It is the return value of this
+method call.</p></div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The value returned by the block.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>3.0.5</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 285</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span>
+  <span class='id identifier rubyid_memory_pool'>memory_pool</span> <span class='op'>=</span> <span class='const'>MemoryPool</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@memory_pools</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_memory_pool'>memory_pool</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+
+  <span class='kw'>begin</span>
+    <span class='kw'>yield</span>
+  <span class='kw'>ensure</span>
+    <span class='id identifier rubyid_pop_memory_pool'>pop_memory_pool</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2608,8 +3025,6 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
       <pre class="lines">
 
 
-782
-783
 784
 785
 786
@@ -2628,10 +3043,12 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
 799
 800
 801
-802</pre>
+802
+803
+804</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 782</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 784</span>
 
 static VALUE
 rb_grn_context_receive (VALUE self)
@@ -2685,18 +3102,18 @@ rb_grn_context_receive (VALUE self)
       <pre class="lines">
 
 
-111
-112
 113
 114
 115
 116
 117
 118
-119</pre>
+119
+120
+121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_plugin'>register_plugin</span><span class='lparen'>(</span><span class='id identifier rubyid_name_or_options'>name_or_options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
@@ -2832,8 +3249,6 @@ line.</p></div>
       <pre class="lines">
 
 
-166
-167
 168
 169
 170
@@ -2858,10 +3273,12 @@ line.</p></div>
 189
 190
 191
-192</pre>
+192
+193
+194</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -2951,8 +3368,6 @@ line.</p></div>
       <pre class="lines">
 
 
-597
-598
 599
 600
 601
@@ -2962,10 +3377,12 @@ line.</p></div>
 605
 606
 607
-608</pre>
+608
+609
+610</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 597</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 599</span>
 
 static VALUE
 rb_grn_context_get_ruby_encoding (VALUE self)
@@ -3067,13 +3484,13 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-133
-134
 135
-136</pre>
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_select'>select</span> <span class='op'>=</span> <span class='const'>Command</span><span class='op'>::</span><span class='const'>Select</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -3153,8 +3570,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-759
-760
 761
 762
 763
@@ -3169,10 +3584,12 @@ pairs. Omitted names are initialized as the default value.</p></div>
 772
 773
 774
-775</pre>
+775
+776
+777</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 759</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 761</span>
 
 static VALUE
 rb_grn_context_send (VALUE self, VALUE rb_string)
@@ -3236,8 +3653,6 @@ rb_grn_context_send (VALUE self, VALUE rb_string)
       <pre class="lines">
 
 
-674
-675
 676
 677
 678
@@ -3250,10 +3665,12 @@ rb_grn_context_send (VALUE self, VALUE rb_string)
 685
 686
 687
-688</pre>
+688
+689
+690</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 674</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 676</span>
 
 static VALUE
 rb_grn_context_support_lzo_p (VALUE self)
@@ -3315,8 +3732,6 @@ rb_grn_context_support_lzo_p (VALUE self)
       <pre class="lines">
 
 
-652
-653
 654
 655
 656
@@ -3329,10 +3744,12 @@ rb_grn_context_support_lzo_p (VALUE self)
 663
 664
 665
-666</pre>
+666
+667
+668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 652</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 654</span>
 
 static VALUE
 rb_grn_context_support_zlib_p (VALUE self)
@@ -3359,9 +3776,9 @@ rb_grn_context_support_zlib_p (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Thu Jul  4 19:54:42 2013 by
+  Generated on Mon Jul 29 23:02:08 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.6.1 (ruby-1.9.3).
+  0.8.6.2 (ruby-1.9.3).
 </div>
 
   
