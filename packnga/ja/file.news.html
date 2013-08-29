@@ -93,13 +93,18 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2>0.9.9: 2013-08-29</h2>
+<h3>改良</h3>
+<ul>
+	<li>「release:references:upload」タスクに不足していた依存関係を追加。</li>
+</ul>
 <h2>0.9.8: 2013-06-07</h2>
 <h3>改良</h3>
 <ul>
 	<li>[ReferenceTask] YARDのi18nの機能をリファレンス翻訳に使うようにした。この機能を使うにはYARDの0.8.6.1以上が必要になります。</li>
 	<li>[ReferenceTask] &#8220;reference:publication:generate&#8221;タスクでGitHub Pagesに対応していないファイル名の置き換えをサポートした。このタスクはメソッド一覧ページである&quot;_index.html&quot;を&quot;alphabetical_index.html&quot;にリネームします。&quot;_&quot;から始まるファイル名はGitHub Pagesで対応していないためです。</li>
 	<li>[ReferenceTask] 作成したリファレンスをHTMLのディレクトリにコピーするための&quot;release:references:upload&quot;タスクを追加した。HTMLのディレクトリとは例えばGitHub Pagesのリポジトリで、この場合、このタスクはGitHub Pagesにリファレンスをコピーするために使用します。</li>
-	<li>[Referencetask] .htaccessをアップロードする機能を削除した。</li>
+	<li>[ReferenceTask] .htaccessをアップロードする機能を削除した。</li>
 	<li>[ReleaseTask] &#8220;release:info:update&#8221;タスクでVERSIONが引数で指定されていない場合、gemspecのversion(spec.version)を新しいバージョンとして使うようにした。新しいバージョンはHTMLのインデックスファイルを置き換えるために使います。</li>
 </ul>
 <h3>修正</h3>
@@ -225,9 +230,9 @@
 <p>The first release!</p></div></div>
 
     <div id="footer">
-  Generated on Fri Jun  7 17:02:59 2013 by
+  Generated on Thu Aug 29 17:27:50 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.6.1 (ruby-1.9.3).
+  0.8.7 (ruby-1.9.3).
 </div>
 
   
