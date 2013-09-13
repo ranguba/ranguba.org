@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (T)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (T)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Type</span>
@@ -839,10 +839,10 @@ rb_grn_type_initialize (int argc, VALUE *argv, VALUE self)
     rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_name, &amp;options);
 
     rb_grn_scan_options(options,
-			&quot;context&quot;, &amp;rb_context,
-			&quot;type&quot;, &amp;rb_type,
-			&quot;size&quot;, &amp;rb_size,
-			NULL);
+                        &quot;context&quot;, &amp;rb_context,
+                        &quot;type&quot;, &amp;rb_type,
+                        &quot;size&quot;, &amp;rb_size,
+                        NULL);
 
     name = StringValuePtr(rb_name);
     name_size = RSTRING_LEN(rb_name);
@@ -850,25 +850,25 @@ rb_grn_type_initialize (int argc, VALUE *argv, VALUE self)
     context = rb_grn_context_ensure(&amp;rb_context);
 
     if (NIL_P(rb_type) ||
-	rb_grn_equal_option(rb_type, &quot;variable&quot;)) {
+        rb_grn_equal_option(rb_type, &quot;variable&quot;)) {
         flags = GRN_OBJ_KEY_VAR_SIZE;
     } else if (rb_grn_equal_option(rb_type, &quot;integer&quot;) ||
                rb_grn_equal_option(rb_type, &quot;int&quot;)) {
-	flags = GRN_OBJ_KEY_INT;
+        flags = GRN_OBJ_KEY_INT;
         size = sizeof(int);
     } else if (rb_grn_equal_option(rb_type, &quot;unsigned_integer&quot;) ||
-	       rb_grn_equal_option(rb_type, &quot;uint&quot;)) {
-	flags = GRN_OBJ_KEY_UINT;
+               rb_grn_equal_option(rb_type, &quot;uint&quot;)) {
+        flags = GRN_OBJ_KEY_UINT;
         size = sizeof(unsigned int);
     } else if (rb_grn_equal_option(rb_type, &quot;float&quot;)) {
-	flags = GRN_OBJ_KEY_FLOAT;
+        flags = GRN_OBJ_KEY_FLOAT;
         size = sizeof(double);
     } else {
-	rb_raise(rb_eArgError,
-		 &quot;:type should be one of &quot;
-		 &quot;[:integer, :int, :unsigned_integer, :uint, &quot;
-		 &quot;:float, :variable]: %s&quot;,
-		 rb_grn_inspect(options));
+        rb_raise(rb_eArgError,
+                 &quot;:type should be one of &quot;
+                 &quot;[:integer, :int, :unsigned_integer, :uint, &quot;
+                 &quot;:float, :variable]: %s&quot;,
+                 rb_grn_inspect(options));
     }
 
     if (NIL_P(rb_size)) {
@@ -1394,7 +1394,7 @@ rb_grn_type_variable_size_p (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Mon Jul 29 23:02:11 2013 by
+  Generated on Fri Sep 13 15:00:35 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.2 (ruby-1.9.3).
 </div>

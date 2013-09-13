@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="alphabetical_index.html">Index</a> &raquo; 
+    <a href="_index.html">Index</a> &raquo; 
     <span class="title">File: tutorial</span>
   
 
@@ -105,9 +105,7 @@ Please execute irb with loading rroonga with this command:</p>
 &gt;&gt;
 </code></pre>
 <p>Now you use <span class="caps">UTF</span>-8 as the encoding of database.</p>
-<pre class="code irb"><code class="irb">&gt;&gt; $KCODE = &quot;UTF-8&quot;
-=&gt; &quot;UTF-8&quot;
-&gt;&gt; Groonga::Context.default_options = {:encoding =&gt; :utf8}
+<pre class="code irb"><code class="irb">&gt;&gt; Groonga::Context.default_options = {:encoding =&gt; :utf8}
 =&gt; {:encoding=&gt;:utf8}
 </code></pre>
 <p>Then, try to create database in a file.</p>

@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (C)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (C)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Context</span>
@@ -966,15 +966,15 @@ rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
     rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
     default_options = rb_grn_context_s_get_default_options(rb_obj_class(self));
     if (NIL_P(default_options))
-	default_options = rb_hash_new();
+        default_options = rb_hash_new();
 
     if (NIL_P(options))
-	options = rb_hash_new();
+        options = rb_hash_new();
     options = rb_funcall(default_options, rb_intern(&quot;merge&quot;), 1, options);
 
     rb_grn_scan_options(options,
-			&quot;encoding&quot;, &amp;rb_encoding,
-			NULL);
+                        &quot;encoding&quot;, &amp;rb_encoding,
+                        NULL);
 
     rb_grn_context = ALLOC(RbGrnContext);
     DATA_PTR(self) = rb_grn_context;
@@ -989,10 +989,10 @@ rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
     grn_ctx_set_finalizer(context, rb_grn_context_finalizer);
 
     if (!NIL_P(rb_encoding)) {
-	grn_encoding encoding;
+        grn_encoding encoding;
 
-	encoding = RVAL2GRNENCODING(rb_encoding, NULL);
-	GRN_CTX_SET_ENCODING(context, encoding);
+        encoding = RVAL2GRNENCODING(rb_encoding, NULL);
+        GRN_CTX_SET_ENCODING(context, encoding);
     }
 
     rb_iv_set(self, &quot;@memory_pools&quot;, rb_ary_new());
@@ -1088,8 +1088,8 @@ rb_grn_context_s_get_default (VALUE self)
 
     context = rb_cv_get(self, &quot;@@default&quot;);
     if (NIL_P(context)) {
-	context = rb_funcall(cGrnContext, rb_intern(&quot;new&quot;), 0);
-	rb_cv_set(self, &quot;@@default&quot;, context);
+        context = rb_funcall(cGrnContext, rb_intern(&quot;new&quot;), 0);
+        rb_cv_set(self, &quot;@@default&quot;, context);
     }
     return context;
 }</pre>
@@ -1417,26 +1417,26 @@ rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
     context = SELF(self);
     switch (TYPE(name_or_id)) {
       case T_SYMBOL:
-	name = rb_id2name(SYM2ID(name_or_id));
-	name_size = strlen(name);
-	object = rb_grn_context_get_backward_compatibility(context,
-							   name, name_size);
-	break;
+        name = rb_id2name(SYM2ID(name_or_id));
+        name_size = strlen(name);
+        object = rb_grn_context_get_backward_compatibility(context,
+                                                           name, name_size);
+        break;
       case T_STRING:
-	name = StringValuePtr(name_or_id);
-	name_size = RSTRING_LEN(name_or_id);
-	object = rb_grn_context_get_backward_compatibility(context,
-							   name, name_size);
-	break;
+        name = StringValuePtr(name_or_id);
+        name_size = RSTRING_LEN(name_or_id);
+        object = rb_grn_context_get_backward_compatibility(context,
+                                                           name, name_size);
+        break;
       case T_FIXNUM:
-	id = NUM2UINT(name_or_id);
-	object = grn_ctx_at(context, id);
-	break;
+        id = NUM2UINT(name_or_id);
+        object = grn_ctx_at(context, id);
+        break;
       default:
-	rb_raise(rb_eArgError,
-		 &quot;should be String, Symbol or unsigned integer: %s&quot;,
-		 rb_grn_inspect(name_or_id));
-	break;
+        rb_raise(rb_eArgError,
+                 &quot;should be String, Symbol or unsigned integer: %s&quot;,
+                 rb_grn_inspect(name_or_id));
+        break;
     }
     rb_grn_context_check(context, name_or_id);
 
@@ -1503,10 +1503,10 @@ rb_grn_context_close (VALUE self)
 
     context = SELF(self);
     if (context) {
-	rc = grn_ctx_fin(context);
-	Data_Get_Struct(self, RbGrnContext, rb_grn_context);
-	rb_grn_context-&gt;context = NULL;
-	rb_grn_rc_check(rc, self);
+        rc = grn_ctx_fin(context);
+        Data_Get_Struct(self, RbGrnContext, rb_grn_context);
+        rb_grn_context-&gt;context = NULL;
+        rb_grn_rc_check(rc, self);
     }
 
     return Qnil;
@@ -1728,22 +1728,22 @@ rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
 
     rb_scan_args(argc, argv, &quot;01&quot;, &amp;options);
     rb_grn_scan_options(options,
-			&quot;host&quot;, &amp;rb_host,
-			&quot;port&quot;, &amp;rb_port,
-			NULL);
+                        &quot;host&quot;, &amp;rb_host,
+                        &quot;port&quot;, &amp;rb_port,
+                        NULL);
 
     context = SELF(self);
 
     if (NIL_P(rb_host)) {
-	host = &quot;localhost&quot;;
+        host = &quot;localhost&quot;;
     } else {
-	host = StringValueCStr(rb_host);
+        host = StringValueCStr(rb_host);
     }
 
     if (NIL_P(rb_port)) {
-	port = 10041;
+        port = 10041;
     } else {
-	port = NUM2INT(rb_port);
+        port = NUM2INT(rb_port);
     }
 
     rc = grn_ctx_connect(context, host, port, flags);
@@ -3063,9 +3063,9 @@ rb_grn_context_receive (VALUE self)
     context = SELF(self);
     query_id = grn_ctx_recv(context, &amp;result, &amp;result_size, &amp;flags);
     if (result) {
-	rb_result = rb_str_new(result, result_size);
+        rb_result = rb_str_new(result, result_size);
     } else {
-	rb_result = Qnil;
+        rb_result = Qnil;
     }
     rb_grn_context_check(context, self);
 
@@ -3776,7 +3776,7 @@ rb_grn_context_support_zlib_p (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Mon Jul 29 23:02:08 2013 by
+  Generated on Fri Sep 13 15:00:32 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.2 (ruby-1.9.3).
 </div>

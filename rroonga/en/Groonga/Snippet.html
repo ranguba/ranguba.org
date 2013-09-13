@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (S)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (S)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Snippet</span>
@@ -532,10 +532,10 @@ rb_grn_snippet_initialize (int argc, VALUE *argv, VALUE self)
 
     context = rb_grn_context_ensure(&amp;rb_context);
     if (!grn_ctx_db(context)) {
-	rb_raise(rb_eArgError,
-		 &quot;Groonga::Context should be associated with a database by &quot;
-		 &quot;Groonga::Database#open or #create: %s&quot;,
-		 rb_grn_inspect(rb_context));
+        rb_raise(rb_eArgError,
+                 &quot;Groonga::Context should be associated with a database by &quot;
+                 &quot;Groonga::Database#open or #create: %s&quot;,
+                 rb_grn_inspect(rb_context));
     }
 
     if (RVAL2CBOOL(rb_normalize))
@@ -923,9 +923,9 @@ rb_grn_snippet_execute (VALUE self, VALUE rb_string)
     rb_grn_snippet_deconstruct(SELF(self), &amp;snippet, &amp;context);
 
     if (TYPE(rb_string) != T_STRING) {
-	rb_raise(rb_eGrnInvalidArgument,
-		 &quot;snippet text must be String: &lt;%s&gt;&quot;,
-		 rb_grn_inspect(rb_string));
+        rb_raise(rb_eGrnInvalidArgument,
+                 &quot;snippet text must be String: &lt;%s&gt;&quot;,
+                 rb_grn_inspect(rb_string));
     }
 
 #ifdef HAVE_RUBY_ENCODING_H
@@ -946,7 +946,7 @@ rb_grn_snippet_execute (VALUE self, VALUE rb_string)
         unsigned result_length;
 
         rc = grn_snip_get_result(context, (grn_snip *)snippet,
-				 i, result, &amp;result_length);
+                                 i, result, &amp;result_length);
         rb_grn_rc_check(rc, self);
         rb_result = rb_grn_context_rb_string_new(context, result, result_length);
         rb_ary_push(rb_results, rb_result);

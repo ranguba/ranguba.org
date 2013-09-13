@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (A)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (A)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Accessor</span>
@@ -265,10 +265,10 @@ rb_grn_accessor_get_local_name (VALUE self)
     rb_grn_accessor = SELF(self);
     rb_grn_named_object = RB_GRN_NAMED_OBJECT(rb_grn_accessor);
     if (rb_grn_named_object-&gt;name_size == 0)
-	return Qnil;
+        return Qnil;
 
     return rb_str_new(rb_grn_named_object-&gt;name,
-		      rb_grn_named_object-&gt;name_size);
+                      rb_grn_named_object-&gt;name_size);
 }</pre>
     </td>
   </tr>

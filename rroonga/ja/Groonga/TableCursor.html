@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (T)</a> &raquo;
+    <a href=../alphabetical_index.html">Index (T)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">TableCursor</span>
@@ -538,7 +538,7 @@ rb_grn_table_cursor_delete (VALUE self)
     grn_table_cursor *cursor;
 
     rb_grn_table_cursor_deconstruct(SELF(self), &amp;cursor, &amp;context,
-				    NULL, NULL, NULL, NULL);
+                                    NULL, NULL, NULL, NULL);
     if (context &amp;&amp; cursor) {
         grn_rc rc;
 
@@ -636,13 +636,13 @@ rb_grn_table_cursor_each (VALUE self)
     RETURN_ENUMERATOR(self, 0, NULL);
 
     rb_grn_table_cursor_deconstruct(SELF(self), &amp;cursor, &amp;context,
-				    NULL, NULL, NULL, NULL);
+                                    NULL, NULL, NULL, NULL);
 
     if (context &amp;&amp; cursor) {
-	while ((record_id = grn_table_cursor_next(context, cursor))) {
-	    rb_yield(rb_grn_record_new(rb_iv_get(self, &quot;@table&quot;),
-				       record_id, Qnil));
-	}
+        while ((record_id = grn_table_cursor_next(context, cursor))) {
+            rb_yield(rb_grn_record_new(rb_iv_get(self, &quot;@table&quot;),
+                                       record_id, Qnil));
+        }
     }
 
     return Qnil;
@@ -732,14 +732,14 @@ rb_grn_table_cursor_next (VALUE self)
     grn_table_cursor *cursor;
 
     rb_grn_table_cursor_deconstruct(SELF(self), &amp;cursor, &amp;context,
-				    NULL, NULL, NULL, NULL);
+                                    NULL, NULL, NULL, NULL);
     if (context &amp;&amp; cursor) {
         grn_id record_id;
 
         record_id = grn_table_cursor_next(context, cursor);
         if (record_id != GRN_ID_NIL) /* FIXME: use grn_table_cursor_table */
             rb_record = rb_grn_record_new(rb_iv_get(self, &quot;@table&quot;),
-					  record_id, Qnil);
+                                          record_id, Qnil);
     }
 
     return rb_record;
@@ -831,7 +831,7 @@ rb_grn_table_cursor_get_value (VALUE self)
     VALUE rb_value = Qnil;
 
     rb_grn_table_cursor_deconstruct(SELF(self), &amp;cursor, &amp;context,
-				    NULL, NULL, NULL, NULL);
+                                    NULL, NULL, NULL, NULL);
     if (context &amp;&amp; cursor) {
         int n;
         void *value;
@@ -931,14 +931,14 @@ rb_grn_table_cursor_set_value (VALUE self, VALUE value)
     grn_table_cursor *cursor;
 
     rb_grn_table_cursor_deconstruct(SELF(self), &amp;cursor, &amp;context,
-				    NULL, NULL, NULL, NULL);
+                                    NULL, NULL, NULL, NULL);
     if (context &amp;&amp; cursor) {
         grn_rc rc;
 
         rc = grn_table_cursor_set_value(context,
                                         cursor,
                                         StringValuePtr(value),
-					GRN_OBJ_SET);
+                                        GRN_OBJ_SET);
         rb_grn_rc_check(rc, self);
     }
 
@@ -954,7 +954,7 @@ rb_grn_table_cursor_set_value (VALUE self, VALUE value)
 </div>
 
     <div id="footer">
-  Generated on Mon Jul 29 23:02:13 2013 by
+  Generated on Fri Sep 13 15:00:38 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.2 (ruby-1.9.3).
 </div>
