@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href=../alphabetical_index.html">Index (L)</a> &raquo;
+    <a href="../alphabetical_index.html">Index (L)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Logger</span>
@@ -348,7 +348,7 @@ instead.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>現在のロガーに再オープンのリクエストを送ります。ログファイルの使い分けに便利です。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Sends reopen request to the current logger.</p></div></span>
   
 </li>
 
@@ -560,7 +560,7 @@ instead.</p></div></div>
   
   <div class="docstring">
   <div class="discussion">
-    <p>The current log path</p>
+    <p>Returns The current log path</p>
 
   </div>
 </div>
@@ -677,7 +677,7 @@ disabled.</p>
 
   <div class="docstring">
   <div class="discussion">
-    <p>Void</p>
+    <p>Returns void</p>
 
   </div>
 </div>
@@ -1169,7 +1169,8 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>現在のロガーに再オープンのリクエストを送ります。ログファイルの使い分けに便利です。</p>
+    <p>Sends reopen request to the current logger. It is useful for
+rotating log file.</p>
 
   </div>
 </div>
@@ -1177,7 +1178,7 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
   
   <div class="docstring">
   <div class="discussion">
-    <p>Void</p>
+    <p>Returns void</p>
 
   </div>
 </div>
@@ -1262,7 +1263,7 @@ unregistering.</p>
   
   <div class="docstring">
   <div class="discussion">
-    <p>Void</p>
+    <p>Returns void</p>
 
   </div>
 </div>
@@ -1442,9 +1443,9 @@ rb_grn_logger_s_unregister (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Fri Sep 13 15:00:29 2013 by
+  Generated on Thu Sep 19 21:45:12 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.6.2 (ruby-1.9.3).
+  0.8.7 (ruby-1.9.3).
 </div>
 
   

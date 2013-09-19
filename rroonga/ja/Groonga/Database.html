@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href=../alphabetical_index.html">Index (D)</a> &raquo;
+    <a href="../alphabetical_index.html">Index (D)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Database</span>
@@ -183,8 +183,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>新しくデータベースを作成する。
-<em>options</em> にはハッシュでオプションを指定する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>新しくデータベースを作成する。 <em>options</em> にはハッシュでオプションを指定する。.</p></div></span>
   
 </li>
 
@@ -206,9 +205,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>既存のデータベースを開く。ブロックを指定した場合はブロッ
-クに開いたデータベースを渡し、ブロックを抜けるときに閉じ
-る。 <em>options</em> にはハッシュでオプションを指定する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>既存のデータベースを開く。ブロックを指定した場合はブロッ クに開いたデータベースを渡し、ブロックを抜けるときに閉じ る。 <em>options</em> にはハッシュでオプションを指定する。.</p></div></span>
   
 </li>
 
@@ -261,8 +258,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>database</em> が使用しているリソースを開放する。これ以降 <em>database</em> を
-使うことはできない。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>database</em> が使用しているリソースを開放する。これ以降 <em>database</em> を 使うことはできない。.</p></div></span>
   
 </li>
 
@@ -284,7 +280,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>データベースの可変長カラムをすべてデフラグする。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Defrags all variable size columns in the database.</p></div></span>
   
 </li>
 
@@ -352,9 +348,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>既存のデータベースを開く。ブロックを指定した場合はブロッ
-クに開いたデータベースを渡し、ブロックを抜けるときに閉じ
-る。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>既存のデータベースを開く。ブロックを指定した場合はブロッ クに開いたデータベースを渡し、ブロックを抜けるときに閉じ る。.</p></div></span>
   
 </li>
 
@@ -376,8 +370,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>database</em> をロックする。ロックに失敗した場合は
-<span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span> 例外が発生する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>database</em> をロックする。ロックに失敗した場合は <span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span> 例外が発生する。.</p></div></span>
   
 </li>
 
@@ -799,7 +792,7 @@ rb_grn_database_initialize (int argc, VALUE *argv, VALUE self)
 
   <div class="docstring">
   <div class="discussion">
-    <p>作成されたデータベースを返す。</p>
+    <p>Returns 作成されたデータベースを返す。</p>
 
   </div>
 </div>
@@ -1357,7 +1350,7 @@ rb_grn_database_close (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>データベースの可変長カラムをすべてデフラグする。</p>
+    <p>Defrags all variable size columns in the database.</p>
 
   </div>
 </div>
@@ -2251,7 +2244,7 @@ rb_grn_database_is_locked (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Tables defined in the database.</p>
+    <p>Returns tables defined in the database.</p>
 
   </div>
 </div>
@@ -2430,9 +2423,9 @@ rb_grn_database_unlock (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Fri Sep 13 15:00:32 2013 by
+  Generated on Thu Sep 19 21:45:13 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.6.2 (ruby-1.9.3).
+  0.8.7 (ruby-1.9.3).
 </div>
 
   

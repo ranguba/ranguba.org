@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href=../alphabetical_index.html">Index (C)</a> &raquo;
+    <a href="../alphabetical_index.html">Index (C)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Context</span>
@@ -126,7 +126,7 @@
   
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">ext/groonga/rb-grn-context.c<span class="defines">,<br />
-  lib/groonga/context.rb,<br /> ext/groonga/rb-grn-context.c</span>
+  lib/groonga/context.rb,<br /> lib/groonga/context/command-executor.rb,<br /> ext/groonga/rb-grn-context.c</span>
 </dd>
   
 </dl>
@@ -153,7 +153,17 @@
 <div class="tags">
   
 
-</div>
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Context/CommandExecutor.html" title="Groonga::Context::CommandExecutor (class)">CommandExecutor</a></span>
+    
+  
+</p>
+
 
 
 
@@ -185,8 +195,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>デフォルトのコンテキストを返す。デフォルトのコンテキスト
-が作成されていない場合は暗黙のうちに作成し、それを返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>デフォルトのコンテキストを返す。デフォルトのコンテキスト が作成されていない場合は暗黙のうちに作成し、それを返す。.</p></div></span>
   
 </li>
 
@@ -208,10 +217,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>デフォルトのコンテキストを設定する。 <ins>nil</ins> を指定すると、
-デフォルトのコンテキストをリセットする。リセットすると、次
-回 <span class='object_link'><a href="#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を呼び出したときに新しくコ
-ンテキストが作成される。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>デフォルトのコンテキストを設定する。 <ins>nil</ins> を指定すると、 デフォルトのコンテキストをリセットする。リセットすると、次 回 <span class='object_link'><a href="#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を呼び出したときに新しくコ ンテキストが作成される。.</p></div></span>
   
 </li>
 
@@ -233,8 +239,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する時に利用するデフォルトのオプション
-を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する時に利用するデフォルトのオプション を返す。.</p></div></span>
   
 </li>
 
@@ -256,9 +261,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する時に利用するデフォルトのオプション
-を設定する。利用可能なオプションは
-new を参照。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する時に利用するデフォルトのオプション を設定する。利用可能なオプションは new を参照。.</p></div></span>
   
 </li>
 
@@ -443,8 +446,29 @@ new を参照。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストが使うエンコーディングを設定する。エンコーディ
-ングの指定のしかたは <span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストが使うエンコーディングを設定する。エンコーディ ングの指定のしかたは <span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#execute_command-instance_method" title="#execute_command (instance method)">- (Object) <strong>execute_command</strong>(name, parameters = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -512,11 +536,7 @@ new を参照。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>このコンテキストを使って検索したときに検索の挙動をエスカレー
-ションする閾値を返します。
-エスカレーションの詳細は
-<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a>
-を参照してください。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>このコンテキストを使って検索したときに検索の挙動をエスカレー ションする閾値を返します。 エスカレーションの詳細は <a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a> を参照してください。.</p></div></span>
   
 </li>
 
@@ -538,11 +558,7 @@ new を参照。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>このコンテキストを使って検索したときに検索の挙動をエスカレー
-ションする閾値を設定します。
-エスカレーションの詳細は
-<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a>
-を参照してください。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>このコンテキストを使って検索したときに検索の挙動をエスカレー ションする閾値を設定します。 エスカレーションの詳細は <a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a> を参照してください。.</p></div></span>
   
 </li>
 
@@ -586,9 +602,7 @@ new を参照。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>path</em> にある既存のデータベースを開く。ブロックを指定した場
-合はブロックに開いたデータベースを渡し、ブロックを抜けると
-きに閉じる。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>path</em> にある既存のデータベースを開く。ブロックを指定した場 合はブロックに開いたデータベースを渡し、ブロックを抜けると きに閉じる。.</p></div></span>
   
 </li>
 
@@ -676,9 +690,7 @@ new を参照。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>groongaのプラグインディレクトリにあるプラグイン <em>name</em>
-を登録する。 <em>path</em> を指定するとプラグインディレクトリ以
-外にあるプラグインを登録することができる。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>groongaのプラグインディレクトリにあるプラグイン <em>name</em> を登録する。 <em>path</em> を指定するとプラグインディレクトリ以 外にあるプラグインを登録することができる。.</p></div></span>
   
 </li>
 
@@ -744,9 +756,7 @@ new を参照。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>table</em> から指定した条件にマッチするレコードの値を取得
-する。 <em>table</em> はテーブル名かテーブルオブジェクトを指定
-する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>table</em> から指定した条件にマッチするレコードの値を取得 する。 <em>table</em> はテーブル名かテーブルオブジェクトを指定 する。.</p></div></span>
   
 </li>
 
@@ -790,8 +800,7 @@ new を参照。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>groongaがLZOサポート付きでビルドされていれば <ins>true</ins> 、そう
-でなければ <ins>false</ins> を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>groongaがLZOサポート付きでビルドされていれば <ins>true</ins> 、そう でなければ <ins>false</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -813,8 +822,7 @@ new を参照。.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>groongaがZlibサポート付きでビルドされていれば <ins>true</ins> 、そう
-でなければ <ins>false</ins> を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>groongaがZlibサポート付きでビルドされていれば <ins>true</ins> 、そう でなければ <ins>false</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -2114,17 +2122,17 @@ returned value from this method.</p></div>
       <pre class="lines">
 
 
+100
 101
 102
 103
 104
 105
 106
-107
-108</pre>
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_database'>create_database</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
@@ -2334,6 +2342,38 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
 
     return rb_encoding;
 }</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="execute_command-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>execute_command</strong>(name, parameters = {}) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 138</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_execute_command'>execute_command</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_parameters'>parameters</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_executor'>executor</span> <span class='op'>=</span> <span class='const'>CommandExecutor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_executor'>executor</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_parameters'>parameters</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -2620,14 +2660,14 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
       <pre class="lines">
 
 
-310
-311
-312
 313
-314</pre>
+314
+315
+316
+317</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 310</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 313</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_object_created'>object_created</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@memory_pools</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -2665,14 +2705,14 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
       <pre class="lines">
 
 
+26
 27
 28
 29
-30
-31</pre>
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_open_database'>open_database</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
@@ -2729,13 +2769,13 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
       <pre class="lines">
 
 
-304
-305
-306
-307</pre>
+307
+308
+309
+310</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 304</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 307</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pop_memory_pool'>pop_memory_pool</span>
   <span class='id identifier rubyid_memory_pool'>memory_pool</span> <span class='op'>=</span> <span class='ivar'>@memory_pools</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
@@ -2953,9 +2993,6 @@ method call.</p></div>
       <pre class="lines">
 
 
-285
-286
-287
 288
 289
 290
@@ -2963,10 +3000,13 @@ method call.</p></div>
 292
 293
 294
-295</pre>
+295
+296
+297
+298</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 285</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 288</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span>
   <span class='id identifier rubyid_memory_pool'>memory_pool</span> <span class='op'>=</span> <span class='const'>MemoryPool</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -3103,6 +3143,7 @@ rb_grn_context_receive (VALUE self)
       <pre class="lines">
 
 
+112
 113
 114
 115
@@ -3110,11 +3151,10 @@ rb_grn_context_receive (VALUE self)
 117
 118
 119
-120
-121</pre>
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_plugin'>register_plugin</span><span class='lparen'>(</span><span class='id identifier rubyid_name_or_options'>name_or_options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
@@ -3250,9 +3290,6 @@ line.</p></div>
       <pre class="lines">
 
 
-168
-169
-170
 171
 172
 173
@@ -3276,10 +3313,13 @@ line.</p></div>
 191
 192
 193
-194</pre>
+194
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -3485,17 +3525,15 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
+134
 135
-136
-137
-138</pre>
+136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_select'>select</span> <span class='op'>=</span> <span class='const'>Command</span><span class='op'>::</span><span class='const'>Select</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_select'>select</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span>
+  <span class='id identifier rubyid_execute_command'>execute_command</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>select</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_table'>table</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>

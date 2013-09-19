@@ -62,7 +62,7 @@
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index</a> &raquo; 
+    <a href="alphabetical_index.html">Index</a> &raquo; 
     <span class="title">File: news</span>
   
 
@@ -93,6 +93,29 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="3-0-7">3.0.7: 2013-09-19</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Added Groonga::TableKeySupport#tokenize. It requires groonga
+  3.0.8. Groonga 3.0.8 is not released yet.</li>
+	<li>Changed return object of <span class='object_link'><a href="Groonga/Context.html#select-instance_method" title="Groonga::Context#select (method)">Groonga::Context#select</a></span> to groonga-client gem&#8217;s
+  return object. It is a backward imcompatible change. Some APIs are changed.
+  For example, <code>drill_down</code> is renamed to <code>drilldowns</code>. See
+  <a href="http://rubydoc.info/gems/groonga-client/Groonga/Client/Response/Select">Groonga::Client::Response::Select</a>
+  about rerturn object details.
+	<ul>
+		<li>Added groonga-client gem, groogna-command gem, gqtp gem dependencies.</li>
+	</ul></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a bug that auto groonga installation is failed.
+  [GitHub#12][Patch by Keita Haga]</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>Keita Haga</li>
+</ul>
 <h2 id="3-0-6">3.0.6: 2013-09-13</h2>
 <h3>Improvements</h3>
 <ul>
