@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../favicon.ico" />
     <link rel="icon" href="../../favicon.png" />
@@ -92,21 +92,17 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1><span class="caps">README</span></h1>
-<h2>Name</h2>
+    <div id="content"><div id='filecontents'><h1>はじめに</h1>
+<h2>名前</h2>
 <p>rroonga</p>
-<h2>Description</h2>
-<p>Ruby bindings for groonga that provide full text search and
-column store features.</p>
-<p>rroonga is an extension library to use groonga&#8217;s DB-<span class="caps">API</span>
-layer. rroonga provides Rubyish readable and writable <span class="caps">API</span>
-not C like <span class="caps">API</span>. You can use groonga&#8217;s fast and highly
-functional features from Ruby with Rubyish form.</p>
-<p>See the following <span class="caps">URL</span> about groonga.</p>
+<h2>説明</h2>
+<p>全文検索機能とカラムストア機能を提供するgroongaのRubyバインディングです。</p>
+<p>groongaのいわゆるDB-API層をRubyから使うための拡張ライブラリです。groongaのAPIをそのままRubyレベルに提供するのではなく、Rubyらしく読み書きしやすいAPIとして提供します。高速・高機能なgroongaをRubyらしい書き方で利用できます。</p>
+<p>groongaに関する情報は以下のURLを参照して下さい。</p>
 <ul>
-	<li><a href="http://groonga.org/">The groonga official site</a></li>
+	<li><a href="http://groonga.org/">groonga公式サイト</a></li>
 </ul>
-<h2>Authors</h2>
+<h2>作者</h2>
 <ul>
 	<li>Kouhei Sutou &lt;kou@clear-code.com&gt;</li>
 	<li>Tasuku <span class="caps">SUENAGA</span> &lt;a@razil.jp&gt;</li>
@@ -115,51 +111,50 @@ functional features from Ruby with Rubyish form.</p>
 	<li><span class="caps">SHIDARA</span> Yoji &lt;dara@shidara.net&gt;</li>
 	<li>yoshihara haruka &lt;yoshihara@clear-code.com&gt;</li>
 </ul>
-<h2>License</h2>
-<p><span class="caps">LGPL</span> 2.1. See license/<span class="caps">LGPL</span> for details.</p>
-<p>(Kouhei Sutou has a right to change the license including
-contributed patches.)</p>
-<h2>Dependencies</h2>
+<h2>ライセンス</h2>
+<p><span class="caps">LGPL</span> 2.1です。詳しくはlicense/LGPLをご覧ください。</p>
+<p>（コントリビュートされたパッチなども含み、Kouhei Sutouがライセンスを変更する権利を持ちます。）</p>
+<h2>依存ソフトウェア</h2>
 <ul>
-	<li>Ruby &gt;= 1.8 (including 1.9.2)</li>
+	<li>Ruby &gt;= 1.8 （1.9.2対応）</li>
 	<li>groonga &gt;= 1.2.0</li>
 </ul>
-<h2>Install</h2>
+<h2>インストール</h2>
 <pre class="code command_line"><code class="command_line">% sudo gem install rroonga
 </code></pre>
-<h2>Documents</h2>
+<h2>ドキュメント</h2>
 <ul>
-	<li><a href="http://ranguba.org/rroonga/en/">Reference manual in English</a></li>
-	<li><a href="http://ranguba.org/rroonga/ja/">Reference manual in Japanese</a></li>
+	<li><a href="http://ranguba.org/rroonga/en/">リファレンスマニュアル（英語）</a></li>
+	<li><a href="http://ranguba.org/rroonga/ja/">リファレンスマニュアル（日本語）</a></li>
 </ul>
-<h2>Mailing list</h2>
+<h2>メーリングリスト</h2>
 <ul>
-	<li>English: <a href="http://rubyforge.org/mailman/listinfo/groonga-users-en">groonga-users-en</a></li>
-	<li>Japanese: <a href="http://lists.sourceforge.jp/mailman/listinfo/groonga-dev">groonga-dev</a></li>
+	<li>英語: <a href="http://rubyforge.org/mailman/listinfo/groonga-users-en">groonga-users-en</a></li>
+	<li>日本語: <a href="http://lists.sourceforge.jp/mailman/listinfo/groonga-dev">groonga-dev</a></li>
 </ul>
-<h2>Thanks</h2>
+<h2>感謝</h2>
 <ul>
-	<li>Daijiro <span class="caps">MORI</span>: sent patches to support the latest groonga.</li>
-	<li>Tasuku <span class="caps">SUENAGA</span>: sent bug reports.</li>
-	<li>niku: sent bug reports.</li>
-	<li>dara:
+	<li>森さん: 最新groonga対応パッチをくれました。</li>
+	<li>グニャラくん: バグレポートをしてくれました。</li>
+	<li>にくさん: バグレポートをしてくれました。</li>
+	<li>daraさん:
 	<ul>
-		<li>wrote tests.</li>
-		<li>fixed bugs.</li>
+		<li>テストを書いてくれました。</li>
+		<li>バグを直してくれました。</li>
 	</ul></li>
-	<li>id:mat_aki: sent bug reports.</li>
-	<li>@yune_kotomi: sent a bug report.</li>
-	<li>m_seki: sent bug reports.</li>
-	<li>ono matope: sent bug reports.</li>
-	<li>@kamipo: send a bug report.</li>
-	<li>ongaeshi: sent a patch to build gem on Windows.</li>
-	<li>mallowlabs: send a patch.</li>
+	<li>id:mat_akiさん: バグレポートをしてくれました。</li>
+	<li>@yune_kotomiさん: バグレポートをしてくれました。</li>
+	<li>咳さん: バグレポートをしてくれました。</li>
+	<li>小野マトペさん: バグレポートをしてくれました。</li>
+	<li>@kamipoさん: バグレポートをしてくれました。</li>
+	<li>ongaeshiさん: Windows上でgemをビルドするためのパッチをくれました。</li>
+	<li>mallowlabsさん: パッチを送ってくれました。</li>
 </ul></div></div>
 
     <div id="footer">
-  Generated on Thu Sep 19 21:45:09 2013 by
+  Generated on Sun Sep 29 19:20:31 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7 (ruby-1.9.3).
+  0.8.7.2 (ruby-2.0.0).
 </div>
 
   

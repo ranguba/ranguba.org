@@ -1950,7 +1950,7 @@ rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
     } else {
         if ((flags &amp; GRN_EXPR_SYNTAX_SCRIPT))
             rb_raise(rb_eArgError,
-                     &quot;:allow_pragma isn't allowed in script syntax&quot;);
+                     &quot;:allow_pragma isn&#39;t allowed in script syntax&quot;);
         if (RVAL2CBOOL(rb_allow_pragma))
             flags |= GRN_EXPR_ALLOW_PRAGMA;
     }
@@ -1961,7 +1961,7 @@ rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
     } else {
         if ((flags &amp; GRN_EXPR_SYNTAX_SCRIPT))
             rb_raise(rb_eArgError,
-                     &quot;:allow_column isn't allowed in script syntax&quot;);
+                     &quot;:allow_column isn&#39;t allowed in script syntax&quot;);
         if (RVAL2CBOOL(rb_allow_column))
             flags |= GRN_EXPR_ALLOW_COLUMN;
     }

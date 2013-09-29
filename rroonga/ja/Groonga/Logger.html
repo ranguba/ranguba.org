@@ -348,7 +348,7 @@ instead.</p></div></span>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sends reopen request to the current logger.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>現在のロガーに再オープンのリクエストを送ります。ログファイルの使い分けに便利です。.</p></div></span>
   
 </li>
 
@@ -1169,8 +1169,7 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sends reopen request to the current logger. It is useful for
-rotating log file.</p>
+    <p>現在のロガーに再オープンのリクエストを送ります。ログファイルの使い分けに便利です。</p>
 
   </div>
 </div>
@@ -1402,7 +1401,7 @@ rb_grn_logger_s_unregister (VALUE klass)
 
 <span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='comma'>,</span> <span class='id identifier rubyid_timestamp'>timestamp</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guard'>guard</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_timestamp'>timestamp</span><span class='rbrace'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_mark'>mark</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_title'>title</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message'>message</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_location'>location</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_timestamp'>timestamp</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_mark'>mark</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_title'>title</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_location'>location</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1443,9 +1442,9 @@ rb_grn_logger_s_unregister (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Thu Sep 19 21:45:12 2013 by
+  Generated on Sun Sep 29 19:20:33 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7 (ruby-1.9.3).
+  0.8.7.2 (ruby-2.0.0).
 </div>
 
   

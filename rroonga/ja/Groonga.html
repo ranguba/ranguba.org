@@ -330,7 +330,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Format version.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>VERSIONを&quot;.&quot;で結合して、”メジャーバージョン.マイナーバージョン.マイクロバージョン”という形式の文字列にしたもの。もしVERSIONにタグが含まれる場合、”メジャーバージョン.マイナーバージョン.マイクロバージョン-タグ”という形式の文字列になる。.</p></div></span>
   
 </li>
 
@@ -479,7 +479,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Format version.</p>
+    <p>VERSIONを&quot;.&quot;で結合して、<tt>”メジャーバージョン.マイナーバージョン.マイクロバージョン”</tt>という形式の文字列にしたもの。もしVERSIONにタグが含まれる場合、<tt>”メジャーバージョン.マイナーバージョン.マイクロバージョン-タグ”</tt>という形式の文字列になる。</p>
 
   </div>
 </div>
@@ -522,7 +522,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
 <span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
   <span class='id identifier rubyid_major'>major</span><span class='comma'>,</span> <span class='id identifier rubyid_minor'>minor</span><span class='comma'>,</span> <span class='id identifier rubyid_micro'>micro</span><span class='comma'>,</span> <span class='id identifier rubyid_tag'>tag</span> <span class='op'>=</span> <span class='const'>VERSION</span>
   <span class='id identifier rubyid_version_string'>version_string</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_major'>major</span><span class='comma'>,</span> <span class='id identifier rubyid_minor'>minor</span><span class='comma'>,</span> <span class='id identifier rubyid_micro'>micro</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_version_string'>version_string</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tag'>tag</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_tag'>tag</span>
+  <span class='id identifier rubyid_version_string'>version_string</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tag'>tag</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_tag'>tag</span>
   <span class='id identifier rubyid_version_string'>version_string</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -535,9 +535,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  <span clas
 </div>
 
     <div id="footer">
-  Generated on Thu Sep 19 21:45:09 2013 by
+  Generated on Sun Sep 29 19:20:31 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7 (ruby-1.9.3).
+  0.8.7.2 (ruby-2.0.0).
 </div>
 
   

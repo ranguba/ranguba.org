@@ -93,6 +93,13 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="3-0-8">3.0.8: 2013-09-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported groonga 3.0.8.</li>
+	<li>Supported x64-mingw32 Ruby.</li>
+	<li>Supported Ruby 2.1.0 preview1.</li>
+</ul>
 <h2 id="3-0-7">3.0.7: 2013-09-19</h2>
 <h3>Improvements</h3>
 <ul>
@@ -299,26 +306,6 @@
   e.g.)</li>
 </ul>
 <pre class="code ruby"><code class="ruby">
-$ cat index-dump.sdf
-table_create —name Video —flags TABLE_HASH_KEY —key_type UInt32
-table_create —name Tag —flags TABLE_HASH_KEY —key_type ShortText
-column_create —table Video —name title —flags COLUMN_SCALAR —type ShortText
-column_create —table Video —name tags —flags COLUMN_VECTOR —type Tag
-column_create —table Tag —name index_tags —flags COLUMN_INDEX —type Video —source tags
-load —table Video
-[
-{&quot;_key&quot;:1,“title”:“groonga Demo”,“tags”:[“IT”,“Server”,“groonga”]},
-{&quot;_key&quot;:2,“title”:“Ultra Baseball”,“tags”:[“Sports”,“Baseball”]},
-]
-$ groonga —file index-dump.sdf -n index-dump.db
-$ groonga-index-dump —output-directory=path/to/index/ index-dump.db
-$ cd path/to/index/
-$ ls Tag.index_tags
-Baseball.dump  IT.dump       Server.dump  Sports.dump  groonga.dump
-$ cat path/to/index/Tag.index_tags/groonga.dump
-index: Tag.index_tags	term: &lt;groonga&gt;	domain: Tag	range: Video	have_section: false	have_weight: false	have_position: false
-weight	position        term_frequency	record
-0    2     1   Video[ 1 ].tags
 </code></pre>
 <ul>
 	<li>Added flag options to Groonga::IndexColumn#open_cursor.

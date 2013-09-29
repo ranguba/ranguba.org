@@ -1950,7 +1950,7 @@ rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
     } else {
         if ((flags &amp; GRN_EXPR_SYNTAX_SCRIPT))
             rb_raise(rb_eArgError,
-                     &quot;:allow_pragma isn't allowed in script syntax&quot;);
+                     &quot;:allow_pragma isn&#39;t allowed in script syntax&quot;);
         if (RVAL2CBOOL(rb_allow_pragma))
             flags |= GRN_EXPR_ALLOW_PRAGMA;
     }
@@ -1961,7 +1961,7 @@ rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
     } else {
         if ((flags &amp; GRN_EXPR_SYNTAX_SCRIPT))
             rb_raise(rb_eArgError,
-                     &quot;:allow_column isn't allowed in script syntax&quot;);
+                     &quot;:allow_column isn&#39;t allowed in script syntax&quot;);
         if (RVAL2CBOOL(rb_allow_column))
             flags |= GRN_EXPR_ALLOW_COLUMN;
     }
@@ -2392,9 +2392,9 @@ rb_grn_expression_snippet (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Thu Sep 19 21:45:18 2013 by
+  Generated on Sun Sep 29 19:20:39 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7 (ruby-1.9.3).
+  0.8.7.2 (ruby-2.0.0).
 </div>
 
   

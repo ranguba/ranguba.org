@@ -960,7 +960,7 @@ another process to unblock the pull operation. If you call
   <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='comment'># The case for no pushed records in the array.
 </span>  <span class='id identifier rubyid_pulled_record'>pulled_record</span> <span class='op'>=</span> <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_pull'>pull</span><span class='lparen'>(</span><span class='symbol'>:block?</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
-    <span class='comment'># This block isn't called
+    <span class='comment'># This block isn&#39;t called
 </span>    <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
     <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span>
   <span class='kw'>end</span>
@@ -976,7 +976,7 @@ another process to unblock the pull operation. If you call
 <span class='kw'>end</span>
 <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_pull'>pull</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
   <span class='comment'># Send SIGINT while blocking the pull operation.
-</span>  <span class='comment'># The signal handler isn't called.
+</span>  <span class='comment'># The signal handler isn&#39;t called.
 </span><span class='kw'>end</span></code></pre>
     
   </div>
@@ -1259,7 +1259,7 @@ not be filled completely. You should handle the case in pull side.</p>
 <span class='id identifier rubyid_urls'>urls</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='op'>|</span>
   <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
     <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_uri'>uri</span> <span class='comment'># Typo! It should be ur*l* not ur*i*
-</span>    <span class='comment'># record.url isn't set
+</span>    <span class='comment'># record.url isn&#39;t set
 </span>  <span class='kw'>end</span>
 <span class='kw'>end</span></code></pre>
     
@@ -1436,7 +1436,7 @@ rb_grn_array_push (VALUE self)
 <span class='kw'>end</span>
 <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_pull'>pull</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
   <span class='comment'># 1. Send SIGINT while blocking the pull operation.
-</span>  <span class='comment'>#    The signal handler isn't called.
+</span>  <span class='comment'>#    The signal handler isn&#39;t called.
 </span>  <span class='comment'># 2. Run unblock.rb.
 </span>  <span class='comment'>#    The signal handler is called!
 </span><span class='kw'>end</span>
@@ -1510,9 +1510,9 @@ rb_grn_array_unblock (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Thu Sep 19 21:45:16 2013 by
+  Generated on Sun Sep 29 19:20:37 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7 (ruby-1.9.3).
+  0.8.7.2 (ruby-2.0.0).
 </div>
 
   
