@@ -93,6 +93,24 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="3-1-0">3.1.0: 2013-11-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Reduced build failure by automatically Groonga build.
+  [Reported by <span class="caps">SHIMADA</span> Koji]</li>
+	<li>Added <code>groonga-database-inspect</code> command that inspects passed database.</li>
+	<li><span class='object_link'><a href="Groonga/Database.html#tables-instance_method" title="Groonga::Database#tables (method)">Groonga::Database#tables</a></span> ignores missing objects rather than raising
+  an exception. Because the method is interested in only existing tables.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a bug that <span class='object_link'><a href="Groonga/Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Groonga::Expression#parse</a></span> doesn&#8217;t accept all
+  mode and operators.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li><span class="caps">SHIMADA</span> Koji</li>
+</ul>
 <h2 id="3-0-9">3.0.9: 2013-10-29</h2>
 <h3>Improvements</h3>
 <ul>

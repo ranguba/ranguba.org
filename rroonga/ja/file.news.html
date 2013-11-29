@@ -93,6 +93,22 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2 id="3-1-0">3.1.0: 2013-11-29</h2>
+<h3>改善</h3>
+<ul>
+	<li>自動でGroongaをビルドする時にエラーになりにくくした。
+  [しまだこうじさんが報告]</li>
+	<li>指定したデータベースの詳細を表示する <code>groonga-database-inspect</code> を追加。</li>
+	<li><span class='object_link'><a href="Groonga/Database.html#tables-instance_method" title="Groonga::Database#tables (method)">Groonga::Database#tables</a></span> が未知のオブジェクトがあっても例外をあげずに無視するようになった。このように変更した理由は、このメッソッドは存在しているテーブルが欲しい、という要求に応えるためのメソッドであるため、存在しないオブジェクトがあるかどうかはこのメソッドにとって重要なことではないから。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li><span class='object_link'><a href="Groonga/Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Groonga::Expression#parse</a></span> がすべての種類のモード・オペレーターを受け取れない問題を修正。</li>
+</ul>
+<h3>感謝</h3>
+<ul>
+	<li>しまだこうじさん</li>
+</ul>
 <h2 id="3-0-9">3.0.9: 2013-10-29</h2>
 <h3>改善</h3>
 <ul>
@@ -917,7 +933,7 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Wed Oct 30 09:22:17 2013 by
+  Generated on Fri Nov 29 10:50:30 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-2.0.0).
 </div>

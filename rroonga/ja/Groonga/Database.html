@@ -288,6 +288,28 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#disk_usage-instance_method" title="#disk_usage (instance method)">- (Object) <strong>disk_usage</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#dump_index-instance_method" title="#dump_index (instance method)">- (Object) <strong>dump_index</strong>(output_directory) </a>
     
 
@@ -393,6 +415,28 @@
 
   
     <span class="summary_desc"><div class='inline'><p><em>database</em> がロックされていれば <ins>true</ins> を返す。.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#plugin_paths-instance_method" title="#plugin_paths (instance method)">- (Array&lt;String&gt;) <strong>plugin_paths</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Registered plugin paths.</p></div></span>
   
 </li>
 
@@ -1508,6 +1552,48 @@ rb_grn_database_defrag (int argc, VALUE *argv, VALUE self)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="disk_usage-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>disk_usage</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/database.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_disk_usage'>disk_usage</span>
+  <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_usage'>usage</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_measurer'>measurer</span> <span class='op'>=</span> <span class='const'>StatisticMeasurer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_usage'>usage</span> <span class='op'>+=</span> <span class='id identifier rubyid_measurer'>measurer</span><span class='period'>.</span><span class='id identifier rubyid_measure_disk_usage'>measure_disk_usage</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_usage'>usage</span> <span class='op'>+=</span> <span class='id identifier rubyid_measurer'>measurer</span><span class='period'>.</span><span class='id identifier rubyid_measure_disk_usage'>measure_disk_usage</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%s.%07X</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_usage'>usage</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="dump_index-instance_method">
   
     - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>dump_index</strong>(output_directory) 
@@ -1522,15 +1608,15 @@ rb_grn_database_defrag (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-27
-28
-29
-30
-31
-32</pre>
+57
+58
+59
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/database.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/database.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump_index'>dump_index</span><span class='lparen'>(</span><span class='id identifier rubyid_output_directory'>output_directory</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
@@ -2234,6 +2320,83 @@ rb_grn_database_is_locked (VALUE self)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="plugin_paths-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;String&gt;</tt>) <strong>plugin_paths</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns registered plugin paths.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>registered plugin paths.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/database.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_plugin_paths'>plugin_paths</span>
+  <span class='id identifier rubyid_processed_paths'>processed_paths</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_paths'>paths</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='symbol'>:ignore_missing_object</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:order_by</span> <span class='op'>=&gt;</span> <span class='symbol'>:id</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+    <span class='kw'>next</span> <span class='kw'>unless</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Procedure</span><span class='rparen'>)</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_builtin?'>builtin?</span>
+    <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_processed_paths'>processed_paths</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_processed_paths'>processed_paths</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_paths'>paths</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_path'>path</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_paths'>paths</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="tables-instance_method">
   
     - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span>&gt;</tt>) <strong>tables</strong> 
@@ -2277,13 +2440,21 @@ rb_grn_database_is_locked (VALUE self)
 22
 23
 24
-25</pre>
+25
+26
+27
+28
+29</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/groonga/database.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tables'>tables</span>
-  <span class='id identifier rubyid_find_all'>find_all</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:ignore_missing_object</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span>
+    <span class='symbol'>:order_by</span> <span class='op'>=&gt;</span> <span class='symbol'>:key</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_find_all'>find_all</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_object'>object</span><span class='op'>|</span>
     <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Table</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -2423,7 +2594,7 @@ rb_grn_database_unlock (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Wed Oct 30 09:22:21 2013 by
+  Generated on Fri Nov 29 10:50:35 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-2.0.0).
 </div>
