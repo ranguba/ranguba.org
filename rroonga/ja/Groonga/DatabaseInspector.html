@@ -140,7 +140,17 @@ of the database.</p>
 <div class="tags">
   
 
-</div>
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="DatabaseInspector/Options.html" title="Groonga::DatabaseInspector::Options (class)">Options</a></span>
+    
+  
+</p>
+
 
 
 
@@ -158,7 +168,7 @@ of the database.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (DatabaseInspector) <strong>initialize</strong>(database) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (DatabaseInspector) <strong>initialize</strong>(database, options = nil) </a>
     
 
     
@@ -210,7 +220,7 @@ of the database.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Groonga::DatabaseInspector (class)">DatabaseInspector</a></span></tt>) <strong>initialize</strong>(database) 
+    - (<tt><span class='object_link'><a href="" title="Groonga::DatabaseInspector (class)">DatabaseInspector</a></span></tt>) <strong>initialize</strong>(database, options = nil) 
   
 
   
@@ -240,6 +250,22 @@ of the database.</p>
       
     </li>
   
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="DatabaseInspector/Options.html" title="Groonga::DatabaseInspector::Options (class)">Options</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The options to custom this inspector behavior.</p></div>
+      
+    </li>
+  
 </ul>
 
 
@@ -249,15 +275,17 @@ of the database.</p>
       <pre class="lines">
 
 
-23
 24
-25</pre>
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/database-inspector.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/database-inspector.rb', line 24</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_database'>database</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_database'>database</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@database</span> <span class='op'>=</span> <span class='id identifier rubyid_database'>database</span>
+  <span class='ivar'>@options</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -316,18 +344,18 @@ If it is <code>nil</code>, <code>$stdout</code> is used.</p></div>
       <pre class="lines">
 
 
-31
-32
 33
 34
-35</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/database-inspector.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/database-inspector.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='id identifier rubyid_output'>output</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>||=</span> <span class='gvar'>$stdout</span>
-  <span class='id identifier rubyid_reporter'>reporter</span> <span class='op'>=</span> <span class='const'>Reporter</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@database</span><span class='comma'>,</span> <span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_reporter'>reporter</span> <span class='op'>=</span> <span class='const'>Reporter</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@database</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='comma'>,</span> <span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_reporter'>reporter</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -340,7 +368,7 @@ If it is <code>nil</code>, <code>$stdout</code> is used.</p></div>
 </div>
 
     <div id="footer">
-  Generated on Fri Nov 29 10:50:37 2013 by
+  Generated on Sun Dec 29 14:42:10 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-2.0.0).
 </div>

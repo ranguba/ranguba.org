@@ -93,12 +93,31 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="3-1-1">3.1.1: 2013-12-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported Groonga 3.1.1.</li>
+	<li>[groonga-database-inspect]: Added <code>--no-tables</code> option for hiding
+  all table information.</li>
+	<li>[groonga-database-inspect]: Added <code>--no-columns</code> option for hiding
+  all column information.</li>
+	<li>[doc] Updated English mailing list to use Groonga-talk.
+  [GitHub#14] [Patch by Masafumi Yokoyama]</li>
+	<li><span class='object_link'><a href="Groonga/Expression.html#append_operation-instance_method" title="Groonga::Expression#append_operation (method)">Groonga::Expression#append_operation</a></span> supports operator name.</li>
+	<li><span class='object_link'><a href="Groonga/Expression.html#append_constant-instance_method" title="Groonga::Expression#append_constant (method)">Groonga::Expression#append_constant</a></span> supports operator name.</li>
+	<li><span class='object_link'><a href="Groonga/Expression.html#append_object-instance_method" title="Groonga::Expression#append_object (method)">Groonga::Expression#append_object</a></span> supports operator name.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>Masafumi Yokoyama</li>
+</ul>
 <h2 id="3-1-0">3.1.0: 2013-11-29</h2>
 <h3>Improvements</h3>
 <ul>
 	<li>Reduced build failure by automatically Groonga build.
   [Reported by <span class="caps">SHIMADA</span> Koji]</li>
-	<li>Added <code>groonga-database-inspect</code> command that inspects passed database.</li>
+	<li>Added <code>groonga-database-inspect</code> command that inspects passed database.
+  [Suggested by Genki Takiuchi]</li>
 	<li><span class='object_link'><a href="Groonga/Database.html#tables-instance_method" title="Groonga::Database#tables (method)">Groonga::Database#tables</a></span> ignores missing objects rather than raising
   an exception. Because the method is interested in only existing tables.</li>
 </ul>
@@ -110,6 +129,7 @@
 <h3>Thanks</h3>
 <ul>
 	<li><span class="caps">SHIMADA</span> Koji</li>
+	<li>Genki Takiuchi</li>
 </ul>
 <h2 id="3-0-9">3.0.9: 2013-10-29</h2>
 <h3>Improvements</h3>

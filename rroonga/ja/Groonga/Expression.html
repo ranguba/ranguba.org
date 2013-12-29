@@ -819,7 +819,7 @@ rb_grn_expression_append_constant (int argc, VALUE *argv, VALUE self)
 
     rb_scan_args(argc, argv, &quot;12&quot;, &amp;rb_constant, &amp;rb_operator, &amp;rb_n_arguments);
     if (!NIL_P(rb_operator))
-        operator = NUM2INT(rb_operator);
+        operator = RVAL2GRNOPERATOR(rb_operator);
     if (!NIL_P(rb_n_arguments))
         n_arguments = NUM2INT(rb_n_arguments);
 
@@ -985,7 +985,7 @@ rb_grn_expression_append_object (int argc, VALUE *argv, VALUE self)
 
     rb_scan_args(argc, argv, &quot;12&quot;, &amp;rb_object, &amp;rb_operation, &amp;rb_n_arguments);
     if (!NIL_P(rb_operation))
-        operation = NUM2INT(rb_operation);
+        operation = RVAL2GRNOPERATOR(rb_operation);
     if (!NIL_P(rb_n_arguments))
         n_arguments = NUM2INT(rb_n_arguments);
 
@@ -1068,7 +1068,7 @@ rb_grn_expression_append_operation (VALUE self, VALUE rb_operation,
                                   NULL, NULL,
                                   NULL, NULL, NULL);
 
-    operation = NUM2INT(rb_operation);
+    operation = RVAL2GRNOPERATOR(rb_operation);
     n_arguments = NUM2INT(rb_n_arguments);
     grn_expr_append_op(context, expression, operation, n_arguments);
     rb_grn_context_check(context, self);
@@ -2392,7 +2392,7 @@ rb_grn_expression_snippet (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Fri Nov 29 10:50:39 2013 by
+  Generated on Sun Dec 29 14:42:13 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-2.0.0).
 </div>
