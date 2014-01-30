@@ -953,6 +953,28 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#support_value%3F-instance_method" title="#support_value? (instance method)">- (Object) <strong>support_value?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>otherwise.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#truncate-instance_method" title="#truncate (instance method)">- (Object) <strong>truncate</strong> </a>
     
 
@@ -2647,24 +2669,6 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
-2376
-2377
-2378
-2379
-2380
-2381
-2382
-2383
-2384
-2385
-2386
-2387
-2388
-2389
-2390
-2391
-2392
-2393
 2394
 2395
 2396
@@ -2672,10 +2676,28 @@ values are -4..22. -4 means all segments are defraged.
 2398
 2399
 2400
-2401</pre>
+2401
+2402
+2403
+2404
+2405
+2406
+2407
+2408
+2409
+2410
+2411
+2412
+2413
+2414
+2415
+2416
+2417
+2418
+2419</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2376</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2394</span>
 
 static VALUE
 rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
@@ -3462,21 +3484,21 @@ rb_grn_table_empty_p (VALUE self)
       <pre class="lines">
 
 
-2350
-2351
-2352
-2353
-2354
-2355
-2356
-2357
-2358
-2359
-2360
-2361</pre>
+2368
+2369
+2370
+2371
+2372
+2373
+2374
+2375
+2376
+2377
+2378
+2379</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2350</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2368</span>
 
 static VALUE
 rb_grn_table_exist_p (VALUE self, VALUE id)
@@ -3956,20 +3978,20 @@ the number of sub records, <code>false</code> otherwise.</p></div>
       <pre class="lines">
 
 
-2329
-2330
-2331
-2332
-2333
-2334
-2335
-2336
-2337
-2338
-2339</pre>
+2347
+2348
+2349
+2350
+2351
+2352
+2353
+2354
+2355
+2356
+2357</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2329</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2347</span>
 
 static VALUE
 rb_grn_table_have_n_sub_records_space_p (VALUE self)
@@ -5350,32 +5372,32 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2410
-2411
-2412
-2413
-2414
-2415
-2416
-2417
-2418
-2419
-2420
-2421
-2422
-2423
-2424
-2425
-2426
-2427
 2428
 2429
 2430
 2431
-2432</pre>
+2432
+2433
+2434
+2435
+2436
+2437
+2438
+2439
+2440
+2441
+2442
+2443
+2444
+2445
+2446
+2447
+2448
+2449
+2450</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2410</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2428</span>
 
 static VALUE
 rb_grn_table_rename (VALUE self, VALUE rb_name)
@@ -7251,21 +7273,21 @@ rb_grn_table_support_key_p (VALUE self)
       <pre class="lines">
 
 
-2292
-2293
-2294
-2295
-2296
-2297
-2298
-2299
-2300
-2301
-2302
-2303</pre>
+2310
+2311
+2312
+2313
+2314
+2315
+2316
+2317
+2318
+2319
+2320
+2321</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2292</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2310</span>
 
 static VALUE
 rb_grn_table_support_sub_records_p (VALUE self)
@@ -7278,6 +7300,101 @@ rb_grn_table_support_sub_records_p (VALUE self)
                              NULL, NULL, NULL,
                              NULL);
     return CBOOL2RVAL(grn_table_is_grouped(context, table));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="support_value?-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>support_value?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>otherwise.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p><code>true</code> if the table is created with value type, <code>false</code></p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2291
+2292
+2293
+2294
+2295
+2296
+2297
+2298
+2299
+2300
+2301</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2291</span>
+
+static VALUE
+rb_grn_table_support_value_p (VALUE self)
+{
+    grn_id range_id;
+
+    rb_grn_table_deconstruct(SELF(self), NULL, NULL,
+                             NULL, NULL,
+                             NULL, &amp;range_id, NULL,
+                             NULL);
+    return CBOOL2RVAL(range_id != GRN_ID_NIL);
 }</pre>
     </td>
   </tr>
@@ -7711,7 +7828,7 @@ rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Sun Dec 29 14:42:05 2013 by
+  Generated on Thu Jan 30 11:44:07 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-2.0.0).
 </div>
