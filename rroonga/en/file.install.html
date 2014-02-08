@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="icon" href="../../favicon.png" />
+    <title>
+  File: install
+  
+    &mdash; rroonga
+  
+ - Ranguba</title>
+
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../">
+      <span class="title">
+  File: install
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">Ranguba</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../rroonga/ja/file.install.html">日本語</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../rroonga/en/">Reference Manual</a></li>
+    <li id="menu-tutorial"><a href="../../rroonga/en/file.tutorial.html">Tutorial</a></li>
+    <li id="menu-install"><a href="../../#install-rroonga">Install</a></li>
+    <li id="menu-developer"><a href="../../developer.html">Developer</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="alphabetical_index.html">Index</a> &raquo; 
+    <span class="title">File: install</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Install</h1>
+<p>This document describes how to install Rroonga.</p>
+<p>You can install Rrroonga by RubyGems. It is the standard way for Ruby
+libraries.</p>
+<p>Rroonga is depends on Groonga. So you need to install both Groonga and
+Rroonga. You can&#8217;t install Groonga by RubyGems because it isn&#8217;t Ruby
+library. But don&#8217;t worry. Rroonga provides the following options for
+easy to install:</p>
+<ul>
+	<li>Rroonga downloads, builds and installs Groonga automatically. You
+  don&#8217;t need to do them explicitly.</li>
+	<li>Rroonga uses Groonga installed by your packaging system.</li>
+</ul>
+<p>The following sections describe the above in detail.</p>
+<h2>Install with auto Groonga build</h2>
+<p>Rroonga searches Groonga on install. If Rroonga can&#8217;t find
+Groonga, Rroonga downloads, builds and installs Groonga
+automatically.</p>
+<p>Type the following command to install Rroonga and Groonga. You don&#8217;t
+need to install Groonga explicitly:</p>
+<pre class="code command_line"><code class="command_line">% gem install rroonga
+</code></pre>
+<h2>Install with Groonga package</h2>
+<p>You can use Groonga package on you packaging system instead of
+building Groonga by yourself. There are the following advantages for
+this option:</p>
+<ul>
+	<li>It reduces installation time.</li>
+	<li>It doesn&#8217;t fail on building Groonga.</li>
+</ul>
+<h3>Windows</h3>
+<p>Rroonga gem for Windows includes both pre-compiled Rroonga and Groonga
+in the gem. So what you need to do is you just install rroonga gem.</p>
+<p>Type the following command on Ruby console:</p>
+<pre class="code command_line"><code class="command_line">% gem.bat install rroonga
+</code></pre>
+<p>This document assumes that you&#8217;re using <a href="http://rubyinstaller.org/">RubyInstaller for
+Windows</a> .</p>
+<h3>OS X</h3>
+<p>There are Groonga packages for OS X environment.</p>
+<h4>MacPorts</h4>
+<p>If you&#8217;re using <a href="http://www.macports.org/">MacPorts</a> , type the
+following commands on your terminal:</p>
+<pre class="code command_line"><code class="command_line">% sudo port install groonga
+% sudo gem install rroonga
+</code></pre>
+<h4>Homebrew</h4>
+<p>If you&#8217;re using <a href="http://brew.sh/">Homebrew</a> , type the
+following commands on your terminal:</p>
+<pre class="code command_line"><code class="command_line">% brew install groonga
+% gem install rroonga
+</code></pre>
+<h3>Debian <span class="caps">GNU</span>/Linux</h3>
+<p>You can install the Groonga package by apt. See <a href="http://groonga.org/docs/install/debian.html">Groonga
+documentation</a> how to set
+apt-line up.</p>
+<p>Type the following commands on your terminal after you finish to set
+apt-line up.</p>
+<pre class="code command_line"><code class="command_line">% sudo apt-get install -y libgroonga-dev
+% sudo gem install rroonga
+</code></pre>
+<h3>Ubuntu</h3>
+<p>You can install the Groonga package by apt. See <a href="http://groonga.org/docs/install/ubuntu.html">Groonga
+documentation</a> how to set
+apt-line up.</p>
+<p>Type the following commands on your terminal after you finish to set
+apt-line up.</p>
+<pre class="code command_line"><code class="command_line">% sudo apt-get install -y libgroonga-dev
+% sudo gem install rroonga
+</code></pre>
+<h3>CentOS</h3>
+<p>You can install the Groonga package by yum. See <a href="http://groonga.org/docs/install/centos.html">Groonga
+documentation</a> how to set
+yum repository up.</p>
+<p>But you need to install Ruby 1.9.3 or later by yourself. Both CentOS 5
+and 6 ship Ruby 1.8. Rroonga doesn&#8217;t support Ruby 1.8.</p>
+<p>Type the following commands on your terminal after you finish to set
+yum repository up and installing Ruby 1.9.3 or later.</p>
+<pre class="code command_line"><code class="command_line">% sudo yum install groonga-devel -y
+% gem install rroonga
+</code></pre>
+<h3>Fedora</h3>
+<p>You can install the Groonga package by yum. The Groonga package is
+included in the official Fedora repository.</p>
+<pre class="code command_line"><code class="command_line">% sudo yum install groonga-devel -y
+% sudo gem install rroonga
+</code></pre>
+<h2>Links</h2>
+<ul>
+	<li><a href="http://groonga.org/docs/install.html">2. Install &#8211; Groonga documentation</a></li>
+</ul></div></div>
+
+    <div id="footer"></div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-github">
+        <a href="https://github.com/ranguba/">
+          <img src="../../github-logo.png" width="100" height="45" border="0" alt="The Ranguba project uses GitHub's git repositories." />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Project's icons are used." src="../../tango-logo.png" />
+        </a>
+      </p>
+      <p id="sponsor-famfamfam">
+	<a href="http://www.famfamfam.com/">
+          <img width="120" height="18" border="0" alt="famfamfam.com's flags are used." src="../../famfamfam-logo.png" />
+        </a>
+      </p>
+    </div>
+
+</body>
+</html>
