@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!file.news.html";
 </script>
 
 
@@ -93,6 +93,54 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2 id="4-0-2">4.0.2: 2014-05-29</h2>
+<h3>改善</h3>
+<ul>
+	<li>dump中の不必要な <code>--key_type</code> オプションを削除。
+  [Genki Takiuchiさんが報告]</li>
+	<li><span class='object_link'><a href="Groonga/IndexColumn.html#inspect-instance_method" title="Groonga::IndexColumn#inspect (method)">Groonga::IndexColumn#inspect</a></span>にソースの情報を追加。</li>
+	<li>マルチカラムインデックスではデフォルトで <code>with_section</code> フラグを有効にした。
+  参考:  <span class='object_link'><a href="Groonga/Schema/TableDefinition.html#index-instance_method" title="Groonga::Schema::TableDefinition#index (method)">Groonga::Schema::TableDefinition#index</a></span>.</li>
+	<li>トークナイザーを持っているテーブルでは、デフォルトで <code>with_position</code> フラグを
+  有効にした。 <code>TokenDelimit</code> トークナイザーをして <code>with_position</code> フラグを無効に
+  するためには明示的に <code>:with_position =&gt; false</code> を指定すること。
+  なお、 <code>TokenDelimit</code> は <code>with_position</code> フラグが不要なトークナイザーである。
+  参考: <span class='object_link'><a href="Groonga/Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">Groonga::Schema.create_table</a></span>。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>[GitHub#16] <span class='object_link'><a href="Groonga/Table.html#column-instance_method" title="Groonga::Table#column (method)">Groonga::Table#column</a></span>のメモリリークを修正。
+  [ruticeさんが報告]</li>
+</ul>
+<h3>感謝</h3>
+<ul>
+	<li>ruticeさん</li>
+	<li>Genki Takiuchiさん</li>
+</ul>
+<h2 id="4-0-1">4.0.1: 2014-04-04</h2>
+<h3>改善</h3>
+<ul>
+	<li>Groonga 4.0.1対応。Groonga 4.0.0以前のバージョンはサポートしません。</li>
+	<li>重みなしでマッチカラムを指定できるようにした。
+  <pre class="code ruby"><code class="ruby">
+  <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+    <span class='id identifier rubyid_match_target'>match_target</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_match_target'>match_target</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_target'>target</span><span class='op'>|</span>
+      <span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_match_target'>match_target</span> <span class='op'>=~</span> <span class='id identifier rubyid_keyword'>keyword</span>
+  <span class='kw'>end</span>
+</code></pre></li>
+	<li>重み付きベクター対応。</li>
+	<li>grndump: <code>KEY_NORMALIZE</code> ではなく <code>--normalizer</code> を使うようにした。
+  古いGroongaではダンプしたデータベースをリストアできなくなります。</li>
+	<li>Groonga::IndexClumn#search: <code>mode</code> オプションを追加。</li>
+	<li>Groonga::IndexClumn#search: <code>weight</code> オプションを追加。</li>
+	<li>オプションのキーとして文字列も使えるようにした。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>Ruby構文でのインデックスダンプ時にインデックスオプション情報が抜けてしまう問題を修正。</li>
+</ul>
 <h2 id="4-0-0">4.0.0: 2014-02-09</h2>
 <h3>改善</h3>
 <ul>
@@ -257,7 +305,7 @@
 	<li><span class='object_link'><a href="Groonga/IndexColumn.html#add-instance_method" title="Groonga::IndexColumn#add (method)">Groonga::IndexColumn#add</a></span>を追加。</li>
 	<li><span class='object_link'><a href="Groonga/IndexColumn.html#delete-instance_method" title="Groonga::IndexColumn#delete (method)">Groonga::IndexColumn#delete</a></span>を追加。</li>
 	<li><span class='object_link'><a href="Groonga/IndexColumn.html#update-instance_method" title="Groonga::IndexColumn#update (method)">Groonga::IndexColumn#update</a></span>を追加。</li>
-	<li><span class='object_link'><a href="Groonga/IndexColumn.html#%5B%5D%3D-instance_method" title="Groonga::IndexColumn#[]= (method)">Groonga::IndexColumn#[]=</a></span>を非推奨にした。代わりに<span class='object_link'><a href="Groonga/IndexColumn.html#add-instance_method" title="Groonga::IndexColumn#add (method)">Groonga::IndexColumn#add</a></span>、<span class='object_link'><a href="Groonga/IndexColumn.html#delete-instance_method" title="Groonga::IndexColumn#delete (method)">Groonga::IndexColumn#delete</a></span>、<span class='object_link'><a href="Groonga/IndexColumn.html#update-instance_method" title="Groonga::IndexColumn#update (method)">Groonga::IndexColumn#update</a></span>を使うこと。</li>
+	<li>Groonga::IndexColumn#[]=を非推奨にした。代わりに<span class='object_link'><a href="Groonga/IndexColumn.html#add-instance_method" title="Groonga::IndexColumn#add (method)">Groonga::IndexColumn#add</a></span>、<span class='object_link'><a href="Groonga/IndexColumn.html#delete-instance_method" title="Groonga::IndexColumn#delete (method)">Groonga::IndexColumn#delete</a></span>、<span class='object_link'><a href="Groonga/IndexColumn.html#update-instance_method" title="Groonga::IndexColumn#update (method)">Groonga::IndexColumn#update</a></span>を使うこと。</li>
 	<li><span class='object_link'><a href="Groonga/Table.html#have_n_sub_records_space%3F-instance_method" title="Groonga::Table#have_n_sub_records_space? (method)">Groonga::Table#have_n_sub_records_space?</a></span>を追加。</li>
 	<li>[grndump] スキーマのダンプを無効にしているときは&quot;register PLUGIN&quot;もダンプしないようにした。</li>
 </ul>
@@ -979,9 +1027,9 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Sat Feb  8 18:21:59 2014 by
+  Generated on Fri May 30 18:51:45 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.2 (ruby-2.0.0).
+  0.8.7.4 (ruby-2.1.2).
 </div>
 
   

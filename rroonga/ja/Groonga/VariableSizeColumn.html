@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  framesUrl = "../frames.html#!Groonga/VariableSizeColumn.html";
 </script>
 
 
@@ -138,7 +138,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>可変長データ用のカラム。</p>
+    <p>A column for variable size data like text family types and vector
+column.</p>
 
   </div>
 </div>
@@ -159,6 +160,50 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Array&lt;Hash&lt;Symbol, String&gt;&gt;, ::Object) <strong>[]</strong>(id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>It gets a value of variable size column value for the record that ID is <em>id</em>.</p></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>It updates a value of variable size column value for the record that ID is <em>id</em>.</p></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -217,7 +262,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Column</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Column.html#clear_lock-instance_method" title="Groonga::Column#clear_lock (method)">#clear_lock</a></span>, <span class='object_link'><a href="Column.html#disk_usage-instance_method" title="Groonga::Column#disk_usage (method)">#disk_usage</a></span>, <span class='object_link'><a href="Column.html#index%3F-instance_method" title="Groonga::Column#index? (method)">#index?</a></span>, <span class='object_link'><a href="Column.html#indexes-instance_method" title="Groonga::Column#indexes (method)">#indexes</a></span>, <span class='object_link'><a href="Column.html#local_name-instance_method" title="Groonga::Column#local_name (method)">#local_name</a></span>, <span class='object_link'><a href="Column.html#lock-instance_method" title="Groonga::Column#lock (method)">#lock</a></span>, <span class='object_link'><a href="Column.html#locked%3F-instance_method" title="Groonga::Column#locked? (method)">#locked?</a></span>, <span class='object_link'><a href="Column.html#reference%3F-instance_method" title="Groonga::Column#reference? (method)">#reference?</a></span>, <span class='object_link'><a href="Column.html#rename-instance_method" title="Groonga::Column#rename (method)">#rename</a></span>, <span class='object_link'><a href="Column.html#scalar%3F-instance_method" title="Groonga::Column#scalar? (method)">#scalar?</a></span>, <span class='object_link'><a href="Column.html#select-instance_method" title="Groonga::Column#select (method)">#select</a></span>, <span class='object_link'><a href="Column.html#table-instance_method" title="Groonga::Column#table (method)">#table</a></span>, <span class='object_link'><a href="Column.html#unlock-instance_method" title="Groonga::Column#unlock (method)">#unlock</a></span>, <span class='object_link'><a href="Column.html#vector%3F-instance_method" title="Groonga::Column#vector? (method)">#vector?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Column.html#clear_lock-instance_method" title="Groonga::Column#clear_lock (method)">#clear_lock</a></span>, <span class='object_link'><a href="Column.html#disk_usage-instance_method" title="Groonga::Column#disk_usage (method)">#disk_usage</a></span>, <span class='object_link'><a href="Column.html#index%3F-instance_method" title="Groonga::Column#index? (method)">#index?</a></span>, <span class='object_link'><a href="Column.html#indexes-instance_method" title="Groonga::Column#indexes (method)">#indexes</a></span>, <span class='object_link'><a href="Column.html#local_name-instance_method" title="Groonga::Column#local_name (method)">#local_name</a></span>, <span class='object_link'><a href="Column.html#lock-instance_method" title="Groonga::Column#lock (method)">#lock</a></span>, <span class='object_link'><a href="Column.html#locked%3F-instance_method" title="Groonga::Column#locked? (method)">#locked?</a></span>, <span class='object_link'><a href="Column.html#reference%3F-instance_method" title="Groonga::Column#reference? (method)">#reference?</a></span>, <span class='object_link'><a href="Column.html#rename-instance_method" title="Groonga::Column#rename (method)">#rename</a></span>, <span class='object_link'><a href="Column.html#scalar%3F-instance_method" title="Groonga::Column#scalar? (method)">#scalar?</a></span>, <span class='object_link'><a href="Column.html#select-instance_method" title="Groonga::Column#select (method)">#select</a></span>, <span class='object_link'><a href="Column.html#table-instance_method" title="Groonga::Column#table (method)">#table</a></span>, <span class='object_link'><a href="Column.html#unlock-instance_method" title="Groonga::Column#unlock (method)">#unlock</a></span>, <span class='object_link'><a href="Column.html#vector%3F-instance_method" title="Groonga::Column#vector? (method)">#vector?</a></span>, <span class='object_link'><a href="Column.html#with_weight%3F-instance_method" title="Groonga::Column#with_weight? (method)">#with_weight?</a></span></p>
 
   
   
@@ -228,7 +273,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class='object_link'><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -236,7 +281,674 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="compressed?-instance_method">
+  <h3 class="signature first" id="[]-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span>&lt;Symbol, String&gt;&gt;</tt>, <tt>::Object</tt>) <strong>[]</strong>(id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>It gets a value of variable size column value for the record that
+ID is <em>id</em>.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Gets weight vector value</p></div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Products</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:patricia_trie</span><span class='comma'>,</span>
+                      <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='comment'># This is weight vector.
+</span>    <span class='comment'># &quot;:with_weight =&gt; true&quot; is important to store weight value.
+</span>    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tags</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                     <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:vector</span><span class='comma'>,</span>
+                     <span class='symbol'>:with_weight</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_products'>products</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Products</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_rroonga'>rroonga</span> <span class='op'>=</span> <span class='id identifier rubyid_products'>products</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Rroonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_rroonga'>rroonga</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+  <span class='lbrace'>{</span>
+    <span class='symbol'>:value</span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ruby</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='int'>100</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='lbrace'>{</span>
+    <span class='symbol'>:value</span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbracket'>]</span>
+
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_rroonga'>rroonga</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span>
+<span class='comment'># =&gt; [
+</span><span class='comment'>#      {:value =&gt; &quot;ruby&quot;,    :weight =&gt; 100},
+</span><span class='comment'>#      {:value =&gt; &quot;groonga&quot;, :weight =&gt; 10}
+</span><span class='comment'>#    ]</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The record ID.</p></div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span>&lt;Symbol, String&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An array of value if the column
+is a weight vector column.
+Each value is a Hash like the following form:</p>
+<pre class="code"><code class="">
+<span class='lbrace'>{</span>
+  <span class='symbol'>:value</span>  <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='const'>KEY</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='const'>WEIGHT</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='rbrace'>}</span>
+</code></pre>
+<p><code>[KEY]</code> is the key of the table that is specified as range on
+creating the weight vector.</p>
+<p><code>[WEIGHT]</code> is a positive integer.</p></div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>::Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>See <span class='object_link'><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">Object#[]</a></span> for columns except
+weight vector column.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>4.0.1.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 158</span>
+
+static VALUE
+rb_grn_variable_size_column_array_reference (VALUE self, VALUE rb_id)
+{
+    grn_ctx *context = NULL;
+    grn_obj *column, *range;
+    grn_id id;
+    grn_obj *value;
+    VALUE rb_value;
+    unsigned int i, n;
+
+    rb_grn_variable_size_column_deconstruct(SELF(self), &amp;column, &amp;context,
+                                            NULL, NULL, &amp;value, NULL,
+                                            NULL, &amp;range);
+
+    if (!(column-&gt;header.flags &amp; GRN_OBJ_WITH_WEIGHT)) {
+        return rb_call_super(1, &amp;rb_id);
+    }
+
+    id = RVAL2GRNID(rb_id, context, range, self);
+
+    grn_obj_reinit(context, value,
+                   value-&gt;header.domain,
+                   value-&gt;header.flags | GRN_OBJ_VECTOR);
+    grn_obj_get_value(context, column, id, value);
+    rb_grn_context_check(context, self);
+
+    n = grn_vector_size(context, value);
+    rb_value = rb_ary_new2(n);
+    for (i = 0; i &lt; n; i++) {
+        const char *element_value;
+        unsigned int element_value_length;
+        unsigned int weight = 0;
+        grn_id domain;
+        VALUE rb_element;
+
+        element_value_length = grn_vector_get_element(context,
+                                                      value,
+                                                      i,
+                                                      &amp;element_value,
+                                                      &amp;weight,
+                                                      &amp;domain);
+        rb_element = rb_hash_new();
+        rb_hash_aset(rb_element,
+                     ID2SYM(rb_intern(&quot;value&quot;)),
+                     rb_str_new(element_value, element_value_length));
+        rb_hash_aset(rb_element,
+                     ID2SYM(rb_intern(&quot;weight&quot;)),
+                     UINT2NUM(weight));
+
+        rb_ary_push(rb_value, rb_element);
+    }
+
+    return rb_value;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="[]=-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, elements) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, value) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>It updates a value of variable size column value for the record
+that ID is <em>id</em>.</p>
+<p>Weight vector column is a special variable size column. This
+description describes only weight vector column. Other variable
+size column works what you think.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Use weight vector as matrix search result weight</p></div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Products</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:patricia_trie</span><span class='comma'>,</span>
+                      <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='comment'># This is weight vector.
+</span>    <span class='comment'># &quot;:with_weight =&gt; true&quot; is important for matrix search result weight.
+</span>    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tags</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                     <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:vector</span><span class='comma'>,</span>
+                     <span class='symbol'>:with_weight</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tags</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:hash</span><span class='comma'>,</span>
+                      <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='comment'># This is inverted index. It also needs &quot;:with_weight =&gt; true&quot;.
+</span>    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Products.tags</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:with_weight</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_products'>products</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Products</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_groonga'>groonga</span> <span class='op'>=</span> <span class='id identifier rubyid_products'>products</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Groonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_groonga'>groonga</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+  <span class='lbrace'>{</span>
+    <span class='symbol'>:value</span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='int'>100</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbracket'>]</span>
+<span class='id identifier rubyid_rroonga'>rroonga</span> <span class='op'>=</span> <span class='id identifier rubyid_products'>products</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Rroonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_rroonga'>rroonga</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+  <span class='lbrace'>{</span>
+    <span class='symbol'>:value</span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ruby</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='int'>100</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='lbrace'>{</span>
+    <span class='symbol'>:value</span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbracket'>]</span>
+
+<span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_products'>products</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='comment'># Search by &quot;groonga&quot;
+</span>  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_match_target'>match_target</span><span class='op'>|</span>
+    <span class='id identifier rubyid_match_target'>match_target</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='lbracket'>[</span><span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_score'>score</span><span class='rbracket'>]</span>
+<span class='kw'>end</span>
+<span class='comment'># Matches all records with weight.
+</span><span class='comment'># =&gt; [&quot;Groonga&quot;, 101]
+</span><span class='comment'>#    [&quot;Rroonga&quot;, 11]
+</span>
+<span class='comment'># Increases score for &quot;ruby&quot; 10 times
+</span><span class='id identifier rubyid_products'>products</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='comment'># The previous search result. Required.
+</span>                <span class='symbol'>:result</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span>
+                <span class='comment'># It just adds score to existing records in the result. Required.
+</span>                <span class='symbol'>:operator</span> <span class='op'>=&gt;</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>ADJUST</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ruby</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_target'>target</span><span class='op'>|</span>
+    <span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span> <span class='op'>*</span> <span class='int'>10</span> <span class='comment'># 10 times
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='lbracket'>[</span><span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_score'>score</span><span class='rbracket'>]</span>
+<span class='kw'>end</span>
+<span class='comment'># Weight is used for increasing score.
+</span><span class='comment'># =&gt; [&quot;Groonga&quot;, 101]  &lt;- Not changed.
+</span><span class='comment'>#    [&quot;Rroonga&quot;, 1021] &lt;- 1021 (= 101 * 10 + 1) increased.</span></code></pre>
+    
+  </div>
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, elements) </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>This description is for weight vector column.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The record ID.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>elements</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span>&lt;Symbol, String&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An array of values
+for weight vector.
+Each value is a Hash like the following form:</p>
+<pre class="code"><code class="">
+<span class='lbrace'>{</span>
+  <span class='symbol'>:value</span>  <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='const'>KEY</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='const'>WEIGHT</span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='rbrace'>}</span>
+</code></pre>
+<p><code>[KEY]</code> must be the same type of the key of the table that is
+specified as range on creating the weight vector.</p>
+<p><code>[WEIGHT]</code> must be an positive integer. Note that search
+becomes <code>weight + 1</code>. It means that You want to get 10 as
+score, you should set 9 as weight.</p></div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, value) </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>This description is for variable size columns except weight
+vector column.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The record ID.</p></div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>::Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A new value.</p></div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">Object#[]=</a></span></li>
+    
+  </ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>4.0.1</p></div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 350</span>
+
+static VALUE
+rb_grn_variable_size_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
+{
+    grn_ctx *context = NULL;
+    grn_obj *column, *range;
+    grn_rc rc;
+    grn_id id;
+    grn_obj *value, *element_value;
+    int flags = GRN_OBJ_SET;
+
+    rb_grn_variable_size_column_deconstruct(SELF(self), &amp;column, &amp;context,
+                                            NULL, NULL, &amp;value, &amp;element_value,
+                                            NULL, &amp;range);
+
+    if (!(column-&gt;header.flags &amp; GRN_OBJ_WITH_WEIGHT)) {
+        VALUE args[2];
+        args[0] = rb_id;
+        args[1] = rb_value;
+        return rb_call_super(2, args);
+    }
+
+    id = RVAL2GRNID(rb_id, context, range, self);
+
+    grn_obj_reinit(context, value,
+                   value-&gt;header.domain,
+                   value-&gt;header.flags | GRN_OBJ_VECTOR);
+    if (RVAL2CBOOL(rb_obj_is_kind_of(rb_value, rb_cArray))) {
+        int i, n;
+        n = RARRAY_LEN(rb_value);
+        for (i = 0; i &lt; n; i++) {
+            unsigned int weight = 0;
+            VALUE rb_element_value, rb_weight;
+
+            rb_grn_scan_options(RARRAY_PTR(rb_value)[i],
+                                &quot;value&quot;, &amp;rb_element_value,
+                                &quot;weight&quot;, &amp;rb_weight,
+                                NULL);
+
+            if (!NIL_P(rb_weight)) {
+                weight = NUM2UINT(rb_weight);
+            }
+
+            GRN_BULK_REWIND(element_value);
+            if (!NIL_P(rb_element_value)) {
+                RVAL2GRNBULK(rb_element_value, context, element_value);
+            }
+
+            grn_vector_add_element(context, value,
+                                   GRN_BULK_HEAD(element_value),
+                                   GRN_BULK_VSIZE(element_value),
+                                   weight,
+                                   element_value-&gt;header.domain);
+        }
+    } else if (RVAL2CBOOL(rb_obj_is_kind_of(rb_value, rb_cHash))) {
+        HashElementToVectorElementData data;
+        data.context = context;
+        data.vector = value;
+        data.element_value = element_value;
+        rb_hash_foreach(rb_value, hash_element_to_vector_element, (VALUE)&amp;data);
+    } else {
+        rb_raise(rb_eArgError,
+                 &quot;&lt;%s&gt;: &quot;
+                 &quot;weight vector value must be an array of index value or &quot;
+                 &quot;a hash that key is vector value and value is vector weight: &quot;
+                 &quot;&lt;%s&gt;&quot;,
+                 rb_grn_inspect(self),
+                 rb_grn_inspect(rb_value));
+    }
+
+    rc = grn_obj_set_value(context, column, id, value, flags);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return rb_value;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="compressed?-instance_method">
   
     
       <span class="overload">- (<tt>Boolean</tt>) <strong>compressed?</strong> </span>
@@ -375,70 +1087,70 @@
       <pre class="lines">
 
 
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97</pre>
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 42</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 437</span>
 
 static VALUE
 rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
 {
-    RbGrnColumn *rb_grn_column;
+    RbGrnVariableSizeColumn *rb_grn_column;
     grn_ctx *context = NULL;
     grn_obj *column;
     grn_obj_flags flags;
@@ -608,41 +1320,41 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138</pre>
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 112</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 507</span>
 
 static VALUE
 rb_grn_variable_size_column_defrag (int argc, VALUE *argv, VALUE self)
 {
-    RbGrnColumn *rb_grn_column;
+    RbGrnVariableSizeColumn *rb_grn_column;
     grn_ctx *context = NULL;
     grn_obj *column;
     int n_segments;
@@ -676,9 +1388,9 @@ rb_grn_variable_size_column_defrag (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Sat Feb  8 18:22:07 2014 by
+  Generated on Fri May 30 18:51:51 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.2 (ruby-2.0.0).
+  0.8.7.4 (ruby-2.1.2).
 </div>
 
   

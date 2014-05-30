@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!file.news.html";
 </script>
 
 
@@ -93,6 +93,54 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="4-0-2">4.0.2: 2014-05-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Removed needless <code>--key_type</code> option in dump.
+  [Reported by Genki Takiuchi]</li>
+	<li>Added sources information to <span class='object_link'><a href="Groonga/IndexColumn.html#inspect-instance_method" title="Groonga::IndexColumn#inspect (method)">Groonga::IndexColumn#inspect</a></span>.</li>
+	<li>Enabled <code>with_section</code> flag for multiple column index by default.
+  See <span class='object_link'><a href="Groonga/Schema/TableDefinition.html#index-instance_method" title="Groonga::Schema::TableDefinition#index (method)">Groonga::Schema::TableDefinition#index</a></span>.</li>
+	<li>Enabled <code>with_position</code> flag for index of a table that has a default
+  tokenizer by default. You need to specify <code>:with_position =&gt; false</code>
+  explicitly to disable <code>with_position</code> flag for <code>TokenDelimit</code>.
+  <code>TokenDelimit</code> is a tokenizer that doesn&#8217;t need <code>with_position</code> flag.
+  See <span class='object_link'><a href="Groonga/Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">Groonga::Schema.create_table</a></span>.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>[GitHub#16] Fixed a memory leak of <span class='object_link'><a href="Groonga/Table.html#column-instance_method" title="Groonga::Table#column (method)">Groonga::Table#column</a></span>.
+  [Reported by rutice]</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>rutice</li>
+	<li>Genki Takiuchi</li>
+</ul>
+<h2 id="4-0-1">4.0.1: 2014-04-04</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported Groonga 4.0.1. Groonga 4.0.0 or older are not supported.</li>
+	<li>Supported no weight match column case.
+  <pre class="code ruby"><code class="ruby">
+  <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
+    <span class='id identifier rubyid_match_target'>match_target</span> <span class='op'>=</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_match_target'>match_target</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_target'>target</span><span class='op'>|</span>
+      <span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_match_target'>match_target</span> <span class='op'>=~</span> <span class='id identifier rubyid_keyword'>keyword</span>
+  <span class='kw'>end</span>
+</code></pre></li>
+	<li>Supported weight vector.</li>
+	<li>grndump: Changed to use <code>--normalizer</code> instead of <code>KEY_NORMALIZE</code>.
+  Old Groonga can&#8217;t restore dumped database.</li>
+	<li>Groonga::IndexClumn#search: Added <code>mode</code> option.</li>
+	<li>Groonga::IndexClumn#search: Added <code>weight</code> option.</li>
+	<li>Accepted String as option key.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a bug that index dump drops index options in Ruby syntax.</li>
+</ul>
 <h2 id="4-0-0">4.0.0: 2014-02-09</h2>
 <h3>Improvements</h3>
 <ul>
@@ -272,7 +320,7 @@
 	<li>Added <span class='object_link'><a href="Groonga/IndexColumn.html#add-instance_method" title="Groonga::IndexColumn#add (method)">Groonga::IndexColumn#add</a></span>.</li>
 	<li>Added <span class='object_link'><a href="Groonga/IndexColumn.html#delete-instance_method" title="Groonga::IndexColumn#delete (method)">Groonga::IndexColumn#delete</a></span>.</li>
 	<li>Added <span class='object_link'><a href="Groonga/IndexColumn.html#update-instance_method" title="Groonga::IndexColumn#update (method)">Groonga::IndexColumn#update</a></span>.</li>
-	<li>Deprecated <span class='object_link'><a href="Groonga/IndexColumn.html#%5B%5D%3D-instance_method" title="Groonga::IndexColumn#[]= (method)">Groonga::IndexColumn#[]=</a></span>. Use <span class='object_link'><a href="Groonga/IndexColumn.html#add-instance_method" title="Groonga::IndexColumn#add (method)">Groonga::IndexColumn#add</a></span>,
+	<li>Deprecated Groonga::IndexColumn#[]=. Use <span class='object_link'><a href="Groonga/IndexColumn.html#add-instance_method" title="Groonga::IndexColumn#add (method)">Groonga::IndexColumn#add</a></span>,
   <span class='object_link'><a href="Groonga/IndexColumn.html#delete-instance_method" title="Groonga::IndexColumn#delete (method)">Groonga::IndexColumn#delete</a></span> or <span class='object_link'><a href="Groonga/IndexColumn.html#update-instance_method" title="Groonga::IndexColumn#update (method)">Groonga::IndexColumn#update</a></span> instead.</li>
 	<li>Added <span class='object_link'><a href="Groonga/Table.html#have_n_sub_records_space%3F-instance_method" title="Groonga::Table#have_n_sub_records_space? (method)">Groonga::Table#have_n_sub_records_space?</a></span>.</li>
 	<li>[grndump] Don&#8217;t dump &#8220;register <span class="caps">PLUGIN</span>&#8221; when schema dump is disabled.</li>

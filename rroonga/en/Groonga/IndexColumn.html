@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  framesUrl = "../frames.html#!Groonga/IndexColumn.html";
 </script>
 
 
@@ -163,28 +163,6 @@
 
     <ul class="summary">
       
-        <li class="public deprecated">
-  <span class="summary_signature">
-    
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  <span class="deprecated note title">deprecated</span>
-  
-
-  
-    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Since 3.0.2. Use <span class='object_link'><a href="#add-instance_method" title="Groonga::IndexColumn#add (method)">#add</a></span>, <span class='object_link'><a href="#delete-instance_method" title="Groonga::IndexColumn#delete (method)">#delete</a></span> or <span class='object_link'><a href="#update-instance_method" title="Groonga::IndexColumn#update (method)">#update</a></span> instead.</p></div></span>
-  
-</li>
-
-      
         <li class="public ">
   <span class="summary_signature">
     
@@ -269,6 +247,28 @@
 
   
     <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (String) <strong>inspect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Inspects the index column.</p></div></span>
   
 </li>
 
@@ -495,7 +495,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class='object_link'><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span></p>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -503,335 +503,7 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="[]=-instance_method">
-  
-    
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, value) </span>
-    
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, options) </span>
-    
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Since 3.0.2. Use <span class='object_link'><a href="#add-instance_method" title="Groonga::IndexColumn#add (method)">#add</a></span>, <span class='object_link'><a href="#delete-instance_method" title="Groonga::IndexColumn#delete (method)">#delete</a></span> or <span class='object_link'><a href="#update-instance_method" title="Groonga::IndexColumn#update (method)">#update</a></span> instead.</p></div></div>
-<p>IDが <em>id</em> であるレコードを高速に全文検索するため転置索引を作
-成する。多くの場合、 <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> で
-<ins>:source</ins> オプションを指定することにより、自動的に全文検索
-用の索引は更新されるので、明示的にこのメソッドを使うこと
-は少ない。</p>
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-        <p class="example_title"><div class='inline'><p>記事の段落毎に索引を作成する。</p></div></p>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_articles'>articles</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;articles&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_terms'>terms</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;terms&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-                             <span class='symbol'>:default_tokenizer</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_content_index'>content_index</span> <span class='op'>=</span> <span class='id identifier rubyid_terms'>terms</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_articles'>articles</span><span class='comma'>,</span>
-                                          <span class='symbol'>:with_section</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;-EOC</span>
-<span class='tstring_content'>groonga は組み込み型の全文検索エンジンライブラリです。
-DBMSやスクリプト言語処理系等に組み込むことによって、その
-全文検索機能を強化することができます。また、リレーショナ
-ルモデルに基づくデータストア機能を内包しており、groonga
-単体でも高速なデータストアサーバとして使用することができ
-ます。
-
-■全文検索方式
-転置索引型の全文検索エンジンです。転置索引は圧縮されてファ
-イルに格納され、検索時のディスク読み出し量を小さく、かつ
-局所的に抑えるように設計されています。用途に応じて以下の
-索引タイプを選択できます。
-</span><span class='heredoc_end'>EOC
-</span>
-<span class='id identifier rubyid_groonga'>groonga</span> <span class='op'>=</span> <span class='id identifier rubyid_articles'>articles</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:title</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>groonga</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
-
-<span class='id identifier rubyid_content'>content</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n{2,}</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sentence'>sentence</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
-  <span class='id identifier rubyid_content_index'>content_index</span><span class='lbracket'>[</span><span class='id identifier rubyid_groonga'>groonga</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:value</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_sentence'>sentence</span><span class='comma'>,</span> <span class='symbol'>:section</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='int'>1</span><span class='rbrace'>}</span>
-<span class='kw'>end</span>
-
-<span class='id identifier rubyid_content_index'>content_index</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>エンジン</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
-  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># -&gt; &quot;groonga&quot;
-</span><span class='kw'>end</span></code></pre>
-    
-  </div>
-
-  <p class="tag_title">Overloads:</p>
-  <ul class="overload">
-    
-      
-      <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, value) </span>
-        <div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>value</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>新しい値</p></div>
-      
-    </li>
-  
-</ul>
-
-
-</div>
-      </li>
-    
-      
-      <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, options) </span>
-        <div class="docstring">
-  <div class="discussion">
-    <p><em>options</em> を指定することにより、 <em>value</em> を指定したときよりも索引の作
-成を制御できる。</p>
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>::Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value</p></div>
-      
-    </li>
-  
-</ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">:section</span>
-          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>段落番号を指定する。省略した場合は1を指定したとみなされ
-る。
-<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> で
-<code>{:with_section =&gt; true}</code> を指定していなければい
-けない。</p></div>
-          
-        </li>
-      
-        <li>
-          <span class="name">:old_value</span>
-          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>以前の値を指定する。省略した場合は現在の値が用いられる。
-通常は指定する必要はない。</p></div>
-          
-        </li>
-      
-        <li>
-          <span class="name">:value</span>
-          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>新しい値を指定する。 <em>value</em> を指定した場合と <em>options</em> で
-<code>{:value =&gt; value}</code> を指定した場合は同じ動作とな
-る。</p></div>
-          
-        </li>
-      
-    </ul>
-  
-
-
-</div>
-      </li>
-    
-  </ul>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 163</span>
-
-static VALUE
-rb_grn_index_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
-{
-    grn_ctx *context = NULL;
-    grn_obj *column, *range;
-    grn_rc rc;
-    grn_id id;
-    unsigned int section;
-    grn_obj *old_value, *new_value;
-    VALUE original_rb_value, rb_section, rb_old_value, rb_new_value;
-
-    original_rb_value = rb_value;
-
-    rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
-                                    NULL, NULL,
-                                    &amp;new_value, &amp;old_value,
-                                    NULL, &amp;range,
-                                    NULL, NULL);
-
-    id = RVAL2GRNID(rb_id, context, range, self);
-
-    if (!RVAL2CBOOL(rb_obj_is_kind_of(rb_value, rb_cHash))) {
-        VALUE hash_value;
-        hash_value = rb_hash_new();
-        rb_hash_aset(hash_value, RB_GRN_INTERN(&quot;value&quot;), rb_value);
-        rb_value = hash_value;
-    }
-
-    rb_grn_scan_options(rb_value,
-                        &quot;section&quot;, &amp;rb_section,
-                        &quot;old_value&quot;, &amp;rb_old_value,
-                        &quot;value&quot;, &amp;rb_new_value,
-                        NULL);
-
-    if (NIL_P(rb_section))
-        section = 1;
-    else
-        section = NUM2UINT(rb_section);
-
-    if (NIL_P(rb_old_value)) {
-        old_value = NULL;
-    } else {
-        GRN_BULK_REWIND(old_value);
-        RVAL2GRNBULK(rb_old_value, context, old_value);
-    }
-
-    if (NIL_P(rb_new_value)) {
-        new_value = NULL;
-    } else {
-        GRN_BULK_REWIND(new_value);
-        RVAL2GRNBULK(rb_new_value, context, new_value);
-    }
-
-    rc = grn_column_index_update(context, column,
-                                 id, section, old_value, new_value);
-    rb_grn_context_check(context, self);
-    rb_grn_rc_check(rc, self);
-
-    return original_rb_value;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="add-instance_method">
+  <h3 class="signature first" id="add-instance_method">
   
     - (<tt>void</tt>) <strong>add</strong>(record, value, options = {}) 
   
@@ -1012,6 +684,37 @@ record id.</p></div>
       <pre class="lines">
 
 
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
 292
 293
 294
@@ -1020,41 +723,10 @@ record id.</p></div>
 297
 298
 299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315
-316
-317
-318
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331</pre>
+300</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 292</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 261</span>
 
 static VALUE
 rb_grn_index_column_add (int argc, VALUE *argv, VALUE self)
@@ -1071,7 +743,7 @@ rb_grn_index_column_add (int argc, VALUE *argv, VALUE self)
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
                                     NULL, NULL,
-                                    &amp;new_value, NULL,
+                                    &amp;new_value, NULL, NULL,
                                     NULL, &amp;range,
                                     NULL, NULL);
 
@@ -1288,6 +960,37 @@ record id.</p></div>
       <pre class="lines">
 
 
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
 406
 407
 408
@@ -1296,41 +999,10 @@ record id.</p></div>
 411
 412
 413
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424
-425
-426
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440
-441
-442
-443
-444
-445</pre>
+414</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 406</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 375</span>
 
 static VALUE
 rb_grn_index_column_delete (int argc, VALUE *argv, VALUE self)
@@ -1347,7 +1019,7 @@ rb_grn_index_column_delete (int argc, VALUE *argv, VALUE self)
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
                                     NULL, NULL,
-                                    NULL, &amp;old_value,
+                                    NULL, &amp;old_value, NULL,
                                     NULL, &amp;range,
                                     NULL, NULL);
 
@@ -1446,6 +1118,92 @@ rb_grn_index_column_delete (int argc, VALUE *argv, VALUE self)
   <span class='id identifier rubyid_dumper'>dumper</span> <span class='op'>=</span> <span class='const'>IndexColumnDumper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_output_directory'>output_directory</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dumper'>dumper</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span>
 <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    - (<tt>String</tt>) <strong>inspect</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Inspects the index column.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns the inspected string.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the inspected string.</p></div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 179</span>
+
+static VALUE
+rb_grn_index_column_inspect (VALUE self)
+{
+    VALUE inspected;
+
+    inspected = rb_str_new2(&quot;&quot;);
+    rb_grn_object_inspect_header(self, inspected);
+    rb_grn_object_inspect_content(self, inspected);
+    rb_grn_index_column_inspect_content(self, inspected);
+    rb_grn_object_inspect_footer(self, inspected);
+
+    return inspected;
+}</pre>
     </td>
   </tr>
 </table>
@@ -1581,6 +1339,18 @@ the index column is created with <code>:with_position</code> flag.</p></div>
       <pre class="lines">
 
 
+894
+895
+896
+897
+898
+899
+900
+901
+902
+903
+904
+905
 906
 907
 908
@@ -1631,44 +1401,32 @@ the index column is created with <code>:with_position</code> flag.</p></div>
 953
 954
 955
-956
-957
-958
-959
-960
-961
-962
-963
-964
-965
-966
-967
-968</pre>
+956</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 906</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 894</span>
 
 static VALUE
 rb_grn_index_column_open_cursor (int argc, VALUE *argv, VALUE self)
 {
-    grn_ctx *context;
-    grn_obj *column;
-    grn_obj *range_object;
+    grn_ctx          *context;
+    grn_obj          *column;
+    grn_obj          *range_object;
     grn_table_cursor *table_cursor;
-    grn_id rid_min = GRN_ID_NIL;
-    grn_id rid_max = GRN_ID_MAX;
-    int flags = 0;
-    grn_obj *index_cursor;
-    VALUE rb_table_cursor;
-    VALUE options;
-    VALUE rb_with_section, rb_with_weight, rb_with_position;
-    VALUE rb_table;
-    VALUE rb_lexicon;
-    VALUE rb_cursor;
+    grn_id            rid_min = GRN_ID_NIL;
+    grn_id            rid_max = GRN_ID_MAX;
+    int               flags   = 0;
+    grn_obj          *index_cursor;
+    VALUE             rb_table_cursor;
+    VALUE             options;
+    VALUE             rb_with_section, rb_with_weight, rb_with_position;
+    VALUE             rb_table;
+    VALUE             rb_lexicon;
+    VALUE             rb_cursor;
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
                                     NULL, NULL,
-                                    NULL, NULL,
+                                    NULL, NULL, NULL,
                                     NULL, &amp;range_object,
                                     NULL, NULL);
 
@@ -1680,8 +1438,8 @@ rb_grn_index_column_open_cursor (int argc, VALUE *argv, VALUE self)
                         NULL);
 
     table_cursor = RVAL2GRNTABLECURSOR(rb_table_cursor, NULL);
-    rb_table = GRNOBJECT2RVAL(Qnil, context, range_object, GRN_FALSE);
-    rb_lexicon = rb_iv_get(rb_table_cursor, &quot;@table&quot;);
+    rb_table     = GRNOBJECT2RVAL(Qnil, context, range_object, GRN_FALSE);
+    rb_lexicon   = rb_iv_get(rb_table_cursor, &quot;@table&quot;);
 
     if (NIL_P(rb_with_section)) {
         flags |= column-&gt;header.flags &amp; GRN_OBJ_WITH_SECTION;
@@ -1882,6 +1640,37 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p></div>
       <pre class="lines">
 
 
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
 779
 780
 781
@@ -1922,22 +1711,10 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p></div>
 816
 817
 818
-819
-820
-821
-822
-823
-824
-825
-826
-827
-828
-829
-830
-831</pre>
+819</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 779</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 748</span>
 
 static VALUE
 rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
@@ -1948,15 +1725,16 @@ rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
     grn_obj *query = NULL, *id_query = NULL, *string_query = NULL;
     grn_obj *result;
     grn_operator operator;
+    grn_search_optarg options;
     grn_rc rc;
-    VALUE rb_query, options, rb_result, rb_operator;
+    VALUE rb_query, rb_options, rb_result, rb_operator, rb_mode, rb_weight;
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
                                     NULL, NULL,
-                                    NULL, NULL, NULL, &amp;range,
+                                    NULL, NULL, NULL, NULL, &amp;range,
                                     &amp;id_query, &amp;string_query);
 
-    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_query, &amp;options);
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_query, &amp;rb_options);
 
     if (CBOOL2RVAL(rb_obj_is_kind_of(rb_query, rb_cInteger))) {
         grn_id id;
@@ -1970,9 +1748,11 @@ rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
         query = string_query;
     }
 
-    rb_grn_scan_options(options,
+    rb_grn_scan_options(rb_options,
                         &quot;result&quot;, &amp;rb_result,
                         &quot;operator&quot;, &amp;rb_operator,
+                        &quot;mode&quot;, &amp;rb_mode,
+                        &quot;weight&quot;, &amp;rb_weight,
                         NULL);
 
     if (NIL_P(rb_result)) {
@@ -1987,7 +1767,23 @@ rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
 
     operator = RVAL2GRNOPERATOR(rb_operator);
 
-    rc = grn_obj_search(context, column, query, result, operator, NULL);
+    if (NIL_P(rb_mode)) {
+        options.mode = GRN_OP_EXACT;
+    } else {
+        options.mode = RVAL2GRNOPERATOR(rb_mode);
+    }
+    options.similarity_threshold = 0;
+    options.max_interval = 0;
+    options.weight_vector = NULL;
+    if (NIL_P(rb_weight)) {
+        options.vector_size = 1;
+    } else {
+        options.vector_size = NUM2UINT(rb_weight);
+    }
+    options.proc = NULL;
+    options.max_size = 0;
+
+    rc = grn_obj_search(context, column, query, result, operator, &amp;options);
     rb_grn_rc_check(rc, self);
 
     return rb_result;
@@ -2050,17 +1846,17 @@ rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-739
-740
-741
-742
-743
-744
-745
-746</pre>
+708
+709
+710
+711
+712
+713
+714
+715</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 739</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 708</span>
 
 static VALUE
 rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
@@ -2123,6 +1919,37 @@ rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
       <pre class="lines">
 
 
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
 573
 574
 575
@@ -2133,41 +1960,10 @@ rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
 580
 581
 582
-583
-584
-585
-586
-587
-588
-589
-590
-591
-592
-593
-594
-595
-596
-597
-598
-599
-600
-601
-602
-603
-604
-605
-606
-607
-608
-609
-610
-611
-612
-613
-614</pre>
+583</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 573</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 542</span>
 
 static VALUE
 rb_grn_index_column_get_sources (VALUE self)
@@ -2182,7 +1978,7 @@ rb_grn_index_column_get_sources (VALUE self)
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
                                     NULL, NULL,
-                                    NULL, NULL, NULL, NULL,
+                                    NULL, NULL, NULL, NULL, NULL,
                                     NULL, NULL);
 
     GRN_OBJ_INIT(&amp;sources, GRN_BULK, 0, GRN_ID_NIL);
@@ -2269,6 +2065,37 @@ rb_grn_index_column_get_sources (VALUE self)
       <pre class="lines">
 
 
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
 691
 692
 693
@@ -2278,41 +2105,10 @@ rb_grn_index_column_get_sources (VALUE self)
 697
 698
 699
-700
-701
-702
-703
-704
-705
-706
-707
-708
-709
-710
-711
-712
-713
-714
-715
-716
-717
-718
-719
-720
-721
-722
-723
-724
-725
-726
-727
-728
-729
-730
-731</pre>
+700</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 691</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 660</span>
 
 static VALUE
 rb_grn_index_column_set_sources (VALUE self, VALUE rb_sources)
@@ -2328,7 +2124,7 @@ rb_grn_index_column_set_sources (VALUE self, VALUE rb_sources)
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
                                     NULL, NULL,
-                                    NULL, NULL,
+                                    NULL, NULL, NULL,
                                     &amp;range_id, NULL,
                                     NULL, NULL);
 
@@ -2554,6 +2350,37 @@ weakness of row-oriented systems.
       <pre class="lines">
 
 
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
 513
 514
 515
@@ -2575,41 +2402,10 @@ weakness of row-oriented systems.
 531
 532
 533
-534
-535
-536
-537
-538
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556
-557
-558
-559
-560
-561
-562
-563
-564
-565</pre>
+534</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 513</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 482</span>
 
 static VALUE
 rb_grn_index_column_update (int argc, VALUE *argv, VALUE self)
@@ -2627,7 +2423,7 @@ rb_grn_index_column_update (int argc, VALUE *argv, VALUE self)
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, &amp;context,
                                     NULL, NULL,
-                                    &amp;new_value, &amp;old_value,
+                                    &amp;new_value, &amp;old_value, NULL,
                                     NULL, &amp;range,
                                     NULL, NULL);
 
@@ -2708,21 +2504,21 @@ rb_grn_index_column_update (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-874
-875
-876
-877
-878
-879
-880
-881
-882
-883
-884
-885</pre>
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 874</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 862</span>
 
 static VALUE
 rb_grn_index_column_with_position_p (VALUE self)
@@ -2731,7 +2527,7 @@ rb_grn_index_column_with_position_p (VALUE self)
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, NULL,
                                     NULL, NULL,
-                                    NULL, NULL, NULL, NULL,
+                                    NULL, NULL, NULL, NULL, NULL,
                                     NULL, NULL);
 
     return CBOOL2RVAL(column-&gt;header.flags &amp; GRN_OBJ_WITH_POSITION);
@@ -2780,21 +2576,21 @@ rb_grn_index_column_with_position_p (VALUE self)
       <pre class="lines">
 
 
-838
-839
-840
-841
-842
-843
-844
-845
-846
-847
-848
-849</pre>
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 838</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 826</span>
 
 static VALUE
 rb_grn_index_column_with_section_p (VALUE self)
@@ -2803,7 +2599,7 @@ rb_grn_index_column_with_section_p (VALUE self)
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, NULL,
                                     NULL, NULL,
-                                    NULL, NULL, NULL, NULL,
+                                    NULL, NULL, NULL, NULL, NULL,
                                     NULL, NULL);
 
     return CBOOL2RVAL(column-&gt;header.flags &amp; GRN_OBJ_WITH_SECTION);
@@ -2852,21 +2648,21 @@ rb_grn_index_column_with_section_p (VALUE self)
       <pre class="lines">
 
 
-856
-857
-858
-859
-860
-861
-862
-863
-864
-865
-866
-867</pre>
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 856</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-column.c', line 844</span>
 
 static VALUE
 rb_grn_index_column_with_weight_p (VALUE self)
@@ -2875,7 +2671,7 @@ rb_grn_index_column_with_weight_p (VALUE self)
 
     rb_grn_index_column_deconstruct(SELF(self), &amp;column, NULL,
                                     NULL, NULL,
-                                    NULL, NULL, NULL, NULL,
+                                    NULL, NULL, NULL, NULL, NULL,
                                     NULL, NULL);
 
     return CBOOL2RVAL(column-&gt;header.flags &amp; GRN_OBJ_WITH_WEIGHT);
