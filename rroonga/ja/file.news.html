@@ -93,6 +93,16 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2 id="4-0-3">4.0.3: 2014-06-04</h2>
+<h3>修正</h3>
+<ul>
+	<li>[windows] load errorが発生する問題を修正。これはGroongaの問題だったので問題を修正したGroongaをバンドルしなおした。
+  [groonga-dev,02398][Masafumi Yokoyama報告]</li>
+</ul>
+<h3>感謝</h3>
+<ul>
+	<li>Masafumi Yokoyamaさん</li>
+</ul>
 <h2 id="4-0-2">4.0.2: 2014-05-29</h2>
 <h3>改善</h3>
 <ul>
@@ -100,7 +110,7 @@
   [Genki Takiuchiさんが報告]</li>
 	<li><span class='object_link'><a href="Groonga/IndexColumn.html#inspect-instance_method" title="Groonga::IndexColumn#inspect (method)">Groonga::IndexColumn#inspect</a></span>にソースの情報を追加。</li>
 	<li>マルチカラムインデックスではデフォルトで <code>with_section</code> フラグを有効にした。
-  参考:  <span class='object_link'><a href="Groonga/Schema/TableDefinition.html#index-instance_method" title="Groonga::Schema::TableDefinition#index (method)">Groonga::Schema::TableDefinition#index</a></span>.</li>
+  参考:  <span class='object_link'><a href="Groonga/Schema/TableDefinition.html#index-instance_method" title="Groonga::Schema::TableDefinition#index (method)">Groonga::Schema::TableDefinition#index</a></span>。</li>
 	<li>トークナイザーを持っているテーブルでは、デフォルトで <code>with_position</code> フラグを
   有効にした。 <code>TokenDelimit</code> トークナイザーをして <code>with_position</code> フラグを無効に
   するためには明示的に <code>:with_position =&gt; false</code> を指定すること。
@@ -1027,7 +1037,7 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Fri May 30 18:51:45 2014 by
+  Generated on Wed Jun  4 12:32:07 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>
