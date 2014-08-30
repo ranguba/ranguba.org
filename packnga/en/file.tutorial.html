@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../favicon.ico" />
     <link rel="icon" href="../../favicon.png" />
@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!file.tutorial.html";
 </script>
 
 
@@ -123,7 +123,7 @@ Please see below gemspec example with Gem::Specification.new.</p>
 <span class='kw'>end</span>
 
 <span class='id identifier rubyid_clean_white_space'>clean_white_space</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span>
-  <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\A\n+|\n+\z)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\A\n+|\n+\z)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span>
 <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='id identifier rubyid_clean_white_space'>clean_white_space</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Description</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='id identifier rubyid_summary'>summary</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n\n+</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span>

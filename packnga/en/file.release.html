@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!file.release.html";
 </script>
 
 
@@ -216,7 +216,6 @@ $ rake release:references:upload
 </code></pre>
 <p>その後、 次のコマンドを実行してranguba.orgのリポジトリをcloneしたディレクトリに移動する。</p>
 <pre class="code ruby"><code class="ruby">
-$ cd /path/to/ranguba.org
 </code></pre>
 <p>そして、コピーにより生じた変更をranguba.orgのリポジトリにpushする。
 ranguba.orgはGithub Pagesを使っているので、pushすると自動的にranguba.orgのサイトも更新される。</p>
