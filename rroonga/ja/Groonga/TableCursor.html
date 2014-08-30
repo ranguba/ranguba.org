@@ -366,41 +366,27 @@
       <pre class="lines">
 
 
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582</pre>
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 566</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 598</span>
 
 VALUE
 rb_grn_object_close (VALUE self)
 {
     RbGrnObject *rb_grn_object;
-    grn_obj *object;
-    grn_ctx *context;
 
     rb_grn_object = SELF(self);
-    rb_grn_object_deconstruct(rb_grn_object, &amp;object, &amp;context,
-                              NULL, NULL, NULL, NULL);
-    if (object &amp;&amp; context) {
-        rb_grn_object_run_finalizer(context, object, rb_grn_object);
-        grn_obj_close(context, object);
-    }
+    rb_grn_object_close_raw(rb_grn_object);
 
     return Qnil;
 }</pre>
@@ -449,21 +435,21 @@ rb_grn_object_close (VALUE self)
       <pre class="lines">
 
 
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626</pre>
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 615</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 641</span>
 
 VALUE
 rb_grn_object_closed_p (VALUE self)
@@ -952,7 +938,7 @@ rb_grn_table_cursor_set_value (VALUE self, VALUE value)
 </div>
 
     <div id="footer">
-  Generated on Wed Jun  4 12:32:13 2014 by
+  Generated on Sat Aug 30 14:51:41 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>

@@ -310,15 +310,15 @@
       <pre class="lines">
 
 
+30
 31
 32
 33
 34
-35
-36</pre>
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/memory-pool.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/memory-pool.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_close'>close</span>
   <span class='ivar'>@temporary_objects</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='rparen'>)</span><span class='op'>|</span>
@@ -362,15 +362,13 @@
 25
 26
 27
-28
-29</pre>
+28</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/groonga/memory-pool.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_temporary?'>temporary?</span>
-  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Table</span><span class='rparen'>)</span>
   <span class='ivar'>@temporary_objects</span><span class='lbracket'>[</span><span class='id identifier rubyid_object'>object</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -383,7 +381,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Jun  4 12:32:10 2014 by
+  Generated on Sat Aug 30 14:51:38 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>

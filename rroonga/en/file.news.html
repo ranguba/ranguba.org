@@ -93,6 +93,33 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="4-0-4">4.0.4: 2014-08-29</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported Groonga 4.0.4 or later. Groonga 4.0.3 or older are not supported.</li>
+	<li>Added <span class='object_link'><a href="Groonga/ProcedureType.html" title="Groonga::ProcedureType (module)">Groonga::ProcedureType</a></span> that has constants as GRN_PROC_XXX.</li>
+	<li>Added <span class='object_link'><a href="Groonga/Procedure.html#type-instance_method" title="Groonga::Procedure#type (method)">Groonga::Procedure#type</a></span> as grn_proc_get_type().
+  <pre class="code ruby"><code class="ruby">
+  procedure = Groonga[“TokenBigram”]
+  p procedure.type == Groonga::ProcedureType::&lt;span class=&quot;caps&quot;&gt;TOKENIZER&lt;/span&gt;  #=&gt; true
+  </code></pre></li>
+	<li>Avoided a crash when Groonga::Record#inspct is called on exit.
+  [GitHub#18] [Reported by Ippei Obayashi]</li>
+	<li>Updated Free Software Foundation address. [Masafumi Yokoyama]</li>
+	<li>Supported reference weight vector. It requires Groonga 4.0.4 or later.</li>
+	<li>Updated homepage in gemspec to use ranguba.org. [Masafumi Yokoyama]</li>
+	<li>Reduce memory usage without GC.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Fixed a GC related crash when GC is run while <span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>Ippei Obayashi</li>
+	<li>uu59</li>
+	<li>cosmo0920</li>
+</ul>
 <h2 id="4-0-3">4.0.3: 2014-06-04</h2>
 <h3>Fixes</h3>
 <ul>

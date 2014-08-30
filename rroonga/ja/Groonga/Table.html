@@ -1093,15 +1093,15 @@
       <pre class="lines">
 
 
-141
 142
 143
 144
 145
-146</pre>
+146
+147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 141</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 142</span>
 
 static VALUE
 rb_grn_table_initialize (VALUE self)
@@ -1170,7 +1170,6 @@ rb_grn_table_initialize (VALUE self)
       <pre class="lines">
 
 
-1416
 1417
 1418
 1419
@@ -1178,10 +1177,11 @@ rb_grn_table_initialize (VALUE self)
 1421
 1422
 1423
-1424</pre>
+1424
+1425</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1416</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1417</span>
 
 VALUE
 rb_grn_table_array_reference (VALUE self, VALUE rb_id)
@@ -1276,7 +1276,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-1918
 1919
 1920
 1921
@@ -1301,10 +1300,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
 1940
 1941
 1942
-1943</pre>
+1943
+1944</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1918</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1919</span>
 
 static VALUE
 rb_grn_table_clear_lock (int argc, VALUE *argv, VALUE self)
@@ -1386,7 +1386,6 @@ rb_grn_table_clear_lock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-494
 495
 496
 497
@@ -1444,10 +1443,11 @@ rb_grn_table_clear_lock (int argc, VALUE *argv, VALUE self)
 549
 550
 551
-552</pre>
+552
+553</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 494</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 495</span>
 
 VALUE
 rb_grn_table_get_column (VALUE self, VALUE rb_name)
@@ -1501,7 +1501,7 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
     owner = column-&gt;header.type == GRN_ACCESSOR;
     rb_column = GRNCOLUMN2RVAL(Qnil, context, column, owner);
     if (owner) {
-        rb_iv_set(rb_column, &quot;table&quot;, self);
+        rb_grn_context_register_floating_object(DATA_PTR(rb_column));
     }
     rb_grn_named_object_set_name(RB_GRN_NAMED_OBJECT(DATA_PTR(rb_column)),
                                  name, name_size);
@@ -1605,7 +1605,6 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
       <pre class="lines">
 
 
-1569
 1570
 1571
 1572
@@ -1626,10 +1625,11 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
 1587
 1588
 1589
-1590</pre>
+1590
+1591</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1569</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1570</span>
 
 static VALUE
 rb_grn_table_get_column_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -1707,7 +1707,6 @@ rb_grn_table_get_column_value_convenience (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-575
 576
 577
 578
@@ -1790,10 +1789,11 @@ rb_grn_table_get_column_value_convenience (int argc, VALUE *argv, VALUE self)
 655
 656
 657
-658</pre>
+658
+659</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 575</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 576</span>
 
 static VALUE
 rb_grn_table_get_columns (int argc, VALUE *argv, VALUE self)
@@ -2048,7 +2048,6 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-241
 242
 243
 244
@@ -2143,10 +2142,11 @@ Weight vector column can store weight for each element.</p>
 333
 334
 335
-336</pre>
+336
+337</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 241</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 242</span>
 
 static VALUE
 rb_grn_table_define_column (int argc, VALUE *argv, VALUE self)
@@ -2414,7 +2414,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-364
 365
 366
 367
@@ -2514,10 +2513,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
 461
 462
 463
-464</pre>
+464
+465</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 364</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 365</span>
 
 static VALUE
 rb_grn_table_define_index_column (int argc, VALUE *argv, VALUE self)
@@ -2737,7 +2737,6 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
-2404
 2405
 2406
 2407
@@ -2762,10 +2761,11 @@ values are -4..22. -4 means all segments are defraged.
 2426
 2427
 2428
-2429</pre>
+2429
+2430</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2404</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2405</span>
 
 static VALUE
 rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
@@ -2974,7 +2974,6 @@ specified block.</p>
       <pre class="lines">
 
 
-1059
 1060
 1061
 1062
@@ -2988,10 +2987,11 @@ specified block.</p>
 1070
 1071
 1072
-1073</pre>
+1073
+1074</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1059</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1060</span>
 
 static VALUE
 rb_grn_table_delete (int argc, VALUE *argv, VALUE self)
@@ -3062,14 +3062,14 @@ rb_grn_table_delete (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2264
 2265
 2266
 2267
-2268</pre>
+2268
+2269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2264</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2265</span>
 
 static VALUE
 rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
@@ -3229,7 +3229,6 @@ rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
       <pre class="lines">
 
 
-939
 940
 941
 942
@@ -3252,10 +3251,11 @@ rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
 959
 960
 961
-962</pre>
+962
+963</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 939</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 940</span>
 
 static VALUE
 rb_grn_table_each (int argc, VALUE *argv, VALUE self)
@@ -3369,7 +3369,6 @@ rb_grn_table_each (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1379
 1380
 1381
 1382
@@ -3396,10 +3395,11 @@ rb_grn_table_each (int argc, VALUE *argv, VALUE self)
 1403
 1404
 1405
-1406</pre>
+1406
+1407</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1379</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1380</span>
 
 static VALUE
 rb_grn_table_each_sub_record (VALUE self, VALUE rb_id)
@@ -3473,7 +3473,6 @@ rb_grn_table_each_sub_record (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
-889
 890
 891
 892
@@ -3486,10 +3485,11 @@ rb_grn_table_each_sub_record (VALUE self, VALUE rb_id)
 899
 900
 901
-902</pre>
+902
+903</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 889</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 890</span>
 
 static VALUE
 rb_grn_table_empty_p (VALUE self)
@@ -3552,7 +3552,6 @@ rb_grn_table_empty_p (VALUE self)
       <pre class="lines">
 
 
-2378
 2379
 2380
 2381
@@ -3563,10 +3562,11 @@ rb_grn_table_empty_p (VALUE self)
 2386
 2387
 2388
-2389</pre>
+2389
+2390</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2378</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2379</span>
 
 static VALUE
 rb_grn_table_exist_p (VALUE self, VALUE id)
@@ -3678,7 +3678,6 @@ rb_grn_table_exist_p (VALUE self, VALUE id)
       <pre class="lines">
 
 
-1273
 1274
 1275
 1276
@@ -3772,10 +3771,11 @@ rb_grn_table_exist_p (VALUE self, VALUE id)
 1364
 1365
 1366
-1367</pre>
+1367
+1368</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1273</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1274</span>
 
 static VALUE
 rb_grn_table_group (int argc, VALUE *argv, VALUE self)
@@ -3916,7 +3916,6 @@ rb_grn_table_group (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-665
 666
 667
 668
@@ -3938,10 +3937,11 @@ rb_grn_table_group (int argc, VALUE *argv, VALUE self)
 684
 685
 686
-687</pre>
+687
+688</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 665</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 666</span>
 
 static VALUE
 rb_grn_table_have_column (VALUE self, VALUE rb_name)
@@ -4048,7 +4048,6 @@ the number of sub records, <code>false</code> otherwise.</p></div>
       <pre class="lines">
 
 
-2357
 2358
 2359
 2360
@@ -4058,10 +4057,11 @@ the number of sub records, <code>false</code> otherwise.</p></div>
 2364
 2365
 2366
-2367</pre>
+2367
+2368</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2357</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2358</span>
 
 static VALUE
 rb_grn_table_have_n_sub_records_space_p (VALUE self)
@@ -4127,7 +4127,6 @@ rb_grn_table_have_n_sub_records_space_p (VALUE self)
       <pre class="lines">
 
 
-195
 196
 197
 198
@@ -4139,10 +4138,11 @@ rb_grn_table_have_n_sub_records_space_p (VALUE self)
 204
 205
 206
-207</pre>
+207
+208</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 195</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 196</span>
 
 static VALUE
 rb_grn_table_inspect (VALUE self)
@@ -4211,14 +4211,14 @@ rb_grn_table_inspect (VALUE self)
       <pre class="lines">
 
 
-2251
 2252
 2253
 2254
-2255</pre>
+2255
+2256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2251</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2252</span>
 
 static VALUE
 rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
@@ -4421,7 +4421,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-1867
 1868
 1869
 1870
@@ -4458,10 +4457,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
 1901
 1902
 1903
-1904</pre>
+1904
+1905</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1867</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1868</span>
 
 static VALUE
 rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
@@ -4598,7 +4598,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-1957
 1958
 1959
 1960
@@ -4621,10 +4620,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
 1977
 1978
 1979
-1980</pre>
+1980
+1981</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1957</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1958</span>
 
 static VALUE
 rb_grn_table_is_locked (int argc, VALUE *argv, VALUE self)
@@ -4704,14 +4704,14 @@ rb_grn_table_is_locked (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2277
 2278
 2279
 2280
-2281</pre>
+2281
+2282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2277</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2278</span>
 
 static VALUE
 rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
@@ -5080,7 +5080,6 @@ Groonga::PatriciaTrieにしか使えない。（PatriciaTrieのデ
       <pre class="lines">
 
 
-822
 823
 824
 825
@@ -5094,10 +5093,11 @@ Groonga::PatriciaTrieにしか使えない。（PatriciaTrieのデ
 833
 834
 835
-836</pre>
+836
+837</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 822</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 823</span>
 
 static VALUE
 rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
@@ -5332,7 +5332,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-845
 846
 847
 848
@@ -5348,10 +5347,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
 858
 859
 860
-861</pre>
+861
+862</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 845</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 846</span>
 
 static VALUE
 rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
@@ -5442,7 +5442,6 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2438
 2439
 2440
 2441
@@ -5464,10 +5463,11 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
 2457
 2458
 2459
-2460</pre>
+2460
+2461</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2438</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2439</span>
 
 static VALUE
 rb_grn_table_rename (VALUE self, VALUE rb_name)
@@ -5953,7 +5953,6 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-2115
 2116
 2117
 2118
@@ -6042,10 +6041,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
 2201
 2202
 2203
-2204</pre>
+2204
+2205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2115</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2116</span>
 
 static VALUE
 rb_grn_table_select (int argc, VALUE *argv, VALUE self)
@@ -6641,7 +6641,6 @@ Specify <code>true</code> for polymorphic usage.</p></div>
       <pre class="lines">
 
 
-1770
 1771
 1772
 1773
@@ -6662,10 +6661,11 @@ Specify <code>true</code> for polymorphic usage.</p></div>
 1788
 1789
 1790
-1791</pre>
+1791
+1792</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1770</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1771</span>
 
 static VALUE
 rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -6726,7 +6726,6 @@ rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1518
 1519
 1520
 1521
@@ -6746,10 +6745,11 @@ rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
 1535
 1536
 1537
-1538</pre>
+1538
+1539</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1518</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1519</span>
 
 static VALUE
 rb_grn_table_set_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -6825,7 +6825,6 @@ rb_grn_table_set_value_convenience (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-869
 870
 871
 872
@@ -6838,10 +6837,11 @@ rb_grn_table_set_value_convenience (int argc, VALUE *argv, VALUE self)
 879
 880
 881
-882</pre>
+882
+883</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 869</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 870</span>
 
 static VALUE
 rb_grn_table_get_size (VALUE self)
@@ -7034,7 +7034,6 @@ get the original record.</p></div>
       <pre class="lines">
 
 
-1158
 1159
 1160
 1161
@@ -7134,10 +7133,11 @@ get the original record.</p></div>
 1255
 1256
 1257
-1258</pre>
+1258
+1259</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1158</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1159</span>
 
 static VALUE
 rb_grn_table_sort (int argc, VALUE *argv, VALUE self)
@@ -7285,14 +7285,14 @@ rb_grn_table_sort (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2289
 2290
 2291
 2292
-2293</pre>
+2293
+2294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2289</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2290</span>
 
 static VALUE
 rb_grn_table_support_key_p (VALUE self)
@@ -7345,7 +7345,6 @@ rb_grn_table_support_key_p (VALUE self)
       <pre class="lines">
 
 
-2320
 2321
 2322
 2323
@@ -7356,10 +7355,11 @@ rb_grn_table_support_key_p (VALUE self)
 2328
 2329
 2330
-2331</pre>
+2331
+2332</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2320</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2321</span>
 
 static VALUE
 rb_grn_table_support_sub_records_p (VALUE self)
@@ -7442,7 +7442,6 @@ rb_grn_table_support_sub_records_p (VALUE self)
       <pre class="lines">
 
 
-2301
 2302
 2303
 2304
@@ -7452,10 +7451,11 @@ rb_grn_table_support_sub_records_p (VALUE self)
 2308
 2309
 2310
-2311</pre>
+2311
+2312</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2301</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2302</span>
 
 static VALUE
 rb_grn_table_support_value_p (VALUE self)
@@ -7499,7 +7499,6 @@ rb_grn_table_support_value_p (VALUE self)
       <pre class="lines">
 
 
-909
 910
 911
 912
@@ -7514,10 +7513,11 @@ rb_grn_table_support_value_p (VALUE self)
 921
 922
 923
-924</pre>
+924
+925</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 909</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 910</span>
 
 static VALUE
 rb_grn_table_truncate (VALUE self)
@@ -7589,14 +7589,14 @@ rb_grn_table_truncate (VALUE self)
       <pre class="lines">
 
 
-2237
 2238
 2239
 2240
-2241</pre>
+2241
+2242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2237</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2238</span>
 
 static VALUE
 rb_grn_table_union_bang (VALUE self, VALUE rb_other)
@@ -7685,7 +7685,6 @@ groonga側が未実装のため、現在は無視される）</p></div>
       <pre class="lines">
 
 
-1803
 1804
 1805
 1806
@@ -7713,10 +7712,11 @@ groonga側が未実装のため、現在は無視される）</p></div>
 1828
 1829
 1830
-1831</pre>
+1831
+1832</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1803</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1804</span>
 
 static VALUE
 rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
@@ -7844,7 +7844,6 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1460
 1461
 1462
 1463
@@ -7864,10 +7863,11 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
 1477
 1478
 1479
-1480</pre>
+1480
+1481</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1460</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1461</span>
 
 static VALUE
 rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -7900,7 +7900,7 @@ rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Wed Jun  4 12:32:08 2014 by
+  Generated on Sat Aug 30 14:51:36 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>

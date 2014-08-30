@@ -179,7 +179,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>object</em> と <em>other</em> が同じgroongaのオブジェクトなら <ins>true</ins> を返 し、そうでなければ <ins>false</ins> を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>object</em> と <em>other</em> が同じGroongaのオブジェクトなら <ins>true</ins> を返 し、そうでなければ <ins>false</ins> を返す。.</p></div></span>
   
 </li>
 
@@ -578,7 +578,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>object</em> と <em>other</em> が同じgroongaのオブジェクトなら <ins>true</ins> を返
+    <p><em>object</em> と <em>other</em> が同じGroongaのオブジェクトなら <ins>true</ins> を返
 し、そうでなければ <ins>false</ins> を返す。</p>
 
   </div>
@@ -616,26 +616,26 @@
       <pre class="lines">
 
 
-1183
-1184
-1185
-1186
-1187
-1188
-1189
-1190
-1191
-1192
-1193
-1194
-1195
-1196
-1197
-1198
-1199</pre>
+1209
+1210
+1211
+1212
+1213
+1214
+1215
+1216
+1217
+1218
+1219
+1220
+1221
+1222
+1223
+1224
+1225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1183</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1209</span>
 
 static VALUE
 rb_grn_object_equal (VALUE self, VALUE other)
@@ -707,32 +707,6 @@ rb_grn_object_equal (VALUE self, VALUE other)
       <pre class="lines">
 
 
-1207
-1208
-1209
-1210
-1211
-1212
-1213
-1214
-1215
-1216
-1217
-1218
-1219
-1220
-1221
-1222
-1223
-1224
-1225
-1226
-1227
-1228
-1229
-1230
-1231
-1232
 1233
 1234
 1235
@@ -774,10 +748,36 @@ rb_grn_object_equal (VALUE self, VALUE other)
 1271
 1272
 1273
-1274</pre>
+1274
+1275
+1276
+1277
+1278
+1279
+1280
+1281
+1282
+1283
+1284
+1285
+1286
+1287
+1288
+1289
+1290
+1291
+1292
+1293
+1294
+1295
+1296
+1297
+1298
+1299
+1300</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1207</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1233</span>
 
 VALUE
 rb_grn_object_array_reference (VALUE self, VALUE rb_id)
@@ -879,14 +879,14 @@ rb_grn_object_array_reference (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
-1401
-1402
-1403
-1404
-1405</pre>
+1427
+1428
+1429
+1430
+1431</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1401</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1427</span>
 
 static VALUE
 rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -924,14 +924,14 @@ rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1412
-1413
-1414
-1415
-1416</pre>
+1438
+1439
+1440
+1441
+1442</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1412</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1438</span>
 
 static VALUE
 rb_grn_object_append_value (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -980,25 +980,25 @@ rb_grn_object_append_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1454
-1455
-1456
-1457
-1458
-1459
-1460
-1461
-1462
-1463
-1464
-1465
-1466
-1467
-1468
-1469</pre>
+1480
+1481
+1482
+1483
+1484
+1485
+1486
+1487
+1488
+1489
+1490
+1491
+1492
+1493
+1494
+1495</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1454</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1480</span>
 
 static VALUE
 rb_grn_object_builtin_p (VALUE self)
@@ -1048,41 +1048,27 @@ rb_grn_object_builtin_p (VALUE self)
       <pre class="lines">
 
 
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582</pre>
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 566</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 598</span>
 
 VALUE
 rb_grn_object_close (VALUE self)
 {
     RbGrnObject *rb_grn_object;
-    grn_obj *object;
-    grn_ctx *context;
 
     rb_grn_object = SELF(self);
-    rb_grn_object_deconstruct(rb_grn_object, &amp;object, &amp;context,
-                              NULL, NULL, NULL, NULL);
-    if (object &amp;&amp; context) {
-        rb_grn_object_run_finalizer(context, object, rb_grn_object);
-        grn_obj_close(context, object);
-    }
+    rb_grn_object_close_raw(rb_grn_object);
 
     return Qnil;
 }</pre>
@@ -1131,21 +1117,21 @@ rb_grn_object_close (VALUE self)
       <pre class="lines">
 
 
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626</pre>
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 615</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 641</span>
 
 VALUE
 rb_grn_object_closed_p (VALUE self)
@@ -1214,36 +1200,36 @@ rb_grn_object_closed_p (VALUE self)
       <pre class="lines">
 
 
-1078
-1079
-1080
-1081
-1082
-1083
-1084
-1085
-1086
-1087
-1088
-1089
-1090
-1091
-1092
-1093
-1094
-1095
-1096
-1097
-1098
-1099
-1100
-1101
-1102
-1103
-1104</pre>
+1104
+1105
+1106
+1107
+1108
+1109
+1110
+1111
+1112
+1113
+1114
+1115
+1116
+1117
+1118
+1119
+1120
+1121
+1122
+1123
+1124
+1125
+1126
+1127
+1128
+1129
+1130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1078</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1104</span>
 
 static VALUE
 rb_grn_object_get_domain (VALUE self)
@@ -1326,25 +1312,25 @@ rb_grn_object_get_domain (VALUE self)
       <pre class="lines">
 
 
-992
-993
-994
-995
-996
-997
-998
-999
-1000
-1001
-1002
-1003
-1004
-1005
-1006
-1007</pre>
+1018
+1019
+1020
+1021
+1022
+1023
+1024
+1025
+1026
+1027
+1028
+1029
+1030
+1031
+1032
+1033</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 992</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1018</span>
 
 VALUE
 rb_grn_object_get_id (VALUE self)
@@ -1415,21 +1401,21 @@ rb_grn_object_get_id (VALUE self)
       <pre class="lines">
 
 
-972
-973
-974
-975
-976
-977
-978
-979
-980
-981
-982
-983</pre>
+998
+999
+1000
+1001
+1002
+1003
+1004
+1005
+1006
+1007
+1008
+1009</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 972</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 998</span>
 
 static VALUE
 rb_grn_object_inspect (VALUE self)
@@ -1496,34 +1482,34 @@ rb_grn_object_inspect (VALUE self)
       <pre class="lines">
 
 
-1112
-1113
-1114
-1115
-1116
-1117
-1118
-1119
-1120
-1121
-1122
-1123
-1124
-1125
-1126
-1127
-1128
-1129
-1130
-1131
-1132
-1133
-1134
-1135
-1136</pre>
+1138
+1139
+1140
+1141
+1142
+1143
+1144
+1145
+1146
+1147
+1148
+1149
+1150
+1151
+1152
+1153
+1154
+1155
+1156
+1157
+1158
+1159
+1160
+1161
+1162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1112</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1138</span>
 
 static VALUE
 rb_grn_object_get_name (VALUE self)
@@ -1604,26 +1590,26 @@ rb_grn_object_get_name (VALUE self)
       <pre class="lines">
 
 
-1016
-1017
-1018
-1019
-1020
-1021
-1022
-1023
-1024
-1025
-1026
-1027
-1028
-1029
-1030
-1031
-1032</pre>
+1042
+1043
+1044
+1045
+1046
+1047
+1048
+1049
+1050
+1051
+1052
+1053
+1054
+1055
+1056
+1057
+1058</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1016</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1042</span>
 
 static VALUE
 rb_grn_object_get_path (VALUE self)
@@ -1687,20 +1673,20 @@ rb_grn_object_get_path (VALUE self)
       <pre class="lines">
 
 
-1058
-1059
-1060
-1061
-1062
-1063
-1064
-1065
-1066
-1067
-1068</pre>
+1084
+1085
+1086
+1087
+1088
+1089
+1090
+1091
+1092
+1093
+1094</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1058</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1084</span>
 
 static VALUE
 rb_grn_object_persistent_p (VALUE self)
@@ -1744,14 +1730,14 @@ rb_grn_object_persistent_p (VALUE self)
       <pre class="lines">
 
 
-1423
-1424
-1425
-1426
-1427</pre>
+1449
+1450
+1451
+1452
+1453</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1423</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1449</span>
 
 static VALUE
 rb_grn_object_prepend_value (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -1815,36 +1801,36 @@ rb_grn_object_prepend_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1148
-1149
-1150
-1151
-1152
-1153
-1154
-1155
-1156
-1157
-1158
-1159
-1160
-1161
-1162
-1163
-1164
-1165
-1166
-1167
-1168
-1169
-1170
-1171
-1172
-1173
-1174</pre>
+1174
+1175
+1176
+1177
+1178
+1179
+1180
+1181
+1182
+1183
+1184
+1185
+1186
+1187
+1188
+1189
+1190
+1191
+1192
+1193
+1194
+1195
+1196
+1197
+1198
+1199
+1200</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1148</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1174</span>
 
 static VALUE
 rb_grn_object_get_range (VALUE self)
@@ -1905,27 +1891,27 @@ rb_grn_object_get_range (VALUE self)
       <pre class="lines">
 
 
-1435
-1436
-1437
-1438
-1439
-1440
-1441
-1442
-1443
-1444
-1445
-1446
-1447
-1448
-1449
-1450
-1451
-1452</pre>
+1461
+1462
+1463
+1464
+1465
+1466
+1467
+1468
+1469
+1470
+1471
+1472
+1473
+1474
+1475
+1476
+1477
+1478</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1435</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1461</span>
 
 static VALUE
 rb_grn_object_remove (VALUE self)
@@ -1990,20 +1976,20 @@ rb_grn_object_remove (VALUE self)
       <pre class="lines">
 
 
-1040
-1041
-1042
-1043
-1044
-1045
-1046
-1047
-1048
-1049
-1050</pre>
+1066
+1067
+1068
+1069
+1070
+1071
+1072
+1073
+1074
+1075
+1076</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1040</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1066</span>
 
 static VALUE
 rb_grn_object_temporary_p (VALUE self)
@@ -2047,28 +2033,29 @@ rb_grn_object_temporary_p (VALUE self)
       <pre class="lines">
 
 
-589
-590
-591
-592
-593
-594
-595
-596
-597
-598
-599
-600
-601
-602
-603
-604
-605
-606
-607</pre>
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 589</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 614</span>
 
 VALUE
 rb_grn_object_unlink (VALUE self)
@@ -2083,6 +2070,7 @@ rb_grn_object_unlink (VALUE self)
     if (object &amp;&amp; context) {
         if (!(rb_grn_object-&gt;object-&gt;header.flags &amp; GRN_OBJ_PERSISTENT)) {
             rb_grn_object_run_finalizer(context, object, rb_grn_object);
+            rb_grn_object_unbind(rb_grn_object);
         }
         grn_obj_unlink(context, object);
     }
@@ -2099,7 +2087,7 @@ rb_grn_object_unlink (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Wed Jun  4 12:32:11 2014 by
+  Generated on Sat Aug 30 14:51:40 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>

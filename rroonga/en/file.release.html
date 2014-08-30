@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../../favicon.ico" />
     <link rel="icon" href="../../favicon.png" />
     <title>
-  File: README
+  File: release
   
     &mdash; rroonga
   
@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!file.README.html";
+  framesUrl = "frames.html#!file.release.html";
 </script>
 
 
@@ -36,7 +36,7 @@
   <div class="title">
     <a href="../../">
       <span class="title">
-  File: README
+  File: release
   
     &mdash; rroonga
   
@@ -46,7 +46,7 @@
     </a>
   </div>
   <ul class="other-languages">
-    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../rroonga/ja/file.README.html">日本語</a></li>
+    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../rroonga/ja/file.release.html">日本語</a></li>
   </ul>
   <ul class="menu">
     <li id="menu-reference"><a href="../../rroonga/en/">Reference Manual</a></li>
@@ -63,7 +63,7 @@
       <div id="menu">
   
     <a href="alphabetical_index.html">Index</a> &raquo; 
-    <span class="title">File: README</span>
+    <span class="title">File: release</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -92,69 +92,72 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1><span class="caps">README</span></h1>
-<h2>Name</h2>
-<p>Rroonga</p>
-<h2>Description</h2>
-<p>Ruby bindings for Groonga that provide full text search and
-column store features.</p>
-<p>Rroonga is an extension library to use Groonga&#8217;s DB-<span class="caps">API</span>
-layer. Rroonga provides Rubyish readable and writable <span class="caps">API</span>
-not C like <span class="caps">API</span>. You can use Groonga&#8217;s fast and highly
-functional features from Ruby with Rubyish form.</p>
-<p>See the following <span class="caps">URL</span> about Groonga.</p>
-<ul>
-	<li><a href="http://groonga.org/">The Groonga official site</a></li>
-</ul>
-<h2>Authors</h2>
-<ul>
-	<li>Kouhei Sutou &lt;kou@clear-code.com&gt;</li>
-	<li>Tasuku <span class="caps">SUENAGA</span> &lt;a@razil.jp&gt;</li>
-	<li>Daijiro <span class="caps">MORI</span> &lt;morita@razil.jp&gt;</li>
-	<li>Yuto <span class="caps">HAYAMIZU</span> &lt;y.hayamizu@gmail.com&gt;</li>
-	<li><span class="caps">SHIDARA</span> Yoji &lt;dara@shidara.net&gt;</li>
-	<li>yoshihara haruka &lt;yoshihara@clear-code.com&gt;</li>
-</ul>
-<h2>License</h2>
-<p><span class="caps">LGPL</span> 2.1. See license/<span class="caps">LGPL</span> for details.</p>
-<p>(Kouhei Sutou has a right to change the license including
-contributed patches.)</p>
-<h2>Dependencies</h2>
-<ul>
-	<li>Ruby &gt;= 1.9.3</li>
-	<li>Groonga &gt;= 4.0.4</li>
-</ul>
-<h2>Install</h2>
-<pre class="code command_line"><code class="command_line">% sudo gem install rroonga
+    <div id="content"><div id='filecontents'><h1>Release</h1>
+
+<p>This document describes how to release Rroonga.</p>
+
+<h2>1. Summarize the changes for this release</h2>
+
+<h3>Show the commits since the latest release</h3>
+
+<pre class="code ruby"><code class="ruby">% git log -p --reverse &lt;the latest release version&gt;..HEAD
 </code></pre>
-<h2>Documents</h2>
+
+<p>For example:</p>
+
+<pre class="code ruby"><code class="ruby">% git log -p --reverse 4.0.3..HEAD
+</code></pre>
+
+<p>Or</p>
+
+<p><a href="https://github.com/ranguba/rroonga/commits/master">Commits on GitHub</a></p>
+
+<h3>Extract the commits related to users</h3>
+
+<h4>Including</h4>
+
 <ul>
-	<li><a href="http://ranguba.org/rroonga/en/">Reference manual in English</a></li>
-	<li><a href="http://ranguba.org/rroonga/ja/">Reference manual in Japanese</a></li>
+<li>Changed specifications</li>
+<li>Added new features</li>
+<li>...</li>
 </ul>
-<h2>Mailing list</h2>
+
+<h4>Excluding</h4>
+
 <ul>
-	<li>English: <a href="http://lists.sourceforge.net/mailman/listinfo/groonga-talk">groonga-talk</a></li>
-	<li>Japanese: <a href="http://lists.sourceforge.jp/mailman/listinfo/groonga-dev">groonga-dev</a></li>
+<li>Refactorings</li>
+<li>Tests</li>
+<li>...</li>
 </ul>
-<h2>Thanks</h2>
+
+<h3>Categorize</h3>
+
 <ul>
-	<li>Daijiro <span class="caps">MORI</span>: sent patches to support the latest Groonga.</li>
-	<li>Tasuku <span class="caps">SUENAGA</span>: sent bug reports.</li>
-	<li>niku: sent bug reports.</li>
-	<li>dara:
-	<ul>
-		<li>wrote tests.</li>
-		<li>fixed bugs.</li>
-	</ul></li>
-	<li>id:mat_aki: sent bug reports.</li>
-	<li>@yune_kotomi: sent a bug report.</li>
-	<li>m_seki: sent bug reports.</li>
-	<li>ono matope: sent bug reports.</li>
-	<li>@kamipo: send a bug report.</li>
-	<li>ongaeshi: sent a patch to build gem on Windows.</li>
-	<li>mallowlabs: send a patch.</li>
-</ul></div></div>
+<li>Improvements: new features, improved behavior, ...</li>
+<li>Fixes: fixed bugs, ...</li>
+</ul>
+
+<h3>Thanks</h3>
+
+<p>If a contributor name is in a commit log, create &quot;Thanks&quot; group and write the name to the group.</p>
+
+<h3>Template for a new release for news.textile</h3>
+
+<pre class="code ruby"><code class="ruby">h2(#x-x-x). x.x.x: YYYY-MM-DD
+
+h3. Improvements
+
+* ...
+
+h3. Fixes
+
+* ...
+
+h3. Thanks
+
+* ...
+</code></pre>
+</div></div>
 
     <div id="footer"></div>
 

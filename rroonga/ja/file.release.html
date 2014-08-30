@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../../favicon.ico" />
     <link rel="icon" href="../../favicon.png" />
     <title>
-  File: README
+  File: release
   
     &mdash; rroonga
   
@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!file.README.html";
+  framesUrl = "frames.html#!file.release.html";
 </script>
 
 
@@ -36,7 +36,7 @@
   <div class="title">
     <a href="../../ja/">
       <span class="title">
-  File: README
+  File: release
   
     &mdash; rroonga
   
@@ -46,7 +46,7 @@
     </a>
   </div>
   <ul class="other-languages">
-    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../rroonga/en/.">English</a></li>
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../rroonga/en/file.release.html">English</a></li>
   </ul>
   <ul class="menu">
     <li id="menu-reference"><a href="../../rroonga/ja/">リファレンスマニュアル</a></li>
@@ -63,7 +63,7 @@
       <div id="menu">
   
     <a href="alphabetical_index.html">Index</a> &raquo; 
-    <span class="title">File: README</span>
+    <span class="title">File: release</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -92,64 +92,72 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>はじめに</h1>
-<h2>名前</h2>
-<p>Rroonga</p>
-<h2>説明</h2>
-<p>全文検索機能とカラムストア機能を提供するGroongaのRubyバインディングです。</p>
-<p>GroongaのいわゆるDB-API層をRubyから使うための拡張ライブラリです。GroongaのAPIをそのままRubyレベルに提供するのではなく、Rubyらしく読み書きしやすいAPIとして提供します。高速・高機能なGroongaをRubyらしい書き方で利用できます。</p>
-<p>Groongaに関する情報は以下のURLを参照して下さい。</p>
-<ul>
-	<li><a href="http://groonga.org/ja/">Groonga公式サイト</a></li>
-</ul>
-<h2>作者</h2>
-<ul>
-	<li>Kouhei Sutou &lt;kou@clear-code.com&gt;</li>
-	<li>Tasuku <span class="caps">SUENAGA</span> &lt;a@razil.jp&gt;</li>
-	<li>Daijiro <span class="caps">MORI</span> &lt;morita@razil.jp&gt;</li>
-	<li>Yuto <span class="caps">HAYAMIZU</span> &lt;y.hayamizu@gmail.com&gt;</li>
-	<li><span class="caps">SHIDARA</span> Yoji &lt;dara@shidara.net&gt;</li>
-	<li>yoshihara haruka &lt;yoshihara@clear-code.com&gt;</li>
-</ul>
-<h2>ライセンス</h2>
-<p><span class="caps">LGPL</span> 2.1です。詳しくはlicense/LGPLをご覧ください。</p>
-<p>（コントリビュートされたパッチなども含み、Kouhei Sutouがライセンスを変更する権利を持ちます。）</p>
-<h2>依存ソフトウェア</h2>
-<ul>
-	<li>Ruby &gt;= 1.9.3</li>
-	<li>Groonga &gt;= 4.0.4</li>
-</ul>
-<h2>インストール</h2>
-<pre class="code command_line"><code class="command_line">% sudo gem install rroonga
+    <div id="content"><div id='filecontents'><h1>Release</h1>
+
+<p>This document describes how to release Rroonga.</p>
+
+<h2>1. Summarize the changes for this release</h2>
+
+<h3>Show the commits since the latest release</h3>
+
+<pre class="code ruby"><code class="ruby">% git log -p --reverse &lt;the latest release version&gt;..HEAD
 </code></pre>
-<h2>ドキュメント</h2>
+
+<p>For example:</p>
+
+<pre class="code ruby"><code class="ruby">% git log -p --reverse 4.0.3..HEAD
+</code></pre>
+
+<p>Or</p>
+
+<p><a href="https://github.com/ranguba/rroonga/commits/master">Commits on GitHub</a></p>
+
+<h3>Extract the commits related to users</h3>
+
+<h4>Including</h4>
+
 <ul>
-	<li><a href="http://ranguba.org/rroonga/en/">リファレンスマニュアル（英語）</a></li>
-	<li><a href="http://ranguba.org/rroonga/ja/">リファレンスマニュアル（日本語）</a></li>
+<li>Changed specifications</li>
+<li>Added new features</li>
+<li>...</li>
 </ul>
-<h2>メーリングリスト</h2>
+
+<h4>Excluding</h4>
+
 <ul>
-	<li>英語: <a href="http://lists.sourceforge.net/mailman/listinfo/groonga-talk">groonga-talk</a></li>
-	<li>日本語: <a href="http://lists.sourceforge.jp/mailman/listinfo/groonga-dev">groonga-dev</a></li>
+<li>Refactorings</li>
+<li>Tests</li>
+<li>...</li>
 </ul>
-<h2>感謝</h2>
+
+<h3>Categorize</h3>
+
 <ul>
-	<li>森さん: 最新Groonga対応パッチをくれました。</li>
-	<li>グニャラくん: バグレポートをしてくれました。</li>
-	<li>にくさん: バグレポートをしてくれました。</li>
-	<li>daraさん:
-	<ul>
-		<li>テストを書いてくれました。</li>
-		<li>バグを直してくれました。</li>
-	</ul></li>
-	<li>id:mat_akiさん: バグレポートをしてくれました。</li>
-	<li>@yune_kotomiさん: バグレポートをしてくれました。</li>
-	<li>咳さん: バグレポートをしてくれました。</li>
-	<li>小野マトペさん: バグレポートをしてくれました。</li>
-	<li>@kamipoさん: バグレポートをしてくれました。</li>
-	<li>ongaeshiさん: Windows上でgemをビルドするためのパッチをくれました。</li>
-	<li>mallowlabsさん: パッチを送ってくれました。</li>
-</ul></div></div>
+<li>Improvements: new features, improved behavior, ...</li>
+<li>Fixes: fixed bugs, ...</li>
+</ul>
+
+<h3>Thanks</h3>
+
+<p>If a contributor name is in a commit log, create &quot;Thanks&quot; group and write the name to the group.</p>
+
+<h3>Template for a new release for news.textile</h3>
+
+<pre class="code ruby"><code class="ruby">h2(#x-x-x). x.x.x: YYYY-MM-DD
+
+h3. Improvements
+
+* ...
+
+h3. Fixes
+
+* ...
+
+h3. Thanks
+
+* ...
+</code></pre>
+</div></div>
 
     <div id="footer">
   Generated on Sat Aug 30 14:51:35 2014 by

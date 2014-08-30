@@ -93,6 +93,33 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2 id="4-0-4">4.0.4: 2014-08-29</h2>
+<h3>改善</h3>
+<ul>
+	<li>Groonga 4.0.4以降に対応。Groonga 4.0.3以前のバージョンはサポートしません。</li>
+	<li><span class='object_link'><a href="Groonga/ProcedureType.html" title="Groonga::ProcedureType (module)">Groonga::ProcedureType</a></span>モジュールを追加。GroongaのGRN_PROC_XXXに対応。</li>
+	<li><span class='object_link'><a href="Groonga/Procedure.html#type-instance_method" title="Groonga::Procedure#type (method)">Groonga::Procedure#type</a></span>を追加。Groongaのgrn_proc_get_type()に対応。
+  <pre class="code ruby"><code class="ruby">
+  procedure = Groonga[“TokenBigram”]
+  p procedure.type == Groonga::ProcedureType::&lt;span class=&quot;caps&quot;&gt;TOKENIZER&lt;/span&gt;  #=&gt; true
+  </code></pre></li>
+	<li>Groonga::Record#inspctするときに必要なオブジェクトが解放済みでもクラッシュしないようになった。
+  [GitHub#18] [Ippei Obayashiさんが報告]</li>
+	<li>Free Software Foundationの住所を更新。[Masafumi Yokoyama]</li>
+	<li>重み付き参照ベクターカラムをサポート。（Groonga 4.0.4以降が必要）</li>
+	<li>gemspecのホームページをranguba.orgに更新。[Masafumi Yokoyama]</li>
+	<li>メモリー管理まわりの改善。（GCしなくてもメモリー使用量が減るなど）</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>GCに関連したクラッシュを修正。（<span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>中にGCが動いた場合など）</li>
+</ul>
+<h3>感謝</h3>
+<ul>
+	<li>Ippei Obayashiさん</li>
+	<li>uu59さん</li>
+	<li>cosmo0920さん</li>
+</ul>
 <h2 id="4-0-3">4.0.3: 2014-06-04</h2>
 <h3>修正</h3>
 <ul>
@@ -1037,7 +1064,7 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Wed Jun  4 12:32:07 2014 by
+  Generated on Sat Aug 30 14:51:35 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>

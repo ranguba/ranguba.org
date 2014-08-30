@@ -480,7 +480,19 @@ weight vector column.</p></div>
 208
 209
 210
-211</pre>
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 158</span>
@@ -493,6 +505,7 @@ rb_grn_variable_size_column_array_reference (VALUE self, VALUE rb_id)
     grn_id id;
     grn_obj *value;
     VALUE rb_value;
+    VALUE rb_range;
     unsigned int i, n;
 
     rb_grn_variable_size_column_deconstruct(SELF(self), &amp;column, &amp;context,
@@ -511,25 +524,36 @@ rb_grn_variable_size_column_array_reference (VALUE self, VALUE rb_id)
     grn_obj_get_value(context, column, id, value);
     rb_grn_context_check(context, self);
 
+    rb_range = GRNTABLE2RVAL(context, range, GRN_FALSE);
+
     n = grn_vector_size(context, value);
     rb_value = rb_ary_new2(n);
     for (i = 0; i &lt; n; i++) {
-        const char *element_value;
-        unsigned int element_value_length;
+        VALUE rb_element_value;
         unsigned int weight = 0;
         grn_id domain;
         VALUE rb_element;
 
-        element_value_length = grn_vector_get_element(context,
-                                                      value,
-                                                      i,
-                                                      &amp;element_value,
-                                                      &amp;weight,
-                                                      &amp;domain);
+        if (value-&gt;header.type == GRN_UVECTOR) {
+            grn_id id;
+            id = grn_uvector_get_element(context, value, i, &amp;weight);
+            rb_element_value = rb_grn_record_new(rb_range, id, Qnil);
+        } else {
+            const char *element_value;
+            unsigned int element_value_length;
+            element_value_length = grn_vector_get_element(context,
+                                                          value,
+                                                          i,
+                                                          &amp;element_value,
+                                                          &amp;weight,
+                                                          &amp;domain);
+            rb_element_value = rb_str_new(element_value, element_value_length);
+        }
+
         rb_element = rb_hash_new();
         rb_hash_aset(rb_element,
                      ID2SYM(rb_intern(&quot;value&quot;)),
-                     rb_str_new(element_value, element_value_length));
+                     rb_element_value);
         rb_hash_aset(rb_element,
                      ID2SYM(rb_intern(&quot;weight&quot;)),
                      UINT2NUM(weight));
@@ -788,26 +812,6 @@ vector column.</p>
       <pre class="lines">
 
 
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
 370
 371
 372
@@ -862,10 +866,38 @@ vector column.</p>
 421
 422
 423
-424</pre>
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 350</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 370</span>
 
 static VALUE
 rb_grn_variable_size_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -893,6 +925,7 @@ rb_grn_variable_size_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
     grn_obj_reinit(context, value,
                    value-&gt;header.domain,
                    value-&gt;header.flags | GRN_OBJ_VECTOR);
+    value-&gt;header.flags |= GRN_OBJ_WITH_WEIGHT;
     if (RVAL2CBOOL(rb_obj_is_kind_of(rb_value, rb_cArray))) {
         int i, n;
         n = RARRAY_LEN(rb_value);
@@ -909,22 +942,29 @@ rb_grn_variable_size_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
                 weight = NUM2UINT(rb_weight);
             }
 
-            GRN_BULK_REWIND(element_value);
-            if (!NIL_P(rb_element_value)) {
-                RVAL2GRNBULK(rb_element_value, context, element_value);
-            }
+            if (value-&gt;header.type == GRN_UVECTOR) {
+                grn_id id = RVAL2GRNID(rb_element_value, context, range, self);
+                grn_uvector_add_element(context, value, id, weight);
+            } else {
+                GRN_BULK_REWIND(element_value);
+                if (!NIL_P(rb_element_value)) {
+                    RVAL2GRNBULK(rb_element_value, context, element_value);
+                }
 
-            grn_vector_add_element(context, value,
-                                   GRN_BULK_HEAD(element_value),
-                                   GRN_BULK_VSIZE(element_value),
-                                   weight,
-                                   element_value-&gt;header.domain);
+                grn_vector_add_element(context, value,
+                                       GRN_BULK_HEAD(element_value),
+                                       GRN_BULK_VSIZE(element_value),
+                                       weight,
+                                       element_value-&gt;header.domain);
+            }
         }
     } else if (RVAL2CBOOL(rb_obj_is_kind_of(rb_value, rb_cHash))) {
         HashElementToVectorElementData data;
+        data.self = self;
         data.context = context;
         data.vector = value;
         data.element_value = element_value;
+        data.range = range;
         rb_hash_foreach(rb_value, hash_element_to_vector_element, (VALUE)&amp;data);
     } else {
         rb_raise(rb_eArgError,
@@ -1089,34 +1129,6 @@ compressed by <code>type</code> or not.</p>
       <pre class="lines">
 
 
-437
-438
-439
-440
-441
-442
-443
-444
-445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
 465
 466
 467
@@ -1144,10 +1156,38 @@ compressed by <code>type</code> or not.</p>
 489
 490
 491
-492</pre>
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 437</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 465</span>
 
 static VALUE
 rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
@@ -1322,36 +1362,36 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528
-529
-530
-531
-532
-533</pre>
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 507</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 535</span>
 
 static VALUE
 rb_grn_variable_size_column_defrag (int argc, VALUE *argv, VALUE self)
