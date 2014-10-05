@@ -628,21 +628,21 @@
       <pre class="lines">
 
 
-430
-431
-432
-433
-434
 435
 436
 437
 438
 439
 440
-441</pre>
+441
+442
+443
+444
+445
+446</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 430</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 435</span>
 
 static VALUE
 rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
@@ -716,11 +716,6 @@ rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
       <pre class="lines">
 
 
-482
-483
-484
-485
-486
 487
 488
 489
@@ -744,10 +739,15 @@ rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
 507
 508
 509
-510</pre>
+510
+511
+512
+513
+514
+515</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 482</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 487</span>
 
 static VALUE
 rb_grn_table_key_support_array_set (VALUE self, VALUE rb_key, VALUE rb_values)
@@ -840,7 +840,6 @@ rb_grn_table_key_support_array_set (VALUE self, VALUE rb_key, VALUE rb_values)
       <pre class="lines">
 
 
-224
 225
 226
 227
@@ -858,10 +857,11 @@ rb_grn_table_key_support_array_set (VALUE self, VALUE rb_key, VALUE rb_values)
 239
 240
 241
-242</pre>
+242
+243</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 224</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 225</span>
 
 static VALUE
 rb_grn_table_key_support_add (int argc, VALUE *argv, VALUE self)
@@ -916,11 +916,6 @@ rb_grn_table_key_support_add (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-559
-560
-561
-562
-563
 564
 565
 566
@@ -941,10 +936,15 @@ rb_grn_table_key_support_add (int argc, VALUE *argv, VALUE self)
 581
 582
 583
-584</pre>
+584
+585
+586
+587
+588
+589</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 559</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 564</span>
 
 static VALUE
 rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
@@ -1025,11 +1025,6 @@ rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-720
-721
-722
-723
-724
 725
 726
 727
@@ -1042,10 +1037,15 @@ rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
 734
 735
 736
-737</pre>
+737
+738
+739
+740
+741
+742</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 720</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 725</span>
 
 static VALUE
 rb_grn_table_key_support_get_default_tokenizer (VALUE self)
@@ -1117,11 +1117,6 @@ rb_grn_table_key_support_get_default_tokenizer (VALUE self)
       <pre class="lines">
 
 
-760
-761
-762
-763
-764
 765
 766
 767
@@ -1137,10 +1132,15 @@ rb_grn_table_key_support_get_default_tokenizer (VALUE self)
 777
 778
 779
-780</pre>
+780
+781
+782
+783
+784
+785</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 760</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 765</span>
 
 static VALUE
 rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
@@ -1172,7 +1172,7 @@ rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
   <h3 class="signature " id="delete-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong>(id) </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong>(id, :id = &gt;true) </span>
     
       <span class="overload">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong>(key) </span>
     
@@ -1196,7 +1196,7 @@ rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong>(id) </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="../Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong>(id, :id = &gt;true) </span>
         <div class="docstring">
   <div class="discussion">
     <p>Delete a record that has ID <code>id</code>.</p>
@@ -1382,7 +1382,6 @@ rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
       <pre class="lines">
 
 
-405
 406
 407
 408
@@ -1397,22 +1396,31 @@ rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
 417
 418
 419
-420</pre>
+420
+421
+422
+423
+424
+425</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 405</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 406</span>
 
 static VALUE
 rb_grn_table_key_support_delete (int argc, VALUE *argv, VALUE self)
 {
-    VALUE rb_id_or_key;
+    VALUE rb_id_or_key, rb_options;
+    VALUE rb_option_id;
 
     if (rb_block_given_p()) {
         return rb_grn_table_delete_by_expression(self);
     }
 
-    rb_scan_args(argc, argv, &quot;1&quot;, &amp;rb_id_or_key);
-    if (FIXNUM_P(rb_id_or_key)) {
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_id_or_key, &amp;rb_options);
+    rb_grn_scan_options(rb_options,
+                        &quot;id&quot;, &amp;rb_option_id,
+                        NULL);
+    if (RVAL2CBOOL(rb_option_id)) {
         return rb_grn_table_delete_by_id(self, rb_id_or_key);
     } else {
         return rb_grn_table_key_support_delete_by_key(self, rb_id_or_key);
@@ -1462,7 +1470,6 @@ rb_grn_table_key_support_delete (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-337
 338
 339
 340
@@ -1479,10 +1486,11 @@ rb_grn_table_key_support_delete (int argc, VALUE *argv, VALUE self)
 351
 352
 353
-354</pre>
+354
+355</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 337</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 338</span>
 
 static VALUE
 rb_grn_table_key_support_has_key (VALUE self, VALUE rb_key)
@@ -1598,7 +1606,6 @@ IDを返す。</p>
       <pre class="lines">
 
 
-276
 277
 278
 279
@@ -1616,10 +1623,11 @@ IDを返す。</p>
 291
 292
 293
-294</pre>
+294
+295</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 276</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 277</span>
 
 static VALUE
 rb_grn_table_key_support_get_id (int argc, VALUE *argv, VALUE self)
@@ -1696,7 +1704,6 @@ rb_grn_table_key_support_get_id (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-170
 171
 172
 173
@@ -1709,10 +1716,11 @@ rb_grn_table_key_support_get_id (int argc, VALUE *argv, VALUE self)
 180
 181
 182
-183</pre>
+183
+184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 170</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 171</span>
 
 static VALUE
 rb_grn_table_key_support_inspect (VALUE self)
@@ -1781,7 +1789,6 @@ rb_grn_table_key_support_inspect (VALUE self)
       <pre class="lines">
 
 
-302
 303
 304
 305
@@ -1809,10 +1816,11 @@ rb_grn_table_key_support_inspect (VALUE self)
 327
 328
 329
-330</pre>
+330
+331</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 302</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 303</span>
 
 static VALUE
 rb_grn_table_key_support_get_key (VALUE self, VALUE rb_id)
@@ -1888,17 +1896,17 @@ rb_grn_table_key_support_get_key (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
-853
-854
-855
-856
-857
 858
 859
-860</pre>
+860
+861
+862
+863
+864
+865</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 853</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 858</span>
 
 static VALUE
 rb_grn_table_key_support_normalize_key_p (VALUE self)
@@ -1961,11 +1969,6 @@ rb_grn_table_key_support_normalize_key_p (VALUE self)
       <pre class="lines">
 
 
-788
-789
-790
-791
-792
 793
 794
 795
@@ -1977,10 +1980,15 @@ rb_grn_table_key_support_normalize_key_p (VALUE self)
 801
 802
 803
-804</pre>
+804
+805
+806
+807
+808
+809</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 788</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 793</span>
 
 static VALUE
 rb_grn_table_key_support_get_normalizer (VALUE self)
@@ -2151,11 +2159,6 @@ rb_grn_table_key_support_get_normalizer (VALUE self)
       <pre class="lines">
 
 
-826
-827
-828
-829
-830
 831
 832
 833
@@ -2170,10 +2173,15 @@ rb_grn_table_key_support_get_normalizer (VALUE self)
 842
 843
 844
-845</pre>
+845
+846
+847
+848
+849
+850</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 826</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 831</span>
 
 static VALUE
 rb_grn_table_key_support_set_normalizer (VALUE self, VALUE rb_normalizer)
@@ -2229,11 +2237,6 @@ rb_grn_table_key_support_set_normalizer (VALUE self, VALUE rb_normalizer)
       <pre class="lines">
 
 
-519
-520
-521
-522
-523
 524
 525
 526
@@ -2259,10 +2262,15 @@ rb_grn_table_key_support_set_normalizer (VALUE self, VALUE rb_normalizer)
 546
 547
 548
-549</pre>
+549
+550
+551
+552
+553
+554</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 519</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 524</span>
 
 static VALUE
 rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
@@ -2329,11 +2337,6 @@ rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-686
-687
-688
-689
-690
 691
 692
 693
@@ -2355,10 +2358,15 @@ rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
 709
 710
 711
-712</pre>
+712
+713
+714
+715
+716
+717</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 686</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 691</span>
 
 static VALUE
 rb_grn_table_key_support_set_value (int argc, VALUE *argv, VALUE self)
@@ -2432,20 +2440,20 @@ rb_grn_table_key_support_set_value (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-868
-869
-870
-871
-872
 873
 874
 875
 876
 877
-878</pre>
+878
+879
+880
+881
+882
+883</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 868</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 873</span>
 
 static VALUE
 rb_grn_table_key_support_support_key_p (VALUE self)
@@ -2572,11 +2580,6 @@ just ignored.</p></div>
       <pre class="lines">
 
 
-891
-892
-893
-894
-895
 896
 897
 898
@@ -2612,10 +2615,15 @@ just ignored.</p></div>
 928
 929
 930
-931</pre>
+931
+932
+933
+934
+935
+936</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 891</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 896</span>
 
 static VALUE
 rb_grn_table_key_support_tokenize (int argc, VALUE *argv, VALUE self)
@@ -2707,11 +2715,6 @@ rb_grn_table_key_support_tokenize (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-616
-617
-618
-619
-620
 621
 622
 623
@@ -2731,10 +2734,15 @@ rb_grn_table_key_support_tokenize (int argc, VALUE *argv, VALUE self)
 637
 638
 639
-640</pre>
+640
+641
+642
+643
+644
+645</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 616</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 621</span>
 
 static VALUE
 rb_grn_table_key_support_get_value (int argc, VALUE *argv, VALUE self)

@@ -93,6 +93,28 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2 id="4-0-5">4.0.5: 2014-10-05</h2>
+<h3>改善</h3>
+<ul>
+	<li>[windows] クロスビルド用タスクを追加。</li>
+	<li><span class='object_link'><a href="Groonga/DoubleArrayTrie.html#update-instance_method" title="Groonga::DoubleArrayTrie#update (method)">Groonga::DoubleArrayTrie#update</a></span> を追加。
+  [GitHub#24] [Masafumi Yokoyamaさんがパッチ提供]</li>
+	<li><span class='object_link'><a href="Groonga/Record.html#rename-instance_method" title="Groonga::Record#rename (method)">Groonga::Record#rename</a></span> を追加。</li>
+	<li>[windows] デバッグフラグを無効にした。</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li><span class='object_link'><a href="Groonga/Table/KeySupport.html#delete-instance_method" title="Groonga::Table::KeySupport#delete (method)">Groonga::Table::KeySupport#delete</a></span>に <code>:id =&gt; true</code> オプションを追加。
+  <code>Groonga::Table::KeySupport#delete</code> はIDとキーの両方を受け入れていて、
+  数値が渡されたときはIDとして扱われます。しかし、キーには数値も使えます。
+  その場合、キーによる削除ができません。そこで、
+  <code>Groonga::Table::KeySupport#delete(id, :id =&gt; true)</code> というAPIを追加しました。
+  この変更は後方互換性がありませんが、現在のAPIはバグなので許容します。</li>
+</ul>
+<h3>感謝</h3>
+<ul>
+	<li>Masafumi Yokoyamaさん</li>
+</ul>
 <h2 id="4-0-4">4.0.4: 2014-08-29</h2>
 <h3>改善</h3>
 <ul>
@@ -1064,9 +1086,9 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Sat Aug 30 14:51:35 2014 by
+  Generated on Sun Oct  5 14:02:33 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.2).
+  0.8.7.4 (ruby-2.1.3).
 </div>
 
   

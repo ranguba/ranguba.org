@@ -552,10 +552,10 @@ rb_grn_variable_size_column_array_reference (VALUE self, VALUE rb_id)
 
         rb_element = rb_hash_new();
         rb_hash_aset(rb_element,
-                     ID2SYM(rb_intern(&quot;value&quot;)),
+                     RB_GRN_INTERN(&quot;value&quot;),
                      rb_element_value);
         rb_hash_aset(rb_element,
-                     ID2SYM(rb_intern(&quot;weight&quot;)),
+                     RB_GRN_INTERN(&quot;weight&quot;),
                      UINT2NUM(weight));
 
         rb_ary_push(rb_value, rb_element);
@@ -1428,9 +1428,9 @@ rb_grn_variable_size_column_defrag (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Sat Aug 30 14:51:42 2014 by
+  Generated on Sun Oct  5 14:02:41 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.2).
+  0.8.7.4 (ruby-2.1.3).
 </div>
 
   

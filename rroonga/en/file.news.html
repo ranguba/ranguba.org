@@ -93,6 +93,29 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="4-0-5">4.0.5: 2014-10-05</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>[windows] Added cross build task.</li>
+	<li>Added <span class='object_link'><a href="Groonga/DoubleArrayTrie.html#update-instance_method" title="Groonga::DoubleArrayTrie#update (method)">Groonga::DoubleArrayTrie#update</a></span>.
+  [GitHub#24] [Patch by Masafumi Yokoyama]</li>
+	<li>Added <span class='object_link'><a href="Groonga/Record.html#rename-instance_method" title="Groonga::Record#rename (method)">Groonga::Record#rename</a></span>.</li>
+	<li>[windows] Disabled debug flags.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>Added <code>:id =&gt; true</code> option to <span class='object_link'><a href="Groonga/Table/KeySupport.html#delete-instance_method" title="Groonga::Table::KeySupport#delete (method)">Groonga::Table::KeySupport#delete</a></span>.
+  <code>Groonga::Table::KeySupport#delete</code> accepts both ID and key. If passed
+  value is integer, it is handled as ID. But we can use <code>Int32</code> as key.
+  In the case, we can&#8217;t delete a record by key. Therefore, we added
+  <code>Groonga::Table::KeySupport#delete(id, :id =&gt; true)</code> <span class="caps">API</span>. It introduces
+  a backward incompatibility, but it is OK because the current <span class="caps">API</span> is a
+  bug.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>Masafumi Yokoyama</li>
+</ul>
 <h2 id="4-0-4">4.0.4: 2014-08-29</h2>
 <h3>Improvements</h3>
 <ul>
