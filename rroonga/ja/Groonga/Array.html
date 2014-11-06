@@ -141,6 +141,7 @@
     <p>各レコードがキーに関連付けられていないテーブル。レコードは
 IDで識別する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -178,7 +179,8 @@ IDで識別する。</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>キーのないテーブルを生成する。ブロックを指定すると、そのブ ロックに生成したテーブルが渡され、ブロックを抜けると自動的 にテーブルが破棄される。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>キーのないテーブルを生成する。ブロックを指定すると、そのブ ロックに生成したテーブルが渡され、ブロックを抜けると自動的 にテーブルが破棄される。.</p>
+</div></span>
   
 </li>
 
@@ -209,7 +211,8 @@ IDで識別する。</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>レコード追加し、追加したレコードを返す。レコードの追加に失 敗した場合は <ins>nil</ins> を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>レコード追加し、追加したレコードを返す。レコードの追加に失 敗した場合は +nil+ を返す。.</p>
+</div></span>
   
 </li>
 
@@ -231,7 +234,8 @@ IDで識別する。</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Pulls a record from the array.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Pulls a record from the array.</p>
+</div></span>
   
 </li>
 
@@ -253,7 +257,8 @@ IDで識別する。</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Pushes a record to the array.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Pushes a record to the array.</p>
+</div></span>
   
 </li>
 
@@ -275,7 +280,8 @@ IDで識別する。</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Unblocks all <span class='object_link'><a href="#pull-instance_method" title="Groonga::Array#pull (method)">#pull</a></span> operations for the array.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Unblocks all <span class='object_link'><a href="#pull-instance_method" title="Groonga::Array#pull (method)">#pull</a></span> operations for the array.</p>
+</div></span>
   
 </li>
 
@@ -337,6 +343,7 @@ IDで識別する。</p>
 ロックに生成したテーブルが渡され、ブロックを抜けると自動的
 にテーブルが破棄される。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -370,6 +377,7 @@ IDで識別する。</p>
   <div class="discussion">
     
 
+
   </div>
 </div>
 <div class="tags">
@@ -389,7 +397,8 @@ IDで識別する。</p>
       
         &mdash;
         <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -411,7 +420,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p></div>
+            &mdash; <div class='inline'><p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p>
+</div>
           
         </li>
       
@@ -425,7 +435,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             &mdash; <div class='inline'><p>The name
 テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
 前を指定してテーブルを取得することができる。省略すると
-無名テーブルになり、テーブルIDでのみ取得できる。</p></div>
+無名テーブルになり、テーブルIDでのみ取得できる。</p>
+</div>
           
         </li>
       
@@ -440,7 +451,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
 り、プロセス終了後もレコードは保持される。次回起動時に
 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用することが
 できる。省略すると一時テーブルになり、プロセスが終了する
-とレコードは破棄される。</p></div>
+とレコードは破棄される。</p>
+</div>
           
         </li>
       
@@ -451,10 +463,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p><ins>true</ins> を指定すると永続テーブルとなる。 <ins>path</ins> を省略した
-場合は自動的にパスが付加される。 <ins>:context</ins> で指定した
+            &mdash; <div class='inline'><p>+true+ を指定すると永続テーブルとなる。 +path+ を省略した
+場合は自動的にパスが付加される。 +:context+ で指定した
 <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
-タベースの場合は例外が発生する。</p></div>
+タベースの場合は例外が発生する。</p>
+</div>
           
         </li>
       
@@ -470,7 +483,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
           
             &mdash; <div class='inline'><p>値の型を指定する。省略すると値のための領域を確保しない。
 値を保存したい場合は必ず指定すること。
-参考: Type.new</p></div>
+参考: Type.new</p>
+</div>
           
         </li>
       
@@ -481,9 +495,10 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
+            &mdash; <div class='inline'><p>+true+ を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに含まれるレコー
-ドの件数を取得できる。</p></div>
+ドの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -514,6 +529,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
   <div class="discussion">
     
 
+
   </div>
 </div>
 <div class="tags">
@@ -533,7 +549,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
         &mdash;
         <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -555,7 +572,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p></div>
+            &mdash; <div class='inline'><p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p>
+</div>
           
         </li>
       
@@ -569,7 +587,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             &mdash; <div class='inline'><p>The name
 テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
 前を指定してテーブルを取得することができる。省略すると
-無名テーブルになり、テーブルIDでのみ取得できる。</p></div>
+無名テーブルになり、テーブルIDでのみ取得できる。</p>
+</div>
           
         </li>
       
@@ -584,7 +603,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
 り、プロセス終了後もレコードは保持される。次回起動時に
 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用することが
 できる。省略すると一時テーブルになり、プロセスが終了する
-とレコードは破棄される。</p></div>
+とレコードは破棄される。</p>
+</div>
           
         </li>
       
@@ -595,10 +615,11 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p><ins>true</ins> を指定すると永続テーブルとなる。 <ins>path</ins> を省略した
-場合は自動的にパスが付加される。 <ins>:context</ins> で指定した
+            &mdash; <div class='inline'><p>+true+ を指定すると永続テーブルとなる。 +path+ を省略した
+場合は自動的にパスが付加される。 +:context+ で指定した
 <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
-タベースの場合は例外が発生する。</p></div>
+タベースの場合は例外が発生する。</p>
+</div>
           
         </li>
       
@@ -614,7 +635,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
           
             &mdash; <div class='inline'><p>値の型を指定する。省略すると値のための領域を確保しない。
 値を保存したい場合は必ず指定すること。
-参考: Type.new</p></div>
+参考: Type.new</p>
+</div>
           
         </li>
       
@@ -625,9 +647,10 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p><ins>true</ins> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
+            &mdash; <div class='inline'><p>+true+ を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
 <span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに含まれるレコー
-ドの件数を取得できる。</p></div>
+ドの件数を取得できる。</p>
+</div>
           
         </li>
       
@@ -645,7 +668,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>生成されたテーブル。ブロックを抜けると破棄される。</p></div>
+        <div class='inline'><p>生成されたテーブル。ブロックを抜けると破棄される。</p>
+</div>
       
     </li>
   
@@ -806,11 +830,13 @@ rb_grn_array_s_create (int argc, VALUE *argv, VALUE klass)
 </h3><div class="docstring">
   <div class="discussion">
     <p>レコード追加し、追加したレコードを返す。レコードの追加に失
-敗した場合は <ins>nil</ins> を返す。</p>
+敗した場合は +nil+ を返す。</p>
+
 <p><em>values</em> にはレコードのカラムに設定する値を指定する。省略
-した場合または <ins>nil</ins> を指定した場合はカラムは設定しない。カ
-ラムの値は <code>{:カラム名1 =&gt; 値1, :カラム名2 =&gt; 値2,
-...}</code> と指定する。</p>
+した場合または +nil+ を指定した場合はカラムは設定しない。カ
+ラムの値は @=> 値1, :カラム名2 => 値2,
+...@ と指定する。</p>
+
 
   </div>
 </div>
@@ -840,6 +866,7 @@ rb_grn_array_s_create (int argc, VALUE *argv, VALUE klass)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -932,18 +959,23 @@ rb_grn_array_add (int argc, VALUE *argv, VALUE self)
   <div class="discussion">
     <p>Pulls a record from the array. The required values should be
 retrieved in the given block.</p>
+
 <p>If <span class='object_link'><a href="#push-instance_method" title="Groonga::Array#push (method)">#push</a></span> failes to fill values of the pushed
 record, the pulled record may be uncompleted. It should be handled
 by your application.</p>
-<p>If you passes <code>:block? =&gt; true</code> option, the pull operation blocks
+
+<p>If you passes @:block? => true@ option, the pull operation blocks
 until a pushed record is pushed. It is the default behavior.</p>
-<p>If you passes <code>:block? =&gt; false</code> option, the pull operation returns
-immediately, the given block isn&#8217;t called and returns nil when no
+
+<p>If you passes @:block? => false@ option, the pull operation returns
+immediately, the given block isn't called and returns nil when no
 record exist in the array.</p>
-<p>Note that your signal handlers can&#8217;t be ran while a pull
+
+<p>Note that your signal handlers can't be ran while a pull
 operation. You need to use <span class='object_link'><a href="#unblock-instance_method" title="Groonga::Array#unblock (method)">#unblock</a></span> from
 another process to unblock the pull operation. If you call
 <span class='object_link'><a href="#unblock-instance_method" title="Groonga::Array#unblock (method)">#unblock</a></span>, signal handler can be ran.</p>
+
 
   </div>
 </div>
@@ -953,7 +985,8 @@ another process to unblock the pull operation. If you call
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>A program that pulls with non-block mode</p></div></p>
+        <p class="example_title"><div class='inline'><p>A program that pulls with non-block mode</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
@@ -968,7 +1001,8 @@ another process to unblock the pull operation. If you call
 </span><span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Signal handler isn&#8217;t called</p></div></p>
+        <p class="example_title"><div class='inline'><p>Signal handler isn't called</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_trap'>trap</span><span class='lparen'>(</span><span class='symbol'>:INT</span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -984,6 +1018,7 @@ another process to unblock the pull operation. If you call
   <div class="docstring">
   <div class="discussion">
     <p>Returns A pulled record that is yielded.</p>
+
 
   </div>
 </div>
@@ -1003,7 +1038,8 @@ another process to unblock the pull operation. If you call
       
       
         &mdash;
-        <div class='inline'><p>The option parameters.</p></div>
+        <div class='inline'><p>The option parameters.</p>
+</div>
       
     </li>
   
@@ -1026,7 +1062,8 @@ another process to unblock the pull operation. If you call
           </span>
           
             &mdash; <div class='inline'><p>Whether the pull operation is blocked or not when no record exist
-in the array.</p></div>
+in the array.</p>
+</div>
           
         </li>
       
@@ -1044,7 +1081,8 @@ in the array.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>Gets required values for a pull record in the given block.</p></div>
+        <div class='inline'><p>Gets required values for a pull record in the given block.</p>
+</div>
       
     </li>
   
@@ -1063,7 +1101,8 @@ in the array.</p></div>
       
         &mdash;
         <div class='inline'><p>A pulled record. It is nil when no records exist in the array
-and <code>block?</code> parameter is not <code>true</code>.</p></div>
+and @block?@ parameter is not @true@.</p>
+</div>
       
     </li>
   
@@ -1079,7 +1118,8 @@ and <code>block?</code> parameter is not <code>true</code>.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>A pulled record that is yielded.</p></div>
+        <div class='inline'><p>A pulled record that is yielded.</p>
+</div>
       
     </li>
   
@@ -1200,11 +1240,14 @@ rb_grn_array_pull (int argc, VALUE *argv, VALUE self)
     <p>Pushes a record to the array. The record should be filled in the
 given block. The pushed record can be pulled by
 <span class='object_link'><a href="#pull-instance_method" title="Groonga::Array#pull (method)">#pull</a></span>.</p>
+
 <p>The record that is passed to the given block may be nil. You need
 to handle the case. For example, just ignoring it or reports an
 error.</p>
+
 <p>If an error is occurred in the given block, the pushed record may
 not be filled completely. You should handle the case in pull side.</p>
+
 
   </div>
 </div>
@@ -1214,7 +1257,8 @@ not be filled completely. You should handle the case in pull side.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>A program that pushes a job without error handling</p></div></p>
+        <p class="example_title"><div class='inline'><p>A program that pushes a job without error handling</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1226,7 +1270,8 @@ not be filled completely. You should handle the case in pull side.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>A program that pulls a job without error handling</p></div></p>
+        <p class="example_title"><div class='inline'><p>A program that pulls a job without error handling</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
@@ -1239,7 +1284,8 @@ not be filled completely. You should handle the case in pull side.</p>
 </span><span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>A program that pushes a job with error handling</p></div></p>
+        <p class="example_title"><div class='inline'><p>A program that pushes a job with error handling</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1251,7 +1297,8 @@ not be filled completely. You should handle the case in pull side.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>A program that has an error in push block</p></div></p>
+        <p class="example_title"><div class='inline'><p>A program that has an error in push block</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1264,7 +1311,8 @@ not be filled completely. You should handle the case in pull side.</p>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>A program that pulls a job with error handling</p></div></p>
+        <p class="example_title"><div class='inline'><p>A program that pulls a job with error handling</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
@@ -1283,6 +1331,7 @@ not be filled completely. You should handle the case in pull side.</p>
   <div class="discussion">
     <p>Returns A pushed record that is yielded.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1298,7 +1347,8 @@ not be filled completely. You should handle the case in pull side.</p>
       
       
         &mdash;
-        <div class='inline'><p>Filles columns of a pushed record in the given block.</p></div>
+        <div class='inline'><p>Filles columns of a pushed record in the given block.</p>
+</div>
       
     </li>
   
@@ -1316,7 +1366,8 @@ not be filled completely. You should handle the case in pull side.</p>
       
       
         &mdash;
-        <div class='inline'><p>A pushed record. It is nil when pushing is failed.</p></div>
+        <div class='inline'><p>A pushed record. It is nil when pushing is failed.</p>
+</div>
       
     </li>
   
@@ -1332,7 +1383,8 @@ not be filled completely. You should handle the case in pull side.</p>
       
       
         &mdash;
-        <div class='inline'><p>A pushed record that is yielded.</p></div>
+        <div class='inline'><p>A pushed record that is yielded.</p>
+</div>
       
     </li>
   
@@ -1419,6 +1471,7 @@ rb_grn_array_push (VALUE self)
   <div class="discussion">
     <p>Unblocks all <span class='object_link'><a href="#pull-instance_method" title="Groonga::Array#pull (method)">#pull</a></span> operations for the array.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1427,7 +1480,8 @@ rb_grn_array_push (VALUE self)
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Pull, unblock and signal</p></div></p>
+        <p class="example_title"><div class='inline'><p>Pull, unblock and signal</p>
+</div></p>
       
       <pre class="example code"><code><span class='comment'># pull.rb
 </span><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1450,6 +1504,7 @@ rb_grn_array_push (VALUE self)
   <div class="docstring">
   <div class="discussion">
     <p class="note returns_void">This method returns an undefined value.</p>
+
 
   </div>
 </div>
@@ -1510,9 +1565,9 @@ rb_grn_array_unblock (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Sun Oct  5 14:02:39 2014 by
+  Generated on Thu Nov  6 16:28:43 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.3).
+  0.8.7.6 (ruby-2.1.4).
 </div>
 
   

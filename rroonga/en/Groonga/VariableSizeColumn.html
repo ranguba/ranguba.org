@@ -141,6 +141,7 @@
     <p>A column for variable size data like text family types and vector
 column.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -178,7 +179,8 @@ column.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It gets a value of variable size column value for the record that ID is <em>id</em>.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>It gets a value of variable size column value for the record that ID is <em>id</em>.</p>
+</div></span>
   
 </li>
 
@@ -200,7 +202,8 @@ column.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It updates a value of variable size column value for the record that ID is <em>id</em>.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>It updates a value of variable size column value for the record that ID is <em>id</em>.</p>
+</div></span>
   
 </li>
 
@@ -222,7 +225,8 @@ column.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns whether the column is compressed or not.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns whether the column is compressed or not.</p>
+</div></span>
   
 </li>
 
@@ -244,7 +248,8 @@ column.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Defrags the column.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Defrags the column.</p>
+</div></span>
   
 </li>
 
@@ -294,6 +299,7 @@ column.</p>
     <p>It gets a value of variable size column value for the record that
 ID is <em>id</em>.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -302,7 +308,8 @@ ID is <em>id</em>.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Gets weight vector value</p></div></p>
+        <p class="example_title"><div class='inline'><p>Gets weight vector value</p>
+</div></p>
       
       <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
   <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Products</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
@@ -341,6 +348,7 @@ ID is <em>id</em>.</p>
   <div class="discussion">
     
 
+
   </div>
 </div>
 <div class="tags">
@@ -357,7 +365,8 @@ ID is <em>id</em>.</p>
       
       
         &mdash;
-        <div class='inline'><p>The record ID.</p></div>
+        <div class='inline'><p>The record ID.</p>
+</div>
       
     </li>
   
@@ -377,15 +386,20 @@ ID is <em>id</em>.</p>
         <div class='inline'><p>An array of value if the column
 is a weight vector column.
 Each value is a Hash like the following form:</p>
+
 <pre class="code"><code class="">
 <span class='lbrace'>{</span>
   <span class='symbol'>:value</span>  <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='const'>KEY</span><span class='rbracket'>]</span><span class='comma'>,</span>
   <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='const'>WEIGHT</span><span class='rbracket'>]</span><span class='comma'>,</span>
 <span class='rbrace'>}</span>
 </code></pre>
-<p><code>[KEY]</code> is the key of the table that is specified as range on
+
+
+<p>@[KEY]@ is the key of the table that is specified as range on
 creating the weight vector.</p>
-<p><code>[WEIGHT]</code> is a positive integer.</p></div>
+
+<p>@[WEIGHT]@ is a positive integer.</p>
+</div>
       
     </li>
   
@@ -398,7 +412,8 @@ creating the weight vector.</p>
       
         &mdash;
         <div class='inline'><p>See <span class='object_link'><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">Object#[]</a></span> for columns except
-weight vector column.</p></div>
+weight vector column.</p>
+</div>
       
     </li>
   
@@ -415,7 +430,8 @@ weight vector column.</p></div>
       
       
         
-        <div class='inline'><p>4.0.1.</p></div>
+        <div class='inline'><p>4.0.1.</p>
+</div>
       
     </li>
   
@@ -427,7 +443,6 @@ weight vector column.</p></div>
       <pre class="lines">
 
 
-158
 159
 160
 161
@@ -492,10 +507,11 @@ weight vector column.</p></div>
 220
 221
 222
-223</pre>
+223
+224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 158</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 159</span>
 
 static VALUE
 rb_grn_variable_size_column_array_reference (VALUE self, VALUE rb_id)
@@ -585,9 +601,11 @@ rb_grn_variable_size_column_array_reference (VALUE self, VALUE rb_id)
   <div class="discussion">
     <p>It updates a value of variable size column value for the record
 that ID is <em>id</em>.</p>
+
 <p>Weight vector column is a special variable size column. This
 description describes only weight vector column. Other variable
 size column works what you think.</p>
+
 
   </div>
 </div>
@@ -597,7 +615,8 @@ size column works what you think.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Use weight vector as matrix search result weight</p></div></p>
+        <p class="example_title"><div class='inline'><p>Use weight vector as matrix search result weight</p>
+</div></p>
       
       <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
   <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Products</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
@@ -681,6 +700,7 @@ size column works what you think.</p>
   <div class="discussion">
     <p>This description is for weight vector column.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -697,7 +717,8 @@ size column works what you think.</p>
       
       
         &mdash;
-        <div class='inline'><p>The record ID.</p></div>
+        <div class='inline'><p>The record ID.</p>
+</div>
       
     </li>
   
@@ -714,17 +735,22 @@ size column works what you think.</p>
         <div class='inline'><p>An array of values
 for weight vector.
 Each value is a Hash like the following form:</p>
+
 <pre class="code"><code class="">
 <span class='lbrace'>{</span>
   <span class='symbol'>:value</span>  <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='const'>KEY</span><span class='rbracket'>]</span><span class='comma'>,</span>
   <span class='symbol'>:weight</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='const'>WEIGHT</span><span class='rbracket'>]</span><span class='comma'>,</span>
 <span class='rbrace'>}</span>
 </code></pre>
-<p><code>[KEY]</code> must be the same type of the key of the table that is
+
+
+<p>@[KEY]@ must be the same type of the key of the table that is
 specified as range on creating the weight vector.</p>
-<p><code>[WEIGHT]</code> must be an positive integer. Note that search
-becomes <code>weight + 1</code>. It means that You want to get 10 as
-score, you should set 9 as weight.</p></div>
+
+<p>@[WEIGHT]@ must be an positive integer. Note that search
+becomes @weight + 1@. It means that You want to get 10 as
+score, you should set 9 as weight.</p>
+</div>
       
     </li>
   
@@ -742,6 +768,7 @@ score, you should set 9 as weight.</p></div>
     <p>This description is for variable size columns except weight
 vector column.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -758,7 +785,8 @@ vector column.</p>
       
       
         &mdash;
-        <div class='inline'><p>The record ID.</p></div>
+        <div class='inline'><p>The record ID.</p>
+</div>
       
     </li>
   
@@ -772,7 +800,8 @@ vector column.</p>
       
       
         &mdash;
-        <div class='inline'><p>A new value.</p></div>
+        <div class='inline'><p>A new value.</p>
+</div>
       
     </li>
   
@@ -800,7 +829,8 @@ vector column.</p>
       
       
         
-        <div class='inline'><p>4.0.1</p></div>
+        <div class='inline'><p>4.0.1</p>
+</div>
       
     </li>
   
@@ -812,7 +842,6 @@ vector column.</p>
       <pre class="lines">
 
 
-370
 371
 372
 373
@@ -894,10 +923,11 @@ vector column.</p>
 449
 450
 451
-452</pre>
+452
+453</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 370</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 371</span>
 
 static VALUE
 rb_grn_variable_size_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -1003,8 +1033,9 @@ rb_grn_variable_size_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns whether the column is compressed or not. If
-<code>type</code> is specified, it returns whether the column is
-compressed by <code>type</code> or not.</p>
+@type@ is specified, it returns whether the column is
+compressed by @type@ or not.</p>
+
 
   </div>
 </div>
@@ -1020,6 +1051,7 @@ compressed by <code>type</code> or not.</p>
   <div class="discussion">
     <p>Returns whether the column is compressed or not.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1035,7 +1067,8 @@ compressed by <code>type</code> or not.</p>
       
       
         &mdash;
-        <div class='inline'><p>whether the column is compressed or not.</p></div>
+        <div class='inline'><p>whether the column is compressed or not.</p>
+</div>
       
     </li>
   
@@ -1051,6 +1084,7 @@ compressed by <code>type</code> or not.</p>
   <div class="discussion">
     <p>Returns whether specified compressed type is used or not.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1062,12 +1096,13 @@ compressed by <code>type</code> or not.</p>
         <span class='name'>type</span>
       
       
-        <span class='type'>(<tt>:zlib</tt>, <tt>:lzo</tt>)</span>
+        <span class='type'>(<tt>:zlib</tt>, <tt>:lz4</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>(nil)</p></div>
+        <div class='inline'><p>(nil)</p>
+</div>
       
     </li>
   
@@ -1084,7 +1119,8 @@ compressed by <code>type</code> or not.</p>
       
       
         &mdash;
-        <div class='inline'><p>whether specified compressed type is used or not.</p></div>
+        <div class='inline'><p>whether specified compressed type is used or not.</p>
+</div>
       
     </li>
   
@@ -1117,7 +1153,8 @@ compressed by <code>type</code> or not.</p>
       
       
         
-        <div class='inline'><p>1.3.1</p></div>
+        <div class='inline'><p>1.3.1</p>
+</div>
       
     </li>
   
@@ -1129,7 +1166,6 @@ compressed by <code>type</code> or not.</p>
       <pre class="lines">
 
 
-465
 466
 467
 468
@@ -1184,10 +1220,14 @@ compressed by <code>type</code> or not.</p>
 517
 518
 519
-520</pre>
+520
+521
+522
+523
+524</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 465</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 466</span>
 
 static VALUE
 rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
@@ -1200,7 +1240,7 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
     grn_bool compressed_p = GRN_FALSE;
     grn_bool accept_any_type = GRN_FALSE;
     grn_bool need_zlib_check = GRN_FALSE;
-    grn_bool need_lzo_check = GRN_FALSE;
+    grn_bool need_lz4_check = GRN_FALSE;
 
     rb_scan_args(argc, argv, &quot;01&quot;, &amp;type);
 
@@ -1210,10 +1250,13 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
         if (rb_grn_equal_option(type, &quot;zlib&quot;)) {
             need_zlib_check = GRN_TRUE;
         } else if (rb_grn_equal_option(type, &quot;lzo&quot;)) {
-            need_lzo_check = GRN_TRUE;
+            /* TODO: for backward compatibility */
+            need_lz4_check = GRN_TRUE;
+        } else if (rb_grn_equal_option(type, &quot;lz4&quot;)) {
+            need_lz4_check = GRN_TRUE;
         } else {
             rb_raise(rb_eArgError,
-                     &quot;compressed type should be &lt;:zlib&gt; or &lt;:lzo&gt;: &lt;%s&gt;&quot;,
+                     &quot;compressed type should be &lt;:zlib&gt; or &lt;:lz4&gt;: &lt;%s&gt;&quot;,
                      rb_grn_inspect(type));
         }
     }
@@ -1233,11 +1276,11 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
             compressed_p = GRN_BOOL_VALUE(&amp;support_p);
         }
         break;
-      case GRN_OBJ_COMPRESS_LZO:
-        if (accept_any_type || need_lzo_check) {
+      case GRN_OBJ_COMPRESS_LZ4:
+        if (accept_any_type || need_lz4_check) {
             grn_obj support_p;
             GRN_BOOL_INIT(&amp;support_p, 0);
-            grn_obj_get_info(context, NULL, GRN_INFO_SUPPORT_LZO, &amp;support_p);
+            grn_obj_get_info(context, NULL, GRN_INFO_SUPPORT_LZ4, &amp;support_p);
             compressed_p = GRN_BOOL_VALUE(&amp;support_p);
         }
         break;
@@ -1263,6 +1306,7 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
   <div class="discussion">
     <p>Defrags the column.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1270,6 +1314,7 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -1290,7 +1335,8 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
       
         &mdash;
         <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -1315,7 +1361,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             &mdash; <div class='inline'><p>the threshold to
 determine whether a segment is defraged. Available
 values are -4..22. -4 means all segments are defraged.
-22 means no segment is defraged.</p></div>
+22 means no segment is defraged.</p>
+</div>
           
         </li>
       
@@ -1336,7 +1383,8 @@ values are -4..22. -4 means all segments are defraged.
       
       
         &mdash;
-        <div class='inline'><p>the number of defraged segments</p></div>
+        <div class='inline'><p>the number of defraged segments</p>
+</div>
       
     </li>
   
@@ -1350,7 +1398,8 @@ values are -4..22. -4 means all segments are defraged.
       
       
         
-        <div class='inline'><p>1.2.6</p></div>
+        <div class='inline'><p>1.2.6</p>
+</div>
       
     </li>
   
@@ -1362,10 +1411,6 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
-535
-536
-537
-538
 539
 540
 541
@@ -1388,10 +1433,14 @@ values are -4..22. -4 means all segments are defraged.
 558
 559
 560
-561</pre>
+561
+562
+563
+564
+565</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 535</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-variable-size-column.c', line 539</span>
 
 static VALUE
 rb_grn_variable_size_column_defrag (int argc, VALUE *argv, VALUE self)

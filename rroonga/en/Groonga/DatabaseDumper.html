@@ -134,6 +134,7 @@
   <div class="discussion">
     <p>データベースの内容をgrn式形式の文字列として出力するクラス。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -171,7 +172,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Dump database.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Dump database.</p>
+</div></span>
   
 </li>
 
@@ -202,7 +204,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -226,7 +229,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>A new instance of DatabaseDumper.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>A new instance of DatabaseDumper.</p>
+</div></span>
   
 </li>
 
@@ -250,6 +254,7 @@
   <div class="discussion">
     <p>Returns a new instance of DatabaseDumper</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -261,12 +266,12 @@
       <pre class="lines">
 
 
-44
 45
-46</pre>
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@options</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span>
@@ -295,7 +300,9 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>Dump database</p>
-<p><span class="caps">TODO</span>: document options paramter</p>
+
+<p>TODO: document options paramter</p>
+
 
   </div>
 </div>
@@ -308,13 +315,13 @@
       <pre class="lines">
 
 
-38
 39
 40
-41</pre>
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dumper'>dumper</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -346,7 +353,6 @@
       <pre class="lines">
 
 
-48
 49
 50
 51
@@ -382,10 +388,11 @@
 81
 82
 83
-84</pre>
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>

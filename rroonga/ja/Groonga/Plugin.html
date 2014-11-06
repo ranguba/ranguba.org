@@ -138,6 +138,7 @@
 することはできず、Cで作成された既存のプラグインを登録する
 ことができるだけです。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -175,7 +176,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>既存のプラグインをデータベースに登録する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>既存のプラグインをデータベースに登録する。.</p>
+</div></span>
   
 </li>
 
@@ -197,7 +199,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the plugin file suffix.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the plugin file suffix.</p>
+</div></span>
   
 </li>
 
@@ -219,7 +222,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the system plugins directory.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the system plugins directory.</p>
+</div></span>
   
 </li>
 
@@ -250,6 +254,7 @@
   <div class="discussion">
     <p>既存のプラグインをデータベースに登録する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -263,6 +268,7 @@
         <div class="docstring">
   <div class="discussion">
     <p><em>name</em> で指定した名前のプラグインを登録する。</p>
+
 
   </div>
 </div>
@@ -280,7 +286,8 @@
       
       
         &mdash;
-        <div class='inline'><p>登録するプラグインの名前</p></div>
+        <div class='inline'><p>登録するプラグインの名前</p>
+</div>
       
     </li>
   
@@ -297,7 +304,8 @@
       
         &mdash;
         <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -321,7 +329,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。</p></div>
+            &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。</p>
+</div>
           
         </li>
       
@@ -338,7 +347,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
         <div class="docstring">
   <div class="discussion">
     <p><em>:path</em> で指定したパスのプラグインを登録する。</p>
+
 <p><em>:context</em> については <em>name</em> を設定した時と同様。</p>
+
 
   </div>
 </div>
@@ -356,7 +367,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p><em>:path</em> と <em>:context</em> を指定したハッシュを指定する。</p></div>
+        <div class='inline'><p><em>:path</em> と <em>:context</em> を指定したハッシュを指定する。</p>
+</div>
       
     </li>
   
@@ -475,7 +487,8 @@ rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the plugin file suffix. (e.g. &#8220;.so&#8221;, &#8220;.dll&#8221; and so on.)</p>
+    <p>Returns the plugin file suffix. (e.g. ".so", ".dll" and so on.)</p>
+
 
   </div>
 </div>
@@ -484,6 +497,7 @@ rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -544,6 +558,7 @@ rb_grn_plugin_s_suffix (VALUE klass)
   <div class="discussion">
     <p>Returns the system plugins directory.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -551,6 +566,7 @@ rb_grn_plugin_s_suffix (VALUE klass)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -603,9 +619,9 @@ rb_grn_plugin_s_system_plugins_dir (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Sun Oct  5 14:02:39 2014 by
+  Generated on Thu Nov  6 16:28:43 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.3).
+  0.8.7.6 (ruby-2.1.4).
 </div>
 
   

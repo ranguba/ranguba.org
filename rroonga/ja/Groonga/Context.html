@@ -137,16 +137,20 @@
     <p>groonga全体に渡る情報を管理するオブジェクト。通常のアプリ
 ケーションでは1つのコンテキストを作成し、それを利用する。
 複数のコンテキストを利用する必要はない。</p>
+
 <p>デフォルトで使用されるコンテキストは
 <span class='object_link'><a href="#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> でアクセスできる。コンテキ
-ストを指定できる箇所でコンテキストの指定を省略したり <ins>nil</ins>
+ストを指定できる箇所でコンテキストの指定を省略したり +nil+
 を指定した場合は <span class='object_link'><a href="#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> が利用さ
 れる。</p>
+
 <p>また、デフォルトのコンテキストは必要になると暗黙のうちに
 作成される。そのため、コンテキストを意識することは少ない。</p>
+
 <p>暗黙のうちに作成されるコンテキストにオプションを指定する
 場合は <span class='object_link'><a href="#default_options%3D-class_method" title="Groonga::Context.default_options= (method)">Context.default_options=</a></span> を使用
 する。</p>
+
 
   </div>
 </div>
@@ -195,7 +199,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>デフォルトのコンテキストを返す。デフォルトのコンテキスト が作成されていない場合は暗黙のうちに作成し、それを返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>デフォルトのコンテキストを返す。デフォルトのコンテキスト が作成されていない場合は暗黙のうちに作成し、それを返す。.</p>
+</div></span>
   
 </li>
 
@@ -217,7 +222,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>デフォルトのコンテキストを設定する。 <ins>nil</ins> を指定すると、 デフォルトのコンテキストをリセットする。リセットすると、次 回 <span class='object_link'><a href="#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を呼び出したときに新しくコ ンテキストが作成される。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>デフォルトのコンテキストを設定する。 +nil+ を指定すると、 デフォルトのコンテキストをリセットする。リセットすると、次 回 <span class='object_link'><a href="#default-class_method" title="Groonga::Context.default (method)">Context.default</a></span> を呼び出したときに新しくコ ンテキストが作成される。.</p>
+</div></span>
   
 </li>
 
@@ -239,7 +245,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する時に利用するデフォルトのオプション を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する時に利用するデフォルトのオプション を返す。.</p>
+</div></span>
   
 </li>
 
@@ -261,7 +268,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する時に利用するデフォルトのオプション を設定する。利用可能なオプションは new を参照。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する時に利用するデフォルトのオプション を設定する。利用可能なオプションは new を参照。.</p>
+</div></span>
   
 </li>
 
@@ -292,7 +300,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキスト管理下にあるオブジェクトを返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキスト管理下にあるオブジェクトを返す。.</p>
+</div></span>
   
 </li>
 
@@ -314,7 +323,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストを閉じる。閉じられたコンテキストは使用できなくなる。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストを閉じる。閉じられたコンテキストは使用できなくなる。.</p>
+</div></span>
   
 </li>
 
@@ -336,7 +346,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストが#closeによって閉じられているかどうかを返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストが#closeによって閉じられているかどうかを返す。.</p>
+</div></span>
   
 </li>
 
@@ -358,7 +369,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>groongaサーバに接続する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>groongaサーバに接続する。.</p>
+</div></span>
   
 </li>
 
@@ -380,7 +392,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>This is convenience method.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>This is convenience method.</p>
+</div></span>
   
 </li>
 
@@ -402,7 +415,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストが使うデータベースを返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストが使うデータベースを返す。.</p>
+</div></span>
   
 </li>
 
@@ -424,7 +438,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストが使うエンコーディングを返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストが使うエンコーディングを返す。.</p>
+</div></span>
   
 </li>
 
@@ -446,7 +461,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストが使うエンコーディングを設定する。エンコーディ ングの指定のしかたは <span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストが使うエンコーディングを設定する。エンコーディ ングの指定のしかたは <span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。.</p>
+</div></span>
   
 </li>
 
@@ -468,7 +484,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -492,7 +509,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストを作成する。.</p>
+</div></span>
   
 </li>
 
@@ -514,7 +532,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストの中身を人に見やすい文字列で返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストの中身を人に見やすい文字列で返す。.</p>
+</div></span>
   
 </li>
 
@@ -536,7 +555,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>このコンテキストを使って検索したときに検索の挙動をエスカレー ションする閾値を返します。 エスカレーションの詳細は <a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a> を参照してください。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>このコンテキストを使って検索したときに検索の挙動をエスカレー ションする閾値を返します。 エスカレーションの詳細は "groongaの検索の仕様に関するドキュメント":<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">http://groonga.org/docs/spec/search.html#match-escalation-threshold</a> を参照してください。.</p>
+</div></span>
   
 </li>
 
@@ -558,7 +578,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>このコンテキストを使って検索したときに検索の挙動をエスカレー ションする閾値を設定します。 エスカレーションの詳細は <a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a> を参照してください。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>このコンテキストを使って検索したときに検索の挙動をエスカレー ションする閾値を設定します。 エスカレーションの詳細は "groongaの検索の仕様に関するドキュメント":<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">http://groonga.org/docs/spec/search.html#match-escalation-threshold</a> を参照してください。.</p>
+</div></span>
   
 </li>
 
@@ -580,7 +601,8 @@
   <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -602,7 +624,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>path</em> にある既存のデータベースを開く。ブロックを指定した場 合はブロックに開いたデータベースを渡し、ブロックを抜けると きに閉じる。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>path</em> にある既存のデータベースを開く。ブロックを指定した場 合はブロックに開いたデータベースを渡し、ブロックを抜けると きに閉じる。.</p>
+</div></span>
   
 </li>
 
@@ -624,7 +647,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Pops the pushed memory pool.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Pops the pushed memory pool.</p>
+</div></span>
   
 </li>
 
@@ -646,7 +670,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Pushes a new memory pool to the context.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Pushes a new memory pool to the context.</p>
+</div></span>
   
 </li>
 
@@ -668,7 +693,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>groongaサーバからクエリ実行結果文字列を受信する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>groongaサーバからクエリ実行結果文字列を受信する。.</p>
+</div></span>
   
 </li>
 
@@ -690,7 +716,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>groongaのプラグインディレクトリにあるプラグイン <em>name</em> を登録する。 <em>path</em> を指定するとプラグインディレクトリ以 外にあるプラグインを登録することができる。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>groongaのプラグインディレクトリにあるプラグイン <em>name</em> を登録する。 <em>path</em> を指定するとプラグインディレクトリ以 外にあるプラグインを登録することができる。.</p>
+</div></span>
   
 </li>
 
@@ -712,7 +739,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Restore commands dumped by &#8220;grndump&#8221; command.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Restore commands dumped by "grndump" command.</p>
+</div></span>
   
 </li>
 
@@ -734,7 +762,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>コンテキストが使っているエンコーディングをRubyのエンコーディングオブジェクトで取得する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>コンテキストが使っているエンコーディングをRubyのエンコーディングオブジェクトで取得する。.</p>
+</div></span>
   
 </li>
 
@@ -756,7 +785,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>table</em> から指定した条件にマッチするレコードの値を取得 する。 <em>table</em> はテーブル名かテーブルオブジェクトを指定 する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>table</em> から指定した条件にマッチするレコードの値を取得 する。 <em>table</em> はテーブル名かテーブルオブジェクトを指定 する。.</p>
+</div></span>
   
 </li>
 
@@ -778,7 +808,31 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>groongaサーバにクエリ文字列を送信する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>groongaサーバにクエリ文字列を送信する。.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#support_lz4%3F-instance_method" title="#support_lz4? (instance method)">- (Boolean) <strong>support_lz4?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>If Groonga supports LZ4 compression, it returns +true+, otherwise it returns +false+.</p>
+</div></span>
   
 </li>
 
@@ -800,7 +854,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>groongaがLZOサポート付きでビルドされていれば <ins>true</ins> 、そう でなければ <ins>false</ins> を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>If Groonga supports LZO compression, it returns +true+, otherwise it returns +false+.</p>
+</div></span>
   
 </li>
 
@@ -822,7 +877,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>groongaがZlibサポート付きでビルドされていれば <ins>true</ins> 、そう でなければ <ins>false</ins> を返す。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>groongaがZlibサポート付きでビルドされていれば +true+ 、そう でなければ +false+ を返す。.</p>
+</div></span>
   
 </li>
 
@@ -846,6 +902,7 @@
   <div class="discussion">
     <p>コンテキストを作成する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -853,6 +910,7 @@
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -873,7 +931,8 @@
       
         &mdash;
         <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -894,7 +953,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
           
             &mdash; <div class='inline'><p>The encoding
 エンコーディングを指定する。エンコーディングの指定方法
-は <span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。</p></div>
+は <span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。</p>
+</div>
           
         </li>
       
@@ -1034,9 +1094,11 @@ rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
   <div class="discussion">
     <p>デフォルトのコンテキストを返す。デフォルトのコンテキスト
 が作成されていない場合は暗黙のうちに作成し、それを返す。</p>
+
 <p>暗黙のうちにコンテキストを作成する場合は、
 <span class='object_link'><a href="#default_options-class_method" title="Groonga::Context.default_options (method)">default_options</a></span> に設定されているオプ
 ションを利用する。</p>
+
 
   </div>
 </div>
@@ -1045,6 +1107,7 @@ rb_grn_context_initialize (int argc, VALUE *argv, VALUE self)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -1117,10 +1180,11 @@ rb_grn_context_s_get_default (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>デフォルトのコンテキストを設定する。 <ins>nil</ins> を指定すると、
+    <p>デフォルトのコンテキストを設定する。 +nil+ を指定すると、
 デフォルトのコンテキストをリセットする。リセットすると、次
 回 <span class='object_link'><a href="#default-class_method" title="Groonga::Context.default (method)">default</a></span> を呼び出したときに新しくコ
 ンテキストが作成される。</p>
+
 
   </div>
 </div>
@@ -1170,6 +1234,7 @@ rb_grn_context_s_set_default (VALUE self, VALUE context)
     <p>コンテキストを作成する時に利用するデフォルトのオプション
 を返す。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1177,6 +1242,7 @@ rb_grn_context_s_set_default (VALUE self, VALUE context)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -1239,6 +1305,7 @@ rb_grn_context_s_get_default_options (VALUE self)
 を設定する。利用可能なオプションは
 new を参照。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1295,10 +1362,13 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
 </h3><div class="docstring">
   <div class="discussion">
     <p>コンテキスト管理下にあるオブジェクトを返す。</p>
+
 <p><em>name</em> として文字列を指定した場合はオブジェクト名でオブジェ
 クトを検索する。</p>
+
 <p><em>id</em> として数値を指定した場合はオブジェクトIDでオブジェク
 トを検索する。</p>
+
 
   </div>
 </div>
@@ -1313,6 +1383,7 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -1341,6 +1412,7 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -1372,21 +1444,6 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
       <pre class="lines">
 
 
-893
-894
-895
-896
-897
-898
-899
-900
-901
-902
-903
-904
-905
-906
-907
 908
 909
 910
@@ -1408,10 +1465,25 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
 926
 927
 928
-929</pre>
+929
+930
+931
+932
+933
+934
+935
+936
+937
+938
+939
+940
+941
+942
+943
+944</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 893</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 908</span>
 
 static VALUE
 rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
@@ -1467,6 +1539,7 @@ rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
 </h3><div class="docstring">
   <div class="discussion">
     <p>コンテキストを閉じる。閉じられたコンテキストは使用できなくなる。</p>
+
 
   </div>
 </div>
@@ -1537,6 +1610,7 @@ rb_grn_context_close (VALUE self)
   <div class="discussion">
     <p>コンテキストが#closeによって閉じられているかどうかを返す。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1603,6 +1677,7 @@ rb_grn_context_closed_p (VALUE self)
   <div class="discussion">
     <p>groongaサーバに接続する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1610,6 +1685,7 @@ rb_grn_context_closed_p (VALUE self)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -1629,7 +1705,8 @@ rb_grn_context_closed_p (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>利用可能なオプションは次の通り。</p></div>
+        <div class='inline'><p>利用可能なオプションは次の通り。</p>
+</div>
       
     </li>
   
@@ -1652,7 +1729,8 @@ rb_grn_context_closed_p (VALUE self)
           </span>
           
             &mdash; <div class='inline'><p>groongaサーバのホスト名。またはIPアドレス。省略すると
-&quot;localhost&quot;に接続する。</p></div>
+"localhost"に接続する。</p>
+</div>
           
         </li>
       
@@ -1667,7 +1745,8 @@ rb_grn_context_closed_p (VALUE self)
           </span>
           
             &mdash; <div class='inline'><p>groongaサーバのポート番号。省略すると10041番ポートに接
-続する。</p></div>
+続する。</p>
+</div>
           
         </li>
       
@@ -1684,21 +1763,6 @@ rb_grn_context_closed_p (VALUE self)
       <pre class="lines">
 
 
-720
-721
-722
-723
-724
-725
-726
-727
-728
-729
-730
-731
-732
-733
-734
 735
 736
 737
@@ -1719,10 +1783,25 @@ rb_grn_context_closed_p (VALUE self)
 752
 753
 754
-755</pre>
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 720</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 735</span>
 
 static VALUE
 rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
@@ -1787,6 +1866,7 @@ rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
     <p>This is convenience method. It wraps <span class='object_link'><a href="Database.html#create-class_method" title="Groonga::Database.create (method)">Database.create</a></span>
 for the context.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1801,6 +1881,7 @@ for the context.</p>
   <div class="discussion">
     <p>Creates a new temproary database for the context.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1809,7 +1890,8 @@ for the context.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Creating a new temporary database</p></div></p>
+        <p class="example_title"><div class='inline'><p>Creating a new temporary database</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_temporary_database'>temporary_database</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_create_database'>create_database</span></code></pre>
     
@@ -1826,7 +1908,8 @@ for the context.</p>
       
       
         &mdash;
-        <div class='inline'><p>A new temporary database.</p></div>
+        <div class='inline'><p>A new temporary database.</p>
+</div>
       
     </li>
   
@@ -1843,6 +1926,7 @@ for the context.</p>
     <p>Creates a new temproary database for the context. The database
 is closed after the passed block is finished.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1851,7 +1935,8 @@ is closed after the passed block is finished.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Creating a new temporary database with block</p></div></p>
+        <p class="example_title"><div class='inline'><p>Creating a new temporary database with block</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_create_database'>create_database</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_temporary_database'>temporary_database</span><span class='op'>|</span>
   <span class='comment'># ...
@@ -1872,7 +1957,8 @@ is closed after the passed block is finished.</p>
         &mdash;
         <div class='inline'><p>Yields a newly created temporary database
 for the context. The database is available only in the
-block.</p></div>
+block.</p>
+</div>
       
     </li>
   
@@ -1891,7 +1977,8 @@ block.</p></div>
       
         &mdash;
         <div class='inline'><p>A newly created
-temporary database for the context.</p></div>
+temporary database for the context.</p>
+</div>
       
     </li>
   
@@ -1908,7 +1995,8 @@ temporary database for the context.</p></div>
       
         &mdash;
         <div class='inline'><p>The returned value from the block is the
-returned value from this method.</p></div>
+returned value from this method.</p>
+</div>
       
     </li>
   
@@ -1924,7 +2012,8 @@ returned value from this method.</p></div>
       
       
         
-        <div class='inline'><p>Returned value from the block.</p></div>
+        <div class='inline'><p>Returned value from the block.</p>
+</div>
       
     </li>
   
@@ -1940,6 +2029,7 @@ returned value from this method.</p></div>
   <div class="discussion">
     <p>Creates a new persistent database for the context to the <em>path</em>.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -1948,7 +2038,8 @@ returned value from this method.</p></div>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Creating a new persistent database to <em>&#8220;/tmp/db.groonga&#8221;</em></p></div></p>
+        <p class="example_title"><div class='inline'><p>Creating a new persistent database to <em>"/tmp/db.groonga"</em></p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_database'>database</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_create_database'>create_database</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/db.groonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
@@ -1967,7 +2058,8 @@ returned value from this method.</p></div>
       
         &mdash;
         <div class='inline'><p>Database path for a new persistent
-database.</p></div>
+database.</p>
+</div>
       
     </li>
   
@@ -1985,7 +2077,8 @@ database.</p></div>
       
         &mdash;
         <div class='inline'><p>A new persistent database for the
-context.</p></div>
+context.</p>
+</div>
       
     </li>
   
@@ -2003,6 +2096,7 @@ context.</p></div>
 <em>path</em>. The database is closed after the passed block is
 finished.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -2011,7 +2105,8 @@ finished.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Creating a new persistent database to <em>&#8220;/tmp/db.groonga&#8221;</em> database with block</p></div></p>
+        <p class="example_title"><div class='inline'><p>Creating a new persistent database to <em>"/tmp/db.groonga"</em> database with block</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_create_database'>create_database</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/db.groonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_persistent_database'>persistent_database</span><span class='op'>|</span>
   <span class='comment'># ...
@@ -2032,7 +2127,8 @@ finished.</p>
       
         &mdash;
         <div class='inline'><p>Database path for a new persistent
-database.</p></div>
+database.</p>
+</div>
       
     </li>
   
@@ -2051,7 +2147,8 @@ database.</p></div>
         &mdash;
         <div class='inline'><p>Yields a newly created persistent database
 for the context. The database is available only in the
-block.</p></div>
+block.</p>
+</div>
       
     </li>
   
@@ -2070,7 +2167,8 @@ block.</p></div>
       
         &mdash;
         <div class='inline'><p>A newly created
-persistent database for the context.</p></div>
+persistent database for the context.</p>
+</div>
       
     </li>
   
@@ -2087,7 +2185,8 @@ persistent database for the context.</p></div>
       
         &mdash;
         <div class='inline'><p>The returned value from the block is the
-returned value from this method.</p></div>
+returned value from this method.</p>
+</div>
       
     </li>
   
@@ -2103,7 +2202,8 @@ returned value from this method.</p></div>
       
       
         
-        <div class='inline'><p>Returned value from the block.</p></div>
+        <div class='inline'><p>Returned value from the block.</p>
+</div>
       
     </li>
   
@@ -2159,6 +2259,7 @@ returned value from this method.</p></div>
   <div class="discussion">
     <p>コンテキストが使うデータベースを返す。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -2166,6 +2267,7 @@ returned value from this method.</p></div>
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2194,17 +2296,17 @@ returned value from this method.</p></div>
       <pre class="lines">
 
 
-700
-701
-702
-703
-704
-705
-706
-707</pre>
+715
+716
+717
+718
+719
+720
+721
+722</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 700</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 715</span>
 
 static VALUE
 rb_grn_context_get_database (VALUE self)
@@ -2232,6 +2334,7 @@ rb_grn_context_get_database (VALUE self)
   <div class="discussion">
     <p>コンテキストが使うエンコーディングを返す。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -2239,6 +2342,7 @@ rb_grn_context_get_database (VALUE self)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2299,6 +2403,7 @@ rb_grn_context_get_encoding (VALUE self)
   <div class="discussion">
     <p>コンテキストが使うエンコーディングを設定する。エンコーディ
 ングの指定のしかたは <span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">Encoding</a></span> を参照。</p>
+
 
   </div>
 </div>
@@ -2391,6 +2496,7 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
   <div class="discussion">
     <p>コンテキストの中身を人に見やすい文字列で返す。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -2398,6 +2504,7 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2515,8 +2622,9 @@ rb_grn_context_inspect (VALUE self)
     <p>このコンテキストを使って検索したときに検索の挙動をエスカレー
 ションする閾値を返します。
 エスカレーションの詳細は
-<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a>
+"groongaの検索の仕様に関するドキュメント":<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">http://groonga.org/docs/spec/search.html#match-escalation-threshold</a>
 を参照してください。</p>
+
 
   </div>
 </div>
@@ -2525,6 +2633,7 @@ rb_grn_context_inspect (VALUE self)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -2586,8 +2695,9 @@ rb_grn_context_get_match_escalation_threshold (VALUE self)
     <p>このコンテキストを使って検索したときに検索の挙動をエスカレー
 ションする閾値を設定します。
 エスカレーションの詳細は
-<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">groongaの検索の仕様に関するドキュメント</a>
+"groongaの検索の仕様に関するドキュメント":<a href="http://groonga.org/docs/spec/search.html#match-escalation-threshold">http://groonga.org/docs/spec/search.html#match-escalation-threshold</a>
 を参照してください。</p>
+
 
   </div>
 </div>
@@ -2648,6 +2758,7 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
 </p>
 
 
+
   </div>
 </div>
 <div class="tags">
@@ -2693,6 +2804,7 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
 合はブロックに開いたデータベースを渡し、ブロックを抜けると
 きに閉じる。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -2736,6 +2848,7 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
   <div class="discussion">
     <p class="note returns_void">This method returns an undefined value.</p><p>Pops the pushed memory pool.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -2756,7 +2869,8 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
       
       
         
-        <div class='inline'><p>3.0.5</p></div>
+        <div class='inline'><p>3.0.5</p>
+</div>
       
     </li>
   
@@ -2804,15 +2918,19 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
 are created between pushing a new memory pool and popping the
 new memory pool are closed automatically when popping the new
 memory pool.</p>
+
 <p>It is useful for request and response style applications. These
 style applications can close temporary objects between a request
 and resopnse pair. There are some merits for closing temporary
 objects explicilty rather than closing implicitly by GC:</p>
+
 <ul>
-	<li>Less memory consumption</li>
-	<li>Faster</li>
+<li>Less memory consumption</li>
+<li>Faster</li>
 </ul>
-<p>The &#8220;less memory consumption&#8221; merit is caused by temporary
+
+
+<p>The "less memory consumption" merit is caused by temporary
 objects are closed each request and response pair. The max
 memory consumption in these applications is the same as the max
 memory consumption in a request and response pair. If temporary
@@ -2820,10 +2938,13 @@ objects are closed by GC, the max memory consumption in these
 applications is the same as the max memory consumption between
 the current GC and the next GC. These applications process many
 request and response pairs during two GCs.</p>
-<p>The &#8220;faster&#8221; merit is caused by reducing GC. You can reduce GC,
+
+<p>The "faster" merit is caused by reducing GC. You can reduce GC,
 your application run faster because GC is a heavy process. You
 can reduce GC because memory consumption is reduced.</p>
+
 <p>You can nest <span class='object_link'><a href="#push_memory_pool-instance_method" title="Groonga::Context#push_memory_pool (method)">#push_memory_pool</a></span> and <span class='object_link'><a href="#pop_memory_pool-instance_method" title="Groonga::Context#pop_memory_pool (method)">#pop_memory_pool</a></span> pair.</p>
+
 
   </div>
 </div>
@@ -2833,7 +2954,8 @@ can reduce GC because memory consumption is reduced.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Pushes a new memory pool with block</p></div></p>
+        <p class="example_title"><div class='inline'><p>Pushes a new memory pool with block</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span> <span class='kw'>do</span>
@@ -2847,7 +2969,8 @@ can reduce GC because memory consumption is reduced.</p>
 <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>      <span class='comment'># =&gt; true</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Pushes a new memory pool without block</p></div></p>
+        <p class="example_title"><div class='inline'><p>Pushes a new memory pool without block</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span>
@@ -2861,7 +2984,8 @@ can reduce GC because memory consumption is reduced.</p>
 <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>    <span class='comment'># =&gt; true</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Nesting push and pop pair</p></div></p>
+        <p class="example_title"><div class='inline'><p>Nesting push and pop pair</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span> <span class='kw'>do</span>
@@ -2894,6 +3018,7 @@ can reduce GC because memory consumption is reduced.</p>
     <p class="note returns_void">This method returns an undefined value.</p><p>Pushes a new memory pool to the context. You need to pop the
 memory pool explicitly by yourself.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -2909,6 +3034,7 @@ memory pool explicitly by yourself.</p>
   <div class="discussion">
     <p>Closes temporary objects created in the given block
 automatically.</p>
+
 
   </div>
 </div>
@@ -2927,7 +3053,8 @@ automatically.</p>
         
         <div class='inline'><p>[]
 Yields the block. Temporary objects created in the block
-are closed automatically when the block is exited.</p></div>
+are closed automatically when the block is exited.</p>
+</div>
       
     </li>
   
@@ -2944,7 +3071,8 @@ are closed automatically when the block is exited.</p></div>
       
         &mdash;
         <div class='inline'><p>It is the return value of this
-method call.</p></div>
+method call.</p>
+</div>
       
     </li>
   
@@ -2960,7 +3088,8 @@ method call.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>The value returned by the block.</p></div>
+        <div class='inline'><p>The value returned by the block.</p>
+</div>
       
     </li>
   
@@ -2980,7 +3109,8 @@ method call.</p></div>
       
       
         
-        <div class='inline'><p>3.0.5</p></div>
+        <div class='inline'><p>3.0.5</p>
+</div>
       
     </li>
   
@@ -3036,6 +3166,7 @@ method call.</p></div>
   <div class="discussion">
     <p>groongaサーバからクエリ実行結果文字列を受信する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -3053,7 +3184,8 @@ method call.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>クエリ実行結果</p></div>
+        <div class='inline'><p>クエリ実行結果</p>
+</div>
       
     </li>
   
@@ -3065,30 +3197,30 @@ method call.</p></div>
       <pre class="lines">
 
 
-786
-787
-788
-789
-790
-791
-792
-793
-794
-795
-796
-797
-798
-799
-800
 801
 802
 803
 804
 805
-806</pre>
+806
+807
+808
+809
+810
+811
+812
+813
+814
+815
+816
+817
+818
+819
+820
+821</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 786</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 801</span>
 
 static VALUE
 rb_grn_context_receive (VALUE self)
@@ -3130,6 +3262,7 @@ rb_grn_context_receive (VALUE self)
     <p>groongaのプラグインディレクトリにあるプラグイン <em>name</em>
 を登録する。 <em>path</em> を指定するとプラグインディレクトリ以
 外にあるプラグインを登録することができる。</p>
+
 
   </div>
 </div>
@@ -3180,8 +3313,10 @@ rb_grn_context_receive (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Restore commands dumped by &#8220;grndump&#8221; command.</p>
+    <p class="note returns_void">This method returns an undefined value.</p><p>Restore commands dumped by "grndump" command.</p>
+
 <p>If block is given, a response is yielded.</p>
+
 
   </div>
 </div>
@@ -3191,20 +3326,23 @@ rb_grn_context_receive (VALUE self)
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Restore dumped commands as a String object.</p></div></p>
+        <p class="example_title"><div class='inline'><p>Restore dumped commands as a String object.</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_dumped_commands'>dumped_commands</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dump.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='rparen'>)</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Restore dumped commands from a File object.</p></div></p>
+        <p class="example_title"><div class='inline'><p>Restore dumped commands from a File object.</p>
+</div></p>
       
       <pre class="example code"><code><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dump.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_file'>file</span><span class='op'>|</span>
   <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Restore dumped commands and reports result.</p></div></p>
+        <p class="example_title"><div class='inline'><p>Restore dumped commands and reports result.</p>
+</div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_dumped_commands'>dumped_commands</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dump.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
@@ -3228,7 +3366,8 @@ rb_grn_context_receive (VALUE self)
         <div class='inline'><p>commands dumped by grndump.
 It can be a String object or any objects like an IO object such
 as a File object. It should have #each_line that iterates a
-line.</p></div>
+line.</p>
+</div>
       
     </li>
   
@@ -3245,7 +3384,8 @@ line.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>Yields a sent command and its response if block is given.</p></div>
+        <div class='inline'><p>Yields a sent command and its response if block is given.</p>
+</div>
       
     </li>
   
@@ -3263,7 +3403,8 @@ line.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>A sent command.</p></div>
+        <div class='inline'><p>A sent command.</p>
+</div>
       
     </li>
   
@@ -3277,7 +3418,8 @@ line.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>A response for a command.</p></div>
+        <div class='inline'><p>A response for a command.</p>
+</div>
       
     </li>
   
@@ -3365,6 +3507,7 @@ line.</p></div>
   <div class="discussion">
     <p>コンテキストが使っているエンコーディングをRubyのエンコーディングオブジェクトで取得する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -3382,7 +3525,8 @@ line.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>the encoding used by the context</p></div>
+        <div class='inline'><p>the encoding used by the context</p>
+</div>
       
     </li>
   
@@ -3396,7 +3540,8 @@ line.</p></div>
       
       
         
-        <div class='inline'><p>2.0.5</p></div>
+        <div class='inline'><p>2.0.5</p>
+</div>
       
     </li>
   
@@ -3455,7 +3600,9 @@ rb_grn_context_get_ruby_encoding (VALUE self)
     <p><em>table</em> から指定した条件にマッチするレコードの値を取得
 する。 <em>table</em> はテーブル名かテーブルオブジェクトを指定
 する。</p>
+
 <p><em>options</em> に指定できるキーは以下の通り。</p>
+
 
   </div>
 </div>
@@ -3476,7 +3623,8 @@ rb_grn_context_get_ruby_encoding (VALUE self)
       
         &mdash;
         <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -3498,7 +3646,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p>The output_columns</p>
-<p>値を取得するカラムを指定する。</p></div>
+
+<p>値を取得するカラムを指定する。</p>
+</div>
           
         </li>
       
@@ -3509,8 +3659,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p><span class="caps">TODO</span>
-<span class="caps">TODO</span></p></div>
+            &mdash; <div class='inline'><p>TODO
+TODO</p>
+</div>
           
         </li>
       
@@ -3552,6 +3703,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
   <div class="discussion">
     <p>groongaサーバにクエリ文字列を送信する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -3559,6 +3711,7 @@ pairs. Omitted names are initialized as the default value.</p></div>
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -3576,7 +3729,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>クエリ文字列</p></div>
+        <div class='inline'><p>クエリ文字列</p>
+</div>
       
     </li>
   
@@ -3596,7 +3750,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
       
       
         &mdash;
-        <div class='inline'><p>ID</p></div>
+        <div class='inline'><p>ID</p>
+</div>
       
     </li>
   
@@ -3608,26 +3763,26 @@ pairs. Omitted names are initialized as the default value.</p></div>
       <pre class="lines">
 
 
-763
-764
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775
-776
-777
 778
-779</pre>
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 763</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 778</span>
 
 static VALUE
 rb_grn_context_send (VALUE self, VALUE rb_string)
@@ -3652,9 +3807,9 @@ rb_grn_context_send (VALUE self, VALUE rb_string)
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="support_lzo?-instance_method">
+  <h3 class="signature " id="support_lz4?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>support_lzo?</strong> 
+    - (<tt>Boolean</tt>) <strong>support_lz4?</strong> 
   
 
   
@@ -3662,8 +3817,9 @@ rb_grn_context_send (VALUE self, VALUE rb_string)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>groongaがLZOサポート付きでビルドされていれば <ins>true</ins> 、そう
-でなければ <ins>false</ins> を返す。</p>
+    <p>If Groonga supports LZ4 compression, it returns +true+,
+otherwise it returns +false+.</p>
+
 
   </div>
 </div>
@@ -3691,27 +3847,27 @@ rb_grn_context_send (VALUE self, VALUE rb_string)
       <pre class="lines">
 
 
-678
-679
-680
-681
-682
-683
-684
-685
-686
-687
-688
-689
-690
-691
-692</pre>
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 678</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 693</span>
 
 static VALUE
-rb_grn_context_support_lzo_p (VALUE self)
+rb_grn_context_support_lz4_p (VALUE self)
 {
     VALUE rb_support_p;
     grn_ctx *context;
@@ -3719,11 +3875,74 @@ rb_grn_context_support_lzo_p (VALUE self)
 
     context = SELF(self);
     GRN_BOOL_INIT(&amp;support_p, 0);
-    grn_obj_get_info(context, NULL, GRN_INFO_SUPPORT_LZO, &amp;support_p);
+    grn_obj_get_info(context, NULL, GRN_INFO_SUPPORT_LZ4, &amp;support_p);
     rb_support_p = CBOOL2RVAL(GRN_BOOL_VALUE(&amp;support_p));
     GRN_OBJ_FIN(context, &amp;support_p);
 
     return rb_support_p;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="support_lzo?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>support_lzo?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>If Groonga supports LZO compression, it returns +true+,
+otherwise it returns +false+.</p>
+
+<p>Groonga does not support LZO compression 4.0.7 or later.
+This method always returns +false+.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+681
+682
+683
+684
+685</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 681</span>
+
+static VALUE
+rb_grn_context_support_lzo_p (VALUE self)
+{
+    return Qfalse;
 }</pre>
     </td>
   </tr>
@@ -3741,8 +3960,9 @@ rb_grn_context_support_lzo_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>groongaがZlibサポート付きでビルドされていれば <ins>true</ins> 、そう
-でなければ <ins>false</ins> を返す。</p>
+    <p>groongaがZlibサポート付きでビルドされていれば +true+ 、そう
+でなければ +false+ を返す。</p>
+
 
   </div>
 </div>
@@ -3814,9 +4034,9 @@ rb_grn_context_support_zlib_p (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Sun Oct  5 14:02:37 2014 by
+  Generated on Thu Nov  6 16:28:41 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.3).
+  0.8.7.6 (ruby-2.1.4).
 </div>
 
   

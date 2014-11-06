@@ -135,6 +135,7 @@
     <p>スキーマの内容をRubyスクリプトまたはgrn式形式の文字列と
 して出力するクラス。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -172,7 +173,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -194,7 +196,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -216,7 +219,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -238,7 +242,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -260,7 +265,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -282,7 +288,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -306,7 +313,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>A new instance of SchemaDumper.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>A new instance of SchemaDumper.</p>
+</div></span>
   
 </li>
 
@@ -330,6 +338,7 @@
   <div class="discussion">
     <p>Returns a new instance of SchemaDumper</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -341,12 +350,12 @@
       <pre class="lines">
 
 
-145
 146
-147</pre>
+147
+148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -378,14 +387,14 @@
       <pre class="lines">
 
 
-149
 150
 151
 152
-153</pre>
+153
+154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 149</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span>
   <span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_syntax'>syntax</span><span class='op'>|</span>
@@ -412,14 +421,14 @@
       <pre class="lines">
 
 
-179
 180
 181
 182
-183</pre>
+183
+184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 179</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 180</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump_index_columns'>dump_index_columns</span>
   <span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_syntax'>syntax</span><span class='op'>|</span>
@@ -446,14 +455,14 @@
       <pre class="lines">
 
 
-167
 168
 169
 170
-171</pre>
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump_reference_columns'>dump_reference_columns</span>
   <span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_syntax'>syntax</span><span class='op'>|</span>
@@ -480,14 +489,14 @@
       <pre class="lines">
 
 
-155
 156
 157
 158
-159</pre>
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump_tables'>dump_tables</span>
   <span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_syntax'>syntax</span><span class='op'>|</span>
@@ -512,6 +521,7 @@
   <div class="discussion">
     
 
+
   </div>
 </div>
 <div class="tags">
@@ -536,14 +546,14 @@
       <pre class="lines">
 
 
-173
 174
 175
 176
-177</pre>
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_have_index_columns?'>have_index_columns?</span>
   <span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_syntax'>syntax</span><span class='op'>|</span>
@@ -568,6 +578,7 @@
   <div class="discussion">
     
 
+
   </div>
 </div>
 <div class="tags">
@@ -592,14 +603,14 @@
       <pre class="lines">
 
 
-161
 162
 163
 164
-165</pre>
+165
+166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_have_reference_columns?'>have_reference_columns?</span>
   <span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_syntax'>syntax</span><span class='op'>|</span>

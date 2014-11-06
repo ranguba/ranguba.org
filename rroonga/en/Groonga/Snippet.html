@@ -138,6 +138,7 @@
   <div class="discussion">
     <p>スニペット（検索語周辺のテキスト）を生成するためのオブジェクト。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -175,7 +176,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>keyword</em> を追加する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>keyword</em> を追加する。.</p>
+</div></span>
   
 </li>
 
@@ -197,7 +199,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>string</em> を走査し、スニペットを作成する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p><em>string</em> を走査し、スニペットを作成する。.</p>
+</div></span>
   
 </li>
 
@@ -221,7 +224,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>スニペットを作成する。.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>スニペットを作成する。.</p>
+</div></span>
   
 </li>
 
@@ -256,6 +260,7 @@
   <div class="discussion">
     <p>スニペットを作成する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -263,6 +268,7 @@
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -283,7 +289,8 @@
       
         &mdash;
         <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -305,7 +312,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>スキーマ作成時に使用するGroonga::Contextを指定する。</p></div>
+            &mdash; <div class='inline'><p>スキーマ作成時に使用するGroonga::Contextを指定する。</p>
+</div>
           
         </li>
       
@@ -317,7 +325,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p>キーワード文字列・スニペット元の文字列を正規化するかどうか。
-省略した場合は <ins>false</ins> で正規化しない。</p></div>
+省略した場合は +false+ で正規化しない。</p>
+</div>
           
         </li>
       
@@ -331,7 +340,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>先頭の空白を無視するかどうか。省略した場合は <ins>false</ins> で無視しない。</p></div>
+            &mdash; <div class='inline'><p>先頭の空白を無視するかどうか。省略した場合は +false+ で無視しない。</p>
+</div>
           
         </li>
       
@@ -345,7 +355,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>スニペット文字列の長さ。省略した場合は100文字。</p></div>
+            &mdash; <div class='inline'><p>スニペット文字列の長さ。省略した場合は100文字。</p>
+</div>
           
         </li>
       
@@ -359,7 +370,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>生成するスニペットの最大数。省略した場合は3。</p></div>
+            &mdash; <div class='inline'><p>生成するスニペットの最大数。省略した場合は3。</p>
+</div>
           
         </li>
       
@@ -373,8 +385,9 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>スニペット内の <ins>&lt;</ins> , <ins>&gt;</ins> , <ins>&amp;</ins> , <ins>&quot;</ins> をHTMLエスケープするかどうか。
-省略した場合は <ins>false</ins> で、HTMLエスケープしない。</p></div>
+            &mdash; <div class='inline'><p>スニペット内の +&lt;+ , +>+ , +&amp;+ , +"+ をHTMLエスケープするかどうか。
+省略した場合は +false+ で、HTMLエスケープしない。</p>
+</div>
           
         </li>
       
@@ -388,7 +401,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>デフォルトの開始タグ。省略した場合は&quot;&quot;(空文字列)</p></div>
+            &mdash; <div class='inline'><p>デフォルトの開始タグ。省略した場合は""(空文字列)</p>
+</div>
           
         </li>
       
@@ -402,7 +416,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
             
           </span>
           
-            &mdash; <div class='inline'><p>デフォルトの終了タグ。省略した場合は&quot;&quot;(空文字列)</p></div>
+            &mdash; <div class='inline'><p>デフォルトの終了タグ。省略した場合は""(空文字列)</p>
+</div>
           
         </li>
       
@@ -600,6 +615,7 @@ rb_grn_snippet_initialize (int argc, VALUE *argv, VALUE self)
   <div class="discussion">
     <p><em>keyword</em> を追加する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -607,6 +623,7 @@ rb_grn_snippet_initialize (int argc, VALUE *argv, VALUE self)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -624,7 +641,8 @@ rb_grn_snippet_initialize (int argc, VALUE *argv, VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>追加するキーワード</p></div>
+        <div class='inline'><p>追加するキーワード</p>
+</div>
       
     </li>
   
@@ -641,7 +659,8 @@ rb_grn_snippet_initialize (int argc, VALUE *argv, VALUE self)
       
         &mdash;
         <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p></div>
+pairs. Omitted names are initialized as the default value.</p>
+</div>
       
     </li>
   
@@ -666,7 +685,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p>開始タグ。省略した場合はGroonga::Snippet.newで指定した
-<ins>:default_open_tag</ins> 。</p></div>
++:default_open_tag+ 。</p>
+</div>
           
         </li>
       
@@ -681,7 +701,8 @@ pairs. Omitted names are initialized as the default value.</p></div>
           </span>
           
             &mdash; <div class='inline'><p>終了タグ。省略した場合はGroonga::Snippet.newで指定した
-<ins>:default_close_tag</ins> 。</p></div>
++:default_close_tag+ 。</p>
+</div>
           
         </li>
       
@@ -802,6 +823,7 @@ rb_grn_snippet_add_keyword (int argc, VALUE *argv, VALUE self)
   <div class="discussion">
     <p><em>string</em> を走査し、スニペットを作成する。</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -809,6 +831,7 @@ rb_grn_snippet_add_keyword (int argc, VALUE *argv, VALUE self)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -826,7 +849,8 @@ rb_grn_snippet_add_keyword (int argc, VALUE *argv, VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>走査する文字列</p></div>
+        <div class='inline'><p>走査する文字列</p>
+</div>
       
     </li>
   
@@ -846,7 +870,8 @@ rb_grn_snippet_add_keyword (int argc, VALUE *argv, VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>作成されたスニペットの配列</p></div>
+        <div class='inline'><p>作成されたスニペットの配列</p>
+</div>
       
     </li>
   

@@ -136,6 +136,7 @@
   <div class="discussion">
     <p>A class for logging query log.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -187,7 +188,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets the current query log path that is used the default query logger.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Gets the current query log path that is used the default query logger.</p>
+</div></span>
   
 </li>
 
@@ -209,7 +211,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets the query log path that is used the default query logger.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Sets the query log path that is used the default query logger.</p>
+</div></span>
   
 </li>
 
@@ -231,7 +234,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Registers a query logger or a callback that is called when a query log event is emitted.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Registers a query logger or a callback that is called when a query log event is emitted.</p>
+</div></span>
   
 </li>
 
@@ -253,7 +257,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sends reopen request to the current query logger.</p></div></span>
+    <span class="summary_desc"><div class='inline'><p>Sends reopen request to the current query logger.</p>
+</div></span>
   
 </li>
 
@@ -275,7 +280,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -306,7 +312,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -328,7 +335,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -350,7 +358,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+</div></span>
   
 </li>
 
@@ -377,6 +386,7 @@
   <div class="discussion">
     <p>Gets the current query log path that is used the default query logger.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -384,6 +394,7 @@
   <div class="docstring">
   <div class="discussion">
     <p>Returns The current query log path</p>
+
 
   </div>
 </div>
@@ -400,7 +411,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The current query log path</p></div>
+        <div class='inline'><p>The current query log path</p>
+</div>
       
     </li>
   
@@ -417,7 +429,8 @@
       
       
         
-        <div class='inline'><p>3.0.1</p></div>
+        <div class='inline'><p>3.0.1</p>
+</div>
       
     </li>
   
@@ -474,10 +487,12 @@ rb_grn_query_logger_s_get_path (VALUE klass)
 </h3><div class="docstring">
   <div class="discussion">
     <p>Sets the query log path that is used the default query logger. If
-you&#8217;re using custom query logger by <span class='object_link'><a href="#register-class_method" title="Groonga::QueryLogger.register (method)">register</a></span>, the query log path
-isn&#8217;t used. Because it is for the default query logger.</p>
+you're using custom query logger by <span class='object_link'><a href="#register-class_method" title="Groonga::QueryLogger.register (method)">register</a></span>, the query log path
+isn't used. Because it is for the default query logger.</p>
+
 <p>If you specify nil as path, query logging by the default query
 logger is disabled.</p>
+
 
   </div>
 </div>
@@ -487,12 +502,14 @@ logger is disabled.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Changes the query log path for the default query logger</p></div></p>
+        <p class="example_title"><div class='inline'><p>Changes the query log path for the default query logger</p>
+</div></p>
       
       <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/query.log</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Disables query log by the default query logger</p></div></p>
+        <p class="example_title"><div class='inline'><p>Disables query log by the default query logger</p>
+</div></p>
       
       <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='kw'>nil</span></code></pre>
     
@@ -501,6 +518,7 @@ logger is disabled.</p>
   <div class="docstring">
   <div class="discussion">
     <p>Returns void</p>
+
 
   </div>
 </div>
@@ -520,7 +538,8 @@ logger is disabled.</p>
         &mdash;
         <div class='inline'><p>The query log path for the default query
 logger. If nil is specified, query logging by the default query logger
-is disabled.</p></div>
+is disabled.</p>
+</div>
       
     </li>
   
@@ -537,7 +556,8 @@ is disabled.</p></div>
       
       
         
-        <div class='inline'><p>void</p></div>
+        <div class='inline'><p>void</p>
+</div>
       
     </li>
   
@@ -554,7 +574,8 @@ is disabled.</p></div>
       
       
         
-        <div class='inline'><p>3.0.1</p></div>
+        <div class='inline'><p>3.0.1</p>
+</div>
       
     </li>
   
@@ -643,6 +664,7 @@ rb_grn_query_logger_s_set_path (VALUE klass, VALUE rb_path)
     <p>Registers a query logger or a callback that is called when a
 query log event is emitted.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -656,6 +678,7 @@ query log event is emitted.</p>
         <div class="docstring">
   <div class="discussion">
     <p>Returns void</p>
+
 
   </div>
 </div>
@@ -674,7 +697,8 @@ query log event is emitted.</p>
       
         &mdash;
         <div class='inline'><p>The query logger. It is easy to
-inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)">Groonga::QueryLogger</a></span>.</p></div>
+inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)">Groonga::QueryLogger</a></span>.</p>
+</div>
       
     </li>
   
@@ -691,7 +715,8 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
       
       
         
-        <div class='inline'><p>void</p></div>
+        <div class='inline'><p>void</p>
+</div>
       
     </li>
   
@@ -706,6 +731,7 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
         <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -725,7 +751,8 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
       
       
         &mdash;
-        <div class='inline'><p>The options.</p></div>
+        <div class='inline'><p>The options.</p>
+</div>
       
     </li>
   
@@ -748,7 +775,9 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
           </span>
           
             &mdash; <div class='inline'><p>Flags describe what query log should be logged.</p>
-<p>If <code>flags</code> is String, it is parsed by <span class='object_link'><a href="QueryLogger/Flags.html#parse-class_method" title="Groonga::QueryLogger::Flags.parse (method)">Groonga::QueryLogger::Flags.parse</a></span>.</p></div>
+
+<p>If @flags@ is String, it is parsed by <span class='object_link'><a href="QueryLogger/Flags.html#parse-class_method" title="Groonga::QueryLogger::Flags.parse (method)">Groonga::QueryLogger::Flags.parse</a></span>.</p>
+</div>
           
         </li>
       
@@ -766,7 +795,8 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
       
       
         &mdash;
-        <div class='inline'><p>&#8230;</p></div>
+        <div class='inline'><p>...</p>
+</div>
       
     </li>
   
@@ -941,6 +971,7 @@ rb_grn_query_logger_s_register (int argc, VALUE *argv, VALUE klass)
     <p>Sends reopen request to the current query logger. It is useful for
 rotating log file.</p>
 
+
   </div>
 </div>
 <div class="tags">
@@ -958,7 +989,8 @@ rotating log file.</p>
       
       
         
-        <div class='inline'><p>void</p></div>
+        <div class='inline'><p>void</p>
+</div>
       
     </li>
   
@@ -1166,9 +1198,9 @@ rb_grn_query_logger_s_unregister (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Sun Oct  5 14:02:38 2014 by
+  Generated on Thu Nov  6 16:28:42 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.3).
+  0.8.7.6 (ruby-2.1.4).
 </div>
 
   

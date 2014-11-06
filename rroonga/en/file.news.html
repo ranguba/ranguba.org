@@ -93,6 +93,48 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="4-0-6">4.0.6: 2014-11-06</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported Groonga 4.0.7. [GitHub#28]
+	<ul>
+		<li>Changed <span class='object_link'><a href="Groonga/Context.html#support_lzo%3F-instance_method" title="Groonga::Context#support_lzo? (method)">Groonga::Context#support_lzo?</a></span> always returns <code>false</code>.</li>
+		<li>Added <span class='object_link'><a href="Groonga/Context.html#support_lz4%3F-instance_method" title="Groonga::Context#support_lz4? (method)">Groonga::Context#support_lz4?</a></span>.</li>
+		<li>Supported <code>:lz4</code> in <span class='object_link'><a href="Groonga/Table.html#define_column-instance_method" title="Groonga::Table#define_column (method)">Groonga::Table#define_column</a></span> options.</li>
+		<li>Supported <code>:lz4</code> in <span class='object_link'><a href="Groonga/VariableSizeColumn.html#compressed%3F-instance_method" title="Groonga::VariableSizeColumn#compressed? (method)">Groonga::VariableSizeColumn#compressed?</a></span> options.</li>
+		<li>Added <span class='object_link'><a href="Groonga/LZ4Error.html" title="Groonga::LZ4Error (class)">Groonga::LZ4Error</a></span>.</li>
+		<li>[grndump] Supported <code>COMPRESS_ZLIB</code> and <code>COMPRESS_LZ4</code> flags.</li>
+		<li>Added Groonga::TableKeySupport#token_filters.</li>
+		<li>Added Groonga::TableKeySupport#token_filters=.</li>
+		<li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/Hash.html#create-class_method" title="Groonga::Hash.create (method)">Groonga::Hash.create</a></span> options.</li>
+		<li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/PatriciaTrie.html#create-class_method" title="Groonga::PatriciaTrie.create (method)">Groonga::PatriciaTrie.create</a></span> options.</li>
+		<li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/DoubleArrayTrie.html#create-class_method" title="Groonga::DoubleArrayTrie.create (method)">Groonga::DoubleArrayTrie.create</a></span> options.</li>
+		<li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">Groonga::Schema.create_table</a></span> options.</li>
+		<li>Added <span class='object_link'><a href="Groonga/TokenFilterError.html" title="Groonga::TokenFilterError (class)">Groonga::TokenFilterError</a></span>.</li>
+		<li>[grndump] Supported token filters.</li>
+	</ul></li>
+	<li>Added <span class='object_link'><a href="Groonga/Expression.html#keywords-instance_method" title="Groonga::Expression#keywords (method)">Groonga::Expression#keywords</a></span>. [GitHub#30]</li>
+	<li>Stopped to require logger object as the first argument of
+  <span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span> when block is specified.</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+	<li>[doc] Removed deprecated example.
+  [GitHub#26] [Patch by ongaeshi]</li>
+	<li>Fixed a bug that a column assignment raises an error when
+  you assign value with type A and then assign value type B again.
+  [GitHub#27] [Patch by Daisuke Goto]</li>
+	<li>Fixed a memory leak in <span class='object_link'><a href="Groonga/PatriciaTrie.html#open_near_cursor-instance_method" title="Groonga::PatriciaTrie#open_near_cursor (method)">Groonga::PatriciaTrie#open_near_cursor</a></span>.</li>
+	<li>Fixed a bug that you can access a column renamed by
+  <span class='object_link'><a href="Groonga/Column.html#rename-instance_method" title="Groonga::Column#rename (method)">Groonga::Column#rename</a></span> with old name.
+  [GitHub#29] [Patch by Daisuke Goto]</li>
+	<li>[doc] Fixed wrong option name of <span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span>.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>ongaeshi</li>
+	<li>Daisuke Goto</li>
+</ul>
 <h2 id="4-0-5">4.0.5: 2014-10-05</h2>
 <h3>Improvements</h3>
 <ul>
