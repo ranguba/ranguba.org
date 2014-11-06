@@ -92,13 +92,13 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>Release</h1>
+    <div id="content"><div id='filecontents'><h1 id="release">Release</h1>
 
 <p>This document describes how to release Rroonga.</p>
 
-<h2>1. Summarize the changes for this release</h2>
+<h2 id="summarize-the-changes-for-this-release">1. Summarize the changes for this release</h2>
 
-<h3>Show the commits since the latest release</h3>
+<h3 id="show-the-commits-since-the-latest-release">Show the commits since the latest release</h3>
 
 <pre class="code ruby"><code class="ruby">% git log -p --reverse &lt;the latest release version&gt;..HEAD
 </code></pre>
@@ -112,39 +112,36 @@
 
 <p><a href="https://github.com/ranguba/rroonga/commits/master">Commits on GitHub</a></p>
 
-<h3>Extract the commits related to users</h3>
+<h3 id="extract-the-commits-related-to-users">Extract the commits related to users</h3>
 
-<h4>Including</h4>
-
-<ul>
-<li>Changed specifications</li>
-<li>Added new features</li>
-<li>...</li>
-</ul>
-
-
-<h4>Excluding</h4>
+<h4 id="including">Including</h4>
 
 <ul>
-<li>Refactorings</li>
-<li>Tests</li>
-<li>...</li>
+  <li>Changed specifications</li>
+  <li>Added new features</li>
+  <li>…</li>
 </ul>
 
-
-<h3>Categorize</h3>
+<h4 id="excluding">Excluding</h4>
 
 <ul>
-<li>Improvements: new features, improved behavior, ...</li>
-<li>Fixes: fixed bugs, ...</li>
+  <li>Refactorings</li>
+  <li>Tests</li>
+  <li>…</li>
 </ul>
 
+<h3 id="categorize">Categorize</h3>
 
-<h3>Thanks</h3>
+<ul>
+  <li>Improvements: new features, improved behavior, …</li>
+  <li>Fixes: fixed bugs, …</li>
+</ul>
 
-<p>If a contributor name is in a commit log, create "Thanks" group and write the name to the group.</p>
+<h3 id="thanks">Thanks</h3>
 
-<h3>Template for a new release for news.textile</h3>
+<p>If a contributor name is in a commit log, create “Thanks” group and write the name to the group.</p>
+
+<h3 id="template-for-a-new-release-for-newstextile">Template for a new release for news.textile</h3>
 
 <pre class="code ruby"><code class="ruby">h2(#x-x-x). x.x.x: YYYY-MM-DD
 

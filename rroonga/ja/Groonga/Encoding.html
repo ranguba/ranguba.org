@@ -125,38 +125,61 @@
 <p>エンコーディングの指定方法は以下の通り。</p>
 
 <ul>
-<li><p>+nil+ :=
+  <li>
+    <p>+nil+ :=
   コンテキストと関連付けられているオブジェクトの場合（多
 くの場合）はコンテキストのエンコーディングを使用。</p>
 
-<p>それ以外のオブジェクトの場合（コンテキスト自身など）は
+    <p>それ以外のオブジェクトの場合（コンテキスト自身など）は
 groongaのビルド時に指定したエンコーディング
-（ <span class='object_link'><a href="#DEFAULT-constant" title="Groonga::Encoding::DEFAULT (constant)">DEFAULT</a></span> ）を使用 =:</p></li>
-<li><p>+:default+ :=
+（ <span class='object_link'><a href="#DEFAULT-constant" title="Groonga::Encoding::DEFAULT (constant)">DEFAULT</a></span> ）を使用 =:</p>
+  </li>
+  <li>
+    <p>+:default+ :=
   groongaのビルド時に指定したエンコーディングを使用。
-<span class='object_link'><a href="#DEFAULT-constant" title="Groonga::Encoding::DEFAULT (constant)">DEFAULT</a></span> =:</p></li>
-<li><p>+:none+ :=
-  エンコーディングを指定しない。<span class='object_link'><a href="#NONE-constant" title="Groonga::Encoding::NONE (constant)">NONE</a></span> =:</p></li>
-<li><p>+:euc_jp+ :=
-  EUC-JPを使用。<span class='object_link'><a href="#EUC_JP-constant" title="Groonga::Encoding::EUC_JP (constant)">EUC_JP</a></span> =:</p></li>
-<li><p>@"euc-jp"@ :=
-  +:euc_jp+と同じ。 =:</p></li>
-<li><p>+:utf8+ :=
-  UTF-8を使用。<span class='object_link'><a href="#UTF8-constant" title="Groonga::Encoding::UTF8 (constant)">UTF8</a></span> =:</p></li>
-<li><p>@"utf-8"@ :=
-  +:utf8+と同じ。 =:</p></li>
-<li><p>+:sjis+ :=
-  Shift_JISを使用。<span class='object_link'><a href="#SJIS-constant" title="Groonga::Encoding::SJIS (constant)">SJIS</a></span> =:</p></li>
-<li><p>+:shift_jis+ :=
-  +:sjis+と同じ。 =:</p></li>
-<li><p>@"shift-jis"@ :=
-  +:sjis+と同じ。 =:</p></li>
-<li><p>+:latin1+ :=
-  Latin-1を使用。<span class='object_link'><a href="#LATIN1-constant" title="Groonga::Encoding::LATIN1 (constant)">LATIN1</a></span> =:</p></li>
-<li><p>+:koi8r+ :=
-  KOI8-Rを使用。<span class='object_link'><a href="#KOI8R-constant" title="Groonga::Encoding::KOI8R (constant)">KOI8R</a></span> =:</p></li>
+<span class='object_link'><a href="#DEFAULT-constant" title="Groonga::Encoding::DEFAULT (constant)">DEFAULT</a></span> =:</p>
+  </li>
+  <li>
+    <p>+:none+ :=
+  エンコーディングを指定しない。<span class='object_link'><a href="#NONE-constant" title="Groonga::Encoding::NONE (constant)">NONE</a></span> =:</p>
+  </li>
+  <li>
+    <p>+:euc_jp+ :=
+  EUC-JPを使用。<span class='object_link'><a href="#EUC_JP-constant" title="Groonga::Encoding::EUC_JP (constant)">EUC_JP</a></span> =:</p>
+  </li>
+  <li>
+    <p>@”euc-jp”@ :=
+  +:euc_jp+と同じ。 =:</p>
+  </li>
+  <li>
+    <p>+:utf8+ :=
+  UTF-8を使用。<span class='object_link'><a href="#UTF8-constant" title="Groonga::Encoding::UTF8 (constant)">UTF8</a></span> =:</p>
+  </li>
+  <li>
+    <p>@”utf-8”@ :=
+  +:utf8+と同じ。 =:</p>
+  </li>
+  <li>
+    <p>+:sjis+ :=
+  Shift_JISを使用。<span class='object_link'><a href="#SJIS-constant" title="Groonga::Encoding::SJIS (constant)">SJIS</a></span> =:</p>
+  </li>
+  <li>
+    <p>+:shift_jis+ :=
+  +:sjis+と同じ。 =:</p>
+  </li>
+  <li>
+    <p>@”shift-jis”@ :=
+  +:sjis+と同じ。 =:</p>
+  </li>
+  <li>
+    <p>+:latin1+ :=
+  Latin-1を使用。<span class='object_link'><a href="#LATIN1-constant" title="Groonga::Encoding::LATIN1 (constant)">LATIN1</a></span> =:</p>
+  </li>
+  <li>
+    <p>+:koi8r+ :=
+  KOI8-Rを使用。<span class='object_link'><a href="#KOI8R-constant" title="Groonga::Encoding::KOI8R (constant)">KOI8R</a></span> =:</p>
+  </li>
 </ul>
-
 
 
   </div>
@@ -492,7 +515,7 @@ rb_grn_encoding_s_set_default (VALUE self, VALUE rb_encoding)
 </div>
 
     <div id="footer">
-  Generated on Thu Nov  6 16:28:39 2014 by
+  Generated on Fri Nov  7 00:24:36 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.4).
 </div>

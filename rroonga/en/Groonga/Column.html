@@ -143,15 +143,14 @@
 <p>カラムには大きく分けて3種類ある。</p>
 
 <ul>
-<li><span class='object_link'><a href="FixSizeColumn.html" title="Groonga::FixSizeColumn (class)">FixSizeColumn</a></span> :=
+  <li><span class='object_link'><a href="FixSizeColumn.html" title="Groonga::FixSizeColumn (class)">FixSizeColumn</a></span> :=
 固定長のデータを格納するカラム。 =:</li>
-<li><span class='object_link'><a href="VariableSizeColumn.html" title="Groonga::VariableSizeColumn (class)">VariableSizeColumn</a></span> :=
+  <li><span class='object_link'><a href="VariableSizeColumn.html" title="Groonga::VariableSizeColumn (class)">VariableSizeColumn</a></span> :=
 可変長のデータを格納するカラム。 =:</li>
-<li><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> :=
+  <li><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> :=
 転置インデックスを格納するカラム。全文検索や参照元レコー
 ドの検索を行う場合はこのカラムを使用する。 =:</li>
 </ul>
-
 
 <p>固定長データ用カラム・可変長データ用カラムは1つのデータだ
 けを格納するか複数のデータを格納するかを選ぶことができる。
@@ -616,7 +615,7 @@
             
           </span>
           
-            &mdash; <div class='inline'><p><em>:id</em>で指定したレコードのロックを強制的に解除する。
+            &mdash; <div class='inline'><p>_:id_で指定したレコードのロックを強制的に解除する。
 （注: groonga側が未実装のため、現在は無視される。実装さ
 れるのではないかと思っているが、実装されないかもしれな
 い。）</p>
@@ -1183,7 +1182,7 @@ rb_grn_column_get_local_name (VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p><em>:id</em>で指定したレコードをロックする。（注: groonga側が
+            &mdash; <div class='inline'><p>_:id_で指定したレコードをロックする。（注: groonga側が
 未実装のため、現在は無視される）</p>
 </div>
           
@@ -1256,7 +1255,7 @@ rb_grn_column_get_local_name (VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p><em>:id</em>で指定したレコードをロックする。（注: groonga側が
+            &mdash; <div class='inline'><p>_:id_で指定したレコードをロックする。（注: groonga側が
 未実装のため、現在は無視される）</p>
 </div>
           
@@ -1439,7 +1438,7 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p><em>:id</em>で指定したレコードがロックされていれば +true+ を返す。
+            &mdash; <div class='inline'><p>_:id_で指定したレコードがロックされていれば +true+ を返す。
 （注: groonga側が未実装のため、現在は無視される。実装さ
 れるのではないかと思っているが、実装されないかもしれな
 い。）</p>
@@ -1914,15 +1913,15 @@ rb_grn_column_scalar_p (VALUE self)
 
 <p>bc. !!!ruby
   results = description_column.select do |column|
-    column =~ "groonga"
+    column =~ “groonga”
   end
-  snippet = results.expression.snippet([["<em>", "</em>"]])
+  snippet = results.expression.snippet([[“<em>”, “</em>”]])
   results.each do |record|
-    puts "#record[&#39;name&#39;]の説明文の中で「groonga」が含まれる部分"
-    snippet.execute(record["description"]).each do |snippet|
-      puts "---"
-      puts "#snippet..."
-      puts "---"
+    puts “#record[‘name’]の説明文の中で「groonga」が含まれる部分”
+    snippet.execute(record[“description”]).each do |snippet|
+      puts “—”
+      puts “#snippet…”
+      puts “—”
     end
   end</p>
 
@@ -1933,7 +1932,6 @@ rb_grn_column_scalar_p (VALUE self)
 rroongaは&lt;em&gt;groonga&lt;/em&gt;のいわゆるDB-APIの層の...
 ---
 </code></pre>
-
 
 
   </div>
@@ -1995,18 +1993,17 @@ pairs. Omitted names are initialized as the default value.</p>
 下の通り。</p>
 
 <ul>
-<li>Groonga::Operator::OR :=
+  <li>Groonga::Operator::OR :=
 マッチしたレコードを追加。すでにレコードが追加され
 ている場合は何もしない。 =:</li>
-<li>Groonga::Operator::AND :=
+  <li>Groonga::Operator::AND :=
 マッチしたレコードのスコアを増加。マッチしなかった
 レコードを削除。 =:</li>
-<li>Groonga::Operator::AND_NOT :=
+  <li>Groonga::Operator::AND_NOT :=
 マッチしたレコードを削除。 =:</li>
-<li>Groonga::Operator::ADJUST :=
+  <li>Groonga::Operator::ADJUST :=
 マッチしたレコードのスコアを増加。 =:</li>
 </ul>
-
 </div>
           
         </li>
@@ -2133,11 +2130,11 @@ query構文時にカラム指定を利用するかどうか。省略した場合
         <div class='inline'><p>検索条件を指定するのに、 <em>record</em> に対して次のメソッドを使って検索条
 件を指定できます。</p>
 
-<p>@==@ 、 @=~@ 、 @&lt;@ 、 @&lt;=@ 、 @>@ 、 @>=@ 、 @+@ 、 @-@ 、
+<p>@==@ 、 @=~@ 、 @&lt;@ 、 @&lt;=@ 、 @&gt;@ 、 @&gt;=@ 、 @+@ 、 @-@ 、
 @*@ 、 @/@ 、 @%@ 、
-@match(query, :syntax => :query/:script, &amp;block)@
+@match(query, :syntax =&gt; :query/:script, &amp;block)@
 （ <em>query</em> に指定した
-"grn_expr":<a href="http://groonga.org/ja/docs/reference/grn_expr.html">http://groonga.org/ja/docs/reference/grn_expr.html</a>
+“grn_expr”:http://groonga.org/ja/docs/reference/grn_expr.html
 とのマッチ）、
 @similar_search(text)@ （ <em>text</em> との類似文書探索）、
 @term_extract(text)@ （ <em>text</em> 内から <em>record</em> の単語を抽出）</p>
@@ -2179,28 +2176,26 @@ query構文時にカラム指定を利用するかどうか。省略した場合
 指定する。演算子は以下の通り。</p>
 
 <ul>
-<li>なし := [カラム値] == [値]</li>
-<li>@!@ := [カラム値] != [値]</li>
-<li>@&lt;@ := [カラム値] &lt; [値]</li>
-<li>@>@ := [カラム値] > [値]</li>
-<li>@&lt;=@ := [カラム値] &lt;= [値]</li>
-<li>@>=@ := [カラム値] >= [値]</li>
-<li>@@@ := [カラム値]が[値]を含んでいるかどうか</li>
+  <li>なし := [カラム値] == [値]</li>
+  <li>@!@ := [カラム値] != [値]</li>
+  <li>@&lt;@ := [カラム値] &lt; [値]</li>
+  <li>@&gt;@ := [カラム値] &gt; [値]</li>
+  <li>@&lt;=@ := [カラム値] &lt;= [値]</li>
+  <li>@&gt;=@ := [カラム値] &gt;= [値]</li>
+  <li>@@@ := [カラム値]が[値]を含んでいるかどうか</li>
 </ul>
-
 
 <p>例:</p>
 
 <ul>
-<li>@"groonga"@ := <em>column</em> カラムの値が @"groonga"@ のレコードにマッチ</li>
-<li>@"name:daijiro"@ :=
-<em>column</em> カラムが属しているテーブルの @"name"@ カラムの値が
-@"daijiro"@ のレコードにマッチ  =:</li>
-<li>@"description:@@@groonga"@ :=
-<em>column</em> カラムが属しているテーブルの @"description"@ カラムが
-@"groonga"@ を含んでいるレコードにマッチ =:</li>
+  <li>@”groonga”@ := <em>column</em> カラムの値が @”groonga”@ のレコードにマッチ</li>
+  <li>@”name:daijiro”@ :=
+<em>column</em> カラムが属しているテーブルの @”name”@ カラムの値が
+@”daijiro”@ のレコードにマッチ  =:</li>
+  <li>@”description:@@@groonga”@ :=
+<em>column</em> カラムが属しているテーブルの @”description”@ カラムが
+@”groonga”@ を含んでいるレコードにマッチ =:</li>
 </ul>
-
 </div>
       
     </li>
@@ -2245,18 +2240,17 @@ pairs. Omitted names are initialized as the default value.</p>
 下の通り。</p>
 
 <ul>
-<li>Groonga::Operator::OR :=
+  <li>Groonga::Operator::OR :=
 マッチしたレコードを追加。すでにレコードが追加され
 ている場合は何もしない。 =:</li>
-<li>Groonga::Operator::AND :=
+  <li>Groonga::Operator::AND :=
 マッチしたレコードのスコアを増加。マッチしなかった
 レコードを削除。 =:</li>
-<li>Groonga::Operator::AND_NOT :=
+  <li>Groonga::Operator::AND_NOT :=
 マッチしたレコードを削除。 =:</li>
-<li>Groonga::Operator::ADJUST :=
+  <li>Groonga::Operator::ADJUST :=
 マッチしたレコードのスコアを増加。 =:</li>
 </ul>
-
 </div>
           
         </li>
@@ -2441,18 +2435,17 @@ pairs. Omitted names are initialized as the default value.</p>
 下の通り。</p>
 
 <ul>
-<li>Groonga::Operator::OR :=
+  <li>Groonga::Operator::OR :=
 マッチしたレコードを追加。すでにレコードが追加され
 ている場合は何もしない。 =:</li>
-<li>Groonga::Operator::AND :=
+  <li>Groonga::Operator::AND :=
 マッチしたレコードのスコアを増加。マッチしなかった
 レコードを削除。 =:</li>
-<li>Groonga::Operator::AND_NOT :=
+  <li>Groonga::Operator::AND_NOT :=
 マッチしたレコードを削除。 =:</li>
-<li>Groonga::Operator::ADJUST :=
+  <li>Groonga::Operator::ADJUST :=
 マッチしたレコードのスコアを増加。 =:</li>
 </ul>
-
 </div>
           
         </li>
@@ -3137,7 +3130,7 @@ rb_grn_column_vector_p (VALUE self)
       
         &mdash;
         <div class='inline'><p>@true@ if the column is vector and created with
-@:with_weight => true@ flag, @false@ otherwise.</p>
+@:with_weight =&gt; true@ flag, @false@ otherwise.</p>
 </div>
       
     </li>
