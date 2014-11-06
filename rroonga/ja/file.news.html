@@ -104,8 +104,8 @@
 		<li><span class='object_link'><a href="Groonga/VariableSizeColumn.html#compressed%3F-instance_method" title="Groonga::VariableSizeColumn#compressed? (method)">Groonga::VariableSizeColumn#compressed?</a></span> を <code>:lz4</code> オプションに対応。</li>
 		<li><span class='object_link'><a href="Groonga/LZ4Error.html" title="Groonga::LZ4Error (class)">Groonga::LZ4Error</a></span> を追加。</li>
 		<li>[grndump] <code>COMPRESS_ZLIB</code> と <code>COMPRESS_LZ4</code> フラグに対応。</li>
-		<li>Groonga::TableKeySupport#token_filters を追加。</li>
-		<li>Groonga::TableKeySupport#token_filters= を追加。</li>
+		<li><span class='object_link'><a href="Groonga/Table/KeySupport.html#token_filters-instance_method" title="Groonga::Table::KeySupport#token_filters (method)">Groonga::Table::KeySupport#token_filters</a></span> を追加。</li>
+		<li><span class='object_link'><a href="Groonga/Table/KeySupport.html#token_filters%3D-instance_method" title="Groonga::Table::KeySupport#token_filters= (method)">Groonga::Table::KeySupport#token_filters=</a></span> を追加。</li>
 		<li><span class='object_link'><a href="Groonga/Hash.html#create-class_method" title="Groonga::Hash.create (method)">Groonga::Hash.create</a></span> を <code>:token_filters</code> に対応。</li>
 		<li><span class='object_link'><a href="Groonga/PatriciaTrie.html#create-class_method" title="Groonga::PatriciaTrie.create (method)">Groonga::PatriciaTrie.create</a></span> を <code>:token_filters</code> に対応。</li>
 		<li><span class='object_link'><a href="Groonga/DoubleArrayTrie.html#create-class_method" title="Groonga::DoubleArrayTrie.create (method)">Groonga::DoubleArrayTrie.create</a></span> を <code>:token_filters</code> に対応。</li>
@@ -114,16 +114,19 @@
 		<li>[grndump] トークンフィルターに対応。</li>
 	</ul></li>
 	<li><span class='object_link'><a href="Groonga/Expression.html#keywords-instance_method" title="Groonga::Expression#keywords (method)">Groonga::Expression#keywords</a></span> を追加。 [GitHub#30]</li>
-	<li><span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span> にブロックが指定された場合、第一引数に  ロガーを指定しなくてもいいようにした。</li>
+	<li><span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span> にブロックが指定された場合、第一引数に
+  ロガーを指定しなくてもいいようにした。</li>
 </ul>
 <h3>修正</h3>
 <ul>
 	<li>[doc] 非推奨のオプションが例に使われていたのを修正。
   [GitHub#26] [ongaeshiさんがパッチ提供]</li>
-	<li>カラムに値を設定するとき、すでに入っている型とは違う型の値を設定  するとエラーになる場合があるバグを修正。
+	<li>カラムに値を設定するとき、すでに入っている型とは違う型の値を設定
+  するとエラーになる場合があるバグを修正。
   [GitHub#27] [Daisuke Gotoさんがパッチ提供]</li>
 	<li><span class='object_link'><a href="Groonga/PatriciaTrie.html#open_near_cursor-instance_method" title="Groonga::PatriciaTrie#open_near_cursor (method)">Groonga::PatriciaTrie#open_near_cursor</a></span> のメモリリークを修正。</li>
-	<li><span class='object_link'><a href="Groonga/Column.html#rename-instance_method" title="Groonga::Column#rename (method)">Groonga::Column#rename</a></span> でカラムをリネームしたとき、  古い名前でアクセスできてしまうバグを修正。
+	<li><span class='object_link'><a href="Groonga/Column.html#rename-instance_method" title="Groonga::Column#rename (method)">Groonga::Column#rename</a></span> でカラムをリネームしたとき、
+  古い名前でアクセスできてしまうバグを修正。
   [GitHub#29] [Daisuke Gotoさんがパッチ提供]</li>
 	<li>[doc] <span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span> のオプションの名前を修正。</li>
 </ul>
@@ -1123,7 +1126,7 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Fri Nov  7 00:24:35 2014 by
+  Generated on Fri Nov  7 01:03:14 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.4).
 </div>
