@@ -93,6 +93,17 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="4-0-7">4.0.7: 2014-12-12</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported Groonga 4.0.8. Groonga 4.0.7 or older aren&#8217;t supported.</li>
+	<li>Added <code>:reuse_posting_object</code> option to
+  <span class='object_link'><a href="Groonga/IndexCursor.html#each-instance_method" title="Groonga::IndexCursor#each (method)">Groonga::IndexCursor#each</a></span>. The option improves performance by
+  reducing memory allocation. The option is disabled by default because
+  reusing the same object isn&#8217;t Rubyish.</li>
+	<li>Added <span class='object_link'><a href="Groonga/IndexColumn.html#estimate_size-instance_method" title="Groonga::IndexColumn#estimate_size (method)">Groonga::IndexColumn#estimate_size</a></span>. [GitHub#38]</li>
+	<li>Accepted string for integer, unsigned integer and float type key.</li>
+</ul>
 <h2 id="4-0-6">4.0.6: 2014-11-06</h2>
 <h3>Improvements</h3>
 <ul>

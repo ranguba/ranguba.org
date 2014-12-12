@@ -233,12 +233,6 @@
       <pre class="lines">
 
 
-94
-95
-96
-97
-98
-99
 100
 101
 102
@@ -266,20 +260,54 @@
 124
 125
 126
-127</pre>
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-cursor.c', line 94</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-cursor.c', line 100</span>
 
 static VALUE
-rb_grn_index_cursor_each (VALUE self)
+rb_grn_index_cursor_each (int argc, VALUE *argv, VALUE self)
 {
     grn_obj *cursor;
     grn_ctx *context;
+    grn_bool reuse_posting_object;
+    VALUE rb_options;
+    VALUE rb_reuse_posting_object;
     VALUE rb_table;
     VALUE rb_lexicon;
+    VALUE rb_posting = Qnil;
 
-    RETURN_ENUMERATOR(self, 0, NULL);
+    RETURN_ENUMERATOR(self, argc, argv);
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_options);
+
+    rb_grn_scan_options(rb_options,
+                        &quot;reuse_posting_object&quot;, &amp;rb_reuse_posting_object,
+                        NULL);
 
     rb_grn_index_cursor_deconstruct(SELF(self), &amp;cursor, &amp;context,
                                     NULL, NULL, NULL, NULL);
@@ -294,9 +322,17 @@ rb_grn_index_cursor_each (VALUE self)
 
     rb_table = rb_iv_get(self, &quot;@table&quot;);
     rb_lexicon = rb_iv_get(self, &quot;@lexicon&quot;);
+    reuse_posting_object = RVAL2CBOOL(rb_reuse_posting_object);
+
+    if (reuse_posting_object) {
+        rb_posting = rb_grn_posting_new(NULL, GRN_ID_NIL, rb_table, rb_lexicon);
+    }
     while (GRN_TRUE) {
-        VALUE rb_posting;
-        rb_posting = next_value(context, cursor, rb_table, rb_lexicon);
+        if (!reuse_posting_object) {
+            rb_posting = Qnil;
+        }
+        rb_posting = next_value(rb_posting,
+                                context, cursor, rb_table, rb_lexicon);
         if (NIL_P(rb_posting)) {
             break;
         }
@@ -325,12 +361,6 @@ rb_grn_index_cursor_each (VALUE self)
       <pre class="lines">
 
 
-73
-74
-75
-76
-77
-78
 79
 80
 81
@@ -344,10 +374,16 @@ rb_grn_index_cursor_each (VALUE self)
 89
 90
 91
-92</pre>
+92
+93
+94
+95
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-cursor.c', line 73</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-index-cursor.c', line 79</span>
 
 static VALUE
 rb_grn_index_cursor_next (VALUE self)
@@ -363,7 +399,7 @@ rb_grn_index_cursor_next (VALUE self)
         VALUE rb_lexicon;
         rb_table = rb_iv_get(self, &quot;@table&quot;);
         rb_lexicon = rb_iv_get(self, &quot;@lexicon&quot;);
-        rb_posting = next_value(context, cursor, rb_table, rb_lexicon);
+        rb_posting = next_value(Qnil, context, cursor, rb_table, rb_lexicon);
     }
 
     return rb_posting;
@@ -379,9 +415,9 @@ rb_grn_index_cursor_next (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Fri Nov  7 01:36:05 2014 by
+  Generated on Sat Dec 13 01:56:09 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.4).
+  0.8.7.6 (ruby-2.1.5).
 </div>
 
   

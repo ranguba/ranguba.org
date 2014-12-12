@@ -664,6 +664,11 @@ rb_grn_expression_initialize (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+533
+534
+535
+536
+537
 538
 539
 540
@@ -688,15 +693,10 @@ rb_grn_expression_initialize (int argc, VALUE *argv, VALUE self)
 559
 560
 561
-562
-563
-564
-565
-566
-567</pre>
+562</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 538</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 533</span>
 
 static VALUE
 rb_grn_expression_array_reference (VALUE self, VALUE rb_name_or_offset)
@@ -1467,7 +1467,7 @@ rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
       
       
         
-        <div class='inline'><p>4.0.8</p>
+        <div class='inline'><p>4.0.7</p>
 </div>
       
     </li>
@@ -1498,12 +1498,7 @@ rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
 518
 519
 520
-521
-522
-523
-524
-525
-526</pre>
+521</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 503</span>
@@ -1511,8 +1506,6 @@ rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
 static VALUE
 rb_grn_expression_dump_plan (VALUE self)
 {
-/* TODO: Remove me after Groogna 4.0.8 is released. */
-#ifdef HAVE_GRN_EXPR_DUMP_PLAN
     grn_ctx *context = NULL;
     grn_obj *expression;
     grn_obj dumped_plan;
@@ -1528,9 +1521,6 @@ rb_grn_expression_dump_plan (VALUE self)
     grn_obj_unlink(context, &amp;dumped_plan);
 
     return rb_dumped_plan;
-#else
-    return rb_str_new2(&quot;&quot;);
-#endif
 }</pre>
     </td>
   </tr>
@@ -1678,6 +1668,11 @@ rb_grn_expression_execute (VALUE self)
       <pre class="lines">
 
 
+573
+574
+575
+576
+577
 578
 579
 580
@@ -1699,15 +1694,10 @@ rb_grn_expression_execute (VALUE self)
 596
 597
 598
-599
-600
-601
-602
-603
-604</pre>
+599</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 578</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 573</span>
 
 static VALUE
 rb_grn_expression_inspect (VALUE self)
@@ -1820,6 +1810,11 @@ guaranteed.</p>
       <pre class="lines">
 
 
+760
+761
+762
+763
+764
 765
 766
 767
@@ -1841,15 +1836,10 @@ guaranteed.</p>
 783
 784
 785
-786
-787
-788
-789
-790
-791</pre>
+786</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 765</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 760</span>
 
 static VALUE
 rb_grn_expression_get_keywords (VALUE self)
@@ -2542,6 +2532,11 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
+649
+650
+651
+652
+653
 654
 655
 656
@@ -2633,15 +2628,10 @@ pairs. Omitted names are initialized as the default value.</p>
 742
 743
 744
-745
-746
-747
-748
-749
-750</pre>
+745</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 654</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-expression.c', line 649</span>
 
 static VALUE
 rb_grn_expression_snippet (int argc, VALUE *argv, VALUE self)
@@ -2750,9 +2740,9 @@ rb_grn_expression_snippet (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Fri Nov  7 01:36:05 2014 by
+  Generated on Sat Dec 13 01:56:09 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.4).
+  0.8.7.6 (ruby-2.1.5).
 </div>
 
   

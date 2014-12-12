@@ -93,6 +93,18 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2 id="4-0-7">4.0.7: 2014-12-12</h2>
+<h3>改善</h3>
+<ul>
+	<li>Groonga 4.0.8に対応。Groonga 4.0.7以前はサポートしません。</li>
+	<li><span class='object_link'><a href="Groonga/IndexCursor.html#each-instance_method" title="Groonga::IndexCursor#each (method)">Groonga::IndexCursor#each</a></span> に <code>:reuse_posting_object</code> オプションを追加。
+  このオプションはメモリー割り当てを減らすことでパフォーマンスを改善します。
+  ただし、同じオブジェクトを再利用するのはRubyらしくないため、
+  このオプションはデフォルトでは無効です。</li>
+	<li><span class='object_link'><a href="Groonga/IndexColumn.html#estimate_size-instance_method" title="Groonga::IndexColumn#estimate_size (method)">Groonga::IndexColumn#estimate_size</a></span> を追加。 [GitHub#38]</li>
+	<li>数値型（intger、unsigned integer、float）のキーが文字列型の数値を
+  受け入れるようになった。（内部で数値型に変換される）</li>
+</ul>
 <h2 id="4-0-6">4.0.6: 2014-11-06</h2>
 <h3>改善</h3>
 <ul>
@@ -1126,9 +1138,9 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Fri Nov  7 01:35:57 2014 by
+  Generated on Sat Dec 13 01:56:02 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.4).
+  0.8.7.6 (ruby-2.1.5).
 </div>
 
   
