@@ -20,7 +20,11 @@
   </head>
   <body>
     <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) {
+      var hasFrames = false;
+      try {
+        hasFrames = window.top.frames.main ? true : false;
+      } catch (e) { }
+      if (hasFrames) {
         document.getElementById('base_target').target = 'main';
         document.body.className = 'frames';
       }
@@ -150,14 +154,14 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/Generators/MigrationGenerator.html#create_migration_file-instance_method" title="ActiveGroonga::Generators::MigrationGenerator#create_migration_file (method)">#create_migration_file</a></span>
-    <small>ActiveGroonga::Generators::MigrationGenerator</small>
+    <span class='object_link'><a href="ActiveGroonga/Generators/ModelGenerator.html#create_migration_file-instance_method" title="ActiveGroonga::Generators::ModelGenerator#create_migration_file (method)">#create_migration_file</a></span>
+    <small>ActiveGroonga::Generators::ModelGenerator</small>
   </li>
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Generators/ModelGenerator.html#create_migration_file-instance_method" title="ActiveGroonga::Generators::ModelGenerator#create_migration_file (method)">#create_migration_file</a></span>
-    <small>ActiveGroonga::Generators::ModelGenerator</small>
+    <span class='object_link'><a href="ActiveGroonga/Generators/MigrationGenerator.html#create_migration_file-instance_method" title="ActiveGroonga::Generators::MigrationGenerator#create_migration_file (method)">#create_migration_file</a></span>
+    <small>ActiveGroonga::Generators::MigrationGenerator</small>
   </li>
   
 
@@ -180,14 +184,14 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/SchemaManagementTable.html#current_version-instance_method" title="ActiveGroonga::SchemaManagementTable#current_version (method)">#current_version</a></span>
-    <small>ActiveGroonga::SchemaManagementTable</small>
+    <span class='object_link'><a href="ActiveGroonga/Migrator.html#current_version-instance_method" title="ActiveGroonga::Migrator#current_version (method)">#current_version</a></span>
+    <small>ActiveGroonga::Migrator</small>
   </li>
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/Migrator.html#current_version-instance_method" title="ActiveGroonga::Migrator#current_version (method)">#current_version</a></span>
-    <small>ActiveGroonga::Migrator</small>
+    <span class='object_link'><a href="ActiveGroonga/SchemaManagementTable.html#current_version-instance_method" title="ActiveGroonga::SchemaManagementTable#current_version (method)">#current_version</a></span>
+    <small>ActiveGroonga::SchemaManagementTable</small>
   </li>
   
 
@@ -294,14 +298,14 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/ResultSet.html#each-instance_method" title="ActiveGroonga::ResultSet#each (method)">#each</a></span>
-    <small>ActiveGroonga::ResultSet</small>
+    <span class='object_link'><a href="ActiveGroonga/Vector.html#each-instance_method" title="ActiveGroonga::Vector#each (method)">#each</a></span>
+    <small>ActiveGroonga::Vector</small>
   </li>
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Vector.html#each-instance_method" title="ActiveGroonga::Vector#each (method)">#each</a></span>
-    <small>ActiveGroonga::Vector</small>
+    <span class='object_link'><a href="ActiveGroonga/ResultSet.html#each-instance_method" title="ActiveGroonga::ResultSet#each (method)">#each</a></span>
+    <small>ActiveGroonga::ResultSet</small>
   </li>
   
 
@@ -384,26 +388,14 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/NoKeyTableError.html#initialize-instance_method" title="ActiveGroonga::NoKeyTableError#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::NoKeyTableError</small>
-  </li>
-  
-
-  <li class="r2 ">
     <span class='object_link'><a href="ActiveGroonga/TestFixtures/ConnectionMock.html#initialize-instance_method" title="ActiveGroonga::TestFixtures::ConnectionMock#initialize (method)">#initialize</a></span>
     <small>ActiveGroonga::TestFixtures::ConnectionMock</small>
   </li>
   
 
-  <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Generators/MigrationGenerator.html#initialize-instance_method" title="ActiveGroonga::Generators::MigrationGenerator#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::Generators::MigrationGenerator</small>
-  </li>
-  
-
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/RecordInvalid.html#initialize-instance_method" title="ActiveGroonga::RecordInvalid#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::RecordInvalid</small>
+    <span class='object_link'><a href="ActiveGroonga/Vector.html#initialize-instance_method" title="ActiveGroonga::Vector#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::Vector</small>
   </li>
   
 
@@ -414,38 +406,62 @@
   
 
   <li class="r2 ">
+    <span class='object_link'><a href="ActiveGroonga/Base.html#initialize-instance_method" title="ActiveGroonga::Base#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::Base</small>
+  </li>
+  
+
+  <li class="r1 ">
     <span class='object_link'><a href="ActiveGroonga/KeyOverrideError.html#initialize-instance_method" title="ActiveGroonga::KeyOverrideError#initialize (method)">#initialize</a></span>
     <small>ActiveGroonga::KeyOverrideError</small>
   </li>
   
 
+  <li class="r2 ">
+    <span class='object_link'><a href="ActiveGroonga/Generators/ModelGenerator.html#initialize-instance_method" title="ActiveGroonga::Generators::ModelGenerator#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::Generators::ModelGenerator</small>
+  </li>
+  
+
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Vector.html#initialize-instance_method" title="ActiveGroonga::Vector#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::Vector</small>
+    <span class='object_link'><a href="ActiveGroonga/NoKeyTableError.html#initialize-instance_method" title="ActiveGroonga::NoKeyTableError#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::NoKeyTableError</small>
   </li>
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/Migrator.html#initialize-instance_method" title="ActiveGroonga::Migrator#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::Migrator</small>
-  </li>
-  
-
-  <li class="r1 ">
     <span class='object_link'><a href="ActiveGroonga/Schema.html#initialize-instance_method" title="ActiveGroonga::Schema#initialize (method)">#initialize</a></span>
     <small>ActiveGroonga::Schema</small>
   </li>
   
 
+  <li class="r1 ">
+    <span class='object_link'><a href="ActiveGroonga/Migrator.html#initialize-instance_method" title="ActiveGroonga::Migrator#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::Migrator</small>
+  </li>
+  
+
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/Database.html#initialize-instance_method" title="ActiveGroonga::Database#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::Database</small>
+    <span class='object_link'><a href="ActiveGroonga/RecordInvalid.html#initialize-instance_method" title="ActiveGroonga::RecordInvalid#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::RecordInvalid</small>
   </li>
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Base.html#initialize-instance_method" title="ActiveGroonga::Base#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::Base</small>
+    <span class='object_link'><a href="ActiveGroonga/Migration.html#initialize-instance_method" title="ActiveGroonga::Migration#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::Migration</small>
+  </li>
+  
+
+  <li class="r2 ">
+    <span class='object_link'><a href="ActiveGroonga/Generators/MigrationGenerator.html#initialize-instance_method" title="ActiveGroonga::Generators::MigrationGenerator#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::Generators::MigrationGenerator</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="ActiveGroonga/Database.html#initialize-instance_method" title="ActiveGroonga::Database#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::Database</small>
   </li>
   
 
@@ -456,8 +472,8 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/SchemaManagementTable.html#initialize-instance_method" title="ActiveGroonga::SchemaManagementTable#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::SchemaManagementTable</small>
+    <span class='object_link'><a href="ActiveGroonga/MigrationEntry.html#initialize-instance_method" title="ActiveGroonga::MigrationEntry#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::MigrationEntry</small>
   </li>
   
 
@@ -468,20 +484,8 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Generators/ModelGenerator.html#initialize-instance_method" title="ActiveGroonga::Generators::ModelGenerator#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::Generators::ModelGenerator</small>
-  </li>
-  
-
-  <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/MigrationEntry.html#initialize-instance_method" title="ActiveGroonga::MigrationEntry#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::MigrationEntry</small>
-  </li>
-  
-
-  <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Migration.html#initialize-instance_method" title="ActiveGroonga::Migration#initialize (method)">#initialize</a></span>
-    <small>ActiveGroonga::Migration</small>
+    <span class='object_link'><a href="ActiveGroonga/SchemaManagementTable.html#initialize-instance_method" title="ActiveGroonga::SchemaManagementTable#initialize (method)">#initialize</a></span>
+    <small>ActiveGroonga::SchemaManagementTable</small>
   </li>
   
 
@@ -552,8 +556,8 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Migrator.html#migrate-instance_method" title="ActiveGroonga::Migrator#migrate (method)">#migrate</a></span>
-    <small>ActiveGroonga::Migrator</small>
+    <span class='object_link'><a href="ActiveGroonga/Migration.html#migrate-instance_method" title="ActiveGroonga::Migration#migrate (method)">#migrate</a></span>
+    <small>ActiveGroonga::Migration</small>
   </li>
   
 
@@ -564,8 +568,8 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Migration.html#migrate-instance_method" title="ActiveGroonga::Migration#migrate (method)">#migrate</a></span>
-    <small>ActiveGroonga::Migration</small>
+    <span class='object_link'><a href="ActiveGroonga/Migrator.html#migrate-instance_method" title="ActiveGroonga::Migrator#migrate (method)">#migrate</a></span>
+    <small>ActiveGroonga::Migrator</small>
   </li>
   
 
@@ -600,20 +604,20 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Migration.html#name-instance_method" title="ActiveGroonga::Migration#name (method)">#name</a></span>
-    <small>ActiveGroonga::Migration</small>
-  </li>
-  
-
-  <li class="r2 ">
     <span class='object_link'><a href="ActiveGroonga/MigrationEntry.html#name-instance_method" title="ActiveGroonga::MigrationEntry#name (method)">#name</a></span>
     <small>ActiveGroonga::MigrationEntry</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="ActiveGroonga/Generators/Column.html#name-instance_method" title="ActiveGroonga::Generators::Column#name (method)">#name</a></span>
     <small>ActiveGroonga::Generators::Column</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="ActiveGroonga/Migration.html#name-instance_method" title="ActiveGroonga::Migration#name (method)">#name</a></span>
+    <small>ActiveGroonga::Migration</small>
   </li>
   
 
@@ -648,14 +652,14 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Migration.html#path-instance_method" title="ActiveGroonga::Migration#path (method)">#path</a></span>
-    <small>ActiveGroonga::Migration</small>
+    <span class='object_link'><a href="ActiveGroonga/DuplicateMigrationVersionError.html#path-instance_method" title="ActiveGroonga::DuplicateMigrationVersionError#path (method)">#path</a></span>
+    <small>ActiveGroonga::DuplicateMigrationVersionError</small>
   </li>
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/DuplicateMigrationVersionError.html#path-instance_method" title="ActiveGroonga::DuplicateMigrationVersionError#path (method)">#path</a></span>
-    <small>ActiveGroonga::DuplicateMigrationVersionError</small>
+    <span class='object_link'><a href="ActiveGroonga/Migration.html#path-instance_method" title="ActiveGroonga::Migration#path (method)">#path</a></span>
+    <small>ActiveGroonga::Migration</small>
   </li>
   
 
@@ -762,26 +766,26 @@
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/Persistence.html#save-instance_method" title="ActiveGroonga::Persistence#save (method)">#save</a></span>
-    <small>ActiveGroonga::Persistence</small>
-  </li>
-  
-
-  <li class="r1 ">
     <span class='object_link'><a href="ActiveGroonga/Validations.html#save-instance_method" title="ActiveGroonga::Validations#save (method)">#save</a></span>
     <small>ActiveGroonga::Validations</small>
   </li>
   
 
+  <li class="r1 ">
+    <span class='object_link'><a href="ActiveGroonga/Persistence.html#save-instance_method" title="ActiveGroonga::Persistence#save (method)">#save</a></span>
+    <small>ActiveGroonga::Persistence</small>
+  </li>
+  
+
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/Validations.html#save%21-instance_method" title="ActiveGroonga::Validations#save! (method)">#save!</a></span>
-    <small>ActiveGroonga::Validations</small>
+    <span class='object_link'><a href="ActiveGroonga/Persistence.html#save%21-instance_method" title="ActiveGroonga::Persistence#save! (method)">#save!</a></span>
+    <small>ActiveGroonga::Persistence</small>
   </li>
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Persistence.html#save%21-instance_method" title="ActiveGroonga::Persistence#save! (method)">#save!</a></span>
-    <small>ActiveGroonga::Persistence</small>
+    <span class='object_link'><a href="ActiveGroonga/Validations.html#save%21-instance_method" title="ActiveGroonga::Validations#save! (method)">#save!</a></span>
+    <small>ActiveGroonga::Validations</small>
   </li>
   
 
@@ -828,20 +832,20 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/Base.html#table-class_method" title="ActiveGroonga::Base.table (method)">table</a></span>
-    <small>ActiveGroonga::Base</small>
-  </li>
-  
-
-  <li class="r2 ">
     <span class='object_link'><a href="ActiveGroonga/NoKeyTableError.html#table-instance_method" title="ActiveGroonga::NoKeyTableError#table (method)">#table</a></span>
     <small>ActiveGroonga::NoKeyTableError</small>
   </li>
   
 
-  <li class="r1 ">
+  <li class="r2 ">
     <span class='object_link'><a href="ActiveGroonga/KeyOverrideError.html#table-instance_method" title="ActiveGroonga::KeyOverrideError#table (method)">#table</a></span>
     <small>ActiveGroonga::KeyOverrideError</small>
+  </li>
+  
+
+  <li class="r1 ">
+    <span class='object_link'><a href="ActiveGroonga/Base.html#table-class_method" title="ActiveGroonga::Base.table (method)">table</a></span>
+    <small>ActiveGroonga::Base</small>
   </li>
   
 
@@ -936,14 +940,14 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="ActiveGroonga/MigrationEntry.html#version-instance_method" title="ActiveGroonga::MigrationEntry#version (method)">#version</a></span>
-    <small>ActiveGroonga::MigrationEntry</small>
+    <span class='object_link'><a href="ActiveGroonga/DuplicateMigrationVersionError.html#version-instance_method" title="ActiveGroonga::DuplicateMigrationVersionError#version (method)">#version</a></span>
+    <small>ActiveGroonga::DuplicateMigrationVersionError</small>
   </li>
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="ActiveGroonga/DuplicateMigrationVersionError.html#version-instance_method" title="ActiveGroonga::DuplicateMigrationVersionError#version (method)">#version</a></span>
-    <small>ActiveGroonga::DuplicateMigrationVersionError</small>
+    <span class='object_link'><a href="ActiveGroonga/MigrationEntry.html#version-instance_method" title="ActiveGroonga::MigrationEntry#version (method)">#version</a></span>
+    <small>ActiveGroonga::MigrationEntry</small>
   </li>
   
 

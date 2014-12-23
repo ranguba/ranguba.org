@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!file.news.html";
 </script>
 
 
@@ -93,6 +93,36 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="4-2-0">4.2.0: 2014-12-23</h2>
+<h3>改良</h3>
+<ul>
+	<li>Supported Rails 4.2.0.</li>
+	<li>[GitHub#11] Supported yielding block on <span class='object_link'><a href="ActiveGroonga/Base.html#initialize-instance_method" title="ActiveGroonga::Base#initialize (method)">ActiveGroonga::Base#initialize</a></span>.
+  [Patch by Eito Katagiri]</li>
+	<li>[GitHub#13][development] Reduced needless <code>make</code> on testing.
+  [Patch by Eito Katagiri]</li>
+	<li>[GitHub#17] Added <code>groonga:migrate:status</code> task that is similar to
+  <code>db:migrate:status</code> task.
+  [Patch by Eito Katagiri]</li>
+</ul>
+<h3>修正</h3>
+<ul>
+	<li>[GitHub#14] Fixed <span class="caps">URL</span> in document.
+  [Patch by Eito Katagiri]</li>
+	<li>[GitHub#15] Fixed a bug that <code>Groonga::NoSuchColumn</code> is raised when
+  iterating <span class='object_link'><a href="ActiveGroonga/ResultSet.html" title="ActiveGroonga::ResultSet (class)">ActiveGroonga::ResultSet</a></span> that is created with
+  <span class='object_link'><a href="ActiveGroonga/Base.html#select-class_method" title="ActiveGroonga::Base.select (method)">ActiveGroonga::Base.select</a></span> of <code>Groonga::Hash</code> table.
+  [Patch by Eito Katagiri]</li>
+	<li>[GitHub#16] Fixed indentation in generated migration file.
+  [Patch by Eito Katagiri]</li>
+	<li>Fixed a bug that <code>updated_at</code> isn&#8217;t updated on creating a record.
+  [Reported by niku]</li>
+</ul>
+<h3>感謝</h3>
+<ul>
+	<li>Eito Katagiriさん</li>
+	<li>nikuさん</li>
+</ul>
 <h2 id="4-0-0">4.0.0: 2013-08-29</h2>
 <h3>改良</h3>
 <ul>
@@ -219,9 +249,9 @@
 </ul></div></div>
 
     <div id="footer">
-  Generated on Thu Aug 29 11:34:57 2013 by
+  Generated on Tue Dec 23 11:52:04 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7 (ruby-1.9.3).
+  0.8.7.6 (ruby-2.1.5).
 </div>
 
   
