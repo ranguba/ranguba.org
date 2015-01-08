@@ -96,70 +96,71 @@
 <h2 id="4-0-8">4.0.8: 2014-01-08</h2>
 <h3>改善</h3>
 <ul>
-	<li>Supported Groonga 4.0.9. Groonga 4.0.8 or older aren&#8217;t supported.</li>
-	<li>Added <span class='object_link'><a href="Groonga/Column.html#truncate-instance_method" title="Groonga::Column#truncate (method)">Groonga::Column#truncate</a></span>. [GitHub#41] [Patch by Hiroshi Hatake]</li>
-	<li>Added <span class='object_link'><a href="Groonga/Database.html#recover-instance_method" title="Groonga::Database#recover (method)">Groonga::Database#recover</a></span>.</li>
+	<li>Groonga 4.0.9に対応。Groonga 4.0.8以前はサポートしません。</li>
+	<li><span class='object_link'><a href="Groonga/Column.html#truncate-instance_method" title="Groonga::Column#truncate (method)">Groonga::Column#truncate</a></span> を追加。 [GitHub#41] [Hiroshi Hatakeさんがパッチ提供]</li>
+	<li><span class='object_link'><a href="Groonga/Database.html#recover-instance_method" title="Groonga::Database#recover (method)">Groonga::Database#recover</a></span> を追加。</li>
 </ul>
 <h3>修正</h3>
 <ul>
-	<li>Fixed a typo in <span class='object_link'><a href="Groonga/GeoPoint.html#%3D%3D-instance_method" title="Groonga::GeoPoint#== (method)">Groonga::GeoPoint#==</a></span>.</li>
+	<li><span class='object_link'><a href="Groonga/GeoPoint.html#%3D%3D-instance_method" title="Groonga::GeoPoint#== (method)">Groonga::GeoPoint#==</a></span> のtypoを修正。</li>
 </ul>
 <h3>感謝</h3>
 <ul>
-	<li>Hiroshi Hatake</li>
+	<li>Hiroshi Hatakeさん</li>
 </ul>
 <h2 id="4-0-7">4.0.7: 2014-12-12</h2>
 <h3>改善</h3>
 <ul>
-	<li>Supported Groonga 4.0.8. Groonga 4.0.7 or older aren&#8217;t supported.</li>
-	<li>Added <code>:reuse_posting_object</code> option to
-  <span class='object_link'><a href="Groonga/IndexCursor.html#each-instance_method" title="Groonga::IndexCursor#each (method)">Groonga::IndexCursor#each</a></span>. The option improves performance by
-  reducing memory allocation. The option is disabled by default because
-  reusing the same object isn&#8217;t Rubyish.</li>
-	<li>Added <span class='object_link'><a href="Groonga/IndexColumn.html#estimate_size-instance_method" title="Groonga::IndexColumn#estimate_size (method)">Groonga::IndexColumn#estimate_size</a></span>. [GitHub#38]</li>
-	<li>Accepted string for integer, unsigned integer and float type key.</li>
+	<li>Groonga 4.0.8に対応。Groonga 4.0.7以前はサポートしません。</li>
+	<li><span class='object_link'><a href="Groonga/IndexCursor.html#each-instance_method" title="Groonga::IndexCursor#each (method)">Groonga::IndexCursor#each</a></span> に <code>:reuse_posting_object</code> オプションを追加。
+  このオプションはメモリー割り当てを減らすことでパフォーマンスを改善します。
+  ただし、同じオブジェクトを再利用するのはRubyらしくないため、
+  このオプションはデフォルトでは無効です。</li>
+	<li><span class='object_link'><a href="Groonga/IndexColumn.html#estimate_size-instance_method" title="Groonga::IndexColumn#estimate_size (method)">Groonga::IndexColumn#estimate_size</a></span> を追加。 [GitHub#38]</li>
+	<li>数値型（intger、unsigned integer、float）のキーが文字列型の数値を
+  受け入れるようになった。（内部で数値型に変換される）</li>
 </ul>
 <h2 id="4-0-6">4.0.6: 2014-11-06</h2>
 <h3>改善</h3>
 <ul>
-	<li>Supported Groonga 4.0.7. [GitHub#28]
+	<li>Groonga 4.0.7に対応。 [GitHub#28]
 	<ul>
-		<li>Changed <span class='object_link'><a href="Groonga/Context.html#support_lzo%3F-instance_method" title="Groonga::Context#support_lzo? (method)">Groonga::Context#support_lzo?</a></span> always returns <code>false</code>.</li>
-		<li>Added <span class='object_link'><a href="Groonga/Context.html#support_lz4%3F-instance_method" title="Groonga::Context#support_lz4? (method)">Groonga::Context#support_lz4?</a></span>.</li>
-		<li>Supported <code>:lz4</code> in <span class='object_link'><a href="Groonga/Table.html#define_column-instance_method" title="Groonga::Table#define_column (method)">Groonga::Table#define_column</a></span> options.</li>
-		<li>Supported <code>:lz4</code> in <span class='object_link'><a href="Groonga/VariableSizeColumn.html#compressed%3F-instance_method" title="Groonga::VariableSizeColumn#compressed? (method)">Groonga::VariableSizeColumn#compressed?</a></span> options.</li>
-		<li>Added <span class='object_link'><a href="Groonga/LZ4Error.html" title="Groonga::LZ4Error (class)">Groonga::LZ4Error</a></span>.</li>
-		<li>[grndump] Supported <code>COMPRESS_ZLIB</code> and <code>COMPRESS_LZ4</code> flags.</li>
-		<li>Added <span class='object_link'><a href="Groonga/Table/KeySupport.html#token_filters-instance_method" title="Groonga::Table::KeySupport#token_filters (method)">Groonga::Table::KeySupport#token_filters</a></span>.</li>
-		<li>Added <span class='object_link'><a href="Groonga/Table/KeySupport.html#token_filters%3D-instance_method" title="Groonga::Table::KeySupport#token_filters= (method)">Groonga::Table::KeySupport#token_filters=</a></span>.</li>
-		<li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/Hash.html#create-class_method" title="Groonga::Hash.create (method)">Groonga::Hash.create</a></span> options.</li>
-		<li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/PatriciaTrie.html#create-class_method" title="Groonga::PatriciaTrie.create (method)">Groonga::PatriciaTrie.create</a></span> options.</li>
-		<li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/DoubleArrayTrie.html#create-class_method" title="Groonga::DoubleArrayTrie.create (method)">Groonga::DoubleArrayTrie.create</a></span> options.</li>
-		<li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">Groonga::Schema.create_table</a></span> options.</li>
-		<li>Added <span class='object_link'><a href="Groonga/TokenFilterError.html" title="Groonga::TokenFilterError (class)">Groonga::TokenFilterError</a></span>.</li>
-		<li>[grndump] Supported token filters.</li>
+		<li><span class='object_link'><a href="Groonga/Context.html#support_lzo%3F-instance_method" title="Groonga::Context#support_lzo? (method)">Groonga::Context#support_lzo?</a></span> は常に <code>false</code> を返すように変更。</li>
+		<li><span class='object_link'><a href="Groonga/Context.html#support_lz4%3F-instance_method" title="Groonga::Context#support_lz4? (method)">Groonga::Context#support_lz4?</a></span> を追加。</li>
+		<li><span class='object_link'><a href="Groonga/Table.html#define_column-instance_method" title="Groonga::Table#define_column (method)">Groonga::Table#define_column</a></span> を <code>:lz4</code> オプションに対応。</li>
+		<li><span class='object_link'><a href="Groonga/VariableSizeColumn.html#compressed%3F-instance_method" title="Groonga::VariableSizeColumn#compressed? (method)">Groonga::VariableSizeColumn#compressed?</a></span> を <code>:lz4</code> オプションに対応。</li>
+		<li><span class='object_link'><a href="Groonga/LZ4Error.html" title="Groonga::LZ4Error (class)">Groonga::LZ4Error</a></span> を追加。</li>
+		<li>[grndump] <code>COMPRESS_ZLIB</code> と <code>COMPRESS_LZ4</code> フラグに対応。</li>
+		<li><span class='object_link'><a href="Groonga/Table/KeySupport.html#token_filters-instance_method" title="Groonga::Table::KeySupport#token_filters (method)">Groonga::Table::KeySupport#token_filters</a></span> を追加。</li>
+		<li><span class='object_link'><a href="Groonga/Table/KeySupport.html#token_filters%3D-instance_method" title="Groonga::Table::KeySupport#token_filters= (method)">Groonga::Table::KeySupport#token_filters=</a></span> を追加。</li>
+		<li><span class='object_link'><a href="Groonga/Hash.html#create-class_method" title="Groonga::Hash.create (method)">Groonga::Hash.create</a></span> を <code>:token_filters</code> に対応。</li>
+		<li><span class='object_link'><a href="Groonga/PatriciaTrie.html#create-class_method" title="Groonga::PatriciaTrie.create (method)">Groonga::PatriciaTrie.create</a></span> を <code>:token_filters</code> に対応。</li>
+		<li><span class='object_link'><a href="Groonga/DoubleArrayTrie.html#create-class_method" title="Groonga::DoubleArrayTrie.create (method)">Groonga::DoubleArrayTrie.create</a></span> を <code>:token_filters</code> に対応。</li>
+		<li><span class='object_link'><a href="Groonga/Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">Groonga::Schema.create_table</a></span> を <code>:token_filters</code> に対応。</li>
+		<li><span class='object_link'><a href="Groonga/TokenFilterError.html" title="Groonga::TokenFilterError (class)">Groonga::TokenFilterError</a></span> を追加。</li>
+		<li>[grndump] トークンフィルターに対応。</li>
 	</ul></li>
-	<li>Added <span class='object_link'><a href="Groonga/Expression.html#keywords-instance_method" title="Groonga::Expression#keywords (method)">Groonga::Expression#keywords</a></span>. [GitHub#30]</li>
-	<li>Stopped to require logger object as the first argument of
-  <span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span> when block is specified.</li>
+	<li><span class='object_link'><a href="Groonga/Expression.html#keywords-instance_method" title="Groonga::Expression#keywords (method)">Groonga::Expression#keywords</a></span> を追加。 [GitHub#30]</li>
+	<li><span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span> にブロックが指定された場合、第一引数に
+  ロガーを指定しなくてもいいようにした。</li>
 </ul>
 <h3>修正</h3>
 <ul>
-	<li>[doc] Removed deprecated example.
-  [GitHub#26] [Patch by ongaeshi]</li>
-	<li>Fixed a bug that a column assignment raises an error when
-  you assign value with type A and then assign value type B again.
-  [GitHub#27] [Patch by Daisuke Goto]</li>
-	<li>Fixed a memory leak in <span class='object_link'><a href="Groonga/PatriciaTrie.html#open_near_cursor-instance_method" title="Groonga::PatriciaTrie#open_near_cursor (method)">Groonga::PatriciaTrie#open_near_cursor</a></span>.</li>
-	<li>Fixed a bug that you can access a column renamed by
-  <span class='object_link'><a href="Groonga/Column.html#rename-instance_method" title="Groonga::Column#rename (method)">Groonga::Column#rename</a></span> with old name.
-  [GitHub#29] [Patch by Daisuke Goto]</li>
-	<li>[doc] Fixed wrong option name of <span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span>.</li>
+	<li>[doc] 非推奨のオプションが例に使われていたのを修正。
+  [GitHub#26] [ongaeshiさんがパッチ提供]</li>
+	<li>カラムに値を設定するとき、すでに入っている型とは違う型の値を設定
+  するとエラーになる場合があるバグを修正。
+  [GitHub#27] [Daisuke Gotoさんがパッチ提供]</li>
+	<li><span class='object_link'><a href="Groonga/PatriciaTrie.html#open_near_cursor-instance_method" title="Groonga::PatriciaTrie#open_near_cursor (method)">Groonga::PatriciaTrie#open_near_cursor</a></span> のメモリリークを修正。</li>
+	<li><span class='object_link'><a href="Groonga/Column.html#rename-instance_method" title="Groonga::Column#rename (method)">Groonga::Column#rename</a></span> でカラムをリネームしたとき、
+  古い名前でアクセスできてしまうバグを修正。
+  [GitHub#29] [Daisuke Gotoさんがパッチ提供]</li>
+	<li>[doc] <span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span> のオプションの名前を修正。</li>
 </ul>
 <h3>感謝</h3>
 <ul>
-	<li>ongaeshi</li>
-	<li>Daisuke Goto</li>
+	<li>ongaeshiさん</li>
+	<li>Daisuke Gotoさん</li>
 </ul>
 <h2 id="4-0-5">4.0.5: 2014-10-05</h2>
 <h3>改善</h3>
@@ -916,11 +917,9 @@
 </ul>
 <h3>感謝</h3>
 <ul>
-	<li>@kamipo</li>
-</ul>
-<ul>
 	<li>@kamipoさん</li>
 </ul>
+<h2>1.0.5: 2010-11-29</h2>
 <h3>改善</h3>
 <ul>
 	<li>Groonga::Schemaでgroongaの組み込み型をshort_textなどのように「小文字 + アンダースコア」でも指定できるようにした。</li>
@@ -1154,9 +1153,9 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Thu Jan  8 11:29:14 2015 by
+  Generated on Fri Jan  9 02:49:39 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.5).
+  0.8.7.6 (ruby-2.2.0).
 </div>
 
   

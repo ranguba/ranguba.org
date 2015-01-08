@@ -136,30 +136,23 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>テーブルに情報を付加するためのオブジェクト。テーブルに複
-数のカラムを定義することによりレコード毎に複数の情報を付
-加することができる。</p>
+    
+<p>テーブルに情報を付加するためのオブジェクト。テーブルに複 数のカラムを定義することによりレコード毎に複数の情報を付 加することができる。</p>
 
 <p>カラムには大きく分けて3種類ある。</p>
+<ul><li>
+<p><span class='object_link'><a href="FixSizeColumn.html" title="Groonga::FixSizeColumn (class)">FixSizeColumn</a></span> :=  固定長のデータを格納するカラム。 =:</p>
+</li><li>
+<p><span class='object_link'><a href="VariableSizeColumn.html" title="Groonga::VariableSizeColumn (class)">VariableSizeColumn</a></span> :=  可変長のデータを格納するカラム。 =:</p>
+</li><li>
+<p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> :=  転置インデックスを格納するカラム。全文検索や参照元レコー 
+ドの検索を行う場合はこのカラムを使用する。 =:</p>
+</li></ul>
 
-<ul>
-<li><span class='object_link'><a href="FixSizeColumn.html" title="Groonga::FixSizeColumn (class)">FixSizeColumn</a></span> :=
-固定長のデータを格納するカラム。 =:</li>
-<li><span class='object_link'><a href="VariableSizeColumn.html" title="Groonga::VariableSizeColumn (class)">VariableSizeColumn</a></span> :=
-可変長のデータを格納するカラム。 =:</li>
-<li><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> :=
-転置インデックスを格納するカラム。全文検索や参照元レコー
-ドの検索を行う場合はこのカラムを使用する。 =:</li>
-</ul>
+<p>固定長データ用カラム・可変長データ用カラムは1つのデータだ けを格納するか複数のデータを格納するかを選ぶことができる。
+1つのデータの場合はスカラ値、複数のデータの場合はスカラー 値を格納するという。</p>
 
-
-<p>固定長データ用カラム・可変長データ用カラムは1つのデータだ
-けを格納するか複数のデータを格納するかを選ぶことができる。
-1つのデータの場合はスカラ値、複数のデータの場合はスカラー
-値を格納するという。</p>
-
-<p>カラムは名前を持ち、1つのテーブルでは同じカラム名を持つカ
-ラムを複数定義することはできない。</p>
+<p>カラムは名前を持ち、1つのテーブルでは同じカラム名を持つカ ラムを複数定義することはできない。</p>
 
 
   </div>
@@ -203,7 +196,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> のロックを強制的に解除する。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> のロックを強制的に解除する。.</p>
 </div></span>
   
 </li>
@@ -226,8 +220,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -251,7 +244,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> が <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> の場合は +true+ を返し、 そうでない場合は +false+ を返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> が <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> の場合は <code>true</code> を返し、
+そうでない場合は <code>false</code> を返す。.</p>
 </div></span>
   
 </li>
@@ -274,7 +269,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>operator</em> を実行できる <em>column</em> のインデックスを返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>operator</em> を実行できる <em>column</em> のインデックスを返す。.</p>
 </div></span>
   
 </li>
@@ -297,7 +293,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>テーブル名を除いたカラム名を返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>テーブル名を除いたカラム名を返す。.</p>
 </div></span>
   
 </li>
@@ -320,7 +317,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> をロックする。ロックに失敗した場合は <span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span> 例外が発生する。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> をロックする。ロックに失敗した場合は <span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span>
+例外が発生する。.</p>
 </div></span>
   
 </li>
@@ -343,7 +342,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> がロックされていれば +true+ を返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> がロックされていれば <code>true</code> を返す。.</p>
 </div></span>
   
 </li>
@@ -368,7 +368,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> の値がテーブルのレコードとなる場合は +true+ を返し、 そうでない場合は +false+ を返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> の値がテーブルのレコードとなる場合は <code>true</code> を返し、 そうでない場合は
+<code>false</code> を返す。.</p>
 </div></span>
   
 </li>
@@ -391,7 +393,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Renames the column to name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>カラムをリネームします。.</p>
 </div></span>
   
 </li>
@@ -414,7 +417,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> がスカラーカラムの場合は +true+ を返し、 そうでない場合は +false+ を返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> がスカラーカラムの場合は <code>true</code> を返し、 そうでない場合は
+<code>false</code> を返す。.</p>
 </div></span>
   
 </li>
@@ -437,7 +442,10 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>カラムが所属するテーブルからブロックまたは文字列で指定し た条件にマッチするレコードを返す。返されたテーブルには +expression+ という特異メソッドがあり、指定した条件を表し ている <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span> を取得できる。 <span class='object_link'><a href="Expression.html#snippet-instance_method" title="Groonga::Expression#snippet (method)">Expression#snippet</a></span> を使うことにより、指定した条件 用のスニペットを簡単に生成できる。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>カラムが所属するテーブルからブロックまたは文字列で指定し た条件にマッチするレコードを返す。返されたテーブルには
+<code>expression</code> という特異メソッドがあり、指定した条件を表し ている <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span>
+を取得できる。 <span class='object_link'><a href="Expression.html#snippet-instance_method" title="Groonga::Expression#snippet (method)">Expression#snippet</a></span> を使うことにより、指定した条件 用のスニペットを簡単に生成できる。.</p>
 </div></span>
   
 </li>
@@ -460,7 +468,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>カラムが所属するテーブルを返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>カラムが所属するテーブルを返す。.</p>
 </div></span>
   
 </li>
@@ -483,7 +492,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Clears all values in column.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Clears all values in column.</p>
 </div></span>
   
 </li>
@@ -506,7 +516,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> のロックを解除する。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> のロックを解除する。.</p>
 </div></span>
   
 </li>
@@ -529,7 +540,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> がベクターカラムの場合は +true+ を返し、 そうでない場合は +false+ を返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> がベクターカラムの場合は <code>true</code> を返し、 そうでない場合は
+<code>false</code> を返す。.</p>
 </div></span>
   
 </li>
@@ -552,8 +565,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -589,7 +601,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> のロックを強制的に解除する。</p>
+    
+<p><em>column</em> のロックを強制的に解除する。</p>
 
 
   </div>
@@ -599,7 +612,6 @@
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -619,7 +631,8 @@
       
       
         &mdash;
-        <div class='inline'><p>利用可能なオプションは以下の通り。</p>
+        <div class='inline'>
+<p>利用可能なオプションは以下の通り。</p>
 </div>
       
     </li>
@@ -639,10 +652,9 @@
             
           </span>
           
-            &mdash; <div class='inline'><p><em>:id</em>で指定したレコードのロックを強制的に解除する。
-（注: groonga側が未実装のため、現在は無視される。実装さ
-れるのではないかと思っているが、実装されないかもしれな
-い。）</p>
+            &mdash; <div class='inline'>
+<p><em>:id</em>で指定したレコードのロックを強制的に解除する。 （注: groonga側が未実装のため、現在は無視される。実装さ
+れるのではないかと思っているが、実装されないかもしれな い。）</p>
 </div>
           
         </li>
@@ -766,8 +778,9 @@ rb_grn_column_clear_lock (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> が <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> の場合は +true+ を返し、
-そうでない場合は +false+ を返す。</p>
+    
+<p><em>column</em> が <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> の場合は <code>true</code> を返し、
+そうでない場合は <code>false</code> を返す。</p>
 
 
   </div>
@@ -798,7 +811,8 @@ rb_grn_column_clear_lock (int argc, VALUE *argv, VALUE self)
       
       
         
-        <div class='inline'><p>1.0.5</p>
+        <div class='inline'>
+<p>1.0.5</p>
 </div>
       
     </li>
@@ -863,7 +877,8 @@ rb_grn_column_index_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>operator</em> を実行できる <em>column</em> のインデックスを返す。</p>
+    
+<p><em>operator</em> を実行できる <em>column</em> のインデックスを返す。</p>
 
 
   </div>
@@ -873,7 +888,6 @@ rb_grn_column_index_p (VALUE self)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -910,7 +924,8 @@ rb_grn_column_index_p (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p><em>operator</em> を実行できる <em>column</em> のインデックス</p>
+        <div class='inline'>
+<p><em>operator</em> を実行できる <em>column</em> のインデックス</p>
 </div>
       
     </li>
@@ -925,7 +940,8 @@ rb_grn_column_index_p (VALUE self)
       
       
         
-        <div class='inline'><p>1.0.9</p>
+        <div class='inline'>
+<p>1.0.9</p>
 </div>
       
     </li>
@@ -1034,7 +1050,8 @@ rb_grn_column_get_indexes (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>テーブル名を除いたカラム名を返す。</p>
+    
+<p>テーブル名を除いたカラム名を返す。</p>
 
 
   </div>
@@ -1135,8 +1152,9 @@ rb_grn_column_get_local_name (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> をロックする。ロックに失敗した場合は
-<span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span> 例外が発生する。</p>
+    
+<p><em>column</em> をロックする。ロックに失敗した場合は <span class='object_link'><a href="ResourceDeadlockAvoided.html" title="Groonga::ResourceDeadlockAvoided (class)">ResourceDeadlockAvoided</a></span>
+例外が発生する。</p>
 
 
   </div>
@@ -1152,7 +1170,6 @@ rb_grn_column_get_local_name (VALUE self)
         <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -1172,7 +1189,8 @@ rb_grn_column_get_local_name (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>利用可能なオプションは以下の通り。</p>
+        <div class='inline'>
+<p>利用可能なオプションは以下の通り。</p>
 </div>
       
     </li>
@@ -1192,9 +1210,9 @@ rb_grn_column_get_local_name (VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p>ロックを獲得できなかった場合は <em>:timeout</em> 秒間ロックの獲
-得を試みる。 <em>:timeout</em> 秒以内にロックを獲得できなかった
-場合は例外が発生する。</p>
+            &mdash; <div class='inline'>
+<p>ロックを獲得できなかった場合は <em>:timeout</em> 秒間ロックの獲 得を試みる。 <em>:timeout</em>
+秒以内にロックを獲得できなかった 場合は例外が発生する。</p>
 </div>
           
         </li>
@@ -1206,8 +1224,8 @@ rb_grn_column_get_local_name (VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p><em>:id</em>で指定したレコードをロックする。（注: groonga側が
-未実装のため、現在は無視される）</p>
+            &mdash; <div class='inline'>
+<p><em>:id</em>で指定したレコードをロックする。（注: groonga側が 未実装のため、現在は無視される）</p>
 </div>
           
         </li>
@@ -1226,7 +1244,6 @@ rb_grn_column_get_local_name (VALUE self)
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -1245,7 +1262,8 @@ rb_grn_column_get_local_name (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>利用可能なオプションは以下の通り。</p>
+        <div class='inline'>
+<p>利用可能なオプションは以下の通り。</p>
 </div>
       
     </li>
@@ -1265,9 +1283,9 @@ rb_grn_column_get_local_name (VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p>ロックを獲得できなかった場合は <em>:timeout</em> 秒間ロックの獲
-得を試みる。 <em>:timeout</em> 秒以内にロックを獲得できなかった
-場合は例外が発生する。</p>
+            &mdash; <div class='inline'>
+<p>ロックを獲得できなかった場合は <em>:timeout</em> 秒間ロックの獲 得を試みる。 <em>:timeout</em>
+秒以内にロックを獲得できなかった 場合は例外が発生する。</p>
 </div>
           
         </li>
@@ -1279,8 +1297,8 @@ rb_grn_column_get_local_name (VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p><em>:id</em>で指定したレコードをロックする。（注: groonga側が
-未実装のため、現在は無視される）</p>
+            &mdash; <div class='inline'>
+<p><em>:id</em>で指定したレコードをロックする。（注: groonga側が 未実装のため、現在は無視される）</p>
 </div>
           
         </li>
@@ -1299,7 +1317,8 @@ rb_grn_column_get_local_name (VALUE self)
       
       
         
-        <div class='inline'><p>ブロックを指定した場合はブロックを抜けたときにunlockする。</p>
+        <div class='inline'>
+<p>ブロックを指定した場合はブロックを抜けたときにunlockする。</p>
 </div>
       
     </li>
@@ -1412,7 +1431,8 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> がロックされていれば +true+ を返す。</p>
+    
+<p><em>column</em> がロックされていれば <code>true</code> を返す。</p>
 
 
   </div>
@@ -1422,7 +1442,6 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -1442,7 +1461,8 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>利用可能なオプションは以下の通り。</p>
+        <div class='inline'>
+<p>利用可能なオプションは以下の通り。</p>
 </div>
       
     </li>
@@ -1462,10 +1482,9 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p><em>:id</em>で指定したレコードがロックされていれば +true+ を返す。
-（注: groonga側が未実装のため、現在は無視される。実装さ
-れるのではないかと思っているが、実装されないかもしれな
-い。）</p>
+            &mdash; <div class='inline'>
+<p><em>:id</em>で指定したレコードがロックされていれば <code>true</code> を返す。 （注:
+groonga側が未実装のため、現在は無視される。実装さ れるのではないかと思っているが、実装されないかもしれな い。）</p>
 </div>
           
         </li>
@@ -1566,8 +1585,9 @@ rb_grn_column_is_locked (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> の値がテーブルのレコードとなる場合は +true+ を返し、
-そうでない場合は +false+ を返す。</p>
+    
+<p><em>column</em> の値がテーブルのレコードとなる場合は <code>true</code> を返し、 そうでない場合は
+<code>false</code> を返す。</p>
 
 
   </div>
@@ -1598,7 +1618,8 @@ rb_grn_column_is_locked (int argc, VALUE *argv, VALUE self)
       
       
         
-        <div class='inline'><p>1.0.5</p>
+        <div class='inline'>
+<p>1.0.5</p>
 </div>
       
     </li>
@@ -1683,7 +1704,8 @@ rb_grn_column_reference_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Renames the column to name.</p>
+    
+<p>カラムをリネームします。</p>
 
 
   </div>
@@ -1693,7 +1715,6 @@ rb_grn_column_reference_p (VALUE self)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -1711,7 +1732,8 @@ rb_grn_column_reference_p (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>the new name</p>
+        <div class='inline'>
+<p>the new name</p>
 </div>
       
     </li>
@@ -1730,7 +1752,8 @@ rb_grn_column_reference_p (VALUE self)
       
       
         
-        <div class='inline'><p>1.3.0</p>
+        <div class='inline'>
+<p>1.3.0</p>
 </div>
       
     </li>
@@ -1809,8 +1832,9 @@ rb_grn_column_rename (VALUE self, VALUE rb_name)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> がスカラーカラムの場合は +true+ を返し、
-そうでない場合は +false+ を返す。</p>
+    
+<p><em>column</em> がスカラーカラムの場合は <code>true</code> を返し、 そうでない場合は
+<code>false</code> を返す。</p>
 
 
   </div>
@@ -1841,7 +1865,8 @@ rb_grn_column_rename (VALUE self, VALUE rb_name)
       
       
         
-        <div class='inline'><p>1.0.5</p>
+        <div class='inline'>
+<p>1.0.5</p>
 </div>
       
     </li>
@@ -1928,36 +1953,23 @@ rb_grn_column_scalar_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>カラムが所属するテーブルからブロックまたは文字列で指定し
-た条件にマッチするレコードを返す。返されたテーブルには
-+expression+ という特異メソッドがあり、指定した条件を表し
-ている <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span> を取得できる。
-<span class='object_link'><a href="Expression.html#snippet-instance_method" title="Groonga::Expression#snippet (method)">Expression#snippet</a></span> を使うことにより、指定した条件
-用のスニペットを簡単に生成できる。</p>
+    
+<p>カラムが所属するテーブルからブロックまたは文字列で指定し た条件にマッチするレコードを返す。返されたテーブルには
+<code>expression</code> という特異メソッドがあり、指定した条件を表し ている <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span>
+を取得できる。 <span class='object_link'><a href="Expression.html#snippet-instance_method" title="Groonga::Expression#snippet (method)">Expression#snippet</a></span> を使うことにより、指定した条件 用のスニペットを簡単に生成できる。</p>
 
-<p>bc. !!!ruby
-  results = description_column.select do |column|
-    column =~ "groonga"
-  end
-  snippet = results.expression.snippet([["<em>", "</em>"]])
-  results.each do |record|
-    puts "#record[&#39;name&#39;]の説明文の中で「groonga」が含まれる部分"
-    snippet.execute(record["description"]).each do |snippet|
-      puts "---"
-      puts "#snippet..."
-      puts "---"
-    end
-  end</p>
+<p>bc. !!!ruby  results = description_column.select do |column|  column =~
+“groonga”  end  snippet = results.expression.snippet([[“<em>”, “</em>”]]) 
+results.each do |record|  puts “#&#39;nameの説明文の中で「groonga」が含まれる部分”  <a
+href=""description"">snippet.execute(record</a>).each do |snippet|  puts
+“—”  puts “#snippet…”  puts “—”  end  end</p>
 
 <p>出力例</p>
-
 <pre class="code text"><code class="text">rroongaの説明文の中で「groonga」が含まれる部分
 ---
 rroongaは&lt;em&gt;groonga&lt;/em&gt;のいわゆるDB-APIの層の...
 ---
 </code></pre>
-
-
 
   </div>
 </div>
@@ -1972,7 +1984,6 @@ rroongaは&lt;em&gt;groonga&lt;/em&gt;のいわゆるDB-APIの層の...
         <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -1990,8 +2001,9 @@ rroongaは&lt;em&gt;groonga&lt;/em&gt;のいわゆるDB-APIの層の...
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value.</p>
 </div>
       
     </li>
@@ -2014,22 +2026,17 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>マッチしたレコードをどのように扱うか。指定可能な値は以
-下の通り。</p>
-
-<ul>
-<li>Groonga::Operator::OR :=
-マッチしたレコードを追加。すでにレコードが追加され
-ている場合は何もしない。 =:</li>
-<li>Groonga::Operator::AND :=
-マッチしたレコードのスコアを増加。マッチしなかった
-レコードを削除。 =:</li>
-<li>Groonga::Operator::AND_NOT :=
-マッチしたレコードを削除。 =:</li>
-<li>Groonga::Operator::ADJUST :=
-マッチしたレコードのスコアを増加。 =:</li>
-</ul>
-
+            &mdash; <div class='inline'>
+<p>マッチしたレコードをどのように扱うか。指定可能な値は以 下の通り。</p>
+<ul><li>
+<p>Groonga::Operator::OR :=  マッチしたレコードを追加。すでにレコードが追加され  ている場合は何もしない。 =:</p>
+</li><li>
+<p>Groonga::Operator::AND :=  マッチしたレコードのスコアを増加。マッチしなかった  レコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::AND_NOT :=  マッチしたレコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::ADJUST :=  マッチしたレコードのスコアを増加。 =:</p>
+</li></ul>
 </div>
           
         </li>
@@ -2041,8 +2048,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>検索結果を格納するテーブル。マッチしたレコードが追加さ
-れていく。省略した場合は新しくテーブルを作成して返す。</p>
+            &mdash; <div class='inline'>
+<p>検索結果を格納するテーブル。マッチしたレコードが追加さ れていく。省略した場合は新しくテーブルを作成して返す。</p>
 </div>
           
         </li>
@@ -2054,7 +2061,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>条件の名前。省略した場合は名前を付けない。</p>
+            &mdash; <div class='inline'>
+<p>条件の名前。省略した場合は名前を付けない。</p>
 </div>
           
         </li>
@@ -2069,7 +2077,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p><em>query</em> の構文。</p>
+            &mdash; <div class='inline'>
+<p><em>query</em> の構文。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2083,8 +2092,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>query構文時にプラグマを利用するかどうか。省略した場合は
-利用する。</p>
+            &mdash; <div class='inline'>
+<p>query構文時にプラグマを利用するかどうか。省略した場合は 利用する。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2098,9 +2107,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The allow_column
-query構文時にカラム指定を利用するかどうか。省略した場合
-は利用する。</p>
+            &mdash; <div class='inline'>
+<p>The allow_column query構文時にカラム指定を利用するかどうか。省略した場合 は利用する。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2114,8 +2122,8 @@ query構文時にカラム指定を利用するかどうか。省略した場合
             
           </span>
           
-            &mdash; <div class='inline'><p>script構文時に更新操作を利用するかどうか。省略した場合
-は利用する。</p>
+            &mdash; <div class='inline'>
+<p>script構文時に更新操作を利用するかどうか。省略した場合 は利用する。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2129,8 +2137,8 @@ query構文時にカラム指定を利用するかどうか。省略した場合
             
           </span>
           
-            &mdash; <div class='inline'><p>指定語句の先頭に-を付けることで指定した語句を含まないレコードの
-検索を有効にするかどうかを指定する。省略した場合は無効にする。</p>
+            &mdash; <div class='inline'>
+<p>指定語句の先頭に-を付けることで指定した語句を含まないレコードの 検索を有効にするかどうかを指定する。省略した場合は無効にする。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2153,16 +2161,14 @@ query構文時にカラム指定を利用するかどうか。省略した場合
       
       
         &mdash;
-        <div class='inline'><p>検索条件を指定するのに、 <em>record</em> に対して次のメソッドを使って検索条
-件を指定できます。</p>
+        <div class='inline'>
+<p>検索条件を指定するのに、 <em>record</em> に対して次のメソッドを使って検索条 件を指定できます。</p>
 
-<p>@==@ 、 @=~@ 、 @&lt;@ 、 @&lt;=@ 、 @>@ 、 @>=@ 、 @+@ 、 @-@ 、
-@*@ 、 @/@ 、 @%@ 、
-@match(query, :syntax => :query/:script, &amp;block)@
-（ <em>query</em> に指定した
-"grn_expr":<a href="http://groonga.org/ja/docs/reference/grn_expr.html">http://groonga.org/ja/docs/reference/grn_expr.html</a>
-とのマッチ）、
-@similar_search(text)@ （ <em>text</em> との類似文書探索）、
+<p>@==@ 、 @=~@ 、 @&lt;@ 、 @&lt;=@ 、 @&gt;@ 、 @&gt;=@ 、 @+@ 、 @-@ 、 @*@ 、 @/@ 、
+@%@ 、 @match(query, :syntax =&gt; :query/:script, &amp;block)@ （
+<em>query</em> に指定した “grn_expr”:<a
+href="http://groonga.org/ja/docs/reference/grn_expr.html">groonga.org/ja/docs/reference/grn_expr.html</a>
+とのマッチ）、 @similar_search(text)@ （ <em>text</em> との類似文書探索）、
 @term_extract(text)@ （ <em>text</em> 内から <em>record</em> の単語を抽出）</p>
 </div>
       
@@ -2180,7 +2186,6 @@ query構文時にカラム指定を利用するかどうか。省略した場合
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -2197,33 +2202,35 @@ query構文時にカラム指定を利用するかどうか。省略した場合
       
       
         &mdash;
-        <div class='inline'><p>条件の指定
-<em>query</em> には「[カラム名]:[演算子][値]」という書式で条件を
+        <div class='inline'>
+<p>条件の指定 <em>query</em> <a href="カラム名">には「</a>:[<a href="値">演算子]</a>」という書式で条件を
 指定する。演算子は以下の通り。</p>
-
-<ul>
-<li>なし := [カラム値] == [値]</li>
-<li>@!@ := [カラム値] != [値]</li>
-<li>@&lt;@ := [カラム値] &lt; [値]</li>
-<li>@>@ := [カラム値] > [値]</li>
-<li>@&lt;=@ := [カラム値] &lt;= [値]</li>
-<li>@>=@ := [カラム値] >= [値]</li>
-<li>@@@ := [カラム値]が[値]を含んでいるかどうか</li>
-</ul>
-
+<ul><li>
+<p>なし := [カラム値] == [値]</p>
+</li><li>
+<p>@!@ := [カラム値] != [値]</p>
+</li><li>
+<p>@&lt;@ := [カラム値] &lt; [値]</p>
+</li><li>
+<p>@&gt;@ := [カラム値] &gt; [値]</p>
+</li><li>
+<p>@&lt;=@ := [カラム値] &lt;= [値]</p>
+</li><li>
+<p>@&gt;=@ := [カラム値] &gt;= [値]</p>
+</li><li>
+<p>@@@ := [<a href="値">カラム値]が</a>を含んでいるかどうか</p>
+</li></ul>
 
 <p>例:</p>
-
-<ul>
-<li>@"groonga"@ := <em>column</em> カラムの値が @"groonga"@ のレコードにマッチ</li>
-<li>@"name:daijiro"@ :=
-<em>column</em> カラムが属しているテーブルの @"name"@ カラムの値が
-@"daijiro"@ のレコードにマッチ  =:</li>
-<li>@"description:@@@groonga"@ :=
-<em>column</em> カラムが属しているテーブルの @"description"@ カラムが
-@"groonga"@ を含んでいるレコードにマッチ =:</li>
-</ul>
-
+<ul><li>
+<p>@“groonga”@ := <em>column</em> カラムの値が @“groonga”@ のレコードにマッチ</p>
+</li><li>
+<p>@“name:daijiro”@ :=  <em>column</em> カラムが属しているテーブルの @“name”@ カラムの値が 
+@“daijiro”@ のレコードにマッチ =:</p>
+</li><li>
+<p>@“description:@@@groonga”@ :=  <em>column</em> カラムが属しているテーブルの
+@“description”@ カラムが  @“groonga”@ を含んでいるレコードにマッチ =:</p>
+</li></ul>
 </div>
       
     </li>
@@ -2238,8 +2245,9 @@ query構文時にカラム指定を利用するかどうか。省略した場合
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value.</p>
 </div>
       
     </li>
@@ -2264,22 +2272,17 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>マッチしたレコードをどのように扱うか。指定可能な値は以
-下の通り。</p>
-
-<ul>
-<li>Groonga::Operator::OR :=
-マッチしたレコードを追加。すでにレコードが追加され
-ている場合は何もしない。 =:</li>
-<li>Groonga::Operator::AND :=
-マッチしたレコードのスコアを増加。マッチしなかった
-レコードを削除。 =:</li>
-<li>Groonga::Operator::AND_NOT :=
-マッチしたレコードを削除。 =:</li>
-<li>Groonga::Operator::ADJUST :=
-マッチしたレコードのスコアを増加。 =:</li>
-</ul>
-
+            &mdash; <div class='inline'>
+<p>マッチしたレコードをどのように扱うか。指定可能な値は以 下の通り。</p>
+<ul><li>
+<p>Groonga::Operator::OR :=  マッチしたレコードを追加。すでにレコードが追加され  ている場合は何もしない。 =:</p>
+</li><li>
+<p>Groonga::Operator::AND :=  マッチしたレコードのスコアを増加。マッチしなかった  レコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::AND_NOT :=  マッチしたレコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::ADJUST :=  マッチしたレコードのスコアを増加。 =:</p>
+</li></ul>
 </div>
           
         </li>
@@ -2291,8 +2294,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>検索結果を格納するテーブル。マッチしたレコードが追加さ
-れていく。省略した場合は新しくテーブルを作成して返す。</p>
+            &mdash; <div class='inline'>
+<p>検索結果を格納するテーブル。マッチしたレコードが追加さ れていく。省略した場合は新しくテーブルを作成して返す。</p>
 </div>
           
         </li>
@@ -2304,7 +2307,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>条件の名前。省略した場合は名前を付けない。</p>
+            &mdash; <div class='inline'>
+<p>条件の名前。省略した場合は名前を付けない。</p>
 </div>
           
         </li>
@@ -2319,7 +2323,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p><em>query</em> の構文。</p>
+            &mdash; <div class='inline'>
+<p><em>query</em> の構文。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2333,8 +2338,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>query構文時にプラグマを利用するかどうか。省略した場合は
-利用する。</p>
+            &mdash; <div class='inline'>
+<p>query構文時にプラグマを利用するかどうか。省略した場合は 利用する。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2348,9 +2353,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The allow_column
-query構文時にカラム指定を利用するかどうか。省略した場合
-は利用する。</p>
+            &mdash; <div class='inline'>
+<p>The allow_column query構文時にカラム指定を利用するかどうか。省略した場合 は利用する。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2364,8 +2368,8 @@ query構文時にカラム指定を利用するかどうか。省略した場合
             
           </span>
           
-            &mdash; <div class='inline'><p>script構文時に更新操作を利用するかどうか。省略した場合
-は利用する。</p>
+            &mdash; <div class='inline'>
+<p>script構文時に更新操作を利用するかどうか。省略した場合 は利用する。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2379,8 +2383,8 @@ query構文時にカラム指定を利用するかどうか。省略した場合
             
           </span>
           
-            &mdash; <div class='inline'><p>指定語句の先頭に-を付けることで指定した語句を含まないレコードの
-検索を有効にするかどうかを指定する。省略した場合は無効にする。</p>
+            &mdash; <div class='inline'>
+<p>指定語句の先頭に-を付けることで指定した語句を含まないレコードの 検索を有効にするかどうかを指定する。省略した場合は無効にする。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2401,7 +2405,6 @@ query構文時にカラム指定を利用するかどうか。省略した場合
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -2418,8 +2421,8 @@ query構文時にカラム指定を利用するかどうか。省略した場合
       
       
         &mdash;
-        <div class='inline'><p>条件を表すオブジェクト
-<em>expression</em> には既に作成済みの <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span> を渡す。</p>
+        <div class='inline'>
+<p>条件を表すオブジェクト <em>expression</em> には既に作成済みの <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span> を渡す。</p>
 </div>
       
     </li>
@@ -2434,8 +2437,9 @@ query構文時にカラム指定を利用するかどうか。省略した場合
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value.</p>
 </div>
       
     </li>
@@ -2460,22 +2464,17 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>マッチしたレコードをどのように扱うか。指定可能な値は以
-下の通り。</p>
-
-<ul>
-<li>Groonga::Operator::OR :=
-マッチしたレコードを追加。すでにレコードが追加され
-ている場合は何もしない。 =:</li>
-<li>Groonga::Operator::AND :=
-マッチしたレコードのスコアを増加。マッチしなかった
-レコードを削除。 =:</li>
-<li>Groonga::Operator::AND_NOT :=
-マッチしたレコードを削除。 =:</li>
-<li>Groonga::Operator::ADJUST :=
-マッチしたレコードのスコアを増加。 =:</li>
-</ul>
-
+            &mdash; <div class='inline'>
+<p>マッチしたレコードをどのように扱うか。指定可能な値は以 下の通り。</p>
+<ul><li>
+<p>Groonga::Operator::OR :=  マッチしたレコードを追加。すでにレコードが追加され  ている場合は何もしない。 =:</p>
+</li><li>
+<p>Groonga::Operator::AND :=  マッチしたレコードのスコアを増加。マッチしなかった  レコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::AND_NOT :=  マッチしたレコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::ADJUST :=  マッチしたレコードのスコアを増加。 =:</p>
+</li></ul>
 </div>
           
         </li>
@@ -2487,8 +2486,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>検索結果を格納するテーブル。マッチしたレコードが追加さ
-れていく。省略した場合は新しくテーブルを作成して返す。</p>
+            &mdash; <div class='inline'>
+<p>検索結果を格納するテーブル。マッチしたレコードが追加さ れていく。省略した場合は新しくテーブルを作成して返す。</p>
 </div>
           
         </li>
@@ -2500,7 +2499,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>条件の名前。省略した場合は名前を付けない。</p>
+            &mdash; <div class='inline'>
+<p>条件の名前。省略した場合は名前を付けない。</p>
 </div>
           
         </li>
@@ -2515,7 +2515,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p><em>query</em> の構文。</p>
+            &mdash; <div class='inline'>
+<p><em>query</em> の構文。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2529,8 +2530,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>query構文時にプラグマを利用するかどうか。省略した場合は
-利用する。</p>
+            &mdash; <div class='inline'>
+<p>query構文時にプラグマを利用するかどうか。省略した場合は 利用する。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2544,9 +2545,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The allow_column
-query構文時にカラム指定を利用するかどうか。省略した場合
-は利用する。</p>
+            &mdash; <div class='inline'>
+<p>The allow_column query構文時にカラム指定を利用するかどうか。省略した場合 は利用する。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2560,8 +2560,8 @@ query構文時にカラム指定を利用するかどうか。省略した場合
             
           </span>
           
-            &mdash; <div class='inline'><p>script構文時に更新操作を利用するかどうか。省略した場合
-は利用する。</p>
+            &mdash; <div class='inline'>
+<p>script構文時に更新操作を利用するかどうか。省略した場合 は利用する。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2575,8 +2575,8 @@ query構文時にカラム指定を利用するかどうか。省略した場合
             
           </span>
           
-            &mdash; <div class='inline'><p>指定語句の先頭に-を付けることで指定した語句を含まないレコードの
-検索を有効にするかどうかを指定する。省略した場合は無効にする。</p>
+            &mdash; <div class='inline'>
+<p>指定語句の先頭に-を付けることで指定した語句を含まないレコードの 検索を有効にするかどうかを指定する。省略した場合は無効にする。</p>
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 </div>
@@ -2603,7 +2603,8 @@ query構文時にカラム指定を利用するかどうか。省略した場合
       
       
         &mdash;
-        <div class='inline'><p>検索結果</p>
+        <div class='inline'>
+<p>検索結果</p>
 </div>
       
     </li>
@@ -2804,7 +2805,8 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>カラムが所属するテーブルを返す。</p>
+    
+<p>カラムが所属するテーブルを返す。</p>
 
 
   </div>
@@ -2814,7 +2816,6 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -2893,11 +2894,12 @@ rb_grn_column_get_table (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Clears all values in column.</p>
+    
+<p>Clears all values in column.</p>
 
-<p>This method is a dangerous method. You can't use this method when
-other process is using the column. The other process that is using
-the column must re-open its database after this method is done.</p>
+<p>This method is a dangerous method. You can&#39;t use this method when other
+process is using the column. The other process that is using the column
+must re-open its database after this method is done.</p>
 
 
   </div>
@@ -2906,7 +2908,8 @@ the column must re-open its database after this method is done.</p>
   
   <div class="docstring">
   <div class="discussion">
-    <p>Returns void</p>
+    
+<p>Returns void</p>
 
 
   </div>
@@ -2924,7 +2927,8 @@ the column must re-open its database after this method is done.</p>
       
       
         
-        <div class='inline'><p>void</p>
+        <div class='inline'>
+<p>void</p>
 </div>
       
     </li>
@@ -2942,7 +2946,8 @@ the column must re-open its database after this method is done.</p>
       
       
         
-        <div class='inline'><p>4.0.8</p>
+        <div class='inline'>
+<p>4.0.8</p>
 </div>
       
     </li>
@@ -3009,7 +3014,8 @@ rb_grn_column_truncate (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> のロックを解除する。</p>
+    
+<p><em>column</em> のロックを解除する。</p>
 
 
   </div>
@@ -3019,7 +3025,6 @@ rb_grn_column_truncate (VALUE self)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -3039,7 +3044,8 @@ rb_grn_column_truncate (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>利用可能なオプションは以下の通り。</p>
+        <div class='inline'>
+<p>利用可能なオプションは以下の通り。</p>
 </div>
       
     </li>
@@ -3059,8 +3065,8 @@ rb_grn_column_truncate (VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p><em>:id</em> で指定したレコードのロックを解除する。
-（注: groonga側が未実装のため、現在は無視される）</p>
+            &mdash; <div class='inline'>
+<p><em>:id</em> で指定したレコードのロックを解除する。 （注: groonga側が未実装のため、現在は無視される）</p>
 </div>
           
         </li>
@@ -3154,8 +3160,9 @@ rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> がベクターカラムの場合は +true+ を返し、
-そうでない場合は +false+ を返す。</p>
+    
+<p><em>column</em> がベクターカラムの場合は <code>true</code> を返し、 そうでない場合は
+<code>false</code> を返す。</p>
 
 
   </div>
@@ -3186,7 +3193,8 @@ rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
       
       
         
-        <div class='inline'><p>1.0.5</p>
+        <div class='inline'>
+<p>1.0.5</p>
 </div>
       
     </li>
@@ -3257,7 +3265,6 @@ rb_grn_column_vector_p (VALUE self)
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -3275,8 +3282,9 @@ rb_grn_column_vector_p (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>@true@ if the column is vector and created with
-@:with_weight => true@ flag, @false@ otherwise.</p>
+        <div class='inline'>
+<p>@true@ if the column is vector and created with @:with_weight =&gt; true@
+flag, @false@ otherwise.</p>
 </div>
       
     </li>
@@ -3300,7 +3308,8 @@ rb_grn_column_vector_p (VALUE self)
       
       
         
-        <div class='inline'><p>4.0.1</p>
+        <div class='inline'>
+<p>4.0.1</p>
 </div>
       
     </li>
@@ -3349,9 +3358,9 @@ rb_grn_column_with_weight_p(VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Thu Jan  8 11:29:16 2015 by
+  Generated on Fri Jan  9 02:49:47 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.5).
+  0.8.7.6 (ruby-2.2.0).
 </div>
 
   

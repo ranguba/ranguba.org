@@ -142,20 +142,19 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>It's a table that manages records by double array
-trie. It can change key without ID change. This feature
-is supported by only Groonga::DoubleArrayTrie. But it
-requires large spaces rather than other tables. It is
-used by <span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span> for key management
-internally. It's reasonable choice because number of
-tables and columns in <span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span> (number of their
-names equals to number of keys to be managed by
-Groonga::DoubleArrayTrie) will be less than number of
-records of user defined tables.</p>
+    
+<p>It&#39;s a table that manages records by double array trie. It can change
+key without ID change. This feature is supported by only
+Groonga::DoubleArrayTrie. But it requires large spaces rather than other
+tables. It is used by <span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span> for key management internally.
+It&#39;s reasonable choice because number of tables and columns in
+<span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span> (number of their names equals to number of keys to be
+managed by Groonga::DoubleArrayTrie) will be less than number of records of
+user defined tables.</p>
 
-<p>Groonga::DoubleArrayTrie supports exact match search,
-predictive search and common prefix search like
-<span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> . It also supports cursor API.</p>
+<p>Groonga::DoubleArrayTrie supports exact match search, predictive search and
+common prefix search like <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> . It also supports cursor
+API.</p>
 
 
   </div>
@@ -195,7 +194,8 @@ predictive search and common prefix search like
   
 
   
-    <span class="summary_desc"><div class='inline'><p>It creates a table that manages records by double array trie.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>It creates a table that manages records by double array trie.</p>
 </div></span>
   
 </li>
@@ -227,7 +227,9 @@ predictive search and common prefix search like
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>prefix</em> に前方一致検索をするカーソルを生成して返す。ブロッ クを指定すると、そのブロックに生成したカーソルが渡され、ブ ロックを抜けると自動的にカーソルが破棄される。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>prefix</em> に前方一致検索をするカーソルを生成して返す。ブロッ クを指定すると、そのブロックに生成したカーソルが渡され、ブ
+ロックを抜けると自動的にカーソルが破棄される。.</p>
 </div></span>
   
 </li>
@@ -250,7 +252,11 @@ predictive search and common prefix search like
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>key</em> にマッチするレコードのIDがキーに入っている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。マッチするレコードがない場合は空の fGroongafGroonga::Hash が返る。 <em>options</em> で +:result+ を指定することにより、そのテーブルにマッ チしたレコードIDがキーのレコードを追加することができる。 +:result+ にテーブルを指定した場合は、そのテーブルが返る。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>key</em> にマッチするレコードのIDがキーに入っている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。マッチするレコードがない場合は空の
+fGroongafGroonga::Hash が返る。 <em>options</em> で <code>:result</code>
+を指定することにより、そのテーブルにマッ チしたレコードIDがキーのレコードを追加することができる。 <code>:result</code>
+にテーブルを指定した場合は、そのテーブルが返る。.</p>
 </div></span>
   
 </li>
@@ -273,7 +279,8 @@ predictive search and common prefix search like
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Renames key of a record.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Renames key of a record.</p>
 </div></span>
   
 </li>
@@ -354,9 +361,9 @@ predictive search and common prefix search like
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>It creates a table that manages records by double array trie.
-ブロックを指定すると、そのブロックに生成したテーブルが渡さ
-れ、ブロックを抜けると自動的にテーブルが破棄される。</p>
+    
+<p>It creates a table that manages records by double array trie.
+ブロックを指定すると、そのブロックに生成したテーブルが渡さ れ、ブロックを抜けると自動的にテーブルが破棄される。</p>
 
 
   </div>
@@ -421,7 +428,6 @@ predictive search and common prefix search like
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -440,8 +446,9 @@ predictive search and common prefix search like
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value.</p>
 </div>
       
     </li>
@@ -464,7 +471,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p>
+            &mdash; <div class='inline'>
+<p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p>
 </div>
           
         </li>
@@ -476,8 +484,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
-前を指定してテーブルを取得することができる。省略すると
+            &mdash; <div class='inline'>
+<p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名 前を指定してテーブルを取得することができる。省略すると
 無名テーブルになり、テーブルIDでのみ取得できる。</p>
 </div>
           
@@ -490,10 +498,9 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルを保存するパス。パスを指定すると永続テーブルとな
-り、プロセス終了後もレコードは保持される。次回起動時に
-<span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する
-ことができる。省略すると一時テーブルになり、プロセスが終
+            &mdash; <div class='inline'>
+<p>テーブルを保存するパス。パスを指定すると永続テーブルとな り、プロセス終了後もレコードは保持される。次回起動時に
+<span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する ことができる。省略すると一時テーブルになり、プロセスが終
 了するとレコードは破棄される。</p>
 </div>
           
@@ -506,9 +513,9 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると永続テーブルとなる。 +path+ を省略した
-場合は自動的にパスが付加される。 +:context+ で指定した
-<span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると永続テーブルとなる。 <code>path</code> を省略した 場合は自動的にパスが付加される。
+<code>:context</code> で指定した <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
 タベースの場合は例外が発生する。</p>
 </div>
           
@@ -524,10 +531,10 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>Keys are normalized
-if this value is @true@.</p>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
 
-<p>@deprecated Use @:normalizer => "NormalizerAuto"@ instead.</p>
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
 </div>
           
         </li>
@@ -539,8 +546,8 @@ if this value is @true@.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定するとキーの文字列の全suffixが自動的に登
-録される。</p>
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定するとキーの文字列の全suffixが自動的に登 録される。</p>
 </div>
           
         </li>
@@ -552,22 +559,17 @@ if this value is @true@.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>キーの種類を示すオブジェクトを指定する。キーの種類には型
-名（"Int32"や"ShortText"など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> または
-テーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、
-<span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span> のどれか）を指定する。
-<span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の値をキー
-として使用する。ただし、キーの最大サイズは4096バイトで
-あるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span>
-は使用できない。</p>
+            &mdash; <div class='inline'>
+<p>キーの種類を示すオブジェクトを指定する。キーの種類には型 名（“Int32”や“ShortText”など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
+または テーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span>
+のどれか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の値をキー
+として使用する。ただし、キーの最大サイズは4096バイトで あるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
+<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。</p>
 
-<p>テーブルを指定した場合はレコードIDをキーとして使用する。
-指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用するこ
-ともでき、その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコード
-IDを取得する。</p>
+<p>テーブルを指定した場合はレコードIDをキーとして使用する。 指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用するこ
+ともでき、その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコード IDを取得する。</p>
 
-<p>省略した場合はShortText型をキーとして使用する。この場合、
-4096バイトまで使用可能である。</p>
+<p>省略した場合はShortText型をキーとして使用する。この場合、 4096バイトまで使用可能である。</p>
 </div>
           
         </li>
@@ -579,8 +581,8 @@ IDを取得する。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p>
+            &mdash; <div class='inline'>
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
 
 <p>参考: Type.new</p>
 </div>
@@ -594,10 +596,9 @@ IDを取得する。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>で使用するトークナイザを指定する。
-デフォルトでは何も設定されていないので、テーブルに
-<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
-@"TokenBigram"@ などを指定する必要がある。</p>
+            &mdash; <div class='inline'>
+<p>で使用するトークナイザを指定する。 デフォルトでは何も設定されていないので、テーブルに <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
+@“TokenBigram”@ などを指定する必要がある。</p>
 </div>
           
         </li>
@@ -612,8 +613,8 @@ IDを取得する。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The token filters to be used in the
-table.</p>
+            &mdash; <div class='inline'>
+<p>The token filters to be used in the table.</p>
 </div>
           
         </li>
@@ -625,9 +626,9 @@ table.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
-<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに含まれるレコー
-ドの件数を取得できる。</p>
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに含まれるレコー ドの件数を取得できる。</p>
 </div>
           
         </li>
@@ -639,9 +640,10 @@ table.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You
-can specify this by normalizer name as String such as
-@"NormalizerAuto"@ or normalizer object.</p>
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
 </div>
           
         </li>
@@ -673,7 +675,6 @@ can specify this by normalizer name as String such as
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -692,8 +693,9 @@ can specify this by normalizer name as String such as
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value.</p>
 </div>
       
     </li>
@@ -716,7 +718,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p>
+            &mdash; <div class='inline'>
+<p>テーブルが利用する <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> 。</p>
 </div>
           
         </li>
@@ -728,8 +731,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
-前を指定してテーブルを取得することができる。省略すると
+            &mdash; <div class='inline'>
+<p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名 前を指定してテーブルを取得することができる。省略すると
 無名テーブルになり、テーブルIDでのみ取得できる。</p>
 </div>
           
@@ -742,10 +745,9 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルを保存するパス。パスを指定すると永続テーブルとな
-り、プロセス終了後もレコードは保持される。次回起動時に
-<span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する
-ことができる。省略すると一時テーブルになり、プロセスが終
+            &mdash; <div class='inline'>
+<p>テーブルを保存するパス。パスを指定すると永続テーブルとな り、プロセス終了後もレコードは保持される。次回起動時に
+<span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する ことができる。省略すると一時テーブルになり、プロセスが終
 了するとレコードは破棄される。</p>
 </div>
           
@@ -758,9 +760,9 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると永続テーブルとなる。 +path+ を省略した
-場合は自動的にパスが付加される。 +:context+ で指定した
-<span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると永続テーブルとなる。 <code>path</code> を省略した 場合は自動的にパスが付加される。
+<code>:context</code> で指定した <span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span> に結びついているデータベースが一時デー
 タベースの場合は例外が発生する。</p>
 </div>
           
@@ -776,10 +778,10 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>Keys are normalized
-if this value is @true@.</p>
+            &mdash; <div class='inline'>
+<p>Keys are normalized if this value is @true@.</p>
 
-<p>@deprecated Use @:normalizer => "NormalizerAuto"@ instead.</p>
+<p>@deprecated Use @:normalizer =&gt; “NormalizerAuto”@ instead.</p>
 </div>
           
         </li>
@@ -791,8 +793,8 @@ if this value is @true@.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定するとキーの文字列の全suffixが自動的に登
-録される。</p>
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定するとキーの文字列の全suffixが自動的に登 録される。</p>
 </div>
           
         </li>
@@ -804,22 +806,17 @@ if this value is @true@.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>キーの種類を示すオブジェクトを指定する。キーの種類には型
-名（"Int32"や"ShortText"など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> または
-テーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、
-<span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span> のどれか）を指定する。
-<span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の値をキー
-として使用する。ただし、キーの最大サイズは4096バイトで
-あるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や <span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span>
-は使用できない。</p>
+            &mdash; <div class='inline'>
+<p>キーの種類を示すオブジェクトを指定する。キーの種類には型 名（“Int32”や“ShortText”など）または <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span>
+または テーブル（ <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> 、<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> 、 <span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span>
+のどれか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その型が示す範囲の値をキー
+として使用する。ただし、キーの最大サイズは4096バイトで あるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
+<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。</p>
 
-<p>テーブルを指定した場合はレコードIDをキーとして使用する。
-指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用するこ
-ともでき、その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコード
-IDを取得する。</p>
+<p>テーブルを指定した場合はレコードIDをキーとして使用する。 指定したテーブルの <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用するこ
+ともでき、その場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコード IDを取得する。</p>
 
-<p>省略した場合はShortText型をキーとして使用する。この場合、
-4096バイトまで使用可能である。</p>
+<p>省略した場合はShortText型をキーとして使用する。この場合、 4096バイトまで使用可能である。</p>
 </div>
           
         </li>
@@ -831,8 +828,8 @@ IDを取得する。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>値の型を指定する。省略すると値のための領域を確保しない。
-値を保存したい場合は必ず指定すること。</p>
+            &mdash; <div class='inline'>
+<p>値の型を指定する。省略すると値のための領域を確保しない。 値を保存したい場合は必ず指定すること。</p>
 
 <p>参考: Type.new</p>
 </div>
@@ -846,10 +843,9 @@ IDを取得する。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>で使用するトークナイザを指定する。
-デフォルトでは何も設定されていないので、テーブルに
-<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
-@"TokenBigram"@ などを指定する必要がある。</p>
+            &mdash; <div class='inline'>
+<p>で使用するトークナイザを指定する。 デフォルトでは何も設定されていないので、テーブルに <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
+@“TokenBigram”@ などを指定する必要がある。</p>
 </div>
           
         </li>
@@ -864,8 +860,8 @@ IDを取得する。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The token filters to be used in the
-table.</p>
+            &mdash; <div class='inline'>
+<p>The token filters to be used in the table.</p>
 </div>
           
         </li>
@@ -877,9 +873,9 @@ table.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
-<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに含まれるレコー
-ドの件数を取得できる。</p>
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span> でグループ化したときに、
+<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span> でグループに含まれるレコー ドの件数を取得できる。</p>
 </div>
           
         </li>
@@ -891,9 +887,10 @@ table.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You
-can specify this by normalizer name as String such as
-@"NormalizerAuto"@ or normalizer object.</p>
+            &mdash; <div class='inline'>
+<p>The normalizer that is used by <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span>. You can specify this
+by normalizer name as String such as @“NormalizerAuto”@ or normalizer
+object.</p>
 </div>
           
         </li>
@@ -1135,8 +1132,8 @@ rb_grn_double_array_trie_s_create (int argc, VALUE *argv, VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>prefix</em> に前方一致検索をするカーソルを生成して返す。ブロッ
-クを指定すると、そのブロックに生成したカーソルが渡され、ブ
+    
+<p><em>prefix</em> に前方一致検索をするカーソルを生成して返す。ブロッ クを指定すると、そのブロックに生成したカーソルが渡され、ブ
 ロックを抜けると自動的にカーソルが破棄される。</p>
 
 
@@ -1154,7 +1151,6 @@ rb_grn_double_array_trie_s_create (int argc, VALUE *argv, VALUE klass)
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -1171,7 +1167,8 @@ rb_grn_double_array_trie_s_create (int argc, VALUE *argv, VALUE klass)
       
       
         &mdash;
-        <div class='inline'><p>前方一致させる値</p>
+        <div class='inline'>
+<p>前方一致させる値</p>
 </div>
       
     </li>
@@ -1188,8 +1185,9 @@ rb_grn_double_array_trie_s_create (int argc, VALUE *argv, VALUE klass)
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value.</p>
 </div>
       
     </li>
@@ -1211,7 +1209,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p><em>prefix</em> のサイズ（byte）</p>
+            &mdash; <div class='inline'>
+<p><em>prefix</em> のサイズ（byte）</p>
 </div>
           
         </li>
@@ -1223,7 +1222,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p><em>prefix</em> のサイズ（bit）</p>
+            &mdash; <div class='inline'>
+<p><em>prefix</em> のサイズ（bit）</p>
 </div>
           
         </li>
@@ -1235,8 +1235,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目
-からレコードを取り出す。</p>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目 からレコードを取り出す。</p>
 </div>
           
         </li>
@@ -1248,8 +1248,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
-省略された場合または-1が指定された場合は、全件が指定され
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。 省略された場合または-1が指定された場合は、全件が指定され
 たものとみなす。</p>
 </div>
           
@@ -1262,10 +1262,9 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+:asc+ または +:ascending+ を指定すると昇順にレコードを取
-り出す。
-+:desc+ または +:descending+ を指定すると降順にレコードを
-取り出す。</p>
+            &mdash; <div class='inline'>
+<p><code>:asc</code> または <code>:ascending</code> を指定すると昇順にレコードを取 り出す。
+<code>:desc</code> または <code>:descending</code> を指定すると降順にレコードを 取り出す。</p>
 </div>
           
         </li>
@@ -1280,8 +1279,9 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+:id+ を指定するとID順にレコードを取り出す。（デフォルト）
-+:key+指定するとキー順にレコードを取り出す。</p>
+            &mdash; <div class='inline'>
+<p><code>:id</code> を指定するとID順にレコードを取り出す。（デフォルト）
+<code>:key</code>指定するとキー順にレコードを取り出す。</p>
 </div>
           
         </li>
@@ -1293,7 +1293,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <em>prefix</em> で指定した値に一致した [ +key+ ] を
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <em>prefix</em> で指定した値に一致した [ <code>key</code> ] を
 範囲に含まない。</p>
 </div>
           
@@ -1306,7 +1307,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <em>prefix</em> で指定した値に一致した [ +key+ ] を
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <em>prefix</em> で指定した値に一致した [ <code>key</code> ] を
 範囲に含まない。</p>
 </div>
           
@@ -1339,7 +1341,6 @@ pairs. Omitted names are initialized as the default value.</p>
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -1356,7 +1357,8 @@ pairs. Omitted names are initialized as the default value.</p>
       
       
         &mdash;
-        <div class='inline'><p>前方一致させる値</p>
+        <div class='inline'>
+<p>前方一致させる値</p>
 </div>
       
     </li>
@@ -1373,8 +1375,9 @@ pairs. Omitted names are initialized as the default value.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value.</p>
 </div>
       
     </li>
@@ -1396,7 +1399,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p><em>prefix</em> のサイズ（byte）</p>
+            &mdash; <div class='inline'>
+<p><em>prefix</em> のサイズ（byte）</p>
 </div>
           
         </li>
@@ -1408,7 +1412,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p><em>prefix</em> のサイズ（bit）</p>
+            &mdash; <div class='inline'>
+<p><em>prefix</em> のサイズ（bit）</p>
 </div>
           
         </li>
@@ -1420,8 +1425,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目
-からレコードを取り出す。</p>
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、(0ベースで) <em>:offset</em> 番目 からレコードを取り出す。</p>
 </div>
           
         </li>
@@ -1433,8 +1438,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。
-省略された場合または-1が指定された場合は、全件が指定され
+            &mdash; <div class='inline'>
+<p>該当する範囲のレコードのうち、 <em>:limit</em> 件のみを取り出す。 省略された場合または-1が指定された場合は、全件が指定され
 たものとみなす。</p>
 </div>
           
@@ -1447,10 +1452,9 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+:asc+ または +:ascending+ を指定すると昇順にレコードを取
-り出す。
-+:desc+ または +:descending+ を指定すると降順にレコードを
-取り出す。</p>
+            &mdash; <div class='inline'>
+<p><code>:asc</code> または <code>:ascending</code> を指定すると昇順にレコードを取 り出す。
+<code>:desc</code> または <code>:descending</code> を指定すると降順にレコードを 取り出す。</p>
 </div>
           
         </li>
@@ -1465,8 +1469,9 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+:id+ を指定するとID順にレコードを取り出す。（デフォルト）
-+:key+指定するとキー順にレコードを取り出す。</p>
+            &mdash; <div class='inline'>
+<p><code>:id</code> を指定するとID順にレコードを取り出す。（デフォルト）
+<code>:key</code>指定するとキー順にレコードを取り出す。</p>
 </div>
           
         </li>
@@ -1478,7 +1483,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <em>prefix</em> で指定した値に一致した [ +key+ ] を
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <em>prefix</em> で指定した値に一致した [ <code>key</code> ] を
 範囲に含まない。</p>
 </div>
           
@@ -1491,7 +1497,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <em>prefix</em> で指定した値に一致した [ +key+ ] を
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <em>prefix</em> で指定した値に一致した [ <code>key</code> ] を
 範囲に含まない。</p>
 </div>
           
@@ -1578,12 +1585,11 @@ rb_grn_double_array_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>key</em> にマッチするレコードのIDがキーに入っている
-<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。マッチするレコードがない場合は空の
-Groonga::DoubleArrayTrie.fGroongafGroonga::Hash が返る。
-<em>options</em> で +:result+ を指定することにより、そのテーブルにマッ
-チしたレコードIDがキーのレコードを追加することができる。
-+:result+ にテーブルを指定した場合は、そのテーブルが返る。</p>
+    
+<p><em>key</em> にマッチするレコードのIDがキーに入っている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。マッチするレコードがない場合は空の
+Groonga::DoubleArrayTrie.fGroongafGroonga::Hash が返る。 <em>options</em> で <code>:result</code>
+を指定することにより、そのテーブルにマッ チしたレコードIDがキーのレコードを追加することができる。 <code>:result</code>
+にテーブルを指定した場合は、そのテーブルが返る。</p>
 
 
   </div>
@@ -1594,7 +1600,8 @@ Groonga::DoubleArrayTrie.fGroongafGroonga::Hash が返る。
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>複数のキーで検索し、結果を1つのテーブルに集める。</p>
+        <p class="example_title"><div class='inline'>
+<p>複数のキーで検索し、結果を1つのテーブルに集める。</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -1613,7 +1620,6 @@ Groonga::DoubleArrayTrie.fGroongafGroonga::Hash が返る。
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -1630,7 +1636,8 @@ Groonga::DoubleArrayTrie.fGroongafGroonga::Hash が返る。
       
       
         &mdash;
-        <div class='inline'><p>レコードにマッチさせる値</p>
+        <div class='inline'>
+<p>レコードにマッチさせる値</p>
 </div>
       
     </li>
@@ -1647,8 +1654,9 @@ Groonga::DoubleArrayTrie.fGroongafGroonga::Hash が返る。
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value.</p>
 </div>
       
     </li>
@@ -1670,8 +1678,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The result
-結果を格納するテーブル。</p>
+            &mdash; <div class='inline'>
+<p>The result 結果を格納するテーブル。</p>
 </div>
           
         </li>
@@ -1686,24 +1694,19 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>マッチしたレコードをどのように扱うか。指定可能な値は以
-下の通り。</p>
-
-<ul>
-<li>Groonga::Operator::OR :=
-マッチしたレコードを追加。すでにレコードが追加され
-ている場合は何もしない。 =:</li>
-<li>Groonga::Operator::AND :=
-マッチしたレコードのスコアを増加。マッチしなかった
-レコードを削除。 =:</li>
-<li>Groonga::Operator::AND_NOT :=
-マッチしたレコードを削除。 =:</li>
-<li>Groonga::Operator::ADJUST :=
-マッチしたレコードのスコアを増加。 =:</li>
-<li>+:type+ :=
-????? =:</li>
-</ul>
-
+            &mdash; <div class='inline'>
+<p>マッチしたレコードをどのように扱うか。指定可能な値は以 下の通り。</p>
+<ul><li>
+<p>Groonga::Operator::OR :=  マッチしたレコードを追加。すでにレコードが追加され  ている場合は何もしない。 =:</p>
+</li><li>
+<p>Groonga::Operator::AND :=  マッチしたレコードのスコアを増加。マッチしなかった  レコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::AND_NOT :=  マッチしたレコードを削除。 =:</p>
+</li><li>
+<p>Groonga::Operator::ADJUST :=  マッチしたレコードのスコアを増加。 =:</p>
+</li><li>
+<p><code>:type</code> :=  ????? =:</p>
+</li></ul>
 </div>
           
         </li>
@@ -1852,7 +1855,8 @@ rb_grn_double_array_trie_search (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Renames key of a record.</p>
+    
+<p>Renames key of a record.</p>
 
 
   </div>
@@ -1868,7 +1872,8 @@ rb_grn_double_array_trie_search (int argc, VALUE *argv, VALUE self)
       
       
         
-        <div class='inline'><p>4.0.5</p>
+        <div class='inline'>
+<p>4.0.5</p>
 </div>
       
     </li>
@@ -1941,9 +1946,9 @@ rb_grn_double_array_trie_update (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Thu Jan  8 11:29:19 2015 by
+  Generated on Fri Jan  9 02:49:58 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.5).
+  0.8.7.6 (ruby-2.2.0).
 </div>
 
   

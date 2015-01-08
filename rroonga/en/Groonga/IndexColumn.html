@@ -138,11 +138,10 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>転置索引エントリを格納するカラム。このカラムを利用するこ
-とにより高速な全文検索を実現できる。</p>
+    
+<p>転置索引エントリを格納するカラム。このカラムを利用するこ とにより高速な全文検索を実現できる。</p>
 
-<p>テーブルにGroonga::IndexColumnを定義する方法は
-<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> を参照。</p>
+<p>テーブルにGroonga::IndexColumnを定義する方法は <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> を参照。</p>
 
 
   </div>
@@ -182,7 +181,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Adds a record that has @value@ content to inverted index for fast fulltext serach.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Adds a record that has @value@ content to inverted index for fast fulltext
+serach.</p>
 </div></span>
   
 </li>
@@ -205,7 +206,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Deletes a record that has @value@ content from inverted index.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Deletes a record that has @value@ content from inverted index.</p>
 </div></span>
   
 </li>
@@ -228,8 +230,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -251,8 +252,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -274,7 +274,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Estimates the number of documents found by the given token ID.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Estimates the number of documents found by the given token ID.</p>
 </div></span>
   
 </li>
@@ -297,7 +298,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Inspects the index column.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Inspects the index column.</p>
 </div></span>
   
 </li>
@@ -320,7 +322,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Opens cursor to iterate posting in the index column.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Opens cursor to iterate posting in the index column.</p>
 </div></span>
   
 </li>
@@ -343,7 +346,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>object</em> から <em>query</em> に対応するオブジェクトを検索し、見つかっ たオブジェクトのIDがキーになっている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>object</em> から <em>query</em> に対応するオブジェクトを検索し、見つかっ たオブジェクトのIDがキーになっている
+<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。.</p>
 </div></span>
   
 </li>
@@ -366,7 +371,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>インデックス対象となるカラムを設定する。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>インデックス対象となるカラムを設定する。.</p>
 </div></span>
   
 </li>
@@ -389,7 +395,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>インデックス対象となっている <span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Column</a></span> の配列を返す。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>インデックス対象となっている <span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Column</a></span> の配列を返す。.</p>
 </div></span>
   
 </li>
@@ -412,7 +419,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>インデックス対象となる複数のカラムを配列で設定する。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>インデックス対象となる複数のカラムを配列で設定する。.</p>
 </div></span>
   
 </li>
@@ -435,7 +443,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Updates a record that has @new_value@ as new content and @old_value@ as old content in inverted index.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Updates a record that has @new_value@ as new content and @old_value@ as old
+content in inverted index.</p>
 </div></span>
   
 </li>
@@ -458,7 +468,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> が位置情報も格納する場合は +true+ を返します。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> が位置情報も格納する場合は <code>true</code> を返します。.</p>
 </div></span>
   
 </li>
@@ -481,7 +492,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> が段落情報も格納する場合は +true+ を返します。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> が段落情報も格納する場合は <code>true</code> を返します。.</p>
 </div></span>
   
 </li>
@@ -504,7 +516,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>column</em> がウェイト情報も格納する場合は +true+ を返します。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p><em>column</em> がウェイト情報も格納する場合は <code>true</code> を返します。.</p>
 </div></span>
   
 </li>
@@ -552,10 +565,10 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Adds a record that has @value@ content to inverted index for fast
-fulltext serach. Normally, this method is not used
-explicitly. Inverted index for fulltext search is updated
-automatically by using @:source@ option of
+    
+<p>Adds a record that has @value@ content to inverted index for fast fulltext
+serach. Normally, this method is not used explicitly. Inverted index for
+fulltext search is updated automatically by using @:source@ option of
 <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span>.</p>
 
 
@@ -567,7 +580,8 @@ automatically by using @:source@ option of
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Adds sentences of an article to index</p>
+        <p class="example_title"><div class='inline'>
+<p>Adds sentences of an article to index</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_articles'>articles</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Articles</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -619,7 +633,6 @@ usage examples.
   <div class="discussion">
     <p class="note returns_void">This method returns an undefined value.</p>
 
-
   </div>
 </div>
 <div class="tags">
@@ -636,8 +649,8 @@ usage examples.
       
       
         &mdash;
-        <div class='inline'><p>The record that has a @value@ as its value. It can be Integer as
-record id.</p>
+        <div class='inline'>
+<p>The record that has a @value@ as its value. It can be Integer as record id.</p>
 </div>
       
     </li>
@@ -652,7 +665,8 @@ record id.</p>
       
       
         &mdash;
-        <div class='inline'><p>The value of the @record@.</p>
+        <div class='inline'>
+<p>The value of the @record@.</p>
 </div>
       
     </li>
@@ -669,7 +683,8 @@ record id.</p>
       
       
         &mdash;
-        <div class='inline'><p>The options.</p>
+        <div class='inline'>
+<p>The options.</p>
 </div>
       
     </li>
@@ -696,9 +711,10 @@ record id.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The section number. It is one-origin.</p>
+            &mdash; <div class='inline'>
+<p>The section number. It is one-origin.</p>
 
-<p>You must specify @=> true@ in
+<p>You must specify @=&gt; true@ in
 <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> to use this option.</p>
 </div>
           
@@ -719,7 +735,8 @@ record id.</p>
       
       
         
-        <div class='inline'><p>3.0.2</p>
+        <div class='inline'>
+<p>3.0.2</p>
 </div>
       
     </li>
@@ -832,10 +849,11 @@ rb_grn_index_column_add (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Deletes a record that has @value@ content from inverted
-index. Normally, this method is not used explicitly. Inverted index
-for fulltext search is updated automatically by using @:source@
-option of <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span>.</p>
+    
+<p>Deletes a record that has @value@ content from inverted index. Normally,
+this method is not used explicitly. Inverted index for fulltext search is
+updated automatically by using @:source@ option of
+<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span>.</p>
 
 
   </div>
@@ -846,7 +864,8 @@ option of <span class='object_link'><a href="Table.html#define_index_column-inst
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Deletes sentences of an article to index</p>
+        <p class="example_title"><div class='inline'>
+<p>Deletes sentences of an article to index</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_articles'>articles</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Articles</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -904,7 +923,6 @@ usage examples.
   <div class="discussion">
     <p class="note returns_void">This method returns an undefined value.</p>
 
-
   </div>
 </div>
 <div class="tags">
@@ -921,8 +939,8 @@ usage examples.
       
       
         &mdash;
-        <div class='inline'><p>The record that has a @value@ as its value. It can be Integer as
-record id.</p>
+        <div class='inline'>
+<p>The record that has a @value@ as its value. It can be Integer as record id.</p>
 </div>
       
     </li>
@@ -937,7 +955,8 @@ record id.</p>
       
       
         &mdash;
-        <div class='inline'><p>The value of the @record@.</p>
+        <div class='inline'>
+<p>The value of the @record@.</p>
 </div>
       
     </li>
@@ -954,7 +973,8 @@ record id.</p>
       
       
         &mdash;
-        <div class='inline'><p>The options.</p>
+        <div class='inline'>
+<p>The options.</p>
 </div>
       
     </li>
@@ -981,9 +1001,10 @@ record id.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>The section number. It is one-origin.</p>
+            &mdash; <div class='inline'>
+<p>The section number. It is one-origin.</p>
 
-<p>You must specify @=> true@ in
+<p>You must specify @=&gt; true@ in
 <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> to use this option.</p>
 </div>
           
@@ -1004,7 +1025,8 @@ record id.</p>
       
       
         
-        <div class='inline'><p>3.0.2</p>
+        <div class='inline'>
+<p>3.0.2</p>
 </div>
       
     </li>
@@ -1191,7 +1213,8 @@ rb_grn_index_column_delete (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Estimates the number of documents found by the given token ID.</p>
+    
+<p>Estimates the number of documents found by the given token ID.</p>
 
 
   </div>
@@ -1202,7 +1225,8 @@ rb_grn_index_column_delete (int argc, VALUE *argv, VALUE self)
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Token ID style</p>
+        <p class="example_title"><div class='inline'>
+<p>Token ID style</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># Define schema
@@ -1236,7 +1260,8 @@ rb_grn_index_column_delete (int argc, VALUE *argv, VALUE self)
 </span><span class='id identifier rubyid_p'>p</span> <span class='ivar'>@index</span><span class='period'>.</span><span class='id identifier rubyid_estimate_size'>estimate_size</span><span class='lparen'>(</span><span class='ivar'>@terms</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Groonga</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='comment'># =&gt; 1</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Token record style</p>
+        <p class="example_title"><div class='inline'>
+<p>Token record style</p>
 </div></p>
       
       <pre class="example code"><code><span class='comment'># Define schema
@@ -1273,8 +1298,8 @@ rb_grn_index_column_delete (int argc, VALUE *argv, VALUE self)
 
   <div class="docstring">
   <div class="discussion">
-    <p>Returns The estimated number of documents found by the
-given token ID.</p>
+    
+<p>Returns The estimated number of documents found by the given token ID.</p>
 
 
   </div>
@@ -1293,7 +1318,8 @@ given token ID.</p>
       
       
         &mdash;
-        <div class='inline'><p>The token ID to be estimated.</p>
+        <div class='inline'>
+<p>The token ID to be estimated.</p>
 </div>
       
     </li>
@@ -1311,8 +1337,8 @@ given token ID.</p>
       
       
         &mdash;
-        <div class='inline'><p>The estimated number of documents found by the
-given token ID.</p>
+        <div class='inline'>
+<p>The estimated number of documents found by the given token ID.</p>
 </div>
       
     </li>
@@ -1330,7 +1356,8 @@ given token ID.</p>
       
       
         
-        <div class='inline'><p>4.0.7</p>
+        <div class='inline'>
+<p>4.0.7</p>
 </div>
       
     </li>
@@ -1403,7 +1430,8 @@ rb_grn_index_column_estimate_size (VALUE self, VALUE rb_token_id)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Inspects the index column.</p>
+    
+<p>Inspects the index column.</p>
 
 
   </div>
@@ -1412,7 +1440,8 @@ rb_grn_index_column_estimate_size (VALUE self, VALUE rb_token_id)
   
   <div class="docstring">
   <div class="discussion">
-    <p>Returns the inspected string.</p>
+    
+<p>Returns the inspected string.</p>
 
 
   </div>
@@ -1430,7 +1459,8 @@ rb_grn_index_column_estimate_size (VALUE self, VALUE rb_token_id)
       
       
         &mdash;
-        <div class='inline'><p>the inspected string.</p>
+        <div class='inline'>
+<p>the inspected string.</p>
 </div>
       
     </li>
@@ -1492,7 +1522,8 @@ rb_grn_index_column_inspect (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Opens cursor to iterate posting in the index column.</p>
+    
+<p>Opens cursor to iterate posting in the index column.</p>
 
 
   </div>
@@ -1511,7 +1542,6 @@ rb_grn_index_column_inspect (VALUE self)
   <div class="discussion">
     
 
-
   </div>
 </div>
 <div class="tags">
@@ -1528,7 +1558,8 @@ rb_grn_index_column_inspect (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>table cursor for table of the index column.</p>
+        <div class='inline'>
+<p>table cursor for table of the index column.</p>
 </div>
       
     </li>
@@ -1566,8 +1597,9 @@ rb_grn_index_column_inspect (VALUE self)
             
           </span>
           
-            &mdash; <div class='inline'><p>Includes section info the posting. It is enabled by default if
-the index column is created with @:with_section@ flag.</p>
+            &mdash; <div class='inline'>
+<p>Includes section info the posting. It is enabled by default if the index
+column is created with @:with_section@ flag.</p>
 </div>
           
         </li>
@@ -1582,8 +1614,9 @@ the index column is created with @:with_section@ flag.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>Includes weight info the posting. It is enabled by default if
-the index column is created with @:with_weight@ flag.</p>
+            &mdash; <div class='inline'>
+<p>Includes weight info the posting. It is enabled by default if the index
+column is created with @:with_weight@ flag.</p>
 </div>
           
         </li>
@@ -1598,8 +1631,9 @@ the index column is created with @:with_weight@ flag.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>Includes position info the posting. It is enabled by default if
-the index column is created with @:with_position@ flag.</p>
+            &mdash; <div class='inline'>
+<p>Includes position info the posting. It is enabled by default if the index
+column is created with @:with_position@ flag.</p>
 </div>
           
         </li>
@@ -1763,8 +1797,9 @@ rb_grn_index_column_open_cursor (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>object</em> から <em>query</em> に対応するオブジェクトを検索し、見つかっ
-たオブジェクトのIDがキーになっている <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。</p>
+    
+<p><em>object</em> から <em>query</em> に対応するオブジェクトを検索し、見つかっ たオブジェクトのIDがキーになっている
+<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> を返す。</p>
 
 
   </div>
@@ -1774,7 +1809,6 @@ rb_grn_index_column_open_cursor (int argc, VALUE *argv, VALUE self)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -1794,8 +1828,9 @@ rb_grn_index_column_open_cursor (int argc, VALUE *argv, VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value</p>
 </div>
       
     </li>
@@ -1817,8 +1852,8 @@ pairs. Omitted names are initialized as the default value</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>結果を格納するGroonga::Hash。指定しない場合は新しく
-Groonga::Hashを生成し、それに結果を格納して返す。</p>
+            &mdash; <div class='inline'>
+<p>結果を格納するGroonga::Hash。指定しない場合は新しく Groonga::Hashを生成し、それに結果を格納して返す。</p>
 </div>
           
         </li>
@@ -1830,9 +1865,9 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>以下のどれかの値を指定する。 +nil+ , @"or"@ , @"||"@ ,
-@"and"@ , @"+"@ , @"&amp;&amp;"@ , @"but"@ ,
-@"not"@ , @"-"@ , @"adjust"@ , @">"@ 。
+            &mdash; <div class='inline'>
+<p>以下のどれかの値を指定する。 <code>nil</code> , @“or”@ , @“||”@ , @“and”@ , @“+”@ ,
+@“&amp;&amp;”@ , @“but”@ , @“not”@ , @“-”@ , @“adjust”@ , @“&gt;”@ 。
 それぞれ以下のようになる。（FIXME: 「以下」）</p>
 </div>
           
@@ -1845,7 +1880,8 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると完全一致で検索する</p>
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると完全一致で検索する</p>
 </div>
           
         </li>
@@ -1857,8 +1893,8 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <em>query</em> と同じ接頭辞をもつエントリのう
-ち、もっとも長いエントリを検索する</p>
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <em>query</em> と同じ接頭辞をもつエントリのう ち、もっとも長いエントリを検索する</p>
 </div>
           
         </li>
@@ -1870,8 +1906,8 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <em>query</em> が後方一致するエントリを検索す
-る</p>
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <em>query</em> が後方一致するエントリを検索す る</p>
 </div>
           
         </li>
@@ -1883,8 +1919,8 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <em>query</em> が前方一致するレコードを検索す
-る</p>
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <em>query</em> が前方一致するレコードを検索す る</p>
 </div>
           
         </li>
@@ -1896,8 +1932,8 @@ Groonga::Hashを生成し、それに結果を格納して返す。</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>+true+ を指定すると <em>query</em> に指定した複数の語が近傍に含ま
-れるレコードを検索する</p>
+            &mdash; <div class='inline'>
+<p><code>true</code> を指定すると <em>query</em> に指定した複数の語が近傍に含ま れるレコードを検索する</p>
 </div>
           
         </li>
@@ -2092,7 +2128,8 @@ rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>インデックス対象となるカラムを設定する。</p>
+    
+<p>インデックス対象となるカラムを設定する。</p>
 
 
   </div>
@@ -2102,7 +2139,6 @@ rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -2120,7 +2156,8 @@ rb_grn_index_column_search (int argc, VALUE *argv, VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>インデックス対象とするカラム</p>
+        <div class='inline'>
+<p>インデックス対象とするカラム</p>
 </div>
       
     </li>
@@ -2173,7 +2210,8 @@ rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>インデックス対象となっている <span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Column</a></span> の配列を返す。</p>
+    
+<p>インデックス対象となっている <span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Column</a></span> の配列を返す。</p>
 
 
   </div>
@@ -2183,7 +2221,6 @@ rb_grn_index_column_set_source (VALUE self, VALUE rb_source)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -2316,7 +2353,8 @@ rb_grn_index_column_get_sources (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>インデックス対象となる複数のカラムを配列で設定する。</p>
+    
+<p>インデックス対象となる複数のカラムを配列で設定する。</p>
 
 
   </div>
@@ -2326,7 +2364,6 @@ rb_grn_index_column_get_sources (VALUE self)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -2344,7 +2381,8 @@ rb_grn_index_column_get_sources (VALUE self)
       
       
         &mdash;
-        <div class='inline'><p>インデックス対象となるカラムの配列</p>
+        <div class='inline'>
+<p>インデックス対象となるカラムの配列</p>
 </div>
       
     </li>
@@ -2463,11 +2501,11 @@ rb_grn_index_column_set_sources (VALUE self, VALUE rb_sources)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Updates a record that has @new_value@ as new content and
-@old_value@ as old content in inverted index. Normally, this method
-is not used explicitly. Inverted index for fulltext search is
-updated automatically by using @:source@ option of
-<span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span>.</p>
+    
+<p>Updates a record that has @new_value@ as new content and @old_value@ as old
+content in inverted index. Normally, this method is not used explicitly.
+Inverted index for fulltext search is updated automatically by using
+@:source@ option of <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span>.</p>
 
 
   </div>
@@ -2478,7 +2516,8 @@ updated automatically by using @:source@ option of
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Updates sentences of an article in index</p>
+        <p class="example_title"><div class='inline'>
+<p>Updates sentences of an article in index</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_articles'>articles</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Articles</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -2526,7 +2565,6 @@ weakness of row-oriented systems.
   <div class="discussion">
     <p class="note returns_void">This method returns an undefined value.</p>
 
-
   </div>
 </div>
 <div class="tags">
@@ -2543,8 +2581,9 @@ weakness of row-oriented systems.
       
       
         &mdash;
-        <div class='inline'><p>The record that has a @new_value@ as its new value and
-@old_value@ as its old value. It can be Integer as record id.</p>
+        <div class='inline'>
+<p>The record that has a @new_value@ as its new value and @old_value@ as its
+old value. It can be Integer as record id.</p>
 </div>
       
     </li>
@@ -2559,7 +2598,8 @@ weakness of row-oriented systems.
       
       
         &mdash;
-        <div class='inline'><p>The old value of the @record@.</p>
+        <div class='inline'>
+<p>The old value of the @record@.</p>
 </div>
       
     </li>
@@ -2574,7 +2614,8 @@ weakness of row-oriented systems.
       
       
         &mdash;
-        <div class='inline'><p>The new value of the @record@.</p>
+        <div class='inline'>
+<p>The new value of the @record@.</p>
 </div>
       
     </li>
@@ -2591,7 +2632,8 @@ weakness of row-oriented systems.
       
       
         &mdash;
-        <div class='inline'><p>The options.</p>
+        <div class='inline'>
+<p>The options.</p>
 </div>
       
     </li>
@@ -2620,9 +2662,10 @@ weakness of row-oriented systems.
             
           </span>
           
-            &mdash; <div class='inline'><p>The section number. It is one-origin.</p>
+            &mdash; <div class='inline'>
+<p>The section number. It is one-origin.</p>
 
-<p>You must specify @=> true@ in
+<p>You must specify @=&gt; true@ in
 <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Table#define_index_column</a></span> to use this option.</p>
 </div>
           
@@ -2643,7 +2686,8 @@ weakness of row-oriented systems.
       
       
         
-        <div class='inline'><p>3.0.2</p>
+        <div class='inline'>
+<p>3.0.2</p>
 </div>
       
     </li>
@@ -2782,7 +2826,8 @@ rb_grn_index_column_update (int argc, VALUE *argv, VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> が位置情報も格納する場合は +true+ を返します。</p>
+    
+<p><em>column</em> が位置情報も格納する場合は <code>true</code> を返します。</p>
 
 
   </div>
@@ -2855,7 +2900,8 @@ rb_grn_index_column_with_position_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> が段落情報も格納する場合は +true+ を返します。</p>
+    
+<p><em>column</em> が段落情報も格納する場合は <code>true</code> を返します。</p>
 
 
   </div>
@@ -2928,7 +2974,8 @@ rb_grn_index_column_with_section_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>column</em> がウェイト情報も格納する場合は +true+ を返します。</p>
+    
+<p><em>column</em> がウェイト情報も格納する場合は <code>true</code> を返します。</p>
 
 
   </div>

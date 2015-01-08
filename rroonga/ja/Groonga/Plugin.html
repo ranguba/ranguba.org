@@ -134,8 +134,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>プラグイン。現在のところ、Rubyでgroongaのプラグインを作成
-することはできず、Cで作成された既存のプラグインを登録する
+    
+<p>プラグイン。現在のところ、Rubyでgroongaのプラグインを作成 することはできず、Cで作成された既存のプラグインを登録する
 ことができるだけです。</p>
 
 
@@ -176,7 +176,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>既存のプラグインをデータベースに登録する。.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>既存のプラグインをデータベースに登録する。.</p>
 </div></span>
   
 </li>
@@ -199,7 +200,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the plugin file suffix.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the plugin file suffix.</p>
 </div></span>
   
 </li>
@@ -222,7 +224,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the system plugins directory.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the system plugins directory.</p>
 </div></span>
   
 </li>
@@ -252,7 +255,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>既存のプラグインをデータベースに登録する。</p>
+    
+<p>既存のプラグインをデータベースに登録する。</p>
 
 
   </div>
@@ -267,7 +271,8 @@
         <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(name, options = nil) </span>
         <div class="docstring">
   <div class="discussion">
-    <p><em>name</em> で指定した名前のプラグインを登録する。</p>
+    
+<p><em>name</em> で指定した名前のプラグインを登録する。</p>
 
 
   </div>
@@ -286,7 +291,8 @@
       
       
         &mdash;
-        <div class='inline'><p>登録するプラグインの名前</p>
+        <div class='inline'>
+<p>登録するプラグインの名前</p>
 </div>
       
     </li>
@@ -303,8 +309,9 @@
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'>
+<p>The name and value pairs. Omitted names are initialized as the default
+value.</p>
 </div>
       
     </li>
@@ -329,7 +336,8 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>データベースを結びつけるコンテキスト。</p>
+            &mdash; <div class='inline'>
+<p>データベースを結びつけるコンテキスト。</p>
 </div>
           
         </li>
@@ -346,7 +354,8 @@ pairs. Omitted names are initialized as the default value.</p>
         <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>({:path = &gt; path, :context =&gt; nil}) </span>
         <div class="docstring">
   <div class="discussion">
-    <p><em>:path</em> で指定したパスのプラグインを登録する。</p>
+    
+<p><em>:path</em> で指定したパスのプラグインを登録する。</p>
 
 <p><em>:context</em> については <em>name</em> を設定した時と同様。</p>
 
@@ -367,7 +376,8 @@ pairs. Omitted names are initialized as the default value.</p>
       
       
         &mdash;
-        <div class='inline'><p><em>:path</em> と <em>:context</em> を指定したハッシュを指定する。</p>
+        <div class='inline'>
+<p><em>:path</em> と <em>:context</em> を指定したハッシュを指定する。</p>
 </div>
       
     </li>
@@ -487,7 +497,8 @@ rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the plugin file suffix. (e.g. ".so", ".dll" and so on.)</p>
+    
+<p>Returns the plugin file suffix. (e.g. “.so”, “.dll” and so on.)</p>
 
 
   </div>
@@ -497,7 +508,6 @@ rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -556,7 +566,8 @@ rb_grn_plugin_s_suffix (VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the system plugins directory.</p>
+    
+<p>Returns the system plugins directory.</p>
 
 
   </div>
@@ -566,7 +577,6 @@ rb_grn_plugin_s_suffix (VALUE klass)
   <div class="docstring">
   <div class="discussion">
     
-
 
   </div>
 </div>
@@ -619,9 +629,9 @@ rb_grn_plugin_s_system_plugins_dir (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Thu Jan  8 11:29:18 2015 by
+  Generated on Fri Jan  9 02:49:55 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.5).
+  0.8.7.6 (ruby-2.2.0).
 </div>
 
   
