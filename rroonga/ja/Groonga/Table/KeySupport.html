@@ -771,7 +771,7 @@ rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
       
       
         &mdash;
-        <div class='inline'><p>keyに対応させるカラムの値。{ :column_name =&gt; value, … }の形で設定する。</p>
+        <div class='inline'><p>keyに対応させるカラムの値。{ :column_name => value, ... }の形で設定する。</p>
 </div>
       
     </li>
@@ -876,8 +876,8 @@ rb_grn_table_key_support_array_set (VALUE self, VALUE rb_key, VALUE rb_values)
 
 <p><em>values</em> にはレコードのカラムに設定する値を指定する。省略
 した場合または +nil+ を指定した場合はカラムは設定しない。カ
-ラムの値は @=&gt; 値1, :カラム名2 =&gt; 値2,
-…@ と指定する。</p>
+ラムの値は @=> 値1, :カラム名2 => 値2,
+...@ と指定する。</p>
 
 
   </div>
@@ -3125,7 +3125,7 @@ rb_grn_table_key_support_get_value (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Sat Dec 13 01:56:02 2014 by
+  Generated on Thu Jan  8 11:29:14 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

@@ -387,12 +387,12 @@
       <pre class="lines">
 
 
-38
 39
-40</pre>
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_degree?'>degree?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Float</span><span class='rparen'>)</span>
@@ -417,12 +417,12 @@
       <pre class="lines">
 
 
-30
 31
-32</pre>
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_degree_to_msec'>degree_to_msec</span><span class='lparen'>(</span><span class='id identifier rubyid_degree'>degree</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='id identifier rubyid_degree'>degree</span> <span class='op'>*</span> <span class='int'>3600</span> <span class='op'>*</span> <span class='int'>1000</span><span class='rparen'>)</span>
@@ -470,12 +470,12 @@
       <pre class="lines">
 
 
-34
 35
-36</pre>
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_msec?'>msec?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span>
@@ -500,14 +500,14 @@
       <pre class="lines">
 
 
-24
 25
 26
 27
-28</pre>
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_msec_to_degree'>msec_to_degree</span><span class='lparen'>(</span><span class='id identifier rubyid_msec'>msec</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_degree_integer_part'>degree_integer_part</span><span class='comma'>,</span> <span class='id identifier rubyid_degree_fraction_part'>degree_fraction_part</span> <span class='op'>=</span> <span class='id identifier rubyid_msec'>msec</span><span class='period'>.</span><span class='id identifier rubyid_divmod'>divmod</span><span class='lparen'>(</span><span class='int'>3600</span> <span class='op'>*</span> <span class='int'>1000</span><span class='rparen'>)</span>
@@ -534,16 +534,16 @@
       <pre class="lines">
 
 
-52
 53
 54
 55
 56
 57
-58</pre>
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A[-+]?\d+\z</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_value'>value</span>
@@ -572,13 +572,13 @@
       <pre class="lines">
 
 
-42
 43
 44
-45</pre>
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_degree'>to_degree</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span> <span class='kw'>if</span> <span class='id identifier rubyid_degree?'>degree?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -604,13 +604,13 @@
       <pre class="lines">
 
 
-47
 48
 49
-50</pre>
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_msec'>to_msec</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span> <span class='kw'>if</span> <span class='id identifier rubyid_msec?'>msec?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -642,17 +642,17 @@
       <pre class="lines">
 
 
-61
 62
 63
 64
 65
 66
 67
-68</pre>
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='id identifier rubyid_number'>number</span><span class='comma'>,</span> <span class='id identifier rubyid_n_digits'>n_digits</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_n_digits'>n_digits</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>

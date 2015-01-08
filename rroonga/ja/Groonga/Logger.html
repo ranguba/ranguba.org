@@ -379,7 +379,7 @@ instead.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>登録されたロガーの登録を削除する。削除後はデフォルトのロガーが使われます。.</p>
+    <span class="summary_desc"><div class='inline'><p>Unregister the registered logger.</p>
 </div></span>
   
 </li>
@@ -671,8 +671,8 @@ rb_grn_logger_s_get_path (VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sets the log path that is used the default logger. If you’re using
-custom logger by <span class='object_link'><a href="#register-class_method" title="Groonga::Logger.register (method)">register</a></span>, the log path isn’t used. Because it
+    <p>Sets the log path that is used the default logger. If you're using
+custom logger by <span class='object_link'><a href="#register-class_method" title="Groonga::Logger.register (method)">register</a></span>, the log path isn't used. Because it
 is for the default logger.</p>
 
 <p>If you specify nil as path, logging by the default logger is
@@ -1305,7 +1305,8 @@ rb_grn_logger_s_reopen (VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>登録されたロガーの登録を削除する。削除後はデフォルトのロガーが使われます。</p>
+    <p>Unregister the registered logger. The default logger is used after
+unregistering.</p>
 
 
   </div>
@@ -1496,7 +1497,7 @@ rb_grn_logger_s_unregister (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Sat Dec 13 01:56:04 2014 by
+  Generated on Thu Jan  8 11:29:16 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

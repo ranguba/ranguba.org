@@ -239,12 +239,12 @@
       <pre class="lines">
 
 
-152
 153
-154</pre>
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_tokyo'>to_tokyo</span>
   <span class='kw'>self</span>
@@ -267,18 +267,18 @@
   <div class="discussion">
     <p>TODO: write document</p>
 
-<p>TokyoGeoPoint &lt;-&gt; WGS84GeoPoint is based on
-http://www.jalan.net/jw/jwp0200/jww0203.do</p>
+<p>TokyoGeoPoint <-> WGS84GeoPoint is based on
+<a href="http://www.jalan.net/jw/jwp0200/jww0203.do">http://www.jalan.net/jw/jwp0200/jww0203.do</a></p>
 
-<p>jx: longitude in degree in Tokyo Geodetic System.
+<p>  jx: longitude in degree in Tokyo Geodetic System.
   jy: latitude in degree in Tokyo Geodetic System.
   wx: longitude in degree in WGS 84.
   wy: latitude in degree in WGS 84.</p>
 
-<p>jy = wy * 1.000106961 - wx * 0.000017467 - 0.004602017
+<p>  jy = wy * 1.000106961 - wx * 0.000017467 - 0.004602017
   jx = wx * 1.000083049 + wy * 0.000046047 - 0.010041046</p>
 
-<p>wy = jy - jy * 0.00010695 + jx * 0.000017464 + 0.0046017
+<p>  wy = jy - jy * 0.00010695 + jx * 0.000017464 + 0.0046017
   wx = jx - jy * 0.000046038 - jx * 0.000083043 + 0.010040</p>
 
 
@@ -293,7 +293,6 @@ http://www.jalan.net/jw/jwp0200/jww0203.do</p>
       <pre class="lines">
 
 
-171
 172
 173
 174
@@ -306,10 +305,11 @@ http://www.jalan.net/jw/jwp0200/jww0203.do</p>
 181
 182
 183
-184</pre>
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 172</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_wgs84'>to_wgs84</span>
   <span class='id identifier rubyid_in_degree'>in_degree</span> <span class='op'>=</span> <span class='id identifier rubyid_to_degree'>to_degree</span>

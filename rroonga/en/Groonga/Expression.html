@@ -1320,7 +1320,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>Initializes this variable as reference hold variable if
 @:reference@ is true. Reference hold variable is GRN_PTR type
-in groonga. You can’t use @:reference@ with @:domain@.</p>
+in groonga. You can't use @:reference@ with @:domain@.</p>
 </div>
           
         </li>
@@ -1742,7 +1742,7 @@ rb_grn_expression_inspect (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Extracts keywords from <em>expression</em>. The keywords order isn’t
+    <p>Extracts keywords from <em>expression</em>. The keywords order isn't
 guaranteed.</p>
 
 
@@ -1953,7 +1953,7 @@ pairs. Omitted names are initialized as the default value.</p>
           </span>
           
             &mdash; <div class='inline'><p>default_column
-“column_name:hoge”ではなく”hoge”のようにcolumn_nameが指
+"column_name:hoge"ではなく"hoge"のようにcolumn_nameが指
 定されない条件の検索対象となるカラムを指定する。</p>
 </div>
           
@@ -1969,19 +1969,20 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>”+”や”OR”で繋がれず、ただ列挙された複数の条件があった時、
+            &mdash; <div class='inline'><p>"+"や"OR"で繋がれず、ただ列挙された複数の条件があった時、
 <em>expression</em> 全体として各レコードをヒットとみなすかの論理
 条件を指定する。省略した場合はGroonga::Operator::AND。</p>
 
 <ul>
-  <li>Groonga::Operator::OR :=
+<li>Groonga::Operator::OR :=
 レコードはいずれかの条件にマッチすればいい。 =:</li>
-  <li>Groonga::Operator::AND :=
+<li>Groonga::Operator::AND :=
 レコードは全ての条件にマッチしなければならない。 =:</li>
-  <li>Groonga::Operator::AND_NOT :=
+<li>Groonga::Operator::AND_NOT :=
 最初の条件にレコードはマッチし、残りの条件にレコードは
 マッチしてはならない。 =:</li>
 </ul>
+
 </div>
           
         </li>
@@ -2016,17 +2017,18 @@ pairs. Omitted names are initialized as the default value.</p>
 した場合は +:query+ 。</p>
 
 <ul>
-  <li>+:query+ :=
-「文字列1 OR 文字列2」で「”文字列1”あるいは”文字列2”
+<li>+:query+ :=
+「文字列1 OR 文字列2」で「"文字列1"あるいは"文字列2"
 にマッチという検索エンジンで利用できるような構文を使
 う。
-参考: “Groongaのクエリ構文のドキュメント”:http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html =:</li>
-  <li>+nil+ :=
+参考: "Groongaのクエリ構文のドキュメント":<a href="http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html">http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html</a> =:</li>
+<li>+nil+ :=
 +:query+と同様 =:</li>
-  <li>+:script+ :=
+<li>+:script+ :=
 「[カラム名] == [値]」というようにECMAScript風の構文を使う。
-参考: “Groongaのscript構文のドキュメント”:http://groonga.org/ja/docs/reference/grn_expr/script_syntax.html =:</li>
+参考: "Groongaのscript構文のドキュメント":<a href="http://groonga.org/ja/docs/reference/grn_expr/script_syntax.html">http://groonga.org/ja/docs/reference/grn_expr/script_syntax.html</a> =:</li>
 </ul>
+
 </div>
           
         </li>
@@ -2045,7 +2047,7 @@ pragmaを利用できるようにする。script構文を用いている
 
 <p>デフォルトではプラグマを利用できる。</p>
 
-<p>参考: “Groongaのクエリ構文のドキュメント”:http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html</p>
+<p>参考: "Groongaのクエリ構文のドキュメント":<a href="http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html">http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html</a></p>
 </div>
           
         </li>
@@ -2064,7 +2066,7 @@ pragmaを利用できるようにする。script構文を用いている
 
 <p>デフォルトではカラム名を指定した条件式を利用できる。</p>
 
-<p>参考: “Groongaのクエリ構文のドキュメント”:http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html</p>
+<p>参考: "Groongaのクエリ構文のドキュメント":<a href="http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html">http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html</a></p>
 </div>
           
         </li>
@@ -2083,7 +2085,7 @@ pragmaを利用できるようにする。script構文を用いている
 
 <p>デフォルトでは更新操作を利用できる。</p>
 
-<p>参考: “Groongaのクエリ構文のドキュメント”:http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html</p>
+<p>参考: "Groongaのクエリ構文のドキュメント":<a href="http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html">http://groonga.org/ja/docs/reference/grn_expr/query_syntax.html</a></p>
 </div>
           
         </li>
@@ -2358,6 +2360,7 @@ rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
 </span>  <span class='rbracket'>]</span>
 </code></pre>
 
+
 <p>もし、1つのスニペットの中に <em>tags</em> で指定したタグより多くの
 キーワードが含まれている場合は、以下のように、また、先頭
 のタグから順番に使われる。</p>
@@ -2369,6 +2372,7 @@ rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
      <span class='comment'># =&gt; [&quot;&lt;tag1&gt;Ruby&lt;/tag1&gt;で&lt;tag2&gt;groonga&lt;/tag2&gt;&quot;
 </span>     <span class='comment'># =&gt;  &quot;使って全文&lt;tag1&gt;検索&lt;/tag1&gt;、高速&lt;tag2&gt;検索&lt;/tag2&gt;。&quot;]
 </span></code></pre>
+
 
 
   </div>
@@ -2500,7 +2504,7 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>スニペット内の +&lt;+, +&gt;+, +&amp;+, +”+ をHTMLエスケープするか
+            &mdash; <div class='inline'><p>スニペット内の +&lt;+, +>+, +&amp;+, +"+ をHTMLエスケープするか
 どうか。省略した場合は +false+ で、HTMLエスケープしない。</p>
 </div>
           

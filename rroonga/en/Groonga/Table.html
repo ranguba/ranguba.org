@@ -541,7 +541,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>table</em> のレコードを <em>key1</em> , <em>key2</em> , <em>…</em> で指定したキーの 値でグループ化する。多くの場合、キーにはカラムを指定する。 カラムはカラム名（文字列）でも指定可能。.</p>
+    <span class="summary_desc"><div class='inline'><p><em>table</em> のレコードを <em>key1</em> , <em>key2</em> , <em>...</em> で指定したキーの 値でグループ化する。多くの場合、キーにはカラムを指定する。 カラムはカラム名（文字列）でも指定可能。.</p>
 </div></span>
   
 </li>
@@ -1580,7 +1580,7 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
   <div class="discussion">
     <p><em>table</em> の <em>id</em> に対応するカラム <em>name</em> の値を返す。</p>
 
-<p>@:id =&gt; true@ が指定できるのは利便性のため。
+<p>@:id => true@ が指定できるのは利便性のため。
 <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> でも <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> や <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> と
 同じ引数で動くようになる。</p>
 
@@ -2043,9 +2043,10 @@ pairs. Omitted names are initialized as the default value.</p>
 +:scalar+ になる。</p>
 
 <ul>
-  <li>+:scalar+ := スカラ値(単独の値)を格納する。</li>
-  <li>+:vector+ := 値の配列を格納する。</li>
+<li>+:scalar+ := スカラ値(単独の値)を格納する。</li>
+<li>+:vector+ := 値の配列を格納する。</li>
 </ul>
+
 </div>
           
         </li>
@@ -2063,7 +2064,7 @@ pairs. Omitted names are initialized as the default value.</p>
             &mdash; <div class='inline'><p>It specifies whether making the column weight vector column or not.
 Weight vector column can store weight for each element.</p>
 
-<p>You can’t use this option for scalar column.</p>
+<p>You can't use this option for scalar column.</p>
 </div>
           
         </li>
@@ -2078,9 +2079,10 @@ Weight vector column can store weight for each element.</p>
             &mdash; <div class='inline'><p>値の圧縮方法を指定する。省略した場合は、圧縮しない。</p>
 
 <ul>
-  <li>+:zlib+ := 値をzlib圧縮して格納する。</li>
-  <li>+:lz4+ := 値をLZ4圧縮して格納する。</li>
+<li>+:zlib+ := 値をzlib圧縮して格納する。</li>
+<li>+:lz4+ := 値をLZ4圧縮して格納する。</li>
 </ul>
+
 </div>
           
         </li>
@@ -3227,7 +3229,7 @@ rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
   <div class="discussion">
     <p>テーブルに登録されているレコードを順番にブロックに渡す。</p>
 
-<p><em>options</em> is the same as <span class='object_link'><a href="#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">#open_cursor</a></span> ‘s one.</p>
+<p><em>options</em> is the same as <span class='object_link'><a href="#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">#open_cursor</a></span> 's one.</p>
 
 
   </div>
@@ -3699,7 +3701,7 @@ rb_grn_table_exist_p (VALUE self, VALUE id)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>table</em> のレコードを <em>key1</em> , <em>key2</em> , <em>…</em> で指定したキーの
+    <p><em>table</em> のレコードを <em>key1</em> , <em>key2</em> , <em>...</em> で指定したキーの
 値でグループ化する。多くの場合、キーにはカラムを指定する。
 カラムはカラム名（文字列）でも指定可能。</p>
 
@@ -4088,11 +4090,11 @@ rb_grn_table_have_column (VALUE self, VALUE rb_name)
     <p><span class='object_link'><a href="#group-instance_method" title="Groonga::Table#group (method)">#group</a></span> returns a table that contains grouped
 records. If grouped table has a space to store the number of
 records for each group, the number of records is stored to
-it. Records for each group are called as “sub records”.</p>
+it. Records for each group are called as "sub records".</p>
 
-<p>Normally, you don’t need to care about the space because rroonga
+<p>Normally, you don't need to care about the space because rroonga
 creates a table with the space automatically. Normal tables
-(persistent tables) don’t have the space because they don’t need
+(persistent tables) don't have the space because they don't need
 it.</p>
 
 
@@ -4104,7 +4106,7 @@ it.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>A normal table don’t have the space</p>
+        <p class="example_title"><div class='inline'><p>A normal table don't have the space</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># A normal table
@@ -5297,6 +5299,7 @@ rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
                                           <span class='symbol'>:size</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='rparen'>)</span>
 </code></pre>
 
+
 <p><span class='object_link'><a href="#sort-instance_method" title="Groonga::Table#sort (method)">#sort</a></span> と違い、返される <span class='object_link'><a href="" title="Groonga::Table (class)">Groonga::Table</a></span> オブジェクトには
 <span class='object_link'><a href="Pagination.html" title="Groonga::Pagination (module)">Pagination</a></span> モジュールがextendされており、
 以下のようにページネーション情報を取得できる。</p>
@@ -5307,6 +5310,7 @@ rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
   <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span>
 <span class='kw'>end</span>
 </code></pre>
+
 
 <p><em>sort_keys</em> には ソートに用いる情報を指定する。
 指定の仕方は <span class='object_link'><a href="#sort-instance_method" title="Groonga::Table#sort (method)">#sort</a></span> と同様なので、詳細は <span class='object_link'><a href="#sort-instance_method" title="Groonga::Table#sort (method)">#sort</a></span> を参照。</p>
@@ -5701,6 +5705,7 @@ rb_grn_table_rename (VALUE self, VALUE rb_name)
 <span class='kw'>end</span>
 </code></pre>
 
+
 <p>出力例</p>
 
 <pre class="code text"><code class="text">rroongaの説明文の中で「groonga」が含まれる部分
@@ -5708,6 +5713,7 @@ rb_grn_table_rename (VALUE self, VALUE rb_name)
 rroongaは&lt;em&gt;groonga&lt;/em&gt;のいわゆるDB-APIの層の...
 ---
 </code></pre>
+
 
 
   </div>
@@ -5744,7 +5750,7 @@ rroongaは&lt;em&gt;groonga&lt;/em&gt;のいわゆるDB-APIの層の...
 Groonga::RecordExpressionBuilderを参照。</p>
 
 <p>Ruby1.9以降では、ブロックで条件を指定する際に
-Groonga::ColumnExpressionBuilderの他に”!=”も使用可能。</p>
+Groonga::ColumnExpressionBuilderの他に"!="も使用可能。</p>
 
 <p>例:</p>
 
@@ -5759,6 +5765,7 @@ Groonga::ColumnExpressionBuilderの他に”!=”も使用可能。</p>
 <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='rbrace'>}</span>
   <span class='comment'># =&gt; [&quot;Hello Good-bye!&quot;, &quot;Hello World&quot;]
 </span></code></pre>
+
 </div>
       
     </li>
@@ -5777,14 +5784,15 @@ Groonga::ColumnExpressionBuilderの他に”!=”も使用可能。</p>
 指定する。演算子は以下の通り。</p>
 
 <ul>
-  <li>なし := [カラム値] == [値]</li>
-  <li>@!@ := [カラム値] != [値]</li>
-  <li>@&lt;@ := [カラム値] &lt; [値]</li>
-  <li>@&gt;@ := [カラム値] &gt; [値]</li>
-  <li>@&lt;=@ := [カラム値] &lt;= [値]</li>
-  <li>@&gt;=@ := [カラム値] &gt;= [値]</li>
-  <li>@@@ := [カラム値]が[値]を含んでいるかどうか</li>
+<li>なし := [カラム値] == [値]</li>
+<li>@!@ := [カラム値] != [値]</li>
+<li>@&lt;@ := [カラム値] &lt; [値]</li>
+<li>@>@ := [カラム値] > [値]</li>
+<li>@&lt;=@ := [カラム値] &lt;= [値]</li>
+<li>@>=@ := [カラム値] >= [値]</li>
+<li>@@@ := [カラム値]が[値]を含んでいるかどうか</li>
 </ul>
+
 
 <p>例:</p>
 
@@ -5792,6 +5800,7 @@ Groonga::ColumnExpressionBuilderの他に”!=”も使用可能。</p>
 </span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>description:@groonga</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># &quot;description&quot;カラムが
 </span>                       <span class='comment'># &quot;groonga&quot;を含んでいるレコードにマッチ
 </span></code></pre>
+
 
 <p>参考: <span class='object_link'><a href="Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Expression#parse</a></span> .</p>
 
@@ -5836,7 +5845,7 @@ pairs. Omitted names are initialized as the default value.</p>
           </span>
           
             &mdash; <div class='inline'><p>default_column
-“column_name:hoge”ではなく”hoge”のようにcolumn_nameが指
+"column_name:hoge"ではなく"hoge"のようにcolumn_nameが指
 定されない条件の検索対象となるカラムを指定する。</p>
 </div>
           
@@ -5856,16 +5865,17 @@ pairs. Omitted names are initialized as the default value.</p>
 下の通り。省略した場合はGroonga::Operator::OR。</p>
 
 <ul>
-  <li>Groonga::Operator::OR :=
+<li>Groonga::Operator::OR :=
 マッチしたレコードを追加。すでにレコードが追加されている場合
 は何もしない。 =:</li>
-  <li>Groonga::Operator::AND :=
+<li>Groonga::Operator::AND :=
 マッチしたレコードのスコアを増加。マッチしなかったレコードを削除。 =:</li>
-  <li>Groonga::Operator::AND_NOT :=
+<li>Groonga::Operator::AND_NOT :=
 マッチしたレコードを削除。 =:</li>
-  <li>Groonga::Operator::ADJUST :=
+<li>Groonga::Operator::ADJUST :=
 マッチしたレコードのスコアを増加。 =:</li>
 </ul>
+
 </div>
           
         </li>
@@ -6009,7 +6019,7 @@ pairs. Omitted names are initialized as the default value.</p>
           </span>
           
             &mdash; <div class='inline'><p>default_column
-“column_name:hoge”ではなく”hoge”のようにcolumn_nameが指
+"column_name:hoge"ではなく"hoge"のようにcolumn_nameが指
 定されない条件の検索対象となるカラムを指定する。</p>
 </div>
           
@@ -6029,16 +6039,17 @@ pairs. Omitted names are initialized as the default value.</p>
 下の通り。省略した場合はGroonga::Operator::OR。</p>
 
 <ul>
-  <li>Groonga::Operator::OR :=
+<li>Groonga::Operator::OR :=
 マッチしたレコードを追加。すでにレコードが追加されている場合
 は何もしない。 =:</li>
-  <li>Groonga::Operator::AND :=
+<li>Groonga::Operator::AND :=
 マッチしたレコードのスコアを増加。マッチしなかったレコードを削除。 =:</li>
-  <li>Groonga::Operator::AND_NOT :=
+<li>Groonga::Operator::AND_NOT :=
 マッチしたレコードを削除。 =:</li>
-  <li>Groonga::Operator::ADJUST :=
+<li>Groonga::Operator::ADJUST :=
 マッチしたレコードのスコアを増加。 =:</li>
 </ul>
+
 </div>
           
         </li>
@@ -6276,7 +6287,7 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
         if (!NIL_P(options))
             rb_raise(rb_eArgError,
                      &quot;should be [query_string, option_hash], &quot;
-                     &quot;[expression, opion_hash] &quot;
+                     &quot;[expression, option_hash] &quot;
                      &quot;or [option_hash]: %s&quot;,
                      rb_grn_inspect(rb_ary_new4(argc, argv)));
         options = condition_or_options;
@@ -6448,7 +6459,7 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
     <strong>Note:</strong>
     <div class='inline'><p>To use weight, there are two requirements. They are using vector
 column and using index column with weight support. Weight supported
-index column can be created with @:with_weight =&gt; true@ option.
+index column can be created with @:with_weight => true@ option.
 See <span class='object_link'><a href="#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">#define_index_column</a></span>.</p>
 </div>
   </div>
@@ -6570,11 +6581,11 @@ a record is matched against a query.</p>
         &mdash;
         <div class='inline'><p>The new vector value with weight. The vector value can contain both
 ::Hash and value. If a contained element uses ::Hash style, it can
-specify its weight. If a contained element doesn’t use ::Hash style,
-it can’t specify its weight.</p>
+specify its weight. If a contained element doesn't use ::Hash style,
+it can't specify its weight.</p>
 
 <p>If ::Hash contains @:weight@ key, its value is used as weight for
-@:value@ key’s value. If ::Hash contains only @:value@ or @:weight@
+@:value@ key's value. If ::Hash contains only @:value@ or @:weight@
 value is nil, the default weight is used. The default weight is 0.</p>
 </div>
       
@@ -6595,7 +6606,7 @@ value is nil, the default weight is used. The default weight is 0.</p>
 by <span class='object_link'><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">Groonga::Table::KeySupport#set_column_value</a></span>.
 <span class='object_link'><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">Groonga::Table::KeySupport#set_column_value</a></span> accepts not only ID
 but also key value as the first argument. If you specify
-@:id =&gt; true@ as @options, you can use both this
+@:id => true@ as @options, you can use both this
 <span class='object_link'><a href="#set_column_value-instance_method" title="Groonga::Table#set_column_value (method)">#set_column_value</a></span> method and <span class='object_link'><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">Groonga::Table::KeySupport#set_column_value</a></span>
 with the same way.</p>
 
@@ -6608,7 +6619,7 @@ with the same way.</p>
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Uses @:id =&gt; true@ for polymorphic usage</p>
+        <p class="example_title"><div class='inline'><p>Uses @:id => true@ for polymorphic usage</p>
 </div></p>
       
       <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -6748,7 +6759,7 @@ Specify @true@ for polymorphic usage.</p>
         <span class="signature">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, vector_value_with_weight, options) </span>
         <div class="docstring">
   <div class="discussion">
-    <p>It is weight supported vector value variable of @:id =&gt; true@ option.
+    <p>It is weight supported vector value variable of @:id => true@ option.
 See other signature for usage.</p>
 
 
@@ -6800,11 +6811,11 @@ See other signature for usage.</p>
         &mdash;
         <div class='inline'><p>The new vector value with weight. The vector value can contain both
 ::Hash and value. If a contained element uses ::Hash style, it can
-specify its weight. If a contained element doesn’t use ::Hash style,
-it can’t specify its weight.</p>
+specify its weight. If a contained element doesn't use ::Hash style,
+it can't specify its weight.</p>
 
 <p>If ::Hash contains @:weight@ key, its value is used as weight for
-@:value@ key’s value. If ::Hash contains only @:value@ or @:weight@
+@:value@ key's value. If ::Hash contains only @:value@ or @:weight@
 value is nil, the default weight is used. The default weight is 0.</p>
 </div>
       
@@ -6939,7 +6950,7 @@ rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
     <p><em>table</em> の <em>id</em> に対応する値として <em>value</em> 設定する。既存の値は
 上書きされる。</p>
 
-<p>@:id =&gt; true@ が指定できるのは利便性のため。
+<p>@:id => true@ が指定できるのは利便性のため。
 <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> でも <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> や <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> と
 同じ引数で動くようになる。</p>
 
@@ -7120,9 +7131,10 @@ result, use the following code:</p>
 いずれを指定する。</p>
 
 <ul>
-  <li>ハッシュの配列で指定する方法 :=
+<li>ハッシュの配列で指定する方法 :=
 オーソドックスな指定方法。</li>
 </ul>
+
 
 <pre class="code ruby"><code class="ruby"><span class='lbracket'>[</span>
  <span class='lbrace'>{</span><span class='symbol'>:key</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>第1ソートキー</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:order</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_order'>order</span><span class='rbrace'>}</span><span class='comma'>,</span>
@@ -7130,12 +7142,15 @@ result, use the following code:</p>
  <span class='comment'># ...,
 </span><span class='rbracket'>]</span>
 </code></pre>
+
+
 <p>=:</p>
 
 <ul>
-  <li>配列の配列で指定する方法 :=
+<li>配列の配列で指定する方法 :=
 少し簡単化した指定方法。</li>
 </ul>
+
 
 <pre class="code ruby"><code class="ruby"><span class='lbracket'>[</span>
  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>第1ソートキー</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_order'>order</span><span class='rbracket'>]</span><span class='comma'>,</span>
@@ -7143,16 +7158,21 @@ result, use the following code:</p>
  <span class='comment'># ...,
 </span><span class='rbracket'>]</span>
 </code></pre>
+
+
 <p>=:</p>
 
 <ul>
-  <li>ソートキーの配列で指定する方法 :=
+<li>ソートキーの配列で指定する方法 :=
 <em>order</em> は常に昇順（ +:ascending+ ）になるが、最も簡単
 に指定できる。</li>
 </ul>
 
+
 <pre class="code ruby"><code class="ruby"><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>第1ソートキー</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>第2ソートキー</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>...</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 </code></pre>
+
+
 <p>=:</p>
 
 
@@ -7259,7 +7279,7 @@ pairs. Omitted names are initialized as the default value.</p>
         &mdash;
         <div class='inline'><p>The sorted result. You can get the
 original record by <span class='object_link'><a href="#value-instance_method" title="Groonga::Table#value (method)">#value</a></span> method of a record in the sorted
-result. Normally, you doesn’t need to get the original record
+result. Normally, you doesn't need to get the original record
 because you can access via column name method:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_names_recommended_access'>names_recommended_access</span> <span class='op'>=</span> <span class='id identifier rubyid_sorted_users'>sorted_users</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sorted_user'>sorted_user</span><span class='op'>|</span>
@@ -7270,6 +7290,7 @@ because you can access via column name method:</p>
 <span class='kw'>end</span>
 <span class='id identifier rubyid_names_recommended_access'>names_recommended_access</span> <span class='op'>==</span> <span class='id identifier rubyid_names_manually_access'>names_manually_access</span> <span class='comment'># =&gt; true
 </span></code></pre>
+
 
 <p>If you want to access the key of the original record, you need to
 get the original record.</p>
@@ -8032,7 +8053,7 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
   <div class="discussion">
     <p><em>table</em> の <em>id</em> に対応する値を返す。</p>
 
-<p>@:id =&gt; true@ が指定できるのは利便性のため。
+<p>@:id => true@ が指定できるのは利便性のため。
 <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> でも <span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span> や <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> と
 同じ引数で動くようになる。</p>
 

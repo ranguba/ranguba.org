@@ -458,6 +458,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#recover-instance_method" title="#recover (instance method)">- (void) <strong>recover</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Recovers database.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#tables-instance_method" title="#tables (instance method)">- (Array&lt;Groonga::Table&gt;) <strong>tables</strong> </a>
     
 
@@ -2467,6 +2490,101 @@ rb_grn_database_is_locked (VALUE self)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="recover-instance_method">
+  
+    - (<tt>void</tt>) <strong>recover</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Recovers database.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>If the database is broken, try to recover the database. If the
+database can't be recovered, an <span class='object_link'><a href="Error.html" title="Groonga::Error (class)">Error</a></span> family exception
+is raised.</p>
+
+<p>If the database isn't broken, it does nothing.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>4.0.8</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 580</span>
+
+static VALUE
+rb_grn_database_recover (VALUE self)
+{
+    grn_rc rc;
+    grn_ctx *context;
+    grn_obj *database;
+
+    rb_grn_database_deconstruct(SELF(self), &amp;database, &amp;context,
+                                NULL, NULL, NULL, NULL);
+    rc = grn_db_recover(context, database);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="tables-instance_method">
   
     - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span>&gt;</tt>) <strong>tables</strong> 
@@ -2668,7 +2786,7 @@ rb_grn_database_unlock (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Sat Dec 13 01:56:06 2014 by
+  Generated on Thu Jan  8 11:29:16 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

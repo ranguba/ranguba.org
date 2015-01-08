@@ -773,6 +773,7 @@ pairs. Omitted names are initialized as the default value.</p>
 <span class='kw'>end</span>
 </code></pre>
 
+
 <p>ブロックには <span class='object_link'><a href="Schema/TableDefinition.html" title="Groonga::Schema::TableDefinition (class)">TableDefinition</a></span> オブジェ
 クトがわたるので、そのオブジェクトを利用してテーブル
 の詳細を定義する。</p>
@@ -888,6 +889,7 @@ pairs. Omitted names are initialized as the default value.</p>
 <span class='kw'>end</span>
 </code></pre>
 
+
 <p>ブロックには <span class='object_link'><a href="Schema/TableDefinition.html" title="Groonga::Schema::TableDefinition (class)">TableDefinition</a></span> オブジェ
 クトがわたるので、そのオブジェクトを利用してテーブル
 の詳細を定義する。</p>
@@ -910,8 +912,8 @@ pairs. Omitted names are initialized as the default value.</p>
     <p>Create a table that manages records by ID when you specify
 <code>:array</code> to <code>:type</code>.</p>
 
-<p>You can identify a record only by record ID. You can’t use
-key because key doesn’t exist in the table.</p>
+<p>You can identify a record only by record ID. You can't use
+key because key doesn't exist in the table.</p>
 
 <p>See description of <code>TABLE_NO_KEY</code> at <a href="http://groonga.org/docs/reference/tables.html">Groonga documentation
 of tables</a>
@@ -1087,7 +1089,7 @@ pairs. Omitted names are initialized as the default value.</p>
 you specify <code>:hash</code> to <code>:type</code>.</p>
 
 <p>You can identify a record by key. The table is most fast
-table for finding a record by key. But the table doesn’t
+table for finding a record by key. But the table doesn't
 support advanced key search features such as common prefix
 search and range search.</p>
 
@@ -1306,18 +1308,17 @@ in the table.</p>
 
 <p>Here is an example to set two token filters.</p>
 
-<p><code>ruby
-Groonga::Schema.define do |schema|
-  schema.create_table("Terms",
-                      # ...
-                      :token_filters =&gt; [
-                        "TokenFilterStem",
-                        "TokenFilterStopWord",
-                      ]) do |table|
-    # ...
-  end
-end
-</code></p>
+<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='comment'># ...
+</span>                      <span class='symbol'>:token_filters</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStem</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStopWord</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
 </div>
           
         </li>
@@ -1591,18 +1592,17 @@ in the table.</p>
 
 <p>Here is an example to set two token filters.</p>
 
-<p><code>ruby
-Groonga::Schema.define do |schema|
-  schema.create_table("Terms",
-                      # ...
-                      :token_filters =&gt; [
-                        "TokenFilterStem",
-                        "TokenFilterStopWord",
-                      ]) do |table|
-    # ...
-  end
-end
-</code></p>
+<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='comment'># ...
+</span>                      <span class='symbol'>:token_filters</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStem</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStopWord</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
 </div>
           
         </li>
@@ -1896,18 +1896,17 @@ in the table.</p>
 
 <p>Here is an example to set two token filters.</p>
 
-<p><code>ruby
-Groonga::Schema.define do |schema|
-  schema.create_table("Terms",
-                      # ...
-                      :token_filters =&gt; [
-                        "TokenFilterStem",
-                        "TokenFilterStopWord",
-                      ]) do |table|
-    # ...
-  end
-end
-</code></p>
+<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='comment'># ...
+</span>                      <span class='symbol'>:token_filters</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStem</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStopWord</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
 </div>
           
         </li>
@@ -1998,6 +1997,7 @@ can specify this by normalizer name as String such as
 <span class='comment'># ...
 </span><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span>
 </code></pre>
+
 
 
   </div>
@@ -2115,12 +2115,14 @@ Rubyスクリプト形式で返された値は
 <span class='kw'>end</span>
 </code></pre>
 
+
 <p>restore.rb:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_dumped_text'>dumped_text</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span>
 <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/new-db.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_text'>dumped_text</span><span class='rparen'>)</span>
 </code></pre>
+
 
 <p>grn式形式で返された値はgroongaコマンドで読み込むこと
 ができる。</p>
@@ -2132,8 +2134,12 @@ Rubyスクリプト形式で返された値は
 <span class='kw'>end</span>
 </code></pre>
 
+
+
+
 <pre class="code text"><code class="text">% groonga db/path &lt; /tmp/groonga-schema.grn
 </code></pre>
+
 
 
   </div>
@@ -2249,6 +2255,7 @@ Rubyスクリプト形式になる。
   <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
 <span class='kw'>end</span>
 </code></pre>
+
 
 
   </div>
@@ -2393,6 +2400,7 @@ pairs. Omitted names are initialized as the default value.</p>
 </code></pre>
 
 
+
   </div>
 </div>
 <div class="tags">
@@ -2442,6 +2450,7 @@ pairs. Omitted names are initialized as the default value.</p>
   <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_rename_table'>rename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span>
 </code></pre>
+
 
 
   </div>
@@ -2676,8 +2685,8 @@ pairs. Omitted names are initialized as the default value.</p>
     <p>Create a table that manages records by ID when you specify
 <code>:array</code> to <code>:type</code>.</p>
 
-<p>You can identify a record only by record ID. You can’t use
-key because key doesn’t exist in the table.</p>
+<p>You can identify a record only by record ID. You can't use
+key because key doesn't exist in the table.</p>
 
 <p>See description of <code>TABLE_NO_KEY</code> at <a href="http://groonga.org/docs/reference/tables.html">Groonga documentation
 of tables</a>
@@ -2853,7 +2862,7 @@ pairs. Omitted names are initialized as the default value.</p>
 you specify <code>:hash</code> to <code>:type</code>.</p>
 
 <p>You can identify a record by key. The table is most fast
-table for finding a record by key. But the table doesn’t
+table for finding a record by key. But the table doesn't
 support advanced key search features such as common prefix
 search and range search.</p>
 
@@ -3072,18 +3081,17 @@ in the table.</p>
 
 <p>Here is an example to set two token filters.</p>
 
-<p><code>ruby
-Groonga::Schema.define do |schema|
-  schema.create_table("Terms",
-                      # ...
-                      :token_filters =&gt; [
-                        "TokenFilterStem",
-                        "TokenFilterStopWord",
-                      ]) do |table|
-    # ...
-  end
-end
-</code></p>
+<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='comment'># ...
+</span>                      <span class='symbol'>:token_filters</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStem</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStopWord</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
 </div>
           
         </li>
@@ -3357,18 +3365,17 @@ in the table.</p>
 
 <p>Here is an example to set two token filters.</p>
 
-<p><code>ruby
-Groonga::Schema.define do |schema|
-  schema.create_table("Terms",
-                      # ...
-                      :token_filters =&gt; [
-                        "TokenFilterStem",
-                        "TokenFilterStopWord",
-                      ]) do |table|
-    # ...
-  end
-end
-</code></p>
+<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='comment'># ...
+</span>                      <span class='symbol'>:token_filters</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStem</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStopWord</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
 </div>
           
         </li>
@@ -3662,18 +3669,17 @@ in the table.</p>
 
 <p>Here is an example to set two token filters.</p>
 
-<p><code>ruby
-Groonga::Schema.define do |schema|
-  schema.create_table("Terms",
-                      # ...
-                      :token_filters =&gt; [
-                        "TokenFilterStem",
-                        "TokenFilterStopWord",
-                      ]) do |table|
-    # ...
-  end
-end
-</code></p>
+<pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+  <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='comment'># ...
+</span>                      <span class='symbol'>:token_filters</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStem</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenFilterStopWord</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                      <span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
+    <span class='comment'># ...
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
 </div>
           
         </li>
@@ -3866,6 +3872,7 @@ can specify this by normalizer name as String such as
 </code></pre>
 
 
+
   </div>
 </div>
 <div class="tags">
@@ -4010,6 +4017,7 @@ pairs. Omitted names are initialized as the default value.</p>
 </code></pre>
 
 
+
   </div>
 </div>
 <div class="tags">
@@ -4051,7 +4059,7 @@ pairs. Omitted names are initialized as the default value.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>テーブルの名前を <em>current_name</em> から <em>new_name</em> に変更します。 </p>
+    <p>テーブルの名前を <em>current_name</em> から <em>new_name</em> に変更します。</p>
 
 <p><span class='object_link'><a href="#define-instance_method" title="Groonga::Schema#define (method)">#define</a></span> が呼ばれるまで名前の変更は実行されないことに注意してください。</p>
 
@@ -4188,7 +4196,7 @@ pairs. Omitted names are initialized as the default value.</p>
 </div>
 
     <div id="footer">
-  Generated on Sat Dec 13 01:56:04 2014 by
+  Generated on Thu Jan  8 11:29:15 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

@@ -834,8 +834,8 @@ rb_grn_array_s_create (int argc, VALUE *argv, VALUE klass)
 
 <p><em>values</em> にはレコードのカラムに設定する値を指定する。省略
 した場合または +nil+ を指定した場合はカラムは設定しない。カ
-ラムの値は @=&gt; 値1, :カラム名2 =&gt; 値2,
-…@ と指定する。</p>
+ラムの値は @=> 値1, :カラム名2 => 値2,
+...@ と指定する。</p>
 
 
   </div>
@@ -964,14 +964,14 @@ retrieved in the given block.</p>
 record, the pulled record may be uncompleted. It should be handled
 by your application.</p>
 
-<p>If you passes @:block? =&gt; true@ option, the pull operation blocks
+<p>If you passes @:block? => true@ option, the pull operation blocks
 until a pushed record is pushed. It is the default behavior.</p>
 
-<p>If you passes @:block? =&gt; false@ option, the pull operation returns
-immediately, the given block isn’t called and returns nil when no
+<p>If you passes @:block? => false@ option, the pull operation returns
+immediately, the given block isn't called and returns nil when no
 record exist in the array.</p>
 
-<p>Note that your signal handlers can’t be ran while a pull
+<p>Note that your signal handlers can't be ran while a pull
 operation. You need to use <span class='object_link'><a href="#unblock-instance_method" title="Groonga::Array#unblock (method)">#unblock</a></span> from
 another process to unblock the pull operation. If you call
 <span class='object_link'><a href="#unblock-instance_method" title="Groonga::Array#unblock (method)">#unblock</a></span>, signal handler can be ran.</p>
@@ -1001,7 +1001,7 @@ another process to unblock the pull operation. If you call
 </span><span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Signal handler isn’t called</p>
+        <p class="example_title"><div class='inline'><p>Signal handler isn't called</p>
 </div></p>
       
       <pre class="example code"><code><span class='id identifier rubyid_queue'>queue</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CrawlURLQueue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1565,7 +1565,7 @@ rb_grn_array_unblock (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Sat Dec 13 01:56:08 2014 by
+  Generated on Thu Jan  8 11:29:18 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>
