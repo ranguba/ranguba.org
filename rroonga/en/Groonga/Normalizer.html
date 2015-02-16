@@ -161,7 +161,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#normalize-class_method" title="normalize (class method)">+ (String) <strong>normalize</strong>(string) </a>
+      <a href="#normalize-class_method" title="normalize (class method)">+ (String) <strong>normalize</strong>(string, options = {:remove_blank =&gt; true}) </a>
     
 
     
@@ -194,7 +194,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="normalize-class_method">
   
-    + (<tt>String</tt>) <strong>normalize</strong>(string) 
+    + (<tt>String</tt>) <strong>normalize</strong>(string, options = {:remove_blank =&gt; true}) 
   
 
   
@@ -247,7 +247,69 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{:remove_blank =&gt; true}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The optional parameters.</p>
+</div>
+      
+    </li>
+  
 </ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:remove_blank</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>If it&#39;s <code>true</code>, all blank characters are removed.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:remove_tokenized_delimiter</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>If it&#39;s <code>true</code>, all tokenized delimiter characters are
+removed. The character is <code>U+FFFE</code>.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -277,14 +339,6 @@
       <pre class="lines">
 
 
-42
-43
-44
-45
-46
-47
-48
-49
 50
 51
 52
@@ -309,33 +363,85 @@
 71
 72
 73
-74</pre>
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-normalizer.c', line 42</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-normalizer.c', line 50</span>
 
 static VALUE
-rb_grn_normalizer_s_normalize (VALUE klass, VALUE rb_string)
+rb_grn_normalizer_s_normalize (int argc, VALUE *argv, VALUE klass)
 {
     VALUE rb_context = Qnil;
+    VALUE rb_string;
+    VALUE rb_options;
+    VALUE rb_remove_blank_p;
+    VALUE rb_remove_tokenized_delimiter_p;
     VALUE rb_encoded_string;
     VALUE rb_normalized_string;
     grn_ctx *context = NULL;
     grn_obj *grn_string;
     grn_obj *normalizer = GRN_NORMALIZER_AUTO;
-    /* TODO: make customizable */
-    int flags = GRN_STRING_REMOVE_BLANK;
+    int flags = 0;
     const char *normalized_string;
     unsigned int normalized_string_length;
 
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_string, &amp;rb_options);
+    rb_grn_scan_options(rb_options,
+                        &quot;remove_blank&quot;, &amp;rb_remove_blank_p,
+                        &quot;remove_tokenized_delimiter_p&quot;,
+                        &amp;rb_remove_tokenized_delimiter_p,
+                        NULL);
+
     context = rb_grn_context_ensure(&amp;rb_context);
     rb_encoded_string = rb_grn_context_rb_string_encode(context, rb_string);
+    if (NIL_P(rb_remove_blank_p)) {
+        rb_remove_blank_p = Qtrue;
+    }
+    if (RVAL2CBOOL(rb_remove_blank_p)) {
+        flags |= GRN_STRING_REMOVE_BLANK;
+    }
+    if (NIL_P(rb_remove_tokenized_delimiter_p)) {
+        rb_remove_tokenized_delimiter_p = Qfalse;
+    }
+    if (RVAL2CBOOL(rb_remove_tokenized_delimiter_p)) {
+        flags |= GRN_STRING_REMOVE_TOKENIZED_DELIMITER;
+    }
     grn_string = grn_string_open(context,
                                  RSTRING_PTR(rb_encoded_string),
                                  RSTRING_LEN(rb_encoded_string),
                                  normalizer,
                                  flags);
-    rb_grn_context_check(context, rb_string);
+    rb_grn_context_check(context, argv[0]);
     grn_string_get_normalized(context, grn_string,
                               &amp;normalized_string, &amp;normalized_string_length,
                               NULL);

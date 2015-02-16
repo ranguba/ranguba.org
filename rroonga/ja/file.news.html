@@ -93,6 +93,24 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1>お知らせ</h1>
+<h2 id="5-0-0">5.0.0: 2014-02-16 (planned)</h2>
+<h3>改善</h3>
+<ul>
+	<li>Groonga 5.0.0に対応。Groonga 4.1.1以前はサポートしません。</li>
+	<li><span class='object_link'><a href="Groonga/Normalizer.html#normalize-class_method" title="Groonga::Normalizer.normalize (method)">Groonga::Normalizer.normalize</a></span> にフラグを追加。
+  [GitHub#44] [グニャラくんさんがパッチ提供]
+  <pre class="code ruby"><code class="ruby">
+  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_“AbC'>“AbC</span> <span class='const'>Def　gh”</span><span class='rparen'>)</span>                         <span class='comment'>#=&gt; “abcdefgh”
+</span>  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_“AbC'>“AbC</span> <span class='const'>Def　gh”</span><span class='comma'>,</span> <span class='symbol'>:remove_blank</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>  <span class='comment'>#=&gt; “abcdefgh”
+</span>  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_“AbC'>“AbC</span> <span class='const'>Def　gh”</span><span class='comma'>,</span> <span class='symbol'>:remove_blank</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#=&gt; “abc def gh”
+</span>  </code></pre></li>
+	<li><span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span> を複数キーによるドリルダウンに対応。</li>
+	<li><span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span> をドリルダウンの計算機能に対応。</li>
+</ul>
+<h3>感謝</h3>
+<ul>
+	<li>グニャラくんさん</li>
+</ul>
 <h2 id="4-0-8">4.0.8: 2014-01-08</h2>
 <h3>改善</h3>
 <ul>
@@ -1153,9 +1171,9 @@ end
 </ul></div></div>
 
     <div id="footer">
-  Generated on Fri Jan  9 03:16:43 2015 by
+  Generated on Mon Feb 16 16:02:55 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.2.0).
+  0.8.7.6 (ruby-2.1.5).
 </div>
 
   

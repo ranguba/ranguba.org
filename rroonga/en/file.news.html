@@ -93,6 +93,24 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'><h1><span class="caps">NEWS</span></h1>
+<h2 id="5-0-0">5.0.0: 2014-02-16 (planned)</h2>
+<h3>Improvements</h3>
+<ul>
+	<li>Supported Groonga 5.0.0. Groonga 4.1.1 or older aren&#8217;t supported.</li>
+	<li>Added flags for <span class='object_link'><a href="Groonga/Normalizer.html#normalize-class_method" title="Groonga::Normalizer.normalize (method)">Groonga::Normalizer.normalize</a></span>.
+  [GitHub#44] [Patch by Tasuku <span class="caps">SUENAGA</span> a.k.a. gunyarakun]
+  <pre class="code ruby"><code class="ruby">
+  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_“AbC'>“AbC</span> <span class='const'>Def　gh”</span><span class='rparen'>)</span>                         <span class='comment'>#=&gt; “abcdefgh”
+</span>  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_“AbC'>“AbC</span> <span class='const'>Def　gh”</span><span class='comma'>,</span> <span class='symbol'>:remove_blank</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>  <span class='comment'>#=&gt; “abcdefgh”
+</span>  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_“AbC'>“AbC</span> <span class='const'>Def　gh”</span><span class='comma'>,</span> <span class='symbol'>:remove_blank</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#=&gt; “abc def gh”
+</span>  </code></pre></li>
+	<li>Supported drilldown by multiple keys in <span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>.</li>
+	<li>Supported calculation for drilldown in <span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>.</li>
+</ul>
+<h3>Thanks</h3>
+<ul>
+	<li>Tasuku <span class="caps">SUENAGA</span> a.k.a. gunyarakun</li>
+</ul>
 <h2 id="4-0-8">4.0.8: 2014-01-08</h2>
 <h3>Improvements</h3>
 <ul>
