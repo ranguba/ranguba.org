@@ -92,97 +92,142 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>Install</h1>
+    <div id="content"><div id='filecontents'><h1 id="install">Install</h1>
+
 <p>This document describes how to install Rroonga.</p>
+
 <p>You can install Rroonga by RubyGems. It is the standard way for Ruby
 libraries.</p>
+
 <p>Rroonga is depends on Groonga. So you need to install both Groonga and
-Rroonga. You can&#8217;t install Groonga by RubyGems because it isn&#8217;t Ruby
-library. But don&#8217;t worry. Rroonga provides the following options for
+Rroonga. You can’t install Groonga by RubyGems because it isn’t Ruby
+library. But don’t worry. Rroonga provides the following options for
 easy to install:</p>
+
 <ul>
-	<li>Rroonga downloads, builds and installs Groonga automatically. You
-  don&#8217;t need to do them explicitly.</li>
-	<li>Rroonga uses Groonga installed by your packaging system.</li>
+  <li>Rroonga downloads, builds and installs Groonga automatically. You
+don’t need to do them explicitly.</li>
+  <li>Rroonga uses Groonga installed by your packaging system.</li>
 </ul>
+
 <p>The following sections describe the above in detail.</p>
-<h2>Install with auto Groonga build</h2>
-<p>Rroonga searches Groonga on install. If Rroonga can&#8217;t find
-Groonga, Rroonga downloads, builds and installs Groonga
-automatically.</p>
-<p>Type the following command to install Rroonga and Groonga. You don&#8217;t
+
+<h2 id="install-with-auto-groonga-build">Install with auto Groonga build</h2>
+
+<p>Rroonga searches Groonga on install. If Rroonga can’t find Groonga,
+Rroonga downloads, builds and installs Groonga automatically.</p>
+
+<p>Type the following command to install Rroonga and Groonga. You don’t
 need to install Groonga explicitly:</p>
-<pre class="code command_line"><code class="command_line">% gem install rroonga
+
+<pre class="code ruby"><code class="ruby">% gem install rroonga
 </code></pre>
-<h2>Install with Groonga package</h2>
-<p>You can use Groonga package on you packaging system instead of
-building Groonga by yourself. There are the following advantages for
-this option:</p>
+
+<h2 id="install-with-groonga-package">Install with Groonga package</h2>
+
+<p>You can use Groonga package on you packaging system instead of building
+Groonga by yourself. There are the following advantages for this option:</p>
+
 <ul>
-	<li>It reduces installation time.</li>
-	<li>It doesn&#8217;t fail on building Groonga.</li>
+  <li>It reduces installation time.</li>
+  <li>It doesn’t fail on building Groonga.</li>
 </ul>
-<h3>Windows</h3>
+
+<h3 id="windows">Windows</h3>
+
 <p>Rroonga gem for Windows includes both pre-compiled Rroonga and Groonga
 in the gem. So what you need to do is you just install rroonga gem.</p>
+
 <p>Type the following command on Ruby console:</p>
-<pre class="code command_line"><code class="command_line">&gt; gem install rroonga
+
+<pre class="code ruby"><code class="ruby">&gt; gem install rroonga
 </code></pre>
-<p>This document assumes that you&#8217;re using <a href="http://rubyinstaller.org/">RubyInstaller for
+
+<p>This document assumes that you’re using <a href="http://rubyinstaller.org/">RubyInstaller for
 Windows</a> .</p>
-<h3>OS X</h3>
+
+<h3 id="os-x">OS X</h3>
+
 <p>There are Groonga packages for OS X environment.</p>
-<h4>MacPorts</h4>
-<p>If you&#8217;re using <a href="http://www.macports.org/">MacPorts</a> , type the
-following commands on your terminal:</p>
-<pre class="code command_line"><code class="command_line">% sudo port install groonga
+
+<h4 id="macports">MacPorts</h4>
+
+<p>If you’re using <a href="http://www.macports.org/">MacPorts</a> , type the
+following
+commands on your terminal:</p>
+
+<pre class="code ruby"><code class="ruby">% sudo port install groonga
 % sudo gem install rroonga
 </code></pre>
-<h4>Homebrew</h4>
-<p>If you&#8217;re using <a href="http://brew.sh/">Homebrew</a> , type the
-following commands on your terminal:</p>
-<pre class="code command_line"><code class="command_line">% brew install groonga
+
+<h4 id="homebrew">Homebrew</h4>
+
+<p>If you’re using <a href="http://brew.sh/">Homebrew</a> , type the following
+commands
+on your terminal:</p>
+
+<pre class="code ruby"><code class="ruby">% brew install groonga
 % gem install rroonga
 </code></pre>
-<h3>Debian <span class="caps">GNU</span>/Linux</h3>
+
+<h3 id="debian-gnulinux">Debian GNU/Linux</h3>
+
 <p>You can install the Groonga package by apt. See <a href="http://groonga.org/docs/install/debian.html">Groonga
 documentation</a> how to set
 apt-line up.</p>
+
 <p>Type the following commands on your terminal after you finish to set
 apt-line up.</p>
-<pre class="code command_line"><code class="command_line">% sudo apt-get install -y libgroonga-dev
+
+<pre class="code ruby"><code class="ruby">% sudo apt-get install -y libgroonga-dev
 % sudo gem install rroonga
 </code></pre>
-<h3>Ubuntu</h3>
+
+<h3 id="ubuntu">Ubuntu</h3>
+
 <p>You can install the Groonga package by apt. See <a href="http://groonga.org/docs/install/ubuntu.html">Groonga
 documentation</a> how to set
 apt-line up.</p>
+
 <p>Type the following commands on your terminal after you finish to set
 apt-line up.</p>
-<pre class="code command_line"><code class="command_line">% sudo apt-get install -y libgroonga-dev
+
+<pre class="code ruby"><code class="ruby">% sudo apt-get install -y libgroonga-dev
 % sudo gem install rroonga
 </code></pre>
-<h3>CentOS</h3>
+
+<h3 id="centos">CentOS</h3>
+
 <p>You can install the Groonga package by yum. See <a href="http://groonga.org/docs/install/centos.html">Groonga
 documentation</a> how to set
 yum repository up.</p>
+
 <p>But you need to install Ruby 1.9.3 or later by yourself. Both CentOS 5
-and 6 ship Ruby 1.8. Rroonga doesn&#8217;t support Ruby 1.8.</p>
+and 6 ship Ruby 1.8. Rroonga doesn’t support Ruby 1.8.</p>
+
 <p>Type the following commands on your terminal after you finish to set
-yum repository up and installing Ruby 1.9.3 or later.</p>
-<pre class="code command_line"><code class="command_line">% sudo yum install groonga-devel -y
+yum
+repository up and installing Ruby 1.9.3 or later.</p>
+
+<pre class="code ruby"><code class="ruby">% sudo yum install groonga-devel -y
 % gem install rroonga
 </code></pre>
-<h3>Fedora</h3>
+
+<h3 id="fedora">Fedora</h3>
+
 <p>You can install the Groonga package by yum. The Groonga package is
 included in the official Fedora repository.</p>
-<pre class="code command_line"><code class="command_line">% sudo yum install groonga-devel -y
+
+<pre class="code ruby"><code class="ruby">% sudo yum install groonga-devel -y
 % sudo gem install rroonga
 </code></pre>
-<h2>Links</h2>
+
+<h2 id="links">Links</h2>
+
 <ul>
-	<li><a href="http://groonga.org/docs/install.html">2. Install &#8211; Groonga documentation</a></li>
-</ul></div></div>
+  <li><a href="http://groonga.org/docs/install.html">2. Install - Groonga documentation</a></li>
+</ul>
+</div></div>
 
     <div id="footer"></div>
 

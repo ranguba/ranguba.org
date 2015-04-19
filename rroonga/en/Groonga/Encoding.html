@@ -119,40 +119,67 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>groongaがサポートしてるエンコーディングが定義されてい るモジュール。</p>
+    <p>groongaがサポートしてるエンコーディングが定義されてい
+るモジュール。</p>
 
 <p>エンコーディングの指定方法は以下の通り。</p>
-<ul><li>
-<p><code>nil</code> := コンテキストと関連付けられているオブジェクトの場合（多  くの場合）はコンテキストのエンコーディングを使用。</p>
-</li></ul>
 
-<p>それ以外のオブジェクトの場合（コンテキスト自身など）は  groongaのビルド時に指定したエンコーディング  （
-<span class='object_link'><a href="#DEFAULT-constant" title="Groonga::Encoding::DEFAULT (constant)">DEFAULT</a></span> ）を使用 =:</p>
-<ul><li>
-<p><code>:default</code> := groongaのビルド時に指定したエンコーディングを使用。 
+<ul>
+  <li>
+    <p>+nil+ :=
+  コンテキストと関連付けられているオブジェクトの場合（多
+くの場合）はコンテキストのエンコーディングを使用。</p>
+
+    <p>それ以外のオブジェクトの場合（コンテキスト自身など）は
+groongaのビルド時に指定したエンコーディング
+（ <span class='object_link'><a href="#DEFAULT-constant" title="Groonga::Encoding::DEFAULT (constant)">DEFAULT</a></span> ）を使用 =:</p>
+  </li>
+  <li>
+    <p>+:default+ :=
+  groongaのビルド時に指定したエンコーディングを使用。
 <span class='object_link'><a href="#DEFAULT-constant" title="Groonga::Encoding::DEFAULT (constant)">DEFAULT</a></span> =:</p>
-</li><li>
-<p><code>:none</code> := エンコーディングを指定しない。<span class='object_link'><a href="#NONE-constant" title="Groonga::Encoding::NONE (constant)">NONE</a></span> =:</p>
-</li><li>
-<p><code>:euc_jp</code> := EUC-JPを使用。<span class='object_link'><a href="#EUC_JP-constant" title="Groonga::Encoding::EUC_JP (constant)">EUC_JP</a></span> =:</p>
-</li><li>
-<p>@“euc-jp”@ := <code>:euc_jp</code>と同じ。 =:</p>
-</li><li>
-<p><code>:utf8</code> := UTF-8を使用。<span class='object_link'><a href="#UTF8-constant" title="Groonga::Encoding::UTF8 (constant)">UTF8</a></span> =:</p>
-</li><li>
-<p>@“utf-8”@ := <code>:utf8</code>と同じ。 =:</p>
-</li><li>
-<p><code>:sjis</code> := Shift_JISを使用。<span class='object_link'><a href="#SJIS-constant" title="Groonga::Encoding::SJIS (constant)">SJIS</a></span> =:</p>
-</li><li>
-<p><code>:shift_jis</code> := <code>:sjis</code>と同じ。 =:</p>
-</li><li>
-<p>@“shift-jis”@ := <code>:sjis</code>と同じ。 =:</p>
-</li><li>
-<p><code>:latin1</code> := Latin-1を使用。<span class='object_link'><a href="#LATIN1-constant" title="Groonga::Encoding::LATIN1 (constant)">LATIN1</a></span> =:</p>
-</li><li>
-<p><code>:koi8r</code> := KOI8-Rを使用。<span class='object_link'><a href="#KOI8R-constant" title="Groonga::Encoding::KOI8R (constant)">KOI8R</a></span> =:</p>
-</li></ul>
+  </li>
+  <li>
+    <p>+:none+ :=
+  エンコーディングを指定しない。<span class='object_link'><a href="#NONE-constant" title="Groonga::Encoding::NONE (constant)">NONE</a></span> =:</p>
+  </li>
+  <li>
+    <p>+:euc_jp+ :=
+  EUC-JPを使用。<span class='object_link'><a href="#EUC_JP-constant" title="Groonga::Encoding::EUC_JP (constant)">EUC_JP</a></span> =:</p>
+  </li>
+  <li>
+    <p>@”euc-jp”@ :=
+  +:euc_jp+と同じ。 =:</p>
+  </li>
+  <li>
+    <p>+:utf8+ :=
+  UTF-8を使用。<span class='object_link'><a href="#UTF8-constant" title="Groonga::Encoding::UTF8 (constant)">UTF8</a></span> =:</p>
+  </li>
+  <li>
+    <p>@”utf-8”@ :=
+  +:utf8+と同じ。 =:</p>
+  </li>
+  <li>
+    <p>+:sjis+ :=
+  Shift_JISを使用。<span class='object_link'><a href="#SJIS-constant" title="Groonga::Encoding::SJIS (constant)">SJIS</a></span> =:</p>
+  </li>
+  <li>
+    <p>+:shift_jis+ :=
+  +:sjis+と同じ。 =:</p>
+  </li>
+  <li>
+    <p>@”shift-jis”@ :=
+  +:sjis+と同じ。 =:</p>
+  </li>
+  <li>
+    <p>+:latin1+ :=
+  Latin-1を使用。<span class='object_link'><a href="#LATIN1-constant" title="Groonga::Encoding::LATIN1 (constant)">LATIN1</a></span> =:</p>
+  </li>
+  <li>
+    <p>+:koi8r+ :=
+  KOI8-Rを使用。<span class='object_link'><a href="#KOI8R-constant" title="Groonga::Encoding::KOI8R (constant)">KOI8R</a></span> =:</p>
+  </li>
+</ul>
 
 
   </div>
@@ -168,8 +195,7 @@
         <dt id="DEFAULT-constant" class="">DEFAULT =
           <div class="docstring">
   <div class="discussion">
-    
-<p>groongaをビルドしたときに指定したエンコーディング。</p>
+    <p>groongaをビルドしたときに指定したエンコーディング。</p>
 
 
   </div>
@@ -184,8 +210,7 @@
         <dt id="NONE-constant" class="">NONE =
           <div class="docstring">
   <div class="discussion">
-    
-<p>文字列をバイト列として扱うエンコーディング。</p>
+    <p>文字列をバイト列として扱うエンコーディング。</p>
 
 
   </div>
@@ -200,8 +225,7 @@
         <dt id="EUC_JP-constant" class="">EUC_JP =
           <div class="docstring">
   <div class="discussion">
-    
-<p>EUC-JP</p>
+    <p>EUC-JP</p>
 
 
   </div>
@@ -216,8 +240,7 @@
         <dt id="SJIS-constant" class="">SJIS =
           <div class="docstring">
   <div class="discussion">
-    
-<p>ShiftJIS</p>
+    <p>ShiftJIS</p>
 
 
   </div>
@@ -232,8 +255,7 @@
         <dt id="UTF8-constant" class="">UTF8 =
           <div class="docstring">
   <div class="discussion">
-    
-<p>UTF-8</p>
+    <p>UTF-8</p>
 
 
   </div>
@@ -248,8 +270,7 @@
         <dt id="LATIN1-constant" class="">LATIN1 =
           <div class="docstring">
   <div class="discussion">
-    
-<p>Latin-1。ISO-8859-1ではなくWindows-1252(CP1252)。</p>
+    <p>Latin-1。ISO-8859-1ではなくWindows-1252(CP1252)。</p>
 
 
   </div>
@@ -264,8 +285,7 @@
         <dt id="KOI8R-constant" class="">KOI8R =
           <div class="docstring">
   <div class="discussion">
-    
-<p>KOI8-R</p>
+    <p>KOI8-R</p>
 
 
   </div>
@@ -311,8 +331,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>デフォルトのエンコーディングを返す。.</p>
+    <span class="summary_desc"><div class='inline'><p>デフォルトのエンコーディングを返す。.</p>
 </div></span>
   
 </li>
@@ -335,8 +354,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>デフォルトのエンコーディングを設定する。.</p>
+    <span class="summary_desc"><div class='inline'><p>デフォルトのエンコーディングを設定する。.</p>
 </div></span>
   
 </li>
@@ -362,8 +380,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>デフォルトのエンコーディングを返す。</p>
+    <p>デフォルトのエンコーディングを返す。</p>
 
 
   </div>
@@ -383,8 +400,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>デフォルトのエンコーディング</p>
+        <div class='inline'><p>デフォルトのエンコーディング</p>
 </div>
       
     </li>
@@ -427,8 +443,7 @@ rb_grn_encoding_s_get_default (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>デフォルトのエンコーディングを設定する。</p>
+    <p>デフォルトのエンコーディングを設定する。</p>
 
 
   </div>
@@ -438,6 +453,7 @@ rb_grn_encoding_s_get_default (VALUE self)
   <div class="docstring">
   <div class="discussion">
     
+
 
   </div>
 </div>
@@ -455,8 +471,8 @@ rb_grn_encoding_s_get_default (VALUE self)
       
       
         &mdash;
-        <div class='inline'>
-<p>指定するエンコーディング。 エンコーディングの指定方法は <span class='object_link'><a href="" title="Groonga::Encoding (module)">Groonga::Encoding</a></span> を参照。</p>
+        <div class='inline'><p>指定するエンコーディング。
+エンコーディングの指定方法は <span class='object_link'><a href="" title="Groonga::Encoding (module)">Groonga::Encoding</a></span> を参照。</p>
 </div>
       
     </li>

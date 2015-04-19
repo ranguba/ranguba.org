@@ -134,8 +134,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>It normalizes string.</p>
+    <p>It normalizes string.</p>
 
 
   </div>
@@ -175,8 +174,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Normalizes the @string@.</p>
+    <span class="summary_desc"><div class='inline'><p>Normalizes the @string@.</p>
 </div></span>
   
 </li>
@@ -202,8 +200,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Normalizes the @string@.</p>
+    <p>Normalizes the @string@.</p>
 
 
   </div>
@@ -221,8 +218,7 @@
 
   <div class="docstring">
   <div class="discussion">
-    
-<p>Returns The normalized string</p>
+    <p>Returns The normalized string</p>
 
 
   </div>
@@ -241,8 +237,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The original string</p>
+        <div class='inline'><p>The original string</p>
 </div>
       
     </li>
@@ -259,8 +254,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>The optional parameters.</p>
+        <div class='inline'><p>The optional parameters.</p>
 </div>
       
     </li>
@@ -285,8 +279,7 @@
             
           </span>
           
-            &mdash; <div class='inline'>
-<p>If it&#39;s <code>true</code>, all blank characters are removed.</p>
+            &mdash; <div class='inline'><p>If it’s <code>true</code>, all blank characters are removed.</p>
 </div>
           
         </li>
@@ -301,9 +294,8 @@
             
           </span>
           
-            &mdash; <div class='inline'>
-<p>If it&#39;s <code>true</code>, all tokenized delimiter characters are
-removed. The character is <code>U+FFFE</code>.</p>
+            &mdash; <div class='inline'><p>If it’s <code>true</code>, all tokenized delimiter characters are removed.
+The character is <code>U+FFFE</code>.</p>
 </div>
           
         </li>
@@ -322,8 +314,7 @@ removed. The character is <code>U+FFFE</code>.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The normalized string</p>
+        <div class='inline'><p>The normalized string</p>
 </div>
       
     </li>
@@ -393,7 +384,14 @@ removed. The character is <code>U+FFFE</code>.</p>
 101
 102
 103
-104</pre>
+104
+105
+106
+107
+108
+109
+110
+111</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-normalizer.c', line 50</span>
@@ -424,6 +422,10 @@ rb_grn_normalizer_s_normalize (int argc, VALUE *argv, VALUE klass)
 
     context = rb_grn_context_ensure(&amp;rb_context);
     rb_encoded_string = rb_grn_context_rb_string_encode(context, rb_string);
+    if (RSTRING_LEN(rb_encoded_string) == 0) {
+        return rb_grn_context_rb_string_new(context, &quot;&quot;, 0);
+    }
+
     if (NIL_P(rb_remove_blank_p)) {
         rb_remove_blank_p = Qtrue;
     }
@@ -442,6 +444,9 @@ rb_grn_normalizer_s_normalize (int argc, VALUE *argv, VALUE klass)
                                  normalizer,
                                  flags);
     rb_grn_context_check(context, argv[0]);
+    if (!grn_string) {
+        return Qnil;
+    }
     grn_string_get_normalized(context, grn_string,
                               &amp;normalized_string, &amp;normalized_string_length,
                               NULL);

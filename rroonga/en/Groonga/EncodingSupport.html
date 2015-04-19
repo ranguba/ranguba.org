@@ -123,8 +123,8 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>オブジェクトにエンコーディング関連の機能を提供するモジュー ル。</p>
+    <p>オブジェクトにエンコーディング関連の機能を提供するモジュー
+ル。</p>
 
 
   </div>
@@ -164,8 +164,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>オブジェクトのエンコーディングを返す。.</p>
+    <span class="summary_desc"><div class='inline'><p>オブジェクトのエンコーディングを返す。.</p>
 </div></span>
   
 </li>
@@ -191,8 +190,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>オブジェクトのエンコーディングを返す。</p>
+    <p>オブジェクトのエンコーディングを返す。</p>
 
 
   </div>
@@ -212,8 +210,7 @@
       
       
         &mdash;
-        <div class='inline'>
-<p>オブジェクトのエンコーディング</p>
+        <div class='inline'><p>オブジェクトのエンコーディング</p>
 </div>
       
     </li>
@@ -243,7 +240,13 @@
 51
 52
 53
-54</pre>
+54
+55
+56
+57
+58
+59
+60</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-encoding-support.c', line 37</span>
@@ -258,6 +261,12 @@ rb_grn_encoding_support_get_encoding (VALUE self)
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
+    if (!object) {
+        rb_raise(rb_eGrnClosed,
+                 &quot;can&#39;t access already closed Groonga object: &lt;%s&gt;&quot;,
+                 rb_grn_inspect(self));
+    }
+
     encoding_value = grn_obj_get_info(context, object, GRN_INFO_ENCODING, NULL);
     rb_grn_context_check(context, self);
 

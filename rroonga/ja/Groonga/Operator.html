@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
     <title>
-  Module: Groonga::Operator
+  Class: Groonga::Operator
   
     &mdash; rroonga
   
@@ -36,7 +36,7 @@
   <div class="title">
     <a href="../../../ja/">
       <span class="title">
-  Module: Groonga::Operator
+  Class: Groonga::Operator
   
     &mdash; rroonga
   
@@ -94,7 +94,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Module: Groonga::Operator
+    <div id="content"><h1>Class: Groonga::Operator
   
   
   
@@ -102,6 +102,21 @@
 
 <dl class="box">
   
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Groonga::Operator</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
   
     
   
@@ -109,12 +124,16 @@
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">ext/groonga/rb-grn-operator.c</dd>
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/groonga/rb-grn-operator.c</dd>
   
 </dl>
 <div class="clear"></div>
 
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="EqualOperator.html" title="Groonga::EqualOperator (class)">EqualOperator</a></span>, <span class='object_link'><a href="GreaterEqualOperator.html" title="Groonga::GreaterEqualOperator (class)">GreaterEqualOperator</a></span>, <span class='object_link'><a href="GreaterOperator.html" title="Groonga::GreaterOperator (class)">GreaterOperator</a></span>, <span class='object_link'><a href="LessEqualOperator.html" title="Groonga::LessEqualOperator (class)">LessEqualOperator</a></span>, <span class='object_link'><a href="LessOperator.html" title="Groonga::LessOperator (class)">LessOperator</a></span>, <span class='object_link'><a href="MatchOperator.html" title="Groonga::MatchOperator (class)">MatchOperator</a></span>, <span class='object_link'><a href="NotEqualOperator.html" title="Groonga::NotEqualOperator (class)">NotEqualOperator</a></span>, <span class='object_link'><a href="PrefixOperator.html" title="Groonga::PrefixOperator (class)">PrefixOperator</a></span>, <span class='object_link'><a href="RegexpOperator.html" title="Groonga::RegexpOperator (class)">RegexpOperator</a></span></p>
+</div>
 
   <h2>Constant Summary</h2>
   
@@ -123,53 +142,70 @@
         <dt id="PUSH-constant" class="">PUSH =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PUSH</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>push</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PUSH</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="POP-constant" class="">POP =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_POP</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pop</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_POP</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="NO_OPERATION-constant" class="">NO_OPERATION =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NOP</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no-operation</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NOP</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="CALL-constant" class="">CALL =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_CALL</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>call</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_CALL</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="INTERN-constant" class="">INTERN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_INTERN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>intern</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_INTERN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GET_REFERENCE-constant" class="">GET_REFERENCE =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GET_REF</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get-reference</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GET_REF</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GET_VALUE-constant" class="">GET_VALUE =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GET_VALUE</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get-value</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GET_VALUE</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="AND-constant" class="">AND =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_AND</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>and</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_AND</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="AND_NOT-constant" class="">AND_NOT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_AND_NOT</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>and-not</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_AND_NOT</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="BUT-constant" class="">BUT =
           <div class="docstring">
   <div class="discussion">
-    
-<p>REMOVE ME!</p>
+    <p>REMOVE ME!</p>
 
 
   </div>
@@ -184,337 +220,478 @@
         <dt id="OR-constant" class="">OR =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_OR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>or</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_OR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="ASSIGN-constant" class="">ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="STAR_ASSIGN-constant" class="">STAR_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_STAR_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>star-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_STAR_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SLASH_ASSIGN-constant" class="">SLASH_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SLASH_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>slash-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SLASH_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="MODULO_ASSIGN-constant" class="">MODULO_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MOD_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>modulo-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MOD_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="PLUS_ASSIGN-constant" class="">PLUS_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PLUS_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>plus-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PLUS_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="MINUS_ASSIGN-constant" class="">MINUS_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MINUS_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>minus-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MINUS_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SHIFTL_ASSIGN-constant" class="">SHIFTL_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTL_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shiftl-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTL_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SHIRTR_ASSIGN-constant" class="">SHIRTR_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTR_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shirtr-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTR_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SHIFTRR_ASSIGN-constant" class="">SHIFTRR_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTRR_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shiftrr-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTRR_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="AND_ASSIGN-constant" class="">AND_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_AND_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>and-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_AND_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="XOR_ASSIGN-constant" class="">XOR_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_XOR_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>xor-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_XOR_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="OR_ASSIGN-constant" class="">OR_ASSIGN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_OR_ASSIGN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>or-assign</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_OR_ASSIGN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="JUMP-constant" class="">JUMP =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_JUMP</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>jump</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_JUMP</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="CJUMP-constant" class="">CJUMP =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_CJUMP</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cjump</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_CJUMP</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="COMMA-constant" class="">COMMA =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_COMMA</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comma</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_COMMA</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="BITWISE_OR-constant" class="">BITWISE_OR =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_BITWISE_OR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bitwise-or</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_BITWISE_OR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="BITWISE_XOR-constant" class="">BITWISE_XOR =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_BITWISE_XOR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bitwise-xor</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_BITWISE_XOR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="BITWISE_AND-constant" class="">BITWISE_AND =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_BITWISE_AND</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bitwise-and</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_BITWISE_AND</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="BITWISE_NOT-constant" class="">BITWISE_NOT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_BITWISE_NOT</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bitwise-not</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_BITWISE_NOT</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="EQUAL-constant" class="">EQUAL =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_EQUAL</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnEqualOperator'>rb_cGrnEqualOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>equal</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_EQUAL</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="NOT_EQUAL-constant" class="">NOT_EQUAL =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NOT_EQUAL</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnNotEqualOperator'>rb_cGrnNotEqualOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>not-equal</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NOT_EQUAL</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="LESS-constant" class="">LESS =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_LESS</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnLessOperator'>rb_cGrnLessOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>less</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_LESS</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GREATER-constant" class="">GREATER =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GREATER</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnGreaterOperator'>rb_cGrnGreaterOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>greater</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GREATER</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="LESS_EQUAL-constant" class="">LESS_EQUAL =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_LESS_EQUAL</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnLessEqualOperator'>rb_cGrnLessEqualOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>less-equal</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_LESS_EQUAL</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GREATER_EQUAL-constant" class="">GREATER_EQUAL =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GREATER_EQUAL</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnGreaterEqualOperator'>rb_cGrnGreaterEqualOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>greater-equal</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GREATER_EQUAL</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="IN-constant" class="">IN =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_IN</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>in</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_IN</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="MATCH-constant" class="">MATCH =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MATCH</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnMatchOperator'>rb_cGrnMatchOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>match</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MATCH</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="NEAR-constant" class="">NEAR =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NEAR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>near</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NEAR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="NEAR2-constant" class="">NEAR2 =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NEAR2</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>near2</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NEAR2</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SIMILAR-constant" class="">SIMILAR =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SIMILAR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>similar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SIMILAR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="TERM_EXTRACT-constant" class="">TERM_EXTRACT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TERM_EXTRACT</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>term-extract</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TERM_EXTRACT</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SHIFTL-constant" class="">SHIFTL =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTL</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shiftl</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTL</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SHIFTR-constant" class="">SHIFTR =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shiftr</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SHIFTRR-constant" class="">SHIFTRR =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTRR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shiftrr</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SHIFTRR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="PLUS-constant" class="">PLUS =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PLUS</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>plus</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PLUS</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="MINUS-constant" class="">MINUS =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MINUS</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>minus</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MINUS</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="STAR-constant" class="">STAR =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_STAR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>star</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_STAR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SLASH-constant" class="">SLASH =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SLASH</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>slash</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SLASH</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="MODULO-constant" class="">MODULO =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MOD</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>modulo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_MOD</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="DELETE-constant" class="">DELETE =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_DELETE</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>delete</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_DELETE</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="INCREMENT-constant" class="">INCREMENT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_INCR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>increment</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_INCR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="DECREMENT-constant" class="">DECREMENT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_DECR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>decrement</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_DECR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="INCREMENT_POST-constant" class="">INCREMENT_POST =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_INCR_POST</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>increment-post</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_INCR_POST</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="DECREMENT_POST-constant" class="">DECREMENT_POST =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_DECR_POST</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>decrement-post</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_DECR_POST</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="NOT-constant" class="">NOT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NOT</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>not</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_NOT</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="ADJUST-constant" class="">ADJUST =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_ADJUST</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>adjust</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_ADJUST</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="EXACT-constant" class="">EXACT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_EXACT</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>exact</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_EXACT</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="LONGEST_COMMON_PREFIX-constant" class="">LONGEST_COMMON_PREFIX =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_LCP</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>longest-common-prefix</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_LCP</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="PARTIAL-constant" class="">PARTIAL =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PARTIAL</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>partial</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PARTIAL</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="UNSPLIT-constant" class="">UNSPLIT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_UNSPLIT</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unsplit</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_UNSPLIT</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="PREFIX-constant" class="">PREFIX =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PREFIX</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnPrefixOperator'>rb_cGrnPrefixOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prefix</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_PREFIX</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="SUFFIX-constant" class="">SUFFIX =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SUFFIX</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>suffix</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_SUFFIX</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GEO_DISTANCE1-constant" class="">GEO_DISTANCE1 =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_DISTANCE1</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>geo-distance1</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_DISTANCE1</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GEO_DISTANCE2-constant" class="">GEO_DISTANCE2 =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_DISTANCE2</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>geo-distance2</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_DISTANCE2</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GEO_DISTANCE3-constant" class="">GEO_DISTANCE3 =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_DISTANCE3</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>geo-distance3</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_DISTANCE3</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GEO_DISTANCE4-constant" class="">GEO_DISTANCE4 =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_DISTANCE4</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>geo-distance4</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_DISTANCE4</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GEO_WITHINP5-constant" class="">GEO_WITHINP5 =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_WITHINP5</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>geo-withinp5</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_WITHINP5</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GEO_WITHINP6-constant" class="">GEO_WITHINP6 =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_WITHINP6</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>geo-withinp6</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_WITHINP6</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="GEO_WITHINP8-constant" class="">GEO_WITHINP8 =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_WITHINP8</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>geo-withinp8</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_GEO_WITHINP8</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="OBJECT_SEARCH-constant" class="">OBJECT_SEARCH =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_OBJ_SEARCH</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>object-search</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_OBJ_SEARCH</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="EXPRESSION_GET_VARIABLE-constant" class="">EXPRESSION_GET_VARIABLE =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_EXPR_GET_VAR</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>expression-get-variable</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_EXPR_GET_VAR</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="TABLE_CREATE-constant" class="">TABLE_CREATE =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TABLE_CREATE</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>table-create</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TABLE_CREATE</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="TABLE_SELECT-constant" class="">TABLE_SELECT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TABLE_SELECT</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>table-select</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TABLE_SELECT</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="TABLE_SORT-constant" class="">TABLE_SORT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TABLE_SORT</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>table-sort</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TABLE_SORT</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="TABLE_GROUP-constant" class="">TABLE_GROUP =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TABLE_GROUP</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>table-group</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_TABLE_GROUP</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
         <dt id="JSON_PUT-constant" class="">JSON_PUT =
           
         </dt>
-        <dd><pre class="code"><span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_JSON_PUT</span><span class='rparen'>)</span></pre></dd>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnOperator'>rb_cGrnOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>json-put</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_JSON_PUT</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="REGEXP-constant" class="">REGEXP =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_rb_funcall'>rb_funcall</span><span class='lparen'>(</span><span class='id identifier rubyid_rb_cGrnRegexpOperator'>rb_cGrnRegexpOperator</span><span class='comma'>,</span> <span class='id identifier rubyid_rb_intern'>rb_intern</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+<span class='id identifier rubyid_rb_str_new_cstr'>rb_str_new_cstr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>regexp</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+<span class='const'>UINT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_OP_REGEXP</span><span class='rparen'>)</span><span class='rparen'>)</span></pre></dd>
       
     </dl>
   
@@ -525,12 +702,224 @@
 
 
 
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Object) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_i-instance_method" title="#to_i (instance method)">- (Object) <strong>to_i</strong> </a>
+    
+
+    
+      (also: #to_int)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275
+276
+277
+278
+279
+280</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-operator.c', line 273</span>
+
+static VALUE
+rb_grn_operator_initialize (VALUE self, VALUE rb_name, VALUE rb_value)
+{
+    rb_iv_set(self, &quot;@name&quot;, rb_name);
+    rb_iv_set(self, &quot;@value&quot;, rb_value);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="to_i-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>to_i</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='to_int-instance_method'>to_int</span></span>
+    </span>
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+282
+283
+284
+285
+286</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-operator.c', line 282</span>
+
+static VALUE
+rb_grn_operator_to_i (VALUE self)
+{
+    return rb_iv_get(self, &quot;@value&quot;);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>to_s</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+288
+289
+290
+291
+292
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-operator.c', line 288</span>
+
+static VALUE
+rb_grn_operator_to_s (VALUE self)
+{
+    grn_operator operator;
+
+    operator = rb_grn_operator_from_ruby_object(self);
+    return rb_str_new_cstr(grn_operator_to_string(operator));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 
     <div id="footer">
-  Generated on Mon Feb 16 16:13:55 2015 by
+  Generated on Sun Apr 19 15:01:29 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

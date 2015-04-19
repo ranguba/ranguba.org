@@ -92,114 +92,117 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'>
-<h1 id="label-Release">Release</h1>
+    <div id="content"><div id='filecontents'><h1 id="release">Release</h1>
 
 <p>Rroongaのリリース方法について説明します。</p>
 
-<h2 id="label-1.+Summarize+the+changes+for+this+release">1. Summarize the changes for this release</h2>
+<h2 id="summarize-the-changes-for-this-release">1. Summarize the changes for this release</h2>
 
-<h3 id="label-Show+the+commits+since+the+latest+release">Show the commits since the latest release</h3>
+<h3 id="show-the-commits-since-the-latest-release">Show the commits since the latest release</h3>
 
-<pre class="code ruby"><code class="ruby">% git log -p --reverse &lt;the latest release version&gt;..HEAD</code></pre>
+<pre class="code ruby"><code class="ruby">% git log -p --reverse &lt;the latest release version&gt;..HEAD
+</code></pre>
 
 <p>For example:</p>
 
-<pre class="code ruby"><code class="ruby">% git log -p --reverse 4.0.3..HEAD</code></pre>
+<pre class="code ruby"><code class="ruby">% git log -p --reverse 4.0.3..HEAD
+</code></pre>
 
 <p>Or</p>
 
-<p><a href="https://github.com/ranguba/rroonga/commits/master">Commits on
-GitHub</a></p>
+<p><a href="https://github.com/ranguba/rroonga/commits/master">Commits on GitHub</a></p>
 
-<h3 id="label-Extract+the+commits+related+to+users">Extract the commits related to users</h3>
+<h3 id="extract-the-commits-related-to-users">Extract the commits related to users</h3>
 
-<h4 id="label-Including">Including</h4>
-<ul><li>
-<p>Changed specifications</p>
-</li><li>
-<p>Added new features</p>
-</li><li>
-<p>…</p>
-</li></ul>
+<h4 id="including">Including</h4>
 
-<h4 id="label-Excluding">Excluding</h4>
-<ul><li>
-<p>Refactorings</p>
-</li><li>
-<p>Tests</p>
-</li><li>
-<p>…</p>
-</li></ul>
+<ul>
+  <li>Changed specifications</li>
+  <li>Added new features</li>
+  <li>…</li>
+</ul>
 
-<h3 id="label-Categorize">Categorize</h3>
-<ul><li>
-<p>Improvements: new features, improved behavior, …</p>
-</li><li>
-<p>Fixes: fixed bugs, …</p>
-</li></ul>
+<h4 id="excluding">Excluding</h4>
 
-<h3 id="label-%E6%84%9F%E8%AC%9D">感謝</h3>
+<ul>
+  <li>Refactorings</li>
+  <li>Tests</li>
+  <li>…</li>
+</ul>
 
-<p>If a contributor name is in a commit log, create “Thanks” group and write
-the name to the group.</p>
+<h3 id="categorize">Categorize</h3>
 
-<h3 id="label-Template+for+a+new+release+for+news.textile">Template for a new release for news.textile</h3>
+<ul>
+  <li>Improvements: new features, improved behavior, …</li>
+  <li>Fixes: fixed bugs, …</li>
+</ul>
 
-<pre class="code ruby"><code class="ruby">h2(#x-x-x). x.x.x: YYYY-MM-DD
+<h3 id="section">感謝</h3>
 
-h3. 改善
+<p>If a contributor name is in a commit log, create “Thanks” group and write the name to the group.</p>
+
+<h3 id="template-for-a-new-release-for-newstextile">Template for a new release for news.textile</h3>
+
+<pre class="code ruby"><code class="ruby">## X.X.X: YYYY-MM-DD {#version-x-x-x}
+
+### 改善
 
 * ...
 
-h3. 修正
+### 修正
 
 * ...
 
-h3. 感謝
+### 感謝
 
-* ...</code></pre>
+* ...
+</code></pre>
 
-<h2 id="label-2.+Translate">2. Translate</h2>
+<h2 id="translate">2. Translate</h2>
 
-<h3 id="label-2-1.+Update+PO">2-1. Update PO</h3>
+<h3 id="update-po">2-1. Update PO</h3>
 
 <p>Update PO files (e.g.: ja.po) by the following command:</p>
 
-<pre class="code ruby"><code class="ruby">$ rake reference:po:update</code></pre>
+<pre class="code ruby"><code class="ruby">$ rake reference:po:update
+</code></pre>
 
-<h3 id="label-2-2.+Edit+PO">2-2. Edit PO</h3>
+<h3 id="edit-po">2-2. Edit PO</h3>
 
 <p>Then, edit PO files:</p>
-<ul><li>
-<p>Edit msgid and msgstr.</p>
-</li><li>
-<p>Search fuzzy.</p>
-</li><li>
-<p>Edit if necessary.</p>
-</li><li>
-<p>Then, remove fuzzy.</p>
-</li></ul>
 
-<h2 id="label-3.+Upload+gem+to+RubyGems.org">3. Upload gem to RubyGems.org</h2>
+<ul>
+  <li>Edit msgid and msgstr.</li>
+  <li>Search fuzzy.
+    <ul>
+      <li>Edit if necessary.</li>
+      <li>Then, remove fuzzy.</li>
+    </ul>
+  </li>
+</ul>
 
-<h3 id="label-3-1.+For+Linux">3-1. For Linux</h3>
+<h2 id="upload-gem-to-rubygemsorg">3. Upload gem to RubyGems.org</h2>
 
-<pre class="code ruby"><code class="ruby">$ rake release</code></pre>
+<h3 id="for-linux">3-1. For Linux</h3>
 
-<h3 id="label-3-2.+For+Windows">3-2. For Windows</h3>
+<pre class="code ruby"><code class="ruby">$ rake release
+</code></pre>
+
+<h3 id="for-windows">3-2. For Windows</h3>
 
 <pre class="code ruby"><code class="ruby">$ rake build:windows
 $ gem push pkg/rroonga-&lt;the latest release version&gt;-x86-mingw32.gem
-$ gem push pkg/rroonga-&lt;the latest release version&gt;-x64-mingw32.gem</code></pre>
+$ gem push pkg/rroonga-&lt;the latest release version&gt;-x64-mingw32.gem
+</code></pre>
 
-<h3 id="label-3-3.+Bump+version">3-3. Bump version</h3>
+<h3 id="bump-version">3-3. Bump version</h3>
 
-<pre class="code ruby"><code class="ruby">$ $EDITOR ext/groonga/rb-grn.h</code></pre>
+<pre class="code ruby"><code class="ruby">$ $EDITOR ext/groonga/rb-grn.h
+</code></pre>
 
-<h2 id="label-4.+Update+ranguba.org">4. Update ranguba.org</h2>
+<h2 id="update-rangubaorg">4. Update ranguba.org</h2>
 
-<h3 id="label-4-1.+Update+the+latest+version+and+release+date">4-1. Update the latest version and release date</h3>
+<h3 id="update-the-latest-version-and-release-date">4-1. Update the latest version and release date</h3>
 
 <p>Update version and release date in ranguba.org (index.html、ja/index.html).</p>
 
@@ -207,57 +210,64 @@ $ gem push pkg/rroonga-&lt;the latest release version&gt;-x64-mingw32.gem</code>
 
 <pre class="code ruby"><code class="ruby">$ cd ..
 $ git clone git@github.com:ranguba/ranguba.org.git
-$ cd ranguba.org</code></pre>
+$ cd ranguba.org
+</code></pre>
 
 <p>Or</p>
 
 <pre class="code ruby"><code class="ruby">$ cd ../ranguba.org
-$ git pull</code></pre>
+$ git pull
+</code></pre>
 
 <p>Second, update the latest version and release date:</p>
 
-<pre class="code ruby"><code class="ruby">$ $EDITOR _config.yml</code></pre>
+<pre class="code ruby"><code class="ruby">$ $EDITOR _config.yml
+</code></pre>
 
-<h3 id="label-4-2.+Update+reference+manual">4-2. Update reference manual</h3>
+<h3 id="update-reference-manual">4-2. Update reference manual</h3>
 
 <p>First, copy references to reference html directory in ranguba.org:</p>
 
 <pre class="code ruby"><code class="ruby">$ cd ../rroonga
-$ rake release:references:upload</code></pre>
+$ rake release:references:upload
+</code></pre>
 
 <p>Second, commit and push the html directory:</p>
 
 <pre class="code ruby"><code class="ruby">$ cd ../ranguba.org
 $ git add .
 $ git commit
-$ git push</code></pre>
+$ git push
+</code></pre>
 
-<h2 id="label-5.+Announce+in+mailing+lists">5. Announce in mailing lists</h2>
-<ul><li>
-<p>groonga-talk (English)</p>
-</li><li>
-<p>e.g.: <a
-href="http://sourceforge.net/p/groonga/mailman/message/33144993">sourceforge.net/p/groonga/mailman/message/33144993</a>/</p>
-</li><li>
-<p>groonga-dev (Japanese)</p>
-</li><li>
-<p>e.g.: <a
-href="http://sourceforge.jp/projects/groonga/lists/archive/dev/2014-December/003014.html">sourceforge.jp/projects/groonga/lists/archive/dev/2014-December/003014.html</a></p>
-</li><li>
-<p>ruby-talk (English) (optional)</p>
-</li><li>
-<p>e.g.: <a
-href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/428992">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/428992</a></p>
-</li><li>
-<p>ruby-list (Japanese) (optional)</p>
-</li><li>
-<p>e.g.: <a
-href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-list/50025">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-list/50025</a></p>
-</li></ul>
+<h2 id="announce-in-mailing-lists">5. Announce in mailing lists</h2>
+
+<ul>
+  <li>groonga-talk (English)
+    <ul>
+      <li>e.g.: http://sourceforge.net/p/groonga/mailman/message/33144993/</li>
+    </ul>
+  </li>
+  <li>groonga-dev (Japanese)
+    <ul>
+      <li>e.g.: http://sourceforge.jp/projects/groonga/lists/archive/dev/2014-December/003014.html</li>
+    </ul>
+  </li>
+  <li>ruby-talk (English) (optional)
+    <ul>
+      <li>e.g.: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/428992</li>
+    </ul>
+  </li>
+  <li>ruby-list (Japanese) (optional)
+    <ul>
+      <li>e.g.: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-list/50025</li>
+    </ul>
+  </li>
+</ul>
 </div></div>
 
     <div id="footer">
-  Generated on Mon Feb 16 16:13:55 2015 by
+  Generated on Sun Apr 19 15:01:21 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>
