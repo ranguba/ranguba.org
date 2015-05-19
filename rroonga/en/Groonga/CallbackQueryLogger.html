@@ -256,7 +256,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="QueryLogger.html" title="Groonga::QueryLogger (class)">QueryLogger</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="QueryLogger.html#path-class_method" title="Groonga::QueryLogger.path (method)">path</a></span>, <span class='object_link'><a href="QueryLogger.html#path%3D-class_method" title="Groonga::QueryLogger.path= (method)">path=</a></span>, <span class='object_link'><a href="QueryLogger.html#register-class_method" title="Groonga::QueryLogger.register (method)">register</a></span>, <span class='object_link'><a href="QueryLogger.html#reopen-class_method" title="Groonga::QueryLogger.reopen (method)">reopen</a></span>, <span class='object_link'><a href="QueryLogger.html#unregister-class_method" title="Groonga::QueryLogger.unregister (method)">unregister</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="QueryLogger.html#log-class_method" title="Groonga::QueryLogger.log (method)">log</a></span>, <span class='object_link'><a href="QueryLogger.html#path-class_method" title="Groonga::QueryLogger.path (method)">path</a></span>, <span class='object_link'><a href="QueryLogger.html#path%3D-class_method" title="Groonga::QueryLogger.path= (method)">path=</a></span>, <span class='object_link'><a href="QueryLogger.html#register-class_method" title="Groonga::QueryLogger.register (method)">register</a></span>, <span class='object_link'><a href="QueryLogger.html#reopen-class_method" title="Groonga::QueryLogger.reopen (method)">reopen</a></span>, <span class='object_link'><a href="QueryLogger.html#rotate_threshold_size-class_method" title="Groonga::QueryLogger.rotate_threshold_size (method)">rotate_threshold_size</a></span>, <span class='object_link'><a href="QueryLogger.html#rotate_threshold_size%3D-class_method" title="Groonga::QueryLogger.rotate_threshold_size= (method)">rotate_threshold_size=</a></span>, <span class='object_link'><a href="QueryLogger.html#unregister-class_method" title="Groonga::QueryLogger.unregister (method)">unregister</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -285,13 +285,13 @@
       <pre class="lines">
 
 
-106
-107
-108
-109</pre>
+151
+152
+153
+154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 151</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -324,14 +324,14 @@
       <pre class="lines">
 
 
-123
-124
-125
-126
-127</pre>
+168
+169
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fin'>fin</span>
   <span class='id identifier rubyid_guard'>guard</span> <span class='kw'>do</span>
@@ -358,14 +358,14 @@
       <pre class="lines">
 
 
-111
-112
-113
-114
-115</pre>
+156
+157
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_flag'>flag</span><span class='comma'>,</span> <span class='id identifier rubyid_timestamp'>timestamp</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guard'>guard</span> <span class='kw'>do</span>
@@ -392,14 +392,14 @@
       <pre class="lines">
 
 
-117
-118
-119
-120
-121</pre>
+162
+163
+164
+165
+166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 162</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reopen'>reopen</span>
   <span class='id identifier rubyid_guard'>guard</span> <span class='kw'>do</span>

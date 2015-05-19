@@ -94,9 +94,25 @@
 
     <div id="content"><div id='filecontents'><h1 id="section">お知らせ</h1>
 
-<h2 id="version-5-0-1">5.0.1: 2014-04-14</h2>
+<h2 id="version-5-0-2">5.0.2: 2015-05-18</h2>
 
 <h3 id="section-1">改善</h3>
+
+<ul>
+  <li><span class='object_link'><a href="Groonga/Plugin.html#ruby_suffix-class_method" title="Groonga::Plugin.ruby_suffix (method)">Groonga::Plugin.ruby_suffix</a></span> を追加。</li>
+  <li><span class='object_link'><a href="Groonga/Schema.html" title="Groonga::Schema (class)">Groonga::Schema</a></span> に <code>:key_type</code> が指定されたときのデフォルトのテーブルの型に <span class='object_link'><a href="Groonga/Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span> が使われるようになりました（今までは <code>:key_type</code> の指定に関わらず、 <code>:type</code> が指定されない場合は常に <span class='object_link'><a href="Groonga/Array.html" title="Groonga::Array (class)">Groonga::Array</a></span> がデフォルトとして使われていました）。これは後方非互換な変更ですが、 <code>:key_type</code> が指定されて <code>:type</code> が指定されないケースはユーザーのプログラムのバグなので、通常の使い方をしていれば問題にはなりません。</li>
+  <li><span class='object_link'><a href="Groonga/Logger.html#log-class_method" title="Groonga::Logger.log (method)">Groonga::Logger.log</a></span> を追加。</li>
+  <li><span class='object_link'><a href="Groonga/Logger.html#rotate_threshold_size-class_method" title="Groonga::Logger.rotate_threshold_size (method)">Groonga::Logger.rotate_threshold_size</a></span> を追加。</li>
+  <li><span class='object_link'><a href="Groonga/Logger.html#rotate_threshold_size%3D-class_method" title="Groonga::Logger.rotate_threshold_size= (method)">Groonga::Logger.rotate_threshold_size=</a></span> を追加。</li>
+  <li><span class='object_link'><a href="Groonga/QueryLogger.html#log-class_method" title="Groonga::QueryLogger.log (method)">Groonga::QueryLogger.log</a></span> を追加。</li>
+  <li><span class='object_link'><a href="Groonga/QueryLogger.html#rotate_threshold_size-class_method" title="Groonga::QueryLogger.rotate_threshold_size (method)">Groonga::QueryLogger.rotate_threshold_size</a></span> を追加。</li>
+  <li><span class='object_link'><a href="Groonga/QueryLogger.html#rotate_threshold_size%3D-class_method" title="Groonga::QueryLogger.rotate_threshold_size= (method)">Groonga::QueryLogger.rotate_threshold_size=</a></span> を追加。</li>
+  <li><span class='object_link'><a href="Groonga/QueryLogger/Flags.html#parse-class_method" title="Groonga::QueryLogger::Flags.parse (method)">Groonga::QueryLogger::Flags.parse</a></span> を実装。</li>
+</ul>
+
+<h2 id="version-5-0-1">5.0.1: 2015-04-14</h2>
+
+<h3 id="section-2">改善</h3>
 
 <ul>
   <li>Groonga 5.0.2に対応。Groonga 5.0.1以前はサポートしません。</li>
@@ -141,16 +157,16 @@
   <li><span class='object_link'><a href="Groonga/Table.html#select-instance_method" title="Groonga::Table#select (method)">Groonga::Table#select</a></span>のブロックで正規表現をサポート。</li>
 </ul>
 
-<h3 id="section-2">感謝</h3>
+<h3 id="section-3">感謝</h3>
 
 <ul>
   <li>yui-knkさん</li>
   <li>Tasuku SUENAGAさん</li>
 </ul>
 
-<h2 id="version-5-0-0">5.0.0: 2014-02-16</h2>
+<h2 id="version-5-0-0">5.0.0: 2015-02-16</h2>
 
-<h3 id="section-3">改善</h3>
+<h3 id="section-4">改善</h3>
 
 <ul>
   <li>Groonga 5.0.0に対応。Groonga 4.1.1以前はサポートしません。</li>
@@ -167,15 +183,15 @@
   <li><span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span> をドリルダウンの計算機能に対応。</li>
 </ul>
 
-<h3 id="section-4">感謝</h3>
+<h3 id="section-5">感謝</h3>
 
 <ul>
   <li>グニャラくんさん</li>
 </ul>
 
-<h2 id="version-4-0-8">4.0.8: 2014-01-08</h2>
+<h2 id="version-4-0-8">4.0.8: 2015-01-08</h2>
 
-<h3 id="section-5">改善</h3>
+<h3 id="section-6">改善</h3>
 
 <ul>
   <li>Groonga 4.0.9に対応。Groonga 4.0.8以前はサポートしません。</li>
@@ -183,13 +199,13 @@
   <li><span class='object_link'><a href="Groonga/Database.html#recover-instance_method" title="Groonga::Database#recover (method)">Groonga::Database#recover</a></span> を追加。</li>
 </ul>
 
-<h3 id="section-6">修正</h3>
+<h3 id="section-7">修正</h3>
 
 <ul>
   <li><span class='object_link'><a href="Groonga/GeoPoint.html#%3D%3D-instance_method" title="Groonga::GeoPoint#== (method)">Groonga::GeoPoint#==</a></span> のtypoを修正。</li>
 </ul>
 
-<h3 id="section-7">感謝</h3>
+<h3 id="section-8">感謝</h3>
 
 <ul>
   <li>Hiroshi Hatakeさん</li>
@@ -197,7 +213,7 @@
 
 <h2 id="version-4-0-7">4.0.7: 2014-12-12</h2>
 
-<h3 id="section-8">改善</h3>
+<h3 id="section-9">改善</h3>
 
 <ul>
   <li>Groonga 4.0.8に対応。Groonga 4.0.7以前はサポートしません。</li>
@@ -212,7 +228,7 @@
 
 <h2 id="version-4-0-6">4.0.6: 2014-11-06</h2>
 
-<h3 id="section-9">改善</h3>
+<h3 id="section-10">改善</h3>
 
 <ul>
   <li>Groonga 4.0.7に対応。 [GitHub#28]
@@ -238,7 +254,7 @@
 ロガーを指定しなくてもいいようにした。</li>
 </ul>
 
-<h3 id="section-10">修正</h3>
+<h3 id="section-11">修正</h3>
 
 <ul>
   <li>[doc] 非推奨のオプションが例に使われていたのを修正。
@@ -253,7 +269,7 @@
   <li>[doc] <span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span> のオプションの名前を修正。</li>
 </ul>
 
-<h3 id="section-11">感謝</h3>
+<h3 id="section-12">感謝</h3>
 
 <ul>
   <li>ongaeshiさん</li>
@@ -262,7 +278,7 @@
 
 <h2 id="version-4-0-5">4.0.5: 2014-10-05</h2>
 
-<h3 id="section-12">改善</h3>
+<h3 id="section-13">改善</h3>
 
 <ul>
   <li>[windows] クロスビルド用タスクを追加。</li>
@@ -272,7 +288,7 @@
   <li>[windows] デバッグフラグを無効にした。</li>
 </ul>
 
-<h3 id="section-13">修正</h3>
+<h3 id="section-14">修正</h3>
 
 <ul>
   <li><span class='object_link'><a href="Groonga/Table/KeySupport.html#delete-instance_method" title="Groonga::Table::KeySupport#delete (method)">Groonga::Table::KeySupport#delete</a></span>に <code>:id =&gt; true</code> オプションを追加。
@@ -283,7 +299,7 @@
 この変更は後方互換性がありませんが、現在のAPIはバグなので許容します。</li>
 </ul>
 
-<h3 id="section-14">感謝</h3>
+<h3 id="section-15">感謝</h3>
 
 <ul>
   <li>Masafumi Yokoyamaさん</li>
@@ -291,7 +307,7 @@
 
 <h2 id="version-4-0-4">4.0.4: 2014-08-29</h2>
 
-<h3 id="section-15">改善</h3>
+<h3 id="section-16">改善</h3>
 
 <ul>
   <li><span class='object_link'><a href="Groonga/ProcedureType.html" title="Groonga::ProcedureType (module)">Groonga::ProcedureType</a></span>モジュールを追加。GroongaのGRN_PROC_XXXに対応。</li>
@@ -310,13 +326,13 @@
   <li>メモリー管理まわりの改善。（GCしなくてもメモリー使用量が減るなど）</li>
 </ul>
 
-<h3 id="section-16">修正</h3>
+<h3 id="section-17">修正</h3>
 
 <ul>
   <li>GCに関連したクラッシュを修正。（<span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>中にGCが動いた場合など）</li>
 </ul>
 
-<h3 id="section-17">感謝</h3>
+<h3 id="section-18">感謝</h3>
 
 <ul>
   <li>Ippei Obayashiさん</li>
@@ -326,14 +342,14 @@
 
 <h2 id="version-4-0-3">4.0.3: 2014-06-04</h2>
 
-<h3 id="section-18">修正</h3>
+<h3 id="section-19">修正</h3>
 
 <ul>
   <li>[windows] load errorが発生する問題を修正。これはGroongaの問題だったので問題を修正したGroongaをバンドルしなおした。
 [groonga-dev,02398][Masafumi Yokoyama報告]</li>
 </ul>
 
-<h3 id="section-19">感謝</h3>
+<h3 id="section-20">感謝</h3>
 
 <ul>
   <li>Masafumi Yokoyamaさん</li>
@@ -341,7 +357,7 @@
 
 <h2 id="version-4-0-2">4.0.2: 2014-05-29</h2>
 
-<h3 id="section-20">改善</h3>
+<h3 id="section-21">改善</h3>
 
 <ul>
   <li>dump中の不必要な <code>--key_type</code> オプションを削除。
@@ -352,14 +368,14 @@
 参考: <span class='object_link'><a href="Groonga/Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">Groonga::Schema.create_table</a></span>。</li>
 </ul>
 
-<h3 id="section-21">修正</h3>
+<h3 id="section-22">修正</h3>
 
 <ul>
   <li>[GitHub#16] <span class='object_link'><a href="Groonga/Table.html#column-instance_method" title="Groonga::Table#column (method)">Groonga::Table#column</a></span>のメモリリークを修正。
 [ruticeさんが報告]</li>
 </ul>
 
-<h3 id="section-22">感謝</h3>
+<h3 id="section-23">感謝</h3>
 
 <ul>
   <li>ruticeさん</li>
@@ -368,7 +384,7 @@
 
 <h2 id="version-4-0-1">4.0.1: 2014-04-04</h2>
 
-<h3 id="section-23">改善</h3>
+<h3 id="section-24">改善</h3>
 
 <ul>
   <li>Groonga 4.0.1対応。Groonga 4.0.0以前のバージョンはサポートしません。</li>
@@ -391,7 +407,7 @@
   <li>オプションのキーとして文字列も使えるようにした。</li>
 </ul>
 
-<h3 id="section-24">修正</h3>
+<h3 id="section-25">修正</h3>
 
 <ul>
   <li>Ruby構文でのインデックスダンプ時にインデックスオプション情報が抜けてしまう問題を修正。</li>
@@ -399,14 +415,14 @@
 
 <h2 id="version-4-0-0">4.0.0: 2014-02-09</h2>
 
-<h3 id="section-25">改善</h3>
+<h3 id="section-26">改善</h3>
 
 <ul>
   <li>Groonga 4.0.0対応。Groonga 3.1.2以前のサポートを廃止。</li>
   <li>インストールドキュメントを追加。[おんがえしさんがパッチ提供]</li>
 </ul>
 
-<h3 id="section-26">感謝</h3>
+<h3 id="section-27">感謝</h3>
 
 <ul>
   <li>おんがえしさん</li>
@@ -414,7 +430,7 @@
 
 <h2 id="version-3-1-2">3.1.2: 2014-01-29</h2>
 
-<h3 id="section-27">改善</h3>
+<h3 id="section-28">改善</h3>
 
 <ul>
   <li>Groonga 3.1.2対応。Groonga 3.1.1以前の対応を終了。</li>
@@ -429,7 +445,7 @@
   <li><span class='object_link'><a href="Groonga.html#lock_timeout%3D-class_method" title="Groonga.lock_timeout= (method)">Groonga.lock_timeout=</a></span>を追加。</li>
 </ul>
 
-<h3 id="section-28">感謝</h3>
+<h3 id="section-29">感謝</h3>
 
 <ul>
   <li>おんがえしさん</li>
@@ -437,7 +453,7 @@
 
 <h2 id="version-3-1-1">3.1.1: 2013-12-29</h2>
 
-<h3 id="section-29">改善</h3>
+<h3 id="section-30">改善</h3>
 
 <ul>
   <li>Groonga 3.1.1対応。</li>
@@ -450,7 +466,7 @@
   <li><span class='object_link'><a href="Groonga/Expression.html#append_object-instance_method" title="Groonga::Expression#append_object (method)">Groonga::Expression#append_object</a></span> がオペレーター名に対応。</li>
 </ul>
 
-<h3 id="section-30">感謝</h3>
+<h3 id="section-31">感謝</h3>
 
 <ul>
   <li>Masafumi Yokoyamaさん</li>
@@ -458,7 +474,7 @@
 
 <h2 id="version-3-1-0">3.1.0: 2013-11-29</h2>
 
-<h3 id="section-31">改善</h3>
+<h3 id="section-32">改善</h3>
 
 <ul>
   <li>自動でGroongaをビルドする時にエラーになりにくくした。
@@ -468,13 +484,13 @@
   <li><span class='object_link'><a href="Groonga/Database.html#tables-instance_method" title="Groonga::Database#tables (method)">Groonga::Database#tables</a></span> が未知のオブジェクトがあっても例外をあげずに無視するようになった。このように変更した理由は、このメッソッドは存在しているテーブルが欲しい、という要求に応えるためのメソッドであるため、存在しないオブジェクトがあるかどうかはこのメソッドにとって重要なことではないから。</li>
 </ul>
 
-<h3 id="section-32">修正</h3>
+<h3 id="section-33">修正</h3>
 
 <ul>
   <li><span class='object_link'><a href="Groonga/Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Groonga::Expression#parse</a></span> がすべての種類のモード・オペレーターを受け取れない問題を修正。</li>
 </ul>
 
-<h3 id="section-33">感謝</h3>
+<h3 id="section-34">感謝</h3>
 
 <ul>
   <li>しまだこうじさん</li>
@@ -483,14 +499,14 @@
 
 <h2 id="version-3-0-9">3.0.9: 2013-10-29</h2>
 
-<h3 id="section-34">改善</h3>
+<h3 id="section-35">改善</h3>
 
 <ul>
   <li>Groonga 3.0.9対応</li>
   <li><span class='object_link'><a href="Groonga/Object.html#remove-instance_method" title="Groonga::Object#remove (method)">Groonga::Object#remove</a></span>でエラーが発生した時にエラーメッセージも含めるようにした。</li>
 </ul>
 
-<h3 id="section-35">修正</h3>
+<h3 id="section-36">修正</h3>
 
 <ul>
   <li>インデックスカラムのソースに <code>nil</code> を指定するとクラッシュする問題を修正した。</li>
@@ -498,7 +514,7 @@
 
 <h2 id="version-3-0-8">3.0.8: 2013-09-29</h2>
 
-<h3 id="section-36">改善</h3>
+<h3 id="section-37">改善</h3>
 
 <ul>
   <li>groonga 3.0.8サポート。</li>
@@ -508,7 +524,7 @@
 
 <h2 id="version-3-0-7">3.0.7: 2013-09-19</h2>
 
-<h3 id="section-37">改善</h3>
+<h3 id="section-38">改善</h3>
 
 <ul>
   <li><span class='object_link'><a href="Groonga/Table/KeySupport.html#tokenize-instance_method" title="Groonga::Table::KeySupport#tokenize (method)">Groonga::Table::KeySupport#tokenize</a></span>を追加。groonga 3.0.8が必要だが、groonga 3.0.8はまだリリースされていない。</li>
@@ -516,13 +532,13 @@
 ** groonga-client gem、groogna-command gem、gqtp gemに依存するようになった。</li>
 </ul>
 
-<h3 id="section-38">修正</h3>
+<h3 id="section-39">修正</h3>
 
 <ul>
   <li>groongaの自動インストールが失敗するバグを修正。 [GitHub#12][Keita Hagaさんがパッチ提供]</li>
 </ul>
 
-<h3 id="section-39">感謝</h3>
+<h3 id="section-40">感謝</h3>
 
 <ul>
   <li>Keita Hagaさん</li>
@@ -530,7 +546,7 @@
 
 <h2 id="version-3-0-6">3.0.6: 2013-09-13</h2>
 
-<h3 id="section-40">改善</h3>
+<h3 id="section-41">改善</h3>
 
 <ul>
   <li>Int8/UInt8/Int16/UInt16がキーのテーブルを参照している参照型のカラムの読み書きをサポート。</li>
@@ -538,7 +554,7 @@
 
 <h2 id="version-3-0-5">3.0.5: 2013-07-29</h2>
 
-<h3 id="section-41">改善</h3>
+<h3 id="section-42">改善</h3>
 
 <ul>
   <li>[dumper] ダブル配列トライのダンプに対応。</li>
@@ -559,13 +575,13 @@
 [xtuaokさんが報告]</li>
 </ul>
 
-<h3 id="section-42">修正</h3>
+<h3 id="section-43">修正</h3>
 
 <ul>
   <li>[dumper] カラムのないテーブルがダンプされない問題を修正。</li>
 </ul>
 
-<h3 id="section-43">感謝</h3>
+<h3 id="section-44">感謝</h3>
 
 <ul>
   <li>吉岡 真治さん</li>
@@ -574,7 +590,7 @@
 
 <h2 id="version-3-0-4">3.0.4: 2013-07-04</h2>
 
-<h3 id="section-44">修正</h3>
+<h3 id="section-45">修正</h3>
 
 <ul>
   <li>Windows用のrroogna 3.0.3 gemパッケージを修正。</li>
@@ -582,7 +598,7 @@
 
 <h2 id="version-3-0-3">3.0.3: 2013-07-04</h2>
 
-<h3 id="section-45">改善</h3>
+<h3 id="section-46">改善</h3>
 
 <ul>
   <li>groonga &gt;= 3.0.5を必須とした。</li>
@@ -600,7 +616,7 @@
 サブレコードは<span class='object_link'><a href="Groonga/SubRecords.html" title="Groonga::SubRecords (class)">Groonga::SubRecords</a></span>のインスタンスである。</li>
 </ul>
 
-<h3 id="section-46">修正</h3>
+<h3 id="section-47">修正</h3>
 
 <ul>
   <li><span class='object_link'><a href="Groonga/Expression.html#%5B%5D-instance_method" title="Groonga::Expression#[] (method)">Groonga::Expression#[]</a></span>の返り値の型を修正。値そのものではなく<span class='object_link'><a href="Groonga/Variable.html" title="Groonga::Variable (class)">Groonga::Variable</a></span>を返すようにした。注意: これは後方非互換の変更である。</li>
@@ -608,7 +624,7 @@
 
 <h2 id="version-3-0-2">3.0.2: 2013-05-29</h2>
 
-<h3 id="section-47">改善</h3>
+<h3 id="section-48">改善</h3>
 
 <ul>
   <li>groonga &gt;= 3.0.4を必須にした。</li>
@@ -623,7 +639,7 @@
   <li>[grndump] スキーマのダンプを無効にしているときは”register PLUGIN”もダンプしないようにした。</li>
 </ul>
 
-<h3 id="section-48">修正</h3>
+<h3 id="section-49">修正</h3>
 
 <ul>
   <li>[grndump] 参照されているテーブルよりも前に参照しているテーブルがダンプされることがある問題を修正。</li>
@@ -631,7 +647,7 @@
 
 <h2 id="version-3-0-1">3.0.1: 2013-05-01</h2>
 
-<h3 id="section-49">改善</h3>
+<h3 id="section-50">改善</h3>
 
 <ul>
   <li>groonga &gt;= 3.0.3を必須にした。</li>
@@ -643,13 +659,13 @@
   <li>“Packnga &gt;= 0.9.7”への依存が抜けていたので追加した。 [takkanmさんが報告]</li>
 </ul>
 
-<h3 id="section-50">修正</h3>
+<h3 id="section-51">修正</h3>
 
 <ul>
   <li>エラー発生時にメモリリークする問題を修正。</li>
 </ul>
 
-<h3 id="section-51">感謝</h3>
+<h3 id="section-52">感謝</h3>
 
 <ul>
   <li>@takkanmさん</li>
@@ -657,7 +673,7 @@
 
 <h2 id="version-3-0-0">3.0.0: 2013-03-29</h2>
 
-<h3 id="section-52">改善</h3>
+<h3 id="section-53">改善</h3>
 
 <ul>
   <li>groonga &gt;= 3.0.2を必須にした。</li>
@@ -669,7 +685,7 @@
   <li><span class='object_link'><a href="Groonga/Context.html#restore-instance_method" title="Groonga::Context#restore (method)">Groonga::Context#restore</a></span>がブロックをサポートした。ブロックを渡すと実行したコマンドとそのレスポンスをブロックに渡す。</li>
 </ul>
 
-<h3 id="section-53">感謝</h3>
+<h3 id="section-54">感謝</h3>
 
 <ul>
   <li>KITAITI Makotoさん</li>
@@ -677,7 +693,7 @@
 
 <h2 id="version-2-1-3">2.1.3: 2013-01-29</h2>
 
-<h3 id="section-54">改善</h3>
+<h3 id="section-55">改善</h3>
 
 <ul>
   <li>groonga 2.1.2で削除されたGroonga::Viewの機能を削除。</li>
@@ -704,7 +720,7 @@
   </li>
 </ul>
 
-<h3 id="section-55">修正</h3>
+<h3 id="section-56">修正</h3>
 
 <ul>
   <li>
@@ -720,7 +736,7 @@
 
 <h2 id="version-2-1-2">2.1.2: 2013-01-04</h2>
 
-<h3 id="section-56">修正</h3>
+<h3 id="section-57">修正</h3>
 
 <ul>
   <li>GC関係のバグを削除。</li>
@@ -728,7 +744,7 @@
 
 <h2 id="version-2-1-1">2.1.1: 2012-12-29</h2>
 
-<h3 id="section-57">改善</h3>
+<h3 id="section-58">改善</h3>
 
 <ul>
   <li>groonga 2.1.0にキーの正規化に関する重大なバグがあったため、groonga 2.1.1を必須とした。</li>
@@ -736,7 +752,7 @@
 
 <h2 id="version-2-1-0">2.1.0: 2012-12-29</h2>
 
-<h3 id="section-58">改善</h3>
+<h3 id="section-59">改善</h3>
 
 <ul>
   <li>groonga 2.1.0対応。</li>
@@ -790,7 +806,7 @@ $ cat path/to/index/Tag.index_tags/groonga.dump
   <li>Groonga::QueryLoggerをサポートした。このクラスはクエリログのロガーです。詳しくはリファレンスマニュアルをご覧ください。</li>
 </ul>
 
-<h3 id="section-59">変更</h3>
+<h3 id="section-60">変更</h3>
 
 <ul>
   <li>
@@ -814,7 +830,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   </li>
 </ul>
 
-<h3 id="section-60">感謝</h3>
+<h3 id="section-61">感謝</h3>
 
 <ul>
   <li>ongaeshiさん</li>
@@ -823,7 +839,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-2-0-8">2.0.8: 2012-12-02</h2>
 
-<h3 id="section-61">改善</h3>
+<h3 id="section-62">改善</h3>
 
 <ul>
   <li>groonga 2.0.9対応。</li>
@@ -831,7 +847,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-2-0-7">2.0.7: 2012-11-29</h2>
 
-<h3 id="section-62">改善</h3>
+<h3 id="section-63">改善</h3>
 
 <ul>
   <li>レコードIDに対応するレコードを返すGroonga::Posting#recordを追加。</li>
@@ -841,7 +857,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>[Type] Groonga::Typeに次のメソッドを追加：#fixed_size?, #variable_size?, #unsigned_integer?, #integer?, #float?, #geo_point?</li>
 </ul>
 
-<h3 id="section-63">変更</h3>
+<h3 id="section-64">変更</h3>
 
 <ul>
   <li>クエリログ関連の機能を削除した。クエリログ関連の機能はgroonga-query-logというgemに移動しました。このgemは近日中にリリースする予定です。</li>
@@ -849,7 +865,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-2-0-6">2.0.6: 2012-10-25</h2>
 
-<h3 id="section-64">改善</h3>
+<h3 id="section-65">改善</h3>
 
 <ul>
   <li>[dump] インデックスカラム作成のコマンドを最後（loadコマンドの後ろ）に出力するようにした。これは静的インデックス作成にするためのものです。</li>
@@ -857,13 +873,13 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>selectメソッドを使うときに:allow_leading_notオプションを使用できるようにした。このオプションで「ある単語が含まれない全てのレコード」を検索すると検索が遅くなります。またレコードが多い時にも時間がかかるので注意して使ってください。</li>
 </ul>
 
-<h3 id="section-65">変更</h3>
+<h3 id="section-66">変更</h3>
 
 <ul>
   <li>extconf.rbでデバッグ用ビルドに使うオプションを–with-debugから–enable-debug-logに変更。</li>
 </ul>
 
-<h3 id="section-66">修正</h3>
+<h3 id="section-67">修正</h3>
 
 <ul>
   <li>リファレンスの表示崩れを修正。</li>
@@ -871,7 +887,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-2-0-5">2.0.5: 2012-09-28</h2>
 
-<h3 id="section-67">改善</h3>
+<h3 id="section-68">改善</h3>
 
 <ul>
   <li>groonga 2.0.7対応。</li>
@@ -890,13 +906,13 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>コード内に書かれていてリファレンスに表示されていなかったドキュメントをリファレンスに追加。</li>
 </ul>
 
-<h3 id="section-68">修正</h3>
+<h3 id="section-69">修正</h3>
 
 <ul>
   <li>groongaコマンドにバックスラッシュがあったときにエスケープするように修正した。</li>
 </ul>
 
-<h3 id="section-69">感謝</h3>
+<h3 id="section-70">感謝</h3>
 
 <ul>
   <li>@temtanさん</li>
@@ -904,7 +920,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-2-0-4">2.0.4: 2012-05-02</h2>
 
-<h3 id="section-70">修正</h3>
+<h3 id="section-71">修正</h3>
 
 <ul>
   <li>マッチカラムの重みが無視される問題を修正。</li>
@@ -912,7 +928,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-2-0-3">2.0.3: 2012-05-02</h2>
 
-<h3 id="section-71">改善</h3>
+<h3 id="section-72">改善</h3>
 
 <ul>
   <li>groonga 2.0.2対応。</li>
@@ -923,13 +939,13 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>類似文書検索をサポート。構文は <code>table.select {|record| record.column.similar_search(text)}</code> 。</li>
 </ul>
 
-<h3 id="section-72">修正</h3>
+<h3 id="section-73">修正</h3>
 
 <ul>
   <li>GC関連ででクラッシュするバグを修正。</li>
 </ul>
 
-<h3 id="section-73">感謝</h3>
+<h3 id="section-74">感謝</h3>
 
 <ul>
   <li>ongaeshiさん</li>
@@ -937,14 +953,14 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-2-0-2">2.0.2: 2012-03-29</h2>
 
-<h3 id="section-74">改善</h3>
+<h3 id="section-75">改善</h3>
 
 <ul>
   <li>groonga 2.0.1対応。</li>
   <li>“ロゴ”:http://groonga.rubyforge.org/#logo を追加。</li>
 </ul>
 
-<h3 id="section-75">修正</h3>
+<h3 id="section-76">修正</h3>
 
 <ul>
   <li>Groonga::Snippetに関連したGCでクラッシュするバグを修正した。</li>
@@ -952,14 +968,14 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-2-0-0">2.0.0: 2012-03-22</h2>
 
-<h3 id="section-76">改善</h3>
+<h3 id="section-77">改善</h3>
 
 <ul>
   <li>groonga 2.0.0対応。</li>
   <li>[gem][windows] mswin用のパッケージを削除した。</li>
 </ul>
 
-<h3 id="section-77">修正</h3>
+<h3 id="section-78">修正</h3>
 
 <ul>
   <li>[test] バージョンのテストの失敗を修正した。 [GitHub#4] [@takkanmさんが報告]</li>
@@ -968,7 +984,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 [平野さんが報告]</li>
 </ul>
 
-<h3 id="section-78">感謝</h3>
+<h3 id="section-79">感謝</h3>
 
 <ul>
   <li>@takkanmさん</li>
@@ -977,7 +993,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-1-3-1">1.3.1: 2012-01-29</h2>
 
-<h3 id="section-79">改善</h3>
+<h3 id="section-80">改善</h3>
 
 <ul>
   <li>groonga 1.3.0対応。</li>
@@ -992,7 +1008,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>Groonga::Command::Builder.escape_valueを追加。</li>
 </ul>
 
-<h3 id="section-80">感謝</h3>
+<h3 id="section-81">感謝</h3>
 
 <ul>
   <li>@mashiroさん</li>
@@ -1000,7 +1016,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 
 <h2 id="version-1-3-0">1.3.0: 2011-11-29</h2>
 
-<h3 id="section-81">改善</h3>
+<h3 id="section-82">改善</h3>
 
 <ul>
   <li>[schema] db.tables/ディレクトリが空の場合は削除時に一緒に削除するようにした。</li>
@@ -1020,29 +1036,29 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>[schema] ダブル配列トライに対応。</li>
 </ul>
 
-<h3 id="section-82">変更</h3>
+<h3 id="section-83">変更</h3>
 
 <ul>
   <li>[schema] DBを移動してもそのまま使えるようにするために、デフォルトではパスに意味のある名前をつけないようにした。</li>
 </ul>
 
-<h3 id="section-83">修正</h3>
+<h3 id="section-84">修正</h3>
 
 <ul>
   <li>GC時にクラッシュする問題を修正。</li>
 </ul>
 
-<h2 id="section-84">1.2.9: 2011-09-16</h2>
+<h2 id="section-85">1.2.9: 2011-09-16</h2>
 
-<h3 id="section-85">修正</h3>
+<h3 id="section-86">修正</h3>
 
 <ul>
   <li>不要なオブジェクトファイルが入っていたのを削除。</li>
 </ul>
 
-<h2 id="section-86">1.2.8: 2011-09-16</h2>
+<h2 id="section-87">1.2.8: 2011-09-16</h2>
 
-<h3 id="section-87">改善</h3>
+<h3 id="section-88">改善</h3>
 
 <ul>
   <li>Groonga::Table#selectに与えるブロックの中での”!=”メソッドに対応。詳しくはGroonga::Table#selectのリファレンスを参照。</li>
@@ -1051,23 +1067,23 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>環境変数GRN_CTX_PER_DBに対応。（注意：この環境変数を使用する際は注意して使ってください）</li>
 </ul>
 
-<h2 id="section-88">1.2.7: 2011-08-29</h2>
+<h2 id="section-89">1.2.7: 2011-08-29</h2>
 
-<h3 id="section-89">改善</h3>
+<h3 id="section-90">改善</h3>
 
 <ul>
   <li>リソースを解放するGroonga::Snippet#closeを追加。</li>
 </ul>
 
-<h3 id="section-90">修正</h3>
+<h3 id="section-91">修正</h3>
 
 <ul>
   <li>Ruby 1.8.7でビルドできない問題を修正。</li>
 </ul>
 
-<h2 id="section-91">1.2.6: 2011-08-29</h2>
+<h2 id="section-92">1.2.6: 2011-08-29</h2>
 
-<h3 id="section-92">改善</h3>
+<h3 id="section-93">改善</h3>
 
 <ul>
   <li>groonga 1.2.5対応。</li>
@@ -1077,7 +1093,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>シンボルでのカラム名指定に対応。</li>
 </ul>
 
-<h3 id="section-93">修正</h3>
+<h3 id="section-94">修正</h3>
 
 <ul>
   <li>gem install時に*.rbのインストールに失敗する問題を修正。</li>
@@ -1085,9 +1101,9 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>終了時にクラッシュする問題を修正。</li>
 </ul>
 
-<h2 id="section-94">1.2.5: 2011-08-05</h2>
+<h2 id="section-95">1.2.5: 2011-08-05</h2>
 
-<h3 id="section-95">改善</h3>
+<h3 id="section-96">改善</h3>
 
 <ul>
   <li>tar.gzでのパッケージ配布を再サポート。</li>
@@ -1098,47 +1114,47 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>dump: パスが等しいかどうかのチェックを削除。</li>
 </ul>
 
-<h3 id="section-96">修正</h3>
+<h3 id="section-97">修正</h3>
 
 <ul>
   <li>[dump] 間違ったインデックス用テーブルを出力する問題を修正。</li>
   <li>groongaの自動インストールを再サポート。</li>
 </ul>
 
-<h2 id="section-97">1.2.4: 2011-06-29</h2>
+<h2 id="section-98">1.2.4: 2011-06-29</h2>
 
-<h3 id="section-98">改善</h3>
+<h3 id="section-99">改善</h3>
 
 <ul>
   <li>groonga 1.2.3対応。</li>
 </ul>
 
-<h3 id="section-99">修正</h3>
+<h3 id="section-100">修正</h3>
 
 <ul>
   <li>groongaの自動インストールを再サポート。</li>
   <li>pkg-config gemへの依存関係を追加。</li>
 </ul>
 
-<h2 id="section-100">1.2.3: 2011-06-27</h2>
+<h2 id="section-101">1.2.3: 2011-06-27</h2>
 
-<h3 id="section-101">修正</h3>
+<h3 id="section-102">修正</h3>
 
 <ul>
   <li>gemパッケージに含まれてしまったオブジェクトファイル(*.o)を削除。</li>
   <li>一部のリファレンスマニュアルの文字化けを修正。</li>
 </ul>
 
-<h2 id="section-102">1.2.2: 2011-06-27</h2>
+<h2 id="section-103">1.2.2: 2011-06-27</h2>
 
-<h3 id="section-103">改善</h3>
+<h3 id="section-104">改善</h3>
 
 <ul>
   <li>英語版の「開発者向け情報」ページを作成。</li>
   <li>“html:publish”タスクと”publish”に関しての説明を追加。</li>
 </ul>
 
-<h3 id="section-104">変更</h3>
+<h3 id="section-105">変更</h3>
 
 <ul>
   <li>Groonga::Record#attributesが重複したレコードが現れた際に同じattributesオブジェクトを返すようにした。</li>
@@ -1147,7 +1163,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>NEWS*.rdocとtutorial.texttileをディレクトリdoc/text/に移動。</li>
 </ul>
 
-<h3 id="section-105">修正</h3>
+<h3 id="section-106">修正</h3>
 
 <ul>
   <li>インデックスページにある「チュートリアル」ページへのリンクを修正。</li>
@@ -1155,15 +1171,15 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>新しいgroongaのダウンロードURLに対応。 [mallowlabs]</li>
 </ul>
 
-<h3 id="section-106">感謝</h3>
+<h3 id="section-107">感謝</h3>
 
 <ul>
   <li>mallowlabsさん</li>
 </ul>
 
-<h2 id="section-107">1.2.1: 2011-06-07</h2>
+<h2 id="section-108">1.2.1: 2011-06-07</h2>
 
-<h3 id="section-108">改善</h3>
+<h3 id="section-109">改善</h3>
 
 <ul>
   <li>Groonga::Table#paginationのドキュメントを追加。</li>
@@ -1180,23 +1196,23 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>Groonga::Object#builtin?を追加。[yoshihara]</li>
 </ul>
 
-<h3 id="section-109">変更</h3>
+<h3 id="section-110">変更</h3>
 
 <ul>
   <li>カラムが削除される前に、そのカラムがあるかチェックするようにした。</li>
   <li>ドキュメントからgrn式のページを削除。</li>
 </ul>
 
-<h3 id="section-110">感謝</h3>
+<h3 id="section-111">感謝</h3>
 
 <ul>
   <li>moozさん</li>
   <li>yoshiharaさん</li>
 </ul>
 
-<h2 id="section-111">1.2.0: 2011-04-01</h2>
+<h2 id="section-112">1.2.0: 2011-04-01</h2>
 
-<h3 id="section-112">改善</h3>
+<h3 id="section-113">改善</h3>
 
 <ul>
   <li>groonga 1.2.0対応。</li>
@@ -1213,18 +1229,18 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li><code>Groonga::Schema</code>の型指定で”ShortText”など正式型名だけではなく、<code>:short_text</code>などよりRubyらしい名前を使えるようにした。</li>
 </ul>
 
-<h2 id="section-113">1.1.0: 2011-02-09</h2>
+<h2 id="section-114">1.1.0: 2011-02-09</h2>
 
-<h3 id="section-114">改善</h3>
+<h3 id="section-115">改善</h3>
 
 <ul>
   <li>groonga 1.1.0対応。</li>
   <li>Groonga::Plugin.registerを追加。</li>
 </ul>
 
-<h2 id="section-115">1.0.9: 2011-01-29</h2>
+<h2 id="section-116">1.0.9: 2011-01-29</h2>
 
-<h3 id="section-116">改善</h3>
+<h3 id="section-117">改善</h3>
 
 <ul>
   <li>Windows上でのgem作成に対応。 [ongaeshiさんがパッチ提供]</li>
@@ -1266,71 +1282,71 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>Groonga::Record#have_column?が擬似カラムに対応。</li>
 </ul>
 
-<h3 id="section-117">変更</h3>
+<h3 id="section-118">変更</h3>
 
 <ul>
   <li>Groonga::OperatoionをGroonga::Operatorに変更。（しばらくはGroonga::Operationも使えるが、非推奨。）</li>
 </ul>
 
-<h3 id="section-118">修正</h3>
+<h3 id="section-119">修正</h3>
 
 <ul>
   <li>複数のGroonga::Contextを利用した場合にGroonga::Table#selectでクラッシュする問題を修正。</li>
   <li>例外発生時にクラッシュする問題を修正。</li>
 </ul>
 
-<h3 id="section-119">感謝</h3>
+<h3 id="section-120">感謝</h3>
 
 <ul>
   <li>おんがえしさん</li>
 </ul>
 
-<h2 id="section-120">1.0.8: 2010-12-25</h2>
+<h2 id="section-121">1.0.8: 2010-12-25</h2>
 
-<h3 id="section-121">改善</h3>
+<h3 id="section-122">改善</h3>
 
 <ul>
   <li>Groonga::Schemaのn-gramトークナイザー検出処理を改良。</li>
 </ul>
 
-<h3 id="section-122">修正</h3>
+<h3 id="section-123">修正</h3>
 
 <ul>
   <li>selectでmatch_targetを利用した場合に生きているオブジェクトもGCされる問題を修正。&lt;</li>
 </ul>
 
-<h2 id="section-123">1.0.7: 2010-12-19</h2>
+<h2 id="section-124">1.0.7: 2010-12-19</h2>
 
-<h3 id="section-124">修正</h3>
+<h3 id="section-125">修正</h3>
 
 <ul>
   <li>Ruby 1.8でRubyGemsでインストールされたpkg-configを使えるようにした。 [@kamipoさんが報告]</li>
   <li>Groonga::Table#columnsのメモリリークを修正。</li>
 </ul>
 
-<h3 id="section-125">感謝</h3>
+<h3 id="section-126">感謝</h3>
 
 <ul>
   <li>@kamipoさん</li>
 </ul>
 
-<h2 id="section-126">1.0.5: 2010-11-29</h2>
+<h2 id="section-127">1.0.5: 2010-11-29</h2>
 
-<h3 id="section-127">改善</h3>
+<h3 id="section-128">改善</h3>
 
 <ul>
   <li>Groonga::Schemaでgroongaの組み込み型をshort_textなどのように「小文字 + アンダースコア」でも指定できるようにした。</li>
 </ul>
 
-<h3 id="section-128">修正</h3>
+<h3 id="section-129">修正</h3>
 
 <ul>
   <li>GC時にクラッシュするバグを修正。 [Ryo Onodera]</li>
 </ul>
 
-<h2 id="section-129">1.0.4: 2010-11-29</h2>
+<h2 id="section-130">1.0.4: 2010-11-29</h2>
 
-<h3 id="section-130">改善</h3>
+<h3 id="section-131">改善</h3>
 
 <ul>
   <li>groonga 1.0.4対応。</li>
@@ -1365,7 +1381,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>ベクタの参照カラムの値にArray以外でもto_aryを持つオブジェクトを設定できるようにした。</li>
 </ul>
 
-<h3 id="section-131">変更</h3>
+<h3 id="section-132">変更</h3>
 
 <ul>
   <li><code>Groonga::PatriciaTrie#open_cursor</code>では<code>:order_by</code>のデフォルト値として:keyを使うようにした。</li>
@@ -1377,28 +1393,28 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>Groonga::Column#reference?を追加。Groonga::Column#reference_column?は非推奨。</li>
 </ul>
 
-<h3 id="section-132">修正</h3>
+<h3 id="section-133">修正</h3>
 
 <ul>
   <li>keyにインデックスを張れない問題を修正。</li>
   <li>GC時にクラッシュする問題を修正。</li>
 </ul>
 
-<h2 id="section-133">1.0.1: 2010-09-12</h2>
+<h2 id="section-134">1.0.1: 2010-09-12</h2>
 
-<h3 id="section-134">修正</h3>
+<h3 id="section-135">修正</h3>
 
 <ul>
   <li>テーブル作成時に誤ったフラグを指定していた問題を修正。 [小野マトペさんが報告]</li>
 </ul>
 
-<h3 id="section-135">感謝</h3>
+<h3 id="section-136">感謝</h3>
 
 <ul>
   <li>小野マトペさん</li>
 </ul>
 
-<h2 id="section-136">1.0.0: 2010-08-29</h2>
+<h2 id="section-137">1.0.0: 2010-08-29</h2>
 
 <ul>
   <li>groonga 1.0.0対応。</li>
@@ -1410,7 +1426,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>インデックスのソースに_keyを指定できるようになった。</li>
 </ul>
 
-<h2 id="section-137">0.9.5: 2010-07-20</h2>
+<h2 id="section-138">0.9.5: 2010-07-20</h2>
 
 <ul>
   <li>groonga 0.7.4対応。</li>
@@ -1452,32 +1468,32 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>ページネーション対応: Groonga::Table#paginate, Groonga::Pagination</li>
 </ul>
 
-<h2 id="section-138">0.9.4: 2010-04-22</h2>
+<h2 id="section-139">0.9.4: 2010-04-22</h2>
 
 <ul>
   <li>リリースミス修正。</li>
 </ul>
 
-<h2 id="section-139">0.9.3: 2010-04-22</h2>
+<h2 id="section-140">0.9.3: 2010-04-22</h2>
 
 <ul>
   <li>リリースミス修正。</li>
 </ul>
 
-<h2 id="section-140">0.9.2: 2010-04-22</h2>
+<h2 id="section-141">0.9.2: 2010-04-22</h2>
 
 <ul>
   <li>groonga 0.1.9対応。</li>
   <li>たくさん。</li>
 </ul>
 
-<h2 id="section-141">0.9.1: 2010-02-09</h2>
+<h2 id="section-142">0.9.1: 2010-02-09</h2>
 
 <ul>
   <li>Supported groonga 0.1.6</li>
 </ul>
 
-<h2 id="section-142">0.9.0: 2010-02-09</h2>
+<h2 id="section-143">0.9.0: 2010-02-09</h2>
 
 <ul>
   <li>groonga 0.1.5対応</li>
@@ -1527,7 +1543,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>Ruby 1.9.1でextconf.rbが失敗する問題の修正</li>
 </ul>
 
-<h3 id="section-143">感謝</h3>
+<h3 id="section-144">感謝</h3>
 
 <ul>
   <li>daraさん</li>
@@ -1535,7 +1551,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>Tasuku SUENAGAさん</li>
 </ul>
 
-<h2 id="section-144">0.0.7: 2009-10-02</h2>
+<h2 id="section-145">0.0.7: 2009-10-02</h2>
 
 <ul>
   <li>groonga 0.1.4対応</li>
@@ -1550,7 +1566,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   </li>
 </ul>
 
-<h2 id="section-145">0.0.6: 2009-07-31</h2>
+<h2 id="section-146">0.0.6: 2009-07-31</h2>
 
 <ul>
   <li>groonga 0.1.1対応</li>
@@ -1568,7 +1584,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>メモリリークの修正</li>
 </ul>
 
-<h2 id="section-146">0.0.3: 2009-07-18</h2>
+<h2 id="section-147">0.0.3: 2009-07-18</h2>
 
 <ul>
   <li>Groonga::TableKeySupport#has_key?の追加 [#26145] [Tasuku SUENAGA]</li>
@@ -1587,7 +1603,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   </li>
 </ul>
 
-<h2 id="section-147">0.0.2: 2009-06-04</h2>
+<h2 id="section-148">0.0.2: 2009-06-04</h2>
 
 <ul>
   <li>groonga 0.0.8対応 [mori]</li>
@@ -1600,7 +1616,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
   <li>メモリリークの修正</li>
 </ul>
 
-<h2 id="section-148">0.0.1: 2009-04-30</h2>
+<h2 id="section-149">0.0.1: 2009-04-30</h2>
 
 <ul>
   <li>最初のリリース！</li>
@@ -1608,7 +1624,7 @@ groonga-query-log-extractコマンドを使うには次のコマンドを実行�
 </div></div>
 
     <div id="footer">
-  Generated on Sun Apr 19 15:01:21 2015 by
+  Generated on Tue May 19 23:05:06 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

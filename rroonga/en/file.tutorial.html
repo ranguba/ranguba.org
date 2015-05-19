@@ -518,7 +518,8 @@ of scores of each <code>coments</code> as score of the item.</li>
 <p>You group the results of <em>ruby_comments</em> in each item and union
 <em>ruby_items</em> .</p>
 
-<pre class="code ruby"><code class="ruby">&gt;&gt; ruby_items = ruby_comments.group(&quot;item&quot;).union!(ruby_items) #&lt;Groonga::Hash ..., size: &lt;5&gt;&gt;
+<pre class="code ruby"><code class="ruby">&gt;&gt; ruby_items = ruby_comments.group(&quot;item&quot;).union!(ruby_items)
+#&lt;Groonga::Hash ..., size: &lt;5&gt;&gt;
 &gt;&gt; ruby_items.sort([{:key =&gt; &quot;_score&quot;, :order =&gt; &quot;descending&quot;}]).each do |record|
 &gt;&gt;   p [record.score, record.title]
 &gt;&gt; end

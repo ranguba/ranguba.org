@@ -185,6 +185,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#ruby_suffix-class_method" title="ruby_suffix (class method)">+ (String) <strong>ruby_suffix</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the plugin file suffix written in Ruby.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#suffix-class_method" title="suffix (class method)">+ (String) <strong>suffix</strong> </a>
     
 
@@ -493,6 +516,90 @@ rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
 
     rb_grn_context_check(context, rb_ary_new_from_values(argc, argv));
     return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ruby_suffix-class_method">
+  
+    + (<tt>String</tt>) <strong>ruby_suffix</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the plugin file suffix written in Ruby. It returns “.rb”.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+202
+203
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 202</span>
+
+static VALUE
+rb_grn_plugin_s_ruby_suffix (VALUE klass)
+{
+    return rb_str_new_cstr(grn_plugin_get_ruby_suffix());
 }</pre>
     </td>
   </tr>
@@ -822,7 +929,7 @@ rb_grn_plugin_s_unregister (int argc, VALUE *argv, VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Sun Apr 19 15:01:29 2015 by
+  Generated on Tue May 19 23:05:14 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

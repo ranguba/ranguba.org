@@ -174,6 +174,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#log-class_method" title="log (class method)">+ (void) <strong>log</strong>(message, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Logs a message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#path-class_method" title="path (class method)">+ (String or nil) <strong>path</strong> </a>
     
 
@@ -258,6 +281,52 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Sends reopen request to the current query logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rotate_threshold_size-class_method" title="threshold (class method)">+ (Integer) <strong>threshold</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Gets the current rotate threshold size that is used by the default query logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rotate_threshold_size%3D-class_method" title="rotate_threshold_size= (class method)">+ (Object) <strong>rotate_threshold_size=</strong>(size) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the rotate threshold size that is used by the default query logger.</p>
 </div></span>
   
 </li>
@@ -374,7 +443,246 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="path-class_method">
+  <h3 class="signature first" id="log-class_method">
+  
+    + (<tt>void</tt>) <strong>log</strong>(message, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Logs a message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The log message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Groonga::Context</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The context for the message.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:flags</span>
+          <span class="type">(<tt>nil</tt>, <tt>Integer</tt>, <tt>String</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>0</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The flags for the message.</p>
+
+<p>The flags are passed to query logger. You can custom query
+logger behavior by the flags. For example, you can omit elapsed
+time by passing <code>Groonga::QueryLogger::COMMAND</code> flag or
+<code>Groonga::QueryLogger::DESTINATION</code>.</p>
+
+<p>If <code>:flags</code> value is <code>String</code>, parsed by
+parse.</p>
+
+<p><code>nil</code> equals to <code>0</code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mark</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>&quot;:&quot;
+The mark for the message.
+
+Normally</tt>, <tt>a character is used as a mark such as `&quot;:&quot;`</tt>, <tt>`&quot;&lt;&quot;` and `&quot;&gt;&quot;`.</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>””)
+The mark for the message.</p>
+
+<p>Normally, a character is used as a mark such as <code>":"</code>, <code>"&lt;"</code> and <code>"&gt;"</code>.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 76</span>
+
+static VALUE
+rb_grn_query_logger_s_log (int argc, VALUE *argv, VALUE klass)
+{
+    VALUE rb_message;
+    const char *message;
+    VALUE rb_context = Qnil;
+    grn_ctx *context;
+    VALUE rb_flags;
+    unsigned int flags = GRN_QUERY_LOG_NONE;
+    VALUE rb_mark;
+    const char *mark = &quot;&quot;;
+    VALUE rb_options;
+
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_message, &amp;rb_options);
+
+    message = StringValueCStr(rb_message);
+
+    rb_grn_scan_options(rb_options,
+                        &quot;context&quot;, &amp;rb_context,
+                        &quot;flags&quot;,   &amp;rb_flags,
+                        &quot;mark&quot;,    &amp;rb_mark,
+                        NULL);
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+
+    if (!NIL_P(rb_flags)) {
+        flags = rb_funcall(mGrnQueryLoggerFlags, id_parse, 2,
+                           rb_flags, UINT2NUM(flags));
+    }
+    if (!NIL_P(rb_mark)) {
+        mark = StringValueCStr(rb_mark);
+    }
+
+    grn_query_logger_put(context, flags, mark, &quot;%s&quot;, message);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="path-class_method">
   
     + (<tt>String or nil</tt>) <strong>path</strong> 
   
@@ -442,21 +750,21 @@
       <pre class="lines">
 
 
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240</pre>
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 229</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 295</span>
 
 static VALUE
 rb_grn_query_logger_s_get_path (VALUE klass)
@@ -587,34 +895,34 @@ is disabled.</p>
       <pre class="lines">
 
 
-264
-265
-266
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288</pre>
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 264</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 330</span>
 
 static VALUE
 rb_grn_query_logger_s_set_path (VALUE klass, VALUE rb_path)
@@ -691,7 +999,7 @@ query log event is emitted.</p>
         <span class='name'>logger</span>
       
       
-        <span class='type'>(<tt>#log</tt>, <tt>#<span class='object_link'><a href="#reopen-class_method" title="Groonga::QueryLogger.reopen (method)">reopen</a></span></tt>, <tt>#fin</tt>)</span>
+        <span class='type'>(<tt>#<span class='object_link'><a href="#log-class_method" title="Groonga::QueryLogger.log (method)">log</a></span></tt>, <tt>#<span class='object_link'><a href="#reopen-class_method" title="Groonga::QueryLogger.reopen (method)">reopen</a></span></tt>, <tt>#fin</tt>)</span>
       
       
       
@@ -776,7 +1084,7 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
           
             &mdash; <div class='inline'><p>Flags describe what query log should be logged.</p>
 
-<p>If @flags@ is String, it is parsed by <span class='object_link'><a href="QueryLogger/Flags.html#parse-class_method" title="Groonga::QueryLogger::Flags.parse (method)">Groonga::QueryLogger::Flags.parse</a></span>.</p>
+<p>If <code>flags</code> is String, it is parsed by <span class='object_link'><a href="QueryLogger/Flags.html#parse-class_method" title="Groonga::QueryLogger::Flags.parse (method)">Groonga::QueryLogger::Flags.parse</a></span>.</p>
 </div>
           
         </li>
@@ -814,76 +1122,76 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
       <pre class="lines">
 
 
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179</pre>
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 113</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 179</span>
 
 static VALUE
 rb_grn_query_logger_s_register (int argc, VALUE *argv, VALUE klass)
@@ -939,7 +1247,7 @@ rb_grn_query_logger_s_register (int argc, VALUE *argv, VALUE klass)
     }
     if (!NIL_P(rb_flags)) {
         flags = rb_funcall(mGrnQueryLoggerFlags, id_parse, 2,
-                           UINT2NUM(flags), rb_flags);
+                           rb_flags, UINT2NUM(flags));
     }
 
     rb_grn_query_logger.flags     = flags;
@@ -1002,21 +1310,21 @@ rotating log file.</p>
       <pre class="lines">
 
 
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219</pre>
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 208</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 274</span>
 
 static VALUE
 rb_grn_query_logger_s_reopen (VALUE klass)
@@ -1027,6 +1335,237 @@ rb_grn_query_logger_s_reopen (VALUE klass)
     context = rb_grn_context_ensure(&amp;rb_context);
     grn_query_logger_reopen(context);
     rb_grn_context_check(context, klass);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rotate_threshold_size-class_method">
+  
+    + (<tt>Integer</tt>) <strong>threshold</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Gets the current rotate threshold size that is used by the default
+query logger.</p>
+
+<p>If the size is larger than 0, log rotate feature is enabled in the
+default query logger.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns The current rotate threshold size</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current rotate threshold size</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+368
+369
+370
+371
+372</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 368</span>
+
+static VALUE
+rb_grn_query_logger_s_get_rotate_threshold_size (VALUE klass)
+{
+    return OFFT2NUM(grn_default_query_logger_get_rotate_threshold_size());
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rotate_threshold_size=-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>rotate_threshold_size=</strong>(size) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets the rotate threshold size that is used by the default query
+logger. If you’re using custom query logger by <span class='object_link'><a href="#register-class_method" title="Groonga::QueryLogger.register (method)">register</a></span>, the
+rotate threshold size isn’t used. Because it is for the default
+query logger.</p>
+
+<p>If you specify <code>0</code> as size, log rotation by the default query
+logger is disabled.</p>
+
+<p>The default rotate threshold size is 0. It means that log rotation
+is disabled by default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Changes the rotate threshold size for the default query logger</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'>rotate_threshold_size</span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='comment'># 1MiB</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Disables log ration by the default query logger</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'>rotate_threshold_size</span> <span class='op'>=</span> <span class='int'>0</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns void</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>size</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The log path for the default query logger.
+If nil is specified, log rotate by the default query logger is
+disabled.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>void</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+400
+401
+402
+403
+404
+405
+406</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 400</span>
+
+static VALUE
+rb_grn_query_logger_s_set_rotate_threshold_size (VALUE klass, VALUE rb_size)
+{
+    grn_default_query_logger_set_rotate_threshold_size(NUM2OFFT(rb_size));
 
     return Qnil;
 }</pre>
@@ -1050,28 +1589,28 @@ rb_grn_query_logger_s_reopen (VALUE klass)
       <pre class="lines">
 
 
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199</pre>
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 181</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-query-logger.c', line 247</span>
 
 static VALUE
 rb_grn_query_logger_s_unregister (VALUE klass)
@@ -1118,11 +1657,11 @@ rb_grn_query_logger_s_unregister (VALUE klass)
       <pre class="lines">
 
 
-56
-57</pre>
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fin'>fin</span>
 <span class='kw'>end</span></pre>
@@ -1146,14 +1685,14 @@ rb_grn_query_logger_s_unregister (VALUE klass)
       <pre class="lines">
 
 
-47
-48
-49
-50
-51</pre>
+92
+93
+94
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_flag'>flag</span><span class='comma'>,</span> <span class='id identifier rubyid_timestamp'>timestamp</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guard'>guard</span> <span class='kw'>do</span>
@@ -1180,11 +1719,11 @@ rb_grn_query_logger_s_unregister (VALUE klass)
       <pre class="lines">
 
 
-53
-54</pre>
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/query-logger.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reopen'>reopen</span>
 <span class='kw'>end</span></pre>
@@ -1198,7 +1737,7 @@ rb_grn_query_logger_s_unregister (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Sun Apr 19 15:01:27 2015 by
+  Generated on Tue May 19 23:05:13 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

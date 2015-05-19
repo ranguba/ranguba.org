@@ -174,6 +174,29 @@
 
     <ul class="summary">
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log-class_method" title="log (class method)">+ (void) <strong>log</strong>(message, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Logs a message.</p>
+</div></span>
+  
+</li>
+
+      
         <li class="public deprecated">
   <span class="summary_signature">
     
@@ -239,7 +262,7 @@ instead.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets the current log path that is used the default logger.</p>
+    <span class="summary_desc"><div class='inline'><p>Gets the current log path that is used by the default logger.</p>
 </div></span>
   
 </li>
@@ -262,7 +285,7 @@ instead.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets the log path that is used the default logger.</p>
+    <span class="summary_desc"><div class='inline'><p>Sets the log path that is used by the default logger.</p>
 </div></span>
   
 </li>
@@ -357,6 +380,52 @@ instead.</p>
 
   
     <span class="summary_desc"><div class='inline'><p>Sends reopen request to the current logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rotate_threshold_size-class_method" title="threshold (class method)">+ (Integer) <strong>threshold</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Gets the current rotate threshold size that is used by the default logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rotate_threshold_size%3D-class_method" title="rotate_threshold_size= (class method)">+ (Object) <strong>rotate_threshold_size=</strong>(size) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the rotate threshold size that is used by the default logger.</p>
 </div></span>
   
 </li>
@@ -473,7 +542,316 @@ instead.</p>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="log_path-class_method">
+  <h3 class="signature first" id="log-class_method">
+  
+    + (<tt>void</tt>) <strong>log</strong>(message, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Logs a message.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The log message.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Groonga::Context</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The context for the message.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:level</span>
+          <span class="type">(<tt>nil</tt>, <tt>:none</tt>, <tt>:emergency</tt>, <tt>:alert</tt>, <tt>:critical</tt>, <tt>:error</tt>, <tt>:warning</tt>, <tt>:notice</tt>, <tt>:info</tt>, <tt>:debug</tt>, <tt>:dump</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:notice</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The level for the message.</p>
+
+<p><code>nil</code> equals to <code>:notice</code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:file</span>
+          <span class="type">(<tt>nil</tt>, <tt>String</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>nil</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The file name where the message is occurred.</p>
+
+<p>If all of <code>:file</code>, <code>:line</code> and <code>:function</code> are nil, these
+values are guessed from <code>Kernel.#caller_locations</code> result.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:line</span>
+          <span class="type">(<tt>nil</tt>, <tt>Integer</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>nil</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The line number where the message is occurred.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:function</span>
+          <span class="type">(<tt>nil</tt>, <tt>String</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>nil</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The function or related name such as method name where the
+message is occurred.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 157</span>
+
+static VALUE
+rb_grn_logger_s_log (int argc, VALUE *argv, VALUE klass)
+{
+    VALUE rb_message;
+    const char *message;
+    VALUE rb_context = Qnil;
+    grn_ctx *context;
+    VALUE rb_level;
+    grn_log_level level = GRN_LOG_DEFAULT_LEVEL;
+    VALUE rb_file;
+    const char *file = NULL;
+    VALUE rb_line;
+    int line = 0;
+    VALUE rb_function;
+    const char *function = NULL;
+    VALUE rb_options;
+
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_message, &amp;rb_options);
+
+    message = StringValueCStr(rb_message);
+
+    rb_grn_scan_options(rb_options,
+                        &quot;context&quot;,  &amp;rb_context,
+                        &quot;level&quot;,    &amp;rb_level,
+                        &quot;file&quot;,     &amp;rb_file,
+                        &quot;line&quot;,     &amp;rb_line,
+                        &quot;function&quot;, &amp;rb_function,
+                        NULL);
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+
+    if (!NIL_P(rb_level)) {
+        level = RVAL2GRNLOGLEVEL(rb_level);
+    }
+
+    if (NIL_P(rb_file) &amp;&amp; NIL_P(rb_line) &amp;&amp; NIL_P(rb_function)) {
+        VALUE rb_locations;
+        VALUE rb_location;
+        rb_locations = rb_funcall(rb_cObject,
+                                  id_caller_locations,
+                                  2,
+                                  INT2NUM(1), INT2NUM(1));
+        rb_location = RARRAY_PTR(rb_locations)[0];
+        rb_file = rb_funcall(rb_location, id_path, 0);
+        rb_line = rb_funcall(rb_location, id_lineno, 0);
+        rb_function = rb_funcall(rb_location, id_label, 0);
+    }
+
+    if (!NIL_P(rb_file)) {
+        file = StringValueCStr(rb_file);
+    }
+    if (!NIL_P(rb_line)) {
+        line = NUM2INT(rb_line);
+    }
+    if (!NIL_P(rb_function)) {
+        function = StringValueCStr(rb_function);
+    }
+
+    grn_logger_put(context, level, file, line, function, &quot;%s&quot;, message);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log_path-class_method">
   
     + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>log_path</strong> 
   
@@ -569,7 +947,7 @@ instead.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Gets the current log path that is used the default logger.</p>
+    <p>Gets the current log path that is used by the default logger.</p>
 
 
   </div>
@@ -627,21 +1005,21 @@ instead.</p>
       <pre class="lines">
 
 
-354
-355
-356
-357
-358
-359
-360
-361
-362
-363
-364
-365</pre>
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 354</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 449</span>
 
 static VALUE
 rb_grn_logger_s_get_path (VALUE klass)
@@ -671,7 +1049,7 @@ rb_grn_logger_s_get_path (VALUE klass)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sets the log path that is used the default logger. If you’re using
+    <p>Sets the log path that is used by the default logger. If you’re using
 custom logger by <span class='object_link'><a href="#register-class_method" title="Groonga::Logger.register (method)">register</a></span>, the log path isn’t used. Because it
 is for the default logger.</p>
 
@@ -771,34 +1149,34 @@ If nil is specified, logging by the default logger is disabled.</p>
       <pre class="lines">
 
 
-388
-389
-390
-391
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412</pre>
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 388</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 483</span>
 
 static VALUE
 rb_grn_logger_s_set_path (VALUE klass, VALUE rb_path)
@@ -1076,70 +1454,70 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281
-282
-283</pre>
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 223</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 318</span>
 
 static VALUE
 rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
@@ -1262,21 +1640,21 @@ rotating log file.</p>
       <pre class="lines">
 
 
-333
-334
-335
-336
-337
-338
-339
-340
-341
-342
-343
-344</pre>
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 333</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 428</span>
 
 static VALUE
 rb_grn_logger_s_reopen (VALUE klass)
@@ -1287,6 +1665,235 @@ rb_grn_logger_s_reopen (VALUE klass)
     context = rb_grn_context_ensure(&amp;rb_context);
     grn_logger_reopen(context);
     rb_grn_context_check(context, klass);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rotate_threshold_size-class_method">
+  
+    + (<tt>Integer</tt>) <strong>threshold</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Gets the current rotate threshold size that is used by the default
+logger.</p>
+
+<p>If the size is larger than 0, log rotate feature is enabled in the
+default logger.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns The current rotate threshold size</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current rotate threshold size</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+521
+522
+523
+524
+525</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 521</span>
+
+static VALUE
+rb_grn_logger_s_get_rotate_threshold_size (VALUE klass)
+{
+    return OFFT2NUM(grn_default_logger_get_rotate_threshold_size());
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rotate_threshold_size=-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>rotate_threshold_size=</strong>(size) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets the rotate threshold size that is used by the default
+logger. If you’re using custom logger by <span class='object_link'><a href="#register-class_method" title="Groonga::Logger.register (method)">register</a></span>, the rotate
+threshold size isn’t used. Because it is for the default logger.</p>
+
+<p>If you specify <code>0</code> as size, log rotation by the default logger is
+disabled.</p>
+
+<p>The default rotate threshold size is 0. It means that log rotation
+is disabled by default.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Changes the rotate threshold size for the default logger</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'>rotate_threshold_size</span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='comment'># 1MiB</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>Disables log ration by the default logger</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'>rotate_threshold_size</span> <span class='op'>=</span> <span class='int'>0</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns void</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>size</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The log path for the default logger.
+If nil is specified, log rotate by the default logger is disabled.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>void</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+551
+552
+553
+554
+555
+556
+557</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 551</span>
+
+static VALUE
+rb_grn_logger_s_set_rotate_threshold_size (VALUE klass, VALUE rb_size)
+{
+    grn_default_logger_set_rotate_threshold_size(NUM2OFFT(rb_size));
 
     return Qnil;
 }</pre>
@@ -1350,28 +1957,28 @@ unregistering.</p>
       <pre class="lines">
 
 
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310</pre>
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 292</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 387</span>
 
 static VALUE
 rb_grn_logger_s_unregister (VALUE klass)
