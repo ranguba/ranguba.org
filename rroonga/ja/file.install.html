@@ -92,45 +92,37 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1 id="install">Install</h1>
+    <div id="content"><div id='filecontents'><h1 id="section">インストール</h1>
 
 <p>Rroongaのインストール方法について説明します。</p>
 
-<p>You can install Rroonga by RubyGems. It is the standard way for Ruby
-libraries.</p>
+<p>RroongaはRubyライブラリの基本的なインストール方法であるRubyGems経由でインストールすることができます。</p>
 
-<p>Rroonga is depends on Groonga. So you need to install both Groonga and
-Rroonga. You can’t install Groonga by RubyGems because it isn’t Ruby
-library. But don’t worry. Rroonga provides the following options for
-easy to install:</p>
+<p>RroongaはGroongaに依存しているため、GroongaとRroongaの両方をインストールする必要があります。GroongaはRubyライブラリではないためRubyGemsからインストールすることができません。でも大丈夫です。Rroongaは簡単にインストールする方法を提供しています。</p>
 
 <ul>
-  <li>Rroonga downloads, builds and installs Groonga automatically. You
-don’t need to do them explicitly.</li>
-  <li>Rroonga uses Groonga installed by your packaging system.</li>
+  <li>Rroongaと一緒に自動でGroongaをインストールする方法</li>
+  <li>Groongaのバイナリパッケージを事前にインストールする方法</li>
 </ul>
 
 <p>以下で詳しい方法を説明します。</p>
 
-<h2 id="install-with-auto-groonga-build">Install with auto Groonga build</h2>
+<h2 id="groonga">Groongaの自動ビルド付きでインストール</h2>
 
-<p>Rroonga searches Groonga on install. If Rroonga can’t find Groonga,
-Rroonga downloads, builds and installs Groonga automatically.</p>
+<p>Rroongaインストール時にGroongaを探します。Groongaが見つからなかった場合にダウンロード、ビルド、インストールが自動的に行われます。</p>
 
-<p>Type the following command to install Rroonga and Groonga. You don’t
-need to install Groonga explicitly:</p>
+<p>以下のコマンドでRroongaとGroongaがインストールされます。明示的にGroongaをインストールする必要はありません。</p>
 
 <pre class="code ruby"><code class="ruby">% gem install rroonga
 </code></pre>
 
-<h2 id="install-with-groonga-package">Install with Groonga package</h2>
+<h2 id="groonga-1">Groongaパッケージを別途インストール</h2>
 
-<p>You can use Groonga package on you packaging system instead of building
-Groonga by yourself. There are the following advantages for this option:</p>
+<p>自力でGroongaをビルドする代わりに各環境のパッケージシステムのGroongaパッケージを使うことができます。以下の時に便利です:</p>
 
 <ul>
-  <li>It reduces installation time.</li>
-  <li>It doesn’t fail on building Groonga.</li>
+  <li>インストール時間を短縮したい</li>
+  <li>Groongaのビルドに失敗する</li>
 </ul>
 
 <h3 id="windows">Windows</h3>
@@ -142,8 +134,7 @@ Groonga by yourself. There are the following advantages for this option:</p>
 <pre class="code ruby"><code class="ruby">&gt; gem install rroonga
 </code></pre>
 
-<p>This document assumes that you’re using <a href="http://rubyinstaller.org/">RubyInstaller for
-Windows</a> .</p>
+<p>このドキュメントでは <a href="http://rubyinstaller.org/">RubyInstaller for Windows</a> を想定しています。</p>
 
 <h3 id="os-x">OS X</h3>
 
@@ -151,9 +142,7 @@ Windows</a> .</p>
 
 <h4 id="macports">MacPorts</h4>
 
-<p>If you’re using <a href="http://www.macports.org/">MacPorts</a> , type the
-following
-commands on your terminal:</p>
+<p><a href="http://www.macports.org/">MacPorts</a> を使っている人は以下のコマンドを入力して下さい。</p>
 
 <pre class="code ruby"><code class="ruby">% sudo port install groonga
 % sudo gem install rroonga
@@ -161,9 +150,7 @@ commands on your terminal:</p>
 
 <h4 id="homebrew">Homebrew</h4>
 
-<p>If you’re using <a href="http://brew.sh/">Homebrew</a> , type the following
-commands
-on your terminal:</p>
+<p><a href="http://brew.sh/">Homebrew</a> を使っている人は以下のコマンドを入力して下さい。</p>
 
 <pre class="code ruby"><code class="ruby">% brew install groonga
 % gem install rroonga
@@ -171,9 +158,7 @@ on your terminal:</p>
 
 <h3 id="debian-gnulinux">Debian GNU/Linux</h3>
 
-<p>You can install the Groonga package by apt. See <a href="http://groonga.org/docs/install/debian.html">Groonga
-documentation</a> how to set
-apt-line up.</p>
+<p>aptを使ってGroongaパッケージをインストールすることができます。<a href="http://groonga.org/ja/docs/install/debian.html">Groongaのドキュメント</a> にapt-lineの設定があります。</p>
 
 <p>apt-lineの設定が終わったら、ターミナル上で以下のコマンドを実行して下さい。</p>
 
@@ -183,9 +168,7 @@ apt-line up.</p>
 
 <h3 id="ubuntu">Ubuntu</h3>
 
-<p>You can install the Groonga package by apt. See <a href="http://groonga.org/docs/install/ubuntu.html">Groonga
-documentation</a> how to set
-apt-line up.</p>
+<p>aptを使ってGroongaパッケージをインストールすることができます。<a href="http://groonga.org/ja/docs/install/ubuntu.html">Groongaのドキュメント</a> にapt-lineの設定があります。</p>
 
 <p>apt-lineの設定が終わったら、ターミナル上で以下のコマンドを実行して下さい。</p>
 
@@ -195,16 +178,11 @@ apt-line up.</p>
 
 <h3 id="centos">CentOS</h3>
 
-<p>You can install the Groonga package by yum. See <a href="http://groonga.org/docs/install/centos.html">Groonga
-documentation</a> how to set
-yum repository up.</p>
+<p>yumを使ってGroongaパッケージをインストールすることができます。<a href="http://groonga.org/ja/docs/install/centos.html">Groongaのドキュメント</a> にyumレポジトリの設定があります。</p>
 
-<p>But you need to install Ruby 1.9.3 or later by yourself. Both CentOS 5
-and 6 ship Ruby 1.8. Rroonga doesn’t support Ruby 1.8.</p>
+<p>事前にRuby 1.9.3 以降をインストールして下さい。CentOS 5 と 6 はRuby 1.8 で動いていますが、RroongaはRuby 1.8 をサポートしません。</p>
 
-<p>Type the following commands on your terminal after you finish to set
-yum
-repository up and installing Ruby 1.9.3 or later.</p>
+<p>yumレポジトリの設定とRuby 1.9.3 以降のインストールが終わったら、ターミナル上で以下のコマンドを実行して下さい。</p>
 
 <pre class="code ruby"><code class="ruby">% sudo yum install groonga-devel -y
 % gem install rroonga
@@ -219,15 +197,15 @@ Groongaパッケージは公式のFedoraレポジトリに含まれています�
 % sudo gem install rroonga
 </code></pre>
 
-<h2 id="links">Links</h2>
+<h2 id="section-1">リンク</h2>
 
 <ul>
-  <li><a href="http://groonga.org/docs/install.html">2. Install - Groonga documentation</a></li>
+  <li><a href="http://groonga.org/ja/docs/install.html">2. インストール - Groonga ドキュメント</a></li>
 </ul>
 </div></div>
 
     <div id="footer">
-  Generated on Fri Sep 11 11:48:06 2015 by
+  Generated on Fri Sep 11 12:54:29 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>
