@@ -94,9 +94,35 @@
 
     <div id="content"><div id='filecontents'><h1 id="news">NEWS</h1>
 
-<h2 id="version-5-0-4">5.0.4: 2015-07-13</h2>
+<h2 id="version-5-0-5">5.0.5: 2015-09-09</h2>
 
 <h3 id="improvements">Improvements</h3>
+
+<ul>
+  <li>Supported Groonga 5.0.7. Groonga 5.0.6 or older aren’t supported.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Object.html#selector_only_procedure%3F-instance_method" title="Groonga::Object#selector_only_procedure? (method)">Groonga::Object#selector_only_procedure?</a></span>.</li>
+  <li>Supported <span class='object_link'><a href="Groonga/Table.html#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">Groonga::Table#open_cursor</a></span> with <code>:order_by =&gt; :key</code>
+against <span class='object_link'><a href="Groonga/DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Database.html#unmap-instance_method" title="Groonga::Database#unmap (method)">Groonga::Database#unmap</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit-class_method" title="Groonga::Thread.limit (method)">Groonga::Thread.limit</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit%3D-class_method" title="Groonga::Thread.limit= (method)">Groonga::Thread.limit=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit_getter%3D-class_method" title="Groonga::Thread.limit_getter= (method)">Groonga::Thread.limit_getter=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit_setter%3D-class_method" title="Groonga::Thread.limit_setter= (method)">Groonga::Thread.limit_setter=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/WindowsEventLogger.html#register-class_method" title="Groonga::WindowsEventLogger.register (method)">Groonga::WindowsEventLogger.register</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Logger.html#max_level-class_method" title="Groonga::Logger.max_level (method)">Groonga::Logger.max_level</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Logger.html#max_level%3D-class_method" title="Groonga::Logger.max_level= (method)">Groonga::Logger.max_level=</a></span>.</li>
+</ul>
+
+<h3 id="fixes">Fixes</h3>
+
+<ul>
+  <li><code>grndump</code>: Fixed an error when <code>--order-by=key</code> is specified
+against database that has <code>Groonga::Array</code> or <code>Groonga::Hash</code>.</li>
+</ul>
+
+<h2 id="version-5-0-4">5.0.4: 2015-07-13</h2>
+
+<h3 id="improvements-1">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 5.0.5. Groonga 5.0.4 or older aren’t supported.</li>
@@ -108,7 +134,7 @@
 
 <h2 id="version-5-0-3">5.0.3: 2015-06-10</h2>
 
-<h3 id="improvements-1">Improvements</h3>
+<h3 id="improvements-2">Improvements</h3>
 
 <ul>
   <li>Removed deprecated option “rubyforge_project” from .gemspec.
@@ -129,7 +155,7 @@
 
 <h2 id="version-5-0-2">5.0.2: 2015-05-18</h2>
 
-<h3 id="improvements-2">Improvements</h3>
+<h3 id="improvements-3">Improvements</h3>
 
 <ul>
   <li>Added <span class='object_link'><a href="Groonga/Plugin.html#ruby_suffix-class_method" title="Groonga::Plugin.ruby_suffix (method)">Groonga::Plugin.ruby_suffix</a></span>.</li>
@@ -149,7 +175,7 @@ nobody will not stumped. Because <code>:key_type</code> is specified but
 
 <h2 id="version-5-0-1">5.0.1: 2015-04-14</h2>
 
-<h3 id="improvements-3">Improvements</h3>
+<h3 id="improvements-4">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 5.0.2. Groonga 5.0.1 or older aren’t supported.</li>
@@ -204,7 +230,7 @@ incompatible change but nobody will not be effected.</li>
 
 <h2 id="version-5-0-0">5.0.0: 2015-02-16</h2>
 
-<h3 id="improvements-4">Improvements</h3>
+<h3 id="improvements-5">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 5.0.0. Groonga 4.1.1 or older aren’t supported.</li>
@@ -229,7 +255,7 @@ incompatible change but nobody will not be effected.</li>
 
 <h2 id="version-4-0-8">4.0.8: 2015-01-08</h2>
 
-<h3 id="improvements-5">Improvements</h3>
+<h3 id="improvements-6">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.9. Groonga 4.0.8 or older aren’t supported.</li>
@@ -237,7 +263,7 @@ incompatible change but nobody will not be effected.</li>
   <li>Added <span class='object_link'><a href="Groonga/Database.html#recover-instance_method" title="Groonga::Database#recover (method)">Groonga::Database#recover</a></span>.</li>
 </ul>
 
-<h3 id="fixes">Fixes</h3>
+<h3 id="fixes-1">Fixes</h3>
 
 <ul>
   <li>Fixed a typo in <span class='object_link'><a href="Groonga/GeoPoint.html#%3D%3D-instance_method" title="Groonga::GeoPoint#== (method)">Groonga::GeoPoint#==</a></span>.</li>
@@ -251,7 +277,7 @@ incompatible change but nobody will not be effected.</li>
 
 <h2 id="version-4-0-7">4.0.7: 2014-12-12</h2>
 
-<h3 id="improvements-6">Improvements</h3>
+<h3 id="improvements-7">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.8. Groonga 4.0.7 or older aren’t supported.</li>
@@ -265,7 +291,7 @@ reusing the same object isn’t Rubyish.</li>
 
 <h2 id="version-4-0-6">4.0.6: 2014-11-06</h2>
 
-<h3 id="improvements-7">Improvements</h3>
+<h3 id="improvements-8">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.7. [GitHub#28]
@@ -291,7 +317,7 @@ reusing the same object isn’t Rubyish.</li>
 <span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span> when block is specified.</li>
 </ul>
 
-<h3 id="fixes-1">Fixes</h3>
+<h3 id="fixes-2">Fixes</h3>
 
 <ul>
   <li>[doc] Removed deprecated example.
@@ -315,7 +341,7 @@ you assign value with type A and then assign value type B again.
 
 <h2 id="version-4-0-5">4.0.5: 2014-10-05</h2>
 
-<h3 id="improvements-8">Improvements</h3>
+<h3 id="improvements-9">Improvements</h3>
 
 <ul>
   <li>[windows] Added cross build task.</li>
@@ -325,7 +351,7 @@ you assign value with type A and then assign value type B again.
   <li>[windows] Disabled debug flags.</li>
 </ul>
 
-<h3 id="fixes-2">Fixes</h3>
+<h3 id="fixes-3">Fixes</h3>
 
 <ul>
   <li>Added <code>:id =&gt; true</code> option to <span class='object_link'><a href="Groonga/Table/KeySupport.html#delete-instance_method" title="Groonga::Table::KeySupport#delete (method)">Groonga::Table::KeySupport#delete</a></span>.
@@ -345,7 +371,7 @@ bug.</li>
 
 <h2 id="version-4-0-4">4.0.4: 2014-08-29</h2>
 
-<h3 id="improvements-9">Improvements</h3>
+<h3 id="improvements-10">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.4 or later. Groonga 4.0.3 or older are not supported.</li>
@@ -365,7 +391,7 @@ bug.</li>
   <li>Reduce memory usage without GC.</li>
 </ul>
 
-<h3 id="fixes-3">Fixes</h3>
+<h3 id="fixes-4">Fixes</h3>
 
 <ul>
   <li>Fixed a GC related crash when GC is run while <span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>.</li>
@@ -381,7 +407,7 @@ bug.</li>
 
 <h2 id="version-4-0-3">4.0.3: 2014-06-04</h2>
 
-<h3 id="fixes-4">Fixes</h3>
+<h3 id="fixes-5">Fixes</h3>
 
 <ul>
   <li>[windows] Fixed a bug that Rroonga reports load error by
@@ -397,7 +423,7 @@ bundling the fixed version Groonga package.
 
 <h2 id="version-4-0-2">4.0.2: 2014-05-29</h2>
 
-<h3 id="improvements-10">Improvements</h3>
+<h3 id="improvements-11">Improvements</h3>
 
 <ul>
   <li>Removed needless <code>--key_type</code> option in dump.
@@ -412,7 +438,7 @@ explicitly to disable <code>with_position</code> flag for <code>TokenDelimit</co
 See <span class='object_link'><a href="Groonga/Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">Groonga::Schema.create_table</a></span>.</li>
 </ul>
 
-<h3 id="fixes-5">Fixes</h3>
+<h3 id="fixes-6">Fixes</h3>
 
 <ul>
   <li>[GitHub#16] Fixed a memory leak of <span class='object_link'><a href="Groonga/Table.html#column-instance_method" title="Groonga::Table#column (method)">Groonga::Table#column</a></span>.
@@ -428,7 +454,7 @@ See <span class='object_link'><a href="Groonga/Schema.html#create_table-class_me
 
 <h2 id="version-4-0-1">4.0.1: 2014-04-04</h2>
 
-<h3 id="improvements-11">Improvements</h3>
+<h3 id="improvements-12">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.1. Groonga 4.0.0 or older are not supported.</li>
@@ -451,7 +477,7 @@ Old Groonga can’t restore dumped database.</li>
   <li>Accepted String as option key.</li>
 </ul>
 
-<h3 id="fixes-6">Fixes</h3>
+<h3 id="fixes-7">Fixes</h3>
 
 <ul>
   <li>Fixed a bug that index dump drops index options in Ruby syntax.</li>
@@ -459,7 +485,7 @@ Old Groonga can’t restore dumped database.</li>
 
 <h2 id="version-4-0-0">4.0.0: 2014-02-09</h2>
 
-<h3 id="improvements-12">Improvements</h3>
+<h3 id="improvements-13">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.0. Groonga 3.1.2 or older are not supported.</li>
@@ -474,7 +500,7 @@ Old Groonga can’t restore dumped database.</li>
 
 <h2 id="version-3-1-2">3.1.2: 2014-01-29</h2>
 
-<h3 id="improvements-13">Improvements</h3>
+<h3 id="improvements-14">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 3.1.2. Groonga 3.1.1 or older are not supported.</li>
@@ -498,7 +524,7 @@ indexes output. It is useful to dump only schema for indexes.</li>
 
 <h2 id="version-3-1-1">3.1.1: 2013-12-29</h2>
 
-<h3 id="improvements-14">Improvements</h3>
+<h3 id="improvements-15">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 3.1.1.</li>
@@ -521,7 +547,7 @@ all column information.</li>
 
 <h2 id="version-3-1-0">3.1.0: 2013-11-29</h2>
 
-<h3 id="improvements-15">Improvements</h3>
+<h3 id="improvements-16">Improvements</h3>
 
 <ul>
   <li>Reduced build failure by automatically Groonga build.
@@ -532,7 +558,7 @@ all column information.</li>
 an exception. Because the method is interested in only existing tables.</li>
 </ul>
 
-<h3 id="fixes-7">Fixes</h3>
+<h3 id="fixes-8">Fixes</h3>
 
 <ul>
   <li>Fixed a bug that <span class='object_link'><a href="Groonga/Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Groonga::Expression#parse</a></span> doesn’t accept all
@@ -548,14 +574,14 @@ mode and operators.</li>
 
 <h2 id="version-3-0-9">3.0.9: 2013-10-29</h2>
 
-<h3 id="improvements-16">Improvements</h3>
+<h3 id="improvements-17">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 3.0.9.</li>
   <li>Supported showing error message on error in <span class='object_link'><a href="Groonga/Object.html#remove-instance_method" title="Groonga::Object#remove (method)">Groonga::Object#remove</a></span>.</li>
 </ul>
 
-<h3 id="fixes-8">Fixes</h3>
+<h3 id="fixes-9">Fixes</h3>
 
 <ul>
   <li>Fixed a crash bug that is caused by assigning <code>nil</code> as source of
@@ -564,7 +590,7 @@ index column.</li>
 
 <h2 id="version-3-0-8">3.0.8: 2013-09-29</h2>
 
-<h3 id="improvements-17">Improvements</h3>
+<h3 id="improvements-18">Improvements</h3>
 
 <ul>
   <li>Supported groonga 3.0.8.</li>
@@ -574,7 +600,7 @@ index column.</li>
 
 <h2 id="version-3-0-7">3.0.7: 2013-09-19</h2>
 
-<h3 id="improvements-18">Improvements</h3>
+<h3 id="improvements-19">Improvements</h3>
 
 <ul>
   <li>Added <span class='object_link'><a href="Groonga/Table/KeySupport.html#tokenize-instance_method" title="Groonga::Table::KeySupport#tokenize (method)">Groonga::Table::KeySupport#tokenize</a></span>. It requires groonga
@@ -587,7 +613,7 @@ about rerturn object details.
 ** Added groonga-client gem, groogna-command gem, gqtp gem dependencies.</li>
 </ul>
 
-<h3 id="fixes-9">Fixes</h3>
+<h3 id="fixes-10">Fixes</h3>
 
 <ul>
   <li>Fixed a bug that auto groonga installation is failed.
@@ -602,7 +628,7 @@ about rerturn object details.
 
 <h2 id="version-3-0-6">3.0.6: 2013-09-13</h2>
 
-<h3 id="improvements-19">Improvements</h3>
+<h3 id="improvements-20">Improvements</h3>
 
 <ul>
   <li>Supported accessing reference column that referes a table that uses
@@ -611,7 +637,7 @@ Int8/UInt8/Int16/UInt16 key.</li>
 
 <h2 id="version-3-0-5">3.0.5: 2013-07-29</h2>
 
-<h3 id="improvements-20">Improvements</h3>
+<h3 id="improvements-21">Improvements</h3>
 
 <ul>
   <li>[dumper] supported dumping of DoubleArrayTrie.</li>
@@ -633,7 +659,7 @@ You can close temporary table objects automatically:</p>
 [Reported by xtuaok]</li>
 </ul>
 
-<h3 id="fixes-10">Fixes</h3>
+<h3 id="fixes-11">Fixes</h3>
 
 <ul>
   <li>[dumper] fixed a bug that no column table isn’t dumped.</li>
@@ -648,7 +674,7 @@ You can close temporary table objects automatically:</p>
 
 <h2 id="version-3-0-4">3.0.4: 2013-07-04</h2>
 
-<h3 id="fixes-11">Fixes</h3>
+<h3 id="fixes-12">Fixes</h3>
 
 <ul>
   <li>Fixed a rroogna 3.0.3 gem package for Windows.</li>
@@ -656,7 +682,7 @@ You can close temporary table objects automatically:</p>
 
 <h2 id="version-3-0-3">3.0.3: 2013-07-04</h2>
 
-<h3 id="improvements-21">Improvements</h3>
+<h3 id="improvements-22">Improvements</h3>
 
 <ul>
   <li>Required groonga &gt;= 3.0.5.</li>
@@ -674,7 +700,7 @@ that defines reference type variable.</li>
 Sub records is a <span class='object_link'><a href="Groonga/SubRecords.html" title="Groonga::SubRecords (class)">Groonga::SubRecords</a></span> instance.</li>
 </ul>
 
-<h3 id="fixes-12">Fixes</h3>
+<h3 id="fixes-13">Fixes</h3>
 
 <ul>
   <li>Fixed <span class='object_link'><a href="Groonga/Expression.html#%5B%5D-instance_method" title="Groonga::Expression#[] (method)">Groonga::Expression#[]</a></span> return type. It returns <span class='object_link'><a href="Groonga/Variable.html" title="Groonga::Variable (class)">Groonga::Variable</a></span>
@@ -683,7 +709,7 @@ instead of value itself. CAUTION: It is a backward incompatible change.</li>
 
 <h2 id="version-3-0-2">3.0.2: 2013-05-29</h2>
 
-<h3 id="improvements-22">Improvements</h3>
+<h3 id="improvements-23">Improvements</h3>
 
 <ul>
   <li>Required groonga &gt;= 3.0.4.</li>
@@ -699,7 +725,7 @@ instead of value itself. CAUTION: It is a backward incompatible change.</li>
   <li>[grndump] Don’t dump “register PLUGIN” when schema dump is disabled.</li>
 </ul>
 
-<h3 id="fixes-13">Fixes</h3>
+<h3 id="fixes-14">Fixes</h3>
 
 <ul>
   <li>[grndump]
@@ -708,7 +734,7 @@ Fixed a bug that reference tables may be dumpped before referenced tables.</li>
 
 <h2 id="version-3-0-1">3.0.1: 2013-05-01</h2>
 
-<h3 id="improvements-23">Improvements</h3>
+<h3 id="improvements-24">Improvements</h3>
 
 <ul>
   <li>Required groonga &gt;= 3.0.3.</li>
@@ -721,7 +747,7 @@ Fixed a bug that reference tables may be dumpped before referenced tables.</li>
   <li>Added missing “Packnga &gt;= 0.9.7” requirement. [Reported by takkanm]</li>
 </ul>
 
-<h3 id="fixes-14">Fixes</h3>
+<h3 id="fixes-15">Fixes</h3>
 
 <ul>
   <li>Fixed a memory leak on error.</li>
@@ -735,7 +761,7 @@ Fixed a bug that reference tables may be dumpped before referenced tables.</li>
 
 <h2 id="version-3-0-0">3.0.0: 2013-03-29</h2>
 
-<h3 id="improvements-24">Improvements</h3>
+<h3 id="improvements-25">Improvements</h3>
 
 <ul>
   <li>Required groonga &gt;= 3.0.2.</li>
@@ -757,7 +783,7 @@ given, command and its response are yielded.</li>
 
 <h2 id="version-2-1-3">2.1.3: 2013-01-29</h2>
 
-<h3 id="improvements-25">Improvements</h3>
+<h3 id="improvements-26">Improvements</h3>
 
 <ul>
   <li>Removed Groonga::View removed in groonga 2.1.2.</li>
@@ -778,7 +804,7 @@ by “grndump” command. Please see example below:</p>
 ** Stopped to build static library because it isn’t used by rroonga.</li>
 </ul>
 
-<h3 id="fixes-15">Fixes</h3>
+<h3 id="fixes-16">Fixes</h3>
 
 <ul>
   <li>
@@ -794,7 +820,7 @@ by “grndump” command. Please see example below:</p>
 
 <h2 id="version-2-1-2">2.1.2: 2013-01-04</h2>
 
-<h3 id="fixes-16">Fixes</h3>
+<h3 id="fixes-17">Fixes</h3>
 
 <ul>
   <li>Fixed GC related crash. Table’s domain and range are also marked.</li>
@@ -802,7 +828,7 @@ by “grndump” command. Please see example below:</p>
 
 <h2 id="version-2-1-1">2.1.1: 2012-12-29</h2>
 
-<h3 id="improvements-26">Improvements</h3>
+<h3 id="improvements-27">Improvements</h3>
 
 <ul>
   <li>Required groonga 2.1.1 because groonga 2.1.0 has a serious bug
@@ -811,7 +837,7 @@ related to key normalization.</li>
 
 <h2 id="version-2-1-0">2.1.0: 2012-12-29</h2>
 
-<h3 id="improvements-27">Improvements</h3>
+<h3 id="improvements-28">Improvements</h3>
 
 <ul>
   <li>Required groonga 2.1.0.</li>
@@ -909,7 +935,7 @@ The following code shows how to use old style:</p>
 
 <h2 id="version-2-0-8">2.0.8: 2012-12-02</h2>
 
-<h3 id="improvements-28">Improvements</h3>
+<h3 id="improvements-29">Improvements</h3>
 
 <ul>
   <li>Required groonga 2.0.9.</li>
@@ -917,7 +943,7 @@ The following code shows how to use old style:</p>
 
 <h2 id="version-2-0-7">2.0.7: 2012-11-29</h2>
 
-<h3 id="improvements-29">Improvements</h3>
+<h3 id="improvements-30">Improvements</h3>
 
 <ul>
   <li>Added <code>Groonga::Posting#record</code>. This method returns the record for
@@ -941,7 +967,7 @@ This feature moved to groonga-query-log gem and it is relased soon.</li>
 
 <h2 id="version-2-0-6">2.0.6: 2012-10-25</h2>
 
-<h3 id="improvements-30">Improvements</h3>
+<h3 id="improvements-31">Improvements</h3>
 
 <ul>
   <li>[dump] Put index columns at the bottom (after loads).
@@ -962,7 +988,7 @@ slowly.</li>
 to <code>--enable-debug-log</code>.</li>
 </ul>
 
-<h3 id="fixes-17">Fixes</h3>
+<h3 id="fixes-18">Fixes</h3>
 
 <ul>
   <li>Fixed display collapse in the references.</li>
@@ -970,7 +996,7 @@ to <code>--enable-debug-log</code>.</li>
 
 <h2 id="version-2-0-5">2.0.5: 2012-09-28</h2>
 
-<h3 id="improvements-31">Improvements</h3>
+<h3 id="improvements-32">Improvements</h3>
 
 <ul>
   <li>Supported groonga 2.0.7.</li>
@@ -990,7 +1016,7 @@ IndexCursor.</li>
   <li>Added many documents in codes but showed no references.</li>
 </ul>
 
-<h3 id="fixes-18">Fixes</h3>
+<h3 id="fixes-19">Fixes</h3>
 
 <ul>
   <li>Added missing backslash escape for groonga command.</li>
@@ -1004,7 +1030,7 @@ IndexCursor.</li>
 
 <h2 id="version-2-0-4">2.0.4: 2012-05-02</h2>
 
-<h3 id="fixes-19">Fixes</h3>
+<h3 id="fixes-20">Fixes</h3>
 
 <ul>
   <li>Fixed a bug that weight of match target is ignored.</li>
@@ -1012,7 +1038,7 @@ IndexCursor.</li>
 
 <h2 id="version-2-0-3">2.0.3: 2012-05-02</h2>
 
-<h3 id="improvements-32">Improvements</h3>
+<h3 id="improvements-33">Improvements</h3>
 
 <ul>
   <li>Supported groonga 2.0.2.</li>
@@ -1027,7 +1053,7 @@ without ID change if you don’t delete any records. [#1341]</li>
 record.column.similar_search(text)}</code> syntax.</li>
 </ul>
 
-<h3 id="fixes-20">Fixes</h3>
+<h3 id="fixes-21">Fixes</h3>
 
 <ul>
   <li>Fixed a GC related crach bug.</li>
@@ -1041,14 +1067,14 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="version-2-0-2">2.0.2: 2012-03-29</h2>
 
-<h3 id="improvements-33">Improvements</h3>
+<h3 id="improvements-34">Improvements</h3>
 
 <ul>
   <li>Supported groonga 2.0.1.</li>
   <li>Added “logos”:http://groonga.rubyforge.org/#logo .</li>
 </ul>
 
-<h3 id="fixes-21">Fixes</h3>
+<h3 id="fixes-22">Fixes</h3>
 
 <ul>
   <li>Fixed a Groonga::Snipet related crach bug caused by GC.</li>
@@ -1056,14 +1082,14 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="version-2-0-0">2.0.0: 2012-03-22</h2>
 
-<h3 id="improvements-34">Improvements</h3>
+<h3 id="improvements-35">Improvements</h3>
 
 <ul>
   <li>Supported groonga 2.0.0.</li>
   <li>[gem][windows] Removed mswin packages.</li>
 </ul>
 
-<h3 id="fixes-22">Fixes</h3>
+<h3 id="fixes-23">Fixes</h3>
 
 <ul>
   <li>[test] Fixed version test failure. [GitHub#4] [Reported by @takkanm]</li>
@@ -1081,7 +1107,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="version-1-3-1">1.3.1: 2012-01-29</h2>
 
-<h3 id="improvements-35">Improvements</h3>
+<h3 id="improvements-36">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.3.0.</li>
@@ -1104,7 +1130,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="version-1-3-0">1.3.0: 2011-11-29</h2>
 
-<h3 id="improvements-36">Improvements</h3>
+<h3 id="improvements-37">Improvements</h3>
 
 <ul>
   <li>[schema] Remove also needless db.tables/ directory if it is empty.</li>
@@ -1130,7 +1156,7 @@ record.column.similar_search(text)}</code> syntax.</li>
   <li>[schema] Don’t use named path by default for location aware DB.</li>
 </ul>
 
-<h3 id="fixes-23">Fixes</h3>
+<h3 id="fixes-24">Fixes</h3>
 
 <ul>
   <li>Fixed a crash problem on GC.</li>
@@ -1138,7 +1164,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section">1.2.9: 2011-09-16</h2>
 
-<h3 id="fixes-24">Fixes</h3>
+<h3 id="fixes-25">Fixes</h3>
 
 <ul>
   <li>deleted unneed object files.</li>
@@ -1146,7 +1172,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-1">1.2.8: 2011-09-16</h2>
 
-<h3 id="improvements-37">Improvements</h3>
+<h3 id="improvements-38">Improvements</h3>
 
 <ul>
   <li>supported <code>!=</code> expression for column in block of <code>Groonga::Table#select</code>.</li>
@@ -1158,13 +1184,13 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-2">1.2.7: 2011-08-29</h2>
 
-<h3 id="improvements-38">Improvements</h3>
+<h3 id="improvements-39">Improvements</h3>
 
 <ul>
   <li>Added Groonga::Snippet#close that frees resource.</li>
 </ul>
 
-<h3 id="fixes-25">Fixes</h3>
+<h3 id="fixes-26">Fixes</h3>
 
 <ul>
   <li>Fixed build error on Ruby 1.8.7.</li>
@@ -1172,7 +1198,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-3">1.2.6: 2011-08-29</h2>
 
-<h3 id="improvements-39">Improvements</h3>
+<h3 id="improvements-40">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.2.5.</li>
@@ -1182,7 +1208,7 @@ record.column.similar_search(text)}</code> syntax.</li>
   <li>Supported column name specification by symbol.</li>
 </ul>
 
-<h3 id="fixes-26">Fixes</h3>
+<h3 id="fixes-27">Fixes</h3>
 
 <ul>
   <li>Fixed install *.rb failure by gem install.</li>
@@ -1192,7 +1218,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-4">1.2.5: 2011-08-05</h2>
 
-<h3 id="improvements-40">Improvements</h3>
+<h3 id="improvements-41">Improvements</h3>
 
 <ul>
   <li>Re-supported tar.gz distribution.</li>
@@ -1203,7 +1229,7 @@ record.column.similar_search(text)}</code> syntax.</li>
   <li>dump: Removed path equality check.</li>
 </ul>
 
-<h3 id="fixes-27">Fixes</h3>
+<h3 id="fixes-28">Fixes</h3>
 
 <ul>
   <li>dump: Fixed wrong index table type.</li>
@@ -1212,13 +1238,13 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-5">1.2.4: 2011-06-29</h2>
 
-<h3 id="improvements-41">Improvements</h3>
+<h3 id="improvements-42">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.2.3.</li>
 </ul>
 
-<h3 id="fixes-28">Fixes</h3>
+<h3 id="fixes-29">Fixes</h3>
 
 <ul>
   <li>Re-supported auto groonga install.</li>
@@ -1227,7 +1253,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-6">1.2.3: 2011-06-27</h2>
 
-<h3 id="fixes-29">Fixes</h3>
+<h3 id="fixes-30">Fixes</h3>
 
 <ul>
   <li>remove object files in gem packages.</li>
@@ -1236,7 +1262,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-7">1.2.2: 2011-06-27</h2>
 
-<h3 id="improvements-42">Improvements</h3>
+<h3 id="improvements-43">Improvements</h3>
 
 <ul>
   <li>created “Developers” page in English.</li>
@@ -1252,7 +1278,7 @@ record.column.similar_search(text)}</code> syntax.</li>
   <li>moved NEWS*.rdoc and tutorial.texttile to doc/text/.</li>
 </ul>
 
-<h3 id="fixes-30">Fixes</h3>
+<h3 id="fixes-31">Fixes</h3>
 
 <ul>
   <li>fixed the tutorial path in index page.</li>
@@ -1268,7 +1294,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-8">1.2.1: 2011-06-07</h2>
 
-<h3 id="improvements-43">Improvements</h3>
+<h3 id="improvements-44">Improvements</h3>
 
 <ul>
   <li>added document of Groonga::Table#pagination.</li>
@@ -1303,7 +1329,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-9">1.2.0: 2011-04-01</h2>
 
-<h3 id="improvements-44">Improvements</h3>
+<h3 id="improvements-45">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.2.0.</li>
@@ -1323,7 +1349,7 @@ official type name like “ShortText” in <code>Groonga::Schema</code>.</li>
 
 <h2 id="section-10">1.1.0: 2011-02-09</h2>
 
-<h3 id="improvements-45">Improvements</h3>
+<h3 id="improvements-46">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.1.0.</li>
@@ -1332,7 +1358,7 @@ official type name like “ShortText” in <code>Groonga::Schema</code>.</li>
 
 <h2 id="section-11">1.0.9: 2011-01-29</h2>
 
-<h3 id="improvements-46">Improvements</h3>
+<h3 id="improvements-47">Improvements</h3>
 
 <ul>
   <li>Supported gem creation on Windows. [Patch by ongaeshi]</li>
@@ -1383,7 +1409,7 @@ Groonga::Table#select:</p>
 (Groonga::Operation is deprecated but still usable.)</li>
 </ul>
 
-<h3 id="fixes-31">Fixes</h3>
+<h3 id="fixes-32">Fixes</h3>
 
 <ul>
   <li>Fixed a crash bug when not default Groonga::Context is used in
@@ -1399,13 +1425,13 @@ Groonga::Table#select.</li>
 
 <h2 id="section-12">1.0.8: 2010-12-25</h2>
 
-<h3 id="improvements-47">Improvements</h3>
+<h3 id="improvements-48">Improvements</h3>
 
 <ul>
   <li>Improved Groonga::Schema’s n-gram tokenizer detect process.</li>
 </ul>
 
-<h3 id="fixes-32">Fixes</h3>
+<h3 id="fixes-33">Fixes</h3>
 
 <ul>
   <li>Fixed GC problem caused by match_target in select.</li>
@@ -1413,7 +1439,7 @@ Groonga::Table#select.</li>
 
 <h2 id="section-13">1.0.7: 2010-12-19</h2>
 
-<h3 id="fixes-33">Fixes</h3>
+<h3 id="fixes-34">Fixes</h3>
 
 <ul>
   <li>Supported pkg-config installed by RubyGems on Ruby 1.8. [Reported by @kamipo]</li>
@@ -1428,14 +1454,14 @@ Groonga::Table#select.</li>
 
 <h2 id="section-14">1.0.5: 2010-11-29</h2>
 
-<h3 id="improvements-48">Improvements</h3>
+<h3 id="improvements-49">Improvements</h3>
 
 <ul>
   <li>Added snail_case type name aliases for built-in groonga types
 to Groonga::Schema.</li>
 </ul>
 
-<h3 id="fixes-34">Fixes</h3>
+<h3 id="fixes-35">Fixes</h3>
 
 <ul>
   <li>Fixed a crash bug on GC. [Ryo Onodera]</li>
@@ -1443,7 +1469,7 @@ to Groonga::Schema.</li>
 
 <h2 id="section-15">1.0.4: 2010-11-29</h2>
 
-<h3 id="improvements-49">Improvements</h3>
+<h3 id="improvements-50">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.0.4.
@@ -1501,7 +1527,7 @@ Groonga::Hash#create and Groonga::PatriciaTrie#create.</li>
 Groonga::Column#reference_column?.</li>
 </ul>
 
-<h3 id="fixes-35">Fixes</h3>
+<h3 id="fixes-36">Fixes</h3>
 
 <ul>
   <li>Fixed index for key isn’t be able to define.</li>
@@ -1510,7 +1536,7 @@ Groonga::Column#reference_column?.</li>
 
 <h2 id="section-16">1.0.1: 2010-09-12</h2>
 
-<h3 id="fixes-36">Fixes</h3>
+<h3 id="fixes-37">Fixes</h3>
 
 <ul>
   <li>Fixed wrong flag used on creating a table. [Reported by ono matope]</li>

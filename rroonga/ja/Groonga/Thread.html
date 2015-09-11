@@ -1,0 +1,677 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Module: Groonga::Thread
+  
+    &mdash; rroonga
+  
+ - ラングバ</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!Groonga/Thread.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../ja/">
+      <span class="title">
+  Module: Groonga::Thread
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../rroonga/en/Groonga/Thread.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../rroonga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../../rroonga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../../ja/#install-rroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../../ja/developer.html">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../alphabetical_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
+     &raquo; 
+    <span class="title">Thread</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Groonga::Thread
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">ext/groonga/rb-grn-thread.c</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#limit-class_method" title="limit (class method)">+ (Integer) <strong>limit</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#limit%3D-class_method" title="limit= (class method)">+ (void) <strong>limit=</strong>(new_limit) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the max number of threads.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#limit_getter%3D-class_method" title="limit_getter= (class method)">+ (void) <strong>limit_getter=</strong>(getter) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets a callable object that returns the max number of threads.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#limit_setter%3D-class_method" title="limit_setter= (class method)">+ (void) <strong>limit_setter=</strong>(setter) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets a callable object that sets the max number of threads.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="limit-class_method">
+  
+    + (<tt>Integer</tt>) <strong>limit</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns the max number of threads. <code>0</code> means that
+thread isn’t supported.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the max number of threads. <code>0</code> means that
+thread isn’t supported.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-thread.c', line 37</span>
+
+static VALUE
+rb_grn_thread_s_get_limit (VALUE self)
+{
+    uint32_t limit;
+
+    limit = grn_thread_get_limit();
+
+    return UINT2NUM(limit);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="limit=-class_method">
+  
+    + (<tt>void</tt>) <strong>limit=</strong>(new_limit) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Sets the max number of threads.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>new_limit</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The new max number of threads.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-thread.c', line 58</span>
+
+static VALUE
+rb_grn_thread_s_set_limit (VALUE self, VALUE rb_new_limit)
+{
+    uint32_t new_limit;
+
+    new_limit = NUM2UINT(rb_new_limit);
+    grn_thread_set_limit(new_limit);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="limit_getter=-class_method">
+  
+    + (<tt>void</tt>) <strong>limit_getter=</strong>(getter) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Sets a callable object that returns the max number of threads.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>getter</span>
+      
+      
+        <span class='type'>(<tt>#call</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Callable object that returns the max number
+of threads.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-thread.c', line 92</span>
+
+static VALUE
+rb_grn_thread_s_set_limit_getter (VALUE self, VALUE rb_getter)
+{
+    rb_iv_set(self, &quot;@limit_getter&quot;, rb_getter);
+
+    if (NIL_P(rb_getter)) {
+        grn_thread_set_get_limit_func(NULL, NULL);
+    } else {
+        grn_thread_set_get_limit_func(rb_grn_thread_get_limit_func,
+                                      (void *)rb_getter);
+    }
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="limit_setter=-class_method">
+  
+    + (<tt>void</tt>) <strong>limit_setter=</strong>(setter) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Sets a callable object that sets the max number of threads.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>setter</span>
+      
+      
+        <span class='type'>(<tt>#call</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Callable object that sets the max number
+of threads.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-thread.c', line 127</span>
+
+static VALUE
+rb_grn_thread_s_set_limit_setter (VALUE self, VALUE rb_setter)
+{
+    rb_iv_set(self, &quot;@limit_setter&quot;, rb_setter);
+
+    if (NIL_P(rb_setter)) {
+        grn_thread_set_set_limit_func(NULL, NULL);
+    } else {
+        grn_thread_set_set_limit_func(rb_grn_thread_set_limit_func,
+                                      (void *)rb_setter);
+    }
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Fri Sep 11 11:48:07 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.1.5).
+</div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../tango-logo.png" />
+        </a>
+      </p>
+    </div>
+
+</body>
+</html>

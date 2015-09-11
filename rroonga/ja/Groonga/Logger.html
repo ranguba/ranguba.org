@@ -248,6 +248,52 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#max_level-class_method" title="max_level (class method)">+ (Symbol) <strong>max_level</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_level%3D-class_method" title="max_level= (class method)">+ (void) <strong>max_level=</strong>(max_level) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the max level of the current logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#path-class_method" title="path (class method)">+ (String or nil) <strong>path</strong> </a>
     
 
@@ -448,7 +494,7 @@ instead.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>登録されたロガーの登録を削除する。削除後はデフォルトのロガーが使われます。.</p>
+    <span class="summary_desc"><div class='inline'><p>Unregister the registered logger.</p>
 </div></span>
   
 </li>
@@ -937,6 +983,210 @@ instead.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="max_level-class_method">
+  
+    + (<tt>Symbol</tt>) <strong>max_level</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns The max level of the current logger.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The max level of the current logger.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 447</span>
+
+static VALUE
+rb_grn_logger_s_get_max_level (VALUE klass)
+{
+    VALUE rb_context = Qnil;
+    grn_ctx *context;
+    grn_log_level max_level;
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+    max_level = grn_logger_get_max_level(context);
+
+    return GRNLOGLEVEL2RVAL(max_level);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_level=-class_method">
+  
+    + (<tt>void</tt>) <strong>max_level=</strong>(max_level) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Sets the max level of the current logger.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>max_level</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The max level.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 470</span>
+
+static VALUE
+rb_grn_logger_s_set_max_level (VALUE klass, VALUE rb_max_level)
+{
+    VALUE rb_context = Qnil;
+    grn_ctx *context;
+
+    context = rb_grn_context_ensure(&amp;rb_context);
+    grn_logger_set_max_level(context, RVAL2GRNLOGLEVEL(rb_max_level));
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="path-class_method">
   
     + (<tt>String or nil</tt>) <strong>path</strong> 
@@ -1005,21 +1255,21 @@ instead.</p>
       <pre class="lines">
 
 
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460</pre>
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 449</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 490</span>
 
 static VALUE
 rb_grn_logger_s_get_path (VALUE klass)
@@ -1149,34 +1399,34 @@ If nil is specified, logging by the default logger is disabled.</p>
       <pre class="lines">
 
 
-483
-484
-485
-486
-487
-488
-489
-490
-491
-492
-493
-494
-495
-496
-497
-498
-499
-500
-501
-502
-503
-504
-505
-506
-507</pre>
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 483</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 524</span>
 
 static VALUE
 rb_grn_logger_s_set_path (VALUE klass, VALUE rb_path)
@@ -1745,14 +1995,14 @@ default logger.</p>
       <pre class="lines">
 
 
-521
-522
-523
-524
-525</pre>
+562
+563
+564
+565
+566</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 521</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 562</span>
 
 static VALUE
 rb_grn_logger_s_get_rotate_threshold_size (VALUE klass)
@@ -1878,16 +2128,16 @@ If nil is specified, log rotate by the default logger is disabled.</p>
       <pre class="lines">
 
 
-551
-552
-553
-554
-555
-556
-557</pre>
+592
+593
+594
+595
+596
+597
+598</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 551</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 592</span>
 
 static VALUE
 rb_grn_logger_s_set_rotate_threshold_size (VALUE klass, VALUE rb_size)
@@ -1912,7 +2162,8 @@ rb_grn_logger_s_set_rotate_threshold_size (VALUE klass, VALUE rb_size)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>登録されたロガーの登録を削除する。削除後はデフォルトのロガーが使われます。</p>
+    <p>Unregister the registered logger. The default logger is used after
+unregistering.</p>
 
 
   </div>
@@ -2103,7 +2354,7 @@ rb_grn_logger_s_unregister (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Mon Jul 13 11:50:37 2015 by
+  Generated on Fri Sep 11 11:48:09 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

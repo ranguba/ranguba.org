@@ -603,6 +603,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#selector_only_procedure%3F-instance_method" title="#selector_only_procedure? (instance method)">- (Boolean) <strong>selector_only_procedure?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is selector only procedure or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#selector_procedure%3F-instance_method" title="#selector_procedure? (instance method)">- (Boolean) <strong>selector_procedure?</strong> </a>
     
 
@@ -2426,6 +2449,131 @@ rb_grn_object_remove (VALUE self)
       <pre class="lines">
 
 
+1642
+1643
+1644
+1645
+1646
+1647
+1648
+1649
+1650
+1651
+1652
+1653
+1654
+1655
+1656
+1657</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1642</span>
+
+static VALUE
+rb_grn_object_scorer_procedure_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    grn_bool scorer_procedure_p = GRN_FALSE;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        scorer_procedure_p = grn_obj_is_scorer_proc(context, object);
+    }
+
+    return CBOOL2RVAL(scorer_procedure_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="selector_only_procedure?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>selector_only_procedure?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the object is selector only procedure or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is selector only procedure,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is selector only procedure,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
 1616
 1617
 1618
@@ -2447,20 +2595,20 @@ rb_grn_object_remove (VALUE self)
       <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1616</span>
 
 static VALUE
-rb_grn_object_scorer_procedure_p (VALUE self)
+rb_grn_object_selector_only_procedure_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool scorer_procedure_p = GRN_FALSE;
+    grn_bool selector_only_procedure_p = GRN_FALSE;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
 
     if (context &amp;&amp; object) {
-        scorer_procedure_p = grn_obj_is_scorer_proc(context, object);
+        selector_only_procedure_p = grn_obj_is_selector_only_proc(context, object);
     }
 
-    return CBOOL2RVAL(scorer_procedure_p);
+    return CBOOL2RVAL(selector_only_procedure_p);
 }</pre>
     </td>
   </tr>
