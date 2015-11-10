@@ -527,6 +527,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#geo_sort-instance_method" title="#geo_sort (instance method)">- (Groonga::Array) <strong>geo_sort</strong>(column, base_geo_point, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sorts records in the table by <code>TokyoGeoPoint</code> or <code>WGS84GeoPoint</code> type column value.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#group-instance_method" title="#group (instance method)">- (Object) <strong>group</strong> </a>
     
 
@@ -1225,18 +1248,18 @@ rb_grn_table_initialize (VALUE self)
       <pre class="lines">
 
 
-1543
-1544
-1545
-1546
-1547
-1548
-1549
-1550
-1551</pre>
+1655
+1656
+1657
+1658
+1659
+1660
+1661
+1662
+1663</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1543</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1655</span>
 
 VALUE
 rb_grn_table_array_reference (VALUE self, VALUE rb_id)
@@ -1289,24 +1312,24 @@ rb_grn_table_array_reference (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
-2053
-2054
-2055
-2056
-2057
-2058
-2059
-2060
-2061
-2062
-2063
-2064
-2065
-2066
-2067</pre>
+2165
+2166
+2167
+2168
+2169
+2170
+2171
+2172
+2173
+2174
+2175
+2176
+2177
+2178
+2179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2053</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2165</span>
 
 static VALUE
 rb_grn_table_clear_lock (VALUE self)
@@ -1602,34 +1625,34 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
       <pre class="lines">
 
 
-1704
-1705
-1706
-1707
-1708
-1709
-1710
-1711
-1712
-1713
-1714
-1715
-1716
-1717
-1718
-1719
-1720
-1721
-1722
-1723
-1724
-1725
-1726
-1727
-1728</pre>
+1816
+1817
+1818
+1819
+1820
+1821
+1822
+1823
+1824
+1825
+1826
+1827
+1828
+1829
+1830
+1831
+1832
+1833
+1834
+1835
+1836
+1837
+1838
+1839
+1840</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1704</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1816</span>
 
 static VALUE
 rb_grn_table_get_column_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -2785,35 +2808,35 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
-2511
-2512
-2513
-2514
-2515
-2516
-2517
-2518
-2519
-2520
-2521
-2522
-2523
-2524
-2525
-2526
-2527
-2528
-2529
-2530
-2531
-2532
-2533
-2534
-2535
-2536</pre>
+2623
+2624
+2625
+2626
+2627
+2628
+2629
+2630
+2631
+2632
+2633
+2634
+2635
+2636
+2637
+2638
+2639
+2640
+2641
+2642
+2643
+2644
+2645
+2646
+2647
+2648</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2511</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2623</span>
 
 static VALUE
 rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
@@ -3122,14 +3145,14 @@ rb_grn_table_delete (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2371
-2372
-2373
-2374
-2375</pre>
+2483
+2484
+2485
+2486
+2487</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2371</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2483</span>
 
 static VALUE
 rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
@@ -3428,37 +3451,37 @@ rb_grn_table_each (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1506
-1507
-1508
-1509
-1510
-1511
-1512
-1513
-1514
-1515
-1516
-1517
-1518
-1519
-1520
-1521
-1522
-1523
-1524
-1525
-1526
-1527
-1528
-1529
-1530
-1531
-1532
-1533</pre>
+1618
+1619
+1620
+1621
+1622
+1623
+1624
+1625
+1626
+1627
+1628
+1629
+1630
+1631
+1632
+1633
+1634
+1635
+1636
+1637
+1638
+1639
+1640
+1641
+1642
+1643
+1644
+1645</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1506</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1618</span>
 
 static VALUE
 rb_grn_table_each_sub_record (VALUE self, VALUE rb_id)
@@ -3614,21 +3637,21 @@ rb_grn_table_empty_p (VALUE self)
       <pre class="lines">
 
 
-2485
-2486
-2487
-2488
-2489
-2490
-2491
-2492
-2493
-2494
-2495
-2496</pre>
+2597
+2598
+2599
+2600
+2601
+2602
+2603
+2604
+2605
+2606
+2607
+2608</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2485</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2597</span>
 
 static VALUE
 rb_grn_table_exist_p (VALUE self, VALUE id)
@@ -3641,6 +3664,314 @@ rb_grn_table_exist_p (VALUE self, VALUE id)
                              NULL, NULL, NULL,
                              NULL);
     return CBOOL2RVAL(grn_table_at(context, table, NUM2UINT(id)));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="geo_sort-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Groonga::Array</a></span></tt>) <strong>geo_sort</strong>(column, base_geo_point, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sorts records in the table by <code>TokyoGeoPoint</code> or <code>WGS84GeoPoint</code>
+type column value. Order is near to far from base geo point.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value
+pairs. Omitted names are initialized as the default value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:offset</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>0</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>It specifies what number record should be the first record in
+returned table. It’s 0-based.</p>
+
+<p>If you specify <code>0</code>, the 0th record, the 1st record, the 2nd
+record, … are returned.</p>
+
+<p>If you specify <code>0</code>, the 1st record, the 2nd record, … are
+returned. The 0th record isn’t returned.</p>
+
+<p>The default is <code>0</code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:limit</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>-1</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>It specifies up to how many records are returned. If <code>-1</code> is
+specified, all records are returned.</p>
+
+<p>The default is <code>-1</code>.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Groonga::Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The sorted result. You can get the
+original record by <span class='object_link'><a href="#value-instance_method" title="Groonga::Table#value (method)">#value</a></span> method of a record in the sorted
+result. Normally, you doesn’t need to get the original record
+because you can access via column name method:</p>
+
+<p>If you want to access the key of the original record, you need to
+get the original record.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.9</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1354
+1355
+1356
+1357
+1358
+1359
+1360
+1361
+1362
+1363
+1364
+1365
+1366
+1367
+1368
+1369
+1370
+1371
+1372
+1373
+1374
+1375
+1376
+1377
+1378
+1379
+1380
+1381
+1382
+1383
+1384
+1385
+1386
+1387
+1388
+1389
+1390
+1391
+1392
+1393
+1394
+1395
+1396
+1397
+1398
+1399
+1400
+1401
+1402
+1403
+1404
+1405
+1406
+1407
+1408
+1409
+1410
+1411
+1412
+1413
+1414
+1415
+1416
+1417
+1418
+1419
+1420
+1421
+1422
+1423
+1424
+1425
+1426</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1354</span>
+
+static VALUE
+rb_grn_table_geo_sort (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context = NULL;
+    grn_obj *table;
+    VALUE rb_column;
+    VALUE rb_base_geo_point;
+    VALUE rb_options;
+    VALUE rb_offset;
+    VALUE rb_limit;
+    grn_obj *column;
+    grn_id column_range_id;
+    grn_obj base_geo_point;
+    int offset = 0;
+    int limit = -1;
+    grn_obj *result;
+    VALUE exception;
+
+    rb_grn_table_deconstruct(SELF(self), &amp;table, &amp;context,
+                             NULL, NULL,
+                             NULL, NULL, NULL,
+                             NULL);
+
+    rb_scan_args(argc, argv, &quot;21&quot;, &amp;rb_column, &amp;rb_base_geo_point, &amp;rb_options);
+
+    column = RVAL2GRNCOLUMN(rb_column, &amp;context);
+    column_range_id = grn_obj_get_range(context, column);
+    switch (column_range_id) {
+    case GRN_DB_TOKYO_GEO_POINT:
+        GRN_TOKYO_GEO_POINT_INIT(&amp;base_geo_point, 0);
+        break;
+    case GRN_DB_WGS84_GEO_POINT:
+        GRN_WGS84_GEO_POINT_INIT(&amp;base_geo_point, 0);
+        break;
+    default:
+        rb_raise(rb_eArgError,
+                 &quot;column&#39;s range must be TokyoGeoPoint or WGS84GeoPoint: %s&quot;,
+                 rb_grn_inspect(rb_column));
+        break;
+    }
+    RVAL2GRNBULK_WITH_TYPE(rb_base_geo_point,
+                           context,
+                           &amp;base_geo_point,
+                           column_range_id,
+                           grn_ctx_at(context, column_range_id));
+
+    rb_grn_scan_options(rb_options,
+                        &quot;offset&quot;, &amp;rb_offset,
+                        &quot;limit&quot;, &amp;rb_limit,
+                        NULL);
+
+    if (!NIL_P(rb_offset))
+        offset = NUM2INT(rb_offset);
+    if (!NIL_P(rb_limit))
+        limit = NUM2INT(rb_limit);
+    /* TODO: Remove me when Groonga 5.1.0 is released. */
+    if (limit &lt; 0)
+        limit = grn_table_size(context, table) + limit + 1;
+
+    result = grn_table_create(context, NULL, 0, NULL, GRN_TABLE_NO_KEY,
+                              NULL, table);
+    grn_geo_table_sort(context, table, offset, limit,
+                       result, column, &amp;base_geo_point);
+    exception = rb_grn_context_to_exception(context, self);
+    if (!NIL_P(exception)) {
+        grn_obj_unlink(context, &amp;base_geo_point);
+        grn_obj_unlink(context, result);
+        rb_exc_raise(exception);
+    }
+
+    grn_obj_unlink(context, &amp;base_geo_point);
+    return GRNOBJECT2RVAL(Qnil, context, result, GRN_TRUE);
 }</pre>
     </td>
   </tr>
@@ -3874,118 +4205,6 @@ a drilldown. You can specify multiple calculation types.</p>
       <pre class="lines">
 
 
-1371
-1372
-1373
-1374
-1375
-1376
-1377
-1378
-1379
-1380
-1381
-1382
-1383
-1384
-1385
-1386
-1387
-1388
-1389
-1390
-1391
-1392
-1393
-1394
-1395
-1396
-1397
-1398
-1399
-1400
-1401
-1402
-1403
-1404
-1405
-1406
-1407
-1408
-1409
-1410
-1411
-1412
-1413
-1414
-1415
-1416
-1417
-1418
-1419
-1420
-1421
-1422
-1423
-1424
-1425
-1426
-1427
-1428
-1429
-1430
-1431
-1432
-1433
-1434
-1435
-1436
-1437
-1438
-1439
-1440
-1441
-1442
-1443
-1444
-1445
-1446
-1447
-1448
-1449
-1450
-1451
-1452
-1453
-1454
-1455
-1456
-1457
-1458
-1459
-1460
-1461
-1462
-1463
-1464
-1465
-1466
-1467
-1468
-1469
-1470
-1471
-1472
-1473
-1474
-1475
-1476
-1477
-1478
-1479
-1480
-1481
-1482
 1483
 1484
 1485
@@ -3997,10 +4216,122 @@ a drilldown. You can specify multiple calculation types.</p>
 1491
 1492
 1493
-1494</pre>
+1494
+1495
+1496
+1497
+1498
+1499
+1500
+1501
+1502
+1503
+1504
+1505
+1506
+1507
+1508
+1509
+1510
+1511
+1512
+1513
+1514
+1515
+1516
+1517
+1518
+1519
+1520
+1521
+1522
+1523
+1524
+1525
+1526
+1527
+1528
+1529
+1530
+1531
+1532
+1533
+1534
+1535
+1536
+1537
+1538
+1539
+1540
+1541
+1542
+1543
+1544
+1545
+1546
+1547
+1548
+1549
+1550
+1551
+1552
+1553
+1554
+1555
+1556
+1557
+1558
+1559
+1560
+1561
+1562
+1563
+1564
+1565
+1566
+1567
+1568
+1569
+1570
+1571
+1572
+1573
+1574
+1575
+1576
+1577
+1578
+1579
+1580
+1581
+1582
+1583
+1584
+1585
+1586
+1587
+1588
+1589
+1590
+1591
+1592
+1593
+1594
+1595
+1596
+1597
+1598
+1599
+1600
+1601
+1602
+1603
+1604
+1605
+1606</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1371</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1483</span>
 
 static VALUE
 rb_grn_table_group (int argc, VALUE *argv, VALUE self)
@@ -4308,20 +4639,20 @@ the number of sub records, @false@ otherwise.</p>
       <pre class="lines">
 
 
-2464
-2465
-2466
-2467
-2468
-2469
-2470
-2471
-2472
-2473
-2474</pre>
+2576
+2577
+2578
+2579
+2580
+2581
+2582
+2583
+2584
+2585
+2586</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2464</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2576</span>
 
 static VALUE
 rb_grn_table_have_n_sub_records_space_p (VALUE self)
@@ -4475,14 +4806,14 @@ rb_grn_table_inspect (VALUE self)
       <pre class="lines">
 
 
-2358
-2359
-2360
-2361
-2362</pre>
+2470
+2471
+2472
+2473
+2474</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2358</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2470</span>
 
 static VALUE
 rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
@@ -4696,47 +5027,47 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-2008
-2009
-2010
-2011
-2012
-2013
-2014
-2015
-2016
-2017
-2018
-2019
-2020
-2021
-2022
-2023
-2024
-2025
-2026
-2027
-2028
-2029
-2030
-2031
-2032
-2033
-2034
-2035
-2036
-2037
-2038
-2039
-2040
-2041
-2042
-2043
-2044
-2045</pre>
+2120
+2121
+2122
+2123
+2124
+2125
+2126
+2127
+2128
+2129
+2130
+2131
+2132
+2133
+2134
+2135
+2136
+2137
+2138
+2139
+2140
+2141
+2142
+2143
+2144
+2145
+2146
+2147
+2148
+2149
+2150
+2151
+2152
+2153
+2154
+2155
+2156
+2157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2008</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2120</span>
 
 static VALUE
 rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
@@ -4848,22 +5179,22 @@ rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2075
-2076
-2077
-2078
-2079
-2080
-2081
-2082
-2083
-2084
-2085
-2086
-2087</pre>
+2187
+2188
+2189
+2190
+2191
+2192
+2193
+2194
+2195
+2196
+2197
+2198
+2199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2075</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2187</span>
 
 static VALUE
 rb_grn_table_locked_p (VALUE self)
@@ -4934,14 +5265,14 @@ rb_grn_table_locked_p (VALUE self)
       <pre class="lines">
 
 
-2384
-2385
-2386
-2387
-2388</pre>
+2496
+2497
+2498
+2499
+2500</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2384</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2496</span>
 
 static VALUE
 rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
@@ -5712,32 +6043,32 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2545
-2546
-2547
-2548
-2549
-2550
-2551
-2552
-2553
-2554
-2555
-2556
-2557
-2558
-2559
-2560
-2561
-2562
-2563
-2564
-2565
-2566
-2567</pre>
+2657
+2658
+2659
+2660
+2661
+2662
+2663
+2664
+2665
+2666
+2667
+2668
+2669
+2670
+2671
+2672
+2673
+2674
+2675
+2676
+2677
+2678
+2679</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2545</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2657</span>
 
 static VALUE
 rb_grn_table_rename (VALUE self, VALUE rb_name)
@@ -6258,99 +6589,99 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-2222
-2223
-2224
-2225
-2226
-2227
-2228
-2229
-2230
-2231
-2232
-2233
-2234
-2235
-2236
-2237
-2238
-2239
-2240
-2241
-2242
-2243
-2244
-2245
-2246
-2247
-2248
-2249
-2250
-2251
-2252
-2253
-2254
-2255
-2256
-2257
-2258
-2259
-2260
-2261
-2262
-2263
-2264
-2265
-2266
-2267
-2268
-2269
-2270
-2271
-2272
-2273
-2274
-2275
-2276
-2277
-2278
-2279
-2280
-2281
-2282
-2283
-2284
-2285
-2286
-2287
-2288
-2289
-2290
-2291
-2292
-2293
-2294
-2295
-2296
-2297
-2298
-2299
-2300
-2301
-2302
-2303
-2304
-2305
-2306
-2307
-2308
-2309
-2310
-2311</pre>
+2334
+2335
+2336
+2337
+2338
+2339
+2340
+2341
+2342
+2343
+2344
+2345
+2346
+2347
+2348
+2349
+2350
+2351
+2352
+2353
+2354
+2355
+2356
+2357
+2358
+2359
+2360
+2361
+2362
+2363
+2364
+2365
+2366
+2367
+2368
+2369
+2370
+2371
+2372
+2373
+2374
+2375
+2376
+2377
+2378
+2379
+2380
+2381
+2382
+2383
+2384
+2385
+2386
+2387
+2388
+2389
+2390
+2391
+2392
+2393
+2394
+2395
+2396
+2397
+2398
+2399
+2400
+2401
+2402
+2403
+2404
+2405
+2406
+2407
+2408
+2409
+2410
+2411
+2412
+2413
+2414
+2415
+2416
+2417
+2418
+2419
+2420
+2421
+2422
+2423</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2222</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2334</span>
 
 static VALUE
 rb_grn_table_select (int argc, VALUE *argv, VALUE self)
@@ -6972,34 +7303,34 @@ Specify @true@ for polymorphic usage.</p>
       <pre class="lines">
 
 
-1908
-1909
-1910
-1911
-1912
-1913
-1914
-1915
-1916
-1917
-1918
-1919
-1920
-1921
-1922
-1923
-1924
-1925
-1926
-1927
-1928
-1929
-1930
-1931
-1932</pre>
+2020
+2021
+2022
+2023
+2024
+2025
+2026
+2027
+2028
+2029
+2030
+2031
+2032
+2033
+2034
+2035
+2036
+2037
+2038
+2039
+2040
+2041
+2042
+2043
+2044</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1908</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2020</span>
 
 static VALUE
 rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -7065,34 +7396,34 @@ rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1649
-1650
-1651
-1652
-1653
-1654
-1655
-1656
-1657
-1658
-1659
-1660
-1661
-1662
-1663
-1664
-1665
-1666
-1667
-1668
-1669
-1670
-1671
-1672
-1673</pre>
+1761
+1762
+1763
+1764
+1765
+1766
+1767
+1768
+1769
+1770
+1771
+1772
+1773
+1774
+1775
+1776
+1777
+1778
+1779
+1780
+1781
+1782
+1783
+1784
+1785</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1649</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1761</span>
 
 static VALUE
 rb_grn_table_set_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -7655,14 +7986,14 @@ rb_grn_table_sort (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-2396
-2397
-2398
-2399
-2400</pre>
+2508
+2509
+2510
+2511
+2512</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2396</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2508</span>
 
 static VALUE
 rb_grn_table_support_key_p (VALUE self)
@@ -7716,21 +8047,21 @@ rb_grn_table_support_key_p (VALUE self)
       <pre class="lines">
 
 
-2427
-2428
-2429
-2430
-2431
-2432
-2433
-2434
-2435
-2436
-2437
-2438</pre>
+2539
+2540
+2541
+2542
+2543
+2544
+2545
+2546
+2547
+2548
+2549
+2550</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2427</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2539</span>
 
 static VALUE
 rb_grn_table_support_sub_records_p (VALUE self)
@@ -7816,20 +8147,20 @@ rb_grn_table_support_sub_records_p (VALUE self)
       <pre class="lines">
 
 
-2408
-2409
-2410
-2411
-2412
-2413
-2414
-2415
-2416
-2417
-2418</pre>
+2520
+2521
+2522
+2523
+2524
+2525
+2526
+2527
+2528
+2529
+2530</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2408</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2520</span>
 
 static VALUE
 rb_grn_table_support_value_p (VALUE self)
@@ -7966,14 +8297,14 @@ rb_grn_table_truncate (VALUE self)
       <pre class="lines">
 
 
-2344
-2345
-2346
-2347
-2348</pre>
+2456
+2457
+2458
+2459
+2460</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2344</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2456</span>
 
 static VALUE
 rb_grn_table_union_bang (VALUE self, VALUE rb_other)
@@ -8066,38 +8397,38 @@ groonga側が未実装のため、現在は無視される）</p>
       <pre class="lines">
 
 
-1944
-1945
-1946
-1947
-1948
-1949
-1950
-1951
-1952
-1953
-1954
-1955
-1956
-1957
-1958
-1959
-1960
-1961
-1962
-1963
-1964
-1965
-1966
-1967
-1968
-1969
-1970
-1971
-1972</pre>
+2056
+2057
+2058
+2059
+2060
+2061
+2062
+2063
+2064
+2065
+2066
+2067
+2068
+2069
+2070
+2071
+2072
+2073
+2074
+2075
+2076
+2077
+2078
+2079
+2080
+2081
+2082
+2083
+2084</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1944</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2056</span>
 
 static VALUE
 rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
@@ -8229,34 +8560,34 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1587
-1588
-1589
-1590
-1591
-1592
-1593
-1594
-1595
-1596
-1597
-1598
-1599
-1600
-1601
-1602
-1603
-1604
-1605
-1606
-1607
-1608
-1609
-1610
-1611</pre>
+1699
+1700
+1701
+1702
+1703
+1704
+1705
+1706
+1707
+1708
+1709
+1710
+1711
+1712
+1713
+1714
+1715
+1716
+1717
+1718
+1719
+1720
+1721
+1722
+1723</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1587</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1699</span>
 
 static VALUE
 rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -8293,7 +8624,7 @@ rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Wed Oct  7 10:05:49 2015 by
+  Generated on Tue Nov 10 22:46:27 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

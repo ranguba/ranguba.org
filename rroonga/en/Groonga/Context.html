@@ -355,6 +355,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#conf-instance_method" title="#conf (instance method)">- (Groonga::Conf) <strong>conf</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The database level configuration sets of this context.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#connect-instance_method" title="#connect (instance method)">- (Object) <strong>connect</strong>(options = nil) </a>
     
 
@@ -1706,6 +1729,80 @@ rb_grn_context_closed_p (VALUE self)
 
     return CBOOL2RVAL(rb_grn_context-&gt;context == NULL);
 }</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="conf-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Conf.html" title="Groonga::Conf (class)">Groonga::Conf</a></span></tt>) <strong>conf</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns The database level configuration sets of
+this context.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Conf.html" title="Groonga::Conf (class)">Groonga::Conf</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The database level configuration sets of
+this context.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>5.0.9</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+354
+355
+356</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 354</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_conf'>conf</span>
+  <span class='ivar'>@conf</span> <span class='op'>||=</span> <span class='const'>Conf</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
