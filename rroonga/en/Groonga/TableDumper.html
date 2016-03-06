@@ -231,7 +231,8 @@
 666
 667
 668
-669</pre>
+669
+670</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 662</span>
@@ -243,6 +244,7 @@
   <span class='ivar'>@have_output</span> <span class='op'>=</span> <span class='op'>!</span><span class='ivar'>@output</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='ivar'>@output</span> <span class='op'>||=</span> <span class='const'>Dumper</span><span class='period'>.</span><span class='id identifier rubyid_default_output'>default_output</span>
   <span class='ivar'>@error_output</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:error_output</span><span class='rbracket'>]</span>
+  <span class='ivar'>@max_records</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:max_records</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -271,17 +273,17 @@
       <pre class="lines">
 
 
-671
 672
 673
 674
 675
 676
 677
-678</pre>
+678
+679</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 671</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/dumper.rb', line 672</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span>
   <span class='id identifier rubyid_dump_load_command'>dump_load_command</span>

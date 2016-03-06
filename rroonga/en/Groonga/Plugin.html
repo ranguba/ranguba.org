@@ -162,6 +162,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#names-class_method" title="names (class method)">+ (Array&lt;String&gt;) <strong>names</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the names of loaded plugins.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#register-class_method" title="register (class method)">+ (Object) <strong>register</strong> </a>
     
 
@@ -284,7 +307,174 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="register-class_method">
+  <h3 class="signature first" id="names-class_method">
+  
+    + (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;String&gt;</tt>) <strong>names</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the names of loaded plugins.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The name and value pairs.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:context</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Groonga::Context.default</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The context which is bound to database.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 220</span>
+
+static VALUE
+rb_grn_plugin_s_names (int argc, VALUE *argv, VALUE klass)
+{
+    VALUE rb_options, rb_context, rb_names;
+    grn_ctx *context;
+    grn_obj names;
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_options);
+    rb_grn_scan_options(rb_options,
+                        &quot;context&quot;, &amp;rb_context,
+                        NULL);
+    if (NIL_P(rb_context)) {
+        rb_context = rb_grn_context_get_default();
+    }
+    context = RVAL2GRNCONTEXT(rb_context);
+
+    GRN_TEXT_INIT(&amp;names, GRN_OBJ_VECTOR);
+    grn_plugin_get_names(context, &amp;names);
+    rb_names = GRNVECTOR2RVAL(context, &amp;names);
+    GRN_OBJ_FIN(context, &amp;names);
+
+    rb_grn_context_check(context, rb_ary_new_from_values(argc, argv));
+    return rb_names;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register-class_method">
   
     
       <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(name, options = nil) </span>
@@ -433,7 +623,6 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-83
 84
 85
 86
@@ -472,10 +661,11 @@ pairs. Omitted names are initialized as the default value.</p>
 119
 120
 121
-122</pre>
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 83</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 84</span>
 
 static VALUE
 rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
@@ -587,14 +777,14 @@ rb_grn_plugin_s_register (int argc, VALUE *argv, VALUE klass)
       <pre class="lines">
 
 
-202
 203
 204
 205
-206</pre>
+206
+207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 202</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 203</span>
 
 static VALUE
 rb_grn_plugin_s_ruby_suffix (VALUE klass)
@@ -656,14 +846,14 @@ rb_grn_plugin_s_ruby_suffix (VALUE klass)
       <pre class="lines">
 
 
-188
 189
 190
 191
-192</pre>
+192
+193</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 188</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 189</span>
 
 static VALUE
 rb_grn_plugin_s_suffix (VALUE klass)
@@ -725,14 +915,14 @@ rb_grn_plugin_s_suffix (VALUE klass)
       <pre class="lines">
 
 
-176
 177
 178
 179
-180</pre>
+180
+181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 176</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 177</span>
 
 static VALUE
 rb_grn_plugin_s_system_plugins_dir (VALUE klass)
@@ -867,7 +1057,6 @@ You can specify the path of plugin explicitly.</p>
       <pre class="lines">
 
 
-145
 146
 147
 148
@@ -890,10 +1079,11 @@ You can specify the path of plugin explicitly.</p>
 165
 166
 167
-168</pre>
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 145</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-plugin.c', line 146</span>
 
 static VALUE
 rb_grn_plugin_s_unregister (int argc, VALUE *argv, VALUE klass)
