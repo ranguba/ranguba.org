@@ -20,7 +20,11 @@
   </head>
   <body>
     <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) {
+      var hasFrames = false;
+      try {
+        hasFrames = window.top.frames.main ? true : false;
+      } catch (e) { }
+      if (hasFrames) {
         document.getElementById('base_target').target = 'main';
         document.body.className = 'frames';
       }
@@ -48,14 +52,14 @@
         
 
   <li class="r1 ">
-    <span class='object_link'><a href="Packnga/ReferenceTask.html#base_dir-instance_method" title="Packnga::ReferenceTask#base_dir (method)">#base_dir</a></span>
-    <small>Packnga::ReferenceTask</small>
+    <span class='object_link'><a href="Packnga/YARDTask.html#base_dir-instance_method" title="Packnga::YARDTask#base_dir (method)">#base_dir</a></span>
+    <small>Packnga::YARDTask</small>
   </li>
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Packnga/YARDTask.html#base_dir-instance_method" title="Packnga::YARDTask#base_dir (method)">#base_dir</a></span>
-    <small>Packnga::YARDTask</small>
+    <span class='object_link'><a href="Packnga/ReferenceTask.html#base_dir-instance_method" title="Packnga::ReferenceTask#base_dir (method)">#base_dir</a></span>
+    <small>Packnga::ReferenceTask</small>
   </li>
   
 
@@ -72,14 +76,14 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="Packnga/DocumentTask.html#initialize-instance_method" title="Packnga::DocumentTask#initialize (method)">#initialize</a></span>
-    <small>Packnga::DocumentTask</small>
+    <span class='object_link'><a href="Packnga/ReleaseTask.html#initialize-instance_method" title="Packnga::ReleaseTask#initialize (method)">#initialize</a></span>
+    <small>Packnga::ReleaseTask</small>
   </li>
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Packnga/ReleaseTask.html#initialize-instance_method" title="Packnga::ReleaseTask#initialize (method)">#initialize</a></span>
-    <small>Packnga::ReleaseTask</small>
+    <span class='object_link'><a href="Packnga/DocumentTask.html#initialize-instance_method" title="Packnga::DocumentTask#initialize (method)">#initialize</a></span>
+    <small>Packnga::DocumentTask</small>
   </li>
   
 
@@ -120,14 +124,14 @@
   
 
   <li class="r1 ">
-    <span class='object_link'><a href="Packnga/ReferenceTask.html#source_files-instance_method" title="Packnga::ReferenceTask#source_files (method)">#source_files</a></span>
-    <small>Packnga::ReferenceTask</small>
+    <span class='object_link'><a href="Packnga/YARDTask.html#source_files-instance_method" title="Packnga::YARDTask#source_files (method)">#source_files</a></span>
+    <small>Packnga::YARDTask</small>
   </li>
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="Packnga/YARDTask.html#source_files-instance_method" title="Packnga::YARDTask#source_files (method)">#source_files</a></span>
-    <small>Packnga::YARDTask</small>
+    <span class='object_link'><a href="Packnga/ReferenceTask.html#source_files-instance_method" title="Packnga::ReferenceTask#source_files (method)">#source_files</a></span>
+    <small>Packnga::ReferenceTask</small>
   </li>
   
 
