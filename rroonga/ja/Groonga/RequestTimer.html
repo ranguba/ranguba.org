@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="icon" href="../../../favicon.png" />
+    <title>
+  Module: Groonga::RequestTimer
+  
+    &mdash; rroonga
+  
+ - ラングバ</title>
+
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!Groonga/RequestTimer.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+<div class="header">
+  <div class="title">
+    <a href="../../../ja/">
+      <span class="title">
+  Module: Groonga::RequestTimer
+  
+    &mdash; rroonga
+  
+</span>
+      <span class="title-separator">-</span>
+      <span class="title-project">ラングバ</span>
+    </a>
+  </div>
+  <ul class="other-languages">
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../rroonga/en/Groonga/RequestTimer.html">English</a></li>
+  </ul>
+  <ul class="menu">
+    <li id="menu-reference"><a href="../../../rroonga/ja/">リファレンスマニュアル</a></li>
+    <li id="menu-tutorial"><a href="../../../rroonga/ja/file.tutorial.html">チュートリアル</a></li>
+    <li id="menu-install"><a href="../../../ja/#install-rroonga">インストール</a></li>
+    <li id="menu-developer"><a href="../../../ja/developer.html">開発者向け情報</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../alphabetical_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
+     &raquo; 
+    <span class="title">RequestTimer</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Groonga::RequestTimer
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">ext/groonga/rb-grn-request-timer.c<span class="defines">,<br />
+  ext/groonga/rb-grn-request-timer.c</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>This module provides API for canceling requests after the specified
+time.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_timeout-class_method" title="default_timeout (class method)">+ (Float) <strong>default_timeout</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Gets the default timeout used by request timer.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_timeout%3D-class_method" title="default_timeout= (class method)">+ (Float, void) <strong>default_timeout=</strong>(timeout) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the default timeout used by request timer.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register-class_method" title="register (class method)">+ (Groonga::RequestTimerID) <strong>register</strong>(request_id, timeout = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Registers a request with timeout.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unregister-class_method" title="unregister (class method)">+ (void) <strong>unregister</strong>(timer_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Unregisters the specified request timer.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="default_timeout-class_method">
+  
+    + (<tt>Float</tt>) <strong>default_timeout</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Gets the default timeout used by request timer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Gets the default timeout</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_default_timeout'>default_timeout</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns The default timeout used by request timer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The default timeout used by request timer.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-request-timer.c', line 108</span>
+
+static VALUE
+rb_grn_request_timer_s_get_default_timeout (VALUE module)
+{
+    double timeout;
+
+    timeout = grn_get_default_request_timeout();
+
+    return rb_float_new(timeout);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_timeout=-class_method">
+  
+    + (<tt>Float</tt>, <tt>void</tt>) <strong>default_timeout=</strong>(timeout) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets the default timeout used by request timer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Sets the default timeout</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_default_timeout'>default_timeout</span> <span class='op'>=</span> <span class='float'>2.9</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The default timeout used by request timer. If
+<code>timeout</code> is <code>0.0</code>, the default timeout is disabled.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>void</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-request-timer.c', line 131</span>
+
+static VALUE
+rb_grn_request_timer_s_set_default_timeout (VALUE module, VALUE rb_timeout)
+{
+    double timeout;
+
+    timeout = NUM2DBL(rb_timeout);
+    grn_set_default_request_timeout(timeout);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register-class_method">
+  
+    + (<tt><span class='object_link'><a href="RequestTimerID.html" title="Groonga::RequestTimerID (class)">Groonga::RequestTimerID</a></span></tt>) <strong>register</strong>(request_id, timeout = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Registers a request with timeout. If the request isn’t finished
+after the specified timeout, the request is canceled.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Register a request that will be timed out after 2.9 seconds</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_request_id'>request_id</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>request-29</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_timeout_in_second'>timeout_in_second</span> <span class='op'>=</span> <span class='float'>2.9</span>
+<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_request_id'>request_id</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout_in_second'>timeout_in_second</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns The ID of the request timer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>request_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ID of request to be registered.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>timeout</span>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>[Float, nil] The timeout in second. If
+<code>timeout</code> is <code>nil</code>, <span class='object_link'><a href="#default_timeout-class_method" title="Groonga::RequestTimer.default_timeout (method)">default_timeout</a></span> is
+used.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="RequestTimerID.html" title="Groonga::RequestTimerID (class)">Groonga::RequestTimerID</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ID of the request timer.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-request-timer.c', line 48</span>
+
+static VALUE
+rb_grn_request_timer_s_register (int argc, VALUE *argv, VALUE module)
+{
+    VALUE rb_request_id;
+    VALUE rb_timeout;
+    const char *request_id;
+    unsigned int request_id_size;
+    double timeout;
+    void *timer_id;
+
+    rb_scan_args(argc, argv, &quot;11&quot;, &amp;rb_request_id, &amp;rb_timeout);
+
+    request_id = StringValuePtr(rb_request_id);
+    request_id_size = RSTRING_LEN(rb_request_id);
+    if (NIL_P(rb_timeout)) {
+      timeout = grn_get_default_request_timeout();
+    } else {
+      timeout = NUM2DBL(rb_timeout);
+    }
+    timer_id = grn_request_timer_register(request_id, request_id_size, timeout);
+
+    return GRN_REQUEST_TIMER_ID2RVAL(timer_id);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unregister-class_method">
+  
+    + (<tt>void</tt>) <strong>unregister</strong>(timer_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Unregisters the specified request timer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Unregister a request timer by ID</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_timer_id'>timer_id</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>request-29</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='float'>2.9</span><span class='rparen'>)</span>
+<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_unregister'>unregister</span><span class='lparen'>(</span><span class='id identifier rubyid_timer_id'>timer_id</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>timer_id</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="RequestTimerID.html" title="Groonga::RequestTimerID (class)">Groonga::RequestTimerID</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ID of request timer
+to be unregistered.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-request-timer.c', line 86</span>
+
+static VALUE
+rb_grn_request_timer_s_unregister (VALUE module, VALUE rb_timer_id)
+{
+    void *timer_id;
+
+    timer_id = RVAL2GRN_REQUEST_TIMER_ID(rb_timer_id);
+    grn_request_timer_unregister(timer_id);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Tue Jun 14 15:21:51 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.3.1).
+</div>
+
+  
+    </div>
+
+    <div class="sponsors">
+      <p id="sponsor-github">
+        <a href="http://github.com/ranguba/">
+          <img src="../../../github-logo.png" width="100" height="45" border="0" alt="ラングバプロジェクトはGitHubにホスティングしてもらっています。" />
+        </a>
+      </p>
+      <p id="sponsor-tango">
+	<a href="http://tango.freedesktop.org/">
+          <img width="120" height="53" border="0" alt="Tango Desktop Projectのアイコンを利用しています。" src="../../../tango-logo.png" />
+        </a>
+      </p>
+    </div>
+
+</body>
+</html>

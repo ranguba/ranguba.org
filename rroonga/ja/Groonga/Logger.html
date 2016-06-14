@@ -1787,7 +1787,7 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
         if (!NIL_P(rb_logger)) {
             rb_options = rb_logger;
         }
-        rb_logger = rb_funcall(cGrnCallbackLogger, id_new, 1, rb_callback);
+        rb_logger = rb_funcall(rb_cGrnCallbackLogger, id_new, 1, rb_callback);
     }
 
     rb_grn_scan_options(rb_options,
@@ -1815,7 +1815,7 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
         flags |= GRN_LOG_LOCATION;
     }
     if (!NIL_P(rb_flags)) {
-        flags = rb_funcall(mGrnLoggerFlags, id_parse, 2,
+        flags = rb_funcall(rb_mGrnLoggerFlags, id_parse, 2,
                            INT2NUM(flags), rb_flags);
     }
 
@@ -2354,9 +2354,9 @@ rb_grn_logger_s_unregister (VALUE klass)
 </div>
 
     <div id="footer">
-  Generated on Mon Mar  7 08:52:02 2016 by
+  Generated on Tue Jun 14 15:21:51 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.3.0).
+  0.8.7.6 (ruby-2.3.1).
 </div>
 
   

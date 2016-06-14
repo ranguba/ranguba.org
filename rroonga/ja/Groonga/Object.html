@@ -603,7 +603,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove-instance_method" title="#remove (instance method)">- (Object) <strong>remove</strong> </a>
+      <a href="#remove-instance_method" title="#remove (instance method)">- (Object) <strong>remove</strong>(options = {}) </a>
     
 
     
@@ -617,7 +617,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p><em>object</em> をメモリから解放し、それが永続オブジェクトであっ た場合は、該当するファイル一式を削除する。.</p>
+    <span class="summary_desc"><div class='inline'><p>Free the <code>object</code>.</p>
 </div></span>
   
 </li>
@@ -756,6 +756,29 @@
 
   
     <span class="summary_desc"><div class='inline'><p><em>object</em> のリファレンスカウンタを1減少する。.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#window_function_procedure%3F-instance_method" title="#window_function_procedure? (instance method)">- (Boolean) <strong>window_function_procedure?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is windows function procedure or not.</p>
 </div></span>
   
 </li>
@@ -1190,25 +1213,25 @@ rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1668
-1669
-1670
-1671
-1672
-1673
-1674
-1675
-1676
-1677
-1678
-1679
-1680
-1681
-1682
-1683</pre>
+1717
+1718
+1719
+1720
+1721
+1722
+1723
+1724
+1725
+1726
+1727
+1728
+1729
+1730
+1731
+1732</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1668</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1717</span>
 
 static VALUE
 rb_grn_object_accessor_p (VALUE self)
@@ -1315,25 +1338,25 @@ rb_grn_object_append_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1488
-1489
-1490
-1491
-1492
-1493
-1494
-1495
-1496
-1497
-1498
-1499
-1500
-1501
-1502
-1503</pre>
+1510
+1511
+1512
+1513
+1514
+1515
+1516
+1517
+1518
+1519
+1520
+1521
+1522
+1523
+1524
+1525</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1488</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1510</span>
 
 static VALUE
 rb_grn_object_builtin_p (VALUE self)
@@ -1686,25 +1709,25 @@ rb_grn_object_get_domain (VALUE self)
       <pre class="lines">
 
 
-1564
-1565
-1566
-1567
-1568
-1569
-1570
-1571
-1572
-1573
-1574
-1575
-1576
-1577
-1578
-1579</pre>
+1586
+1587
+1588
+1589
+1590
+1591
+1592
+1593
+1594
+1595
+1596
+1597
+1598
+1599
+1600
+1601</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1564</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1586</span>
 
 static VALUE
 rb_grn_object_function_procedure_p (VALUE self)
@@ -2007,25 +2030,25 @@ rb_grn_object_inspect (VALUE self)
       <pre class="lines">
 
 
-1704
-1705
-1706
-1707
-1708
-1709
-1710
-1711
-1712
-1713
-1714
-1715
-1716
-1717
-1718
-1719</pre>
+1753
+1754
+1755
+1756
+1757
+1758
+1759
+1760
+1761
+1762
+1763
+1764
+1765
+1766
+1767
+1768</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1704</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1753</span>
 
 static VALUE
 rb_grn_object_key_accessor_p (VALUE self)
@@ -2451,25 +2474,25 @@ rb_grn_object_prepend_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1538
-1539
-1540
-1541
-1542
-1543
-1544
-1545
-1546
-1547
-1548
-1549
-1550
-1551
-1552
-1553</pre>
+1560
+1561
+1562
+1563
+1564
+1565
+1566
+1567
+1568
+1569
+1570
+1571
+1572
+1573
+1574
+1575</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1538</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1560</span>
 
 static VALUE
 rb_grn_object_procedure_p (VALUE self)
@@ -2612,7 +2635,7 @@ rb_grn_object_get_range (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="remove-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt>) <strong>remove</strong> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt>) <strong>remove</strong>(options = {}) 
   
 
   
@@ -2620,15 +2643,71 @@ rb_grn_object_get_range (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p><em>object</em> をメモリから解放し、それが永続オブジェクトであっ
-た場合は、該当するファイル一式を削除する。</p>
+    <p>Free the <code>object</code>. If the <code>object</code> is persistent object, all files
+related with the object are removed.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>::Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The optional parameters.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:dependent</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If it’s <code>true</code>, all tables and columns that depend on the
+<code>object</code>.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
 
 
 </div><table class="source_code">
@@ -2637,12 +2716,6 @@ rb_grn_object_get_range (VALUE self)
       <pre class="lines">
 
 
-1469
-1470
-1471
-1472
-1473
-1474
 1475
 1476
 1477
@@ -2654,23 +2727,61 @@ rb_grn_object_get_range (VALUE self)
 1483
 1484
 1485
-1486</pre>
+1486
+1487
+1488
+1489
+1490
+1491
+1492
+1493
+1494
+1495
+1496
+1497
+1498
+1499
+1500
+1501
+1502
+1503
+1504
+1505
+1506
+1507
+1508</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1469</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1475</span>
 
 static VALUE
-rb_grn_object_remove (VALUE self)
+rb_grn_object_remove (int argc, VALUE *argv, VALUE self)
 {
     RbGrnObject *rb_grn_object;
     grn_ctx *context;
+    VALUE rb_options;
+    VALUE rb_dependent_p;
+    grn_bool dependent_p = GRN_FALSE;
 
     rb_grn_object = SELF(self);
     if (!rb_grn_object-&gt;object)
         return Qnil;
 
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_options);
+    rb_grn_scan_options(rb_options,
+                        &quot;dependent&quot;, &amp;rb_dependent_p,
+                        NULL);
+
+    if (!NIL_P(rb_dependent_p)) {
+        dependent_p = RVAL2CBOOL(rb_dependent_p);
+    }
+
     context = rb_grn_object-&gt;context;
-    grn_obj_remove(context, rb_grn_object-&gt;object);
+    if (dependent_p) {
+        grn_obj_remove_dependent(context, rb_grn_object-&gt;object);
+    } else {
+        grn_obj_remove(context, rb_grn_object-&gt;object);
+    }
     rb_grn_context_check(context, self);
 
     rb_iv_set(self, &quot;@context&quot;, Qnil);
@@ -2766,25 +2877,25 @@ rb_grn_object_remove (VALUE self)
       <pre class="lines">
 
 
-1642
-1643
-1644
-1645
-1646
-1647
-1648
-1649
-1650
-1651
-1652
-1653
-1654
-1655
-1656
-1657</pre>
+1664
+1665
+1666
+1667
+1668
+1669
+1670
+1671
+1672
+1673
+1674
+1675
+1676
+1677
+1678
+1679</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1642</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1664</span>
 
 static VALUE
 rb_grn_object_scorer_procedure_p (VALUE self)
@@ -2891,25 +3002,25 @@ rb_grn_object_scorer_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1616
-1617
-1618
-1619
-1620
-1621
-1622
-1623
-1624
-1625
-1626
-1627
-1628
-1629
-1630
-1631</pre>
+1638
+1639
+1640
+1641
+1642
+1643
+1644
+1645
+1646
+1647
+1648
+1649
+1650
+1651
+1652
+1653</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1616</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1638</span>
 
 static VALUE
 rb_grn_object_selector_only_procedure_p (VALUE self)
@@ -3016,25 +3127,25 @@ rb_grn_object_selector_only_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1590
-1591
-1592
-1593
-1594
-1595
-1596
-1597
-1598
-1599
-1600
-1601
-1602
-1603
-1604
-1605</pre>
+1612
+1613
+1614
+1615
+1616
+1617
+1618
+1619
+1620
+1621
+1622
+1623
+1624
+1625
+1626
+1627</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1590</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1612</span>
 
 static VALUE
 rb_grn_object_selector_procedure_p (VALUE self)
@@ -3139,25 +3250,25 @@ rb_grn_object_selector_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1513
-1514
-1515
-1516
-1517
-1518
-1519
-1520
-1521
-1522
-1523
-1524
-1525
-1526
-1527
-1528</pre>
+1535
+1536
+1537
+1538
+1539
+1540
+1541
+1542
+1543
+1544
+1545
+1546
+1547
+1548
+1549
+1550</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1513</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1535</span>
 
 static VALUE
 rb_grn_object_table_p (VALUE self)
@@ -3328,14 +3439,141 @@ rb_grn_object_unlink (VALUE self)
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="window_function_procedure?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>window_function_procedure?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the object is windows function procedure or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is window function procedure,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is window function procedure,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1690
+1691
+1692
+1693
+1694
+1695
+1696
+1697
+1698
+1699
+1700
+1701
+1702
+1703
+1704
+1705
+1706</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1690</span>
+
+static VALUE
+rb_grn_object_window_function_procedure_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    grn_bool window_function_procedure_p = GRN_FALSE;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        window_function_procedure_p =
+            grn_obj_is_window_function_proc(context, object);
+    }
+
+    return CBOOL2RVAL(window_function_procedure_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on Mon Mar  7 08:52:06 2016 by
+  Generated on Tue Jun 14 15:21:55 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.3.0).
+  0.8.7.6 (ruby-2.3.1).
 </div>
 
   

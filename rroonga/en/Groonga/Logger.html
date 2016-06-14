@@ -1787,7 +1787,7 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
         if (!NIL_P(rb_logger)) {
             rb_options = rb_logger;
         }
-        rb_logger = rb_funcall(cGrnCallbackLogger, id_new, 1, rb_callback);
+        rb_logger = rb_funcall(rb_cGrnCallbackLogger, id_new, 1, rb_callback);
     }
 
     rb_grn_scan_options(rb_options,
@@ -1815,7 +1815,7 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
         flags |= GRN_LOG_LOCATION;
     }
     if (!NIL_P(rb_flags)) {
-        flags = rb_funcall(mGrnLoggerFlags, id_parse, 2,
+        flags = rb_funcall(rb_mGrnLoggerFlags, id_parse, 2,
                            INT2NUM(flags), rb_flags);
     }
 
