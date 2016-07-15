@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
     <title>
-  Module: Groonga::GrntestLog
+  Module: Groonga::ID
   
     &mdash; rroonga
   
@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
-  framesUrl = "../frames.html#!Groonga/GrntestLog.html";
+  framesUrl = "../frames.html#!Groonga/ID.html";
 </script>
 
 
@@ -36,7 +36,7 @@
   <div class="title">
     <a href="../../../ja/">
       <span class="title">
-  Module: Groonga::GrntestLog
+  Module: Groonga::ID
   
     &mdash; rroonga
   
@@ -46,7 +46,7 @@
     </a>
   </div>
   <ul class="other-languages">
-    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../rroonga/en/Groonga/GrntestLog.html">English</a></li>
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../rroonga/en/Groonga/ID.html">English</a></li>
   </ul>
   <ul class="menu">
     <li id="menu-reference"><a href="../../../rroonga/ja/">リファレンスマニュアル</a></li>
@@ -62,10 +62,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (G)</a> &raquo;
+    <a href="../alphabetical_index.html">Index (I)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
-    <span class="title">GrntestLog</span>
+    <span class="title">ID</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -94,7 +94,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Module: Groonga::GrntestLog
+    <div id="content"><h1>Module: Groonga::ID
   
   
   
@@ -110,29 +110,206 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/groonga/grntest-log.rb</dd>
+    <dd class="r1 last">ext/groonga/rb-grn-id.c</dd>
   
 </dl>
 <div class="clear"></div>
 
-<h2>Defined Under Namespace</h2>
-<p class="children">
+
+  <h2>Constant Summary</h2>
   
-    
+    <dl class="constants">
+      
+        <dt id="NIL-constant" class="">NIL =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>INT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_ID_NIL</span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="MAX-constant" class="">MAX =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>INT2NUM</span><span class='lparen'>(</span><span class='const'>GRN_ID_MAX</span><span class='rparen'>)</span></pre></dd>
+      
+    </dl>
   
-    
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="GrntestLog/EnvironmentEvent.html" title="Groonga::GrntestLog::EnvironmentEvent (class)">EnvironmentEvent</a></span>, <span class='object_link'><a href="GrntestLog/JobSummaryEvent.html" title="Groonga::GrntestLog::JobSummaryEvent (class)">JobSummaryEvent</a></span>, <span class='object_link'><a href="GrntestLog/JobsEndEvent.html" title="Groonga::GrntestLog::JobsEndEvent (class)">JobsEndEvent</a></span>, <span class='object_link'><a href="GrntestLog/JobsStartEvent.html" title="Groonga::GrntestLog::JobsStartEvent (class)">JobsStartEvent</a></span>, <span class='object_link'><a href="GrntestLog/Parser.html" title="Groonga::GrntestLog::Parser (class)">Parser</a></span>, <span class='object_link'><a href="GrntestLog/TaskEvent.html" title="Groonga::GrntestLog::TaskEvent (class)">TaskEvent</a></span>
-    
+
+
+
+
+
+
+
   
-</p>
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#builtin%3F-class_method" title="builtin? (class method)">+ (Boolean) <strong>builtin?</strong>(id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
 
 
 
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="builtin?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>builtin?</strong>(id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
 
 
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the <code>id</code> is builtin, <code>false</code> otherwise.</p>
 
 
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ID to be confirmed.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the <code>id</code> is builtin, <code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-id.c', line 34</span>
+
+static VALUE
+rb_grn_id_s_builtin_p (VALUE self, VALUE rb_id)
+{
+    grn_ctx *ctx = NULL;
+    grn_id id;
+
+    id = NUM2INT(rb_id);
+
+    return CBOOL2RVAL(grn_id_is_builtin(ctx, id));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 

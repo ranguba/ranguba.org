@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
     <title>
-  Exception: Groonga::SocketNotInitialized
+  Module: Groonga::Name
   
     &mdash; rroonga
   
@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
-  framesUrl = "../frames.html#!Groonga/SocketNotInitialized.html";
+  framesUrl = "../frames.html#!Groonga/Name.html";
 </script>
 
 
@@ -36,7 +36,7 @@
   <div class="title">
     <a href="../../../ja/">
       <span class="title">
-  Exception: Groonga::SocketNotInitialized
+  Module: Groonga::Name
   
     &mdash; rroonga
   
@@ -46,7 +46,7 @@
     </a>
   </div>
   <ul class="other-languages">
-    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../rroonga/en/Groonga/SocketNotInitialized.html">English</a></li>
+    <li id="other-language-english" lang="en" xml:lang="en"><a href="../../../rroonga/en/Groonga/Name.html">English</a></li>
   </ul>
   <ul class="menu">
     <li id="menu-reference"><a href="../../../rroonga/ja/">リファレンスマニュアル</a></li>
@@ -62,10 +62,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../alphabetical_index.html">Index (S)</a> &raquo;
+    <a href="../alphabetical_index.html">Index (N)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
-    <span class="title">SocketNotInitialized</span>
+    <span class="title">Name</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -94,7 +94,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Exception: Groonga::SocketNotInitialized
+    <div id="content"><h1>Module: Groonga::Name
   
   
   
@@ -102,25 +102,6 @@
 
 <dl class="box">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
-      <span class="inheritName"><span class='object_link'><a href="Error.html" title="Groonga::Error (class)">Error</a></span></span>
-      
-        <ul class="fullTree">
-          <li>Object</li>
-          
-            <li class="next">StandardError</li>
-          
-            <li class="next"><span class='object_link'><a href="Error.html" title="Groonga::Error (class)">Error</a></span></li>
-          
-            <li class="next">Groonga::SocketNotInitialized</li>
-          
-        </ul>
-        <a href="#" class="inheritanceTree">show all</a>
-      
-      </dd>
-    
-  
   
     
   
@@ -128,44 +109,199 @@
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">ext/groonga/rb-grn-exception.c<span class="defines">,<br />
-  ext/groonga/rb-grn-exception.c</span>
-</dd>
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">ext/groonga/rb-grn-name.c</dd>
   
 </dl>
 <div class="clear"></div>
 
-<h2>Overview</h2><div class="docstring">
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#column%3F-class_method" title="column? (class method)">+ (Boolean) <strong>column?</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="column?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>column?</strong>(name) 
+  
+
+  
+
+  
+</h3><div class="docstring">
   <div class="discussion">
-    <p>ソケットが初期化されていないときに発生する。</p>
+    
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the <code>name</code> is column, <code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name to be confirmed.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the <code>name</code> is column, <code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
 
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-name.c', line 34</span>
 
+static VALUE
+rb_grn_name_s_column_p (VALUE self, VALUE rb_name)
+{
+    grn_ctx *ctx = NULL;
+    const char *name;
+    size_t name_size;
 
+    name = StringValueCStr(rb_name);
+    name_size = RSTRING_LEN(rb_name);
 
-
-  
-  
-  
-  
-  
-  
-  
+    return CBOOL2RVAL(grn_obj_name_is_column(ctx, name, name_size));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 
     <div id="footer">
-  Generated on Fri Jul 15 20:00:59 2016 by
+  Generated on Fri Jul 15 20:00:54 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.3.1).
 </div>

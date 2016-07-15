@@ -350,6 +350,52 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#column%3F-instance_method" title="#column? (instance method)">- (Boolean) <strong>column?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is column or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dirty%3F-instance_method" title="#dirty? (instance method)">- (Boolean) <strong>dirty?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#domain-instance_method" title="#domain (instance method)">- (Groonga::Object or nil) <strong>domain</strong> </a>
     
 
@@ -419,6 +465,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#index_column%3F-instance_method" title="#index_column? (instance method)">- (Boolean) <strong>index_column?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is index column or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#inspect-instance_method" title="#inspect (instance method)">- (詳細情報) <strong>inspect</strong> </a>
     
 
@@ -457,6 +526,29 @@
 
   
     <span class="summary_desc"><div class='inline'><p>Checks whether the object is key accessor or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_modified-instance_method" title="#last_modified (instance method)">- (Time) <strong>last_modified</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -603,6 +695,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#reference_column%3F-instance_method" title="#reference_column? (instance method)">- (Boolean) <strong>reference_column?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is reference column or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#remove-instance_method" title="#remove (instance method)">- (Object) <strong>remove</strong>(options = {}) </a>
     
 
@@ -733,6 +848,29 @@
 
   
     <span class="summary_desc"><div class='inline'><p><em>object</em> が一時オブジェクトなら +true+ 、永続オブジェクトな ら +false+ を返す。.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#touch-instance_method" title="#touch (instance method)">- (void) <strong>touch</strong>(time = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Update the last modified time of the <code>object</code>.</p>
 </div></span>
   
 </li>
@@ -1213,25 +1351,25 @@ rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1717
-1718
-1719
-1720
-1721
-1722
-1723
-1724
-1725
-1726
-1727
-1728
-1729
-1730
-1731
-1732</pre>
+1794
+1795
+1796
+1797
+1798
+1799
+1800
+1801
+1802
+1803
+1804
+1805
+1806
+1807
+1808
+1809</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1717</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1794</span>
 
 static VALUE
 rb_grn_object_accessor_p (VALUE self)
@@ -1511,6 +1649,244 @@ rb_grn_object_closed_p (VALUE self)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="column?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>column?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the object is column or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is column, <code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is column, <code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1560
+1561
+1562
+1563
+1564
+1565
+1566
+1567
+1568
+1569
+1570
+1571
+1572
+1573
+1574
+1575</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1560</span>
+
+static VALUE
+rb_grn_object_column_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    grn_bool column_p = GRN_FALSE;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        column_p = grn_obj_is_column(context, object);
+    }
+
+    return CBOOL2RVAL(column_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dirty?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>dirty?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object isn’t flushed after the last change.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object isn’t flushed after the last change.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1912
+1913
+1914
+1915
+1916
+1917
+1918
+1919
+1920
+1921
+1922
+1923</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1912</span>
+
+static VALUE
+rb_grn_object_dirty_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    grn_bool is_dirty;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+    is_dirty = grn_obj_is_dirty(context, object);
+    return CBOOL2RVAL(is_dirty);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="domain-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt>) <strong>domain</strong> 
@@ -1709,25 +2085,25 @@ rb_grn_object_get_domain (VALUE self)
       <pre class="lines">
 
 
-1586
-1587
-1588
-1589
-1590
-1591
-1592
-1593
-1594
-1595
-1596
-1597
-1598
-1599
-1600
-1601</pre>
+1663
+1664
+1665
+1666
+1667
+1668
+1669
+1670
+1671
+1672
+1673
+1674
+1675
+1676
+1677
+1678</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1586</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1663</span>
 
 static VALUE
 rb_grn_object_function_procedure_p (VALUE self)
@@ -1753,7 +2129,7 @@ rb_grn_object_function_procedure_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="id-instance_method">
   
-    - (<tt>ID or nil</tt>) <strong>id</strong> 
+    - (<tt><span class='object_link'><a href="ID.html" title="Groonga::ID (module)">ID</a></span> or nil</tt>) <strong>id</strong> 
   
 
   
@@ -1784,7 +2160,7 @@ rb_grn_object_function_procedure_p (VALUE self)
     <li>
       
       
-        <span class='type'>(<tt>ID or nil</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="ID.html" title="Groonga::ID (module)">ID</a></span> or nil</tt>)</span>
       
       
       
@@ -1836,6 +2212,131 @@ rb_grn_object_get_id (VALUE self)
         return Qnil;
     else
         return UINT2NUM(id);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="index_column?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>index_column?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the object is index column or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is index column,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is index column,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1612
+1613
+1614
+1615
+1616
+1617
+1618
+1619
+1620
+1621
+1622
+1623
+1624
+1625
+1626
+1627</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1612</span>
+
+static VALUE
+rb_grn_object_index_column_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    grn_bool index_column_p = GRN_FALSE;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        index_column_p = grn_obj_is_index_column(context, object);
+    }
+
+    return CBOOL2RVAL(index_column_p);
 }</pre>
     </td>
   </tr>
@@ -2030,25 +2531,25 @@ rb_grn_object_inspect (VALUE self)
       <pre class="lines">
 
 
-1753
-1754
-1755
-1756
-1757
-1758
-1759
-1760
-1761
-1762
-1763
-1764
-1765
-1766
-1767
-1768</pre>
+1830
+1831
+1832
+1833
+1834
+1835
+1836
+1837
+1838
+1839
+1840
+1841
+1842
+1843
+1844
+1845</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1753</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1830</span>
 
 static VALUE
 rb_grn_object_key_accessor_p (VALUE self)
@@ -2065,6 +2566,108 @@ rb_grn_object_key_accessor_p (VALUE self)
     }
 
     return CBOOL2RVAL(key_accessor_p);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="last_modified-instance_method">
+  
+    - (<tt>Time</tt>) <strong>last_modified</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns The last modified time of the object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Time</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The last modified time of the object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1892
+1893
+1894
+1895
+1896
+1897
+1898
+1899
+1900
+1901
+1902
+1903</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1892</span>
+
+static VALUE
+rb_grn_object_get_last_modified (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    uint32_t last_modified;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+    last_modified = grn_obj_get_last_modified(context, object);
+    return rb_funcall(rb_cTime, rb_intern(&quot;at&quot;), 1, UINT2NUM(last_modified));
 }</pre>
     </td>
   </tr>
@@ -2474,25 +3077,25 @@ rb_grn_object_prepend_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1560
-1561
-1562
-1563
-1564
-1565
-1566
-1567
-1568
-1569
-1570
-1571
-1572
-1573
-1574
-1575</pre>
+1637
+1638
+1639
+1640
+1641
+1642
+1643
+1644
+1645
+1646
+1647
+1648
+1649
+1650
+1651
+1652</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1560</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1637</span>
 
 static VALUE
 rb_grn_object_procedure_p (VALUE self)
@@ -2626,6 +3229,131 @@ rb_grn_object_get_range (VALUE self)
         else
             return UINT2NUM(range);
     }
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reference_column?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>reference_column?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the object is reference column or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is reference column,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is reference column,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1586
+1587
+1588
+1589
+1590
+1591
+1592
+1593
+1594
+1595
+1596
+1597
+1598
+1599
+1600
+1601</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1586</span>
+
+static VALUE
+rb_grn_object_reference_column_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    grn_bool reference_column_p = GRN_FALSE;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        reference_column_p = grn_obj_is_reference_column(context, object);
+    }
+
+    return CBOOL2RVAL(reference_column_p);
 }</pre>
     </td>
   </tr>
@@ -2877,25 +3605,25 @@ rb_grn_object_remove (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1664
-1665
-1666
-1667
-1668
-1669
-1670
-1671
-1672
-1673
-1674
-1675
-1676
-1677
-1678
-1679</pre>
+1741
+1742
+1743
+1744
+1745
+1746
+1747
+1748
+1749
+1750
+1751
+1752
+1753
+1754
+1755
+1756</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1664</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1741</span>
 
 static VALUE
 rb_grn_object_scorer_procedure_p (VALUE self)
@@ -3002,25 +3730,25 @@ rb_grn_object_scorer_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1638
-1639
-1640
-1641
-1642
-1643
-1644
-1645
-1646
-1647
-1648
-1649
-1650
-1651
-1652
-1653</pre>
+1715
+1716
+1717
+1718
+1719
+1720
+1721
+1722
+1723
+1724
+1725
+1726
+1727
+1728
+1729
+1730</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1638</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1715</span>
 
 static VALUE
 rb_grn_object_selector_only_procedure_p (VALUE self)
@@ -3127,25 +3855,25 @@ rb_grn_object_selector_only_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1612
-1613
-1614
-1615
-1616
-1617
-1618
-1619
-1620
-1621
-1622
-1623
-1624
-1625
-1626
-1627</pre>
+1689
+1690
+1691
+1692
+1693
+1694
+1695
+1696
+1697
+1698
+1699
+1700
+1701
+1702
+1703
+1704</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1612</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1689</span>
 
 static VALUE
 rb_grn_object_selector_procedure_p (VALUE self)
@@ -3364,6 +4092,144 @@ rb_grn_object_temporary_p (VALUE self)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="touch-instance_method">
+  
+    - (<tt>void</tt>) <strong>touch</strong>(time = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Update the last modified time of the <code>object</code>. It’s meaningful only
+for persistent database, table and column.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>time</span>
+      
+      
+        <span class='type'>(<tt>Time</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>(nil) The last modified time.
+If <code>time</code> is <code>nil</code>, the current time is used.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.5</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1858
+1859
+1860
+1861
+1862
+1863
+1864
+1865
+1866
+1867
+1868
+1869
+1870
+1871
+1872
+1873
+1874
+1875
+1876
+1877
+1878
+1879
+1880
+1881
+1882
+1883
+1884</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1858</span>
+
+static VALUE
+rb_grn_object_touch (int argc, VALUE *argv, VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    VALUE rb_time;
+    grn_timeval time_buffer;
+    grn_timeval *time = NULL;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+    if (!context || !object) {
+        return Qnil;
+    }
+
+    rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_time);
+    if (!NIL_P(rb_time)) {
+        time_buffer.tv_sec = NUM2LONG(rb_funcall(rb_time, rb_intern(&quot;sec&quot;), 0));
+        time_buffer.tv_nsec = NUM2INT(rb_funcall(rb_time, rb_intern(&quot;nsec&quot;), 0));
+        time = &amp;time_buffer;
+    }
+
+    grn_obj_touch(context, object, time);
+    rb_grn_context_check(context, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="unlink-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unlink</strong> 
@@ -3523,26 +4389,26 @@ rb_grn_object_unlink (VALUE self)
       <pre class="lines">
 
 
-1690
-1691
-1692
-1693
-1694
-1695
-1696
-1697
-1698
-1699
-1700
-1701
-1702
-1703
-1704
-1705
-1706</pre>
+1767
+1768
+1769
+1770
+1771
+1772
+1773
+1774
+1775
+1776
+1777
+1778
+1779
+1780
+1781
+1782
+1783</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1690</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1767</span>
 
 static VALUE
 rb_grn_object_window_function_procedure_p (VALUE self)
