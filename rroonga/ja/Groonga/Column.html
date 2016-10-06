@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Groonga::Column";
   relpath = '../';
-  framesUrl = "../frames.html#!Groonga/Column.html";
 </script>
 
 
@@ -59,51 +58,50 @@
 <div class="content">
 
 
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="../alphabetical_index.html">Index (C)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Column</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="../class_list.html"></iframe>
 
-    <div id="content"><h1>Class: Groonga::Column
+      <div id="content"><h1>Class: Groonga::Column
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
@@ -116,27 +114,32 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
-      <dt class="r2">Includes:</dt>
-      <dd class="r2"><span class='object_link'><a href="Flushable.html" title="Groonga::Flushable (module)">Flushable</a></span></dd>
-      
-    
+
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">ext/groonga/rb-grn-column.c<span class="defines">,<br />
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Flushable.html" title="Groonga::Flushable (module)">Flushable</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>ext/groonga/rb-grn-column.c<span class="defines">,<br />
   lib/groonga/column.rb,<br /> ext/groonga/rb-grn-column.c</span>
 </dd>
+  </dl>
   
-</dl>
-<div class="clear"></div>
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -184,7 +187,7 @@
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -192,7 +195,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#clear_lock-instance_method" title="#clear_lock (instance method)">- (void) <strong>clear_lock</strong> </a>
+      <a href="#clear_lock-instance_method" title="#clear_lock (instance method)">#<strong>clear_lock</strong>  &#x21d2; void </a>
     
 
     
@@ -215,7 +218,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#disk_usage-instance_method" title="#disk_usage (instance method)">- (Object) <strong>disk_usage</strong> </a>
+      <a href="#disk_usage-instance_method" title="#disk_usage (instance method)">#<strong>disk_usage</strong>  &#x21d2; Object </a>
     
 
     
@@ -238,7 +241,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#find_indexes-instance_method" title="#find_indexes (instance method)">- (Array&lt;Groonga::Index&gt;) <strong>find_indexes</strong>(options = {}) </a>
+      <a href="#find_indexes-instance_method" title="#find_indexes (instance method)">#<strong>find_indexes</strong>(options = {})  &#x21d2; Array&lt;Groonga::Index&gt; </a>
     
 
     
@@ -261,7 +264,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#index_column%3F-instance_method" title="#index? (instance method)">- (Boolean) <strong>index?</strong> </a>
+      <a href="#index_column%3F-instance_method" title="#index? (instance method)">#<strong>index?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -286,7 +289,7 @@
         <li class="public deprecated">
   <span class="summary_signature">
     
-      <a href="#indexes-instance_method" title="#indexes (instance method)">- (Array&lt;Groonga::IndexColumn&gt;) <strong>indexes</strong>(operator = nil) </a>
+      <a href="#indexes-instance_method" title="#indexes (instance method)">#<strong>indexes</strong>(operator = nil)  &#x21d2; Array&lt;Groonga::IndexColumn&gt; </a>
     
 
     
@@ -309,7 +312,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#local_name-instance_method" title="#local_name (instance method)">- (Object) <strong>local_name</strong> </a>
+      <a href="#local_name-instance_method" title="#local_name (instance method)">#<strong>local_name</strong>  &#x21d2; Object </a>
     
 
     
@@ -332,7 +335,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#lock-instance_method" title="#lock (instance method)">- (Object) <strong>lock</strong> </a>
+      <a href="#lock-instance_method" title="#lock (instance method)">#<strong>lock</strong>  &#x21d2; Object </a>
     
 
     
@@ -355,7 +358,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#locked%3F-instance_method" title="#locked? (instance method)">- (Boolean) <strong>locked?</strong> </a>
+      <a href="#locked%3F-instance_method" title="#locked? (instance method)">#<strong>locked?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -378,7 +381,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reference_column%3F-instance_method" title="#reference? (instance method)">- (Boolean) <strong>reference?</strong> </a>
+      <a href="#reference_column%3F-instance_method" title="#reference? (instance method)">#<strong>reference?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -403,7 +406,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rename-instance_method" title="#rename (instance method)">- (Object) <strong>rename</strong>(name) </a>
+      <a href="#rename-instance_method" title="#rename (instance method)">#<strong>rename</strong>(name)  &#x21d2; Object </a>
     
 
     
@@ -426,7 +429,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#scalar%3F-instance_method" title="#scalar? (instance method)">- (Boolean) <strong>scalar?</strong> </a>
+      <a href="#scalar%3F-instance_method" title="#scalar? (instance method)">#<strong>scalar?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -449,7 +452,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#select-instance_method" title="#select (instance method)">- (Groonga::Hash) <strong>select</strong> </a>
+      <a href="#select-instance_method" title="#select (instance method)">#<strong>select</strong>  &#x21d2; Groonga::Hash </a>
     
 
     
@@ -472,7 +475,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#table-instance_method" title="#table (instance method)">- (Groonga::Table) <strong>table</strong> </a>
+      <a href="#table-instance_method" title="#table (instance method)">#<strong>table</strong>  &#x21d2; Groonga::Table </a>
     
 
     
@@ -495,7 +498,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#truncate-instance_method" title="#truncate (instance method)">- (Object) <strong>truncate</strong> </a>
+      <a href="#truncate-instance_method" title="#truncate (instance method)">#<strong>truncate</strong>  &#x21d2; Object </a>
     
 
     
@@ -518,7 +521,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unlock-instance_method" title="#unlock (instance method)">- (Object) <strong>unlock</strong>(options = {}) </a>
+      <a href="#unlock-instance_method" title="#unlock (instance method)">#<strong>unlock</strong>(options = {})  &#x21d2; Object </a>
     
 
     
@@ -541,7 +544,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#vector%3F-instance_method" title="#vector? (instance method)">- (Boolean) <strong>vector?</strong> </a>
+      <a href="#vector%3F-instance_method" title="#vector? (instance method)">#<strong>vector?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -564,7 +567,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#with_weight%3F-instance_method" title="#with_weight? (instance method)">- (Boolean) <strong>with_weight?</strong> </a>
+      <a href="#with_weight%3F-instance_method" title="#with_weight? (instance method)">#<strong>with_weight?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -618,7 +621,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="clear_lock-instance_method">
   
-    - (<tt>void</tt>) <strong>clear_lock</strong> 
+    #<strong>clear_lock</strong>  &#x21d2; <tt>void</tt> 
   
 
   
@@ -652,8 +655,6 @@
       <pre class="lines">
 
 
-510
-511
 512
 513
 514
@@ -665,10 +666,12 @@
 520
 521
 522
-523</pre>
+523
+524
+525</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 510</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 512</span>
 
 static VALUE
 rb_grn_column_clear_lock (VALUE self)
@@ -692,7 +695,7 @@ rb_grn_column_clear_lock (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="disk_usage-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>disk_usage</strong> 
+    #<strong>disk_usage</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -724,7 +727,7 @@ rb_grn_column_clear_lock (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="find_indexes-instance_method">
   
-    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Index.html" title="Groonga::Index (class)">Groonga::Index</a></span>&gt;</tt>) <strong>find_indexes</strong>(options = {}) 
+    #<strong>find_indexes</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Index.html" title="Groonga::Index (class)">Groonga::Index</a></span>&gt;</tt> 
   
 
   
@@ -759,7 +762,7 @@ are returned.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -841,12 +844,6 @@ executable by indexes. <code>nil</code> means that all operators.</p>
       <pre class="lines">
 
 
-728
-729
-730
-731
-732
-733
 734
 735
 736
@@ -896,10 +893,16 @@ executable by indexes. <code>nil</code> means that all operators.</p>
 780
 781
 782
-783</pre>
+783
+784
+785
+786
+787
+788
+789</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 728</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 734</span>
 
 static VALUE
 rb_grn_column_find_indexes (int argc, VALUE *argv, VALUE self)
@@ -965,7 +968,7 @@ rb_grn_column_find_indexes (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="index?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>index?</strong> 
+    #<strong>index?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1022,8 +1025,6 @@ rb_grn_column_find_indexes (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-617
-618
 619
 620
 621
@@ -1037,10 +1038,12 @@ rb_grn_column_find_indexes (int argc, VALUE *argv, VALUE self)
 629
 630
 631
-632</pre>
+632
+633
+634</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 617</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 619</span>
 
 static VALUE
 rb_grn_column_index_p (VALUE self)
@@ -1066,7 +1069,7 @@ rb_grn_column_index_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="indexes-instance_method">
   
-    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span>&gt;</tt>) <strong>indexes</strong>(operator = nil) 
+    #<strong>indexes</strong>(operator = nil)  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span>&gt;</tt> 
   
 
   
@@ -1169,7 +1172,7 @@ execute <code>operator</code>.</p>
       <div class="method_details ">
   <h3 class="signature " id="local_name-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>local_name</strong> 
+    #<strong>local_name</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -1204,8 +1207,6 @@ execute <code>operator</code>.</p>
       <pre class="lines">
 
 
-165
-166
 167
 168
 169
@@ -1228,10 +1229,12 @@ execute <code>operator</code>.</p>
 186
 187
 188
-189</pre>
+189
+190
+191</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 165</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 167</span>
 
 static VALUE
 rb_grn_column_get_local_name (VALUE self)
@@ -1267,9 +1270,9 @@ rb_grn_column_get_local_name (VALUE self)
   <h3 class="signature " id="lock-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) </span>
+      <span class="overload">#<strong>lock</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) { ... }</span>
+      <span class="overload">#<strong>lock</strong>(options = {}) { ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
     
   
 
@@ -1291,7 +1294,7 @@ rb_grn_column_get_local_name (VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) </span>
+        <span class="signature">#<strong>lock</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1308,7 +1311,7 @@ rb_grn_column_get_local_name (VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -1364,7 +1367,7 @@ rb_grn_column_get_local_name (VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) { ... }</span>
+        <span class="signature">#<strong>lock</strong>(options = {}) { ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1381,7 +1384,7 @@ rb_grn_column_get_local_name (VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -1461,8 +1464,6 @@ rb_grn_column_get_local_name (VALUE self)
       <pre class="lines">
 
 
-466
-467
 468
 469
 470
@@ -1497,10 +1498,12 @@ rb_grn_column_get_local_name (VALUE self)
 499
 500
 501
-502</pre>
+502
+503
+504</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 466</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 468</span>
 
 static VALUE
 rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
@@ -1547,7 +1550,7 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="locked?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>locked?</strong> 
+    #<strong>locked?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1611,8 +1614,6 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-531
-532
 533
 534
 535
@@ -1622,10 +1623,12 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
 539
 540
 541
-542</pre>
+542
+543
+544</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 531</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 533</span>
 
 static VALUE
 rb_grn_column_locked_p (VALUE self)
@@ -1647,7 +1650,7 @@ rb_grn_column_locked_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="reference?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>reference?</strong> 
+    #<strong>reference?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1704,8 +1707,6 @@ rb_grn_column_locked_p (VALUE self)
       <pre class="lines">
 
 
-552
-553
 554
 555
 556
@@ -1729,10 +1730,12 @@ rb_grn_column_locked_p (VALUE self)
 574
 575
 576
-577</pre>
+577
+578
+579</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 552</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 554</span>
 
 static VALUE
 rb_grn_column_reference_p (VALUE self)
@@ -1768,7 +1771,7 @@ rb_grn_column_reference_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="rename-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>rename</strong>(name) 
+    #<strong>rename</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -1836,12 +1839,6 @@ rb_grn_column_reference_p (VALUE self)
       <pre class="lines">
 
 
-791
-792
-793
-794
-795
-796
 797
 798
 799
@@ -1858,10 +1855,16 @@ rb_grn_column_reference_p (VALUE self)
 810
 811
 812
-813</pre>
+813
+814
+815
+816
+817
+818
+819</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 791</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 797</span>
 
 static VALUE
 rb_grn_column_rename (VALUE self, VALUE rb_name)
@@ -1894,7 +1897,7 @@ rb_grn_column_rename (VALUE self, VALUE rb_name)
       <div class="method_details ">
   <h3 class="signature " id="scalar?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>scalar?</strong> 
+    #<strong>scalar?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -1947,10 +1950,6 @@ rb_grn_column_rename (VALUE self, VALUE rb_name)
       <pre class="lines">
 
 
-669
-670
-671
-672
 673
 674
 675
@@ -1970,32 +1969,34 @@ rb_grn_column_rename (VALUE self, VALUE rb_name)
 689
 690
 691
-692</pre>
+692
+693
+694
+695</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 669</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 673</span>
 
 static VALUE
 rb_grn_column_scalar_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *column;
+    grn_column_flags flags;
+    grn_column_flags column_type;
 
     rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
                              NULL, NULL,
                              NULL, NULL, NULL);
 
     switch (column-&gt;header.type) {
-      case GRN_COLUMN_FIX_SIZE:
+    case GRN_COLUMN_FIX_SIZE:
         return Qtrue;
-      case GRN_COLUMN_VAR_SIZE:
-        if ((column-&gt;header.flags &amp; GRN_OBJ_COLUMN_TYPE_MASK) ==
-            GRN_OBJ_COLUMN_SCALAR) {
-            return Qtrue;
-        } else {
-            return Qfalse;
-        }
-      default:
+    case GRN_COLUMN_VAR_SIZE:
+        flags = grn_column_get_flags(context, column);
+        column_type = (flags &amp; GRN_OBJ_COLUMN_TYPE_MASK);
+        return CBOOL2RVAL(column_type == GRN_OBJ_COLUMN_SCALAR);
+    default:
         return Qfalse;
     }
 }</pre>
@@ -2008,11 +2009,11 @@ rb_grn_column_scalar_p (VALUE self)
   <h3 class="signature " id="select-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(options) {|record| ... }</span>
+      <span class="overload">#<strong>select</strong>(options) {|record| ... } &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(query, options) </span>
+      <span class="overload">#<strong>select</strong>(query, options)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(expression, options) </span>
+      <span class="overload">#<strong>select</strong>(expression, options)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
     
   
 
@@ -2067,7 +2068,7 @@ rb_grn_column_scalar_p (VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(options) {|record| ... }</span>
+        <span class="signature">#<strong>select</strong>(options) {|record| ... } &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -2084,7 +2085,7 @@ rb_grn_column_scalar_p (VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
       
@@ -2273,7 +2274,7 @@ query構文時にカラム指定を利用するかどうか。省略した場合
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(query, options) </span>
+        <span class="signature">#<strong>select</strong>(query, options)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -2329,7 +2330,7 @@ query構文時にカラム指定を利用するかどうか。省略した場合
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
       
@@ -2491,7 +2492,7 @@ query構文時にカラム指定を利用するかどうか。省略した場合
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(expression, options) </span>
+        <span class="signature">#<strong>select</strong>(expression, options)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -2524,7 +2525,7 @@ query構文時にカラム指定を利用するかどうか。省略した場合
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
       
@@ -2710,8 +2711,6 @@ query構文時にカラム指定を利用するかどうか。省略した場合
       <pre class="lines">
 
 
-319
-320
 321
 322
 323
@@ -2793,10 +2792,12 @@ query構文時にカラム指定を利用するかどうか。省略した場合
 399
 400
 401
-402</pre>
+402
+403
+404</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 319</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 321</span>
 
 static VALUE
 rb_grn_column_select (int argc, VALUE *argv, VALUE self)
@@ -2890,7 +2891,7 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="table-instance_method">
   
-    - (<tt><span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span></tt>) <strong>table</strong> 
+    #<strong>table</strong>  &#x21d2; <tt><span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span></tt> 
   
 
   
@@ -2937,8 +2938,6 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-139
-140
 141
 142
 143
@@ -2951,10 +2950,12 @@ rb_grn_column_select (int argc, VALUE *argv, VALUE self)
 150
 151
 152
-153</pre>
+153
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 139</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 141</span>
 
 static VALUE
 rb_grn_column_get_table (VALUE self)
@@ -2979,7 +2980,7 @@ rb_grn_column_get_table (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="truncate-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>truncate</strong> 
+    #<strong>truncate</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -3049,8 +3050,6 @@ the column must re-open its database after this method is done.</p>
       <pre class="lines">
 
 
-591
-592
 593
 594
 595
@@ -3065,10 +3064,12 @@ the column must re-open its database after this method is done.</p>
 604
 605
 606
-607</pre>
+607
+608
+609</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 591</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 593</span>
 
 static VALUE
 rb_grn_column_truncate (VALUE self)
@@ -3095,7 +3096,7 @@ rb_grn_column_truncate (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="unlock-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unlock</strong>(options = {}) 
+    #<strong>unlock</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -3126,7 +3127,7 @@ rb_grn_column_truncate (VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -3172,8 +3173,6 @@ rb_grn_column_truncate (VALUE self)
       <pre class="lines">
 
 
-412
-413
 414
 415
 416
@@ -3199,10 +3198,12 @@ rb_grn_column_truncate (VALUE self)
 436
 437
 438
-439</pre>
+439
+440
+441</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 412</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 414</span>
 
 static VALUE
 rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
@@ -3240,7 +3241,7 @@ rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="vector?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>vector?</strong> 
+    #<strong>vector?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -3293,8 +3294,6 @@ rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-642
-643
 644
 645
 646
@@ -3310,28 +3309,34 @@ rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
 656
 657
 658
-659</pre>
+659
+660
+661
+662
+663</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 642</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 644</span>
 
 static VALUE
 rb_grn_column_vector_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *column;
+    grn_column_flags flags;
+    grn_column_flags column_type;
 
     rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
                              NULL, NULL,
                              NULL, NULL, NULL);
 
-    if (column-&gt;header.type == GRN_COLUMN_VAR_SIZE &amp;&amp;
-        ((column-&gt;header.flags &amp; GRN_OBJ_COLUMN_TYPE_MASK) ==
-         GRN_OBJ_COLUMN_VECTOR)) {
-        return Qtrue;
-    } else {
+    if (column-&gt;header.type != GRN_COLUMN_VAR_SIZE) {
         return Qfalse;
     }
+
+    flags = grn_column_get_flags(context, column);
+    column_type = (flags &amp; GRN_OBJ_COLUMN_TYPE_MASK);
+    return CBOOL2RVAL(column_type == GRN_OBJ_COLUMN_VECTOR);
 }</pre>
     </td>
   </tr>
@@ -3341,7 +3346,7 @@ rb_grn_column_vector_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="with_weight?-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>with_weight?</strong> 
+    #<strong>with_weight?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -3407,9 +3412,6 @@ rb_grn_column_vector_p (VALUE self)
       <pre class="lines">
 
 
-700
-701
-702
 703
 704
 705
@@ -3417,21 +3419,30 @@ rb_grn_column_vector_p (VALUE self)
 707
 708
 709
-710</pre>
+710
+711
+712
+713
+714
+715
+716</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 700</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-column.c', line 703</span>
 
 static VALUE
 rb_grn_column_with_weight_p(VALUE self)
 {
     grn_obj *column;
+    grn_ctx *context;
+    grn_column_flags flags;
 
-    rb_grn_column_deconstruct(SELF(self), &amp;column, NULL,
+    rb_grn_column_deconstruct(SELF(self), &amp;column, &amp;context,
                               NULL, NULL,
                               NULL, NULL, NULL);
 
-    return CBOOL2RVAL(column-&gt;header.flags &amp; GRN_OBJ_WITH_WEIGHT);
+    flags = grn_column_get_flags(context, column);
+    return CBOOL2RVAL(flags &amp; GRN_OBJ_WITH_WEIGHT);
 }</pre>
     </td>
   </tr>
@@ -3442,12 +3453,13 @@ rb_grn_column_with_weight_p(VALUE self)
 
 </div>
 
-    <div id="footer">
-  Generated on Fri Jul 15 20:00:56 2016 by
+      <div id="footer">
+  Generated on Thu Oct  6 12:45:49 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.3.1).
+  0.9.5 (ruby-2.2.3).
 </div>
 
+    </div>
   
     </div>
 
