@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,8 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Groonga::Record";
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
+  framesUrl = "../frames.html#!Groonga/Record.html";
 </script>
 
 
@@ -58,50 +59,51 @@
 <div class="content">
 
 
-    <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
-      <div id="resizer"></div>
-    </div>
-
-    <div id="main" tabindex="-1">
-      <div id="header">
-        <div id="menu">
+    <div id="header">
+      <div id="menu">
   
     <a href="../alphabetical_index.html">Index (R)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Record</span>
   
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-        <div id="search">
+      <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-
-        <svg width="24" height="24">
-          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
-        </svg>
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
     </a>
   
 </div>
-        <div class="clear"></div>
-      </div>
+      <div class="clear"></div>
+    </div>
 
-      <iframe id="search_frame" src="../class_list.html"></iframe>
+    <iframe id="search_frame"></iframe>
 
-      <div id="content"><h1>Class: Groonga::Record
+    <div id="content"><h1>Class: Groonga::Record
   
   
   
 </h1>
-<div class="box_info">
+
+<dl class="box">
   
-  <dl>
-    <dt>Inherits:</dt>
-    <dd>
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -112,37 +114,33 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-    </dd>
-  </dl>
-  
-
+      </dd>
+    
   
   
+    
+  
+    
   
   
   
-
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/groonga/record.rb</dd>
   
-
-  
-  <dl>
-    <dt>Defined in:</dt>
-    <dd>lib/groonga/record.rb</dd>
-  </dl>
-  
-</div>
+</dl>
+<div class="clear"></div>
 
 
 
 
 
-  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
     
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#table-instance_method" title="#table (instance method)">#<strong>table</strong>  &#x21d2; Object </a>
+      <a href="#table-instance_method" title="#table (instance method)">- (Object) <strong>table</strong> </a>
     
 
     
@@ -175,7 +173,7 @@
   
     <h2>
       Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
@@ -183,7 +181,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Object) <strong>==</strong>(other) </a>
     
 
     
@@ -206,7 +204,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(column_name)  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Object) <strong>[]</strong>(column_name) </a>
     
 
     
@@ -229,7 +227,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(column_name, value)  &#x21d2; Object </a>
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong>(column_name, value) </a>
     
 
     
@@ -252,7 +250,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#added%3F-instance_method" title="#added? (instance method)">#<strong>added?</strong>  &#x21d2; Boolean </a>
+      <a href="#added%3F-instance_method" title="#added? (instance method)">- (Boolean) <strong>added?</strong> </a>
     
 
     
@@ -275,7 +273,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#append-instance_method" title="#append (instance method)">#<strong>append</strong>(column_name, value)  &#x21d2; Object </a>
+      <a href="#append-instance_method" title="#append (instance method)">- (Object) <strong>append</strong>(column_name, value) </a>
     
 
     
@@ -298,7 +296,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#as_json-instance_method" title="#as_json (instance method)">#<strong>as_json</strong>  &#x21d2; Object </a>
+      <a href="#as_json-instance_method" title="#as_json (instance method)">- (Object) <strong>as_json</strong> </a>
     
 
     
@@ -321,7 +319,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#attributes-instance_method" title="#attributes (instance method)">#<strong>attributes</strong>  &#x21d2; Object </a>
+      <a href="#attributes-instance_method" title="#attributes (instance method)">- (Object) <strong>attributes</strong> </a>
     
 
     
@@ -344,7 +342,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#average-instance_method" title="#average (instance method)">#<strong>average</strong>  &#x21d2; Float </a>
+      <a href="#average-instance_method" title="#average (instance method)">- (Float) <strong>average</strong> </a>
     
 
     
@@ -367,7 +365,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#clear_lock-instance_method" title="#clear_lock (instance method)">#<strong>clear_lock</strong>  &#x21d2; void </a>
+      <a href="#clear_lock-instance_method" title="#clear_lock (instance method)">- (void) <strong>clear_lock</strong> </a>
     
 
     
@@ -390,7 +388,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#columns-instance_method" title="#columns (instance method)">#<strong>columns</strong>  &#x21d2; Object </a>
+      <a href="#columns-instance_method" title="#columns (instance method)">- (Object) <strong>columns</strong> </a>
     
 
     
@@ -413,7 +411,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#decrement%21-instance_method" title="#decrement! (instance method)">#<strong>decrement!</strong>(name, delta = nil)  &#x21d2; Object </a>
+      <a href="#decrement%21-instance_method" title="#decrement! (instance method)">- (Object) <strong>decrement!</strong>(name, delta = nil) </a>
     
 
     
@@ -436,7 +434,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>  &#x21d2; Object </a>
+      <a href="#delete-instance_method" title="#delete (instance method)">- (Object) <strong>delete</strong> </a>
     
 
     
@@ -459,7 +457,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#eql%3F-instance_method" title="#eql? (instance method)">#<strong>eql?</strong>(other)  &#x21d2; Boolean </a>
+      <a href="#eql%3F-instance_method" title="#eql? (instance method)">- (Boolean) <strong>eql?</strong>(other) </a>
     
 
     
@@ -482,7 +480,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#hash-instance_method" title="#hash (instance method)">#<strong>hash</strong>  &#x21d2; Object </a>
+      <a href="#hash-instance_method" title="#hash (instance method)">- (Object) <strong>hash</strong> </a>
     
 
     
@@ -505,7 +503,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#have_column%3F-instance_method" title="#have_column? (instance method)">#<strong>have_column?</strong>(name)  &#x21d2; Boolean </a>
+      <a href="#have_column%3F-instance_method" title="#have_column? (instance method)">- (Boolean) <strong>have_column?</strong>(name) </a>
     
 
     
@@ -528,7 +526,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#increment%21-instance_method" title="#increment! (instance method)">#<strong>increment!</strong>(name, delta = nil)  &#x21d2; Object </a>
+      <a href="#increment%21-instance_method" title="#increment! (instance method)">- (Object) <strong>increment!</strong>(name, delta = nil) </a>
     
 
     
@@ -551,7 +549,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#index_column%3F-instance_method" title="#index_column? (instance method)">#<strong>index_column?</strong>(name)  &#x21d2; Boolean </a>
+      <a href="#index_column%3F-instance_method" title="#index_column? (instance method)">- (Boolean) <strong>index_column?</strong>(name) </a>
     
 
     
@@ -574,7 +572,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(table, id, values = nil)  &#x21d2; Record </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Record) <strong>initialize</strong>(table, id, values = nil) </a>
     
 
     
@@ -599,7 +597,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#key-instance_method" title="#key (instance method)">#<strong>key</strong>  &#x21d2; Object </a>
+      <a href="#key-instance_method" title="#key (instance method)">- (Object) <strong>key</strong> </a>
     
 
     
@@ -622,7 +620,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#lock-instance_method" title="#lock (instance method)">#<strong>lock</strong>(options = {}, &amp;block)  &#x21d2; Object </a>
+      <a href="#lock-instance_method" title="#lock (instance method)">- (Object) <strong>lock</strong>(options = {}, &amp;block) </a>
     
 
     
@@ -645,7 +643,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#locked%3F-instance_method" title="#locked? (instance method)">#<strong>locked?</strong>  &#x21d2; Boolean </a>
+      <a href="#locked%3F-instance_method" title="#locked? (instance method)">- (Boolean) <strong>locked?</strong> </a>
     
 
     
@@ -668,7 +666,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#max-instance_method" title="#max (instance method)">#<strong>max</strong>  &#x21d2; Integer </a>
+      <a href="#max-instance_method" title="#max (instance method)">- (Integer) <strong>max</strong> </a>
     
 
     
@@ -691,7 +689,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#min-instance_method" title="#min (instance method)">#<strong>min</strong>  &#x21d2; Integer </a>
+      <a href="#min-instance_method" title="#min (instance method)">- (Integer) <strong>min</strong> </a>
     
 
     
@@ -714,7 +712,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#n_sub_records-instance_method" title="#n_sub_records (instance method)">#<strong>n_sub_records</strong>  &#x21d2; Object </a>
+      <a href="#n_sub_records-instance_method" title="#n_sub_records (instance method)">- (Object) <strong>n_sub_records</strong> </a>
     
 
     
@@ -737,7 +735,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prepend-instance_method" title="#prepend (instance method)">#<strong>prepend</strong>(column_name, value)  &#x21d2; Object </a>
+      <a href="#prepend-instance_method" title="#prepend (instance method)">- (Object) <strong>prepend</strong>(column_name, value) </a>
     
 
     
@@ -760,7 +758,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#record_id-instance_method" title="#record_id (instance method)">#<strong>record_id</strong>  &#x21d2; Object </a>
+      <a href="#record_id-instance_method" title="#record_id (instance method)">- (Object) <strong>record_id</strong> </a>
     
 
     
@@ -783,7 +781,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#record_raw_id-instance_method" title="#record_raw_id (instance method)">#<strong>record_raw_id</strong>  &#x21d2; Object </a>
+      <a href="#record_raw_id-instance_method" title="#record_raw_id (instance method)">- (Object) <strong>record_raw_id</strong> </a>
     
 
     
@@ -808,7 +806,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reference_column%3F-instance_method" title="#reference_column? (instance method)">#<strong>reference_column?</strong>(name)  &#x21d2; Boolean </a>
+      <a href="#reference_column%3F-instance_method" title="#reference_column? (instance method)">- (Boolean) <strong>reference_column?</strong>(name) </a>
     
 
     
@@ -831,7 +829,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rename-instance_method" title="#rename (instance method)">#<strong>rename</strong>(new_key)  &#x21d2; Object </a>
+      <a href="#rename-instance_method" title="#rename (instance method)">- (Object) <strong>rename</strong>(new_key) </a>
     
 
     
@@ -854,7 +852,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#scalar_column%3F-instance_method" title="#scalar_column? (instance method)">#<strong>scalar_column?</strong>(name)  &#x21d2; Boolean </a>
+      <a href="#scalar_column%3F-instance_method" title="#scalar_column? (instance method)">- (Boolean) <strong>scalar_column?</strong>(name) </a>
     
 
     
@@ -877,7 +875,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#score-instance_method" title="#score (instance method)">#<strong>score</strong>  &#x21d2; Object </a>
+      <a href="#score-instance_method" title="#score (instance method)">- (Object) <strong>score</strong> </a>
     
 
     
@@ -900,7 +898,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#score%3D-instance_method" title="#score= (instance method)">#<strong>score=</strong>(new_score)  &#x21d2; Object </a>
+      <a href="#score%3D-instance_method" title="#score= (instance method)">- (Object) <strong>score=</strong>(new_score) </a>
     
 
     
@@ -923,7 +921,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#search-instance_method" title="#search (instance method)">#<strong>search</strong>(name, query, options = {})  &#x21d2; Object </a>
+      <a href="#search-instance_method" title="#search (instance method)">- (Object) <strong>search</strong>(name, query, options = {}) </a>
     
 
     
@@ -946,7 +944,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sub_records-instance_method" title="#sub_records (instance method)">#<strong>sub_records</strong>  &#x21d2; SubRecords </a>
+      <a href="#sub_records-instance_method" title="#sub_records (instance method)">- (SubRecords) <strong>sub_records</strong> </a>
     
 
     
@@ -969,7 +967,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sum-instance_method" title="#sum (instance method)">#<strong>sum</strong>  &#x21d2; Integer </a>
+      <a href="#sum-instance_method" title="#sum (instance method)">- (Integer) <strong>sum</strong> </a>
     
 
     
@@ -992,7 +990,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#support_key%3F-instance_method" title="#support_key? (instance method)">#<strong>support_key?</strong>  &#x21d2; Boolean </a>
+      <a href="#support_key%3F-instance_method" title="#support_key? (instance method)">- (Boolean) <strong>support_key?</strong> </a>
     
 
     
@@ -1015,7 +1013,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#support_score%3F-instance_method" title="#support_score? (instance method)">#<strong>support_score?</strong>  &#x21d2; Boolean </a>
+      <a href="#support_score%3F-instance_method" title="#support_score? (instance method)">- (Boolean) <strong>support_score?</strong> </a>
     
 
     
@@ -1038,7 +1036,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#support_sub_records%3F-instance_method" title="#support_sub_records? (instance method)">#<strong>support_sub_records?</strong>  &#x21d2; Boolean </a>
+      <a href="#support_sub_records%3F-instance_method" title="#support_sub_records? (instance method)">- (Boolean) <strong>support_sub_records?</strong> </a>
     
 
     
@@ -1061,7 +1059,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#support_value%3F-instance_method" title="#support_value? (instance method)">#<strong>support_value?</strong>  &#x21d2; Boolean </a>
+      <a href="#support_value%3F-instance_method" title="#support_value? (instance method)">- (Boolean) <strong>support_value?</strong> </a>
     
 
     
@@ -1084,7 +1082,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_json-instance_method" title="#to_json (instance method)">#<strong>to_json</strong>(*args)  &#x21d2; String </a>
+      <a href="#to_json-instance_method" title="#to_json (instance method)">- (String) <strong>to_json</strong>(*args) </a>
     
 
     
@@ -1107,7 +1105,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unlock-instance_method" title="#unlock (instance method)">#<strong>unlock</strong>(options = {})  &#x21d2; Object </a>
+      <a href="#unlock-instance_method" title="#unlock (instance method)">- (Object) <strong>unlock</strong>(options = {}) </a>
     
 
     
@@ -1130,7 +1128,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#valid_id%3F-instance_method" title="#valid_id? (instance method)">#<strong>valid_id?</strong>  &#x21d2; Boolean </a>
+      <a href="#valid_id%3F-instance_method" title="#valid_id? (instance method)">- (Boolean) <strong>valid_id?</strong> </a>
     
 
     
@@ -1153,7 +1151,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#value-instance_method" title="#value (instance method)">#<strong>value</strong>  &#x21d2; Object </a>
+      <a href="#value-instance_method" title="#value (instance method)">- (Object) <strong>value</strong> </a>
     
 
     
@@ -1176,7 +1174,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#value%3D-instance_method" title="#value= (instance method)">#<strong>value=</strong>(value)  &#x21d2; Object </a>
+      <a href="#value%3D-instance_method" title="#value= (instance method)">- (Object) <strong>value=</strong>(value) </a>
     
 
     
@@ -1199,7 +1197,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#vector_column%3F-instance_method" title="#vector_column? (instance method)">#<strong>vector_column?</strong>(name)  &#x21d2; Boolean </a>
+      <a href="#vector_column%3F-instance_method" title="#vector_column? (instance method)">- (Boolean) <strong>vector_column?</strong>(name) </a>
     
 
     
@@ -1228,7 +1226,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(table, id, values = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Record (class)">Record</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Record (class)">Record</a></span></tt>) <strong>initialize</strong>(table, id, values = nil) 
   
 
   
@@ -1301,7 +1299,7 @@ value.</p>
     <div class="method_details first">
   <h3 class="signature first" id="method_missing-instance_method">
   
-    #<strong>method_missing</strong>(name, *args, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>  <span class="extras">(private)</span>
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>method_missing</strong>(name, *args, &amp;block)  <span class="extras">(private)</span>
   
 
   
@@ -1370,7 +1368,7 @@ value.</p>
       <div class="method_details first">
   <h3 class="signature first" id="table-instance_method">
   
-    #<strong>table</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>table</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -1417,7 +1415,7 @@ value.</p>
       <div class="method_details first">
   <h3 class="signature first" id="==-instance_method">
   
-    #<strong>==</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>==</strong>(other) 
   
 
   
@@ -1461,7 +1459,7 @@ value.</p>
       <div class="method_details ">
   <h3 class="signature " id="[]-instance_method">
   
-    #<strong>[]</strong>(column_name)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]</strong>(column_name) 
   
 
   
@@ -1502,9 +1500,9 @@ value.</p>
   <h3 class="signature " id="[]=-instance_method">
   
     
-      <span class="overload">#<strong>[]=</strong>(column_name, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(column_name, value) </span>
     
-      <span class="overload">#<strong>[]=</strong>(column_name, value_with_weight)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(column_name, value_with_weight) </span>
     
   
 
@@ -1525,7 +1523,7 @@ value.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>[]=</strong>(column_name, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(column_name, value) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1586,7 +1584,7 @@ value.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>[]=</strong>(column_name, value_with_weight)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(column_name, value_with_weight) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1629,7 +1627,7 @@ value.</p>
         <span class='name'>value_with_weight</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
@@ -1722,7 +1720,7 @@ weight supported index column for weight. See
       <div class="method_details ">
   <h3 class="signature " id="added?-instance_method">
   
-    #<strong>added?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>added?</strong> 
   
 
   
@@ -1775,7 +1773,7 @@ weight supported index column for weight. See
       <div class="method_details ">
   <h3 class="signature " id="append-instance_method">
   
-    #<strong>append</strong>(column_name, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>append</strong>(column_name, value) 
   
 
   
@@ -1816,7 +1814,7 @@ weight supported index column for weight. See
       <div class="method_details ">
   <h3 class="signature " id="as_json-instance_method">
   
-    #<strong>as_json</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>as_json</strong> 
   
 
   
@@ -1860,7 +1858,7 @@ weight supported index column for weight. See
       <div class="method_details ">
   <h3 class="signature " id="attributes-instance_method">
   
-    #<strong>attributes</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>attributes</strong> 
   
 
   
@@ -1906,7 +1904,7 @@ weight supported index column for weight. See
       <div class="method_details ">
   <h3 class="signature " id="average-instance_method">
   
-    #<strong>average</strong>  &#x21d2; <tt>Float</tt> 
+    - (<tt>Float</tt>) <strong>average</strong> 
   
 
   
@@ -1980,7 +1978,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="clear_lock-instance_method">
   
-    #<strong>clear_lock</strong>  &#x21d2; <tt>void</tt> 
+    - (<tt>void</tt>) <strong>clear_lock</strong> 
   
 
   
@@ -2020,7 +2018,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="columns-instance_method">
   
-    #<strong>columns</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>columns</strong> 
   
 
   
@@ -2060,7 +2058,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="decrement!-instance_method">
   
-    #<strong>decrement!</strong>(name, delta = nil)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>decrement!</strong>(name, delta = nil) 
   
 
   
@@ -2101,7 +2099,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="delete-instance_method">
   
-    #<strong>delete</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong> 
   
 
   
@@ -2149,7 +2147,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="eql?-instance_method">
   
-    #<strong>eql?</strong>(other)  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>eql?</strong>(other) 
   
 
   
@@ -2202,7 +2200,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="hash-instance_method">
   
-    #<strong>hash</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>hash</strong> 
   
 
   
@@ -2243,7 +2241,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="have_column?-instance_method">
   
-    #<strong>have_column?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>have_column?</strong>(name) 
   
 
   
@@ -2297,7 +2295,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="increment!-instance_method">
   
-    #<strong>increment!</strong>(name, delta = nil)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>increment!</strong>(name, delta = nil) 
   
 
   
@@ -2338,7 +2336,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="index_column?-instance_method">
   
-    #<strong>index_column?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>index_column?</strong>(name) 
   
 
   
@@ -2392,7 +2390,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="key-instance_method">
   
-    #<strong>key</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>key</strong> 
   
 
   
@@ -2443,7 +2441,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="lock-instance_method">
   
-    #<strong>lock</strong>(options = {}, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}, &amp;block) 
   
 
   
@@ -2535,7 +2533,7 @@ pairs. Omitted names are initialized as the default value.</p>
       <div class="method_details ">
   <h3 class="signature " id="locked?-instance_method">
   
-    #<strong>locked?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>locked?</strong> 
   
 
   
@@ -2594,7 +2592,7 @@ belongs is locked, <code>false</code> otherwise.</p>
       <div class="method_details ">
   <h3 class="signature " id="max-instance_method">
   
-    #<strong>max</strong>  &#x21d2; <tt>Integer</tt> 
+    - (<tt>Integer</tt>) <strong>max</strong> 
   
 
   
@@ -2668,7 +2666,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="min-instance_method">
   
-    #<strong>min</strong>  &#x21d2; <tt>Integer</tt> 
+    - (<tt>Integer</tt>) <strong>min</strong> 
   
 
   
@@ -2742,7 +2740,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="n_sub_records-instance_method">
   
-    #<strong>n_sub_records</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>n_sub_records</strong> 
   
 
   
@@ -2786,7 +2784,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="prepend-instance_method">
   
-    #<strong>prepend</strong>(column_name, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>prepend</strong>(column_name, value) 
   
 
   
@@ -2827,7 +2825,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="record_id-instance_method">
   
-    #<strong>record_id</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>record_id</strong> 
   
 
   
@@ -2878,7 +2876,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="record_raw_id-instance_method">
   
-    #<strong>record_raw_id</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>record_raw_id</strong> 
   
 
   
@@ -2922,7 +2920,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="reference_column?-instance_method">
   
-    #<strong>reference_column?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>reference_column?</strong>(name) 
   
 
   
@@ -2975,7 +2973,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="rename-instance_method">
   
-    #<strong>rename</strong>(new_key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>rename</strong>(new_key) 
   
 
   
@@ -3039,7 +3037,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="scalar_column?-instance_method">
   
-    #<strong>scalar_column?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>scalar_column?</strong>(name) 
   
 
   
@@ -3107,7 +3105,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="score-instance_method">
   
-    #<strong>score</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>score</strong> 
   
 
   
@@ -3148,7 +3146,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="score=-instance_method">
   
-    #<strong>score=</strong>(new_score)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>score=</strong>(new_score) 
   
 
   
@@ -3207,7 +3205,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="search-instance_method">
   
-    #<strong>search</strong>(name, query, options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>search</strong>(name, query, options = {}) 
   
 
   
@@ -3249,7 +3247,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="sub_records-instance_method">
   
-    #<strong>sub_records</strong>  &#x21d2; <tt><span class='object_link'><a href="SubRecords.html" title="Groonga::SubRecords (class)">SubRecords</a></span></tt> 
+    - (<tt><span class='object_link'><a href="SubRecords.html" title="Groonga::SubRecords (class)">SubRecords</a></span></tt>) <strong>sub_records</strong> 
   
 
   
@@ -3306,7 +3304,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="sum-instance_method">
   
-    #<strong>sum</strong>  &#x21d2; <tt>Integer</tt> 
+    - (<tt>Integer</tt>) <strong>sum</strong> 
   
 
   
@@ -3380,7 +3378,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="support_key?-instance_method">
   
-    #<strong>support_key?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>support_key?</strong> 
   
 
   
@@ -3434,7 +3432,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="support_score?-instance_method">
   
-    #<strong>support_score?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>support_score?</strong> 
   
 
   
@@ -3488,7 +3486,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="support_sub_records?-instance_method">
   
-    #<strong>support_sub_records?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>support_sub_records?</strong> 
   
 
   
@@ -3542,7 +3540,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="support_value?-instance_method">
   
-    #<strong>support_value?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>support_value?</strong> 
   
 
   
@@ -3599,7 +3597,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="to_json-instance_method">
   
-    #<strong>to_json</strong>(*args)  &#x21d2; <tt>String</tt> 
+    - (<tt>String</tt>) <strong>to_json</strong>(*args) 
   
 
   
@@ -3656,7 +3654,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="unlock-instance_method">
   
-    #<strong>unlock</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unlock</strong>(options = {}) 
   
 
   
@@ -3698,7 +3696,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="valid_id?-instance_method">
   
-    #<strong>valid_id?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>valid_id?</strong> 
   
 
   
@@ -3751,7 +3749,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="value-instance_method">
   
-    #<strong>value</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>value</strong> 
   
 
   
@@ -3791,7 +3789,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="value=-instance_method">
   
-    #<strong>value=</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>value=</strong>(value) 
   
 
   
@@ -3831,7 +3829,7 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
       <div class="method_details ">
   <h3 class="signature " id="vector_column?-instance_method">
   
-    #<strong>vector_column?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>vector_column?</strong>(name) 
   
 
   
@@ -3900,7 +3898,8 @@ to <span class='object_link'><a href="Table.html#group-instance_method" title="G
 
 </div>
 
-      <div id="footer"></div>
+    <div id="footer"></div>
+
   
     </div>
 

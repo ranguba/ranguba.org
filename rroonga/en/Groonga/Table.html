@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,8 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Groonga::Table";
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
+  framesUrl = "../frames.html#!Groonga/Table.html";
 </script>
 
 
@@ -58,50 +59,51 @@
 <div class="content">
 
 
-    <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
-      <div id="resizer"></div>
-    </div>
-
-    <div id="main" tabindex="-1">
-      <div id="header">
-        <div id="menu">
+    <div id="header">
+      <div id="menu">
   
     <a href="../alphabetical_index.html">Index (T)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Table</span>
   
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-        <div id="search">
+      <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-
-        <svg width="24" height="24">
-          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
-        </svg>
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
     </a>
   
 </div>
-        <div class="clear"></div>
-      </div>
+      <div class="clear"></div>
+    </div>
 
-      <iframe id="search_frame" src="../class_list.html"></iframe>
+    <iframe id="search_frame"></iframe>
 
-      <div id="content"><h1>Class: Groonga::Table
+    <div id="content"><h1>Class: Groonga::Table
   
   
   
 </h1>
-<div class="box_info">
+
+<dl class="box">
   
-  <dl>
-    <dt>Inherits:</dt>
-    <dd>
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
       <span class="inheritName"><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
@@ -114,32 +116,27 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-    </dd>
-  </dl>
-  
-
+      </dd>
+    
   
   
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">Enumerable, <span class='object_link'><a href="Flushable.html" title="Groonga::Flushable (module)">Flushable</a></span></dd>
+      
+    
   
   
-  <dl>
-      <dt>Includes:</dt>
-      <dd>Enumerable, <span class='object_link'><a href="Flushable.html" title="Groonga::Flushable (module)">Flushable</a></span></dd>
-  </dl>
   
-  
-
-  
-
-  
-  <dl>
-    <dt>Defined in:</dt>
-    <dd>ext/groonga/rb-grn-table.c<span class="defines">,<br />
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">ext/groonga/rb-grn-table.c<span class="defines">,<br />
   lib/groonga/table.rb,<br /> lib/groonga/pagination.rb,<br /> ext/groonga/rb-grn-table.c</span>
 </dd>
-  </dl>
   
-</div>
+</dl>
+<div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -177,7 +174,7 @@
   
     <h2>
       Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
@@ -185,7 +182,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(id)  &#x21d2; Groonga::Record </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Groonga::Record) <strong>[]</strong>(id) </a>
     
 
     
@@ -208,7 +205,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#clear_lock-instance_method" title="#clear_lock (instance method)">#<strong>clear_lock</strong>  &#x21d2; void </a>
+      <a href="#clear_lock-instance_method" title="#clear_lock (instance method)">- (void) <strong>clear_lock</strong> </a>
     
 
     
@@ -231,7 +228,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#column-instance_method" title="#column (instance method)">#<strong>column</strong>(name)  &#x21d2; Groonga::Column<sup>?</sup> </a>
+      <a href="#column-instance_method" title="#column (instance method)">- (Groonga::Column<sup>?</sup>) <strong>column</strong>(name) </a>
     
 
     
@@ -254,7 +251,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#column_value-instance_method" title="#column_value (instance method)">#<strong>column_value</strong>  &#x21d2; Object </a>
+      <a href="#column_value-instance_method" title="#column_value (instance method)">- (Object) <strong>column_value</strong> </a>
     
 
     
@@ -277,7 +274,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#columns-instance_method" title="#columns (instance method)">#<strong>columns</strong>(name = nil)  &#x21d2; Groonga::Columnの配列 </a>
+      <a href="#columns-instance_method" title="#columns (instance method)">- (Groonga::Columnの配列) <strong>columns</strong>(name = nil) </a>
     
 
     
@@ -300,7 +297,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#define_column-instance_method" title="#define_column (instance method)">#<strong>define_column</strong>(name, value_type, options = {})  &#x21d2; Groonga::FixSizeColumn, Groonga::VariableSizeColumn </a>
+      <a href="#define_column-instance_method" title="#define_column (instance method)">- (Groonga::FixSizeColumn, Groonga::VariableSizeColumn) <strong>define_column</strong>(name, value_type, options = {}) </a>
     
 
     
@@ -323,7 +320,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#define_index_column-instance_method" title="#define_index_column (instance method)">#<strong>define_index_column</strong>(name, value_type, options = {})  &#x21d2; Groonga::IndexColumn </a>
+      <a href="#define_index_column-instance_method" title="#define_index_column (instance method)">- (Groonga::IndexColumn) <strong>define_index_column</strong>(name, value_type, options = {}) </a>
     
 
     
@@ -346,7 +343,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#defrag-instance_method" title="#defrag (instance method)">#<strong>defrag</strong>(options = {})  &#x21d2; Integer </a>
+      <a href="#defrag-instance_method" title="#defrag (instance method)">- (Integer) <strong>defrag</strong>(options = {}) </a>
     
 
     
@@ -369,7 +366,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>  &#x21d2; Object </a>
+      <a href="#delete-instance_method" title="#delete (instance method)">- (Object) <strong>delete</strong> </a>
     
 
     
@@ -392,7 +389,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#difference%21-instance_method" title="#difference! (instance method)">#<strong>difference!</strong>(other)  &#x21d2; Groonga::Table </a>
+      <a href="#difference%21-instance_method" title="#difference! (instance method)">- (Groonga::Table) <strong>difference!</strong>(other) </a>
     
 
     
@@ -415,7 +412,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#disk_usage-instance_method" title="#disk_usage (instance method)">#<strong>disk_usage</strong>  &#x21d2; Object </a>
+      <a href="#disk_usage-instance_method" title="#disk_usage (instance method)">- (Object) <strong>disk_usage</strong> </a>
     
 
     
@@ -438,7 +435,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong>  &#x21d2; Object </a>
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> </a>
     
 
     
@@ -461,7 +458,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each_sub_record-instance_method" title="#each_sub_record (instance method)">#<strong>each_sub_record</strong>(id) {|sub_record| ... } &#x21d2; void </a>
+      <a href="#each_sub_record-instance_method" title="#each_sub_record (instance method)">- (void) <strong>each_sub_record</strong>(id) {|sub_record| ... }</a>
     
 
     
@@ -484,7 +481,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#empty%3F-instance_method" title="#empty? (instance method)">#<strong>empty?</strong>  &#x21d2; Boolean </a>
+      <a href="#empty%3F-instance_method" title="#empty? (instance method)">- (Boolean) <strong>empty?</strong> </a>
     
 
     
@@ -507,7 +504,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#exist%3F-instance_method" title="#exist? (instance method)">#<strong>exist?</strong>(id)  &#x21d2; Boolean </a>
+      <a href="#exist%3F-instance_method" title="#exist? (instance method)">- (Boolean) <strong>exist?</strong>(id) </a>
     
 
     
@@ -530,7 +527,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#geo_sort-instance_method" title="#geo_sort (instance method)">#<strong>geo_sort</strong>(column, base_geo_point, options = {})  &#x21d2; Groonga::Array </a>
+      <a href="#geo_sort-instance_method" title="#geo_sort (instance method)">- (Groonga::Array) <strong>geo_sort</strong>(column, base_geo_point, options = {}) </a>
     
 
     
@@ -553,7 +550,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#group-instance_method" title="#group (instance method)">#<strong>group</strong>  &#x21d2; Object </a>
+      <a href="#group-instance_method" title="#group (instance method)">- (Object) <strong>group</strong> </a>
     
 
     
@@ -576,7 +573,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#have_column%3F-instance_method" title="#have_column? (instance method)">#<strong>have_column?</strong>(name)  &#x21d2; Boolean </a>
+      <a href="#have_column%3F-instance_method" title="#have_column? (instance method)">- (Boolean) <strong>have_column?</strong>(name) </a>
     
 
     
@@ -599,7 +596,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#have_n_sub_records_space%3F-instance_method" title="#have_n_sub_records_space? (instance method)">#<strong>have_n_sub_records_space?</strong>  &#x21d2; Boolean </a>
+      <a href="#have_n_sub_records_space%3F-instance_method" title="#have_n_sub_records_space? (instance method)">- (Boolean) <strong>have_n_sub_records_space?</strong> </a>
     
 
     
@@ -622,7 +619,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Object) <strong>initialize</strong> </a>
     
 
     
@@ -647,7 +644,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong>  &#x21d2; String </a>
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (String) <strong>inspect</strong> </a>
     
 
     
@@ -670,7 +667,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#intersection%21-instance_method" title="#intersection! (instance method)">#<strong>intersection!</strong>(other)  &#x21d2; Groonga::Table </a>
+      <a href="#intersection%21-instance_method" title="#intersection! (instance method)">- (Groonga::Table) <strong>intersection!</strong>(other) </a>
     
 
     
@@ -693,7 +690,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#lock-instance_method" title="#lock (instance method)">#<strong>lock</strong>  &#x21d2; Object </a>
+      <a href="#lock-instance_method" title="#lock (instance method)">- (Object) <strong>lock</strong> </a>
     
 
     
@@ -716,7 +713,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#locked%3F-instance_method" title="#locked? (instance method)">#<strong>locked?</strong>  &#x21d2; Boolean </a>
+      <a href="#locked%3F-instance_method" title="#locked? (instance method)">- (Boolean) <strong>locked?</strong> </a>
     
 
     
@@ -739,7 +736,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#merge%21-instance_method" title="#merge! (instance method)">#<strong>merge!</strong>(other)  &#x21d2; Groonga::Table </a>
+      <a href="#merge%21-instance_method" title="#merge! (instance method)">- (Groonga::Table) <strong>merge!</strong>(other) </a>
     
 
     
@@ -762,7 +759,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#open_cursor-instance_method" title="#open_cursor (instance method)">#<strong>open_cursor</strong>  &#x21d2; Object </a>
+      <a href="#open_cursor-instance_method" title="#open_cursor (instance method)">- (Object) <strong>open_cursor</strong> </a>
     
 
     
@@ -785,7 +782,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#paginate-instance_method" title="#paginate (instance method)">#<strong>paginate</strong>(sort_keys, options = {})  &#x21d2; Object </a>
+      <a href="#paginate-instance_method" title="#paginate (instance method)">- (Object) <strong>paginate</strong>(sort_keys, options = {}) </a>
     
 
     
@@ -808,7 +805,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#records-instance_method" title="#records (instance method)">#<strong>records</strong>  &#x21d2; Groonga::Recordの配列 </a>
+      <a href="#records-instance_method" title="#records (instance method)">- (Groonga::Recordの配列) <strong>records</strong> </a>
     
 
     
@@ -831,7 +828,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rename-instance_method" title="#rename (instance method)">#<strong>rename</strong>(name)  &#x21d2; Object </a>
+      <a href="#rename-instance_method" title="#rename (instance method)">- (Object) <strong>rename</strong>(name) </a>
     
 
     
@@ -854,7 +851,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#select-instance_method" title="#select (instance method)">#<strong>select</strong>  &#x21d2; Groonga::Hash </a>
+      <a href="#select-instance_method" title="#select (instance method)">- (Groonga::Hash) <strong>select</strong> </a>
     
 
     
@@ -877,7 +874,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_column_value-instance_method" title="#set_column_value (instance method)">#<strong>set_column_value</strong>  &#x21d2; void </a>
+      <a href="#set_column_value-instance_method" title="#set_column_value (instance method)">- (void) <strong>set_column_value</strong> </a>
     
 
     
@@ -900,7 +897,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_value-instance_method" title="#set_value (instance method)">#<strong>set_value</strong>  &#x21d2; Object </a>
+      <a href="#set_value-instance_method" title="#set_value (instance method)">- (Object) <strong>set_value</strong> </a>
     
 
     
@@ -923,7 +920,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#size-instance_method" title="#size (instance method)">#<strong>size</strong>  &#x21d2; Integer </a>
+      <a href="#size-instance_method" title="#size (instance method)">- (Integer) <strong>size</strong> </a>
     
 
     
@@ -946,7 +943,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sort-instance_method" title="#sort (instance method)">#<strong>sort</strong>(keys, options = {})  &#x21d2; Groonga::Array </a>
+      <a href="#sort-instance_method" title="#sort (instance method)">- (Groonga::Array) <strong>sort</strong>(keys, options = {}) </a>
     
 
     
@@ -969,7 +966,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#support_key%3F-instance_method" title="#support_key? (instance method)">#<strong>support_key?</strong>  &#x21d2; Boolean </a>
+      <a href="#support_key%3F-instance_method" title="#support_key? (instance method)">- (Boolean) <strong>support_key?</strong> </a>
     
 
     
@@ -992,7 +989,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#support_sub_records%3F-instance_method" title="#support_sub_records? (instance method)">#<strong>support_sub_records?</strong>  &#x21d2; Boolean </a>
+      <a href="#support_sub_records%3F-instance_method" title="#support_sub_records? (instance method)">- (Boolean) <strong>support_sub_records?</strong> </a>
     
 
     
@@ -1015,7 +1012,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#support_value%3F-instance_method" title="#support_value? (instance method)">#<strong>support_value?</strong>  &#x21d2; Object </a>
+      <a href="#support_value%3F-instance_method" title="#support_value? (instance method)">- (Object) <strong>support_value?</strong> </a>
     
 
     
@@ -1038,7 +1035,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#truncate-instance_method" title="#truncate (instance method)">#<strong>truncate</strong>  &#x21d2; Object </a>
+      <a href="#truncate-instance_method" title="#truncate (instance method)">- (Object) <strong>truncate</strong> </a>
     
 
     
@@ -1061,7 +1058,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#union%21-instance_method" title="#union! (instance method)">#<strong>union!</strong>(other)  &#x21d2; Groonga::Table </a>
+      <a href="#union%21-instance_method" title="#union! (instance method)">- (Groonga::Table) <strong>union!</strong>(other) </a>
     
 
     
@@ -1084,7 +1081,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unlock-instance_method" title="#unlock (instance method)">#<strong>unlock</strong>(options = {})  &#x21d2; Object </a>
+      <a href="#unlock-instance_method" title="#unlock (instance method)">- (Object) <strong>unlock</strong>(options = {}) </a>
     
 
     
@@ -1107,7 +1104,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#value-instance_method" title="#value (instance method)">#<strong>value</strong>  &#x21d2; Object </a>
+      <a href="#value-instance_method" title="#value (instance method)">- (Object) <strong>value</strong> </a>
     
 
     
@@ -1159,7 +1156,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>initialize</strong> 
   
 
   
@@ -1202,7 +1199,7 @@ rb_grn_table_initialize (VALUE self)
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>(id)  &#x21d2; <tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span></tt>) <strong>[]</strong>(id) 
   
 
   
@@ -1281,7 +1278,7 @@ rb_grn_table_array_reference (VALUE self, VALUE rb_id)
       <div class="method_details ">
   <h3 class="signature " id="clear_lock-instance_method">
   
-    #<strong>clear_lock</strong>  &#x21d2; <tt>void</tt> 
+    - (<tt>void</tt>) <strong>clear_lock</strong> 
   
 
   
@@ -1357,7 +1354,7 @@ rb_grn_table_clear_lock (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="column-instance_method">
   
-    #<strong>column</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Groonga::Column</a></span></tt><sup>?</sup> 
+    - (<tt><span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Groonga::Column</a></span></tt><sup>?</sup>) <strong>column</strong>(name) 
   
 
   
@@ -1536,9 +1533,9 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
   <h3 class="signature " id="column_value-instance_method">
   
     
-      <span class="overload">#<strong>column_value</strong>(id, name)  &#x21d2; <tt>値</tt> </span>
+      <span class="overload">- (<tt>値</tt>) <strong>column_value</strong>(id, name) </span>
     
-      <span class="overload">#<strong>column_value</strong>(id, name, : id=&gt;true)  &#x21d2; <tt>値</tt> </span>
+      <span class="overload">- (<tt>値</tt>) <strong>column_value</strong>(id, name, :id = &gt;true) </span>
     
   
 
@@ -1563,7 +1560,7 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>column_value</strong>(id, name)  &#x21d2; <tt>値</tt> </span>
+        <span class="signature">- (<tt>値</tt>) <strong>column_value</strong>(id, name) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1592,7 +1589,7 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>column_value</strong>(id, name, : id=&gt;true)  &#x21d2; <tt>値</tt> </span>
+        <span class="signature">- (<tt>値</tt>) <strong>column_value</strong>(id, name, :id = &gt;true) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1690,7 +1687,7 @@ rb_grn_table_get_column_value_convenience (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="columns-instance_method">
   
-    #<strong>columns</strong>(name = nil)  &#x21d2; <tt><span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Groonga::Column</a></span>の配列</tt> 
+    - (<tt><span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Groonga::Column</a></span>の配列</tt>) <strong>columns</strong>(name = nil) 
   
 
   
@@ -1924,7 +1921,7 @@ rb_grn_table_get_columns (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="define_column-instance_method">
   
-    #<strong>define_column</strong>(name, value_type, options = {})  &#x21d2; <tt><span class='object_link'><a href="FixSizeColumn.html" title="Groonga::FixSizeColumn (class)">Groonga::FixSizeColumn</a></span></tt>, <tt><span class='object_link'><a href="VariableSizeColumn.html" title="Groonga::VariableSizeColumn (class)">Groonga::VariableSizeColumn</a></span></tt> 
+    - (<tt><span class='object_link'><a href="FixSizeColumn.html" title="Groonga::FixSizeColumn (class)">Groonga::FixSizeColumn</a></span></tt>, <tt><span class='object_link'><a href="VariableSizeColumn.html" title="Groonga::VariableSizeColumn (class)">Groonga::VariableSizeColumn</a></span></tt>) <strong>define_column</strong>(name, value_type, options = {}) 
   
 
   
@@ -1956,7 +1953,7 @@ rb_grn_table_get_columns (int argc, VALUE *argv, VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -2310,7 +2307,7 @@ rb_grn_table_define_column (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="define_index_column-instance_method">
   
-    #<strong>define_index_column</strong>(name, value_type, options = {})  &#x21d2; <tt><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span></tt> 
+    - (<tt><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span></tt>) <strong>define_index_column</strong>(name, value_type, options = {}) 
   
 
   
@@ -2342,7 +2339,7 @@ rb_grn_table_define_column (int argc, VALUE *argv, VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -2700,7 +2697,7 @@ rb_grn_table_define_index_column (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="defrag-instance_method">
   
-    #<strong>defrag</strong>(options = {})  &#x21d2; <tt>Integer</tt> 
+    - (<tt>Integer</tt>) <strong>defrag</strong>(options = {}) 
   
 
   
@@ -2731,7 +2728,7 @@ rb_grn_table_define_index_column (int argc, VALUE *argv, VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -2880,9 +2877,9 @@ rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
   <h3 class="signature " id="delete-instance_method">
   
     
-      <span class="overload">#<strong>delete</strong>(id)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong>(id) </span>
     
-      <span class="overload">#<strong>delete</strong> {|record| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong> {|record| ... }</span>
     
   
 
@@ -2903,7 +2900,7 @@ rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>delete</strong>(id)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong>(id) </span>
         <div class="docstring">
   <div class="discussion">
     <p>Delete a record that has ID @id@.</p>
@@ -2955,7 +2952,7 @@ rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>delete</strong> {|record| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>delete</strong> {|record| ... }</span>
         <div class="docstring">
   <div class="discussion">
     <p>Delete records that are matched with the given condition
@@ -3104,7 +3101,7 @@ rb_grn_table_delete (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="difference!-instance_method">
   
-    #<strong>difference!</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Table (class)">Groonga::Table</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Table (class)">Groonga::Table</a></span></tt>) <strong>difference!</strong>(other) 
   
 
   
@@ -3174,7 +3171,7 @@ rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
       <div class="method_details ">
   <h3 class="signature " id="disk_usage-instance_method">
   
-    #<strong>disk_usage</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>disk_usage</strong> 
   
 
   
@@ -3207,9 +3204,9 @@ rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
   <h3 class="signature " id="each-instance_method">
   
     
-      <span class="overload">#<strong>each</strong> {|record| ... } &#x21d2; <tt>nil</tt> </span>
+      <span class="overload">- (<tt>nil</tt>) <strong>each</strong> {|record| ... }</span>
     
-      <span class="overload">#<strong>each</strong>(options = {}) {|record| ... } &#x21d2; <tt>nil</tt> </span>
+      <span class="overload">- (<tt>nil</tt>) <strong>each</strong>(options = {}) {|record| ... }</span>
     
   
 
@@ -3232,7 +3229,7 @@ rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>each</strong> {|record| ... } &#x21d2; <tt>nil</tt> </span>
+        <span class="signature">- (<tt>nil</tt>) <strong>each</strong> {|record| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -3274,7 +3271,7 @@ rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>each</strong>(options = {}) {|record| ... } &#x21d2; <tt>nil</tt> </span>
+        <span class="signature">- (<tt>nil</tt>) <strong>each</strong>(options = {}) {|record| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -3373,7 +3370,7 @@ rb_grn_table_each (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="each_sub_record-instance_method">
   
-    #<strong>each_sub_record</strong>(id) {|sub_record| ... } &#x21d2; <tt>void</tt> 
+    - (<tt>void</tt>) <strong>each_sub_record</strong>(id) {|sub_record| ... }
   
 
   
@@ -3526,7 +3523,7 @@ rb_grn_table_each_sub_record (VALUE self, VALUE rb_id)
       <div class="method_details ">
   <h3 class="signature " id="empty?-instance_method">
   
-    #<strong>empty?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>empty?</strong> 
   
 
   
@@ -3603,7 +3600,7 @@ rb_grn_table_empty_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="exist?-instance_method">
   
-    #<strong>exist?</strong>(id)  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>exist?</strong>(id) 
   
 
   
@@ -3680,7 +3677,7 @@ rb_grn_table_exist_p (VALUE self, VALUE id)
       <div class="method_details ">
   <h3 class="signature " id="geo_sort-instance_method">
   
-    #<strong>geo_sort</strong>(column, base_geo_point, options = {})  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Groonga::Array</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Groonga::Array</a></span></tt>) <strong>geo_sort</strong>(column, base_geo_point, options = {}) 
   
 
   
@@ -3712,7 +3709,7 @@ type column value. Order is near to far from base geo point.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -3989,9 +3986,9 @@ rb_grn_table_geo_sort (int argc, VALUE *argv, VALUE self)
   <h3 class="signature " id="group-instance_method">
   
     
-      <span class="overload">#<strong>group</strong>([key1, key2, ...], options = {})  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>group</strong>([key1, key2, ...], options = {}) </span>
     
-      <span class="overload">#<strong>group</strong>(key, options = {})  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>group</strong>(key, options = {}) </span>
     
   
 
@@ -4035,7 +4032,7 @@ keys by <span class='object_link'><a href="Record.html#sub_records-instance_meth
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>group</strong>([key1, key2, ...], options = {})  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>group</strong>([key1, key2, ...], options = {}) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -4080,7 +4077,7 @@ keys by <span class='object_link'><a href="Record.html#sub_records-instance_meth
       
         <li>
           <span class="name">:calc_types</span>
-          <span class="type">(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">::Array</a></span></tt>)</span>
+          <span class="type">(<tt>::Array</tt>)</span>
           <span class="default">
             
           </span>
@@ -4120,7 +4117,7 @@ a drilldown. You can specify multiple calculation types.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>group</strong>(key, options = {})  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>group</strong>(key, options = {}) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -4165,7 +4162,7 @@ a drilldown. You can specify multiple calculation types.</p>
       
         <li>
           <span class="name">:calc_types</span>
-          <span class="type">(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">::Array</a></span></tt>)</span>
+          <span class="type">(<tt>::Array</tt>)</span>
           <span class="default">
             
           </span>
@@ -4472,7 +4469,7 @@ rb_grn_table_group (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="have_column?-instance_method">
   
-    #<strong>have_column?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>have_column?</strong>(name) 
   
 
   
@@ -4567,7 +4564,7 @@ rb_grn_table_have_column (VALUE self, VALUE rb_name)
       <div class="method_details ">
   <h3 class="signature " id="have_n_sub_records_space?-instance_method">
   
-    #<strong>have_n_sub_records_space?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>have_n_sub_records_space?</strong> 
   
 
   
@@ -4680,7 +4677,7 @@ rb_grn_table_have_n_sub_records_space_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt>String</tt> 
+    - (<tt>String</tt>) <strong>inspect</strong> 
   
 
   
@@ -4765,7 +4762,7 @@ rb_grn_table_inspect (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="intersection!-instance_method">
   
-    #<strong>intersection!</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Table (class)">Groonga::Table</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Table (class)">Groonga::Table</a></span></tt>) <strong>intersection!</strong>(other) 
   
 
   
@@ -4836,9 +4833,9 @@ rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
   <h3 class="signature " id="lock-instance_method">
   
     
-      <span class="overload">#<strong>lock</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) </span>
     
-      <span class="overload">#<strong>lock</strong>(options = {}) { ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) { ... }</span>
     
   
 
@@ -4862,7 +4859,7 @@ rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>lock</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -4879,7 +4876,7 @@ rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -4936,7 +4933,7 @@ pairs. Omitted names are initialized as the default value.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>lock</strong>(options = {}) { ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>lock</strong>(options = {}) { ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -4953,7 +4950,7 @@ pairs. Omitted names are initialized as the default value.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -5122,7 +5119,7 @@ rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="locked?-instance_method">
   
-    #<strong>locked?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>locked?</strong> 
   
 
   
@@ -5224,7 +5221,7 @@ rb_grn_table_locked_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="merge!-instance_method">
   
-    #<strong>merge!</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Table (class)">Groonga::Table</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Table (class)">Groonga::Table</a></span></tt>) <strong>merge!</strong>(other) 
   
 
   
@@ -5295,9 +5292,9 @@ rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
   <h3 class="signature " id="open_cursor-instance_method">
   
     
-      <span class="overload">#<strong>open_cursor</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="TableCursor.html" title="Groonga::TableCursor (class)">Groonga::TableCursor</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="TableCursor.html" title="Groonga::TableCursor (class)">Groonga::TableCursor</a></span></tt>) <strong>open_cursor</strong>(options = {}) </span>
     
-      <span class="overload">#<strong>open_cursor</strong>(options = {}) {|cursor| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_cursor</strong>(options = {}) {|cursor| ... }</span>
     
   
 
@@ -5320,7 +5317,7 @@ rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>open_cursor</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="TableCursor.html" title="Groonga::TableCursor (class)">Groonga::TableCursor</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="TableCursor.html" title="Groonga::TableCursor (class)">Groonga::TableCursor</a></span></tt>) <strong>open_cursor</strong>(options = {}) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -5337,7 +5334,7 @@ rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -5491,7 +5488,7 @@ Groonga::PatriciaTrieにしか使えない。（PatriciaTrieのデ
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>open_cursor</strong>(options = {}) {|cursor| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_cursor</strong>(options = {}) {|cursor| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -5508,7 +5505,7 @@ Groonga::PatriciaTrieにしか使えない。（PatriciaTrieのデ
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -5714,7 +5711,7 @@ rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="paginate-instance_method">
   
-    #<strong>paginate</strong>(sort_keys, options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>paginate</strong>(sort_keys, options = {}) 
   
 
   
@@ -5767,7 +5764,7 @@ rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -5888,7 +5885,7 @@ pairs. Omitted names are initialized as the default value.</p>
       <div class="method_details ">
   <h3 class="signature " id="records-instance_method">
   
-    #<strong>records</strong>  &#x21d2; <tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span>の配列</tt> 
+    - (<tt><span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Groonga::Record</a></span>の配列</tt>) <strong>records</strong> 
   
 
   
@@ -5982,7 +5979,7 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="rename-instance_method">
   
-    #<strong>rename</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>rename</strong>(name) 
   
 
   
@@ -6109,11 +6106,11 @@ rb_grn_table_rename (VALUE self, VALUE rb_name)
   <h3 class="signature " id="select-instance_method">
   
     
-      <span class="overload">#<strong>select</strong>(options) {|record| ... } &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(options) {|record| ... }</span>
     
-      <span class="overload">#<strong>select</strong>(query, options)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(query, options) </span>
     
-      <span class="overload">#<strong>select</strong>(expression, options)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(expression, options) </span>
     
   
 
@@ -6161,7 +6158,7 @@ rroongaは&lt;em&gt;groonga&lt;/em&gt;のいわゆるDB-APIの層の...
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>select</strong>(options) {|record| ... } &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(options) {|record| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -6212,7 +6209,7 @@ Groonga::ColumnExpressionBuilderの他に”!=”も使用可能。</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>select</strong>(query, options)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(query, options) </span>
         <div class="docstring">
   <div class="discussion">
     <p><em>query</em> には「[カラム名]:[演算子][値]」という書式で条件を
@@ -6249,7 +6246,7 @@ Groonga::ColumnExpressionBuilderの他に”!=”も使用可能。</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
@@ -6271,13 +6268,14 @@ pairs. Omitted names are initialized as the default value.</p>
     <ul class="option">
       
         <li>
-          <span class="name">:default_column</span>
-          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="name">:default_columnではなくのようにcolumn_nameが指定されない条件の検索対象となるカラムを指定する。</span>
+          <span class="type">(<tt>"column_name:hoge""hoge"</tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class='inline'><p>“column_name:hoge”ではなく”hoge”のようにcolumn_nameが指
+            &mdash; <div class='inline'><p>default_column
+“column_name:hoge”ではなく”hoge”のようにcolumn_nameが指
 定されない条件の検索対象となるカラムを指定する。</p>
 </div>
           
@@ -6402,7 +6400,7 @@ pairs. Omitted names are initialized as the default value.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>select</strong>(expression, options)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> </span>
+        <span class="signature">- (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>select</strong>(expression, options) </span>
         <div class="docstring">
   <div class="discussion">
     <p><em>expression</em> には既に作成済みの <span class='object_link'><a href="Expression.html" title="Groonga::Expression (class)">Expression</a></span> を渡す。</p>
@@ -6421,7 +6419,7 @@ pairs. Omitted names are initialized as the default value.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
@@ -6443,13 +6441,14 @@ pairs. Omitted names are initialized as the default value.</p>
     <ul class="option">
       
         <li>
-          <span class="name">:default_column</span>
-          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="name">:default_columnではなくのようにcolumn_nameが指定されない条件の検索対象となるカラムを指定する。</span>
+          <span class="type">(<tt>"column_name:hoge""hoge"</tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class='inline'><p>“column_name:hoge”ではなく”hoge”のようにcolumn_nameが指
+            &mdash; <div class='inline'><p>default_column
+“column_name:hoge”ではなく”hoge”のようにcolumn_nameが指
 定されない条件の検索対象となるカラムを指定する。</p>
 </div>
           
@@ -6787,13 +6786,13 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
   <h3 class="signature " id="set_column_value-instance_method">
   
     
-      <span class="overload">#<strong>set_column_value</strong>(id, name, value)  &#x21d2; <tt>void</tt> </span>
+      <span class="overload">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, value) </span>
     
-      <span class="overload">#<strong>set_column_value</strong>(id, name, vector_value_with_weight)  &#x21d2; <tt>void</tt> </span>
+      <span class="overload">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, vector_value_with_weight) </span>
     
-      <span class="overload">#<strong>set_column_value</strong>(id, name, value, options)  &#x21d2; <tt>void</tt> </span>
+      <span class="overload">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, value, options) </span>
     
-      <span class="overload">#<strong>set_column_value</strong>(id, name, vector_value_with_weight, options)  &#x21d2; <tt>void</tt> </span>
+      <span class="overload">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, vector_value_with_weight, options) </span>
     
   
 
@@ -6815,7 +6814,7 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>set_column_value</strong>(id, name, value)  &#x21d2; <tt>void</tt> </span>
+        <span class="signature">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, value) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -6862,7 +6861,7 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
         <span class='name'>value</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
+        <span class='type'>(<tt>::Object</tt>)</span>
       
       
       
@@ -6880,7 +6879,7 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>set_column_value</strong>(id, name, vector_value_with_weight)  &#x21d2; <tt>void</tt> </span>
+        <span class="signature">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, vector_value_with_weight) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -7003,13 +7002,12 @@ a record is matched against a query.</p>
         <span class='name'>vector_value_with_weight</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>::Array&lt;::Hash{:value =&gt; ::Object, :weight =&gt; Integer}, ::Object&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>[::Array&lt;::Hash=&gt; ::Object, :weight =&gt; Integer, ::Object&gt;]
-The new vector value with weight. The vector value can contain both
+        <div class='inline'><p>The new vector value with weight. The vector value can contain both
 ::Hash and value. If a contained element uses ::Hash style, it can
 specify its weight. If a contained element doesn’t use ::Hash style,
 it can’t specify its weight.</p>
@@ -7029,7 +7027,7 @@ value is nil, the default weight is used. The default weight is 0.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>set_column_value</strong>(id, name, value, options)  &#x21d2; <tt>void</tt> </span>
+        <span class="signature">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, value, options) </span>
         <div class="docstring">
   <div class="discussion">
     <p>This usage is just for convenience. #set_column_value is overrided
@@ -7125,7 +7123,7 @@ with the same way.</p>
         <span class='name'>value</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
+        <span class='type'>(<tt>::Object</tt>)</span>
       
       
       
@@ -7140,7 +7138,7 @@ with the same way.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
@@ -7186,7 +7184,7 @@ Specify @true@ for polymorphic usage.</p>
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>set_column_value</strong>(id, name, vector_value_with_weight, options)  &#x21d2; <tt>void</tt> </span>
+        <span class="signature">- (<tt>void</tt>) <strong>set_column_value</strong>(id, name, vector_value_with_weight, options) </span>
         <div class="docstring">
   <div class="discussion">
     <p>It is weight supported vector value variable of @:id =&gt; true@ option.
@@ -7234,13 +7232,12 @@ See other signature for usage.</p>
         <span class='name'>vector_value_with_weight</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>::Array&lt;::Hash{:value =&gt; ::Object, :weight =&gt; Integer}, ::Object&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>[::Array&lt;::Hash=&gt; ::Object, :weight =&gt; Integer, ::Object&gt;]
-The new vector value with weight. The vector value can contain both
+        <div class='inline'><p>The new vector value with weight. The vector value can contain both
 ::Hash and value. If a contained element uses ::Hash style, it can
 specify its weight. If a contained element doesn’t use ::Hash style,
 it can’t specify its weight.</p>
@@ -7257,7 +7254,7 @@ value is nil, the default weight is used. The default weight is 0.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
@@ -7373,9 +7370,9 @@ rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
   <h3 class="signature " id="set_value-instance_method">
   
     
-      <span class="overload">#<strong>set_value</strong>(id, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>set_value</strong>(id, value) </span>
     
-      <span class="overload">#<strong>set_value</strong>(id, value, : id=&gt;true)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>set_value</strong>(id, value, :id = &gt;true) </span>
     
   
 
@@ -7465,7 +7462,7 @@ rb_grn_table_set_value_convenience (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="size-instance_method">
   
-    #<strong>size</strong>  &#x21d2; <tt>Integer</tt> 
+    - (<tt>Integer</tt>) <strong>size</strong> 
   
 
   
@@ -7552,7 +7549,7 @@ rb_grn_table_get_size (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="sort-instance_method">
   
-    #<strong>sort</strong>(keys, options = {})  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Groonga::Array</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Groonga::Array</a></span></tt>) <strong>sort</strong>(keys, options = {}) 
   
 
   
@@ -7564,7 +7561,7 @@ rb_grn_table_get_size (VALUE self)
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>The return value is changed to <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> from
-<span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> since 2.1.0. If you want to get before 2.1.0 style
+Array since 2.1.0. If you want to get before 2.1.0 style
 result, use the following code:</p>
 </div>
   </div>
@@ -7646,7 +7643,7 @@ result, use the following code:</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -7857,7 +7854,7 @@ rb_grn_table_sort (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="support_key?-instance_method">
   
-    #<strong>support_key?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>support_key?</strong> 
   
 
   
@@ -7917,7 +7914,7 @@ rb_grn_table_support_key_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="support_sub_records?-instance_method">
   
-    #<strong>support_sub_records?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>support_sub_records?</strong> 
   
 
   
@@ -7992,7 +7989,7 @@ rb_grn_table_support_sub_records_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="support_value?-instance_method">
   
-    #<strong>support_value?</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>support_value?</strong> 
   
 
   
@@ -8090,7 +8087,7 @@ rb_grn_table_support_value_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="truncate-instance_method">
   
-    #<strong>truncate</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>truncate</strong> 
   
 
   
@@ -8158,7 +8155,7 @@ rb_grn_table_truncate (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="union!-instance_method">
   
-    #<strong>union!</strong>(other)  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Table (class)">Groonga::Table</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Table (class)">Groonga::Table</a></span></tt>) <strong>union!</strong>(other) 
   
 
   
@@ -8228,7 +8225,7 @@ rb_grn_table_union_bang (VALUE self, VALUE rb_other)
       <div class="method_details ">
   <h3 class="signature " id="unlock-instance_method">
   
-    #<strong>unlock</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unlock</strong>(options = {}) 
   
 
   
@@ -8259,7 +8256,7 @@ rb_grn_table_union_bang (VALUE self, VALUE rb_other)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -8377,9 +8374,9 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
   <h3 class="signature " id="value-instance_method">
   
     
-      <span class="overload">#<strong>value</strong>(id)  &#x21d2; <tt>値</tt> </span>
+      <span class="overload">- (<tt>値</tt>) <strong>value</strong>(id) </span>
     
-      <span class="overload">#<strong>value</strong>(id, : id=&gt;true)  &#x21d2; <tt>値</tt> </span>
+      <span class="overload">- (<tt>値</tt>) <strong>value</strong>(id, :id = &gt;true) </span>
     
   
 
@@ -8404,7 +8401,7 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>value</strong>(id)  &#x21d2; <tt>値</tt> </span>
+        <span class="signature">- (<tt>値</tt>) <strong>value</strong>(id) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -8433,7 +8430,7 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>value</strong>(id, : id=&gt;true)  &#x21d2; <tt>値</tt> </span>
+        <span class="signature">- (<tt>値</tt>) <strong>value</strong>(id, :id = &gt;true) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -8532,7 +8529,8 @@ rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)
 
 </div>
 
-      <div id="footer"></div>
+    <div id="footer"></div>
+
   
     </div>
 

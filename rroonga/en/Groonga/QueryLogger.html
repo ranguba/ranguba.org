@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,8 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Groonga::QueryLogger";
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
+  framesUrl = "../frames.html#!Groonga/QueryLogger.html";
 </script>
 
 
@@ -58,50 +59,51 @@
 <div class="content">
 
 
-    <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
-      <div id="resizer"></div>
-    </div>
-
-    <div id="main" tabindex="-1">
-      <div id="header">
-        <div id="menu">
+    <div id="header">
+      <div id="menu">
   
     <a href="../alphabetical_index.html">Index (Q)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">QueryLogger</span>
   
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-        <div id="search">
+      <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-
-        <svg width="24" height="24">
-          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
-        </svg>
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
     </a>
   
 </div>
-        <div class="clear"></div>
-      </div>
+      <div class="clear"></div>
+    </div>
 
-      <iframe id="search_frame" src="../class_list.html"></iframe>
+    <iframe id="search_frame"></iframe>
 
-      <div id="content"><h1>Class: Groonga::QueryLogger
+    <div id="content"><h1>Class: Groonga::QueryLogger
   
   
   
 </h1>
-<div class="box_info">
+
+<dl class="box">
   
-  <dl>
-    <dt>Inherits:</dt>
-    <dd>
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -112,27 +114,23 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-    </dd>
-  </dl>
-  
-
+      </dd>
+    
   
   
+    
+  
+    
   
   
   
-
-  
-
-  
-  <dl>
-    <dt>Defined in:</dt>
-    <dd>ext/groonga/rb-grn-query-logger.c<span class="defines">,<br />
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/groonga/rb-grn-query-logger.c<span class="defines">,<br />
   lib/groonga/query-logger.rb,<br /> ext/groonga/rb-grn-query-logger.c</span>
 </dd>
-  </dl>
   
-</div>
+</dl>
+<div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -168,7 +166,7 @@
   
     <h2>
       Class Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
@@ -176,7 +174,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#log-class_method" title="log (class method)">.<strong>log</strong>(message, options = {})  &#x21d2; void </a>
+      <a href="#log-class_method" title="log (class method)">+ (void) <strong>log</strong>(message, options = {}) </a>
     
 
     
@@ -199,7 +197,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#path-class_method" title="path (class method)">.<strong>path</strong>  &#x21d2; String or nil </a>
+      <a href="#path-class_method" title="path (class method)">+ (String or nil) <strong>path</strong> </a>
     
 
     
@@ -222,7 +220,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#path%3D-class_method" title="path= (class method)">.<strong>path=</strong>(path)  &#x21d2; Object </a>
+      <a href="#path%3D-class_method" title="path= (class method)">+ (Object) <strong>path=</strong>(path) </a>
     
 
     
@@ -245,7 +243,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#register-class_method" title="register (class method)">.<strong>register</strong>  &#x21d2; Object </a>
+      <a href="#register-class_method" title="register (class method)">+ (Object) <strong>register</strong> </a>
     
 
     
@@ -268,7 +266,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reopen-class_method" title="reopen (class method)">.<strong>reopen</strong>  &#x21d2; Object </a>
+      <a href="#reopen-class_method" title="reopen (class method)">+ (Object) <strong>reopen</strong> </a>
     
 
     
@@ -291,7 +289,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rotate_threshold_size-class_method" title="threshold (class method)">.<strong>threshold</strong>  &#x21d2; Integer </a>
+      <a href="#rotate_threshold_size-class_method" title="threshold (class method)">+ (Integer) <strong>threshold</strong> </a>
     
 
     
@@ -314,7 +312,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rotate_threshold_size%3D-class_method" title="rotate_threshold_size= (class method)">.<strong>rotate_threshold_size=</strong>(size)  &#x21d2; Object </a>
+      <a href="#rotate_threshold_size%3D-class_method" title="rotate_threshold_size= (class method)">+ (Object) <strong>rotate_threshold_size=</strong>(size) </a>
     
 
     
@@ -337,7 +335,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unregister-class_method" title="unregister (class method)">.<strong>unregister</strong>  &#x21d2; Object </a>
+      <a href="#unregister-class_method" title="unregister (class method)">+ (Object) <strong>unregister</strong> </a>
     
 
     
@@ -361,7 +359,7 @@
   
     <h2>
       Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
@@ -369,7 +367,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fin-instance_method" title="#fin (instance method)">#<strong>fin</strong>  &#x21d2; Object </a>
+      <a href="#fin-instance_method" title="#fin (instance method)">- (Object) <strong>fin</strong> </a>
     
 
     
@@ -392,7 +390,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#log-instance_method" title="#log (instance method)">#<strong>log</strong>(flag, timestamp, info, message)  &#x21d2; Object </a>
+      <a href="#log-instance_method" title="#log (instance method)">- (Object) <strong>log</strong>(flag, timestamp, info, message) </a>
     
 
     
@@ -415,7 +413,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reopen-instance_method" title="#reopen (instance method)">#<strong>reopen</strong>  &#x21d2; Object </a>
+      <a href="#reopen-instance_method" title="#reopen (instance method)">- (Object) <strong>reopen</strong> </a>
     
 
     
@@ -447,7 +445,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="log-class_method">
   
-    .<strong>log</strong>(message, options = {})  &#x21d2; <tt>void</tt> 
+    + (<tt>void</tt>) <strong>log</strong>(message, options = {}) 
   
 
   
@@ -493,7 +491,7 @@
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -686,7 +684,7 @@ rb_grn_query_logger_s_log (int argc, VALUE *argv, VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="path-class_method">
   
-    .<strong>path</strong>  &#x21d2; <tt>String or nil</tt> 
+    + (<tt>String or nil</tt>) <strong>path</strong> 
   
 
   
@@ -788,7 +786,7 @@ rb_grn_query_logger_s_get_path (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="path=-class_method">
   
-    .<strong>path=</strong>(path)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>path=</strong>(path) 
   
 
   
@@ -960,9 +958,9 @@ rb_grn_query_logger_s_set_path (VALUE klass, VALUE rb_path)
   <h3 class="signature " id="register-class_method">
   
     
-      <span class="overload">.<strong>register</strong>(logger, options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(logger, options = {}) </span>
     
-      <span class="overload">.<strong>register</strong>(options = {}) {|action, flag, timestamp, info, message| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(options = {}) {|action, flag, timestamp, info, message| ... }</span>
     
   
 
@@ -984,7 +982,7 @@ query log event is emitted.</p>
     
       
       <li class="overload_item">
-        <span class="signature">.<strong>register</strong>(logger, options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+        <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(logger, options = {}) </span>
         <div class="docstring">
   <div class="discussion">
     <p>Returns void</p>
@@ -1001,7 +999,7 @@ query log event is emitted.</p>
         <span class='name'>logger</span>
       
       
-        <span class='type'>(<tt>#<span class='object_link'><a href="#log-class_method" title="Groonga::QueryLogger.log (method)">log</a></span></tt>, <tt>#<span class='object_link'><a href="#reopen-class_method" title="Groonga::QueryLogger.reopen (method)">reopen</a></span></tt>, <tt>#<span class='object_link'><a href="#fin-instance_method" title="Groonga::QueryLogger#fin (method)">fin</a></span></tt>)</span>
+        <span class='type'>(<tt>#<span class='object_link'><a href="#log-class_method" title="Groonga::QueryLogger.log (method)">log</a></span></tt>, <tt>#<span class='object_link'><a href="#reopen-class_method" title="Groonga::QueryLogger.reopen (method)">reopen</a></span></tt>, <tt>#fin</tt>)</span>
       
       
       
@@ -1037,7 +1035,7 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
     
       
       <li class="overload_item">
-        <span class="signature">.<strong>register</strong>(options = {}) {|action, flag, timestamp, info, message| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
+        <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(options = {}) {|action, flag, timestamp, info, message| ... }</span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1054,7 +1052,7 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -1270,7 +1268,7 @@ rb_grn_query_logger_s_register (int argc, VALUE *argv, VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="reopen-class_method">
   
-    .<strong>reopen</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>reopen</strong> 
   
 
   
@@ -1348,7 +1346,7 @@ rb_grn_query_logger_s_reopen (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="rotate_threshold_size-class_method">
   
-    .<strong>threshold</strong>  &#x21d2; <tt>Integer</tt> 
+    + (<tt>Integer</tt>) <strong>threshold</strong> 
   
 
   
@@ -1440,7 +1438,7 @@ rb_grn_query_logger_s_get_rotate_threshold_size (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="rotate_threshold_size=-class_method">
   
-    .<strong>rotate_threshold_size=</strong>(size)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>rotate_threshold_size=</strong>(size) 
   
 
   
@@ -1579,7 +1577,7 @@ rb_grn_query_logger_s_set_rotate_threshold_size (VALUE klass, VALUE rb_size)
       <div class="method_details ">
   <h3 class="signature " id="unregister-class_method">
   
-    .<strong>unregister</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unregister</strong> 
   
 
   
@@ -1647,7 +1645,7 @@ rb_grn_query_logger_s_unregister (VALUE klass)
       <div class="method_details first">
   <h3 class="signature first" id="fin-instance_method">
   
-    #<strong>fin</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>fin</strong> 
   
 
   
@@ -1675,7 +1673,7 @@ rb_grn_query_logger_s_unregister (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="log-instance_method">
   
-    #<strong>log</strong>(flag, timestamp, info, message)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>log</strong>(flag, timestamp, info, message) 
   
 
   
@@ -1709,7 +1707,7 @@ rb_grn_query_logger_s_unregister (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="reopen-instance_method">
   
-    #<strong>reopen</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>reopen</strong> 
   
 
   
@@ -1738,7 +1736,8 @@ rb_grn_query_logger_s_unregister (VALUE klass)
 
 </div>
 
-      <div id="footer"></div>
+    <div id="footer"></div>
+
   
     </div>
 
