@@ -504,6 +504,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#remove_force-instance_method" title="#remove_force (instance method)">- (Object) <strong>remove_force</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Removes a broken object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#tables-instance_method" title="#tables (instance method)">- (Array&lt;Groonga::Table&gt;) <strong>tables</strong> </a>
     
 
@@ -2809,6 +2832,128 @@ rb_grn_database_reindex (VALUE self)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="remove_force-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>remove_force</strong>(name) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Removes a broken object.</p>
+
+<p>You should use <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">Object#remove</a></span> normally.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The target object name.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.0.9</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-database.c', line 719</span>
+
+static VALUE
+rb_grn_database_remove_force (VALUE self, VALUE rb_name)
+{
+    grn_rc rc;
+    grn_ctx *context;
+    char *name;
+    int name_size;
+
+    rb_grn_database_deconstruct(SELF(self), NULL, &amp;context,
+                                NULL, NULL, NULL, NULL);
+
+    name = StringValueCStr(rb_name);
+    name_size = RSTRING_LEN(rb_name);
+
+    rc = grn_obj_remove_force(context, name, name_size);
+    rb_grn_context_check(context, self);
+    rb_grn_rc_check(rc, self);
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="tables-instance_method">
   
     - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Groonga::Table</a></span>&gt;</tt>) <strong>tables</strong> 
@@ -3106,7 +3251,7 @@ rb_grn_database_unmap (VALUE self)
 </div>
 
     <div id="footer">
-  Generated on Thu Oct  6 13:08:58 2016 by
+  Generated on Fri Oct  7 17:10:09 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.4).
 </div>
