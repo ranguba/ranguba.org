@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Groonga::GeoPointValueConverter";
   relpath = '../';
-  framesUrl = "../frames.html#!Groonga/GeoPointValueConverter.html";
 </script>
 
 
@@ -59,79 +58,79 @@
 <div class="content">
 
 
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="../alphabetical_index.html">Index (G)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">GeoPointValueConverter</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="../class_list.html"></iframe>
 
-    <div id="content"><h1>Module: Groonga::GeoPointValueConverter
+      <div id="content"><h1>Module: Groonga::GeoPointValueConverter
   
   
   
 </h1>
+<div class="box_info">
+  
 
-<dl class="box">
-  
-  
-    
-  
-    
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/groonga/geo-point.rb</dd>
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/groonga/geo-point.rb</dd>
+  </dl>
+  
+</div>
 
 
   <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="MSEC_PER_SEC-constant" class="">MSEC_PER_SEC =
-          
-        </dt>
-        <dd><pre class="code"><span class='int'>1000</span> <span class='op'>*</span> <span class='int'>1000</span></pre></dd>
-      
-        <dt id="N_SIGNIFICANT_DIGITS-constant" class="">N_SIGNIFICANT_DIGITS =
-          
-        </dt>
-        <dd><pre class="code"><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_log10'>log10</span><span class='lparen'>(</span><span class='const'>MSEC_PER_SEC</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_truncate'>truncate</span></pre></dd>
-      
-    </dl>
-  
+  <dl class="constants">
+    
+      <dt id="MSEC_PER_SEC-constant" class="">MSEC_PER_SEC =
+        
+      </dt>
+      <dd><pre class="code"><span class='int'>1000</span> <span class='op'>*</span> <span class='int'>1000</span></pre></dd>
+    
+      <dt id="N_SIGNIFICANT_DIGITS-constant" class="">N_SIGNIFICANT_DIGITS =
+        
+      </dt>
+      <dd><pre class="code"><span class='lparen'>(</span><span class='const'>Math</span><span class='period'>.</span><span class='id identifier rubyid_log10'>log10</span><span class='lparen'>(</span><span class='const'>MSEC_PER_SEC</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_truncate'>truncate</span></pre></dd>
+    
+  </dl>
 
 
 
@@ -142,7 +141,7 @@
   
     <h2>
       Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -150,7 +149,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#degree%3F-class_method" title="degree? (class method)">+ (Boolean) <strong>degree?</strong>(value) </a>
+      <a href="#degree%3F-class_method" title="degree? (class method)">.<strong>degree?</strong>(value)  &#x21d2; Boolean </a>
     
 
     
@@ -173,7 +172,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#degree_to_msec-class_method" title="degree_to_msec (class method)">+ (Object) <strong>degree_to_msec</strong>(degree) </a>
+      <a href="#degree_to_msec-class_method" title="degree_to_msec (class method)">.<strong>degree_to_msec</strong>(degree)  &#x21d2; Object </a>
     
 
     
@@ -196,7 +195,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#msec%3F-class_method" title="msec? (class method)">+ (Boolean) <strong>msec?</strong>(value) </a>
+      <a href="#msec%3F-class_method" title="msec? (class method)">.<strong>msec?</strong>(value)  &#x21d2; Boolean </a>
     
 
     
@@ -219,7 +218,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#msec_to_degree-class_method" title="msec_to_degree (class method)">+ (Object) <strong>msec_to_degree</strong>(msec) </a>
+      <a href="#msec_to_degree-class_method" title="msec_to_degree (class method)">.<strong>msec_to_degree</strong>(msec)  &#x21d2; Object </a>
     
 
     
@@ -242,7 +241,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#parse-class_method" title="parse (class method)">+ (Object) <strong>parse</strong>(value) </a>
+      <a href="#parse-class_method" title="parse (class method)">.<strong>parse</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -265,7 +264,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_degree-class_method" title="to_degree (class method)">+ (Object) <strong>to_degree</strong>(value) </a>
+      <a href="#to_degree-class_method" title="to_degree (class method)">.<strong>to_degree</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -288,7 +287,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_msec-class_method" title="to_msec (class method)">+ (Object) <strong>to_msec</strong>(value) </a>
+      <a href="#to_msec-class_method" title="to_msec (class method)">.<strong>to_msec</strong>(value)  &#x21d2; Object </a>
     
 
     
@@ -312,7 +311,7 @@
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -320,7 +319,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#round-instance_method" title="#round (instance method)">- (Object) <strong>round</strong>(number, n_digits = 0) </a>
+      <a href="#round-instance_method" title="#round (instance method)">#<strong>round</strong>(number, n_digits = 0)  &#x21d2; Object </a>
     
 
     
@@ -352,7 +351,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="degree?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>degree?</strong>(value) 
+    .<strong>degree?</strong>(value)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -405,7 +404,7 @@
       <div class="method_details ">
   <h3 class="signature " id="degree_to_msec-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>degree_to_msec</strong>(degree) 
+    .<strong>degree_to_msec</strong>(degree)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -435,7 +434,7 @@
       <div class="method_details ">
   <h3 class="signature " id="msec?-class_method">
   
-    + (<tt>Boolean</tt>) <strong>msec?</strong>(value) 
+    .<strong>msec?</strong>(value)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -488,7 +487,7 @@
       <div class="method_details ">
   <h3 class="signature " id="msec_to_degree-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>msec_to_degree</strong>(msec) 
+    .<strong>msec_to_degree</strong>(msec)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -522,7 +521,7 @@
       <div class="method_details ">
   <h3 class="signature " id="parse-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>parse</strong>(value) 
+    .<strong>parse</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -560,7 +559,7 @@
       <div class="method_details ">
   <h3 class="signature " id="to_degree-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>to_degree</strong>(value) 
+    .<strong>to_degree</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -592,7 +591,7 @@
       <div class="method_details ">
   <h3 class="signature " id="to_msec-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>to_msec</strong>(value) 
+    .<strong>to_msec</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -630,7 +629,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="round-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>round</strong>(number, n_digits = 0) 
+    #<strong>round</strong>(number, n_digits = 0)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -671,8 +670,7 @@
 
 </div>
 
-    <div id="footer"></div>
-
+      <div id="footer"></div>
   
     </div>
 

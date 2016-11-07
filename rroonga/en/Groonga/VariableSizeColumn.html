@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Groonga::VariableSizeColumn";
   relpath = '../';
-  framesUrl = "../frames.html#!Groonga/VariableSizeColumn.html";
 </script>
 
 
@@ -59,51 +58,50 @@
 <div class="content">
 
 
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="../alphabetical_index.html">Index (V)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">VariableSizeColumn</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="../class_list.html"></iframe>
 
-    <div id="content"><h1>Class: Groonga::VariableSizeColumn
+      <div id="content"><h1>Class: Groonga::VariableSizeColumn
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="DataColumn.html" title="Groonga::DataColumn (class)">DataColumn</a></span></span>
       
         <ul class="fullTree">
@@ -120,23 +118,27 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
+
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">ext/groonga/rb-grn-variable-size-column.c<span class="defines">,<br />
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>ext/groonga/rb-grn-variable-size-column.c<span class="defines">,<br />
   ext/groonga/rb-grn-variable-size-column.c</span>
 </dd>
+  </dl>
   
-</dl>
-<div class="clear"></div>
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -159,7 +161,7 @@ column.</p>
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -167,7 +169,7 @@ column.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Array&lt;Hash&lt;Symbol, String&gt;&gt;, ::Object) <strong>[]</strong>(id) </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(id)  &#x21d2; Array&lt;Hash&lt;Symbol, String&gt;&gt;, ::Object </a>
     
 
     
@@ -190,7 +192,7 @@ column.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong> </a>
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>  &#x21d2; Object </a>
     
 
     
@@ -213,7 +215,7 @@ column.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#compressed%3F-instance_method" title="#compressed? (instance method)">- (Boolean) <strong>compressed?</strong> </a>
+      <a href="#compressed%3F-instance_method" title="#compressed? (instance method)">#<strong>compressed?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -236,7 +238,7 @@ column.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#defrag-instance_method" title="#defrag (instance method)">- (Integer) <strong>defrag</strong>(options = {}) </a>
+      <a href="#defrag-instance_method" title="#defrag (instance method)">#<strong>defrag</strong>(options = {})  &#x21d2; Integer </a>
     
 
     
@@ -259,7 +261,7 @@ column.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reindex-instance_method" title="#reindex (instance method)">- (void) <strong>reindex</strong> </a>
+      <a href="#reindex-instance_method" title="#reindex (instance method)">#<strong>reindex</strong>  &#x21d2; void </a>
     
 
     
@@ -335,7 +337,7 @@ column.</p>
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    - (<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span>&lt;Symbol, String&gt;&gt;</tt>, <tt>::Object</tt>) <strong>[]</strong>(id) 
+    #<strong>[]</strong>(id)  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span>&lt;Symbol, String&gt;&gt;</tt>, <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt> 
   
 
   
@@ -452,7 +454,7 @@ creating the weight vector.</p>
     <li>
       
       
-        <span class='type'>(<tt>::Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
       
       
       
@@ -638,9 +640,9 @@ rb_grn_variable_size_column_array_reference (VALUE self, VALUE rb_id)
   <h3 class="signature " id="[]=-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, elements) </span>
+      <span class="overload">#<strong>[]=</strong>(id, elements)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, value) </span>
+      <span class="overload">#<strong>[]=</strong>(id, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
     
   
 
@@ -745,7 +747,7 @@ size column works what you think.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, elements) </span>
+        <span class="signature">#<strong>[]=</strong>(id, elements)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     <p>This description is for weight vector column.</p>
@@ -811,7 +813,7 @@ score, you should set 9 as weight.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, value) </span>
+        <span class="signature">#<strong>[]=</strong>(id, value)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     <p>This description is for variable size columns except weight
@@ -844,7 +846,7 @@ vector column.</p>
         <span class='name'>value</span>
       
       
-        <span class='type'>(<tt>::Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
       
       
       
@@ -1074,9 +1076,9 @@ rb_grn_variable_size_column_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
   <h3 class="signature " id="compressed?-instance_method">
   
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>compressed?</strong> </span>
+      <span class="overload">#<strong>compressed?</strong>  &#x21d2; <tt>Boolean</tt> </span>
     
-      <span class="overload">- (<tt>Boolean</tt>) <strong>compressed?</strong>(type) </span>
+      <span class="overload">#<strong>compressed?</strong>(type)  &#x21d2; <tt>Boolean</tt> </span>
     
   
 
@@ -1099,7 +1101,7 @@ compressed by @type@ or not.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>compressed?</strong> </span>
+        <span class="signature">#<strong>compressed?</strong>  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     <p>Returns whether the column is compressed or not.</p>
@@ -1132,7 +1134,7 @@ compressed by @type@ or not.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt>Boolean</tt>) <strong>compressed?</strong>(type) </span>
+        <span class="signature">#<strong>compressed?</strong>(type)  &#x21d2; <tt>Boolean</tt> </span>
         <div class="docstring">
   <div class="discussion">
     <p>Returns whether specified compressed type is used or not.</p>
@@ -1349,7 +1351,7 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="defrag-instance_method">
   
-    - (<tt>Integer</tt>) <strong>defrag</strong>(options = {}) 
+    #<strong>defrag</strong>(options = {})  &#x21d2; <tt>Integer</tt> 
   
 
   
@@ -1380,7 +1382,7 @@ rb_grn_variable_size_column_compressed_p (int argc, VALUE *argv, VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -1530,7 +1532,7 @@ rb_grn_variable_size_column_defrag (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="reindex-instance_method">
   
-    - (<tt>void</tt>) <strong>reindex</strong> 
+    #<strong>reindex</strong>  &#x21d2; <tt>void</tt> 
   
 
   
@@ -1696,8 +1698,7 @@ rb_grn_variable_size_column_reindex (VALUE self)
 
 </div>
 
-    <div id="footer"></div>
-
+      <div id="footer"></div>
   
     </div>
 
