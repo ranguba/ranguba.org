@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,8 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Groonga::Object";
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
+  framesUrl = "../frames.html#!Groonga/Object.html";
 </script>
 
 
@@ -58,50 +59,51 @@
 <div class="content">
 
 
-    <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
-      <div id="resizer"></div>
-    </div>
-
-    <div id="main" tabindex="-1">
-      <div id="header">
-        <div id="menu">
+    <div id="header">
+      <div id="menu">
   
     <a href="../alphabetical_index.html">Index (O)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Object</span>
   
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-        <div id="search">
+      <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-
-        <svg width="24" height="24">
-          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
-        </svg>
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
     </a>
   
 </div>
-        <div class="clear"></div>
-      </div>
+      <div class="clear"></div>
+    </div>
 
-      <iframe id="search_frame" src="../class_list.html"></iframe>
+    <iframe id="search_frame"></iframe>
 
-      <div id="content"><h1>Class: Groonga::Object
+    <div id="content"><h1>Class: Groonga::Object
   
   
   
 </h1>
-<div class="box_info">
+
+<dl class="box">
   
-  <dl>
-    <dt>Inherits:</dt>
-    <dd>
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -112,27 +114,23 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-    </dd>
-  </dl>
-  
-
+      </dd>
+    
   
   
+    
+  
+    
   
   
   
-
-  
-
-  
-  <dl>
-    <dt>Defined in:</dt>
-    <dd>ext/groonga/rb-grn-object.c<span class="defines">,<br />
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/groonga/rb-grn-object.c<span class="defines">,<br />
   ext/groonga/rb-grn-object.c</span>
 </dd>
-  </dl>
   
-</div>
+</dl>
+<div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -160,7 +158,7 @@
   
     <h2>
       Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
@@ -168,7 +166,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Boolean </a>
+      <a href="#%3D%3D-instance_method" title="#== (instance method)">- (Boolean) <strong>==</strong>(other) </a>
     
 
     
@@ -191,7 +189,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(id)  &#x21d2; 値 </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (値) <strong>[]</strong>(id) </a>
     
 
     
@@ -214,7 +212,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(id, value)  &#x21d2; Object </a>
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong>(id, value) </a>
     
 
     
@@ -237,7 +235,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#accessor%3F-instance_method" title="#accessor? (instance method)">#<strong>accessor?</strong>  &#x21d2; Boolean </a>
+      <a href="#accessor%3F-instance_method" title="#accessor? (instance method)">- (Boolean) <strong>accessor?</strong> </a>
     
 
     
@@ -260,7 +258,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#append-instance_method" title="#append (instance method)">#<strong>append</strong>(id, value)  &#x21d2; Object </a>
+      <a href="#append-instance_method" title="#append (instance method)">- (Object) <strong>append</strong>(id, value) </a>
     
 
     
@@ -283,7 +281,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#builtin%3F-instance_method" title="#builtin? (instance method)">#<strong>builtin?</strong>  &#x21d2; Boolean </a>
+      <a href="#builtin%3F-instance_method" title="#builtin? (instance method)">- (Boolean) <strong>builtin?</strong> </a>
     
 
     
@@ -306,7 +304,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#close-instance_method" title="#close (instance method)">#<strong>close</strong>  &#x21d2; Object </a>
+      <a href="#close-instance_method" title="#close (instance method)">- (Object) <strong>close</strong> </a>
     
 
     
@@ -329,7 +327,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#closed%3F-instance_method" title="#closed? (instance method)">#<strong>closed?</strong>  &#x21d2; Boolean </a>
+      <a href="#closed%3F-instance_method" title="#closed? (instance method)">- (Boolean) <strong>closed?</strong> </a>
     
 
     
@@ -352,7 +350,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#column%3F-instance_method" title="#column? (instance method)">#<strong>column?</strong>  &#x21d2; Boolean </a>
+      <a href="#column%3F-instance_method" title="#column? (instance method)">- (Boolean) <strong>column?</strong> </a>
     
 
     
@@ -375,7 +373,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#dirty%3F-instance_method" title="#dirty? (instance method)">#<strong>dirty?</strong>  &#x21d2; Boolean </a>
+      <a href="#dirty%3F-instance_method" title="#dirty? (instance method)">- (Boolean) <strong>dirty?</strong> </a>
     
 
     
@@ -398,7 +396,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#domain-instance_method" title="#domain (instance method)">#<strong>domain</strong>  &#x21d2; Groonga::Object or nil </a>
+      <a href="#domain-instance_method" title="#domain (instance method)">- (Groonga::Object or nil) <strong>domain</strong> </a>
     
 
     
@@ -421,7 +419,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#function_procedure%3F-instance_method" title="#function_procedure? (instance method)">#<strong>function_procedure?</strong>  &#x21d2; Boolean </a>
+      <a href="#function_procedure%3F-instance_method" title="#function_procedure? (instance method)">- (Boolean) <strong>function_procedure?</strong> </a>
     
 
     
@@ -444,7 +442,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#id-instance_method" title="#id (instance method)">#<strong>id</strong>  &#x21d2; ID or nil </a>
+      <a href="#id-instance_method" title="#id (instance method)">- (ID or nil) <strong>id</strong> </a>
     
 
     
@@ -467,7 +465,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#index_column%3F-instance_method" title="#index_column? (instance method)">#<strong>index_column?</strong>  &#x21d2; Boolean </a>
+      <a href="#index_column%3F-instance_method" title="#index_column? (instance method)">- (Boolean) <strong>index_column?</strong> </a>
     
 
     
@@ -490,7 +488,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong>  &#x21d2; 詳細情報 </a>
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (詳細情報) <strong>inspect</strong> </a>
     
 
     
@@ -513,7 +511,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#key_accessor%3F-instance_method" title="#key_accessor? (instance method)">#<strong>key_accessor?</strong>  &#x21d2; Boolean </a>
+      <a href="#key_accessor%3F-instance_method" title="#key_accessor? (instance method)">- (Boolean) <strong>key_accessor?</strong> </a>
     
 
     
@@ -536,7 +534,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#last_modified-instance_method" title="#last_modified (instance method)">#<strong>last_modified</strong>  &#x21d2; Time </a>
+      <a href="#last_modified-instance_method" title="#last_modified (instance method)">- (Time) <strong>last_modified</strong> </a>
     
 
     
@@ -559,7 +557,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; 名前 or nil </a>
+      <a href="#name-instance_method" title="#name (instance method)">- (名前 or nil) <strong>name</strong> </a>
     
 
     
@@ -582,7 +580,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#path-instance_method" title="#path (instance method)">#<strong>path</strong>  &#x21d2; ファイルパス or nil </a>
+      <a href="#path-instance_method" title="#path (instance method)">- (ファイルパス or nil) <strong>path</strong> </a>
     
 
     
@@ -605,7 +603,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#persistent%3F-instance_method" title="#persistent? (instance method)">#<strong>persistent?</strong>  &#x21d2; Boolean </a>
+      <a href="#persistent%3F-instance_method" title="#persistent? (instance method)">- (Boolean) <strong>persistent?</strong> </a>
     
 
     
@@ -628,7 +626,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prepend-instance_method" title="#prepend (instance method)">#<strong>prepend</strong>(id, value)  &#x21d2; Object </a>
+      <a href="#prepend-instance_method" title="#prepend (instance method)">- (Object) <strong>prepend</strong>(id, value) </a>
     
 
     
@@ -651,7 +649,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#procedure%3F-instance_method" title="#procedure? (instance method)">#<strong>procedure?</strong>  &#x21d2; Boolean </a>
+      <a href="#procedure%3F-instance_method" title="#procedure? (instance method)">- (Boolean) <strong>procedure?</strong> </a>
     
 
     
@@ -674,7 +672,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#range-instance_method" title="#range (instance method)">#<strong>range</strong>  &#x21d2; Groonga::Object or nil </a>
+      <a href="#range-instance_method" title="#range (instance method)">- (Groonga::Object or nil) <strong>range</strong> </a>
     
 
     
@@ -697,7 +695,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reference_column%3F-instance_method" title="#reference_column? (instance method)">#<strong>reference_column?</strong>  &#x21d2; Boolean </a>
+      <a href="#reference_column%3F-instance_method" title="#reference_column? (instance method)">- (Boolean) <strong>reference_column?</strong> </a>
     
 
     
@@ -720,7 +718,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove-instance_method" title="#remove (instance method)">#<strong>remove</strong>(options = {})  &#x21d2; Object </a>
+      <a href="#remove-instance_method" title="#remove (instance method)">- (Object) <strong>remove</strong>(options = {}) </a>
     
 
     
@@ -743,7 +741,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#scorer_procedure%3F-instance_method" title="#scorer_procedure? (instance method)">#<strong>scorer_procedure?</strong>  &#x21d2; Boolean </a>
+      <a href="#scorer_procedure%3F-instance_method" title="#scorer_procedure? (instance method)">- (Boolean) <strong>scorer_procedure?</strong> </a>
     
 
     
@@ -766,7 +764,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#selector_only_procedure%3F-instance_method" title="#selector_only_procedure? (instance method)">#<strong>selector_only_procedure?</strong>  &#x21d2; Boolean </a>
+      <a href="#selector_only_procedure%3F-instance_method" title="#selector_only_procedure? (instance method)">- (Boolean) <strong>selector_only_procedure?</strong> </a>
     
 
     
@@ -789,7 +787,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#selector_procedure%3F-instance_method" title="#selector_procedure? (instance method)">#<strong>selector_procedure?</strong>  &#x21d2; Boolean </a>
+      <a href="#selector_procedure%3F-instance_method" title="#selector_procedure? (instance method)">- (Boolean) <strong>selector_procedure?</strong> </a>
     
 
     
@@ -812,7 +810,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#table%3F-instance_method" title="#table? (instance method)">#<strong>table?</strong>  &#x21d2; Boolean </a>
+      <a href="#table%3F-instance_method" title="#table? (instance method)">- (Boolean) <strong>table?</strong> </a>
     
 
     
@@ -835,7 +833,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#temporary%3F-instance_method" title="#temporary? (instance method)">#<strong>temporary?</strong>  &#x21d2; Boolean </a>
+      <a href="#temporary%3F-instance_method" title="#temporary? (instance method)">- (Boolean) <strong>temporary?</strong> </a>
     
 
     
@@ -858,7 +856,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#touch-instance_method" title="#touch (instance method)">#<strong>touch</strong>(time = nil)  &#x21d2; void </a>
+      <a href="#touch-instance_method" title="#touch (instance method)">- (void) <strong>touch</strong>(time = nil) </a>
     
 
     
@@ -881,7 +879,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unlink-instance_method" title="#unlink (instance method)">#<strong>unlink</strong>  &#x21d2; Object </a>
+      <a href="#unlink-instance_method" title="#unlink (instance method)">- (Object) <strong>unlink</strong> </a>
     
 
     
@@ -904,7 +902,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#window_function_procedure%3F-instance_method" title="#window_function_procedure? (instance method)">#<strong>window_function_procedure?</strong>  &#x21d2; Boolean </a>
+      <a href="#window_function_procedure%3F-instance_method" title="#window_function_procedure? (instance method)">- (Boolean) <strong>window_function_procedure?</strong> </a>
     
 
     
@@ -936,7 +934,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="==-instance_method">
   
-    #<strong>==</strong>(other)  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>==</strong>(other) 
   
 
   
@@ -1030,7 +1028,7 @@ rb_grn_object_equal (VALUE self, VALUE other)
       <div class="method_details ">
   <h3 class="signature " id="[]-instance_method">
   
-    #<strong>[]</strong>(id)  &#x21d2; <tt>値</tt> 
+    - (<tt>値</tt>) <strong>[]</strong>(id) 
   
 
   
@@ -1233,7 +1231,7 @@ rb_grn_object_array_reference (VALUE self, VALUE rb_id)
       <div class="method_details ">
   <h3 class="signature " id="[]=-instance_method">
   
-    #<strong>[]=</strong>(id, value)  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt>) <strong>[]=</strong>(id, value) 
   
 
   
@@ -1280,7 +1278,7 @@ rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
       <div class="method_details ">
   <h3 class="signature " id="accessor?-instance_method">
   
-    #<strong>accessor?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>accessor?</strong> 
   
 
   
@@ -1405,7 +1403,7 @@ rb_grn_object_accessor_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="append-instance_method">
   
-    #<strong>append</strong>(id, value)  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt>) <strong>append</strong>(id, value) 
   
 
   
@@ -1451,7 +1449,7 @@ rb_grn_object_append_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <div class="method_details ">
   <h3 class="signature " id="builtin?-instance_method">
   
-    #<strong>builtin?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>builtin?</strong> 
   
 
   
@@ -1530,7 +1528,7 @@ rb_grn_object_builtin_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="close-instance_method">
   
-    #<strong>close</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt>) <strong>close</strong> 
   
 
   
@@ -1587,7 +1585,7 @@ rb_grn_object_close (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="closed?-instance_method">
   
-    #<strong>closed?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>closed?</strong> 
   
 
   
@@ -1661,7 +1659,7 @@ rb_grn_object_closed_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="column?-instance_method">
   
-    #<strong>column?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>column?</strong> 
   
 
   
@@ -1784,7 +1782,7 @@ rb_grn_object_column_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="dirty?-instance_method">
   
-    #<strong>dirty?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>dirty?</strong> 
   
 
   
@@ -1899,7 +1897,7 @@ rb_grn_object_dirty_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="domain-instance_method">
   
-    #<strong>domain</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt>) <strong>domain</strong> 
   
 
   
@@ -2014,7 +2012,7 @@ rb_grn_object_get_domain (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="function_procedure?-instance_method">
   
-    #<strong>function_procedure?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>function_procedure?</strong> 
   
 
   
@@ -2139,7 +2137,7 @@ rb_grn_object_function_procedure_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="id-instance_method">
   
-    #<strong>id</strong>  &#x21d2; <tt><span class='object_link'><a href="ID.html" title="Groonga::ID (module)">ID</a></span> or nil</tt> 
+    - (<tt><span class='object_link'><a href="ID.html" title="Groonga::ID (module)">ID</a></span> or nil</tt>) <strong>id</strong> 
   
 
   
@@ -2231,7 +2229,7 @@ rb_grn_object_get_id (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="index_column?-instance_method">
   
-    #<strong>index_column?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>index_column?</strong> 
   
 
   
@@ -2356,7 +2354,7 @@ rb_grn_object_index_column_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt>詳細情報</tt> 
+    - (<tt>詳細情報</tt>) <strong>inspect</strong> 
   
 
   
@@ -2439,7 +2437,7 @@ rb_grn_object_inspect (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="key_accessor?-instance_method">
   
-    #<strong>key_accessor?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>key_accessor?</strong> 
   
 
   
@@ -2585,7 +2583,7 @@ rb_grn_object_key_accessor_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="last_modified-instance_method">
   
-    #<strong>last_modified</strong>  &#x21d2; <tt>Time</tt> 
+    - (<tt>Time</tt>) <strong>last_modified</strong> 
   
 
   
@@ -2687,7 +2685,7 @@ rb_grn_object_get_last_modified (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="name-instance_method">
   
-    #<strong>name</strong>  &#x21d2; <tt>名前 or nil</tt> 
+    - (<tt>名前 or nil</tt>) <strong>name</strong> 
   
 
   
@@ -2796,7 +2794,7 @@ rb_grn_object_get_name (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="path-instance_method">
   
-    #<strong>path</strong>  &#x21d2; <tt>ファイルパス or nil</tt> 
+    - (<tt>ファイルパス or nil</tt>) <strong>path</strong> 
   
 
   
@@ -2890,7 +2888,7 @@ rb_grn_object_get_path (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="persistent?-instance_method">
   
-    #<strong>persistent?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>persistent?</strong> 
   
 
   
@@ -2962,7 +2960,7 @@ rb_grn_object_persistent_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="prepend-instance_method">
   
-    #<strong>prepend</strong>(id, value)  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt>) <strong>prepend</strong>(id, value) 
   
 
   
@@ -3008,7 +3006,7 @@ rb_grn_object_prepend_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <div class="method_details ">
   <h3 class="signature " id="procedure?-instance_method">
   
-    #<strong>procedure?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>procedure?</strong> 
   
 
   
@@ -3131,7 +3129,7 @@ rb_grn_object_procedure_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="range-instance_method">
   
-    #<strong>range</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Groonga::Object</a></span> or nil</tt>) <strong>range</strong> 
   
 
   
@@ -3248,7 +3246,7 @@ rb_grn_object_get_range (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="reference_column?-instance_method">
   
-    #<strong>reference_column?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>reference_column?</strong> 
   
 
   
@@ -3373,7 +3371,7 @@ rb_grn_object_reference_column_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="remove-instance_method">
   
-    #<strong>remove</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt>) <strong>remove</strong>(options = {}) 
   
 
   
@@ -3405,7 +3403,7 @@ related with the object are removed.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -3534,7 +3532,7 @@ rb_grn_object_remove (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="scorer_procedure?-instance_method">
   
-    #<strong>scorer_procedure?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>scorer_procedure?</strong> 
   
 
   
@@ -3659,7 +3657,7 @@ rb_grn_object_scorer_procedure_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="selector_only_procedure?-instance_method">
   
-    #<strong>selector_only_procedure?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>selector_only_procedure?</strong> 
   
 
   
@@ -3784,7 +3782,7 @@ rb_grn_object_selector_only_procedure_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="selector_procedure?-instance_method">
   
-    #<strong>selector_procedure?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>selector_procedure?</strong> 
   
 
   
@@ -3909,7 +3907,7 @@ rb_grn_object_selector_procedure_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="table?-instance_method">
   
-    #<strong>table?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>table?</strong> 
   
 
   
@@ -4032,7 +4030,7 @@ rb_grn_object_table_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="temporary?-instance_method">
   
-    #<strong>temporary?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>temporary?</strong> 
   
 
   
@@ -4104,7 +4102,7 @@ rb_grn_object_temporary_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="touch-instance_method">
   
-    #<strong>touch</strong>(time = nil)  &#x21d2; <tt>void</tt> 
+    - (<tt>void</tt>) <strong>touch</strong>(time = nil) 
   
 
   
@@ -4242,7 +4240,7 @@ rb_grn_object_touch (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="unlink-instance_method">
   
-    #<strong>unlink</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unlink</strong> 
   
 
   
@@ -4318,7 +4316,7 @@ rb_grn_object_unlink (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="window_function_procedure?-instance_method">
   
-    #<strong>window_function_procedure?</strong>  &#x21d2; <tt>Boolean</tt> 
+    - (<tt>Boolean</tt>) <strong>window_function_procedure?</strong> 
   
 
   
@@ -4446,7 +4444,8 @@ rb_grn_object_window_function_procedure_p (VALUE self)
 
 </div>
 
-      <div id="footer"></div>
+    <div id="footer"></div>
+
   
     </div>
 

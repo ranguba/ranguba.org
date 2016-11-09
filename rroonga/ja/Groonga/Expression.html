@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,8 +19,9 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Groonga::Expression";
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
+  framesUrl = "../frames.html#!Groonga/Expression.html";
 </script>
 
 
@@ -58,50 +59,51 @@
 <div class="content">
 
 
-    <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
-      <div id="resizer"></div>
-    </div>
-
-    <div id="main" tabindex="-1">
-      <div id="header">
-        <div id="menu">
+    <div id="header">
+      <div id="menu">
   
     <a href="../alphabetical_index.html">Index (E)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Expression</span>
   
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-        <div id="search">
+      <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-
-        <svg width="24" height="24">
-          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
-          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
-        </svg>
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
     </a>
   
 </div>
-        <div class="clear"></div>
-      </div>
+      <div class="clear"></div>
+    </div>
 
-      <iframe id="search_frame" src="../class_list.html"></iframe>
+    <iframe id="search_frame"></iframe>
 
-      <div id="content"><h1>Class: Groonga::Expression
+    <div id="content"><h1>Class: Groonga::Expression
   
   
   
 </h1>
-<div class="box_info">
+
+<dl class="box">
   
-  <dl>
-    <dt>Inherits:</dt>
-    <dd>
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
       <span class="inheritName"><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
@@ -114,27 +116,23 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-    </dd>
-  </dl>
-  
-
+      </dd>
+    
   
   
+    
+  
+    
   
   
   
-
-  
-
-  
-  <dl>
-    <dt>Defined in:</dt>
-    <dd>ext/groonga/rb-grn-expression.c<span class="defines">,<br />
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/groonga/rb-grn-expression.c<span class="defines">,<br />
   ext/groonga/rb-grn-expression.c</span>
 </dd>
-  </dl>
   
-</div>
+</dl>
+<div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -156,7 +154,7 @@
   
     <h2>
       Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
@@ -164,7 +162,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>  &#x21d2; Object </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Object) <strong>[]</strong> </a>
     
 
     
@@ -187,7 +185,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#append_constant-instance_method" title="#append_constant (instance method)">#<strong>append_constant</strong>(constant, operation = Groonga::Operator::PUSH, n_arguments = 1)  &#x21d2; Self </a>
+      <a href="#append_constant-instance_method" title="#append_constant (instance method)">- (Self) <strong>append_constant</strong>(constant, operation = Groonga::Operator::PUSH, n_arguments = 1) </a>
     
 
     
@@ -210,7 +208,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#append_object-instance_method" title="#append_object (instance method)">#<strong>append_object</strong>(object, operation = Groonga::Operator::PUSH, n_arguments = 1)  &#x21d2; Self </a>
+      <a href="#append_object-instance_method" title="#append_object (instance method)">- (Self) <strong>append_object</strong>(object, operation = Groonga::Operator::PUSH, n_arguments = 1) </a>
     
 
     
@@ -233,7 +231,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#append_operation-instance_method" title="#append_operation (instance method)">#<strong>append_operation</strong>(operation, n_arguments)  &#x21d2; Object </a>
+      <a href="#append_operation-instance_method" title="#append_operation (instance method)">- (Object) <strong>append_operation</strong>(operation, n_arguments) </a>
     
 
     
@@ -256,7 +254,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#compile-instance_method" title="#compile (instance method)">#<strong>compile</strong>  &#x21d2; Object </a>
+      <a href="#compile-instance_method" title="#compile (instance method)">- (Object) <strong>compile</strong> </a>
     
 
     
@@ -279,7 +277,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#define_variable-instance_method" title="#define_variable (instance method)">#<strong>define_variable</strong>(options = {})  &#x21d2; Groonga::Variable </a>
+      <a href="#define_variable-instance_method" title="#define_variable (instance method)">- (Groonga::Variable) <strong>define_variable</strong>(options = {}) </a>
     
 
     
@@ -302,7 +300,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#dump_plan-instance_method" title="#dump_plan (instance method)">#<strong>dump_plan</strong>  &#x21d2; Object </a>
+      <a href="#dump_plan-instance_method" title="#dump_plan (instance method)">- (Object) <strong>dump_plan</strong> </a>
     
 
     
@@ -325,7 +323,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#estimate_size-instance_method" title="#estimate_size (instance method)">#<strong>estimate_size</strong>  &#x21d2; Integer </a>
+      <a href="#estimate_size-instance_method" title="#estimate_size (instance method)">- (Integer) <strong>estimate_size</strong> </a>
     
 
     
@@ -348,7 +346,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#execute-instance_method" title="#execute (instance method)">#<strong>execute</strong>  &#x21d2; 値 </a>
+      <a href="#execute-instance_method" title="#execute (instance method)">- (値) <strong>execute</strong> </a>
     
 
     
@@ -371,7 +369,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; Object </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Object) <strong>initialize</strong> </a>
     
 
     
@@ -396,7 +394,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong>  &#x21d2; Object </a>
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (Object) <strong>inspect</strong> </a>
     
 
     
@@ -419,7 +417,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#keywords-instance_method" title="#keywords (instance method)">#<strong>keywords</strong>  &#x21d2; ::Array&lt;String&gt; </a>
+      <a href="#keywords-instance_method" title="#keywords (instance method)">- (::Array&lt;String&gt;) <strong>keywords</strong> </a>
     
 
     
@@ -442,7 +440,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#parse-instance_method" title="#parse (instance method)">#<strong>parse</strong>(query, options = {})  &#x21d2; Object </a>
+      <a href="#parse-instance_method" title="#parse (instance method)">- (Object) <strong>parse</strong>(query, options = {}) </a>
     
 
     
@@ -465,7 +463,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rewrite-instance_method" title="#rewrite (instance method)">#<strong>rewrite</strong>  &#x21d2; Groonga::Expression<sup>?</sup> </a>
+      <a href="#rewrite-instance_method" title="#rewrite (instance method)">- (Groonga::Expression<sup>?</sup>) <strong>rewrite</strong> </a>
     
 
     
@@ -488,7 +486,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#snippet-instance_method" title="#snippet (instance method)">#<strong>snippet</strong>(tags, options)  &#x21d2; Groonga::Snippet </a>
+      <a href="#snippet-instance_method" title="#snippet (instance method)">- (Groonga::Snippet) <strong>snippet</strong>(tags, options) </a>
     
 
     
@@ -528,7 +526,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>initialize</strong> 
   
 
   
@@ -622,9 +620,9 @@ rb_grn_expression_initialize (int argc, VALUE *argv, VALUE self)
   <h3 class="signature first" id="[]-instance_method">
   
     
-      <span class="overload">#<strong>[]</strong>(name)  &#x21d2; <tt>変数の値</tt> </span>
+      <span class="overload">- (<tt>変数の値</tt>) <strong>[]</strong>(name) </span>
     
-      <span class="overload">#<strong>[]</strong>(offset)  &#x21d2; <tt>変数の値</tt> </span>
+      <span class="overload">- (<tt>変数の値</tt>) <strong>[]</strong>(offset) </span>
     
   
 
@@ -647,7 +645,7 @@ rb_grn_expression_initialize (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>[]</strong>(name)  &#x21d2; <tt>変数の値</tt> </span>
+        <span class="signature">- (<tt>変数の値</tt>) <strong>[]</strong>(name) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -676,7 +674,7 @@ rb_grn_expression_initialize (int argc, VALUE *argv, VALUE self)
     
       
       <li class="overload_item">
-        <span class="signature">#<strong>[]</strong>(offset)  &#x21d2; <tt>変数の値</tt> </span>
+        <span class="signature">- (<tt>変数の値</tt>) <strong>[]</strong>(offset) </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -784,7 +782,7 @@ rb_grn_expression_array_reference (VALUE self, VALUE rb_name_or_offset)
       <div class="method_details ">
   <h3 class="signature " id="append_constant-instance_method">
   
-    #<strong>append_constant</strong>(constant, operation = Groonga::Operator::PUSH, n_arguments = 1)  &#x21d2; <tt>Self</tt> 
+    - (<tt>Self</tt>) <strong>append_constant</strong>(constant, operation = Groonga::Operator::PUSH, n_arguments = 1) 
   
 
   
@@ -960,7 +958,7 @@ rb_grn_expression_append_constant (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="append_object-instance_method">
   
-    #<strong>append_object</strong>(object, operation = Groonga::Operator::PUSH, n_arguments = 1)  &#x21d2; <tt>Self</tt> 
+    - (<tt>Self</tt>) <strong>append_object</strong>(object, operation = Groonga::Operator::PUSH, n_arguments = 1) 
   
 
   
@@ -1166,7 +1164,7 @@ rb_grn_expression_append_object (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="append_operation-instance_method">
   
-    #<strong>append_operation</strong>(operation, n_arguments)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>append_operation</strong>(operation, n_arguments) 
   
 
   
@@ -1240,7 +1238,7 @@ rb_grn_expression_append_operation (VALUE self, VALUE rb_operation,
       <div class="method_details ">
   <h3 class="signature " id="compile-instance_method">
   
-    #<strong>compile</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>compile</strong> 
   
 
   
@@ -1310,7 +1308,7 @@ rb_grn_expression_compile (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="define_variable-instance_method">
   
-    #<strong>define_variable</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="Variable.html" title="Groonga::Variable (class)">Groonga::Variable</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Variable.html" title="Groonga::Variable (class)">Groonga::Variable</a></span></tt>) <strong>define_variable</strong>(options = {}) 
   
 
   
@@ -1341,7 +1339,7 @@ rb_grn_expression_compile (VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -1525,7 +1523,7 @@ rb_grn_expression_define_variable (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="dump_plan-instance_method">
   
-    #<strong>dump_plan</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>dump_plan</strong> 
   
 
   
@@ -1614,7 +1612,7 @@ rb_grn_expression_dump_plan (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="estimate_size-instance_method">
   
-    #<strong>estimate_size</strong>  &#x21d2; <tt>Integer</tt> 
+    - (<tt>Integer</tt>) <strong>estimate_size</strong> 
   
 
   
@@ -1737,7 +1735,7 @@ rb_grn_expression_estimate_size (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="execute-instance_method">
   
-    #<strong>execute</strong>  &#x21d2; <tt>値</tt> 
+    - (<tt>値</tt>) <strong>execute</strong> 
   
 
   
@@ -1828,7 +1826,7 @@ rb_grn_expression_execute (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="inspect-instance_method">
   
-    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>inspect</strong> 
   
 
   
@@ -1928,7 +1926,7 @@ rb_grn_expression_inspect (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="keywords-instance_method">
   
-    #<strong>keywords</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">::Array</a></span>&lt;String&gt;</tt> 
+    - (<tt>::Array&lt;String&gt;</tt>) <strong>keywords</strong> 
   
 
   
@@ -1968,7 +1966,7 @@ guaranteed.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">::Array</a></span>&lt;String&gt;</tt>)</span>
+        <span class='type'>(<tt>::Array&lt;String&gt;</tt>)</span>
       
       
       
@@ -2070,7 +2068,7 @@ rb_grn_expression_get_keywords (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="parse-instance_method">
   
-    #<strong>parse</strong>(query, options = {})  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>parse</strong>(query, options = {}) 
   
 
   
@@ -2116,7 +2114,7 @@ rb_grn_expression_get_keywords (VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -2140,13 +2138,14 @@ pairs. Omitted names are initialized as the default value.</p>
     <ul class="option">
       
         <li>
-          <span class="name">:default_column</span>
-          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
+          <span class="name">:default_columnではなくのようにcolumn_nameが指定されない条件の検索対象となるカラムを指定する。</span>
+          <span class="type">(<tt>"column_name:hoge""hoge"</tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class='inline'><p>“column_name:hoge”ではなく”hoge”のようにcolumn_nameが指
+            &mdash; <div class='inline'><p>default_column
+“column_name:hoge”ではなく”hoge”のようにcolumn_nameが指
 定されない条件の検索対象となるカラムを指定する。</p>
 </div>
           
@@ -2538,7 +2537,7 @@ rb_grn_expression_parse (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="rewrite-instance_method">
   
-    #<strong>rewrite</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::Expression (class)">Groonga::Expression</a></span></tt><sup>?</sup> 
+    - (<tt><span class='object_link'><a href="" title="Groonga::Expression (class)">Groonga::Expression</a></span></tt><sup>?</sup>) <strong>rewrite</strong> 
   
 
   
@@ -2659,7 +2658,7 @@ rb_grn_expression_rewrite (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="snippet-instance_method">
   
-    #<strong>snippet</strong>(tags, options)  &#x21d2; <tt><span class='object_link'><a href="Snippet.html" title="Groonga::Snippet (class)">Groonga::Snippet</a></span></tt> 
+    - (<tt><span class='object_link'><a href="Snippet.html" title="Groonga::Snippet (class)">Groonga::Snippet</a></span></tt>) <strong>snippet</strong>(tags, options) 
   
 
   
@@ -2727,7 +2726,7 @@ rb_grn_expression_rewrite (VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
       
@@ -3061,13 +3060,12 @@ rb_grn_expression_snippet (int argc, VALUE *argv, VALUE self)
 
 </div>
 
-      <div id="footer">
-  Generated on Mon Nov  7 22:49:47 2016 by
+    <div id="footer">
+  Generated on Wed Nov  9 11:09:18 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.1).
+  0.8.7.6 (ruby-2.2.4).
 </div>
 
-    </div>
   
     </div>
 
