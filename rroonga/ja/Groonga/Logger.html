@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Groonga::Logger";
   relpath = '../';
-  framesUrl = "../frames.html#!Groonga/Logger.html";
 </script>
 
 
@@ -32,6 +31,12 @@
 
   </head>
   <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
 <div class="header">
   <div class="title">
     <a href="../../../ja/">
@@ -59,51 +64,42 @@
 <div class="content">
 
 
-    <div id="header">
-      <div id="menu">
+      <div id="header">
+        <div id="menu">
   
     <a href="../alphabetical_index.html">Index (L)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">Logger</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
-
-    <div id="content"><h1>Class: Groonga::Logger
+      <div id="content"><h1>Class: Groonga::Logger
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -114,23 +110,27 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
+
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">ext/groonga/rb-grn-logger.c<span class="defines">,<br />
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>ext/groonga/rb-grn-logger.c<span class="defines">,<br />
   lib/groonga/logger.rb,<br /> ext/groonga/rb-grn-logger.c</span>
 </dd>
+  </dl>
   
-</dl>
-<div class="clear"></div>
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -157,9 +157,6 @@
   
 </p>
 
-  <h2>Constant Summary</h2>
-  
-
 
 
 
@@ -169,7 +166,7 @@
   
     <h2>
       Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -177,7 +174,53 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#log-class_method" title="log (class method)">+ (void) <strong>log</strong>(message, options = {}) </a>
+      <a href="#flags-class_method" title="flags (class method)">.<strong>flags</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Gets the current log flags that is used by the default logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flags=-class_method" title="flags= (class method)">.<strong>flags=</strong>(flags)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the log flags that is used by the default logger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#log-class_method" title="log (class method)">.<strong>log</strong>(message, options = {})  &#x21d2; void </a>
     
 
     
@@ -200,7 +243,7 @@
         <li class="public deprecated">
   <span class="summary_signature">
     
-      <a href="#log_path-class_method" title="log_path (class method)">+ (Object) <strong>log_path</strong> </a>
+      <a href="#log_path-class_method" title="log_path (class method)">.<strong>log_path</strong>  &#x21d2; Object </a>
     
 
     
@@ -224,7 +267,7 @@ instead.</p>
         <li class="public deprecated">
   <span class="summary_signature">
     
-      <a href="#log_path%3D-class_method" title="log_path= (class method)">+ (Object) <strong>log_path=</strong>(path) </a>
+      <a href="#log_path=-class_method" title="log_path= (class method)">.<strong>log_path=</strong>(path)  &#x21d2; Object </a>
     
 
     
@@ -238,7 +281,7 @@ instead.</p>
   
 
   
-    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>since 3.0.1. Use <span class='object_link'><a href="#path%3D-class_method" title="Groonga::Logger.path= (method)">Logger.path=</a></span>
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>since 3.0.1. Use <span class='object_link'><a href="#path=-class_method" title="Groonga::Logger.path= (method)">Logger.path=</a></span>
 instead.</p>
 </div></span>
   
@@ -248,7 +291,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#max_level-class_method" title="max_level (class method)">+ (Symbol) <strong>max_level</strong> </a>
+      <a href="#max_level-class_method" title="max_level (class method)">.<strong>max_level</strong>  &#x21d2; Symbol </a>
     
 
     
@@ -271,7 +314,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#max_level%3D-class_method" title="max_level= (class method)">+ (void) <strong>max_level=</strong>(max_level) </a>
+      <a href="#max_level=-class_method" title="max_level= (class method)">.<strong>max_level=</strong>(max_level)  &#x21d2; void </a>
     
 
     
@@ -294,7 +337,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#path-class_method" title="path (class method)">+ (String or nil) <strong>path</strong> </a>
+      <a href="#path-class_method" title="path (class method)">.<strong>path</strong>  &#x21d2; String or nil </a>
     
 
     
@@ -317,7 +360,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#path%3D-class_method" title="path= (class method)">+ (Object) <strong>path=</strong>(path) </a>
+      <a href="#path=-class_method" title="path= (class method)">.<strong>path=</strong>(path)  &#x21d2; Object </a>
     
 
     
@@ -340,7 +383,7 @@ instead.</p>
         <li class="public deprecated">
   <span class="summary_signature">
     
-      <a href="#query_log_path-class_method" title="query_log_path (class method)">+ (Object) <strong>query_log_path</strong> </a>
+      <a href="#query_log_path-class_method" title="query_log_path (class method)">.<strong>query_log_path</strong>  &#x21d2; Object </a>
     
 
     
@@ -364,7 +407,7 @@ instead.</p>
         <li class="public deprecated">
   <span class="summary_signature">
     
-      <a href="#query_log_path%3D-class_method" title="query_log_path= (class method)">+ (Object) <strong>query_log_path=</strong>(path) </a>
+      <a href="#query_log_path=-class_method" title="query_log_path= (class method)">.<strong>query_log_path=</strong>(path)  &#x21d2; Object </a>
     
 
     
@@ -378,7 +421,7 @@ instead.</p>
   
 
   
-    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>since 3.0.1. Use <span class='object_link'><a href="QueryLogger.html#path%3D-class_method" title="Groonga::QueryLogger.path= (method)">QueryLogger.path=</a></span>
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>since 3.0.1. Use <span class='object_link'><a href="QueryLogger.html#path=-class_method" title="Groonga::QueryLogger.path= (method)">QueryLogger.path=</a></span>
 instead.</p>
 </div></span>
   
@@ -388,7 +431,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#register-class_method" title="register (class method)">+ (Object) <strong>register</strong>(options = {}) {|event, level, time, title, message, location| ... }</a>
+      <a href="#register-class_method" title="register (class method)">.<strong>register</strong>(options = {}) {|event, level, time, title, message, location| ... } &#x21d2; Object </a>
     
 
     
@@ -411,7 +454,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reopen-class_method" title="reopen (class method)">+ (Object) <strong>reopen</strong> </a>
+      <a href="#reopen-class_method" title="reopen (class method)">.<strong>reopen</strong>  &#x21d2; Object </a>
     
 
     
@@ -434,7 +477,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rotate_threshold_size-class_method" title="threshold (class method)">+ (Integer) <strong>threshold</strong> </a>
+      <a href="#rotate_threshold_size-class_method" title="threshold (class method)">.<strong>threshold</strong>  &#x21d2; Integer </a>
     
 
     
@@ -457,7 +500,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rotate_threshold_size%3D-class_method" title="rotate_threshold_size= (class method)">+ (Object) <strong>rotate_threshold_size=</strong>(size) </a>
+      <a href="#rotate_threshold_size=-class_method" title="rotate_threshold_size= (class method)">.<strong>rotate_threshold_size=</strong>(size)  &#x21d2; Object </a>
     
 
     
@@ -480,7 +523,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unregister-class_method" title="unregister (class method)">+ (Object) <strong>unregister</strong> </a>
+      <a href="#unregister-class_method" title="unregister (class method)">.<strong>unregister</strong>  &#x21d2; Object </a>
     
 
     
@@ -504,7 +547,7 @@ instead.</p>
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -512,7 +555,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fin-instance_method" title="#fin (instance method)">- (Object) <strong>fin</strong> </a>
+      <a href="#fin-instance_method" title="#fin (instance method)">#<strong>fin</strong>  &#x21d2; Object </a>
     
 
     
@@ -535,7 +578,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#log-instance_method" title="#log (instance method)">- (Object) <strong>log</strong>(level, timestamp, title, message, location) </a>
+      <a href="#log-instance_method" title="#log (instance method)">#<strong>log</strong>(level, timestamp, title, message, location)  &#x21d2; Object </a>
     
 
     
@@ -558,7 +601,7 @@ instead.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reopen-instance_method" title="#reopen (instance method)">- (Object) <strong>reopen</strong> </a>
+      <a href="#reopen-instance_method" title="#reopen (instance method)">#<strong>reopen</strong>  &#x21d2; Object </a>
     
 
     
@@ -588,9 +631,220 @@ instead.</p>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="log-class_method">
+  <h3 class="signature first" id="flags-class_method">
   
-    + (<tt>void</tt>) <strong>log</strong>(message, options = {}) 
+    .<strong>flags</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Gets the current log flags that is used by the default logger.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns The current log flags.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current log flags.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.1.3</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 559</span>
+
+static VALUE
+rb_grn_logger_s_get_flags (VALUE klass)
+{
+    int flags = 0;
+    VALUE rb_flags;
+
+    flags = grn_default_logger_get_flags();
+    rb_flags = INT2NUM(flags);
+
+    return rb_flags;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flags=-class_method">
+  
+    .<strong>flags=</strong>(flags)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets the log flags that is used by the default logger.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns void</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>flags</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The log flags for the default logger.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>void</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>6.1.3</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+580
+581
+582
+583
+584
+585
+586</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 580</span>
+
+static VALUE
+rb_grn_logger_s_set_flags (VALUE klass, VALUE rb_flags)
+{
+    grn_default_logger_set_flags(NUM2INT(rb_flags));
+
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="log-class_method">
+  
+    .<strong>log</strong>(message, options = {})  &#x21d2; <tt>void</tt> 
   
 
   
@@ -763,7 +1017,6 @@ message is occurred.</p>
       <pre class="lines">
 
 
-157
 158
 159
 160
@@ -824,10 +1077,11 @@ message is occurred.</p>
 215
 216
 217
-218</pre>
+218
+219</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 157</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 158</span>
 
 static VALUE
 rb_grn_logger_s_log (int argc, VALUE *argv, VALUE klass)
@@ -899,7 +1153,7 @@ rb_grn_logger_s_log (int argc, VALUE *argv, VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="log_path-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>log_path</strong> 
+    .<strong>log_path</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -924,12 +1178,12 @@ instead.</p>
       <pre class="lines">
 
 
-48
 49
-50</pre>
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_log_path'>log_path</span>
   <span class='id identifier rubyid_path'>path</span>
@@ -942,7 +1196,7 @@ instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="log_path=-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>log_path=</strong>(path) 
+    .<strong>log_path=</strong>(path)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -950,7 +1204,7 @@ instead.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>since 3.0.1. Use <span class='object_link'><a href="#path%3D-class_method" title="Groonga::Logger.path= (method)">path=</a></span>
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>since 3.0.1. Use <span class='object_link'><a href="#path=-class_method" title="Groonga::Logger.path= (method)">path=</a></span>
 instead.</p>
 </div></div>
 
@@ -967,12 +1221,12 @@ instead.</p>
       <pre class="lines">
 
 
-54
 55
-56</pre>
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_log_path='>log_path=</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span>
@@ -985,7 +1239,7 @@ instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="max_level-class_method">
   
-    + (<tt>Symbol</tt>) <strong>max_level</strong> 
+    .<strong>max_level</strong>  &#x21d2; <tt>Symbol</tt> 
   
 
   
@@ -1051,7 +1305,6 @@ instead.</p>
       <pre class="lines">
 
 
-447
 448
 449
 450
@@ -1062,10 +1315,11 @@ instead.</p>
 455
 456
 457
-458</pre>
+458
+459</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 447</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 448</span>
 
 static VALUE
 rb_grn_logger_s_get_max_level (VALUE klass)
@@ -1087,7 +1341,7 @@ rb_grn_logger_s_get_max_level (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="max_level=-class_method">
   
-    + (<tt>void</tt>) <strong>max_level=</strong>(max_level) 
+    .<strong>max_level=</strong>(max_level)  &#x21d2; <tt>void</tt> 
   
 
   
@@ -1155,7 +1409,6 @@ rb_grn_logger_s_get_max_level (VALUE klass)
       <pre class="lines">
 
 
-470
 471
 472
 473
@@ -1165,10 +1418,11 @@ rb_grn_logger_s_get_max_level (VALUE klass)
 477
 478
 479
-480</pre>
+480
+481</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 470</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 471</span>
 
 static VALUE
 rb_grn_logger_s_set_max_level (VALUE klass, VALUE rb_max_level)
@@ -1189,7 +1443,7 @@ rb_grn_logger_s_set_max_level (VALUE klass, VALUE rb_max_level)
       <div class="method_details ">
   <h3 class="signature " id="path-class_method">
   
-    + (<tt>String or nil</tt>) <strong>path</strong> 
+    .<strong>path</strong>  &#x21d2; <tt>String or nil</tt> 
   
 
   
@@ -1255,7 +1509,6 @@ rb_grn_logger_s_set_max_level (VALUE klass, VALUE rb_max_level)
       <pre class="lines">
 
 
-490
 491
 492
 493
@@ -1266,10 +1519,11 @@ rb_grn_logger_s_set_max_level (VALUE klass, VALUE rb_max_level)
 498
 499
 500
-501</pre>
+501
+502</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 490</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 491</span>
 
 static VALUE
 rb_grn_logger_s_get_path (VALUE klass)
@@ -1291,7 +1545,7 @@ rb_grn_logger_s_get_path (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="path=-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>path=</strong>(path) 
+    .<strong>path=</strong>(path)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -1318,13 +1572,13 @@ disabled.</p>
         <p class="example_title"><div class='inline'><p>Changes the log path for the default logger</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/groonga.log</span><span class='tstring_end'>&quot;</span></span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Logger (class)">Logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_path'><span class='object_link'><a href="#path-class_method" title="Groonga::Logger.path (method)">path</a></span></span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/groonga.log</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>Disables log by the default logger</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='kw'>nil</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Logger (class)">Logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_path'><span class='object_link'><a href="#path-class_method" title="Groonga::Logger.path (method)">path</a></span></span> <span class='op'>=</span> <span class='kw'>nil</span></code></pre>
     
   </div>
 
@@ -1399,7 +1653,6 @@ If nil is specified, logging by the default logger is disabled.</p>
       <pre class="lines">
 
 
-524
 525
 526
 527
@@ -1423,10 +1676,11 @@ If nil is specified, logging by the default logger is disabled.</p>
 545
 546
 547
-548</pre>
+548
+549</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 524</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 525</span>
 
 static VALUE
 rb_grn_logger_s_set_path (VALUE klass, VALUE rb_path)
@@ -1461,7 +1715,7 @@ rb_grn_logger_s_set_path (VALUE klass, VALUE rb_path)
       <div class="method_details ">
   <h3 class="signature " id="query_log_path-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>query_log_path</strong> 
+    .<strong>query_log_path</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -1486,15 +1740,15 @@ instead.</p>
       <pre class="lines">
 
 
-60
 61
-62</pre>
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_query_log_path'>query_log_path</span>
-  <span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span>
+  <span class='const'><span class='object_link'><a href="QueryLogger.html" title="Groonga::QueryLogger (class)">QueryLogger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_path'><span class='object_link'><a href="QueryLogger.html#path-class_method" title="Groonga::QueryLogger.path (method)">path</a></span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1504,7 +1758,7 @@ instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="query_log_path=-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>query_log_path=</strong>(path) 
+    .<strong>query_log_path=</strong>(path)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -1512,7 +1766,7 @@ instead.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>since 3.0.1. Use <span class='object_link'><a href="QueryLogger.html#path%3D-class_method" title="Groonga::QueryLogger.path= (method)">QueryLogger.path=</a></span>
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>since 3.0.1. Use <span class='object_link'><a href="QueryLogger.html#path=-class_method" title="Groonga::QueryLogger.path= (method)">QueryLogger.path=</a></span>
 instead.</p>
 </div></div>
 
@@ -1529,15 +1783,15 @@ instead.</p>
       <pre class="lines">
 
 
-66
 67
-68</pre>
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_query_log_path='>query_log_path=</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
-  <span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span>
+  <span class='const'><span class='object_link'><a href="QueryLogger.html" title="Groonga::QueryLogger (class)">QueryLogger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_path'><span class='object_link'><a href="QueryLogger.html#path-class_method" title="Groonga::QueryLogger.path (method)">path</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1547,7 +1801,7 @@ instead.</p>
       <div class="method_details ">
   <h3 class="signature " id="register-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>register</strong>(options = {}) {|event, level, time, title, message, location| ... }
+    .<strong>register</strong>(options = {}) {|event, level, time, title, message, location| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -1704,7 +1958,6 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-318
 319
 320
 321
@@ -1764,10 +2017,11 @@ pairs. Omitted names are initialized as the default value.</p>
 375
 376
 377
-378</pre>
+378
+379</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 318</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 319</span>
 
 static VALUE
 rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
@@ -1838,7 +2092,7 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="reopen-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>reopen</strong> 
+    .<strong>reopen</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -1889,7 +2143,6 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
       <pre class="lines">
 
 
-428
 429
 430
 431
@@ -1900,10 +2153,11 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
 436
 437
 438
-439</pre>
+439
+440</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 428</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 429</span>
 
 static VALUE
 rb_grn_logger_s_reopen (VALUE klass)
@@ -1925,7 +2179,7 @@ rb_grn_logger_s_reopen (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="rotate_threshold_size-class_method">
   
-    + (<tt>Integer</tt>) <strong>threshold</strong> 
+    .<strong>threshold</strong>  &#x21d2; <tt>Integer</tt> 
   
 
   
@@ -1995,14 +2249,14 @@ default logger.</p>
       <pre class="lines">
 
 
-562
-563
-564
-565
-566</pre>
+600
+601
+602
+603
+604</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 562</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 600</span>
 
 static VALUE
 rb_grn_logger_s_get_rotate_threshold_size (VALUE klass)
@@ -2017,7 +2271,7 @@ rb_grn_logger_s_get_rotate_threshold_size (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="rotate_threshold_size=-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>rotate_threshold_size=</strong>(size) 
+    .<strong>rotate_threshold_size=</strong>(size)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -2047,13 +2301,13 @@ is disabled by default.</p>
         <p class="example_title"><div class='inline'><p>Changes the rotate threshold size for the default logger</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'>rotate_threshold_size</span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='comment'># 1MiB</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Logger (class)">Logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'><span class='object_link'><a href="#rotate_threshold_size-class_method" title="Groonga::Logger.rotate_threshold_size (method)">rotate_threshold_size</a></span></span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='comment'># 1MiB</span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>Disables log ration by the default logger</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'>rotate_threshold_size</span> <span class='op'>=</span> <span class='int'>0</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Logger (class)">Logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'><span class='object_link'><a href="#rotate_threshold_size-class_method" title="Groonga::Logger.rotate_threshold_size (method)">rotate_threshold_size</a></span></span> <span class='op'>=</span> <span class='int'>0</span></code></pre>
     
   </div>
 
@@ -2128,16 +2382,16 @@ If nil is specified, log rotate by the default logger is disabled.</p>
       <pre class="lines">
 
 
-592
-593
-594
-595
-596
-597
-598</pre>
+630
+631
+632
+633
+634
+635
+636</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 592</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 630</span>
 
 static VALUE
 rb_grn_logger_s_set_rotate_threshold_size (VALUE klass, VALUE rb_size)
@@ -2154,7 +2408,7 @@ rb_grn_logger_s_set_rotate_threshold_size (VALUE klass, VALUE rb_size)
       <div class="method_details ">
   <h3 class="signature " id="unregister-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>unregister</strong> 
+    .<strong>unregister</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -2206,7 +2460,6 @@ unregistering.</p>
       <pre class="lines">
 
 
-387
 388
 389
 390
@@ -2224,10 +2477,11 @@ unregistering.</p>
 402
 403
 404
-405</pre>
+405
+406</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 387</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 388</span>
 
 static VALUE
 rb_grn_logger_s_unregister (VALUE klass)
@@ -2262,7 +2516,7 @@ rb_grn_logger_s_unregister (VALUE klass)
       <div class="method_details first">
   <h3 class="signature first" id="fin-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>fin</strong> 
+    #<strong>fin</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -2274,11 +2528,11 @@ rb_grn_logger_s_unregister (VALUE klass)
       <pre class="lines">
 
 
-80
-81</pre>
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fin'>fin</span>
 <span class='kw'>end</span></pre>
@@ -2290,7 +2544,7 @@ rb_grn_logger_s_unregister (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="log-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>log</strong>(level, timestamp, title, message, location) 
+    #<strong>log</strong>(level, timestamp, title, message, location)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -2302,14 +2556,14 @@ rb_grn_logger_s_unregister (VALUE klass)
       <pre class="lines">
 
 
-71
 72
 73
 74
-75</pre>
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='comma'>,</span> <span class='id identifier rubyid_timestamp'>timestamp</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guard'>guard</span> <span class='kw'>do</span>
@@ -2324,7 +2578,7 @@ rb_grn_logger_s_unregister (VALUE klass)
       <div class="method_details ">
   <h3 class="signature " id="reopen-instance_method">
   
-    - (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>reopen</strong> 
+    #<strong>reopen</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
   
 
   
@@ -2336,11 +2590,11 @@ rb_grn_logger_s_unregister (VALUE klass)
       <pre class="lines">
 
 
-77
-78</pre>
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/logger.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reopen'>reopen</span>
 <span class='kw'>end</span></pre>
@@ -2353,13 +2607,13 @@ rb_grn_logger_s_unregister (VALUE klass)
 
 </div>
 
-    <div id="footer">
-  Generated on Fri Nov 11 18:58:28 2016 by
+      <div id="footer">
+  Generated on Thu Jan 12 23:11:41 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.2.4).
+  0.9.7 (ruby-2.3.0).
 </div>
 
-  
+    
     </div>
 
     <div class="sponsors">
@@ -2375,5 +2629,6 @@ rb_grn_logger_s_unregister (VALUE klass)
       </p>
     </div>
 
-</body>
+</div>
+  </body>
 </html>

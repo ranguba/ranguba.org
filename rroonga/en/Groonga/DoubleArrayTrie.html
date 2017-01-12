@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../ranguba.css" type="text/css" />
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "Groonga::DoubleArrayTrie";
   relpath = '../';
-  framesUrl = "../frames.html#!Groonga/DoubleArrayTrie.html";
 </script>
 
 
@@ -32,6 +31,12 @@
 
   </head>
   <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
 <div class="header">
   <div class="title">
     <a href="../../../">
@@ -59,51 +64,42 @@
 <div class="content">
 
 
-    <div id="header">
-      <div id="menu">
+      <div id="header">
+        <div id="menu">
   
     <a href="../alphabetical_index.html">Index (D)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span>
      &raquo; 
     <span class="title">DoubleArrayTrie</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="../method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="../file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
-
-    <div id="content"><h1>Class: Groonga::DoubleArrayTrie
+      <div id="content"><h1>Class: Groonga::DoubleArrayTrie
   
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName"><span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Table</a></span></span>
       
         <ul class="fullTree">
@@ -118,27 +114,32 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
-      <dt class="r2">Includes:</dt>
-      <dd class="r2"><span class='object_link'><a href="Table/KeySupport.html" title="Groonga::Table::KeySupport (module)">Table::KeySupport</a></span></dd>
-      
-    
+
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">ext/groonga/rb-grn-double-array-trie.c<span class="defines">,<br />
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Table/KeySupport.html" title="Groonga::Table::KeySupport (module)">Table::KeySupport</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>ext/groonga/rb-grn-double-array-trie.c<span class="defines">,<br />
   ext/groonga/rb-grn-double-array-trie.c</span>
 </dd>
+  </dl>
   
-</dl>
-<div class="clear"></div>
+</div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
@@ -173,7 +174,7 @@ predictive search and common prefix search like
   
     <h2>
       Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -181,7 +182,7 @@ predictive search and common prefix search like
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create-class_method" title="create (class method)">+ (Object) <strong>create</strong> </a>
+      <a href="#create-class_method" title="create (class method)">.<strong>create</strong>  &#x21d2; Object </a>
     
 
     
@@ -205,7 +206,7 @@ predictive search and common prefix search like
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -213,7 +214,7 @@ predictive search and common prefix search like
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#open_prefix_cursor-instance_method" title="#open_prefix_cursor (instance method)">- (Object) <strong>open_prefix_cursor</strong> </a>
+      <a href="#open_prefix_cursor-instance_method" title="#open_prefix_cursor (instance method)">#<strong>open_prefix_cursor</strong>  &#x21d2; Object </a>
     
 
     
@@ -236,7 +237,7 @@ predictive search and common prefix search like
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#search-instance_method" title="#search (instance method)">- (Groonga::Hash) <strong>search</strong>(key, options = nil) </a>
+      <a href="#search-instance_method" title="#search (instance method)">#<strong>search</strong>(key, options = nil)  &#x21d2; Groonga::Hash </a>
     
 
     
@@ -259,7 +260,7 @@ predictive search and common prefix search like
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update-instance_method" title="#update (instance method)">- (Object) <strong>update</strong> </a>
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>  &#x21d2; Object </a>
     
 
     
@@ -292,7 +293,7 @@ predictive search and common prefix search like
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Table/KeySupport.html" title="Groonga::Table::KeySupport (module)">Table::KeySupport</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Table/KeySupport.html#%5B%5D-instance_method" title="Groonga::Table::KeySupport#[] (method)">#[]</a></span>, <span class='object_link'><a href="Table/KeySupport.html#%5B%5D%3D-instance_method" title="Groonga::Table::KeySupport#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#add-instance_method" title="Groonga::Table::KeySupport#add (method)">#add</a></span>, <span class='object_link'><a href="Table/KeySupport.html#column_value-instance_method" title="Groonga::Table::KeySupport#column_value (method)">#column_value</a></span>, <span class='object_link'><a href="Table/KeySupport.html#default_tokenizer-instance_method" title="Groonga::Table::KeySupport#default_tokenizer (method)">#default_tokenizer</a></span>, <span class='object_link'><a href="Table/KeySupport.html#default_tokenizer%3D-instance_method" title="Groonga::Table::KeySupport#default_tokenizer= (method)">#default_tokenizer=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#delete-instance_method" title="Groonga::Table::KeySupport#delete (method)">#delete</a></span>, <span class='object_link'><a href="Table/KeySupport.html#has_key%3F-instance_method" title="Groonga::Table::KeySupport#has_key? (method)">#has_key?</a></span>, <span class='object_link'><a href="Table/KeySupport.html#id-instance_method" title="Groonga::Table::KeySupport#id (method)">#id</a></span>, <span class='object_link'><a href="Table/KeySupport.html#inspect-instance_method" title="Groonga::Table::KeySupport#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Table/KeySupport.html#key-instance_method" title="Groonga::Table::KeySupport#key (method)">#key</a></span>, <span class='object_link'><a href="Table/KeySupport.html#normalize_key%3F-instance_method" title="Groonga::Table::KeySupport#normalize_key? (method)">#normalize_key?</a></span>, <span class='object_link'><a href="Table/KeySupport.html#normalizer-instance_method" title="Groonga::Table::KeySupport#normalizer (method)">#normalizer</a></span>, <span class='object_link'><a href="Table/KeySupport.html#normalizer%3D-instance_method" title="Groonga::Table::KeySupport#normalizer= (method)">#normalizer=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#reindex-instance_method" title="Groonga::Table::KeySupport#reindex (method)">#reindex</a></span>, <span class='object_link'><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">#set_column_value</a></span>, <span class='object_link'><a href="Table/KeySupport.html#set_value-instance_method" title="Groonga::Table::KeySupport#set_value (method)">#set_value</a></span>, <span class='object_link'><a href="Table/KeySupport.html#support_key%3F-instance_method" title="Groonga::Table::KeySupport#support_key? (method)">#support_key?</a></span>, <span class='object_link'><a href="Table/KeySupport.html#token_filters-instance_method" title="Groonga::Table::KeySupport#token_filters (method)">#token_filters</a></span>, <span class='object_link'><a href="Table/KeySupport.html#token_filters%3D-instance_method" title="Groonga::Table::KeySupport#token_filters= (method)">#token_filters=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#tokenize-instance_method" title="Groonga::Table::KeySupport#tokenize (method)">#tokenize</a></span>, <span class='object_link'><a href="Table/KeySupport.html#value-instance_method" title="Groonga::Table::KeySupport#value (method)">#value</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Table/KeySupport.html#[]-instance_method" title="Groonga::Table::KeySupport#[] (method)">#[]</a></span>, <span class='object_link'><a href="Table/KeySupport.html#[]=-instance_method" title="Groonga::Table::KeySupport#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#add-instance_method" title="Groonga::Table::KeySupport#add (method)">#add</a></span>, <span class='object_link'><a href="Table/KeySupport.html#column_value-instance_method" title="Groonga::Table::KeySupport#column_value (method)">#column_value</a></span>, <span class='object_link'><a href="Table/KeySupport.html#default_tokenizer-instance_method" title="Groonga::Table::KeySupport#default_tokenizer (method)">#default_tokenizer</a></span>, <span class='object_link'><a href="Table/KeySupport.html#default_tokenizer=-instance_method" title="Groonga::Table::KeySupport#default_tokenizer= (method)">#default_tokenizer=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#delete-instance_method" title="Groonga::Table::KeySupport#delete (method)">#delete</a></span>, <span class='object_link'><a href="Table/KeySupport.html#has_key%3F-instance_method" title="Groonga::Table::KeySupport#has_key? (method)">#has_key?</a></span>, <span class='object_link'><a href="Table/KeySupport.html#id-instance_method" title="Groonga::Table::KeySupport#id (method)">#id</a></span>, <span class='object_link'><a href="Table/KeySupport.html#inspect-instance_method" title="Groonga::Table::KeySupport#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Table/KeySupport.html#key-instance_method" title="Groonga::Table::KeySupport#key (method)">#key</a></span>, <span class='object_link'><a href="Table/KeySupport.html#normalize_key%3F-instance_method" title="Groonga::Table::KeySupport#normalize_key? (method)">#normalize_key?</a></span>, <span class='object_link'><a href="Table/KeySupport.html#normalizer-instance_method" title="Groonga::Table::KeySupport#normalizer (method)">#normalizer</a></span>, <span class='object_link'><a href="Table/KeySupport.html#normalizer=-instance_method" title="Groonga::Table::KeySupport#normalizer= (method)">#normalizer=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#reindex-instance_method" title="Groonga::Table::KeySupport#reindex (method)">#reindex</a></span>, <span class='object_link'><a href="Table/KeySupport.html#set_column_value-instance_method" title="Groonga::Table::KeySupport#set_column_value (method)">#set_column_value</a></span>, <span class='object_link'><a href="Table/KeySupport.html#set_value-instance_method" title="Groonga::Table::KeySupport#set_value (method)">#set_value</a></span>, <span class='object_link'><a href="Table/KeySupport.html#support_key%3F-instance_method" title="Groonga::Table::KeySupport#support_key? (method)">#support_key?</a></span>, <span class='object_link'><a href="Table/KeySupport.html#token_filters-instance_method" title="Groonga::Table::KeySupport#token_filters (method)">#token_filters</a></span>, <span class='object_link'><a href="Table/KeySupport.html#token_filters=-instance_method" title="Groonga::Table::KeySupport#token_filters= (method)">#token_filters=</a></span>, <span class='object_link'><a href="Table/KeySupport.html#tokenize-instance_method" title="Groonga::Table::KeySupport#tokenize (method)">#tokenize</a></span>, <span class='object_link'><a href="Table/KeySupport.html#value-instance_method" title="Groonga::Table::KeySupport#value (method)">#value</a></span></p>
 
   
   
@@ -314,7 +315,7 @@ predictive search and common prefix search like
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Table</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Table.html#%5B%5D-instance_method" title="Groonga::Table#[] (method)">#[]</a></span>, <span class='object_link'><a href="Table.html#clear_lock-instance_method" title="Groonga::Table#clear_lock (method)">#clear_lock</a></span>, <span class='object_link'><a href="Table.html#column-instance_method" title="Groonga::Table#column (method)">#column</a></span>, <span class='object_link'><a href="Table.html#column_value-instance_method" title="Groonga::Table#column_value (method)">#column_value</a></span>, <span class='object_link'><a href="Table.html#columns-instance_method" title="Groonga::Table#columns (method)">#columns</a></span>, <span class='object_link'><a href="Table.html#define_column-instance_method" title="Groonga::Table#define_column (method)">#define_column</a></span>, <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">#define_index_column</a></span>, <span class='object_link'><a href="Table.html#defrag-instance_method" title="Groonga::Table#defrag (method)">#defrag</a></span>, <span class='object_link'><a href="Table.html#delete-instance_method" title="Groonga::Table#delete (method)">#delete</a></span>, <span class='object_link'><a href="Table.html#difference%21-instance_method" title="Groonga::Table#difference! (method)">#difference!</a></span>, <span class='object_link'><a href="Table.html#disk_usage-instance_method" title="Groonga::Table#disk_usage (method)">#disk_usage</a></span>, <span class='object_link'><a href="Table.html#each-instance_method" title="Groonga::Table#each (method)">#each</a></span>, <span class='object_link'><a href="Table.html#each_sub_record-instance_method" title="Groonga::Table#each_sub_record (method)">#each_sub_record</a></span>, <span class='object_link'><a href="Table.html#empty%3F-instance_method" title="Groonga::Table#empty? (method)">#empty?</a></span>, <span class='object_link'><a href="Table.html#exist%3F-instance_method" title="Groonga::Table#exist? (method)">#exist?</a></span>, <span class='object_link'><a href="Table.html#geo_sort-instance_method" title="Groonga::Table#geo_sort (method)">#geo_sort</a></span>, <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">#group</a></span>, <span class='object_link'><a href="Table.html#have_column%3F-instance_method" title="Groonga::Table#have_column? (method)">#have_column?</a></span>, <span class='object_link'><a href="Table.html#have_n_sub_records_space%3F-instance_method" title="Groonga::Table#have_n_sub_records_space? (method)">#have_n_sub_records_space?</a></span>, <span class='object_link'><a href="Table.html#initialize-instance_method" title="Groonga::Table#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Table.html#inspect-instance_method" title="Groonga::Table#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Table.html#intersection%21-instance_method" title="Groonga::Table#intersection! (method)">#intersection!</a></span>, <span class='object_link'><a href="Table.html#lock-instance_method" title="Groonga::Table#lock (method)">#lock</a></span>, <span class='object_link'><a href="Table.html#locked%3F-instance_method" title="Groonga::Table#locked? (method)">#locked?</a></span>, <span class='object_link'><a href="Table.html#merge%21-instance_method" title="Groonga::Table#merge! (method)">#merge!</a></span>, <span class='object_link'><a href="Table.html#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">#open_cursor</a></span>, <span class='object_link'><a href="Table.html#paginate-instance_method" title="Groonga::Table#paginate (method)">#paginate</a></span>, <span class='object_link'><a href="Table.html#records-instance_method" title="Groonga::Table#records (method)">#records</a></span>, <span class='object_link'><a href="Table.html#rename-instance_method" title="Groonga::Table#rename (method)">#rename</a></span>, <span class='object_link'><a href="Table.html#select-instance_method" title="Groonga::Table#select (method)">#select</a></span>, <span class='object_link'><a href="Table.html#set_column_value-instance_method" title="Groonga::Table#set_column_value (method)">#set_column_value</a></span>, <span class='object_link'><a href="Table.html#set_value-instance_method" title="Groonga::Table#set_value (method)">#set_value</a></span>, <span class='object_link'><a href="Table.html#size-instance_method" title="Groonga::Table#size (method)">#size</a></span>, <span class='object_link'><a href="Table.html#sort-instance_method" title="Groonga::Table#sort (method)">#sort</a></span>, <span class='object_link'><a href="Table.html#support_key%3F-instance_method" title="Groonga::Table#support_key? (method)">#support_key?</a></span>, <span class='object_link'><a href="Table.html#support_sub_records%3F-instance_method" title="Groonga::Table#support_sub_records? (method)">#support_sub_records?</a></span>, <span class='object_link'><a href="Table.html#support_value%3F-instance_method" title="Groonga::Table#support_value? (method)">#support_value?</a></span>, <span class='object_link'><a href="Table.html#truncate-instance_method" title="Groonga::Table#truncate (method)">#truncate</a></span>, <span class='object_link'><a href="Table.html#union%21-instance_method" title="Groonga::Table#union! (method)">#union!</a></span>, <span class='object_link'><a href="Table.html#unlock-instance_method" title="Groonga::Table#unlock (method)">#unlock</a></span>, <span class='object_link'><a href="Table.html#value-instance_method" title="Groonga::Table#value (method)">#value</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Table.html#[]-instance_method" title="Groonga::Table#[] (method)">#[]</a></span>, <span class='object_link'><a href="Table.html#clear_lock-instance_method" title="Groonga::Table#clear_lock (method)">#clear_lock</a></span>, <span class='object_link'><a href="Table.html#column-instance_method" title="Groonga::Table#column (method)">#column</a></span>, <span class='object_link'><a href="Table.html#column_value-instance_method" title="Groonga::Table#column_value (method)">#column_value</a></span>, <span class='object_link'><a href="Table.html#columns-instance_method" title="Groonga::Table#columns (method)">#columns</a></span>, <span class='object_link'><a href="Table.html#define_column-instance_method" title="Groonga::Table#define_column (method)">#define_column</a></span>, <span class='object_link'><a href="Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">#define_index_column</a></span>, <span class='object_link'><a href="Table.html#defrag-instance_method" title="Groonga::Table#defrag (method)">#defrag</a></span>, <span class='object_link'><a href="Table.html#delete-instance_method" title="Groonga::Table#delete (method)">#delete</a></span>, <span class='object_link'><a href="Table.html#difference!-instance_method" title="Groonga::Table#difference! (method)">#difference!</a></span>, <span class='object_link'><a href="Table.html#disk_usage-instance_method" title="Groonga::Table#disk_usage (method)">#disk_usage</a></span>, <span class='object_link'><a href="Table.html#each-instance_method" title="Groonga::Table#each (method)">#each</a></span>, <span class='object_link'><a href="Table.html#each_sub_record-instance_method" title="Groonga::Table#each_sub_record (method)">#each_sub_record</a></span>, <span class='object_link'><a href="Table.html#empty%3F-instance_method" title="Groonga::Table#empty? (method)">#empty?</a></span>, <span class='object_link'><a href="Table.html#exist%3F-instance_method" title="Groonga::Table#exist? (method)">#exist?</a></span>, <span class='object_link'><a href="Table.html#geo_sort-instance_method" title="Groonga::Table#geo_sort (method)">#geo_sort</a></span>, <span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">#group</a></span>, <span class='object_link'><a href="Table.html#have_column%3F-instance_method" title="Groonga::Table#have_column? (method)">#have_column?</a></span>, <span class='object_link'><a href="Table.html#have_n_sub_records_space%3F-instance_method" title="Groonga::Table#have_n_sub_records_space? (method)">#have_n_sub_records_space?</a></span>, <span class='object_link'><a href="Table.html#initialize-instance_method" title="Groonga::Table#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Table.html#inspect-instance_method" title="Groonga::Table#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Table.html#intersection!-instance_method" title="Groonga::Table#intersection! (method)">#intersection!</a></span>, <span class='object_link'><a href="Table.html#lock-instance_method" title="Groonga::Table#lock (method)">#lock</a></span>, <span class='object_link'><a href="Table.html#locked%3F-instance_method" title="Groonga::Table#locked? (method)">#locked?</a></span>, <span class='object_link'><a href="Table.html#merge!-instance_method" title="Groonga::Table#merge! (method)">#merge!</a></span>, <span class='object_link'><a href="Table.html#open_cursor-instance_method" title="Groonga::Table#open_cursor (method)">#open_cursor</a></span>, <span class='object_link'><a href="Table.html#paginate-instance_method" title="Groonga::Table#paginate (method)">#paginate</a></span>, <span class='object_link'><a href="Table.html#records-instance_method" title="Groonga::Table#records (method)">#records</a></span>, <span class='object_link'><a href="Table.html#rename-instance_method" title="Groonga::Table#rename (method)">#rename</a></span>, <span class='object_link'><a href="Table.html#select-instance_method" title="Groonga::Table#select (method)">#select</a></span>, <span class='object_link'><a href="Table.html#set_column_value-instance_method" title="Groonga::Table#set_column_value (method)">#set_column_value</a></span>, <span class='object_link'><a href="Table.html#set_value-instance_method" title="Groonga::Table#set_value (method)">#set_value</a></span>, <span class='object_link'><a href="Table.html#size-instance_method" title="Groonga::Table#size (method)">#size</a></span>, <span class='object_link'><a href="Table.html#sort-instance_method" title="Groonga::Table#sort (method)">#sort</a></span>, <span class='object_link'><a href="Table.html#support_key%3F-instance_method" title="Groonga::Table#support_key? (method)">#support_key?</a></span>, <span class='object_link'><a href="Table.html#support_sub_records%3F-instance_method" title="Groonga::Table#support_sub_records? (method)">#support_sub_records?</a></span>, <span class='object_link'><a href="Table.html#support_value%3F-instance_method" title="Groonga::Table#support_value? (method)">#support_value?</a></span>, <span class='object_link'><a href="Table.html#truncate-instance_method" title="Groonga::Table#truncate (method)">#truncate</a></span>, <span class='object_link'><a href="Table.html#union!-instance_method" title="Groonga::Table#union! (method)">#union!</a></span>, <span class='object_link'><a href="Table.html#unlock-instance_method" title="Groonga::Table#unlock (method)">#unlock</a></span>, <span class='object_link'><a href="Table.html#value-instance_method" title="Groonga::Table#value (method)">#value</a></span></p>
 
   
   
@@ -337,7 +338,7 @@ predictive search and common prefix search like
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#%5B%5D-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class='object_link'><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Object.html#accessor%3F-instance_method" title="Groonga::Object#accessor? (method)">#accessor?</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#column%3F-instance_method" title="Groonga::Object#column? (method)">#column?</a></span>, <span class='object_link'><a href="Object.html#dirty%3F-instance_method" title="Groonga::Object#dirty? (method)">#dirty?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#function_procedure%3F-instance_method" title="Groonga::Object#function_procedure? (method)">#function_procedure?</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#index_column%3F-instance_method" title="Groonga::Object#index_column? (method)">#index_column?</a></span>, <span class='object_link'><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Object.html#key_accessor%3F-instance_method" title="Groonga::Object#key_accessor? (method)">#key_accessor?</a></span>, <span class='object_link'><a href="Object.html#last_modified-instance_method" title="Groonga::Object#last_modified (method)">#last_modified</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#procedure%3F-instance_method" title="Groonga::Object#procedure? (method)">#procedure?</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#reference_column%3F-instance_method" title="Groonga::Object#reference_column? (method)">#reference_column?</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#scorer_procedure%3F-instance_method" title="Groonga::Object#scorer_procedure? (method)">#scorer_procedure?</a></span>, <span class='object_link'><a href="Object.html#selector_only_procedure%3F-instance_method" title="Groonga::Object#selector_only_procedure? (method)">#selector_only_procedure?</a></span>, <span class='object_link'><a href="Object.html#selector_procedure%3F-instance_method" title="Groonga::Object#selector_procedure? (method)">#selector_procedure?</a></span>, <span class='object_link'><a href="Object.html#table%3F-instance_method" title="Groonga::Object#table? (method)">#table?</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#touch-instance_method" title="Groonga::Object#touch (method)">#touch</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span>, <span class='object_link'><a href="Object.html#window_function_procedure%3F-instance_method" title="Groonga::Object#window_function_procedure? (method)">#window_function_procedure?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Object.html#==-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#[]-instance_method" title="Groonga::Object#[] (method)">#[]</a></span>, <span class='object_link'><a href="Object.html#[]=-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Object.html#accessor%3F-instance_method" title="Groonga::Object#accessor? (method)">#accessor?</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#column%3F-instance_method" title="Groonga::Object#column? (method)">#column?</a></span>, <span class='object_link'><a href="Object.html#dirty%3F-instance_method" title="Groonga::Object#dirty? (method)">#dirty?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#function_procedure%3F-instance_method" title="Groonga::Object#function_procedure? (method)">#function_procedure?</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#index_column%3F-instance_method" title="Groonga::Object#index_column? (method)">#index_column?</a></span>, <span class='object_link'><a href="Object.html#inspect-instance_method" title="Groonga::Object#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="Object.html#key_accessor%3F-instance_method" title="Groonga::Object#key_accessor? (method)">#key_accessor?</a></span>, <span class='object_link'><a href="Object.html#last_modified-instance_method" title="Groonga::Object#last_modified (method)">#last_modified</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#procedure%3F-instance_method" title="Groonga::Object#procedure? (method)">#procedure?</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#reference_column%3F-instance_method" title="Groonga::Object#reference_column? (method)">#reference_column?</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#scorer_procedure%3F-instance_method" title="Groonga::Object#scorer_procedure? (method)">#scorer_procedure?</a></span>, <span class='object_link'><a href="Object.html#selector_only_procedure%3F-instance_method" title="Groonga::Object#selector_only_procedure? (method)">#selector_only_procedure?</a></span>, <span class='object_link'><a href="Object.html#selector_procedure%3F-instance_method" title="Groonga::Object#selector_procedure? (method)">#selector_procedure?</a></span>, <span class='object_link'><a href="Object.html#table%3F-instance_method" title="Groonga::Object#table? (method)">#table?</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#touch-instance_method" title="Groonga::Object#touch (method)">#touch</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span>, <span class='object_link'><a href="Object.html#window_function_procedure%3F-instance_method" title="Groonga::Object#window_function_procedure? (method)">#window_function_procedure?</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -354,9 +355,9 @@ predictive search and common prefix search like
   <h3 class="signature first" id="create-class_method">
   
     
-      <span class="overload">+ (<tt><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span></tt>) <strong>create</strong>(options = {}) </span>
+      <span class="overload">.<strong>create</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span></tt> </span>
     
-      <span class="overload">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create</strong>(options = {}) {|table| ... }</span>
+      <span class="overload">.<strong>create</strong>(options = {}) {|table| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
     
   
 
@@ -379,43 +380,43 @@ predictive search and common prefix search like
     
       
       <pre class="example code"><code><span class='comment'>#無名一時テーブルを生成する。
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span>
+</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span>
 
 <span class='comment'>#無名永続テーブルを生成する。
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/hash.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/hash.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
 <span class='comment'>#名前付き永続テーブルを生成する。ただし、ファイル名は気に
 </span><span class='comment'>#しない。
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                 <span class='symbol'>:persistent</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
 
 <span class='comment'>#それぞれのレコードに512バイトの値を格納できる無名一時テー
 </span><span class='comment'>#ブルを生成する。
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:value</span> <span class='op'>=&gt;</span> <span class='int'>512</span><span class='rparen'>)</span>
+</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:value</span> <span class='op'>=&gt;</span> <span class='int'>512</span><span class='rparen'>)</span>
 
 <span class='comment'>#キーとして文字列を使用する無名一時テーブルを生成する。
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>SHORT_TEXT</span><span class='rparen'>)</span>
+</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Type.html#SHORT_TEXT-constant" title="Groonga::Type::SHORT_TEXT (constant)">SHORT_TEXT</a></span></span><span class='rparen'>)</span>
 
 <span class='comment'>#キーとして文字列を使用する無名一時テーブルを生成する。
 </span><span class='comment'>#（キーの種類を表すオブジェクトは文字列で指定。）
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
 <span class='comment'>#キーとしてBookmarksテーブルのレコードを使用す
 </span><span class='comment'>#る無名一時テーブルを生成する。
-</span><span class='id identifier rubyid_bookmarks'>bookmarks</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='rparen'>)</span>
+</span><span class='id identifier rubyid_bookmarks'>bookmarks</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='rparen'>)</span>
 
 <span class='comment'>#キーとしてBookmarksテーブルのレコードを使用す
 </span><span class='comment'>#る無名一時テーブルを生成する。
 </span><span class='comment'>#（テーブルは文字列で指定。）
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 
 <span class='comment'>#全文検索用のトークンをバイグラムで切り出す無名一時テーブ
 </span><span class='comment'>#ルを生成する。
-</span><span class='id identifier rubyid_bookmarks'>bookmarks</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</span><span class='id identifier rubyid_bookmarks'>bookmarks</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>comment</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_terms'>terms</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>DoubleArrayTrie</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='id identifier rubyid_terms'>terms</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Terms</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                         <span class='symbol'>:default_tokenizer</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_terms'>terms</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='comma'>,</span>
                           <span class='symbol'>:source</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bookmarks.comment</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
@@ -427,7 +428,7 @@ predictive search and common prefix search like
     
       
       <li class="overload_item">
-        <span class="signature">+ (<tt><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span></tt>) <strong>create</strong>(options = {}) </span>
+        <span class="signature">.<strong>create</strong>(options = {})  &#x21d2; <tt><span class='object_link'><a href="" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -487,7 +488,7 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
+            &mdash; <div class='inline'><p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#[]-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
 前を指定してテーブルを取得することができる。省略すると
 無名テーブルになり、テーブルIDでのみ取得できる。</p>
 </div>
@@ -503,7 +504,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>テーブルを保存するパス。パスを指定すると永続テーブルとな
 り、プロセス終了後もレコードは保持される。次回起動時に
-<span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する
+<span class='object_link'><a href="Context.html#[]-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する
 ことができる。省略すると一時テーブルになり、プロセスが終
 了するとレコードは破棄される。</p>
 </div>
@@ -600,12 +601,12 @@ IDを取得する。</p>
       
         <li>
           <span class="name">:default_tokenizer</span>
-          <span class="type">(<tt><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class='inline'><p>で使用するトークナイザを指定する。
+            &mdash; <div class='inline'><p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを指定する。
 デフォルトでは何も設定されていないので、テーブルに
 <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
 @”TokenBigram”@ などを指定する必要がある。</p>
@@ -679,7 +680,7 @@ can specify this by normalizer name as String such as
     
       
       <li class="overload_item">
-        <span class="signature">+ (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>create</strong>(options = {}) {|table| ... }</span>
+        <span class="signature">.<strong>create</strong>(options = {}) {|table| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -739,7 +740,7 @@ pairs. Omitted names are initialized as the default value.</p>
             
           </span>
           
-            &mdash; <div class='inline'><p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
+            &mdash; <div class='inline'><p>テーブルの名前。名前をつけると、 <span class='object_link'><a href="Context.html#[]-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> に名
 前を指定してテーブルを取得することができる。省略すると
 無名テーブルになり、テーブルIDでのみ取得できる。</p>
 </div>
@@ -755,7 +756,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>テーブルを保存するパス。パスを指定すると永続テーブルとな
 り、プロセス終了後もレコードは保持される。次回起動時に
-<span class='object_link'><a href="Context.html#%5B%5D-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する
+<span class='object_link'><a href="Context.html#[]-instance_method" title="Groonga::Context#[] (method)">Context#[]</a></span> で保存されたレコードを利用する
 ことができる。省略すると一時テーブルになり、プロセスが終
 了するとレコードは破棄される。</p>
 </div>
@@ -852,12 +853,12 @@ IDを取得する。</p>
       
         <li>
           <span class="name">:default_tokenizer</span>
-          <span class="type">(<tt><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">Groonga::IndexColumn</a></span></tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>)</span>
           <span class="default">
             
           </span>
           
-            &mdash; <div class='inline'><p>で使用するトークナイザを指定する。
+            &mdash; <div class='inline'><p><span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> で使用するトークナイザを指定する。
 デフォルトでは何も設定されていないので、テーブルに
 <span class='object_link'><a href="IndexColumn.html" title="Groonga::IndexColumn (class)">IndexColumn</a></span> を定義する場合は
 @”TokenBigram”@ などを指定する必要がある。</p>
@@ -1135,9 +1136,9 @@ rb_grn_double_array_trie_s_create (int argc, VALUE *argv, VALUE klass)
   <h3 class="signature first" id="open_prefix_cursor-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="DoubleArrayTrieCursor.html" title="Groonga::DoubleArrayTrieCursor (class)">Groonga::DoubleArrayTrieCursor</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) </span>
+      <span class="overload">#<strong>open_prefix_cursor</strong>(prefix, options = {})  &#x21d2; <tt><span class='object_link'><a href="DoubleArrayTrieCursor.html" title="Groonga::DoubleArrayTrieCursor (class)">Groonga::DoubleArrayTrieCursor</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) {|cursor| ... }</span>
+      <span class="overload">#<strong>open_prefix_cursor</strong>(prefix, options = {}) {|cursor| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
     
   
 
@@ -1160,7 +1161,7 @@ rb_grn_double_array_trie_s_create (int argc, VALUE *argv, VALUE klass)
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="DoubleArrayTrieCursor.html" title="Groonga::DoubleArrayTrieCursor (class)">Groonga::DoubleArrayTrieCursor</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) </span>
+        <span class="signature">#<strong>open_prefix_cursor</strong>(prefix, options = {})  &#x21d2; <tt><span class='object_link'><a href="DoubleArrayTrieCursor.html" title="Groonga::DoubleArrayTrieCursor (class)">Groonga::DoubleArrayTrieCursor</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1345,7 +1346,7 @@ pairs. Omitted names are initialized as the default value.</p>
     
       
       <li class="overload_item">
-        <span class="signature">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>open_prefix_cursor</strong>(prefix, options = {}) {|cursor| ... }</span>
+        <span class="signature">#<strong>open_prefix_cursor</strong>(prefix, options = {}) {|cursor| ... } &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
         <div class="docstring">
   <div class="discussion">
     
@@ -1581,7 +1582,7 @@ rb_grn_double_array_trie_open_prefix_cursor (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="search-instance_method">
   
-    - (<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt>) <strong>search</strong>(key, options = nil) 
+    #<strong>search</strong>(key, options = nil)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Groonga::Hash</a></span></tt> 
   
 
   
@@ -1855,9 +1856,9 @@ rb_grn_double_array_trie_search (int argc, VALUE *argv, VALUE self)
   <h3 class="signature " id="update-instance_method">
   
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>update</strong>(current_key, new_key) </span>
+      <span class="overload">#<strong>update</strong>(current_key, new_key)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
     
-      <span class="overload">- (<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt>) <strong>update</strong>(id, new_key, :id = &gt;true) </span>
+      <span class="overload">#<strong>update</strong>(id, new_key, : id=&gt;true)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> </span>
     
   
 
@@ -1954,9 +1955,7 @@ rb_grn_double_array_trie_update (int argc, VALUE *argv, VALUE self)
 
 </div>
 
-    <div id="footer"></div>
-
-  
+      <div id="footer">
     </div>
 
     <div class="sponsors">
@@ -1977,5 +1976,6 @@ rb_grn_double_array_trie_update (int argc, VALUE *argv, VALUE self)
       </p>
     </div>
 
-</body>
+</div>
+  </body>
 </html>
