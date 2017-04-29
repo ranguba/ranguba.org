@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,6 +89,8 @@
 </div>
         <div class="clear"></div>
       </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Groonga::LessEqualOperator
   
@@ -227,20 +229,20 @@
         <p class="example_title"><div class='inline'><p>Executes less-or-equal operations with the default context</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#LESS_EQUAL-constant" title="Groonga::Operator::LESS_EQUAL (constant)">LESS_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># =&gt; true
-</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#LESS_EQUAL-constant" title="Groonga::Operator::LESS_EQUAL (constant)">LESS_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='comment'># =&gt; true
-</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#LESS_EQUAL-constant" title="Groonga::Operator::LESS_EQUAL (constant)">LESS_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># =&gt; false</span></code></pre>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>LESS_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># =&gt; true
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>LESS_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='comment'># =&gt; true
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>LESS_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># =&gt; false</span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>Executes less-or-equal operations with the specified context</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Context.html#initialize-instance_method" title="Groonga::Context#initialize (method)">new</a></span></span>
-<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#LESS_EQUAL-constant" title="Groonga::Operator::LESS_EQUAL (constant)">LESS_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span>
+      <pre class="example code"><code><span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>LESS_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span>
                                    <span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span> <span class='comment'># =&gt; true
-</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#LESS_EQUAL-constant" title="Groonga::Operator::LESS_EQUAL (constant)">LESS_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>LESS_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span>
                                    <span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span> <span class='comment'># =&gt; true
-</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#LESS_EQUAL-constant" title="Groonga::Operator::LESS_EQUAL (constant)">LESS_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span>
+</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>LESS_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span>
                                    <span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span> <span class='comment'># =&gt; false</span></code></pre>
     
   </div>
@@ -262,7 +264,7 @@
         <span class='name'>x</span>
       
       
-        <span class='type'>(<tt>::Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
       
       
       
@@ -277,7 +279,7 @@
         <span class='name'>y</span>
       
       
-        <span class='type'>(<tt>::Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
       
       
       
@@ -292,7 +294,7 @@
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>

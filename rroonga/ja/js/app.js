@@ -55,7 +55,7 @@ function searchFrameButtons() {
   });
   window.addEventListener('message', function(e) {
     if (e.data === 'navEscape') {
-      $('#nav').slideUp(100);
+      $('#search_frame').slideUp(100);
       $('#search a').removeClass('active inactive');
       $(window).focus();
     }
@@ -63,7 +63,7 @@ function searchFrameButtons() {
 
   $(window).resize(function() {
     if ($('#search:visible').length === 0) {
-      $('#nav').removeAttr('style');
+      $('#search_frame').slideUp(100);
       $('#search a').removeClass('active inactive');
       $(window).focus();
     }
@@ -71,7 +71,7 @@ function searchFrameButtons() {
 }
 
 function toggleSearchFrame(id, link) {
-  var frame = $('#nav');
+  var frame = $('#search_frame');
   $('#search a').removeClass('active').addClass('inactive');
   if (frame.attr('src') === link && frame.css('display') !== "none") {
     frame.slideUp(100);

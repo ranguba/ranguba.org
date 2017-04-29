@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -90,6 +90,8 @@
         <div class="clear"></div>
       </div>
 
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
       <div id="content"><h1>Class: Groonga::Plugin
   
   
@@ -100,10 +102,12 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName">Object</span>
+      <span class="inheritName">Data</span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next">Data</li>
           
             <li class="next">Groonga::Plugin</li>
           
@@ -301,6 +305,7 @@
   
 
 
+  
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
@@ -340,7 +345,7 @@
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -532,7 +537,7 @@ rb_grn_plugin_s_names (int argc, VALUE *argv, VALUE klass)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
@@ -598,7 +603,7 @@ pairs. Omitted names are initialized as the default value.</p>
         <span class='name'>hash</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
       
@@ -963,15 +968,15 @@ explicitly.</p>
         <p class="example_title"><div class='inline'><p>Unregister a registerd plugin by name.</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Plugin (class)">Plugin</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'><span class='object_link'><a href="#register-class_method" title="Groonga::Plugin.register (method)">register</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token_filters/stop_word</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Plugin (class)">Plugin</a></span></span><span class='period'>.</span><span class='id identifier rubyid_unregister'>unregister</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token_filters/stop_word</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Plugin</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token_filters/stop_word</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Plugin</span><span class='period'>.</span><span class='id identifier rubyid_unregister'>unregister</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token_filters/stop_word</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>unregister a registerd plugin by path</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Plugin (class)">Plugin</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'><span class='object_link'><a href="#register-class_method" title="Groonga::Plugin.register (method)">register</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token_filters/stop_word</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Plugin (class)">Plugin</a></span></span><span class='period'>.</span><span class='id identifier rubyid_unregister'>unregister</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/local/lib/groonga/plugins/token_filters/stop_word.so</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Plugin</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token_filters/stop_word</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Plugin</span><span class='period'>.</span><span class='id identifier rubyid_unregister'>unregister</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/local/lib/groonga/plugins/token_filters/stop_word.so</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -1007,7 +1012,7 @@ You can specify the path of plugin explicitly.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>

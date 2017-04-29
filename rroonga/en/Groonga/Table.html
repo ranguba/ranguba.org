@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -90,6 +90,8 @@
         <div class="clear"></div>
       </div>
 
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
       <div id="content"><h1>Class: Groonga::Table
   
   
@@ -104,6 +106,8 @@
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next">Data</li>
           
             <li class="next"><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></li>
           
@@ -183,7 +187,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(id)  &#x21d2; Groonga::Record </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(id)  &#x21d2; Groonga::Record </a>
     
 
     
@@ -390,7 +394,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#difference!-instance_method" title="#difference! (instance method)">#<strong>difference!</strong>(other)  &#x21d2; Groonga::Table </a>
+      <a href="#difference%21-instance_method" title="#difference! (instance method)">#<strong>difference!</strong>(other)  &#x21d2; Groonga::Table </a>
     
 
     
@@ -668,7 +672,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#intersection!-instance_method" title="#intersection! (instance method)">#<strong>intersection!</strong>(other)  &#x21d2; Groonga::Table </a>
+      <a href="#intersection%21-instance_method" title="#intersection! (instance method)">#<strong>intersection!</strong>(other)  &#x21d2; Groonga::Table </a>
     
 
     
@@ -737,7 +741,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#merge!-instance_method" title="#merge! (instance method)">#<strong>merge!</strong>(other)  &#x21d2; Groonga::Table </a>
+      <a href="#merge%21-instance_method" title="#merge! (instance method)">#<strong>merge!</strong>(other)  &#x21d2; Groonga::Table </a>
     
 
     
@@ -1059,7 +1063,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#union!-instance_method" title="#union! (instance method)">#<strong>union!</strong>(other)  &#x21d2; Groonga::Table </a>
+      <a href="#union%21-instance_method" title="#union! (instance method)">#<strong>union!</strong>(other)  &#x21d2; Groonga::Table </a>
     
 
     
@@ -1150,8 +1154,9 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Object.html#==-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#[]=-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Object.html#accessor%3F-instance_method" title="Groonga::Object#accessor? (method)">#accessor?</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#column%3F-instance_method" title="Groonga::Object#column? (method)">#column?</a></span>, <span class='object_link'><a href="Object.html#dirty%3F-instance_method" title="Groonga::Object#dirty? (method)">#dirty?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#function_procedure%3F-instance_method" title="Groonga::Object#function_procedure? (method)">#function_procedure?</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#index_column%3F-instance_method" title="Groonga::Object#index_column? (method)">#index_column?</a></span>, <span class='object_link'><a href="Object.html#key_accessor%3F-instance_method" title="Groonga::Object#key_accessor? (method)">#key_accessor?</a></span>, <span class='object_link'><a href="Object.html#last_modified-instance_method" title="Groonga::Object#last_modified (method)">#last_modified</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#procedure%3F-instance_method" title="Groonga::Object#procedure? (method)">#procedure?</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#reference_column%3F-instance_method" title="Groonga::Object#reference_column? (method)">#reference_column?</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#scorer_procedure%3F-instance_method" title="Groonga::Object#scorer_procedure? (method)">#scorer_procedure?</a></span>, <span class='object_link'><a href="Object.html#selector_only_procedure%3F-instance_method" title="Groonga::Object#selector_only_procedure? (method)">#selector_only_procedure?</a></span>, <span class='object_link'><a href="Object.html#selector_procedure%3F-instance_method" title="Groonga::Object#selector_procedure? (method)">#selector_procedure?</a></span>, <span class='object_link'><a href="Object.html#table%3F-instance_method" title="Groonga::Object#table? (method)">#table?</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#touch-instance_method" title="Groonga::Object#touch (method)">#touch</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span>, <span class='object_link'><a href="Object.html#window_function_procedure%3F-instance_method" title="Groonga::Object#window_function_procedure? (method)">#window_function_procedure?</a></span></p>
-<div id="constructor_details" class="method_details_list">
+  <p class="inherited"><span class='object_link'><a href="Object.html#%3D%3D-instance_method" title="Groonga::Object#== (method)">#==</a></span>, <span class='object_link'><a href="Object.html#%5B%5D%3D-instance_method" title="Groonga::Object#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Object.html#accessor%3F-instance_method" title="Groonga::Object#accessor? (method)">#accessor?</a></span>, <span class='object_link'><a href="Object.html#append-instance_method" title="Groonga::Object#append (method)">#append</a></span>, <span class='object_link'><a href="Object.html#builtin%3F-instance_method" title="Groonga::Object#builtin? (method)">#builtin?</a></span>, <span class='object_link'><a href="Object.html#close-instance_method" title="Groonga::Object#close (method)">#close</a></span>, <span class='object_link'><a href="Object.html#closed%3F-instance_method" title="Groonga::Object#closed? (method)">#closed?</a></span>, <span class='object_link'><a href="Object.html#column%3F-instance_method" title="Groonga::Object#column? (method)">#column?</a></span>, <span class='object_link'><a href="Object.html#dirty%3F-instance_method" title="Groonga::Object#dirty? (method)">#dirty?</a></span>, <span class='object_link'><a href="Object.html#domain-instance_method" title="Groonga::Object#domain (method)">#domain</a></span>, <span class='object_link'><a href="Object.html#function_procedure%3F-instance_method" title="Groonga::Object#function_procedure? (method)">#function_procedure?</a></span>, <span class='object_link'><a href="Object.html#id-instance_method" title="Groonga::Object#id (method)">#id</a></span>, <span class='object_link'><a href="Object.html#index_column%3F-instance_method" title="Groonga::Object#index_column? (method)">#index_column?</a></span>, <span class='object_link'><a href="Object.html#key_accessor%3F-instance_method" title="Groonga::Object#key_accessor? (method)">#key_accessor?</a></span>, <span class='object_link'><a href="Object.html#last_modified-instance_method" title="Groonga::Object#last_modified (method)">#last_modified</a></span>, <span class='object_link'><a href="Object.html#name-instance_method" title="Groonga::Object#name (method)">#name</a></span>, <span class='object_link'><a href="Object.html#path-instance_method" title="Groonga::Object#path (method)">#path</a></span>, <span class='object_link'><a href="Object.html#persistent%3F-instance_method" title="Groonga::Object#persistent? (method)">#persistent?</a></span>, <span class='object_link'><a href="Object.html#prepend-instance_method" title="Groonga::Object#prepend (method)">#prepend</a></span>, <span class='object_link'><a href="Object.html#procedure%3F-instance_method" title="Groonga::Object#procedure? (method)">#procedure?</a></span>, <span class='object_link'><a href="Object.html#range-instance_method" title="Groonga::Object#range (method)">#range</a></span>, <span class='object_link'><a href="Object.html#reference_column%3F-instance_method" title="Groonga::Object#reference_column? (method)">#reference_column?</a></span>, <span class='object_link'><a href="Object.html#remove-instance_method" title="Groonga::Object#remove (method)">#remove</a></span>, <span class='object_link'><a href="Object.html#scorer_procedure%3F-instance_method" title="Groonga::Object#scorer_procedure? (method)">#scorer_procedure?</a></span>, <span class='object_link'><a href="Object.html#selector_only_procedure%3F-instance_method" title="Groonga::Object#selector_only_procedure? (method)">#selector_only_procedure?</a></span>, <span class='object_link'><a href="Object.html#selector_procedure%3F-instance_method" title="Groonga::Object#selector_procedure? (method)">#selector_procedure?</a></span>, <span class='object_link'><a href="Object.html#table%3F-instance_method" title="Groonga::Object#table? (method)">#table?</a></span>, <span class='object_link'><a href="Object.html#temporary%3F-instance_method" title="Groonga::Object#temporary? (method)">#temporary?</a></span>, <span class='object_link'><a href="Object.html#touch-instance_method" title="Groonga::Object#touch (method)">#touch</a></span>, <span class='object_link'><a href="Object.html#unlink-instance_method" title="Groonga::Object#unlink (method)">#unlink</a></span>, <span class='object_link'><a href="Object.html#window_function_procedure%3F-instance_method" title="Groonga::Object#window_function_procedure? (method)">#window_function_procedure?</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -1249,18 +1254,18 @@ rb_grn_table_initialize (VALUE self)
       <pre class="lines">
 
 
+1623
+1624
+1625
 1626
 1627
 1628
 1629
 1630
-1631
-1632
-1633
-1634</pre>
+1631</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1626</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1623</span>
 
 VALUE
 rb_grn_table_array_reference (VALUE self, VALUE rb_id)
@@ -1313,6 +1318,9 @@ rb_grn_table_array_reference (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
+2133
+2134
+2135
 2136
 2137
 2138
@@ -1324,13 +1332,10 @@ rb_grn_table_array_reference (VALUE self, VALUE rb_id)
 2144
 2145
 2146
-2147
-2148
-2149
-2150</pre>
+2147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2136</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2133</span>
 
 static VALUE
 rb_grn_table_clear_lock (VALUE self)
@@ -1626,6 +1631,9 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
       <pre class="lines">
 
 
+1784
+1785
+1786
 1787
 1788
 1789
@@ -1647,13 +1655,10 @@ rb_grn_table_get_column (VALUE self, VALUE rb_name)
 1805
 1806
 1807
-1808
-1809
-1810
-1811</pre>
+1808</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1787</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1784</span>
 
 static VALUE
 rb_grn_table_get_column_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -1954,7 +1959,7 @@ rb_grn_table_get_columns (int argc, VALUE *argv, VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -2350,7 +2355,7 @@ rb_grn_table_define_column (int argc, VALUE *argv, VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -2784,7 +2789,7 @@ rb_grn_table_define_index_column (int argc, VALUE *argv, VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -2868,6 +2873,9 @@ values are -4..22. -4 means all segments are defraged.
       <pre class="lines">
 
 
+2591
+2592
+2593
 2594
 2595
 2596
@@ -2890,13 +2898,10 @@ values are -4..22. -4 means all segments are defraged.
 2613
 2614
 2615
-2616
-2617
-2618
-2619</pre>
+2616</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2594</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2591</span>
 
 static VALUE
 rb_grn_table_defrag (int argc, VALUE *argv, VALUE self)
@@ -3205,14 +3210,14 @@ rb_grn_table_delete (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+2451
+2452
+2453
 2454
-2455
-2456
-2457
-2458</pre>
+2455</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2454</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2451</span>
 
 static VALUE
 rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
@@ -3248,7 +3253,7 @@ rb_grn_table_difference_bang (VALUE self, VALUE rb_other)
       <pre class="code"><span class="info file"># File 'lib/groonga/table.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_disk_usage'>disk_usage</span>
-  <span class='id identifier rubyid_measurer'>measurer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="StatisticMeasurer.html" title="Groonga::StatisticMeasurer (class)">StatisticMeasurer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_measurer'>measurer</span> <span class='op'>=</span> <span class='const'>StatisticMeasurer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='id identifier rubyid_measurer'>measurer</span><span class='period'>.</span><span class='id identifier rubyid_measure_disk_usage'>measure_disk_usage</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -3511,6 +3516,9 @@ rb_grn_table_each (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+1586
+1587
+1588
 1589
 1590
 1591
@@ -3535,13 +3543,10 @@ rb_grn_table_each (int argc, VALUE *argv, VALUE self)
 1610
 1611
 1612
-1613
-1614
-1615
-1616</pre>
+1613</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1589</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1586</span>
 
 static VALUE
 rb_grn_table_each_sub_record (VALUE self, VALUE rb_id)
@@ -3697,6 +3702,9 @@ rb_grn_table_empty_p (VALUE self)
       <pre class="lines">
 
 
+2565
+2566
+2567
 2568
 2569
 2570
@@ -3705,13 +3713,10 @@ rb_grn_table_empty_p (VALUE self)
 2573
 2574
 2575
-2576
-2577
-2578
-2579</pre>
+2576</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2568</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2565</span>
 
 static VALUE
 rb_grn_table_exist_p (VALUE self, VALUE id)
@@ -3765,7 +3770,7 @@ type column value. Order is near to far from base geo point.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -3952,10 +3957,7 @@ get the original record.</p>
 1391
 1392
 1393
-1394
-1395
-1396
-1397</pre>
+1394</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1325</span>
@@ -4015,9 +4017,6 @@ rb_grn_table_geo_sort (int argc, VALUE *argv, VALUE self)
         offset = NUM2INT(rb_offset);
     if (!NIL_P(rb_limit))
         limit = NUM2INT(rb_limit);
-    /* TODO: Remove me when Groonga 5.1.0 is released. */
-    if (limit &lt; 0)
-        limit = grn_table_size(context, table) + limit + 1;
 
     result = grn_table_create(context, NULL, 0, NULL, GRN_TABLE_NO_KEY,
                               NULL, table);
@@ -4133,7 +4132,7 @@ keys by <span class='object_link'><a href="Record.html#sub_records-instance_meth
       
         <li>
           <span class="name">:calc_types</span>
-          <span class="type">(<tt>::Array</tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">::Array</a></span></tt>)</span>
           <span class="default">
             
           </span>
@@ -4218,7 +4217,7 @@ a drilldown. You can specify multiple calculation types.</p>
       
         <li>
           <span class="name">:calc_types</span>
-          <span class="type">(<tt>::Array</tt>)</span>
+          <span class="type">(<tt><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">::Array</a></span></tt>)</span>
           <span class="default">
             
           </span>
@@ -4265,6 +4264,9 @@ a drilldown. You can specify multiple calculation types.</p>
       <pre class="lines">
 
 
+1451
+1452
+1453
 1454
 1455
 1456
@@ -4385,13 +4387,10 @@ a drilldown. You can specify multiple calculation types.</p>
 1571
 1572
 1573
-1574
-1575
-1576
-1577</pre>
+1574</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1454</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1451</span>
 
 static VALUE
 rb_grn_table_group (int argc, VALUE *argv, VALUE self)
@@ -4650,14 +4649,14 @@ it.</p>
         <p class="example_title"><div class='inline'><p>A normal table don’t have the space</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># A normal table
+      <pre class="example code"><code><span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># A normal table
 </span><span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_have_n_sub_records_space?'>have_n_sub_records_space?</span> <span class='comment'># =&gt; false</span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>A grouped table has the space</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>                <span class='comment'># A normal table
+      <pre class="example code"><code><span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>                <span class='comment'># A normal table
 </span><span class='id identifier rubyid_grouped_users'>grouped_users</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_group'>group</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_key</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>     <span class='comment'># A grouped table
 </span><span class='id identifier rubyid_grouped_users'>grouped_users</span><span class='period'>.</span><span class='id identifier rubyid_have_n_sub_records_space?'>have_n_sub_records_space?</span> <span class='comment'># =&gt; true</span></code></pre>
     
@@ -4699,6 +4698,9 @@ the number of sub records, @false@ otherwise.</p>
       <pre class="lines">
 
 
+2544
+2545
+2546
 2547
 2548
 2549
@@ -4706,13 +4708,10 @@ the number of sub records, @false@ otherwise.</p>
 2551
 2552
 2553
-2554
-2555
-2556
-2557</pre>
+2554</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2547</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2544</span>
 
 static VALUE
 rb_grn_table_have_n_sub_records_space_p (VALUE self)
@@ -4866,14 +4865,14 @@ rb_grn_table_inspect (VALUE self)
       <pre class="lines">
 
 
+2438
+2439
+2440
 2441
-2442
-2443
-2444
-2445</pre>
+2442</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2441</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2438</span>
 
 static VALUE
 rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
@@ -4932,7 +4931,7 @@ rb_grn_table_intersection_bang (VALUE self, VALUE rb_other)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -5006,7 +5005,7 @@ pairs. Omitted names are initialized as the default value.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -5087,6 +5086,9 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
+2088
+2089
+2090
 2091
 2092
 2093
@@ -5121,13 +5123,10 @@ pairs. Omitted names are initialized as the default value.</p>
 2122
 2123
 2124
-2125
-2126
-2127
-2128</pre>
+2125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2091</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2088</span>
 
 static VALUE
 rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
@@ -5239,6 +5238,9 @@ rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+2155
+2156
+2157
 2158
 2159
 2160
@@ -5248,13 +5250,10 @@ rb_grn_table_lock (int argc, VALUE *argv, VALUE self)
 2164
 2165
 2166
-2167
-2168
-2169
-2170</pre>
+2167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2158</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2155</span>
 
 static VALUE
 rb_grn_table_locked_p (VALUE self)
@@ -5325,14 +5324,14 @@ rb_grn_table_locked_p (VALUE self)
       <pre class="lines">
 
 
+2464
+2465
+2466
 2467
-2468
-2469
-2470
-2471</pre>
+2468</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2467</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2464</span>
 
 static VALUE
 rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
@@ -5390,7 +5389,7 @@ rb_grn_table_merge_bang (VALUE self, VALUE rb_other)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -5561,7 +5560,7 @@ Groonga::PatriciaTrieにしか使えない。（PatriciaTrieのデ
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -5783,7 +5782,7 @@ rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
 場合は以下のようになる。</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Ruby</span><span class='tstring_end'>&quot;</span></span>
-<span class='id identifier rubyid_entries'>entries</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>entries</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_entries'>entries</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>entries</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_selected_entries'>selected_entries</span> <span class='op'>=</span> <span class='id identifier rubyid_entries'>entries</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_record'>record</span><span class='op'>|</span>
   <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_description'>description</span> <span class='op'>=~</span> <span class='id identifier rubyid_query'>query</span>
 <span class='kw'>end</span>
@@ -5820,7 +5819,7 @@ rb_grn_table_open_cursor (int argc, VALUE *argv, VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -5915,21 +5914,21 @@ pairs. Omitted names are initialized as the default value.</p>
   <span class='id identifier rubyid_page_size'>page_size</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:size</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>10</span>
   <span class='id identifier rubyid_minimum_size'>minimum_size</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid__size'>_size</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_min'>min</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_page_size'>page_size</span> <span class='op'>&lt;</span> <span class='int'>1</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TooSmallPageSize.html" title="Groonga::TooSmallPageSize (class)">TooSmallPageSize</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="TooSmallPageSize.html#initialize-instance_method" title="Groonga::TooSmallPageSize#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_page_size'>page_size</span><span class='comma'>,</span> <span class='id identifier rubyid_minimum_size'>minimum_size</span><span class='op'>..</span><span class='id identifier rubyid__size'>_size</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TooSmallPageSize</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_page_size'>page_size</span><span class='comma'>,</span> <span class='id identifier rubyid_minimum_size'>minimum_size</span><span class='op'>..</span><span class='id identifier rubyid__size'>_size</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_max_page'>max_page</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lparen'>(</span><span class='id identifier rubyid__size'>_size</span> <span class='op'>/</span> <span class='id identifier rubyid_page_size'>page_size</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_ceil'>ceil</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span>
   <span class='id identifier rubyid_page'>page</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:page</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>1</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_page'>page</span> <span class='op'>&lt;</span> <span class='int'>1</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TooSmallPage.html" title="Groonga::TooSmallPage (class)">TooSmallPage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="TooSmallPage.html#initialize-instance_method" title="Groonga::TooSmallPage#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_max_page'>max_page</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TooSmallPage</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_max_page'>max_page</span><span class='rparen'>)</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_max_page'>max_page</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_page'>page</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="TooLargePage.html" title="Groonga::TooLargePage (class)">TooLargePage</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="TooLargePage.html#initialize-instance_method" title="Groonga::TooLargePage#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_max_page'>max_page</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>TooLargePage</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_max_page'>max_page</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span> <span class='op'>-</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_page_size'>page_size</span>
   <span class='id identifier rubyid_limit'>limit</span> <span class='op'>=</span> <span class='id identifier rubyid_page_size'>page_size</span>
   <span class='id identifier rubyid_records'>records</span> <span class='op'>=</span> <span class='id identifier rubyid_sort'>sort</span><span class='lparen'>(</span><span class='id identifier rubyid_sort_keys'>sort_keys</span><span class='comma'>,</span> <span class='symbol'>:offset</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='symbol'>:limit</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_limit'>limit</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_records'>records</span><span class='period'>.</span><span class='id identifier rubyid_extend'>extend</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Pagination.html" title="Groonga::Pagination (module)">Pagination</a></span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_records'>records</span><span class='period'>.</span><span class='id identifier rubyid_extend'>extend</span><span class='lparen'>(</span><span class='const'>Pagination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_records'>records</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:set_pagination_info</span><span class='comma'>,</span> <span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='id identifier rubyid_page_size'>page_size</span><span class='comma'>,</span> <span class='id identifier rubyid__size'>_size</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_records'>records</span>
 <span class='kw'>end</span></pre>
@@ -6103,6 +6102,9 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+2625
+2626
+2627
 2628
 2629
 2630
@@ -6122,13 +6124,10 @@ rb_grn_table_get_records (int argc, VALUE *argv, VALUE self)
 2644
 2645
 2646
-2647
-2648
-2649
-2650</pre>
+2647</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2628</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2625</span>
 
 static VALUE
 rb_grn_table_rename (VALUE self, VALUE rb_name)
@@ -6243,7 +6242,7 @@ Groonga::ColumnExpressionBuilderの他に”!=”も使用可能。</p>
 
 <p>例:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_comments'>comments</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Array.html#create-class_method" title="Groonga::Array.create (method)">create</a></span></span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Comments</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_comments'>comments</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Comments</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_comments'>comments</span><span class='period'>.</span><span class='id identifier rubyid_define_column'>define_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_comments'>comments</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello Good-bye!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_comments'>comments</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -6302,7 +6301,7 @@ Groonga::ColumnExpressionBuilderの他に”!=”も使用可能。</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
       
@@ -6474,7 +6473,7 @@ pairs. Omitted names are initialized as the default value.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
       
@@ -6647,6 +6646,9 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
+2302
+2303
+2304
 2305
 2306
 2307
@@ -6733,13 +6735,10 @@ pairs. Omitted names are initialized as the default value.</p>
 2388
 2389
 2390
-2391
-2392
-2393
-2394</pre>
+2391</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2305</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2302</span>
 
 static VALUE
 rb_grn_table_select (int argc, VALUE *argv, VALUE self)
@@ -6915,7 +6914,7 @@ rb_grn_table_select (int argc, VALUE *argv, VALUE self)
         <span class='name'>value</span>
       
       
-        <span class='type'>(<tt>::Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
       
       
       
@@ -6963,7 +6962,7 @@ a record is matched against a query.</p>
         <p class="example_title"><div class='inline'><p>Sets vector value with weight</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define'><span class='object_link'><a href="Schema.html#define-class_method" title="Groonga::Schema.define (method)">define</a></span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
   <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
     <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
     <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tags</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:vector</span><span class='rparen'>)</span> <span class='comment'># It must be vector
@@ -6977,7 +6976,7 @@ a record is matched against a query.</p>
 </span>  <span class='kw'>end</span>
 <span class='kw'>end</span>
 
-<span class='id identifier rubyid_sites'>sites</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_sites'>sites</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 
 <span class='id identifier rubyid_groonga_org_id'>groonga_org_id</span> <span class='op'>=</span> <span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
 <span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_set_column_value'>set_column_value</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga_org_id'>groonga_org_id</span><span class='comma'>,</span>
@@ -7105,7 +7104,7 @@ with the same way.</p>
         <p class="example_title"><div class='inline'><p>Uses @:id =&gt; true@ for polymorphic usage</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define'><span class='object_link'><a href="Schema.html#define-class_method" title="Groonga::Schema.define (method)">define</a></span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
   <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                       <span class='symbol'>:type</span>     <span class='op'>=&gt;</span> <span class='symbol'>:hash</span><span class='comma'>,</span>
                       <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -7117,8 +7116,8 @@ with the same way.</p>
   <span class='kw'>end</span>
 <span class='kw'>end</span>
 
-<span class='id identifier rubyid_sites'>sites</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_logs'>logs</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Logs</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_sites'>sites</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sites</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_logs'>logs</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Logs</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 
 <span class='id identifier rubyid_groonga_org_key'>groonga_org_key</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://groonga.org/</span><span class='tstring_end'>&quot;</span></span>
 <span class='id identifier rubyid_groonga_org_id'>groonga_org_id</span> <span class='op'>=</span> <span class='id identifier rubyid_sites'>sites</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_groonga_org_key'>groonga_org_key</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
@@ -7178,7 +7177,7 @@ with the same way.</p>
         <span class='name'>value</span>
       
       
-        <span class='type'>(<tt>::Object</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
       
       
       
@@ -7193,7 +7192,7 @@ with the same way.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
       
@@ -7310,7 +7309,7 @@ value is nil, the default weight is used. The default weight is 0.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
       
@@ -7363,6 +7362,9 @@ Specify @true@ for polymorphic usage.</p>
       <pre class="lines">
 
 
+1988
+1989
+1990
 1991
 1992
 1993
@@ -7384,13 +7386,10 @@ Specify @true@ for polymorphic usage.</p>
 2009
 2010
 2011
-2012
-2013
-2014
-2015</pre>
+2012</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1991</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1988</span>
 
 static VALUE
 rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -7456,6 +7455,9 @@ rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+1729
+1730
+1731
 1732
 1733
 1734
@@ -7477,13 +7479,10 @@ rb_grn_table_set_column_value_convenience (int argc, VALUE *argv, VALUE self)
 1750
 1751
 1752
-1753
-1754
-1755
-1756</pre>
+1753</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1732</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1729</span>
 
 static VALUE
 rb_grn_table_set_value_convenience (int argc, VALUE *argv, VALUE self)
@@ -7617,7 +7616,7 @@ rb_grn_table_get_size (VALUE self)
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>The return value is changed to <span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> from
-Array since 2.1.0. If you want to get before 2.1.0 style
+<span class='object_link'><a href="Array.html" title="Groonga::Array (class)">Array</a></span> since 2.1.0. If you want to get before 2.1.0 style
 result, use the following code:</p>
 </div>
   </div>
@@ -7699,7 +7698,7 @@ result, use the following code:</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -7948,14 +7947,14 @@ rb_grn_table_sort (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+2476
+2477
+2478
 2479
-2480
-2481
-2482
-2483</pre>
+2480</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2479</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2476</span>
 
 static VALUE
 rb_grn_table_support_key_p (VALUE self)
@@ -8009,6 +8008,9 @@ rb_grn_table_support_key_p (VALUE self)
       <pre class="lines">
 
 
+2507
+2508
+2509
 2510
 2511
 2512
@@ -8017,13 +8019,10 @@ rb_grn_table_support_key_p (VALUE self)
 2515
 2516
 2517
-2518
-2519
-2520
-2521</pre>
+2518</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2510</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2507</span>
 
 static VALUE
 rb_grn_table_support_sub_records_p (VALUE self)
@@ -8109,6 +8108,9 @@ rb_grn_table_support_sub_records_p (VALUE self)
       <pre class="lines">
 
 
+2488
+2489
+2490
 2491
 2492
 2493
@@ -8116,13 +8118,10 @@ rb_grn_table_support_sub_records_p (VALUE self)
 2495
 2496
 2497
-2498
-2499
-2500
-2501</pre>
+2498</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2491</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2488</span>
 
 static VALUE
 rb_grn_table_support_value_p (VALUE self)
@@ -8259,14 +8258,14 @@ rb_grn_table_truncate (VALUE self)
       <pre class="lines">
 
 
+2424
+2425
+2426
 2427
-2428
-2429
-2430
-2431</pre>
+2428</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2427</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2424</span>
 
 static VALUE
 rb_grn_table_union_bang (VALUE self, VALUE rb_other)
@@ -8312,7 +8311,7 @@ rb_grn_table_union_bang (VALUE self, VALUE rb_other)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -8359,6 +8358,9 @@ groonga側が未実装のため、現在は無視される）</p>
       <pre class="lines">
 
 
+2024
+2025
+2026
 2027
 2028
 2029
@@ -8384,13 +8386,10 @@ groonga側が未実装のため、現在は無視される）</p>
 2049
 2050
 2051
-2052
-2053
-2054
-2055</pre>
+2052</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2027</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 2024</span>
 
 static VALUE
 rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
@@ -8522,6 +8521,9 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
+1667
+1668
+1669
 1670
 1671
 1672
@@ -8543,13 +8545,10 @@ rb_grn_table_unlock (int argc, VALUE *argv, VALUE self)
 1688
 1689
 1690
-1691
-1692
-1693
-1694</pre>
+1691</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1670</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table.c', line 1667</span>
 
 static VALUE
 rb_grn_table_get_value_convenience (int argc, VALUE *argv, VALUE self)

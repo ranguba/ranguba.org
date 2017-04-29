@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <iframe id="nav" src="../../class_list.html"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,6 +89,8 @@
 </div>
         <div class="clear"></div>
       </div>
+
+      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Module: Groonga::Table::KeySupport
   
@@ -155,7 +157,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Groonga::Record </a>
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Groonga::Record </a>
     
 
     
@@ -178,7 +180,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#[]=-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, values)  &#x21d2; Object </a>
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, values)  &#x21d2; Object </a>
     
 
     
@@ -270,7 +272,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_tokenizer=-instance_method" title="#default_tokenizer= (instance method)">#<strong>default_tokenizer=</strong>(tokenizer)  &#x21d2; Object </a>
+      <a href="#default_tokenizer%3D-instance_method" title="#default_tokenizer= (instance method)">#<strong>default_tokenizer=</strong>(tokenizer)  &#x21d2; Object </a>
     
 
     
@@ -316,7 +318,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#has_key%3F-instance_method" title="#has_key? (instance method)">#<strong>has_key?</strong>(key)  &#x21d2; Boolean </a>
+      <a href="#has_key%3F-instance_method" title="#has_key? (instance method)">#<strong>has_key?</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -408,6 +410,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#key%3F-instance_method" title="#key? (instance method)">#<strong>key?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>テーブルに主キーが <em>key</em> のレコードがあるならtrueを返す。.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#normalize_key%3F-instance_method" title="#normalize_key? (instance method)">#<strong>normalize_key?</strong>  &#x21d2; Boolean </a>
     
 
@@ -454,7 +479,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#normalizer=-instance_method" title="#normalizer= (instance method)">#<strong>normalizer=</strong>  &#x21d2; Object </a>
+      <a href="#normalizer%3D-instance_method" title="#normalizer= (instance method)">#<strong>normalizer=</strong>  &#x21d2; Object </a>
     
 
     
@@ -592,7 +617,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#token_filters=-instance_method" title="#token_filters= (instance method)">#<strong>token_filters=</strong>(token_filters)  &#x21d2; Object </a>
+      <a href="#token_filters%3D-instance_method" title="#token_filters= (instance method)">#<strong>token_filters=</strong>(token_filters)  &#x21d2; Object </a>
     
 
     
@@ -720,10 +745,6 @@
       <pre class="lines">
 
 
-458
-459
-460
-461
 462
 463
 464
@@ -731,10 +752,14 @@
 466
 467
 468
-469</pre>
+469
+470
+471
+472
+473</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 458</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 462</span>
 
 static VALUE
 rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
@@ -790,7 +815,7 @@ rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
         <span class='name'>values</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
       
@@ -812,10 +837,6 @@ rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
       <pre class="lines">
 
 
-510
-511
-512
-513
 514
 515
 516
@@ -842,10 +863,14 @@ rb_grn_table_key_support_array_reference (VALUE self, VALUE rb_key)
 537
 538
 539
-540</pre>
+540
+541
+542
+543
+544</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 510</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 514</span>
 
 static VALUE
 rb_grn_table_key_support_array_set (VALUE self, VALUE rb_key, VALUE rb_values)
@@ -1022,10 +1047,6 @@ rb_grn_table_key_support_add (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-591
-592
-593
-594
 595
 596
 597
@@ -1047,10 +1068,14 @@ rb_grn_table_key_support_add (int argc, VALUE *argv, VALUE self)
 613
 614
 615
-616</pre>
+616
+617
+618
+619
+620</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 591</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 595</span>
 
 static VALUE
 rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
@@ -1133,10 +1158,6 @@ rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-752
-753
-754
-755
 756
 757
 758
@@ -1150,10 +1171,14 @@ rb_grn_table_key_support_get_column_value (int argc, VALUE *argv, VALUE self)
 766
 767
 768
-769</pre>
+769
+770
+771
+772
+773</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 752</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 756</span>
 
 static VALUE
 rb_grn_table_key_support_get_default_tokenizer (VALUE self)
@@ -1203,9 +1228,9 @@ rb_grn_table_key_support_get_default_tokenizer (VALUE self)
       <pre class="example code"><code><span class='comment'># 2-gramを使用。
 </span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_default_tokenizer'>default_tokenizer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span>
 <span class='comment'># オブジェクトで指定
-</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_default_tokenizer'>default_tokenizer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Context.html" title="Groonga::Context (class)">Context</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'><span class='object_link'><a href="../Context.html#default-class_method" title="Groonga::Context.default (method)">default</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_default_tokenizer'>default_tokenizer</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 <span class='comment'># オブジェクトIDで指定
-</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_default_tokenizer'>default_tokenizer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Type.html" title="Groonga::Type (class)">Type</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Type.html#BIGRAM-constant" title="Groonga::Type::BIGRAM (constant)">BIGRAM</a></span></span>
+</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_default_tokenizer'>default_tokenizer</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>BIGRAM</span>
 <span class='comment'># N-gram用のトークナイザを使うときはGroonga::IndexColumn
 </span><span class='comment'># には自動的に:with_section =&gt; trueが指定される。
 </span><span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_define_index_column'>define_index_column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>blog_content</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Blogs</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
@@ -1226,10 +1251,6 @@ rb_grn_table_key_support_get_default_tokenizer (VALUE self)
       <pre class="lines">
 
 
-792
-793
-794
-795
 796
 797
 798
@@ -1246,10 +1267,14 @@ rb_grn_table_key_support_get_default_tokenizer (VALUE self)
 809
 810
 811
-812</pre>
+812
+813
+814
+815
+816</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 792</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 796</span>
 
 static VALUE
 rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
@@ -1503,10 +1528,6 @@ rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
       <pre class="lines">
 
 
-429
-430
-431
-432
 433
 434
 435
@@ -1522,10 +1543,14 @@ rb_grn_table_key_support_set_default_tokenizer (VALUE self, VALUE rb_tokenizer)
 445
 446
 447
-448</pre>
+448
+449
+450
+451
+452</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 429</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 433</span>
 
 static VALUE
 rb_grn_table_key_support_delete (int argc, VALUE *argv, VALUE self)
@@ -1555,7 +1580,11 @@ rb_grn_table_key_support_delete (int argc, VALUE *argv, VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="has_key?-instance_method">
   
-    #<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> 
+    
+      <span class="overload">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
+    
+      <span class="overload">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
+    
   
 
   
@@ -1570,7 +1599,59 @@ rb_grn_table_key_support_delete (int argc, VALUE *argv, VALUE self)
 </div>
 <div class="tags">
   
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
   
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>7.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Use <span class='object_link'><a href="#key%3F-instance_method" title="Groonga::Table::KeySupport#key? (method)">#key?</a></span> instead.</p>
+</div></div>
+
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </li>
+    
+  </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -1592,10 +1673,6 @@ rb_grn_table_key_support_delete (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-361
-362
-363
-364
 365
 366
 367
@@ -1609,10 +1686,14 @@ rb_grn_table_key_support_delete (int argc, VALUE *argv, VALUE self)
 375
 376
 377
-378</pre>
+378
+379
+380
+381
+382</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 361</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 365</span>
 
 static VALUE
 rb_grn_table_key_support_has_key (VALUE self, VALUE rb_key)
@@ -1988,6 +2069,147 @@ rb_grn_table_key_support_get_key (VALUE self, VALUE rb_id)
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="key?-instance_method">
+  
+    
+      <span class="overload">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
+    
+      <span class="overload">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>テーブルに主キーが <em>key</em> のレコードがあるならtrueを返す。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>7.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>has_key?</strong>(key)  &#x21d2; <tt>Boolean</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Use <span class='object_link'><a href="#key%3F-instance_method" title="Groonga::Table::KeySupport#key? (method)">#key?</a></span> instead.</p>
+</div></div>
+
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 365</span>
+
+static VALUE
+rb_grn_table_key_support_has_key (VALUE self, VALUE rb_key)
+{
+    grn_ctx *context;
+    grn_obj *table, *key, *domain;
+    grn_id id, domain_id;
+
+    rb_grn_table_key_support_deconstruct(SELF(self), &amp;table, &amp;context,
+                                         &amp;key, &amp;domain_id, &amp;domain,
+                                         NULL, NULL, NULL,
+                                         NULL);
+
+    GRN_BULK_REWIND(key);
+    RVAL2GRNKEY(rb_key, context, key, domain_id, domain, self);
+    id = grn_table_get(context, table, GRN_BULK_HEAD(key), GRN_BULK_VSIZE(key));
+
+    return id == GRN_ID_NIL ? Qfalse : Qtrue;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="normalize_key?-instance_method">
   
     #<strong>normalize_key?</strong>  &#x21d2; <tt>Boolean</tt> 
@@ -2028,17 +2250,17 @@ rb_grn_table_key_support_get_key (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
-948
-949
-950
-951
 952
 953
 954
-955</pre>
+955
+956
+957
+958
+959</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 948</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 952</span>
 
 static VALUE
 rb_grn_table_key_support_normalize_key_p (VALUE self)
@@ -2103,10 +2325,6 @@ rb_grn_table_key_support_normalize_key_p (VALUE self)
       <pre class="lines">
 
 
-883
-884
-885
-886
 887
 888
 889
@@ -2119,10 +2337,14 @@ rb_grn_table_key_support_normalize_key_p (VALUE self)
 896
 897
 898
-899</pre>
+899
+900
+901
+902
+903</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 883</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 887</span>
 
 static VALUE
 rb_grn_table_key_support_get_normalizer (VALUE self)
@@ -2177,7 +2399,7 @@ rb_grn_table_key_support_get_normalizer (VALUE self)
       <pre class="example code"><code><span class='comment'># Uses NFKC normalizer.
 </span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_normalizer'>normalizer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NormalizerNFKC51</span><span class='tstring_end'>&quot;</span></span>
 <span class='comment'># Specifies normalizer object.
-</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_normalizer'>normalizer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Context.html" title="Groonga::Context (class)">Context</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NormalizerNFKC51</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+</span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_normalizer'>normalizer</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NormalizerNFKC51</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 <span class='comment'># Uses auto normalizer that is a normalizer for backward compatibility.
 </span><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_normalizer'>normalizer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TNormalizerAuto</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
@@ -2300,10 +2522,6 @@ rb_grn_table_key_support_get_normalizer (VALUE self)
       <pre class="lines">
 
 
-921
-922
-923
-924
 925
 926
 927
@@ -2319,10 +2537,14 @@ rb_grn_table_key_support_get_normalizer (VALUE self)
 937
 938
 939
-940</pre>
+940
+941
+942
+943
+944</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 921</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 925</span>
 
 static VALUE
 rb_grn_table_key_support_set_normalizer (VALUE self, VALUE rb_normalizer)
@@ -2390,7 +2612,7 @@ target index column.</p>
         <p class="example_title"><div class='inline'><p>How to recreate all index columns in the table</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define'><span class='object_link'><a href="../Schema.html#define-class_method" title="Groonga::Schema.define (method)">define</a></span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
   <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Memos</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
     <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
     <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -2415,7 +2637,7 @@ target index column.</p>
   <span class='kw'>end</span>
 <span class='kw'>end</span>
 
-<span class='const'><span class='object_link'><a href="../../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BigramTerms</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_reindex'>reindex</span>
+<span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BigramTerms</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_reindex'>reindex</span>
 <span class='comment'># They are called:
 </span><span class='comment'>#   Groonga[&quot;BigramTerms.Memos_title&quot;].reindex
 </span><span class='comment'>#   Groonga[&quot;BigramTerms.Memos_content&quot;].reindex
@@ -2473,10 +2695,6 @@ target index column.</p>
       <pre class="lines">
 
 
-1092
-1093
-1094
-1095
 1096
 1097
 1098
@@ -2490,10 +2708,14 @@ target index column.</p>
 1106
 1107
 1108
-1109</pre>
+1109
+1110
+1111
+1112
+1113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 1092</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 1096</span>
 
 static VALUE
 rb_grn_table_key_support_reindex (VALUE self)
@@ -2548,10 +2770,6 @@ rb_grn_table_key_support_reindex (VALUE self)
       <pre class="lines">
 
 
-549
-550
-551
-552
 553
 554
 555
@@ -2580,10 +2798,14 @@ rb_grn_table_key_support_reindex (VALUE self)
 578
 579
 580
-581</pre>
+581
+582
+583
+584
+585</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 549</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 553</span>
 
 static VALUE
 rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
@@ -2653,10 +2875,6 @@ rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-718
-719
-720
-721
 722
 723
 724
@@ -2679,10 +2897,14 @@ rb_grn_table_key_support_set_column_value (int argc, VALUE *argv, VALUE self)
 741
 742
 743
-744</pre>
+744
+745
+746
+747
+748</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 718</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 722</span>
 
 static VALUE
 rb_grn_table_key_support_set_value (int argc, VALUE *argv, VALUE self)
@@ -2757,20 +2979,20 @@ rb_grn_table_key_support_set_value (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-963
-964
-965
-966
 967
 968
 969
 970
 971
 972
-973</pre>
+973
+974
+975
+976
+977</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 963</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 967</span>
 
 static VALUE
 rb_grn_table_key_support_support_key_p (VALUE self)
@@ -2791,7 +3013,7 @@ rb_grn_table_key_support_support_key_p (VALUE self)
       <div class="method_details ">
   <h3 class="signature " id="token_filters-instance_method">
   
-    #<strong>token_filters</strong>  &#x21d2; <tt>::Array&lt;<span class='object_link'><a href="../Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt> 
+    #<strong>token_filters</strong>  &#x21d2; <tt><span class='object_link'><a href="../Array.html" title="Groonga::Array (class)">::Array</a></span>&lt;<span class='object_link'><a href="../Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt> 
   
 
   
@@ -2821,7 +3043,7 @@ rb_grn_table_key_support_support_key_p (VALUE self)
     <li>
       
       
-        <span class='type'>(<tt>::Array&lt;<span class='object_link'><a href="../Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Groonga::Array (class)">::Array</a></span>&lt;<span class='object_link'><a href="../Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt>)</span>
       
       
       
@@ -2838,10 +3060,6 @@ rb_grn_table_key_support_support_key_p (VALUE self)
       <pre class="lines">
 
 
-820
-821
-822
-823
 824
 825
 826
@@ -2858,10 +3076,14 @@ rb_grn_table_key_support_support_key_p (VALUE self)
 837
 838
 839
-840</pre>
+840
+841
+842
+843
+844</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 820</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 824</span>
 
 static VALUE
 rb_grn_table_key_support_get_token_filters (VALUE self)
@@ -2932,7 +3154,7 @@ rb_grn_table_key_support_get_token_filters (VALUE self)
         <span class='name'>token_filters</span>
       
       
-        <span class='type'>(<tt>::Array&lt;String&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Groonga::Array (class)">::Array</a></span>&lt;String&gt;</tt>)</span>
       
       
       
@@ -2954,10 +3176,6 @@ rb_grn_table_key_support_get_token_filters (VALUE self)
       <pre class="lines">
 
 
-852
-853
-854
-855
 856
 857
 858
@@ -2977,10 +3195,14 @@ rb_grn_table_key_support_get_token_filters (VALUE self)
 872
 873
 874
-875</pre>
+875
+876
+877
+878
+879</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 852</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 856</span>
 
 static VALUE
 rb_grn_table_key_support_set_token_filters (VALUE self,
@@ -3014,7 +3236,7 @@ rb_grn_table_key_support_set_token_filters (VALUE self,
       <div class="method_details ">
   <h3 class="signature " id="tokenize-instance_method">
   
-    #<strong>tokenize</strong>(string, options = {})  &#x21d2; <tt>::Array&lt;<span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Groonga::Record</a></span>&gt;</tt> 
+    #<strong>tokenize</strong>(string, options = {})  &#x21d2; <tt><span class='object_link'><a href="../Array.html" title="Groonga::Array (class)">::Array</a></span>&lt;<span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Groonga::Record</a></span>&gt;</tt> 
   
 
   
@@ -3060,7 +3282,7 @@ rb_grn_table_key_support_set_token_filters (VALUE self,
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -3104,7 +3326,7 @@ just ignored.</p>
     <li>
       
       
-        <span class='type'>(<tt>::Array&lt;<span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Groonga::Record</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Array.html" title="Groonga::Array (class)">::Array</a></span>&lt;<span class='object_link'><a href="../Record.html" title="Groonga::Record (class)">Groonga::Record</a></span>&gt;</tt>)</span>
       
       
       
@@ -3125,10 +3347,6 @@ just ignored.</p>
       <pre class="lines">
 
 
-986
-987
-988
-989
 990
 991
 992
@@ -3165,10 +3383,14 @@ just ignored.</p>
 1023
 1024
 1025
-1026</pre>
+1026
+1027
+1028
+1029
+1030</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 986</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 990</span>
 
 static VALUE
 rb_grn_table_key_support_tokenize (int argc, VALUE *argv, VALUE self)
@@ -3262,10 +3484,6 @@ rb_grn_table_key_support_tokenize (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-648
-649
-650
-651
 652
 653
 654
@@ -3286,10 +3504,14 @@ rb_grn_table_key_support_tokenize (int argc, VALUE *argv, VALUE self)
 669
 670
 671
-672</pre>
+672
+673
+674
+675
+676</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 648</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-table-key-support.c', line 652</span>
 
 static VALUE
 rb_grn_table_key_support_get_value (int argc, VALUE *argv, VALUE self)
@@ -3326,9 +3548,9 @@ rb_grn_table_key_support_get_value (int argc, VALUE *argv, VALUE self)
 </div>
 
       <div id="footer">
-  Generated on Thu Jan 12 23:11:40 2017 by
+  Generated on Sat Apr 29 11:49:27 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.7 (ruby-2.3.0).
+  0.9.5 (ruby-2.3.3).
 </div>
 
     

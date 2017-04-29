@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,6 +89,8 @@
 </div>
         <div class="clear"></div>
       </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Groonga::TableDumper
   
@@ -242,7 +244,7 @@
   <span class='ivar'>@options</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span>
   <span class='ivar'>@output</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:output</span><span class='rbracket'>]</span>
   <span class='ivar'>@have_output</span> <span class='op'>=</span> <span class='op'>!</span><span class='ivar'>@output</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-  <span class='ivar'>@output</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Dumper.html" title="Groonga::Dumper (module)">Dumper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_output'><span class='object_link'><a href="Dumper.html#default_output-class_method" title="Groonga::Dumper.default_output (method)">default_output</a></span></span>
+  <span class='ivar'>@output</span> <span class='op'>||=</span> <span class='const'>Dumper</span><span class='period'>.</span><span class='id identifier rubyid_default_output'>default_output</span>
   <span class='ivar'>@error_output</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:error_output</span><span class='rbracket'>]</span>
   <span class='ivar'>@max_records</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:max_records</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
@@ -303,9 +305,9 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jan 12 23:11:41 2017 by
+  Generated on Sat Apr 29 11:49:29 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.7 (ruby-2.3.0).
+  0.9.5 (ruby-2.3.3).
 </div>
 
     

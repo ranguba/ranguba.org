@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <iframe id="nav" src="../../class_list.html"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,6 +89,8 @@
 </div>
         <div class="clear"></div>
       </div>
+
+      <iframe id="search_frame" src="../../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Groonga::GrntestLog::Parser
   
@@ -306,7 +308,7 @@
       <span class='kw'>case</span> <span class='id identifier rubyid_line'>line</span>
       <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>},\n</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>}</span><span class='tstring_end'>&quot;</span></span>
-        <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="EnvironmentEvent.html" title="Groonga::GrntestLog::EnvironmentEvent (class)">EnvironmentEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="EnvironmentEvent.html#initialize-instance_method" title="Groonga::GrntestLog::EnvironmentEvent#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_parse_json'>parse_json</span><span class='lparen'>(</span><span class='id identifier rubyid_buffer'>buffer</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'>EnvironmentEvent</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_parse_json'>parse_json</span><span class='lparen'>(</span><span class='id identifier rubyid_buffer'>buffer</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_buffer'>buffer</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
         <span class='id identifier rubyid_in_environment'>in_environment</span> <span class='op'>=</span> <span class='kw'>false</span>
       <span class='kw'>else</span>
@@ -318,17 +320,17 @@
         <span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_line'>line</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
         <span class='id identifier rubyid_in_environment'>in_environment</span> <span class='op'>=</span> <span class='kw'>true</span>
       <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A\{&quot;jobs&quot;:</span><span class='regexp_end'>/</span></span>
-        <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="JobsStartEvent.html" title="Groonga::GrntestLog::JobsStartEvent (class)">JobsStartEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="JobsStartEvent.html#initialize-instance_method" title="Groonga::GrntestLog::JobsStartEvent#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_parse_json'>parse_json</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'>JobsStartEvent</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_parse_json'>parse_json</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
       <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A&quot;detail&quot;: \[$</span><span class='regexp_end'>/</span></span>
         <span class='comment'># ignore
 </span>      <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A\[\d+,</span><span class='regexp_end'>/</span></span>
-        <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="TaskEvent.html" title="Groonga::GrntestLog::TaskEvent (class)">TaskEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_parse_json'>parse_json</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\]+,$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'>TaskEvent</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_parse_json'>parse_json</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\]+,$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
       <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A&quot;summary&quot;: </span><span class='regexp_end'>/</span></span>
         <span class='id identifier rubyid_summaries'>summaries</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_json'>parse_json</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:\A&quot;summary&quot;: |\},$)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_summaries'>summaries</span> <span class='op'>=</span> <span class='id identifier rubyid_summaries'>summaries</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_summary'>summary</span><span class='op'>|</span>
-          <span class='const'><span class='object_link'><a href="JobSummaryEvent.html" title="Groonga::GrntestLog::JobSummaryEvent (class)">JobSummaryEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="JobSummaryEvent.html#initialize-instance_method" title="Groonga::GrntestLog::JobSummaryEvent#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_summary'>summary</span><span class='rparen'>)</span>
+          <span class='const'>JobSummaryEvent</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_summary'>summary</span><span class='rparen'>)</span>
         <span class='kw'>end</span>
-        <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="JobsEndEvent.html" title="Groonga::GrntestLog::JobsEndEvent (class)">JobsEndEvent</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="JobsEndEvent.html#initialize-instance_method" title="Groonga::GrntestLog::JobsEndEvent#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_summaries'>summaries</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='kw'>yield</span><span class='lparen'>(</span><span class='const'>JobsEndEvent</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_summaries'>summaries</span><span class='rparen'>)</span><span class='rparen'>)</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
@@ -343,9 +345,9 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jan 12 23:11:45 2017 by
+  Generated on Sat Apr 29 11:49:30 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.7 (ruby-2.3.0).
+  0.9.5 (ruby-2.3.3).
 </div>
 
     

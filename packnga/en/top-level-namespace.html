@@ -21,7 +21,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!top-level-namespace.html";
+  framesUrl = "frames.html#!" + escape(window.location.href);
 </script>
 
 
@@ -32,33 +32,6 @@
 
   </head>
   <body>
-<div class="header">
-  <div class="title">
-    <a href="../../">
-      <span class="title">
-  Top Level Namespace
-  
-    &mdash; packnga
-  
-</span>
-      <span class="title-separator">-</span>
-      <span class="title-project">Ranguba</span>
-    </a>
-  </div>
-  <ul class="other-languages">
-    <li id="other-language-japanese" lang="ja" xml:lang="ja"><a href="../../packnga/ja/top-level-namespace.html">日本語</a></li>
-  </ul>
-  <ul class="menu">
-    <li id="menu-reference"><a href="../../packnga/en/">Reference Manual</a></li>
-    <li id="menu-tutorial"><a href="../../packnga/en/file.tutorial.html">Tutorial</a></li>
-    <li id="menu-install"><a href="../../#install-packnga">Install</a></li>
-    <li id="menu-developer"><a href="../../developer.html">Developer</a></li>
-  </ul>
-</div>
-
-<div class="content">
-
-
     <div id="header">
       <div id="menu">
   
@@ -133,9 +106,7 @@
 
 </div>
 
-    <div id="footer"></div>
-
-  
+    <div id="footer">
     </div>
 
     <div class="sponsors">
@@ -156,5 +127,7 @@
       </p>
     </div>
 
-</body>
+</div>
+
+  </body>
 </html>

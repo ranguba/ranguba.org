@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="file_list.html?1"></iframe>
+      <iframe id="nav" src="file_list.html"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -87,6 +87,8 @@
 </div>
         <div class="clear"></div>
       </div>
+
+      <iframe id="search_frame" src="file_list.html"></iframe>
 
       <div id="content"><div id='filecontents'><h1 id="section">チュートリアル</h1>
 
@@ -190,7 +192,7 @@ like Groonga::PatriciaTrie.</dd>
 </code></pre>
 
 <p>定義したカラムは <code>#{テーブル名}.#{カラム名}</code> という名前になります。
-テーブルと同じように <span class='object_link'><a href="Groonga.html#[]-class_method" title="Groonga.[] (method)">Groonga.[]</a></span> で参照できます。</p>
+テーブルと同じように <span class='object_link'><a href="Groonga.html#%5B%5D-class_method" title="Groonga.[] (method)">Groonga.[]</a></span> で参照できます。</p>
 
 <pre class="code ruby"><code class="ruby">&gt;&gt; title_column = Groonga[&quot;Items.title&quot;]
 =&gt; #&lt;Groonga::VariableSizeColumn ...&gt;
@@ -484,9 +486,9 @@ of scores of each <code>coments</code> as score of the item.</li>
 </div></div>
 
       <div id="footer">
-  Generated on Thu Jan 12 23:11:39 2017 by
+  Generated on Sat Apr 29 11:49:26 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.7 (ruby-2.3.0).
+  0.9.5 (ruby-2.3.3).
 </div>
 
     

@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <iframe id="nav" src="../class_list.html"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,6 +89,8 @@
 </div>
         <div class="clear"></div>
       </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Groonga::QueryLogger
   
@@ -220,7 +222,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#path=-class_method" title="path= (class method)">.<strong>path=</strong>(path)  &#x21d2; Object </a>
+      <a href="#path%3D-class_method" title="path= (class method)">.<strong>path=</strong>(path)  &#x21d2; Object </a>
     
 
     
@@ -312,7 +314,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rotate_threshold_size=-class_method" title="rotate_threshold_size= (class method)">.<strong>rotate_threshold_size=</strong>(size)  &#x21d2; Object </a>
+      <a href="#rotate_threshold_size%3D-class_method" title="rotate_threshold_size= (class method)">.<strong>rotate_threshold_size=</strong>(size)  &#x21d2; Object </a>
     
 
     
@@ -491,7 +493,7 @@
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -813,13 +815,13 @@ logger is disabled.</p>
         <p class="example_title"><div class='inline'><p>Changes the query log path for the default query logger</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::QueryLogger (class)">QueryLogger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_path'><span class='object_link'><a href="#path-class_method" title="Groonga::QueryLogger.path (method)">path</a></span></span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/query.log</span><span class='tstring_end'>&quot;</span></span></code></pre>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/query.log</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>Disables query log by the default query logger</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::QueryLogger (class)">QueryLogger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_path'><span class='object_link'><a href="#path-class_method" title="Groonga::QueryLogger.path (method)">path</a></span></span> <span class='op'>=</span> <span class='kw'>nil</span></code></pre>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='kw'>nil</span></code></pre>
     
   </div>
 
@@ -1052,7 +1054,7 @@ inherit <span class='object_link'><a href="" title="Groonga::QueryLogger (class)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>::Hash</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -1469,13 +1471,13 @@ is disabled by default.</p>
         <p class="example_title"><div class='inline'><p>Changes the rotate threshold size for the default query logger</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::QueryLogger (class)">QueryLogger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'><span class='object_link'><a href="#rotate_threshold_size-class_method" title="Groonga::QueryLogger.rotate_threshold_size (method)">rotate_threshold_size</a></span></span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='comment'># 1MiB</span></code></pre>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'>rotate_threshold_size</span> <span class='op'>=</span> <span class='int'>1</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='op'>*</span> <span class='int'>1024</span> <span class='comment'># 1MiB</span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>Disables log ration by the default query logger</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::QueryLogger (class)">QueryLogger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'><span class='object_link'><a href="#rotate_threshold_size-class_method" title="Groonga::QueryLogger.rotate_threshold_size (method)">rotate_threshold_size</a></span></span> <span class='op'>=</span> <span class='int'>0</span></code></pre>
+      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>QueryLogger</span><span class='period'>.</span><span class='id identifier rubyid_rotate_threshold_size'>rotate_threshold_size</span> <span class='op'>=</span> <span class='int'>0</span></code></pre>
     
   </div>
 
