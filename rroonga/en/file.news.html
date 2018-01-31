@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="file_list.html"></iframe>
+      <iframe id="nav" src="file_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -88,13 +88,75 @@
         <div class="clear"></div>
       </div>
 
-      <iframe id="search_frame" src="file_list.html"></iframe>
-
       <div id="content"><div id='filecontents'><h1 id="news">NEWS</h1>
+
+<h2 id="version-7-1-1">7.1.1: 2018-01-30</h2>
+
+<h3 id="improvements">Improvements</h3>
+
+<ul>
+  <li>
+    <p>Added Groonga 7.1.1 support. Groonga 7.1.0 or older aren’t supported.</p>
+  </li>
+  <li>
+    <p>Added Apache Arrow support:</p>
+
+    <ul>
+      <li>
+        <p><span class='object_link'><a href="Groonga/Table.html#load_arrow-instance_method" title="Groonga::Table#load_arrow (method)">Groonga::Table#load_arrow</a></span></p>
+      </li>
+      <li>
+        <p><span class='object_link'><a href="Groonga/Table.html#dump_arrow-instance_method" title="Groonga::Table#dump_arrow (method)">Groonga::Table#dump_arrow</a></span></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Windows: Added Ruby 2.4 or later support.
+[groonga-dev,04565][Reported by ongaeshi]</p>
+  </li>
+  <li>
+    <p><span class='object_link'><a href="Groonga/ColumnCache.html" title="Groonga::ColumnCache (class)">Groonga::ColumnCache</a></span>: Added.</p>
+  </li>
+  <li>
+    <p><span class='object_link'><a href="Groonga/Expression.html#parse-instance_method" title="Groonga::Expression#parse (method)">Groonga::Expression#parse</a></span>: Added <code>:no_syntax_error</code> option.</p>
+  </li>
+  <li>
+    <p><span class='object_link'><a href="Groonga/Context.html#support_arrow%3F-instance_method" title="Groonga::Context#support_arrow? (method)">Groonga::Context#support_arrow?</a></span>: Added.</p>
+  </li>
+  <li>
+    <p><span class='object_link'><a href="Groonga/Procedure.html#stable%3F-instance_method" title="Groonga::Procedure#stable? (method)">Groonga::Procedure#stable?</a></span>: Added.</p>
+  </li>
+  <li>
+    <p><span class='object_link'><a href="Groonga/Array.html" title="Groonga::Array (class)">Groonga::Array</a></span>: Removed queue support.</p>
+  </li>
+  <li>
+    <p><span class='object_link'><a href="Groonga/QueryLogger.html#flags-class_method" title="Groonga::QueryLogger.flags (method)">Groonga::QueryLogger.flags</a></span>: Added.</p>
+  </li>
+  <li>
+    <p><span class='object_link'><a href="Groonga/QueryLogger.html#flags=-class_method" title="Groonga::QueryLogger.flags= (method)">Groonga::QueryLogger.flags=</a></span>: Added.</p>
+  </li>
+  <li>
+    <p><span class='object_link'><a href="Groonga/Object.html#corrupt%3F-instance_method" title="Groonga::Object#corrupt? (method)">Groonga::Object#corrupt?</a></span>: Added.</p>
+  </li>
+  <li>
+    <p><span class='object_link'><a href="Groonga/Object.html#disk_usage-instance_method" title="Groonga::Object#disk_usage (method)">Groonga::Object#disk_usage</a></span>: Added.</p>
+  </li>
+</ul>
+
+<h3 id="thanks">Thanks</h3>
+
+<ul>
+  <li>
+    <p>naofumi-fujii</p>
+  </li>
+  <li>
+    <p>ongaeshi</p>
+  </li>
+</ul>
 
 <h2 id="version-7-0-2">7.0.2: 2017-04-29</h2>
 
-<h3 id="improvements">Improvements</h3>
+<h3 id="improvements-1">Improvements</h3>
 
 <ul>
   <li>
@@ -105,7 +167,7 @@
 token.</p>
   </li>
   <li>
-    <p><span class='object_link'><a href="Groonga/IndexColumn.html#%5B%5D-instance_method" title="Groonga::IndexColumn#[] (method)">Groonga::IndexColumn#[]</a></span>: Supported a token.</p>
+    <p><span class='object_link'><a href="Groonga/IndexColumn.html#[]-instance_method" title="Groonga::IndexColumn#[] (method)">Groonga::IndexColumn#[]</a></span>: Supported a token.</p>
   </li>
   <li>
     <p><span class='object_link'><a href="Groonga/InvertedIndexCursor.html#closed%3F-instance_method" title="Groonga::InvertedIndexCursor#closed? (method)">Groonga::InvertedIndexCursor#closed?</a></span>: Added.</p>
@@ -136,7 +198,7 @@ token.</p>
 
 <h2 id="version-6-1-3">6.1.3: 2017-01-12</h2>
 
-<h3 id="improvements-1">Improvements</h3>
+<h3 id="improvements-2">Improvements</h3>
 
 <ul>
   <li>
@@ -153,7 +215,7 @@ token.</p>
 If Zstandard is available in your enviromemt, you can use Zstandard
 compression for columns. How to use:</p>
 
-    <pre class="code ruby"><code class="ruby">  <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
+    <pre class="code ruby"><code class="ruby">  <span class='const'><span class='object_link'><a href="Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Groonga/Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_define'><span class='object_link'><a href="Groonga/Schema.html#define-class_method" title="Groonga::Schema.define (method)">define</a></span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
     <span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Posts</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
       <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:compress</span> <span class='op'>=&gt;</span> <span class='symbol'>:zstandard</span><span class='rparen'>)</span>
       <span class='comment'># shortened form
@@ -169,13 +231,13 @@ compression for columns. How to use:</p>
     <p>Added <span class='object_link'><a href="Groonga/Logger.html#flags-class_method" title="Groonga::Logger.flags (method)">Groonga::Logger.flags</a></span>.</p>
   </li>
   <li>
-    <p>Added <span class='object_link'><a href="Groonga/Logger.html#flags%3D-class_method" title="Groonga::Logger.flags= (method)">Groonga::Logger.flags=</a></span>.</p>
+    <p>Added <span class='object_link'><a href="Groonga/Logger.html#flags=-class_method" title="Groonga::Logger.flags= (method)">Groonga::Logger.flags=</a></span>.</p>
   </li>
 </ul>
 
 <h2 id="version-6-1-0">6.1.0: 2016-11-07</h2>
 
-<h3 id="improvements-2">Improvements</h3>
+<h3 id="improvements-3">Improvements</h3>
 
 <ul>
   <li><span class='object_link'><a href="Groonga/Table.html#define_index_column-instance_method" title="Groonga::Table#define_index_column (method)">Groonga::Table#define_index_column</a></span>: Added <code>:size</code> option to
@@ -185,7 +247,7 @@ support small or medium size of index column. Specify <code>:small</code> or
 
 <h2 id="version-6-0-9">6.0.9: 2016-10-07</h2>
 
-<h3 id="improvements-3">Improvements</h3>
+<h3 id="improvements-4">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 6.0.9. Groonga 6.0.8 or older aren’t supported.</li>
@@ -197,7 +259,7 @@ whether the given ID is ID for builtin_type object or not.</li>
 
 <h2 id="version-6-0-7">6.0.7: 2016-08-13</h2>
 
-<h3 id="improvements-4">Improvements</h3>
+<h3 id="improvements-5">Improvements</h3>
 
 <ul>
   <li>
@@ -222,7 +284,7 @@ test-unit.</p>
 
 <h2 id="version-6-0-5">6.0.5: 2016-07-15</h2>
 
-<h3 id="improvements-5">Improvements</h3>
+<h3 id="improvements-6">Improvements</h3>
 
 <ul>
   <li>
@@ -277,7 +339,7 @@ the object is changed after the last flush.</p>
 
 <h2 id="version-6-0-4">6.0.4: 2016-06-14</h2>
 
-<h3 id="improvements-6">Improvements</h3>
+<h3 id="improvements-7">Improvements</h3>
 
 <ul>
   <li>
@@ -302,7 +364,7 @@ method to apply a window function.</p>
 
 <h2 id="version-6-0-2">6.0.2: 2016-05-18</h2>
 
-<h3 id="improvements-7">Improvements</h3>
+<h3 id="improvements-8">Improvements</h3>
 
 <ul>
   <li>
@@ -354,7 +416,7 @@ timeout feature.</p>
 
 <h2 id="version-6-0-0">6.0.0: 2016-03-06</h2>
 
-<h3 id="improvements-8">Improvements</h3>
+<h3 id="improvements-9">Improvements</h3>
 
 <ul>
   <li>
@@ -424,7 +486,7 @@ block. It’s Rubyish API.</p>
   </li>
 </ul>
 
-<h3 id="thanks">Thanks</h3>
+<h3 id="thanks-1">Thanks</h3>
 
 <ul>
   <li>
@@ -437,7 +499,7 @@ block. It’s Rubyish API.</p>
 
 <h2 id="version-5-1-1">5.1.1: 2016-01-18</h2>
 
-<h3 id="improvements-9">Improvements</h3>
+<h3 id="improvements-10">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 5.1.1. Groonga 5.0.9 or older aren’t supported.</li>
@@ -457,7 +519,7 @@ block. It’s Rubyish API.</p>
 
 <h2 id="version-5-0-9">5.0.9: 2015-11-10</h2>
 
-<h3 id="improvements-10">Improvements</h3>
+<h3 id="improvements-11">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 5.0.9. Groonga 5.0.8 or older aren’t supported.</li>
@@ -469,7 +531,7 @@ block. It’s Rubyish API.</p>
 
 <h2 id="version-5-0-8">5.0.8: 2015-10-07</h2>
 
-<h3 id="improvements-11">Improvements</h3>
+<h3 id="improvements-12">Improvements</h3>
 
 <ul>
   <li>Changed to use <code>gmake</code> preferentially for auto Groonga build.</li>
@@ -484,7 +546,7 @@ from Vagrant based cross compile system.
 [GitHub#108] [Patch by Hiroshi Hatake]</li>
 </ul>
 
-<h3 id="thanks-1">Thanks</h3>
+<h3 id="thanks-2">Thanks</h3>
 
 <ul>
   <li>Hiroshi Hatake</li>
@@ -492,7 +554,7 @@ from Vagrant based cross compile system.
 
 <h2 id="version-5-0-5">5.0.5: 2015-09-09</h2>
 
-<h3 id="improvements-12">Improvements</h3>
+<h3 id="improvements-13">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 5.0.7. Groonga 5.0.6 or older aren’t supported.</li>
@@ -501,12 +563,12 @@ from Vagrant based cross compile system.
 against <span class='object_link'><a href="Groonga/DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">Groonga::DoubleArrayTrie</a></span>.</li>
   <li>Added <span class='object_link'><a href="Groonga/Database.html#unmap-instance_method" title="Groonga::Database#unmap (method)">Groonga::Database#unmap</a></span>.</li>
   <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit-class_method" title="Groonga::Thread.limit (method)">Groonga::Thread.limit</a></span>.</li>
-  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit%3D-class_method" title="Groonga::Thread.limit= (method)">Groonga::Thread.limit=</a></span>.</li>
-  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit_getter%3D-class_method" title="Groonga::Thread.limit_getter= (method)">Groonga::Thread.limit_getter=</a></span>.</li>
-  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit_setter%3D-class_method" title="Groonga::Thread.limit_setter= (method)">Groonga::Thread.limit_setter=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit=-class_method" title="Groonga::Thread.limit= (method)">Groonga::Thread.limit=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit_getter=-class_method" title="Groonga::Thread.limit_getter= (method)">Groonga::Thread.limit_getter=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Thread.html#limit_setter=-class_method" title="Groonga::Thread.limit_setter= (method)">Groonga::Thread.limit_setter=</a></span>.</li>
   <li>Added <span class='object_link'><a href="Groonga/WindowsEventLogger.html#register-class_method" title="Groonga::WindowsEventLogger.register (method)">Groonga::WindowsEventLogger.register</a></span>.</li>
   <li>Added <span class='object_link'><a href="Groonga/Logger.html#max_level-class_method" title="Groonga::Logger.max_level (method)">Groonga::Logger.max_level</a></span>.</li>
-  <li>Added <span class='object_link'><a href="Groonga/Logger.html#max_level%3D-class_method" title="Groonga::Logger.max_level= (method)">Groonga::Logger.max_level=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Logger.html#max_level=-class_method" title="Groonga::Logger.max_level= (method)">Groonga::Logger.max_level=</a></span>.</li>
 </ul>
 
 <h3 id="fixes-1">Fixes</h3>
@@ -518,7 +580,7 @@ against database that has <code>Groonga::Array</code> or <code>Groonga::Hash</co
 
 <h2 id="version-5-0-4">5.0.4: 2015-07-13</h2>
 
-<h3 id="improvements-13">Improvements</h3>
+<h3 id="improvements-14">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 5.0.5. Groonga 5.0.4 or older aren’t supported.</li>
@@ -530,7 +592,7 @@ against database that has <code>Groonga::Array</code> or <code>Groonga::Hash</co
 
 <h2 id="version-5-0-3">5.0.3: 2015-06-10</h2>
 
-<h3 id="improvements-14">Improvements</h3>
+<h3 id="improvements-15">Improvements</h3>
 
 <ul>
   <li>Removed deprecated option “rubyforge_project” from .gemspec.
@@ -543,7 +605,7 @@ against database that has <code>Groonga::Array</code> or <code>Groonga::Hash</co
   <li>[windows] Updated bundled Groonga version to 5.0.4.</li>
 </ul>
 
-<h3 id="thanks-2">Thanks</h3>
+<h3 id="thanks-3">Thanks</h3>
 
 <ul>
   <li>takiy33</li>
@@ -551,7 +613,7 @@ against database that has <code>Groonga::Array</code> or <code>Groonga::Hash</co
 
 <h2 id="version-5-0-2">5.0.2: 2015-05-18</h2>
 
-<h3 id="improvements-15">Improvements</h3>
+<h3 id="improvements-16">Improvements</h3>
 
 <ul>
   <li>Added <span class='object_link'><a href="Groonga/Plugin.html#ruby_suffix-class_method" title="Groonga::Plugin.ruby_suffix (method)">Groonga::Plugin.ruby_suffix</a></span>.</li>
@@ -562,16 +624,16 @@ nobody will not stumped. Because <code>:key_type</code> is specified but
 <code>:type</code> isn’t specified case is a bug of user’s program.</li>
   <li>Added <span class='object_link'><a href="Groonga/Logger.html#log-class_method" title="Groonga::Logger.log (method)">Groonga::Logger.log</a></span>.</li>
   <li>Added <span class='object_link'><a href="Groonga/Logger.html#rotate_threshold_size-class_method" title="Groonga::Logger.rotate_threshold_size (method)">Groonga::Logger.rotate_threshold_size</a></span>.</li>
-  <li>Added <span class='object_link'><a href="Groonga/Logger.html#rotate_threshold_size%3D-class_method" title="Groonga::Logger.rotate_threshold_size= (method)">Groonga::Logger.rotate_threshold_size=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/Logger.html#rotate_threshold_size=-class_method" title="Groonga::Logger.rotate_threshold_size= (method)">Groonga::Logger.rotate_threshold_size=</a></span>.</li>
   <li>Added <span class='object_link'><a href="Groonga/QueryLogger.html#log-class_method" title="Groonga::QueryLogger.log (method)">Groonga::QueryLogger.log</a></span>.</li>
   <li>Added <span class='object_link'><a href="Groonga/QueryLogger.html#rotate_threshold_size-class_method" title="Groonga::QueryLogger.rotate_threshold_size (method)">Groonga::QueryLogger.rotate_threshold_size</a></span>.</li>
-  <li>Added <span class='object_link'><a href="Groonga/QueryLogger.html#rotate_threshold_size%3D-class_method" title="Groonga::QueryLogger.rotate_threshold_size= (method)">Groonga::QueryLogger.rotate_threshold_size=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga/QueryLogger.html#rotate_threshold_size=-class_method" title="Groonga::QueryLogger.rotate_threshold_size= (method)">Groonga::QueryLogger.rotate_threshold_size=</a></span>.</li>
   <li>Implemented <span class='object_link'><a href="Groonga/QueryLogger/Flags.html#parse-class_method" title="Groonga::QueryLogger::Flags.parse (method)">Groonga::QueryLogger::Flags.parse</a></span>.</li>
 </ul>
 
 <h2 id="version-5-0-1">5.0.1: 2015-04-14</h2>
 
-<h3 id="improvements-16">Improvements</h3>
+<h3 id="improvements-17">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 5.0.2. Groonga 5.0.1 or older aren’t supported.</li>
@@ -617,7 +679,7 @@ incompatible change but nobody will not be effected.</li>
   <li>Supported regular expression in <span class='object_link'><a href="Groonga/Table.html#select-instance_method" title="Groonga::Table#select (method)">Groonga::Table#select</a></span> block.</li>
 </ul>
 
-<h3 id="thanks-3">Thanks</h3>
+<h3 id="thanks-4">Thanks</h3>
 
 <ul>
   <li>yui-knk</li>
@@ -626,7 +688,7 @@ incompatible change but nobody will not be effected.</li>
 
 <h2 id="version-5-0-0">5.0.0: 2015-02-16</h2>
 
-<h3 id="improvements-17">Improvements</h3>
+<h3 id="improvements-18">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 5.0.0. Groonga 4.1.1 or older aren’t supported.</li>
@@ -634,16 +696,16 @@ incompatible change but nobody will not be effected.</li>
     <p>Added flags for <span class='object_link'><a href="Groonga/Normalizer.html#normalize-class_method" title="Groonga::Normalizer.normalize (method)">Groonga::Normalizer.normalize</a></span>.
 [GitHub#44] [Patch by Tasuku SUENAGA a.k.a. gunyarakun]</p>
 
-    <pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AbC Def　gh</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>                         <span class='comment'>#=&gt; &quot;abcdefgh&quot;
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AbC Def　gh</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:remove_blank</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>  <span class='comment'>#=&gt; &quot;abcdefgh&quot;
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AbC Def　gh</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:remove_blank</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#=&gt; &quot;abc def gh&quot;
+    <pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Groonga/Normalizer.html" title="Groonga::Normalizer (class)">Normalizer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize'><span class='object_link'><a href="Groonga/Normalizer.html#normalize-class_method" title="Groonga::Normalizer.normalize (method)">normalize</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AbC Def　gh</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>                         <span class='comment'>#=&gt; &quot;abcdefgh&quot;
+</span><span class='const'><span class='object_link'><a href="Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Groonga/Normalizer.html" title="Groonga::Normalizer (class)">Normalizer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize'><span class='object_link'><a href="Groonga/Normalizer.html#normalize-class_method" title="Groonga::Normalizer.normalize (method)">normalize</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AbC Def　gh</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:remove_blank</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>  <span class='comment'>#=&gt; &quot;abcdefgh&quot;
+</span><span class='const'><span class='object_link'><a href="Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Groonga/Normalizer.html" title="Groonga::Normalizer (class)">Normalizer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize'><span class='object_link'><a href="Groonga/Normalizer.html#normalize-class_method" title="Groonga::Normalizer.normalize (method)">normalize</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AbC Def　gh</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:remove_blank</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#=&gt; &quot;abc def gh&quot;
 </span></code></pre>
   </li>
   <li>Supported drilldown by multiple keys in <span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>.</li>
   <li>Supported calculation for drilldown in <span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>.</li>
 </ul>
 
-<h3 id="thanks-4">Thanks</h3>
+<h3 id="thanks-5">Thanks</h3>
 
 <ul>
   <li>Tasuku SUENAGA a.k.a. gunyarakun</li>
@@ -651,7 +713,7 @@ incompatible change but nobody will not be effected.</li>
 
 <h2 id="version-4-0-8">4.0.8: 2015-01-08</h2>
 
-<h3 id="improvements-18">Improvements</h3>
+<h3 id="improvements-19">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.9. Groonga 4.0.8 or older aren’t supported.</li>
@@ -662,10 +724,10 @@ incompatible change but nobody will not be effected.</li>
 <h3 id="fixes-2">Fixes</h3>
 
 <ul>
-  <li>Fixed a typo in <span class='object_link'><a href="Groonga/GeoPoint.html#%3D%3D-instance_method" title="Groonga::GeoPoint#== (method)">Groonga::GeoPoint#==</a></span>.</li>
+  <li>Fixed a typo in <span class='object_link'><a href="Groonga/GeoPoint.html#==-instance_method" title="Groonga::GeoPoint#== (method)">Groonga::GeoPoint#==</a></span>.</li>
 </ul>
 
-<h3 id="thanks-5">Thanks</h3>
+<h3 id="thanks-6">Thanks</h3>
 
 <ul>
   <li>Hiroshi Hatake</li>
@@ -673,7 +735,7 @@ incompatible change but nobody will not be effected.</li>
 
 <h2 id="version-4-0-7">4.0.7: 2014-12-12</h2>
 
-<h3 id="improvements-19">Improvements</h3>
+<h3 id="improvements-20">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.8. Groonga 4.0.7 or older aren’t supported.</li>
@@ -687,7 +749,7 @@ reusing the same object isn’t Rubyish.</li>
 
 <h2 id="version-4-0-6">4.0.6: 2014-11-06</h2>
 
-<h3 id="improvements-20">Improvements</h3>
+<h3 id="improvements-21">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.7. [GitHub#28]
@@ -699,7 +761,7 @@ reusing the same object isn’t Rubyish.</li>
       <li>Added <span class='object_link'><a href="Groonga/LZ4Error.html" title="Groonga::LZ4Error (class)">Groonga::LZ4Error</a></span>.</li>
       <li>[grndump] Supported <code>COMPRESS_ZLIB</code> and <code>COMPRESS_LZ4</code> flags.</li>
       <li>Added <span class='object_link'><a href="Groonga/Table/KeySupport.html#token_filters-instance_method" title="Groonga::Table::KeySupport#token_filters (method)">Groonga::Table::KeySupport#token_filters</a></span>.</li>
-      <li>Added <span class='object_link'><a href="Groonga/Table/KeySupport.html#token_filters%3D-instance_method" title="Groonga::Table::KeySupport#token_filters= (method)">Groonga::Table::KeySupport#token_filters=</a></span>.</li>
+      <li>Added <span class='object_link'><a href="Groonga/Table/KeySupport.html#token_filters=-instance_method" title="Groonga::Table::KeySupport#token_filters= (method)">Groonga::Table::KeySupport#token_filters=</a></span>.</li>
       <li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/Hash.html#create-class_method" title="Groonga::Hash.create (method)">Groonga::Hash.create</a></span> options.</li>
       <li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/PatriciaTrie.html#create-class_method" title="Groonga::PatriciaTrie.create (method)">Groonga::PatriciaTrie.create</a></span> options.</li>
       <li>Supported <code>:token_filters</code> in <span class='object_link'><a href="Groonga/DoubleArrayTrie.html#create-class_method" title="Groonga::DoubleArrayTrie.create (method)">Groonga::DoubleArrayTrie.create</a></span> options.</li>
@@ -728,7 +790,7 @@ you assign value with type A and then assign value type B again.
   <li>[doc] Fixed wrong option name of <span class='object_link'><a href="Groonga/Logger.html#register-class_method" title="Groonga::Logger.register (method)">Groonga::Logger.register</a></span>.</li>
 </ul>
 
-<h3 id="thanks-6">Thanks</h3>
+<h3 id="thanks-7">Thanks</h3>
 
 <ul>
   <li>ongaeshi</li>
@@ -737,7 +799,7 @@ you assign value with type A and then assign value type B again.
 
 <h2 id="version-4-0-5">4.0.5: 2014-10-05</h2>
 
-<h3 id="improvements-21">Improvements</h3>
+<h3 id="improvements-22">Improvements</h3>
 
 <ul>
   <li>[windows] Added cross build task.</li>
@@ -759,7 +821,7 @@ a backward incompatibility, but it is OK because the current API is a
 bug.</li>
 </ul>
 
-<h3 id="thanks-7">Thanks</h3>
+<h3 id="thanks-8">Thanks</h3>
 
 <ul>
   <li>Masafumi Yokoyama</li>
@@ -767,7 +829,7 @@ bug.</li>
 
 <h2 id="version-4-0-4">4.0.4: 2014-08-29</h2>
 
-<h3 id="improvements-22">Improvements</h3>
+<h3 id="improvements-23">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.4 or later. Groonga 4.0.3 or older are not supported.</li>
@@ -775,8 +837,8 @@ bug.</li>
   <li>
     <p>Added <span class='object_link'><a href="Groonga/Procedure.html#type-instance_method" title="Groonga::Procedure#type (method)">Groonga::Procedure#type</a></span> as grn_proc_get_type().</p>
 
-    <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_procedure'>procedure</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_procedure'>procedure</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>ProcedureType</span><span class='op'>::</span><span class='const'>TOKENIZER</span>  <span class='comment'>#=&gt; true
+    <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_procedure'>procedure</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_procedure'>procedure</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Groonga/ProcedureType.html" title="Groonga::ProcedureType (module)">ProcedureType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Groonga/ProcedureType.html#TOKENIZER-constant" title="Groonga::ProcedureType::TOKENIZER (constant)">TOKENIZER</a></span></span>  <span class='comment'>#=&gt; true
 </span></code></pre>
   </li>
   <li>Avoided a crash when <span class='object_link'>Groonga::Record#inspect</span> is called on exit.
@@ -793,7 +855,7 @@ bug.</li>
   <li>Fixed a GC related crash when GC is run while <span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>.</li>
 </ul>
 
-<h3 id="thanks-8">Thanks</h3>
+<h3 id="thanks-9">Thanks</h3>
 
 <ul>
   <li>Ippei Obayashi</li>
@@ -811,7 +873,7 @@ bundling the fixed version Groonga package.
 [groonga-dev,02398][Reported by Masafumi Yokoyama]</li>
 </ul>
 
-<h3 id="thanks-9">Thanks</h3>
+<h3 id="thanks-10">Thanks</h3>
 
 <ul>
   <li>Masafumi Yokoyama</li>
@@ -819,7 +881,7 @@ bundling the fixed version Groonga package.
 
 <h2 id="version-4-0-2">4.0.2: 2014-05-29</h2>
 
-<h3 id="improvements-23">Improvements</h3>
+<h3 id="improvements-24">Improvements</h3>
 
 <ul>
   <li>Removed needless <code>--key_type</code> option in dump.
@@ -841,7 +903,7 @@ See <span class='object_link'><a href="Groonga/Schema.html#create_table-class_me
 [Reported by rutice]</li>
 </ul>
 
-<h3 id="thanks-10">Thanks</h3>
+<h3 id="thanks-11">Thanks</h3>
 
 <ul>
   <li>rutice</li>
@@ -850,7 +912,7 @@ See <span class='object_link'><a href="Groonga/Schema.html#create_table-class_me
 
 <h2 id="version-4-0-1">4.0.1: 2014-04-04</h2>
 
-<h3 id="improvements-24">Improvements</h3>
+<h3 id="improvements-25">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.1. Groonga 4.0.0 or older are not supported.</li>
@@ -881,14 +943,14 @@ Old Groonga can’t restore dumped database.</li>
 
 <h2 id="version-4-0-0">4.0.0: 2014-02-09</h2>
 
-<h3 id="improvements-25">Improvements</h3>
+<h3 id="improvements-26">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 4.0.0. Groonga 3.1.2 or older are not supported.</li>
   <li>Added install document. [Patch by ongaeshi]</li>
 </ul>
 
-<h3 id="thanks-11">Thanks</h3>
+<h3 id="thanks-12">Thanks</h3>
 
 <ul>
   <li>ongaeshi</li>
@@ -896,7 +958,7 @@ Old Groonga can’t restore dumped database.</li>
 
 <h2 id="version-3-1-2">3.1.2: 2014-01-29</h2>
 
-<h3 id="improvements-26">Improvements</h3>
+<h3 id="improvements-27">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 3.1.2. Groonga 3.1.1 or older are not supported.</li>
@@ -909,10 +971,10 @@ Old Groonga can’t restore dumped database.</li>
   <li>grndump: Added <code>--dump-indexes</code> option that controls schema for
 indexes output. It is useful to dump only schema for indexes.</li>
   <li>Added <span class='object_link'><a href="Groonga.html#lock_timeout-class_method" title="Groonga.lock_timeout (method)">Groonga.lock_timeout</a></span>.</li>
-  <li>Added <span class='object_link'><a href="Groonga.html#lock_timeout%3D-class_method" title="Groonga.lock_timeout= (method)">Groonga.lock_timeout=</a></span>.</li>
+  <li>Added <span class='object_link'><a href="Groonga.html#lock_timeout=-class_method" title="Groonga.lock_timeout= (method)">Groonga.lock_timeout=</a></span>.</li>
 </ul>
 
-<h3 id="thanks-12">Thanks</h3>
+<h3 id="thanks-13">Thanks</h3>
 
 <ul>
   <li>ongaeshi</li>
@@ -920,7 +982,7 @@ indexes output. It is useful to dump only schema for indexes.</li>
 
 <h2 id="version-3-1-1">3.1.1: 2013-12-29</h2>
 
-<h3 id="improvements-27">Improvements</h3>
+<h3 id="improvements-28">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 3.1.1.</li>
@@ -935,7 +997,7 @@ all column information.</li>
   <li><span class='object_link'><a href="Groonga/Expression.html#append_object-instance_method" title="Groonga::Expression#append_object (method)">Groonga::Expression#append_object</a></span> supports operator name.</li>
 </ul>
 
-<h3 id="thanks-13">Thanks</h3>
+<h3 id="thanks-14">Thanks</h3>
 
 <ul>
   <li>Masafumi Yokoyama</li>
@@ -943,7 +1005,7 @@ all column information.</li>
 
 <h2 id="version-3-1-0">3.1.0: 2013-11-29</h2>
 
-<h3 id="improvements-28">Improvements</h3>
+<h3 id="improvements-29">Improvements</h3>
 
 <ul>
   <li>Reduced build failure by automatically Groonga build.
@@ -961,7 +1023,7 @@ an exception. Because the method is interested in only existing tables.</li>
 mode and operators.</li>
 </ul>
 
-<h3 id="thanks-14">Thanks</h3>
+<h3 id="thanks-15">Thanks</h3>
 
 <ul>
   <li>SHIMADA Koji</li>
@@ -970,7 +1032,7 @@ mode and operators.</li>
 
 <h2 id="version-3-0-9">3.0.9: 2013-10-29</h2>
 
-<h3 id="improvements-29">Improvements</h3>
+<h3 id="improvements-30">Improvements</h3>
 
 <ul>
   <li>Supported Groonga 3.0.9.</li>
@@ -986,7 +1048,7 @@ index column.</li>
 
 <h2 id="version-3-0-8">3.0.8: 2013-09-29</h2>
 
-<h3 id="improvements-30">Improvements</h3>
+<h3 id="improvements-31">Improvements</h3>
 
 <ul>
   <li>Supported groonga 3.0.8.</li>
@@ -996,7 +1058,7 @@ index column.</li>
 
 <h2 id="version-3-0-7">3.0.7: 2013-09-19</h2>
 
-<h3 id="improvements-31">Improvements</h3>
+<h3 id="improvements-32">Improvements</h3>
 
 <ul>
   <li>Added <span class='object_link'><a href="Groonga/Table/KeySupport.html#tokenize-instance_method" title="Groonga::Table::KeySupport#tokenize (method)">Groonga::Table::KeySupport#tokenize</a></span>. It requires groonga
@@ -1016,7 +1078,7 @@ about rerturn object details.
 [GitHub#12][Patch by Keita Haga]</li>
 </ul>
 
-<h3 id="thanks-15">Thanks</h3>
+<h3 id="thanks-16">Thanks</h3>
 
 <ul>
   <li>Keita Haga</li>
@@ -1024,7 +1086,7 @@ about rerturn object details.
 
 <h2 id="version-3-0-6">3.0.6: 2013-09-13</h2>
 
-<h3 id="improvements-32">Improvements</h3>
+<h3 id="improvements-33">Improvements</h3>
 
 <ul>
   <li>Supported accessing reference column that referes a table that uses
@@ -1033,7 +1095,7 @@ Int8/UInt8/Int16/UInt16 key.</li>
 
 <h2 id="version-3-0-5">3.0.5: 2013-07-29</h2>
 
-<h3 id="improvements-33">Improvements</h3>
+<h3 id="improvements-34">Improvements</h3>
 
 <ul>
   <li>[dumper] supported dumping of DoubleArrayTrie.</li>
@@ -1061,7 +1123,7 @@ You can close temporary table objects automatically:</p>
   <li>[dumper] fixed a bug that no column table isn’t dumped.</li>
 </ul>
 
-<h3 id="thanks-16">Thanks</h3>
+<h3 id="thanks-17">Thanks</h3>
 
 <ul>
   <li>Masaharu YOSHIOKA</li>
@@ -1078,7 +1140,7 @@ You can close temporary table objects automatically:</p>
 
 <h2 id="version-3-0-3">3.0.3: 2013-07-04</h2>
 
-<h3 id="improvements-34">Improvements</h3>
+<h3 id="improvements-35">Improvements</h3>
 
 <ul>
   <li>Required groonga &gt;= 3.0.5.</li>
@@ -1086,7 +1148,7 @@ You can close temporary table objects automatically:</p>
   <li>Added <span class='object_link'><a href="Groonga/Operator.html#AND_NOT-constant" title="Groonga::Operator::AND_NOT (constant)">Groonga::Operator::AND_NOT</a></span>.</li>
   <li>Deprecated <span class='object_link'><a href="Groonga/Operator.html#BUT-constant" title="Groonga::Operator::BUT (constant)">Groonga::Operator::BUT</a></span> because groonga deprecated it.
 Use <span class='object_link'><a href="Groonga/Operator.html#AND_NOT-constant" title="Groonga::Operator::AND_NOT (constant)">Groonga::Operator::AND_NOT</a></span> instead.</li>
-  <li>Added <span class='object_link'><a href="Groonga/Array.html#unblock-instance_method" title="Groonga::Array#unblock (method)">Groonga::Array#unblock</a></span>.</li>
+  <li>Added Groonga::Array#unblock.</li>
   <li>Added <code>:max_n_sub_records</code> option to <span class='object_link'><a href="Groonga/Table.html#group-instance_method" title="Groonga::Table#group (method)">Groonga::Table#group</a></span>.</li>
   <li>Added <span class='object_link'><a href="Groonga/Table.html#each_sub_record-instance_method" title="Groonga::Table#each_sub_record (method)">Groonga::Table#each_sub_record</a></span>.</li>
   <li>Supported groonga to Ruby conversion for vector value.</li>
@@ -1099,13 +1161,13 @@ Sub records is a <span class='object_link'><a href="Groonga/SubRecords.html" tit
 <h3 id="fixes-14">Fixes</h3>
 
 <ul>
-  <li>Fixed <span class='object_link'><a href="Groonga/Expression.html#%5B%5D-instance_method" title="Groonga::Expression#[] (method)">Groonga::Expression#[]</a></span> return type. It returns <span class='object_link'><a href="Groonga/Variable.html" title="Groonga::Variable (class)">Groonga::Variable</a></span>
+  <li>Fixed <span class='object_link'><a href="Groonga/Expression.html#[]-instance_method" title="Groonga::Expression#[] (method)">Groonga::Expression#[]</a></span> return type. It returns <span class='object_link'><a href="Groonga/Variable.html" title="Groonga::Variable (class)">Groonga::Variable</a></span>
 instead of value itself. CAUTION: It is a backward incompatible change.</li>
 </ul>
 
 <h2 id="version-3-0-2">3.0.2: 2013-05-29</h2>
 
-<h3 id="improvements-35">Improvements</h3>
+<h3 id="improvements-36">Improvements</h3>
 
 <ul>
   <li>Required groonga &gt;= 3.0.4.</li>
@@ -1130,16 +1192,16 @@ Fixed a bug that reference tables may be dumpped before referenced tables.</li>
 
 <h2 id="version-3-0-1">3.0.1: 2013-05-01</h2>
 
-<h3 id="improvements-36">Improvements</h3>
+<h3 id="improvements-37">Improvements</h3>
 
 <ul>
   <li>Required groonga &gt;= 3.0.3.</li>
   <li>Supported assigning weight to value. See <span class='object_link'><a href="Groonga/Table.html#set_column_value-instance_method" title="Groonga::Table#set_column_value (method)">Groonga::Table#set_column_value</a></span>,
-<span class='object_link'><a href="Groonga/Record.html#initialize-instance_method" title="Groonga::Record#initialize (method)">Groonga::Record#initialize</a></span> and <span class='object_link'><a href="Groonga/Record.html#%5B%5D%3D-instance_method" title="Groonga::Record#[]= (method)">Groonga::Record#[]=</a></span> for details.</li>
+<span class='object_link'><a href="Groonga/Record.html#initialize-instance_method" title="Groonga::Record#initialize (method)">Groonga::Record#initialize</a></span> and <span class='object_link'><a href="Groonga/Record.html#[]=-instance_method" title="Groonga::Record#[]= (method)">Groonga::Record#[]=</a></span> for details.</li>
   <li>Renamed to <span class='object_link'><a href="Groonga/QueryLogger.html#path-class_method" title="Groonga::QueryLogger.path (method)">Groonga::QueryLogger.path</a></span> from <span class='object_link'><a href="Groonga/Logger.html#query_log_path-class_method" title="Groonga::Logger.query_log_path (method)">Groonga::Logger.query_log_path</a></span>.</li>
-  <li>Renamed to <span class='object_link'><a href="Groonga/QueryLogger.html#path%3D-class_method" title="Groonga::QueryLogger.path= (method)">Groonga::QueryLogger.path=</a></span> from <span class='object_link'><a href="Groonga/Logger.html#query_log_path%3D-class_method" title="Groonga::Logger.query_log_path= (method)">Groonga::Logger.query_log_path=</a></span>.</li>
+  <li>Renamed to <span class='object_link'><a href="Groonga/QueryLogger.html#path=-class_method" title="Groonga::QueryLogger.path= (method)">Groonga::QueryLogger.path=</a></span> from <span class='object_link'><a href="Groonga/Logger.html#query_log_path=-class_method" title="Groonga::Logger.query_log_path= (method)">Groonga::Logger.query_log_path=</a></span>.</li>
   <li>Renamed to <span class='object_link'><a href="Groonga/Logger.html#path-class_method" title="Groonga::Logger.path (method)">Groonga::Logger.path</a></span> from <span class='object_link'><a href="Groonga/Logger.html#log_path-class_method" title="Groonga::Logger.log_path (method)">Groonga::Logger.log_path</a></span>.</li>
-  <li>Renamed to <span class='object_link'><a href="Groonga/Logger.html#path%3D-class_method" title="Groonga::Logger.path= (method)">Groonga::Logger.path=</a></span> from <span class='object_link'><a href="Groonga/Logger.html#log_path%3D-class_method" title="Groonga::Logger.log_path= (method)">Groonga::Logger.log_path=</a></span>.</li>
+  <li>Renamed to <span class='object_link'><a href="Groonga/Logger.html#path=-class_method" title="Groonga::Logger.path= (method)">Groonga::Logger.path=</a></span> from <span class='object_link'><a href="Groonga/Logger.html#log_path=-class_method" title="Groonga::Logger.log_path= (method)">Groonga::Logger.log_path=</a></span>.</li>
   <li>Added missing “Packnga &gt;= 0.9.7” requirement. [Reported by takkanm]</li>
 </ul>
 
@@ -1149,7 +1211,7 @@ Fixed a bug that reference tables may be dumpped before referenced tables.</li>
   <li>Fixed a memory leak on error.</li>
 </ul>
 
-<h3 id="thanks-17">Thanks</h3>
+<h3 id="thanks-18">Thanks</h3>
 
 <ul>
   <li>takkanm</li>
@@ -1157,21 +1219,21 @@ Fixed a bug that reference tables may be dumpped before referenced tables.</li>
 
 <h2 id="version-3-0-0">3.0.0: 2013-03-29</h2>
 
-<h3 id="improvements-37">Improvements</h3>
+<h3 id="improvements-38">Improvements</h3>
 
 <ul>
   <li>Required groonga &gt;= 3.0.2.</li>
   <li>Added block support to <span class='object_link'><a href="Groonga/Context.html#create_database-instance_method" title="Groonga::Context#create_database (method)">Groonga::Context#create_database</a></span>. If a
 block is given, created database is closed on block exit.</li>
-  <li>[experimental] Added <span class='object_link'><a href="Groonga/Array.html#push-instance_method" title="Groonga::Array#push (method)">Groonga::Array#push</a></span>.</li>
-  <li>[experimental] Added <span class='object_link'><a href="Groonga/Array.html#pull-instance_method" title="Groonga::Array#pull (method)">Groonga::Array#pull</a></span>.</li>
+  <li>[experimental] Added Groonga::Array#push.</li>
+  <li>[experimental] Added Groonga::Array#pull.</li>
   <li>Added more closed object checks.
 [GitHub #8][Reported by KITAITI Makoto]</li>
   <li>Added block support to <span class='object_link'><a href="Groonga/Context.html#restore-instance_method" title="Groonga::Context#restore (method)">Groonga::Context#restore</a></span>. If a block is
 given, command and its response are yielded.</li>
 </ul>
 
-<h3 id="thanks-18">Thanks</h3>
+<h3 id="thanks-19">Thanks</h3>
 
 <ul>
   <li>KITAITI Makoto</li>
@@ -1179,7 +1241,7 @@ given, command and its response are yielded.</li>
 
 <h2 id="version-2-1-3">2.1.3: 2013-01-29</h2>
 
-<h3 id="improvements-38">Improvements</h3>
+<h3 id="improvements-39">Improvements</h3>
 
 <ul>
   <li>Removed Groonga::View removed in groonga 2.1.2.</li>
@@ -1224,7 +1286,7 @@ by “grndump” command. Please see example below:</p>
 
 <h2 id="version-2-1-1">2.1.1: 2012-12-29</h2>
 
-<h3 id="improvements-39">Improvements</h3>
+<h3 id="improvements-40">Improvements</h3>
 
 <ul>
   <li>Required groonga 2.1.1 because groonga 2.1.0 has a serious bug
@@ -1233,7 +1295,7 @@ related to key normalization.</li>
 
 <h2 id="version-2-1-0">2.1.0: 2012-12-29</h2>
 
-<h3 id="improvements-40">Improvements</h3>
+<h3 id="improvements-41">Improvements</h3>
 
 <ul>
   <li>Required groonga 2.1.0.</li>
@@ -1243,7 +1305,7 @@ related to key normalization.</li>
     <p>Added Groonga::Normalizer.normalize (experimental). It normalize string.
 e.g.)</p>
 
-    <pre class="code ruby"><code class="ruby"><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AbC</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &quot;abc&quot;
+    <pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Groonga/Normalizer.html" title="Groonga::Normalizer (class)">Normalizer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize'><span class='object_link'><a href="Groonga/Normalizer.html#normalize-class_method" title="Groonga::Normalizer.normalize (method)">normalize</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AbC</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &quot;abc&quot;
 </span></code></pre>
 
     <p>Now, it removes any spaces by default, but it will be customized soon.</p>
@@ -1322,7 +1384,7 @@ The following code shows how to use old style:</p>
   </li>
 </ul>
 
-<h3 id="thanks-19">Thanks</h3>
+<h3 id="thanks-20">Thanks</h3>
 
 <ul>
   <li>ongaeshi</li>
@@ -1331,7 +1393,7 @@ The following code shows how to use old style:</p>
 
 <h2 id="version-2-0-8">2.0.8: 2012-12-02</h2>
 
-<h3 id="improvements-41">Improvements</h3>
+<h3 id="improvements-42">Improvements</h3>
 
 <ul>
   <li>Required groonga 2.0.9.</li>
@@ -1339,7 +1401,7 @@ The following code shows how to use old style:</p>
 
 <h2 id="version-2-0-7">2.0.7: 2012-11-29</h2>
 
-<h3 id="improvements-42">Improvements</h3>
+<h3 id="improvements-43">Improvements</h3>
 
 <ul>
   <li>Added <code>Groonga::Posting#record</code>. This method returns the record for
@@ -1363,7 +1425,7 @@ This feature moved to groonga-query-log gem and it is relased soon.</li>
 
 <h2 id="version-2-0-6">2.0.6: 2012-10-25</h2>
 
-<h3 id="improvements-43">Improvements</h3>
+<h3 id="improvements-44">Improvements</h3>
 
 <ul>
   <li>[dump] Put index columns at the bottom (after loads).
@@ -1392,7 +1454,7 @@ to <code>--enable-debug-log</code>.</li>
 
 <h2 id="version-2-0-5">2.0.5: 2012-09-28</h2>
 
-<h3 id="improvements-44">Improvements</h3>
+<h3 id="improvements-45">Improvements</h3>
 
 <ul>
   <li>Supported groonga 2.0.7.</li>
@@ -1418,7 +1480,7 @@ IndexCursor.</li>
   <li>Added missing backslash escape for groonga command.</li>
 </ul>
 
-<h3 id="thanks-20">Thanks</h3>
+<h3 id="thanks-21">Thanks</h3>
 
 <ul>
   <li>@temitan</li>
@@ -1434,7 +1496,7 @@ IndexCursor.</li>
 
 <h2 id="version-2-0-3">2.0.3: 2012-05-02</h2>
 
-<h3 id="improvements-45">Improvements</h3>
+<h3 id="improvements-46">Improvements</h3>
 
 <ul>
   <li>Supported groonga 2.0.2.</li>
@@ -1455,7 +1517,7 @@ record.column.similar_search(text)}</code> syntax.</li>
   <li>Fixed a GC related crach bug.</li>
 </ul>
 
-<h3 id="thanks-21">Thanks</h3>
+<h3 id="thanks-22">Thanks</h3>
 
 <ul>
   <li>@ongaeshi</li>
@@ -1463,7 +1525,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="version-2-0-2">2.0.2: 2012-03-29</h2>
 
-<h3 id="improvements-46">Improvements</h3>
+<h3 id="improvements-47">Improvements</h3>
 
 <ul>
   <li>Supported groonga 2.0.1.</li>
@@ -1478,7 +1540,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="version-2-0-0">2.0.0: 2012-03-22</h2>
 
-<h3 id="improvements-47">Improvements</h3>
+<h3 id="improvements-48">Improvements</h3>
 
 <ul>
   <li>Supported groonga 2.0.0.</li>
@@ -1494,7 +1556,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 [Reported by Hirano]</li>
 </ul>
 
-<h3 id="thanks-22">Thanks</h3>
+<h3 id="thanks-23">Thanks</h3>
 
 <ul>
   <li>@takkanm</li>
@@ -1503,7 +1565,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="version-1-3-1">1.3.1: 2012-01-29</h2>
 
-<h3 id="improvements-48">Improvements</h3>
+<h3 id="improvements-49">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.3.0.</li>
@@ -1518,7 +1580,7 @@ record.column.similar_search(text)}</code> syntax.</li>
   <li>Added <code>Groonga::Command::Builder.escape_value</code>.</li>
 </ul>
 
-<h3 id="thanks-23">Thanks</h3>
+<h3 id="thanks-24">Thanks</h3>
 
 <ul>
   <li>@mashiro</li>
@@ -1526,7 +1588,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="version-1-3-0">1.3.0: 2011-11-29</h2>
 
-<h3 id="improvements-49">Improvements</h3>
+<h3 id="improvements-50">Improvements</h3>
 
 <ul>
   <li>[schema] Remove also needless db.tables/ directory if it is empty.</li>
@@ -1568,7 +1630,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-1">1.2.8: 2011-09-16</h2>
 
-<h3 id="improvements-50">Improvements</h3>
+<h3 id="improvements-51">Improvements</h3>
 
 <ul>
   <li>supported <code>!=</code> expression for column in block of <code>Groonga::Table#select</code>.</li>
@@ -1580,7 +1642,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-2">1.2.7: 2011-08-29</h2>
 
-<h3 id="improvements-51">Improvements</h3>
+<h3 id="improvements-52">Improvements</h3>
 
 <ul>
   <li>Added Groonga::Snippet#close that frees resource.</li>
@@ -1594,7 +1656,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-3">1.2.6: 2011-08-29</h2>
 
-<h3 id="improvements-52">Improvements</h3>
+<h3 id="improvements-53">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.2.5.</li>
@@ -1614,7 +1676,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-4">1.2.5: 2011-08-05</h2>
 
-<h3 id="improvements-53">Improvements</h3>
+<h3 id="improvements-54">Improvements</h3>
 
 <ul>
   <li>Re-supported tar.gz distribution.</li>
@@ -1634,7 +1696,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-5">1.2.4: 2011-06-29</h2>
 
-<h3 id="improvements-54">Improvements</h3>
+<h3 id="improvements-55">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.2.3.</li>
@@ -1658,7 +1720,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-7">1.2.2: 2011-06-27</h2>
 
-<h3 id="improvements-55">Improvements</h3>
+<h3 id="improvements-56">Improvements</h3>
 
 <ul>
   <li>created “Developers” page in English.</li>
@@ -1682,7 +1744,7 @@ record.column.similar_search(text)}</code> syntax.</li>
   <li>follow the groonga downlowd URL change. [mallowlabs]</li>
 </ul>
 
-<h3 id="thanks-24">Thanks</h3>
+<h3 id="thanks-25">Thanks</h3>
 
 <ul>
   <li>mallowlabs</li>
@@ -1690,7 +1752,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-8">1.2.1: 2011-06-07</h2>
 
-<h3 id="improvements-56">Improvements</h3>
+<h3 id="improvements-57">Improvements</h3>
 
 <ul>
   <li>added document of Groonga::Table#pagination.</li>
@@ -1716,7 +1778,7 @@ record.column.similar_search(text)}</code> syntax.</li>
   <li>removed grn expression document.</li>
 </ul>
 
-<h3 id="thanks-25">Thanks</h3>
+<h3 id="thanks-26">Thanks</h3>
 
 <ul>
   <li>mooz</li>
@@ -1725,7 +1787,7 @@ record.column.similar_search(text)}</code> syntax.</li>
 
 <h2 id="section-9">1.2.0: 2011-04-01</h2>
 
-<h3 id="improvements-57">Improvements</h3>
+<h3 id="improvements-58">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.2.0.</li>
@@ -1745,7 +1807,7 @@ official type name like “ShortText” in <code>Groonga::Schema</code>.</li>
 
 <h2 id="section-10">1.1.0: 2011-02-09</h2>
 
-<h3 id="improvements-58">Improvements</h3>
+<h3 id="improvements-59">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.1.0.</li>
@@ -1754,7 +1816,7 @@ official type name like “ShortText” in <code>Groonga::Schema</code>.</li>
 
 <h2 id="section-11">1.0.9: 2011-01-29</h2>
 
-<h3 id="improvements-59">Improvements</h3>
+<h3 id="improvements-60">Improvements</h3>
 
 <ul>
   <li>Supported gem creation on Windows. [Patch by ongaeshi]</li>
@@ -1813,7 +1875,7 @@ Groonga::Table#select.</li>
   <li>Fixed a crash bug when an exception is occurred.</li>
 </ul>
 
-<h3 id="thanks-26">Thanks</h3>
+<h3 id="thanks-27">Thanks</h3>
 
 <ul>
   <li>ongaeshi</li>
@@ -1821,7 +1883,7 @@ Groonga::Table#select.</li>
 
 <h2 id="section-12">1.0.8: 2010-12-25</h2>
 
-<h3 id="improvements-60">Improvements</h3>
+<h3 id="improvements-61">Improvements</h3>
 
 <ul>
   <li>Improved Groonga::Schema’s n-gram tokenizer detect process.</li>
@@ -1842,7 +1904,7 @@ Groonga::Table#select.</li>
   <li>Fixed a memory leak in Groonga::Table#columns.</li>
 </ul>
 
-<h3 id="thanks-27">Thanks</h3>
+<h3 id="thanks-28">Thanks</h3>
 
 <ul>
   <li>@kamipo</li>
@@ -1850,7 +1912,7 @@ Groonga::Table#select.</li>
 
 <h2 id="section-14">1.0.5: 2010-11-29</h2>
 
-<h3 id="improvements-61">Improvements</h3>
+<h3 id="improvements-62">Improvements</h3>
 
 <ul>
   <li>Added snail_case type name aliases for built-in groonga types
@@ -1865,7 +1927,7 @@ to Groonga::Schema.</li>
 
 <h2 id="section-15">1.0.4: 2010-11-29</h2>
 
-<h3 id="improvements-62">Improvements</h3>
+<h3 id="improvements-63">Improvements</h3>
 
 <ul>
   <li>Supported groonga 1.0.4.
@@ -1938,7 +2000,7 @@ Groonga::Column#reference_column?.</li>
   <li>Fixed wrong flag used on creating a table. [Reported by ono matope]</li>
 </ul>
 
-<h3 id="thanks-28">Thanks</h3>
+<h3 id="thanks-29">Thanks</h3>
 
 <ul>
   <li>ono matope</li>
@@ -2103,7 +2165,7 @@ that last text. [Ryo Onodera]</li>
   <li>Fixed a bug that Ruby 1.9.1 may fail extconf.rb.</li>
 </ul>
 
-<h3 id="thanks-29">Thanks</h3>
+<h3 id="thanks-30">Thanks</h3>
 
 <ul>
   <li>dara</li>

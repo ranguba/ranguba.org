@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,8 +89,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Groonga::GeoPoint
   
@@ -243,7 +241,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%3D%3D-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
     
 
     
@@ -624,8 +622,8 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='comment'># TODO: validation
 </span>  <span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span> <span class='id identifier rubyid_longitude'>longitude</span> <span class='op'>=</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[x,]</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span><span class='comma'>,</span>
-      <span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_parse'><span class='object_link'><a href="GeoPointValueConverter.html#parse-class_method" title="Groonga::GeoPointValueConverter.parse (method)">parse</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_parse'><span class='object_link'><a href="GeoPointValueConverter.html#parse-class_method" title="Groonga::GeoPointValueConverter.parse (method)">parse</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -674,7 +672,7 @@
   <span class='kw'>case</span> <span class='id identifier rubyid_other'>other</span>
   <span class='kw'>when</span> <span class='const'>String</span>
     <span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span>
-  <span class='kw'>when</span> <span class='const'>GeoPoint</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="" title="Groonga::GeoPoint (class)">GeoPoint</a></span></span>
     <span class='id identifier rubyid_normalized_self'>normalized_self</span> <span class='op'>=</span> <span class='id identifier rubyid_to_msec'>to_msec</span>
     <span class='id identifier rubyid_normalized_other'>normalized_other</span> <span class='op'>=</span> <span class='id identifier rubyid_coerce'>coerce</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_msec'>to_msec</span>
     <span class='lbracket'>[</span><span class='id identifier rubyid_normalized_self'>normalized_self</span><span class='period'>.</span><span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span> <span class='id identifier rubyid_normalized_self'>normalized_self</span><span class='period'>.</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rbracket'>]</span> <span class='op'>==</span>
@@ -735,8 +733,8 @@
       <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_degree?'>degree?</span>
-  <span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_degree?'>degree?</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span> <span class='kw'>and</span>
-    <span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_degree?'>degree?</span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_degree?'><span class='object_link'><a href="GeoPointValueConverter.html#degree%3F-class_method" title="Groonga::GeoPointValueConverter.degree? (method)">degree?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span> <span class='kw'>and</span>
+    <span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_degree?'><span class='object_link'><a href="GeoPointValueConverter.html#degree%3F-class_method" title="Groonga::GeoPointValueConverter.degree? (method)">degree?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -820,8 +818,8 @@
       <pre class="code"><span class="info file"># File 'lib/groonga/geo-point.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_msec?'>msec?</span>
-  <span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_msec?'>msec?</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span> <span class='kw'>and</span>
-    <span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_msec?'>msec?</span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msec?'><span class='object_link'><a href="GeoPointValueConverter.html#msec%3F-class_method" title="Groonga::GeoPointValueConverter.msec? (method)">msec?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span> <span class='kw'>and</span>
+    <span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msec?'><span class='object_link'><a href="GeoPointValueConverter.html#msec%3F-class_method" title="Groonga::GeoPointValueConverter.msec? (method)">msec?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -854,8 +852,8 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_degree'>to_degree</span>
   <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id identifier rubyid_degree?'>degree?</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_to_degree'>to_degree</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span><span class='comma'>,</span>
-                 <span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_to_degree'>to_degree</span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_degree'><span class='object_link'><a href="GeoPointValueConverter.html#to_degree-class_method" title="Groonga::GeoPointValueConverter.to_degree (method)">to_degree</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_degree'><span class='object_link'><a href="GeoPointValueConverter.html#to_degree-class_method" title="Groonga::GeoPointValueConverter.to_degree (method)">to_degree</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -888,8 +886,8 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_msec'>to_msec</span>
   <span class='kw'>return</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id identifier rubyid_msec?'>msec?</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_to_msec'>to_msec</span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span><span class='comma'>,</span>
-                 <span class='const'>GeoPointValueConverter</span><span class='period'>.</span><span class='id identifier rubyid_to_msec'>to_msec</span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_msec'><span class='object_link'><a href="GeoPointValueConverter.html#to_msec-class_method" title="Groonga::GeoPointValueConverter.to_msec (method)">to_msec</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span><span class='comma'>,</span>
+                 <span class='const'><span class='object_link'><a href="GeoPointValueConverter.html" title="Groonga::GeoPointValueConverter (module)">GeoPointValueConverter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_msec'><span class='object_link'><a href="GeoPointValueConverter.html#to_msec-class_method" title="Groonga::GeoPointValueConverter.to_msec (method)">to_msec</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>

@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,8 +89,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Groonga::NotEqualOperator
   
@@ -229,17 +227,17 @@
         <p class="example_title"><div class='inline'><p>Executes not-equal operations with the default context</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>NOT_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>NOT_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#NOT_EQUAL-constant" title="Groonga::Operator::NOT_EQUAL (constant)">NOT_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true
+</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#NOT_EQUAL-constant" title="Groonga::Operator::NOT_EQUAL (constant)">NOT_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false</span></code></pre>
     
       
         <p class="example_title"><div class='inline'><p>Executes not-equal operations with the specified context</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Context</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>NOT_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <pre class="example code"><code><span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Context.html#initialize-instance_method" title="Groonga::Context#initialize (method)">new</a></span></span>
+<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#NOT_EQUAL-constant" title="Groonga::Operator::NOT_EQUAL (constant)">NOT_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                   <span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span> <span class='comment'># =&gt; true
-</span><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>Operator</span><span class='op'>::</span><span class='const'>NOT_EQUAL</span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+</span><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html" title="Groonga::Operator (class)">Operator</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Operator.html#NOT_EQUAL-constant" title="Groonga::Operator::NOT_EQUAL (constant)">NOT_EQUAL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exec'>exec</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
                                   <span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span> <span class='comment'># =&gt; false</span></code></pre>
     
   </div>
@@ -261,7 +259,7 @@ otherwise.</p>
         <span class='name'>x</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
+        <span class='type'>(<tt>::Object</tt>)</span>
       
       
       
@@ -276,7 +274,7 @@ otherwise.</p>
         <span class='name'>y</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">::Object</a></span></tt>)</span>
+        <span class='type'>(<tt>::Object</tt>)</span>
       
       
       
@@ -291,7 +289,7 @@ otherwise.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -430,9 +428,9 @@ rb_grn_not_equal_operator_exec (int argc, VALUE *argv, VALUE self)
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 29 11:49:34 2017 by
+  Generated on Wed Jan 31 10:15:31 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.12 (ruby-2.6.0).
 </div>
 
     

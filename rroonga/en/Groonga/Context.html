@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,8 +89,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: Groonga::Context
   
@@ -152,7 +150,7 @@
 作成される。そのため、コンテキストを意識することは少ない。</p>
 
 <p>暗黙のうちに作成されるコンテキストにオプションを指定する
-場合は <span class='object_link'><a href="#default_options%3D-class_method" title="Groonga::Context.default_options= (method)">Context.default_options=</a></span> を使用
+場合は <span class='object_link'><a href="#default_options=-class_method" title="Groonga::Context.default_options= (method)">Context.default_options=</a></span> を使用
 する。</p>
 
 
@@ -212,7 +210,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default%3D-class_method" title="default= (class method)">.<strong>default=</strong>(context)  &#x21d2; Object </a>
+      <a href="#default=-class_method" title="default= (class method)">.<strong>default=</strong>(context)  &#x21d2; Object </a>
     
 
     
@@ -258,7 +256,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_options%3D-class_method" title="default_options= (class method)">.<strong>default_options=</strong>(options)  &#x21d2; Object </a>
+      <a href="#default_options=-class_method" title="default_options= (class method)">.<strong>default_options=</strong>(options)  &#x21d2; Object </a>
     
 
     
@@ -290,7 +288,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#%5B%5D-instance_method" title="#[] (instance method)">#<strong>[]</strong>  &#x21d2; Object </a>
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>  &#x21d2; Object </a>
     
 
     
@@ -497,7 +495,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#encoding%3D-instance_method" title="#encoding= (instance method)">#<strong>encoding=</strong>(encoding)  &#x21d2; Object </a>
+      <a href="#encoding=-instance_method" title="#encoding= (instance method)">#<strong>encoding=</strong>(encoding)  &#x21d2; Object </a>
     
 
     
@@ -614,7 +612,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#match_escalation_threshold%3D-instance_method" title="#match_escalation_threshold= (instance method)">#<strong>match_escalation_threshold=</strong>(match_escalation_threshold)  &#x21d2; Object </a>
+      <a href="#match_escalation_threshold=-instance_method" title="#match_escalation_threshold= (instance method)">#<strong>match_escalation_threshold=</strong>(match_escalation_threshold)  &#x21d2; Object </a>
     
 
     
@@ -890,6 +888,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#support_arrow%3F-instance_method" title="#support_arrow? (instance method)">#<strong>support_arrow?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#support_lz4%3F-instance_method" title="#support_lz4? (instance method)">#<strong>support_lz4?</strong>  &#x21d2; Boolean </a>
     
 
@@ -973,7 +994,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>If Groonga supports Zstandard compression, it returns <code>true</code>, otherwise it returns <code>false</code>.</p>
+    <span class="summary_desc"><div class='inline'>
 </div></span>
   
 </li>
@@ -1043,7 +1064,7 @@
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
@@ -1343,7 +1364,7 @@ rb_grn_context_s_set_default (VALUE self, VALUE context)
       <div class="method_details ">
   <h3 class="signature " id="default_options-class_method">
   
-    .<strong>default_options</strong>  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span> or nil</tt> 
+    .<strong>default_options</strong>  &#x21d2; <tt>::Hash or nil</tt> 
   
 
   
@@ -1374,7 +1395,7 @@ rb_grn_context_s_set_default (VALUE self, VALUE context)
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span> or nil</tt>)</span>
+        <span class='type'>(<tt>::Hash or nil</tt>)</span>
       
       
       
@@ -1564,28 +1585,6 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
       <pre class="lines">
 
 
-923
-924
-925
-926
-927
-928
-929
-930
-931
-932
-933
-934
-935
-936
-937
-938
-939
-940
-941
-942
-943
-944
 945
 946
 947
@@ -1600,10 +1599,32 @@ rb_grn_context_s_set_default_options (VALUE self, VALUE options)
 956
 957
 958
-959</pre>
+959
+960
+961
+962
+963
+964
+965
+966
+967
+968
+969
+970
+971
+972
+973
+974
+975
+976
+977
+978
+979
+980
+981</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 923</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 945</span>
 
 static VALUE
 rb_grn_context_array_reference (VALUE self, VALUE name_or_id)
@@ -1918,7 +1939,7 @@ this context.</p>
       <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 363</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_config'>config</span>
-  <span class='ivar'>@config</span> <span class='op'>||=</span> <span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='ivar'>@config</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Config.html" title="Groonga::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Config.html#initialize-instance_method" title="Groonga::Config#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1959,7 +1980,7 @@ this context.</p>
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
@@ -2024,28 +2045,6 @@ this context.</p>
       <pre class="lines">
 
 
-750
-751
-752
-753
-754
-755
-756
-757
-758
-759
-760
-761
-762
-763
-764
-765
-766
-767
-768
-769
-770
-771
 772
 773
 774
@@ -2059,10 +2058,32 @@ this context.</p>
 782
 783
 784
-785</pre>
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
+806
+807</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 750</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 772</span>
 
 static VALUE
 rb_grn_context_connect (int argc, VALUE *argv, VALUE self)
@@ -2500,7 +2521,7 @@ returned value from this method.</p>
     <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span>
   <span class='kw'>end</span>
 
-  <span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Database.html#create-class_method" title="Groonga::Database.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2557,17 +2578,17 @@ returned value from this method.</p>
       <pre class="lines">
 
 
-730
-731
-732
-733
-734
-735
-736
-737</pre>
+752
+753
+754
+755
+756
+757
+758
+759</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 730</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 752</span>
 
 static VALUE
 rb_grn_context_get_database (VALUE self)
@@ -2736,7 +2757,7 @@ rb_grn_context_set_encoding (VALUE self, VALUE rb_encoding)
       <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_execute_command'>execute_command</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_parameters'>parameters</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_executor'>executor</span> <span class='op'>=</span> <span class='const'>CommandExecutor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_executor'>executor</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Context/CommandExecutor.html" title="Groonga::Context::CommandExecutor (class)">CommandExecutor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Context/CommandExecutor.html#initialize-instance_method" title="Groonga::Context::CommandExecutor#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_executor'>executor</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_parameters'>parameters</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -3089,7 +3110,7 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
 <span class='kw'>def</span> <span class='id identifier rubyid_open_database'>open_database</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
 
-  <span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span></span><span class='period'>.</span><span class='id identifier rubyid_open'><span class='object_link'><a href="Database.html#open-class_method" title="Groonga::Database.open (method)">open</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3184,22 +3205,22 @@ rb_grn_context_set_match_escalation_threshold (VALUE self, VALUE threshold)
       <pre class="lines">
 
 
-969
-970
-971
-972
-973
-974
-975
-976
-977
-978
-979
-980
-981</pre>
+991
+992
+993
+994
+995
+996
+997
+998
+999
+1000
+1001
+1002
+1003</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 969</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 991</span>
 
 static VALUE
 rb_grn_context_is_opened (VALUE self, VALUE rb_id)
@@ -3521,7 +3542,7 @@ method call.</p>
       <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span>
-  <span class='id identifier rubyid_memory_pool'>memory_pool</span> <span class='op'>=</span> <span class='const'>MemoryPool</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_memory_pool'>memory_pool</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="MemoryPool.html" title="Groonga::MemoryPool (class)">MemoryPool</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="MemoryPool.html#initialize-instance_method" title="Groonga::MemoryPool#initialize (method)">new</a></span></span>
   <span class='ivar'>@memory_pools</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_memory_pool'>memory_pool</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
 
@@ -3580,30 +3601,30 @@ method call.</p>
       <pre class="lines">
 
 
-816
-817
-818
-819
-820
-821
-822
-823
-824
-825
-826
-827
-828
-829
-830
-831
-832
-833
-834
-835
-836</pre>
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 816</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 838</span>
 
 static VALUE
 rb_grn_context_receive (VALUE self)
@@ -3675,9 +3696,9 @@ rb_grn_context_receive (VALUE self)
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_name_or_options'>name_or_options</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name_or_options'>name_or_options</span>
-    <span class='const'>Plugin</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="Plugin.html" title="Groonga::Plugin (class)">Plugin</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'><span class='object_link'><a href="Plugin.html#register-class_method" title="Groonga::Plugin.register (method)">register</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
-    <span class='const'>Plugin</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_name_or_options'>name_or_options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="Plugin.html" title="Groonga::Plugin (class)">Plugin</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'><span class='object_link'><a href="Plugin.html#register-class_method" title="Groonga::Plugin.register (method)">register</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name_or_options'>name_or_options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -3880,7 +3901,7 @@ line.</p>
       <div class="method_details ">
   <h3 class="signature " id="ruby_encoding-instance_method">
   
-    #<strong>ruby_encoding</strong>  &#x21d2; <tt><span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">::Encoding</a></span></tt> 
+    #<strong>ruby_encoding</strong>  &#x21d2; <tt>::Encoding</tt> 
   
 
   
@@ -3903,7 +3924,7 @@ line.</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">::Encoding</a></span></tt>)</span>
+        <span class='type'>(<tt>::Encoding</tt>)</span>
       
       
       
@@ -3990,7 +4011,7 @@ rb_grn_context_get_ruby_encoding (VALUE self)
         <span class='name'>options</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">::Hash</a></span></tt>)</span>
+        <span class='type'>(<tt>::Hash</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>{}</tt>)</em>
@@ -4138,26 +4159,26 @@ TODO</p>
       <pre class="lines">
 
 
-793
-794
-795
-796
-797
-798
-799
-800
-801
-802
-803
-804
-805
-806
-807
-808
-809</pre>
+815
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 793</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 815</span>
 
 static VALUE
 rb_grn_context_send (VALUE self, VALUE rb_string)
@@ -4175,6 +4196,114 @@ rb_grn_context_send (VALUE self, VALUE rb_string)
     rb_grn_context_check(context, self);
 
     return UINT2NUM(query_id);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="support_arrow?-instance_method">
+  
+    #<strong>support_arrow?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if Groonga supports Apache Arrow,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if Groonga supports Apache Arrow,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-context.c', line 730</span>
+
+static VALUE
+rb_grn_context_support_arrow_p (VALUE self)
+{
+    VALUE rb_support_p;
+    grn_ctx *context;
+    grn_obj support_p;
+
+    context = SELF(self);
+    GRN_BOOL_INIT(&amp;support_p, 0);
+    grn_obj_get_info(context, NULL, GRN_INFO_SUPPORT_ARROW, &amp;support_p);
+    rb_support_p = CBOOL2RVAL(GRN_BOOL_VALUE(&amp;support_p));
+    GRN_OBJ_FIN(context, &amp;support_p);
+
+    return rb_support_p;
 }</pre>
     </td>
   </tr>
@@ -4415,15 +4544,43 @@ rb_grn_context_support_zlib_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>If Groonga supports Zstandard compression, it returns <code>true</code>,
-otherwise it returns <code>false</code>.</p>
+    
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if Groonga supports Zstandard compression,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if Groonga supports Zstandard compression,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -4637,7 +4794,7 @@ rb_grn_context_support_zstd_p (VALUE self)
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unregister_plugin'>unregister_plugin</span><span class='lparen'>(</span><span class='id identifier rubyid_name_or_path'>name_or_path</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
-  <span class='const'>Plugin</span><span class='period'>.</span><span class='id identifier rubyid_unregister'>unregister</span><span class='lparen'>(</span><span class='id identifier rubyid_name_or_path'>name_or_path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Plugin.html" title="Groonga::Plugin (class)">Plugin</a></span></span><span class='period'>.</span><span class='id identifier rubyid_unregister'><span class='object_link'><a href="Plugin.html#unregister-class_method" title="Groonga::Plugin.unregister (method)">unregister</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name_or_path'>name_or_path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>

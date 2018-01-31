@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -89,8 +89,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Module: Groonga::RequestTimer
   
@@ -170,7 +168,7 @@ time.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_timeout%3D-class_method" title="default_timeout= (class method)">.<strong>default_timeout=</strong>(timeout)  &#x21d2; Float, void </a>
+      <a href="#default_timeout=-class_method" title="default_timeout= (class method)">.<strong>default_timeout=</strong>(timeout)  &#x21d2; Float, void </a>
     
 
     
@@ -270,7 +268,7 @@ time.</p>
         <p class="example_title"><div class='inline'><p>Gets the default timeout</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_default_timeout'>default_timeout</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::RequestTimer (module)">RequestTimer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_timeout'>default_timeout</span></code></pre>
     
   </div>
 
@@ -377,7 +375,7 @@ rb_grn_request_timer_s_get_default_timeout (VALUE module)
         <p class="example_title"><div class='inline'><p>Sets the default timeout</p>
 </div></p>
       
-      <pre class="example code"><code><span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_default_timeout'>default_timeout</span> <span class='op'>=</span> <span class='float'>2.9</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::RequestTimer (module)">RequestTimer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_timeout'><span class='object_link'><a href="#default_timeout-class_method" title="Groonga::RequestTimer.default_timeout (method)">default_timeout</a></span></span> <span class='op'>=</span> <span class='float'>2.9</span></code></pre>
     
   </div>
 
@@ -499,7 +497,7 @@ after the specified timeout, the request is canceled.</p>
       
       <pre class="example code"><code><span class='id identifier rubyid_request_id'>request_id</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>request-29</span><span class='tstring_end'>&quot;</span></span>
 <span class='id identifier rubyid_timeout_in_second'>timeout_in_second</span> <span class='op'>=</span> <span class='float'>2.9</span>
-<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_request_id'>request_id</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout_in_second'>timeout_in_second</span><span class='rparen'>)</span></code></pre>
+<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::RequestTimer (module)">RequestTimer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_request_id'>request_id</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout_in_second'>timeout_in_second</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -672,8 +670,8 @@ rb_grn_request_timer_s_register (int argc, VALUE *argv, VALUE module)
         <p class="example_title"><div class='inline'><p>Unregister a request timer by ID</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_timer_id'>timer_id</span> <span class='op'>=</span> <span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>request-29</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='float'>2.9</span><span class='rparen'>)</span>
-<span class='const'>Groonga</span><span class='op'>::</span><span class='const'>RequestTimer</span><span class='period'>.</span><span class='id identifier rubyid_unregister'>unregister</span><span class='lparen'>(</span><span class='id identifier rubyid_timer_id'>timer_id</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_timer_id'>timer_id</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::RequestTimer (module)">RequestTimer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'><span class='object_link'><a href="#register-class_method" title="Groonga::RequestTimer.register (method)">register</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>request-29</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='float'>2.9</span><span class='rparen'>)</span>
+<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::RequestTimer (module)">RequestTimer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_unregister'>unregister</span><span class='lparen'>(</span><span class='id identifier rubyid_timer_id'>timer_id</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -765,9 +763,9 @@ rb_grn_request_timer_s_unregister (VALUE module, VALUE rb_timer_id)
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 29 11:49:27 2017 by
+  Generated on Wed Jan 31 10:15:18 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.3).
+  0.9.12 (ruby-2.6.0).
 </div>
 
     
