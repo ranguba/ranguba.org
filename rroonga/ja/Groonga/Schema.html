@@ -438,6 +438,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#create_lexicon-instance_method" title="#create_lexicon (instance method)">#<strong>create_lexicon</strong>(name, use_case: :full_text_search, **options, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#create_table-instance_method" title="#create_table (instance method)">#<strong>create_table</strong>(name, options = {}) {|definition| ... } &#x21d2; Object </a>
     
 
@@ -684,8 +707,7 @@
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
 </div>
       
     </li>
@@ -793,8 +815,7 @@ pairs. Omitted names are initialized as the default value.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
 </div>
       
     </li>
@@ -2015,8 +2036,7 @@ can specify this by normalizer name as String such as
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
 </div>
       
     </li>
@@ -2151,8 +2171,7 @@ Rubyスクリプト形式で返された値は
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
 </div>
       
     </li>
@@ -2310,8 +2329,7 @@ Rubyスクリプト形式になる。
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
 </div>
       
     </li>
@@ -2556,8 +2574,7 @@ pairs. Omitted names are initialized as the default value.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
 </div>
       
     </li>
@@ -2612,21 +2629,69 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-700
-701
-702
-703
-704
-705</pre>
+713
+714
+715
+716
+717
+718</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 700</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 713</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:change</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Schema/TableDefinition.html" title="Groonga::Schema::TableDefinition (class)">TableDefinition</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_definition'>definition</span><span class='rparen'>)</span>
   <span class='ivar'>@definitions</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_definition'>definition</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_lexicon-instance_method">
+  
+    #<strong>create_lexicon</strong>(name, use_case: :full_text_search, **options, &amp;block)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Groonga::Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 675</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_lexicon'>create_lexicon</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+                   <span class='label'>use_case:</span> <span class='symbol'>:full_text_search</span><span class='comma'>,</span>
+                   <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_use_case'>use_case</span>
+  <span class='kw'>when</span> <span class='symbol'>:full_text_search</span>
+    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='symbol'>:patricia_trie</span>
+    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:key_type</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='symbol'>:short_text</span>
+    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:default_tokenizer</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokenBigram</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:normalizer</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NormalizerAuto</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3874,14 +3939,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
-730
-731
-732
-733
-734</pre>
+743
+744
+745
+746
+747</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 730</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 743</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -3928,8 +3993,7 @@ can specify this by normalizer name as String such as
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
 </div>
       
     </li>
@@ -3971,13 +4035,13 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-685
-686
-687
-688</pre>
+698
+699
+700
+701</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 685</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 698</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_table'>remove_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>TableRemoveDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -4018,14 +4082,14 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-744
-745
-746
-747
-748</pre>
+757
+758
+759
+760
+761</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 744</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 757</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_current_column_name'>current_column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_column_name'>new_column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -4071,8 +4135,7 @@ pairs. Omitted names are initialized as the default value.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name and value
-pairs. Omitted names are initialized as the default value.</p>
+        <div class='inline'><p>オプションを設定するハッシュ。指定されなかったオプションはデフォルト値が使われます。</p>
 </div>
       
     </li>
@@ -4114,14 +4177,14 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-716
-717
-718
-719
-720</pre>
+729
+730
+731
+732
+733</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 716</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 729</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_table'>rename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -4185,9 +4248,9 @@ pairs. Omitted names are initialized as the default value.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Jan 31 10:15:21 2018 by
+  Generated on Fri May 10 15:48:49 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.6.0).
+  0.9.19 (ruby-2.3.3).
 </div>
 
     

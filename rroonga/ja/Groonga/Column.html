@@ -604,7 +604,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>@true@ if the column is vector and created with @:with_weight =&gt; true@ flag, @false@ otherwise.</p>
 </div></span>
   
 </li>
@@ -765,19 +765,6 @@ column or a vector column), <code>false</code> otherwise.</p>
 
 </div>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 <p class="tag_title">Since:</p>
 <ul class="since">
   
@@ -1127,19 +1114,6 @@ rb_grn_column_find_indexes (int argc, VALUE *argv, VALUE self)
 
 </div>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 <p class="tag_title">Since:</p>
 <ul class="since">
   
@@ -1731,19 +1705,6 @@ rb_grn_column_lock (int argc, VALUE *argv, VALUE self)
 
 </div>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -2080,19 +2041,6 @@ rb_grn_column_rename (VALUE self, VALUE rb_name)
 
 </div>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 <p class="tag_title">Since:</p>
 <ul class="since">
   
@@ -3430,19 +3378,6 @@ rb_grn_column_unlock (int argc, VALUE *argv, VALUE self)
 
 </div>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 <p class="tag_title">Since:</p>
 <ul class="since">
   
@@ -3547,19 +3482,6 @@ rb_grn_column_vector_p (VALUE self)
 
 </div>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 <p class="tag_title">Since:</p>
 <ul class="since">
   
@@ -3626,7 +3548,8 @@ rb_grn_column_weight_vector_p (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    
+    <p>Returns @true@ if the column is vector and created with
+@:with_weight =&gt; true@ flag, @false@ otherwise.</p>
 
 
   </div>
@@ -3649,15 +3572,6 @@ rb_grn_column_weight_vector_p (VALUE self)
         <div class='inline'><p>@true@ if the column is vector and created with
 @:with_weight =&gt; true@ flag, @false@ otherwise.</p>
 </div>
-      
-    </li>
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
       
     </li>
   
@@ -3726,9 +3640,9 @@ rb_grn_column_with_weight_p(VALUE self)
 </div>
 
       <div id="footer">
-  Generated on Wed Jan 31 10:15:19 2018 by
+  Generated on Fri May 10 15:48:48 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.12 (ruby-2.6.0).
+  0.9.19 (ruby-2.3.3).
 </div>
 
     
