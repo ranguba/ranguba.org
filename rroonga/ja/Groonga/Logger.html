@@ -699,20 +699,20 @@ instead.</p>
       <pre class="lines">
 
 
-559
-560
-561
-562
-563
-564
-565
-566
-567
-568
-569</pre>
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 559</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 572</span>
 
 static VALUE
 rb_grn_logger_s_get_flags (VALUE klass)
@@ -818,16 +818,16 @@ rb_grn_logger_s_get_flags (VALUE klass)
       <pre class="lines">
 
 
-580
-581
-582
-583
-584
-585
-586</pre>
+593
+594
+595
+596
+597
+598
+599</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 580</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 593</span>
 
 static VALUE
 rb_grn_logger_s_set_flags (VALUE klass, VALUE rb_flags)
@@ -1017,7 +1017,6 @@ message is occurred.</p>
       <pre class="lines">
 
 
-158
 159
 160
 161
@@ -1078,10 +1077,11 @@ message is occurred.</p>
 216
 217
 218
-219</pre>
+219
+220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 158</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 159</span>
 
 static VALUE
 rb_grn_logger_s_log (int argc, VALUE *argv, VALUE klass)
@@ -1305,21 +1305,21 @@ instead.</p>
       <pre class="lines">
 
 
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459</pre>
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 448</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 461</span>
 
 static VALUE
 rb_grn_logger_s_get_max_level (VALUE klass)
@@ -1409,20 +1409,20 @@ rb_grn_logger_s_get_max_level (VALUE klass)
       <pre class="lines">
 
 
-471
-472
-473
-474
-475
-476
-477
-478
-479
-480
-481</pre>
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 471</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 484</span>
 
 static VALUE
 rb_grn_logger_s_set_max_level (VALUE klass, VALUE rb_max_level)
@@ -1509,21 +1509,21 @@ rb_grn_logger_s_set_max_level (VALUE klass, VALUE rb_max_level)
       <pre class="lines">
 
 
-491
-492
-493
-494
-495
-496
-497
-498
-499
-500
-501
-502</pre>
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 491</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 504</span>
 
 static VALUE
 rb_grn_logger_s_get_path (VALUE klass)
@@ -1653,19 +1653,6 @@ If nil is specified, logging by the default logger is disabled.</p>
       <pre class="lines">
 
 
-525
-526
-527
-528
-529
-530
-531
-532
-533
-534
-535
-536
-537
 538
 539
 540
@@ -1677,10 +1664,23 @@ If nil is specified, logging by the default logger is disabled.</p>
 546
 547
 548
-549</pre>
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 525</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 538</span>
 
 static VALUE
 rb_grn_logger_s_set_path (VALUE klass, VALUE rb_path)
@@ -1925,6 +1925,21 @@ pairs. Omitted names are initialized as the default value.</p>
           
         </li>
       
+        <li>
+          <span class="name">:thread_id</span>
+          <span class="type">(<tt>Bool</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Specifies whether <code>location</code> includes thread ID or not.</p>
+</div>
+          
+        </li>
+      
     </ul>
   
 
@@ -1958,9 +1973,6 @@ pairs. Omitted names are initialized as the default value.</p>
       <pre class="lines">
 
 
-319
-320
-321
 322
 323
 324
@@ -2018,19 +2030,38 @@ pairs. Omitted names are initialized as the default value.</p>
 376
 377
 378
-379</pre>
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 319</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 322</span>
 
 static VALUE
 rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
 {
     VALUE rb_context = Qnil;
     grn_ctx *context;
-    VALUE rb_logger, rb_callback;
-    VALUE rb_options, rb_max_level;
-    VALUE rb_time, rb_title, rb_message, rb_location;
+    VALUE rb_logger;
+    VALUE rb_callback;
+    VALUE rb_options;
+    VALUE rb_max_level;
+    VALUE rb_time;
+    VALUE rb_title;
+    VALUE rb_message;
+    VALUE rb_location;
+    VALUE rb_thread_id;
     VALUE rb_flags;
     grn_log_level max_level = GRN_LOG_DEFAULT_LEVEL;
     int flags = 0;
@@ -2050,6 +2081,7 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
                         &quot;title&quot;,     &amp;rb_title,
                         &quot;message&quot;,   &amp;rb_message,
                         &quot;location&quot;,  &amp;rb_location,
+                        &quot;thread_id&quot;, &amp;rb_thread_id,
                         &quot;flags&quot;,     &amp;rb_flags,
                         NULL);
     if (!NIL_P(rb_max_level)) {
@@ -2067,6 +2099,9 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
     }
     if (NIL_P(rb_location) || CBOOL2RVAL(rb_location)) {
         flags |= GRN_LOG_LOCATION;
+    }
+    if (NIL_P(rb_thread_id) || CBOOL2RVAL(rb_thread_id)) {
+        flags |= GRN_LOG_THREAD_ID;
     }
     if (!NIL_P(rb_flags)) {
         flags = rb_funcall(rb_mGrnLoggerFlags, id_parse, 2,
@@ -2143,21 +2178,21 @@ rb_grn_logger_s_register (int argc, VALUE *argv, VALUE klass)
       <pre class="lines">
 
 
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440</pre>
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 429</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 442</span>
 
 static VALUE
 rb_grn_logger_s_reopen (VALUE klass)
@@ -2249,14 +2284,14 @@ default logger.</p>
       <pre class="lines">
 
 
-600
-601
-602
-603
-604</pre>
+613
+614
+615
+616
+617</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 600</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 613</span>
 
 static VALUE
 rb_grn_logger_s_get_rotate_threshold_size (VALUE klass)
@@ -2382,16 +2417,16 @@ If nil is specified, log rotate by the default logger is disabled.</p>
       <pre class="lines">
 
 
-630
-631
-632
-633
-634
-635
-636</pre>
+643
+644
+645
+646
+647
+648
+649</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 630</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 643</span>
 
 static VALUE
 rb_grn_logger_s_set_rotate_threshold_size (VALUE klass, VALUE rb_size)
@@ -2460,28 +2495,28 @@ unregistering.</p>
       <pre class="lines">
 
 
-388
-389
-390
-391
-392
-393
-394
-395
-396
-397
-398
-399
-400
 401
 402
 403
 404
 405
-406</pre>
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 388</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-logger.c', line 401</span>
 
 static VALUE
 rb_grn_logger_s_unregister (VALUE klass)
@@ -2608,9 +2643,9 @@ rb_grn_logger_s_unregister (VALUE klass)
 </div>
 
       <div id="footer">
-  Generated on Fri May 10 15:48:48 2019 by
+  Generated on Thu Aug 29 19:14:06 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.3.3).
+  0.9.20 (ruby-2.6.3).
 </div>
 
     

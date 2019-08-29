@@ -306,6 +306,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#bulk%3F-instance_method" title="#bulk? (instance method)">#<strong>bulk?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#close-instance_method" title="#close (instance method)">#<strong>close</strong>  &#x21d2; Object </a>
     
 
@@ -513,6 +536,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#id_accessor%3F-instance_method" title="#id_accessor? (instance method)">#<strong>id_accessor?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is an accessor for <code>_id</code> or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#index_column%3F-instance_method" title="#index_column? (instance method)">#<strong>index_column?</strong>  &#x21d2; Boolean </a>
     
 
@@ -573,7 +619,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks whether the object is key accessor or not.</p>
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is an accessor for <code>_key</code> or not.</p>
 </div></span>
   
 </li>
@@ -597,6 +643,52 @@
 
   
     <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lexicon%3F-instance_method" title="#lexicon? (instance method)">#<strong>lexicon?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#n_sub_records_accessor%3F-instance_method" title="#n_sub_records_accessor? (instance method)">#<strong>n_sub_records_accessor?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is an accessor for <code>_nsubrecs</code> or not.</p>
 </div></span>
   
 </li>
@@ -789,6 +881,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#score_accessor%3F-instance_method" title="#score_accessor? (instance method)">#<strong>score_accessor?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is an accessor for <code>_socre</code> or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#scorer_procedure%3F-instance_method" title="#scorer_procedure? (instance method)">#<strong>scorer_procedure?</strong>  &#x21d2; Boolean </a>
     
 
@@ -950,6 +1065,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#value_accessor%3F-instance_method" title="#value_accessor? (instance method)">#<strong>value_accessor?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the object is an accessor for <code>_value</code> or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#window_function_procedure%3F-instance_method" title="#window_function_procedure? (instance method)">#<strong>window_function_procedure?</strong>  &#x21d2; Boolean </a>
     
 
@@ -1031,9 +1169,6 @@
       <pre class="lines">
 
 
-1261
-1262
-1263
 1264
 1265
 1266
@@ -1047,10 +1182,13 @@
 1274
 1275
 1276
-1277</pre>
+1277
+1278
+1279
+1280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1261</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1264</span>
 
 static VALUE
 rb_grn_object_equal (VALUE self, VALUE other)
@@ -1124,9 +1262,6 @@ rb_grn_object_equal (VALUE self, VALUE other)
       <pre class="lines">
 
 
-1285
-1286
-1287
 1288
 1289
 1290
@@ -1195,10 +1330,13 @@ rb_grn_object_equal (VALUE self, VALUE other)
 1353
 1354
 1355
-1356</pre>
+1356
+1357
+1358
+1359</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1285</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1288</span>
 
 VALUE
 rb_grn_object_array_reference (VALUE self, VALUE rb_id)
@@ -1305,14 +1443,14 @@ rb_grn_object_array_reference (VALUE self, VALUE rb_id)
       <pre class="lines">
 
 
-1483
-1484
-1485
 1486
-1487</pre>
+1487
+1488
+1489
+1490</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1483</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1486</span>
 
 static VALUE
 rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -1395,9 +1533,6 @@ rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1842
-1843
-1844
 1845
 1846
 1847
@@ -1410,17 +1545,20 @@ rb_grn_object_array_set (VALUE self, VALUE rb_id, VALUE rb_value)
 1854
 1855
 1856
-1857</pre>
+1857
+1858
+1859
+1860</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1842</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1845</span>
 
 static VALUE
 rb_grn_object_accessor_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool accessor_p = GRN_FALSE;
+    bool accessor_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -1463,14 +1601,14 @@ rb_grn_object_accessor_p (VALUE self)
       <pre class="lines">
 
 
-1494
-1495
-1496
 1497
-1498</pre>
+1498
+1499
+1500
+1501</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1494</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1497</span>
 
 static VALUE
 rb_grn_object_append_value (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -1520,9 +1658,6 @@ rb_grn_object_append_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1558
-1559
-1560
 1561
 1562
 1563
@@ -1535,17 +1670,20 @@ rb_grn_object_append_value (VALUE self, VALUE rb_id, VALUE rb_value)
 1570
 1571
 1572
-1573</pre>
+1573
+1574
+1575
+1576</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1558</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1561</span>
 
 static VALUE
 rb_grn_object_builtin_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool builtin = GRN_FALSE;
+    bool builtin = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -1555,6 +1693,112 @@ rb_grn_object_builtin_p (VALUE self)
     }
 
     return CBOOL2RVAL(builtin);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bulk?-instance_method">
+  
+    #<strong>bulk?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is bulk, <code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is bulk, <code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>9.0.4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2179
+2180
+2181
+2182
+2183
+2184
+2185
+2186
+2187
+2188
+2189
+2190
+2191
+2192</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 2179</span>
+
+static VALUE
+rb_grn_object_bulk_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    bool is_bulk = false;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+    if (context &amp;&amp; object) {
+        is_bulk = grn_obj_is_bulk(context, object);
+    }
+    return CBOOL2RVAL(is_bulk);
 }</pre>
     </td>
   </tr>
@@ -1589,7 +1833,6 @@ rb_grn_object_builtin_p (VALUE self)
       <pre class="lines">
 
 
-611
 612
 613
 614
@@ -1598,10 +1841,11 @@ rb_grn_object_builtin_p (VALUE self)
 617
 618
 619
-620</pre>
+620
+621</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 611</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 612</span>
 
 VALUE
 rb_grn_object_close (VALUE self)
@@ -1659,7 +1903,6 @@ rb_grn_object_close (VALUE self)
       <pre class="lines">
 
 
-654
 655
 656
 657
@@ -1670,10 +1913,11 @@ rb_grn_object_close (VALUE self)
 662
 663
 664
-665</pre>
+665
+666</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 654</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 655</span>
 
 VALUE
 rb_grn_object_closed_p (VALUE self)
@@ -1761,9 +2005,6 @@ rb_grn_object_closed_p (VALUE self)
       <pre class="lines">
 
 
-1608
-1609
-1610
 1611
 1612
 1613
@@ -1776,17 +2017,20 @@ rb_grn_object_closed_p (VALUE self)
 1620
 1621
 1622
-1623</pre>
+1623
+1624
+1625
+1626</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1608</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1611</span>
 
 static VALUE
 rb_grn_object_column_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool column_p = GRN_FALSE;
+    bool column_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -1871,32 +2115,40 @@ rb_grn_object_column_p (VALUE self)
       <pre class="lines">
 
 
-1979
-1980
-1981
-1982
-1983
-1984
-1985
-1986
-1987
-1988
-1989
-1990</pre>
+2133
+2134
+2135
+2136
+2137
+2138
+2139
+2140
+2141
+2142
+2143
+2144
+2145
+2146
+2147
+2148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1979</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 2133</span>
 
 static VALUE
 rb_grn_object_corrupt_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool is_corrupt;
+    bool is_corrupt = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
-    is_corrupt = grn_obj_is_corrupt(context, object);
+
+    if (context &amp;&amp; object) {
+        is_corrupt = grn_obj_is_corrupt(context, object);
+    }
+
     return CBOOL2RVAL(is_corrupt);
 }</pre>
     </td>
@@ -1973,32 +2225,40 @@ rb_grn_object_corrupt_p (VALUE self)
       <pre class="lines">
 
 
-1960
-1961
-1962
-1963
-1964
-1965
-1966
-1967
-1968
-1969
-1970
-1971</pre>
+2110
+2111
+2112
+2113
+2114
+2115
+2116
+2117
+2118
+2119
+2120
+2121
+2122
+2123
+2124
+2125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1960</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 2110</span>
 
 static VALUE
 rb_grn_object_dirty_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool is_dirty;
+    bool is_dirty = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
-    is_dirty = grn_obj_is_dirty(context, object);
+
+    if (context &amp;&amp; object) {
+        is_dirty = grn_obj_is_dirty(context, object);
+    }
+
     return CBOOL2RVAL(is_dirty);
 }</pre>
     </td>
@@ -2075,21 +2335,21 @@ rb_grn_object_dirty_p (VALUE self)
       <pre class="lines">
 
 
-1998
-1999
-2000
-2001
-2002
-2003
-2004
-2005
-2006
-2007
-2008
-2009</pre>
+2200
+2201
+2202
+2203
+2204
+2205
+2206
+2207
+2208
+2209
+2210
+2211</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1998</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 2200</span>
 
 static VALUE
 rb_grn_object_get_disk_usage (VALUE self)
@@ -2160,9 +2420,6 @@ rb_grn_object_get_disk_usage (VALUE self)
       <pre class="lines">
 
 
-1156
-1157
-1158
 1159
 1160
 1161
@@ -2186,10 +2443,13 @@ rb_grn_object_get_disk_usage (VALUE self)
 1179
 1180
 1181
-1182</pre>
+1182
+1183
+1184
+1185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1156</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1159</span>
 
 static VALUE
 rb_grn_object_get_domain (VALUE self)
@@ -2294,9 +2554,6 @@ rb_grn_object_get_domain (VALUE self)
       <pre class="lines">
 
 
-1711
-1712
-1713
 1714
 1715
 1716
@@ -2309,17 +2566,20 @@ rb_grn_object_get_domain (VALUE self)
 1723
 1724
 1725
-1726</pre>
+1726
+1727
+1728
+1729</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1711</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1714</span>
 
 static VALUE
 rb_grn_object_function_procedure_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool function_procedure_p = GRN_FALSE;
+    bool function_procedure_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -2386,9 +2646,6 @@ rb_grn_object_function_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1070
-1071
-1072
 1073
 1074
 1075
@@ -2401,10 +2658,13 @@ rb_grn_object_function_procedure_p (VALUE self)
 1082
 1083
 1084
-1085</pre>
+1085
+1086
+1087
+1088</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1070</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1073</span>
 
 VALUE
 rb_grn_object_get_id (VALUE self)
@@ -2421,6 +2681,139 @@ rb_grn_object_get_id (VALUE self)
         return Qnil;
     else
         return UINT2NUM(id);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="id_accessor?-instance_method">
+  
+    #<strong>id_accessor?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the object is an accessor for <code>_id</code> or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p><code>true</code> case: <code>column("_id")</code> is an accessor and it’s an accessor for <code>_id</code></p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_table'><span class='object_link'><a href="Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">create_table</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_id</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_id_accessor?'>id_accessor?</span> <span class='comment'># =&gt; true</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p><code>false</code> case: <code>column("_key")</code> is an accessor but it’s not an accessor for <code>_id</code></p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_table'><span class='object_link'><a href="Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">create_table</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_key</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_id_accessor?'>id_accessor?</span> <span class='comment'># =&gt; false</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is an accessor for <code>_id</code>,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is an accessor for <code>_id</code>,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>9.0.4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1917
+1918
+1919
+1920
+1921
+1922
+1923
+1924
+1925
+1926
+1927
+1928
+1929
+1930
+1931
+1932</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1917</span>
+
+static VALUE
+rb_grn_object_id_accessor_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    bool id_accessor_p = false;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        id_accessor_p = grn_obj_is_id_accessor(context, object);
+    }
+
+    return CBOOL2RVAL(id_accessor_p);
 }</pre>
     </td>
   </tr>
@@ -2498,9 +2891,6 @@ rb_grn_object_get_id (VALUE self)
       <pre class="lines">
 
 
-1660
-1661
-1662
 1663
 1664
 1665
@@ -2513,17 +2903,20 @@ rb_grn_object_get_id (VALUE self)
 1672
 1673
 1674
-1675</pre>
+1675
+1676
+1677
+1678</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1660</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1663</span>
 
 static VALUE
 rb_grn_object_index_column_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool index_column_p = GRN_FALSE;
+    bool index_column_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -2589,9 +2982,6 @@ rb_grn_object_index_column_p (VALUE self)
       <pre class="lines">
 
 
-1050
-1051
-1052
 1053
 1054
 1055
@@ -2600,10 +2990,13 @@ rb_grn_object_index_column_p (VALUE self)
 1058
 1059
 1060
-1061</pre>
+1061
+1062
+1063
+1064</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1050</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1053</span>
 
 static VALUE
 rb_grn_object_inspect (VALUE self)
@@ -2633,7 +3026,7 @@ rb_grn_object_inspect (VALUE self)
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks whether the object is key accessor or not.</p>
+    <p>Checks whether the object is an accessor for <code>_key</code> or not.</p>
 
 
   </div>
@@ -2714,9 +3107,6 @@ rb_grn_object_inspect (VALUE self)
       <pre class="lines">
 
 
-1878
-1879
-1880
 1881
 1882
 1883
@@ -2729,17 +3119,20 @@ rb_grn_object_inspect (VALUE self)
 1890
 1891
 1892
-1893</pre>
+1893
+1894
+1895
+1896</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1878</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1881</span>
 
 static VALUE
 rb_grn_object_key_accessor_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool key_accessor_p = GRN_FALSE;
+    bool key_accessor_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -2824,21 +3217,21 @@ rb_grn_object_key_accessor_p (VALUE self)
       <pre class="lines">
 
 
-1940
-1941
-1942
-1943
-1944
-1945
-1946
-1947
-1948
-1949
-1950
-1951</pre>
+2090
+2091
+2092
+2093
+2094
+2095
+2096
+2097
+2098
+2099
+2100
+2101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1940</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 2090</span>
 
 static VALUE
 rb_grn_object_get_last_modified (VALUE self)
@@ -2851,6 +3244,250 @@ rb_grn_object_get_last_modified (VALUE self)
                               NULL, NULL, NULL, NULL);
     last_modified = grn_obj_get_last_modified(context, object);
     return rb_funcall(rb_cTime, rb_intern(&quot;at&quot;), 1, UINT2NUM(last_modified));
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lexicon?-instance_method">
+  
+    #<strong>lexicon?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is lexicon, <code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is lexicon, <code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>9.0.4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2156
+2157
+2158
+2159
+2160
+2161
+2162
+2163
+2164
+2165
+2166
+2167
+2168
+2169
+2170
+2171</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 2156</span>
+
+static VALUE
+rb_grn_object_lexicon_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    bool is_lexicon = false;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        is_lexicon = grn_obj_is_lexicon(context, object);
+    }
+
+    return CBOOL2RVAL(is_lexicon);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="n_sub_records_accessor?-instance_method">
+  
+    #<strong>n_sub_records_accessor?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the object is an accessor for <code>_nsubrecs</code> or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p><code>true</code> case: <code>column("_nsubrecs")</code> is an accessor and it’s an accessor for <code>_nsubrecs</code></p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Hash.html" title="Groonga::Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Hash.html#create-class_method" title="Groonga::Hash.create (method)">create</a></span></span><span class='lparen'>(</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                             <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_grouped_users'>grouped_users</span> <span class='op'>=</span> <span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_group'>group</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_key</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_grouped_users'>grouped_users</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_nsubrecs</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_n_sub_records_accessor?'>n_sub_records_accessor?</span> <span class='comment'># =&gt; true</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p><code>false</code> case: <code>column("_key")</code> is an accessor but it’s not an accessor for <code>_nsubrecs</code></p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_table'><span class='object_link'><a href="Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">create_table</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_key</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_n_sub_records_accessor?'>n_sub_records_accessor?</span> <span class='comment'># =&gt; false</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is an accessor for <code>_nsubrecs</code>,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is an accessor for <code>_nsubrecs</code>,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>9.0.4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+2028
+2029
+2030
+2031
+2032
+2033
+2034
+2035
+2036
+2037
+2038
+2039
+2040
+2041
+2042
+2043</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 2028</span>
+
+VALUE
+rb_grn_object_n_sub_records_accessor_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    bool n_sub_records_accessor_p = false;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        n_sub_records_accessor_p = grn_obj_is_nsubrecs_accessor(context, object);
+    }
+
+    return CBOOL2RVAL(n_sub_records_accessor_p);
 }</pre>
     </td>
   </tr>
@@ -2907,9 +3544,6 @@ rb_grn_object_get_last_modified (VALUE self)
       <pre class="lines">
 
 
-1190
-1191
-1192
 1193
 1194
 1195
@@ -2931,10 +3565,13 @@ rb_grn_object_get_last_modified (VALUE self)
 1211
 1212
 1213
-1214</pre>
+1214
+1215
+1216
+1217</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1190</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1193</span>
 
 static VALUE
 rb_grn_object_get_name (VALUE self)
@@ -3017,9 +3654,6 @@ rb_grn_object_get_name (VALUE self)
       <pre class="lines">
 
 
-1094
-1095
-1096
 1097
 1098
 1099
@@ -3033,10 +3667,13 @@ rb_grn_object_get_name (VALUE self)
 1107
 1108
 1109
-1110</pre>
+1110
+1111
+1112
+1113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1094</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1097</span>
 
 static VALUE
 rb_grn_object_get_path (VALUE self)
@@ -3101,9 +3738,6 @@ rb_grn_object_get_path (VALUE self)
       <pre class="lines">
 
 
-1136
-1137
-1138
 1139
 1140
 1141
@@ -3111,10 +3745,13 @@ rb_grn_object_get_path (VALUE self)
 1143
 1144
 1145
-1146</pre>
+1146
+1147
+1148
+1149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1136</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1139</span>
 
 static VALUE
 rb_grn_object_persistent_p (VALUE self)
@@ -3159,14 +3796,14 @@ rb_grn_object_persistent_p (VALUE self)
       <pre class="lines">
 
 
-1505
-1506
-1507
 1508
-1509</pre>
+1509
+1510
+1511
+1512</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1505</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1508</span>
 
 static VALUE
 rb_grn_object_prepend_value (VALUE self, VALUE rb_id, VALUE rb_value)
@@ -3247,9 +3884,6 @@ rb_grn_object_prepend_value (VALUE self, VALUE rb_id, VALUE rb_value)
       <pre class="lines">
 
 
-1685
-1686
-1687
 1688
 1689
 1690
@@ -3262,17 +3896,20 @@ rb_grn_object_prepend_value (VALUE self, VALUE rb_id, VALUE rb_value)
 1697
 1698
 1699
-1700</pre>
+1700
+1701
+1702
+1703</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1685</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1688</span>
 
 static VALUE
 rb_grn_object_procedure_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool procedure_p = GRN_FALSE;
+    bool procedure_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -3342,9 +3979,6 @@ rb_grn_object_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1226
-1227
-1228
 1229
 1230
 1231
@@ -3368,10 +4002,13 @@ rb_grn_object_procedure_p (VALUE self)
 1249
 1250
 1251
-1252</pre>
+1252
+1253
+1254
+1255</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1226</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1229</span>
 
 static VALUE
 rb_grn_object_get_range (VALUE self)
@@ -3476,9 +4113,6 @@ rb_grn_object_get_range (VALUE self)
       <pre class="lines">
 
 
-1634
-1635
-1636
 1637
 1638
 1639
@@ -3491,17 +4125,20 @@ rb_grn_object_get_range (VALUE self)
 1646
 1647
 1648
-1649</pre>
+1649
+1650
+1651
+1652</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1634</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1637</span>
 
 static VALUE
 rb_grn_object_reference_column_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool reference_column_p = GRN_FALSE;
+    bool reference_column_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -3601,9 +4238,6 @@ related with the object are removed.</p>
       <pre class="lines">
 
 
-1523
-1524
-1525
 1526
 1527
 1528
@@ -3634,10 +4268,13 @@ related with the object are removed.</p>
 1553
 1554
 1555
-1556</pre>
+1556
+1557
+1558
+1559</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1523</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1526</span>
 
 static VALUE
 rb_grn_object_remove (int argc, VALUE *argv, VALUE self)
@@ -3646,7 +4283,7 @@ rb_grn_object_remove (int argc, VALUE *argv, VALUE self)
     grn_ctx *context;
     VALUE rb_options;
     VALUE rb_dependent_p;
-    grn_bool dependent_p = GRN_FALSE;
+    bool dependent_p = false;
 
     rb_grn_object = SELF(self);
     if (!rb_grn_object-&gt;object)
@@ -3672,6 +4309,139 @@ rb_grn_object_remove (int argc, VALUE *argv, VALUE self)
     rb_iv_set(self, &quot;@context&quot;, Qnil);
 
     return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="score_accessor?-instance_method">
+  
+    #<strong>score_accessor?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the object is an accessor for <code>_socre</code> or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p><code>true</code> case: <code>column("_score")</code> is an accessor and it’s an accessor for <code>_score</code></p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_table'><span class='object_link'><a href="Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">create_table</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_score</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_socre_accessor?'>socre_accessor?</span> <span class='comment'># =&gt; true</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p><code>false</code> case: <code>column("_key")</code> is an accessor but it’s not an accessor for <code>_score</code></p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_table'><span class='object_link'><a href="Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">create_table</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_key</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_score_accessor?'>score_accessor?</span> <span class='comment'># =&gt; false</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is an accessor for <code>_score</code>,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is an accessor for <code>_score</code>,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>9.0.4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1991
+1992
+1993
+1994
+1995
+1996
+1997
+1998
+1999
+2000
+2001
+2002
+2003
+2004
+2005
+2006</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1991</span>
+
+static VALUE
+rb_grn_object_score_accessor_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    bool score_accessor_p = false;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        score_accessor_p = grn_obj_is_score_accessor(context, object);
+    }
+
+    return CBOOL2RVAL(score_accessor_p);
 }</pre>
     </td>
   </tr>
@@ -3749,9 +4519,6 @@ rb_grn_object_remove (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-1789
-1790
-1791
 1792
 1793
 1794
@@ -3764,17 +4531,20 @@ rb_grn_object_remove (int argc, VALUE *argv, VALUE self)
 1801
 1802
 1803
-1804</pre>
+1804
+1805
+1806
+1807</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1789</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1792</span>
 
 static VALUE
 rb_grn_object_scorer_procedure_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool scorer_procedure_p = GRN_FALSE;
+    bool scorer_procedure_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -3861,9 +4631,6 @@ rb_grn_object_scorer_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1763
-1764
-1765
 1766
 1767
 1768
@@ -3876,17 +4643,20 @@ rb_grn_object_scorer_procedure_p (VALUE self)
 1775
 1776
 1777
-1778</pre>
+1778
+1779
+1780
+1781</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1763</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1766</span>
 
 static VALUE
 rb_grn_object_selector_only_procedure_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool selector_only_procedure_p = GRN_FALSE;
+    bool selector_only_procedure_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -3973,9 +4743,6 @@ rb_grn_object_selector_only_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1737
-1738
-1739
 1740
 1741
 1742
@@ -3988,17 +4755,20 @@ rb_grn_object_selector_only_procedure_p (VALUE self)
 1749
 1750
 1751
-1752</pre>
+1752
+1753
+1754
+1755</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1737</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1740</span>
 
 static VALUE
 rb_grn_object_selector_procedure_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool selector_procedure_p = GRN_FALSE;
+    bool selector_procedure_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -4083,9 +4853,6 @@ rb_grn_object_selector_procedure_p (VALUE self)
       <pre class="lines">
 
 
-1583
-1584
-1585
 1586
 1587
 1588
@@ -4098,17 +4865,20 @@ rb_grn_object_selector_procedure_p (VALUE self)
 1595
 1596
 1597
-1598</pre>
+1598
+1599
+1600
+1601</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1583</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1586</span>
 
 static VALUE
 rb_grn_object_table_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool table_p = GRN_FALSE;
+    bool table_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -4165,9 +4935,6 @@ rb_grn_object_table_p (VALUE self)
       <pre class="lines">
 
 
-1118
-1119
-1120
 1121
 1122
 1123
@@ -4175,10 +4942,13 @@ rb_grn_object_table_p (VALUE self)
 1125
 1126
 1127
-1128</pre>
+1128
+1129
+1130
+1131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1118</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1121</span>
 
 static VALUE
 rb_grn_object_temporary_p (VALUE self)
@@ -4271,36 +5041,36 @@ If <code>time</code> is <code>nil</code>, the current time is used.</p>
       <pre class="lines">
 
 
-1906
-1907
-1908
-1909
-1910
-1911
-1912
-1913
-1914
-1915
-1916
-1917
-1918
-1919
-1920
-1921
-1922
-1923
-1924
-1925
-1926
-1927
-1928
-1929
-1930
-1931
-1932</pre>
+2056
+2057
+2058
+2059
+2060
+2061
+2062
+2063
+2064
+2065
+2066
+2067
+2068
+2069
+2070
+2071
+2072
+2073
+2074
+2075
+2076
+2077
+2078
+2079
+2080
+2081
+2082</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1906</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 2056</span>
 
 static VALUE
 rb_grn_object_touch (int argc, VALUE *argv, VALUE self)
@@ -4361,7 +5131,6 @@ rb_grn_object_touch (int argc, VALUE *argv, VALUE self)
       <pre class="lines">
 
 
-627
 628
 629
 630
@@ -4380,10 +5149,11 @@ rb_grn_object_touch (int argc, VALUE *argv, VALUE self)
 643
 644
 645
-646</pre>
+646
+647</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 627</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 628</span>
 
 VALUE
 rb_grn_object_unlink (VALUE self)
@@ -4404,6 +5174,141 @@ rb_grn_object_unlink (VALUE self)
     }
 
     return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="value_accessor?-instance_method">
+  
+    #<strong>value_accessor?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the object is an accessor for <code>_value</code> or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p><code>true</code> case: <code>column("_value")</code> is an accessor and it’s an accessor for <code>_value</code></p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_table'><span class='object_link'><a href="Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">create_table</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                             <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='comma'>,</span>
+                             <span class='symbol'>:value_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt32</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_value</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_value_accessor?'>value_accessor?</span> <span class='comment'># =&gt; true</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p><code>false</code> case: <code>column("_key")</code> is an accessor but it’s not an accessor for <code>_value</code></p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Schema.html" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_table'><span class='object_link'><a href="Schema.html#create_table-class_method" title="Groonga::Schema.create_table (method)">create_table</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:key_type</span> <span class='op'>=&gt;</span> <span class='symbol'>:short_text</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Users</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_users'>users</span><span class='period'>.</span><span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_key</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_value_accessor?'>value_accessor?</span> <span class='comment'># =&gt; false</span></code></pre>
+    
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+    <p>Returns <code>true</code> if the object is an accessor for <code>_value</code>,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><code>true</code> if the object is an accessor for <code>_value</code>,
+<code>false</code> otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>9.0.4</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+1955
+1956
+1957
+1958
+1959
+1960
+1961
+1962
+1963
+1964
+1965
+1966
+1967
+1968
+1969
+1970</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1955</span>
+
+static VALUE
+rb_grn_object_value_accessor_p (VALUE self)
+{
+    grn_ctx *context;
+    grn_obj *object;
+    bool value_accessor_p = false;
+
+    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
+                              NULL, NULL, NULL, NULL);
+
+    if (context &amp;&amp; object) {
+        value_accessor_p = grn_obj_is_value_accessor(context, object);
+    }
+
+    return CBOOL2RVAL(value_accessor_p);
 }</pre>
     </td>
   </tr>
@@ -4481,9 +5386,6 @@ rb_grn_object_unlink (VALUE self)
       <pre class="lines">
 
 
-1815
-1816
-1817
 1818
 1819
 1820
@@ -4497,17 +5399,20 @@ rb_grn_object_unlink (VALUE self)
 1828
 1829
 1830
-1831</pre>
+1831
+1832
+1833
+1834</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1815</span>
+      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-object.c', line 1818</span>
 
 static VALUE
 rb_grn_object_window_function_procedure_p (VALUE self)
 {
     grn_ctx *context;
     grn_obj *object;
-    grn_bool window_function_procedure_p = GRN_FALSE;
+    bool window_function_procedure_p = false;
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
                               NULL, NULL, NULL, NULL);
@@ -4529,9 +5434,9 @@ rb_grn_object_window_function_procedure_p (VALUE self)
 </div>
 
       <div id="footer">
-  Generated on Fri May 10 15:48:55 2019 by
+  Generated on Thu Aug 29 19:14:10 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.3.3).
+  0.9.20 (ruby-2.6.3).
 </div>
 
     

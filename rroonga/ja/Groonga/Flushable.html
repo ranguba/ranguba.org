@@ -289,7 +289,14 @@ which a target object has recursively.</p>
 69
 70
 71
-72</pre>
+72
+73
+74
+75
+76
+77
+78
+79</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-flushable.c', line 40</span>
@@ -300,14 +307,19 @@ rb_grn_flushable_flush (int argc, VALUE *argv, VALUE self)
     grn_ctx *context = NULL;
     grn_obj *object = NULL;
     VALUE rb_recursive_p;
+    VALUE rb_dependent_p;
     VALUE rb_options;
 
     rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_options);
     rb_grn_scan_options(rb_options,
                         &quot;recursive&quot;, &amp;rb_recursive_p,
+                        &quot;dependent&quot;, &amp;rb_dependent_p,
                         NULL);
     if (NIL_P(rb_recursive_p)) {
         rb_recursive_p = Qtrue;
+    }
+    if (NIL_P(rb_dependent_p)) {
+        rb_dependent_p = Qfalse;
     }
 
     rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
@@ -320,6 +332,8 @@ rb_grn_flushable_flush (int argc, VALUE *argv, VALUE self)
 
     if (RVAL2CBOOL(rb_recursive_p)) {
         grn_obj_flush_recursive(context, object);
+    } else if (RVAL2CBOOL(rb_dependent_p)) {
+        grn_obj_flush_recursive_dependent(context, object);
     } else {
         grn_obj_flush(context, object);
     }
@@ -337,9 +351,9 @@ rb_grn_flushable_flush (int argc, VALUE *argv, VALUE self)
 </div>
 
       <div id="footer">
-  Generated on Fri May 10 15:48:47 2019 by
+  Generated on Thu Aug 29 19:14:05 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.3.3).
+  0.9.20 (ruby-2.6.3).
 </div>
 
     
