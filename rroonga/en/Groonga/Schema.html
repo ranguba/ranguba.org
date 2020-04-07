@@ -14,11 +14,11 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Groonga::Schema";
   relpath = '../';
 </script>
@@ -758,7 +758,7 @@ pairs. Omitted names are initialized as the default value.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
-  <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'><span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">default</a></span></span>
+  <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span>
   <span class='ivar'>@definitions</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1082,7 +1082,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>The sub_records</p>
 
-<p><code>true</code>を指定すると<span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span>で
+<p><code>true</code>を指定するとTable#groupで
 グループ化したときに、<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>でグループに
 含まれるレコードの件数を取得できる。</p>
 </div>
@@ -1260,7 +1260,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>The sub_records</p>
 
-<p><code>true</code>を指定すると<span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span>で
+<p><code>true</code>を指定するとTable#groupで
 グループ化したときに、<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>でグループに
 含まれるレコードの件数を取得できる。</p>
 </div>
@@ -1282,8 +1282,8 @@ pairs. Omitted names are initialized as the default value.</p>
 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> のど
 れか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その
 型が示す範囲の値をキーとして使用する。ただし、キーの最大サ
-イズは4096バイトであるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
-<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。テーブルを指定
+イズは4096バイトであるため、 Type::TEXT や
+Type::LONG_TEXT は使用できない。テーブルを指定
 した場合はレコードIDをキーとして使用する。指定したテーブル
 の <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、その
 場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。
@@ -1313,7 +1313,7 @@ pairs. Omitted names are initialized as the default value.</p>
       
         <li>
           <span class="name">:token_filters</span>
-          <span class="type">(<tt>::Array&lt;String, <span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>::Array&lt;String, Groonga::Procedure&gt;</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -1362,7 +1362,7 @@ if this value is <code>true</code>.</p>
       
         <li>
           <span class="name">:normalizer</span>
-          <span class="type">(<tt>String</tt>, <tt><span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>String</tt>, <tt>Groonga::Procedure</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
@@ -1545,7 +1545,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>The sub_records</p>
 
-<p><code>true</code>を指定すると<span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span>で
+<p><code>true</code>を指定するとTable#groupで
 グループ化したときに、<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>でグループに
 含まれるレコードの件数を取得できる。</p>
 </div>
@@ -1567,8 +1567,8 @@ pairs. Omitted names are initialized as the default value.</p>
 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> のど
 れか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その
 型が示す範囲の値をキーとして使用する。ただし、キーの最大サ
-イズは4096バイトであるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
-<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。テーブルを指定
+イズは4096バイトであるため、 Type::TEXT や
+Type::LONG_TEXT は使用できない。テーブルを指定
 した場合はレコードIDをキーとして使用する。指定したテーブル
 の <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、その
 場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。
@@ -1598,7 +1598,7 @@ pairs. Omitted names are initialized as the default value.</p>
       
         <li>
           <span class="name">:token_filters</span>
-          <span class="type">(<tt>::Array&lt;String, <span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>::Array&lt;String, Groonga::Procedure&gt;</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -1647,7 +1647,7 @@ if this value is <code>true</code>.</p>
       
         <li>
           <span class="name">:normalizer</span>
-          <span class="type">(<tt>String</tt>, <tt><span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>String</tt>, <tt>Groonga::Procedure</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
@@ -1850,7 +1850,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>The sub_records</p>
 
-<p><code>true</code>を指定すると<span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span>で
+<p><code>true</code>を指定するとTable#groupで
 グループ化したときに、<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>でグループに
 含まれるレコードの件数を取得できる。</p>
 </div>
@@ -1872,8 +1872,8 @@ pairs. Omitted names are initialized as the default value.</p>
 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> のど
 れか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その
 型が示す範囲の値をキーとして使用する。ただし、キーの最大サ
-イズは4096バイトであるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
-<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。テーブルを指定
+イズは4096バイトであるため、 Type::TEXT や
+Type::LONG_TEXT は使用できない。テーブルを指定
 した場合はレコードIDをキーとして使用する。指定したテーブル
 の <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、その
 場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。
@@ -1903,7 +1903,7 @@ pairs. Omitted names are initialized as the default value.</p>
       
         <li>
           <span class="name">:token_filters</span>
-          <span class="type">(<tt>::Array&lt;String, <span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>::Array&lt;String, Groonga::Procedure&gt;</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -1952,7 +1952,7 @@ if this value is <code>true</code>.</p>
       
         <li>
           <span class="name">:normalizer</span>
-          <span class="type">(<tt>String</tt>, <tt><span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>String</tt>, <tt>Groonga::Procedure</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
@@ -2014,9 +2014,9 @@ can specify this by normalizer name as String such as
 ジェクトがわたるので、そのオブジェクトを利用してスキー
 マを定義する。以下の省略形。</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'>Scheme</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='comment'># ...
-</span><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_schema'>schema</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'>Scheme</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='comment'># ...
+</span>
+<span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_define'>define</span>
 </code></pre>
 
 
@@ -2138,7 +2138,7 @@ Rubyスクリプト形式で返された値は
 <p>restore.rb:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_dumped_text'>dumped_text</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span>
-<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Database.html#create-class_method" title="Groonga::Database.create (method)">create</a></span></span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/new-db.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/new-db.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Groonga::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_restore'><span class='object_link'><a href="#restore-class_method" title="Groonga::Schema.restore (method)">restore</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_text'>dumped_text</span><span class='rparen'>)</span>
 </code></pre>
 
@@ -2896,7 +2896,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>The sub_records</p>
 
-<p><code>true</code>を指定すると<span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span>で
+<p><code>true</code>を指定するとTable#groupで
 グループ化したときに、<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>でグループに
 含まれるレコードの件数を取得できる。</p>
 </div>
@@ -3074,7 +3074,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>The sub_records</p>
 
-<p><code>true</code>を指定すると<span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span>で
+<p><code>true</code>を指定するとTable#groupで
 グループ化したときに、<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>でグループに
 含まれるレコードの件数を取得できる。</p>
 </div>
@@ -3096,8 +3096,8 @@ pairs. Omitted names are initialized as the default value.</p>
 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> のど
 れか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その
 型が示す範囲の値をキーとして使用する。ただし、キーの最大サ
-イズは4096バイトであるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
-<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。テーブルを指定
+イズは4096バイトであるため、 Type::TEXT や
+Type::LONG_TEXT は使用できない。テーブルを指定
 した場合はレコードIDをキーとして使用する。指定したテーブル
 の <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、その
 場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。
@@ -3127,7 +3127,7 @@ pairs. Omitted names are initialized as the default value.</p>
       
         <li>
           <span class="name">:token_filters</span>
-          <span class="type">(<tt>::Array&lt;String, <span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>::Array&lt;String, Groonga::Procedure&gt;</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -3176,7 +3176,7 @@ if this value is <code>true</code>.</p>
       
         <li>
           <span class="name">:normalizer</span>
-          <span class="type">(<tt>String</tt>, <tt><span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>String</tt>, <tt>Groonga::Procedure</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
@@ -3359,7 +3359,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>The sub_records</p>
 
-<p><code>true</code>を指定すると<span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span>で
+<p><code>true</code>を指定するとTable#groupで
 グループ化したときに、<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>でグループに
 含まれるレコードの件数を取得できる。</p>
 </div>
@@ -3381,8 +3381,8 @@ pairs. Omitted names are initialized as the default value.</p>
 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> のど
 れか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その
 型が示す範囲の値をキーとして使用する。ただし、キーの最大サ
-イズは4096バイトであるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
-<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。テーブルを指定
+イズは4096バイトであるため、 Type::TEXT や
+Type::LONG_TEXT は使用できない。テーブルを指定
 した場合はレコードIDをキーとして使用する。指定したテーブル
 の <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、その
 場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。
@@ -3412,7 +3412,7 @@ pairs. Omitted names are initialized as the default value.</p>
       
         <li>
           <span class="name">:token_filters</span>
-          <span class="type">(<tt>::Array&lt;String, <span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>::Array&lt;String, Groonga::Procedure&gt;</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -3461,7 +3461,7 @@ if this value is <code>true</code>.</p>
       
         <li>
           <span class="name">:normalizer</span>
-          <span class="type">(<tt>String</tt>, <tt><span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>String</tt>, <tt>Groonga::Procedure</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
@@ -3664,7 +3664,7 @@ pairs. Omitted names are initialized as the default value.</p>
           
             &mdash; <div class='inline'><p>The sub_records</p>
 
-<p><code>true</code>を指定すると<span class='object_link'><a href="Table.html#group-instance_method" title="Groonga::Table#group (method)">Table#group</a></span>で
+<p><code>true</code>を指定するとTable#groupで
 グループ化したときに、<span class='object_link'><a href="Record.html#n_sub_records-instance_method" title="Groonga::Record#n_sub_records (method)">Record#n_sub_records</a></span>でグループに
 含まれるレコードの件数を取得できる。</p>
 </div>
@@ -3686,8 +3686,8 @@ pairs. Omitted names are initialized as the default value.</p>
 <span class='object_link'><a href="PatriciaTrie.html" title="Groonga::PatriciaTrie (class)">PatriciaTrie</a></span> 、 <span class='object_link'><a href="DoubleArrayTrie.html" title="Groonga::DoubleArrayTrie (class)">DoubleArrayTrie</a></span> のど
 れか）を指定する。 <span class='object_link'><a href="Type.html" title="Groonga::Type (class)">Type</a></span> を指定した場合は、その
 型が示す範囲の値をキーとして使用する。ただし、キーの最大サ
-イズは4096バイトであるため、 <span class='object_link'><a href="Type.html#TEXT-constant" title="Groonga::Type::TEXT (constant)">Type::TEXT</a></span> や
-<span class='object_link'><a href="Type.html#LONG_TEXT-constant" title="Groonga::Type::LONG_TEXT (constant)">Type::LONG_TEXT</a></span> は使用できない。テーブルを指定
+イズは4096バイトであるため、 Type::TEXT や
+Type::LONG_TEXT は使用できない。テーブルを指定
 した場合はレコードIDをキーとして使用する。指定したテーブル
 の <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> をキーとして使用することもでき、その
 場合は自動的に <span class='object_link'><a href="Record.html" title="Groonga::Record (class)">Record</a></span> からレコードIDを取得する。
@@ -3717,7 +3717,7 @@ pairs. Omitted names are initialized as the default value.</p>
       
         <li>
           <span class="name">:token_filters</span>
-          <span class="type">(<tt>::Array&lt;String, <span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>::Array&lt;String, Groonga::Procedure&gt;</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
               &mdash; default:
@@ -3766,7 +3766,7 @@ if this value is <code>true</code>.</p>
       
         <li>
           <span class="name">:normalizer</span>
-          <span class="type">(<tt>String</tt>, <tt><span class='object_link'><a href="Procedure.html" title="Groonga::Procedure (class)">Groonga::Procedure</a></span></tt>, <tt>nil</tt>)</span>
+          <span class="type">(<tt>String</tt>, <tt>Groonga::Procedure</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>

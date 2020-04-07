@@ -7,18 +7,18 @@
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
     <title>
-  Module: Groonga::Thread
+  Class: Groonga::Thread
   
     &mdash; rroonga
   
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Groonga::Thread";
   relpath = '../';
 </script>
@@ -41,7 +41,7 @@
   <div class="title">
     <a href="../../../">
       <span class="title">
-  Module: Groonga::Thread
+  Class: Groonga::Thread
   
     &mdash; rroonga
   
@@ -90,12 +90,28 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Module: Groonga::Thread
+      <div id="content"><h1>Class: Groonga::Thread
   
   
   
 </h1>
 <div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Groonga::Thread</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
   
 
   
@@ -114,539 +130,24 @@
   
 </div>
 
-
-
-
-
-
-
-
-  
-    <h2>
-      Class Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#limit-class_method" title="limit (class method)">.<strong>limit</strong>  &#x21d2; Integer </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#limit=-class_method" title="limit= (class method)">.<strong>limit=</strong>(new_limit)  &#x21d2; void </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Sets the max number of threads.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#limit_getter=-class_method" title="limit_getter= (class method)">.<strong>limit_getter=</strong>(getter)  &#x21d2; void </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Sets a callable object that returns the max number of threads.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#limit_setter=-class_method" title="limit_setter= (class method)">.<strong>limit_setter=</strong>(setter)  &#x21d2; void </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Sets a callable object that sets the max number of threads.</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
-
-
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="limit-class_method">
-  
-    .<strong>limit</strong>  &#x21d2; <tt>Integer</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
+<h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
+    <p>It’s a namespace for thread related features.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="docstring">
-  <div class="discussion">
-    <p>Returns the max number of threads. <code>0</code> means that
-thread isn’t supported.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the max number of threads. <code>0</code> means that
-thread isn’t supported.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div>
 
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'><p>5.0.5</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
 
 
-37
-38
-39
-40
-41
-42
-43
-44
-45</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-thread.c', line 37</span>
-
-static VALUE
-rb_grn_thread_s_get_limit (VALUE self)
-{
-    uint32_t limit;
-
-    limit = grn_thread_get_limit();
-
-    return UINT2NUM(limit);
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="limit=-class_method">
-  
-    .<strong>limit=</strong>(new_limit)  &#x21d2; <tt>void</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
 
 
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="docstring">
-  <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Sets the max number of threads.</p>
 
 
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>new_limit</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The new max number of threads.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div>
-
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'><p>5.0.5</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-thread.c', line 58</span>
-
-static VALUE
-rb_grn_thread_s_set_limit (VALUE self, VALUE rb_new_limit)
-{
-    uint32_t new_limit;
-
-    new_limit = NUM2UINT(rb_new_limit);
-    grn_thread_set_limit(new_limit);
-
-    return Qnil;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="limit_getter=-class_method">
-  
-    .<strong>limit_getter=</strong>(getter)  &#x21d2; <tt>void</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="docstring">
-  <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Sets a callable object that returns the max number of threads.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>getter</span>
-      
-      
-        <span class='type'>(<tt>#call</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>Callable object that returns the max number
-of threads.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div>
-
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'><p>5.0.5</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-thread.c', line 92</span>
-
-static VALUE
-rb_grn_thread_s_set_limit_getter (VALUE self, VALUE rb_getter)
-{
-    rb_iv_set(self, &quot;@limit_getter&quot;, rb_getter);
-
-    if (NIL_P(rb_getter)) {
-        grn_thread_set_get_limit_func(NULL, NULL);
-    } else {
-        grn_thread_set_get_limit_func(rb_grn_thread_get_limit_func,
-                                      (void *)rb_getter);
-    }
-
-    return Qnil;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="limit_setter=-class_method">
-  
-    .<strong>limit_setter=</strong>(setter)  &#x21d2; <tt>void</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="docstring">
-  <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Sets a callable object that sets the max number of threads.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>setter</span>
-      
-      
-        <span class='type'>(<tt>#call</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>Callable object that sets the max number
-of threads.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-
-</div>
-
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'><p>5.0.5</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-thread.c', line 127</span>
-
-static VALUE
-rb_grn_thread_s_set_limit_setter (VALUE self, VALUE rb_setter)
-{
-    rb_iv_set(self, &quot;@limit_setter&quot;, rb_setter);
-
-    if (NIL_P(rb_setter)) {
-        grn_thread_set_set_limit_func(NULL, NULL);
-    } else {
-        grn_thread_set_set_limit_func(rb_grn_thread_set_limit_func,
-                                      (void *)rb_setter);
-    }
-
-    return Qnil;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
 

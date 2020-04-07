@@ -7,18 +7,18 @@
     <link rel="shortcut icon" href="../../../favicon.ico" />
     <link rel="icon" href="../../../favicon.png" />
     <title>
-  Module: Groonga::Name
+  Class: Groonga::Name
   
     &mdash; rroonga
   
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Groonga::Name";
   relpath = '../';
 </script>
@@ -41,7 +41,7 @@
   <div class="title">
     <a href="../../../">
       <span class="title">
-  Module: Groonga::Name
+  Class: Groonga::Name
   
     &mdash; rroonga
   
@@ -90,12 +90,28 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Module: Groonga::Name
+      <div id="content"><h1>Class: Groonga::Name
   
   
   
 </h1>
 <div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Groonga::Name</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
   
 
   
@@ -114,175 +130,24 @@
   
 </div>
 
-
-
-
-
-
-
-
-  
-    <h2>
-      Class Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#column%3F-class_method" title="column? (class method)">.<strong>column?</strong>(name)  &#x21d2; Boolean </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
-
-
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="column?-class_method">
-  
-    .<strong>column?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
+<h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
+    <p>This module provides object name related features.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="docstring">
-  <div class="discussion">
-    <p>Returns <code>true</code> if the <code>name</code> is column, <code>false</code> otherwise.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>The name to be confirmed.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p><code>true</code> if the <code>name</code> is column, <code>false</code> otherwise.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div>
 
-<p class="tag_title">Since:</p>
-<ul class="since">
-  
-    <li>
-      
-      
-      
-      
-        
-        <div class='inline'><p>6.0.5</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
 
 
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-name.c', line 34</span>
 
-static VALUE
-rb_grn_name_s_column_p (VALUE self, VALUE rb_name)
-{
-    grn_ctx *ctx = NULL;
-    const char *name;
-    size_t name_size;
 
-    name = StringValueCStr(rb_name);
-    name_size = RSTRING_LEN(rb_name);
 
-    return CBOOL2RVAL(grn_obj_name_is_column(ctx, name, name_size));
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
+
 
 </div>
 

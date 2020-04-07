@@ -14,11 +14,11 @@
  - ラングバ</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Groonga::Flushable";
   relpath = '../';
 </script>
@@ -105,18 +105,11 @@
   
 
   
-  <dl>
-    <dt>Included in:</dt>
-    <dd><span class='object_link'><a href="Column.html" title="Groonga::Column (class)">Column</a></span>, <span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span>, <span class='object_link'><a href="Table.html" title="Groonga::Table (class)">Table</a></span></dd>
-  </dl>
-  
 
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>ext/groonga/rb-grn-flushable.c<span class="defines">,<br />
-  ext/groonga/rb-grn-flushable.c</span>
-</dd>
+    <dd>ext/groonga/rb-grn-flushable.c</dd>
   </dl>
   
 </div>
@@ -138,222 +131,14 @@
 
 
 
-  
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
 
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#flush-instance_method" title="#flush (instance method)">#<strong>flush</strong>(options = {})  &#x21d2; void </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Flush memory mapped data to disk.</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
-
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="flush-instance_method">
-  
-    #<strong>flush</strong>(options = {})  &#x21d2; <tt>void</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Flush memory mapped data to disk.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="docstring">
-  <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>options</span>
-      
-      
-        <span class='type'>(<tt>::Hash</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>{}</tt>)</em>
-      
-      
-    </li>
-  
-</ul>
-
-  
-    
-    
-    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">:recursive</span>
-          <span class="type">(<tt>Boolean</tt>)</span>
-          <span class="default">
-            
-              &mdash; default:
-              <tt>true</tt>
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>Whether to flush objects
-which a target object has recursively.</p>
-</div>
-          
-        </li>
-      
-    </ul>
-  
-
-
-</div>
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-flushable.c', line 40</span>
-
-static VALUE
-rb_grn_flushable_flush (int argc, VALUE *argv, VALUE self)
-{
-    grn_ctx *context = NULL;
-    grn_obj *object = NULL;
-    VALUE rb_recursive_p;
-    VALUE rb_dependent_p;
-    VALUE rb_options;
-
-    rb_scan_args(argc, argv, &quot;01&quot;, &amp;rb_options);
-    rb_grn_scan_options(rb_options,
-                        &quot;recursive&quot;, &amp;rb_recursive_p,
-                        &quot;dependent&quot;, &amp;rb_dependent_p,
-                        NULL);
-    if (NIL_P(rb_recursive_p)) {
-        rb_recursive_p = Qtrue;
-    }
-    if (NIL_P(rb_dependent_p)) {
-        rb_dependent_p = Qfalse;
-    }
-
-    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
-                              NULL, NULL, NULL, NULL);
-    if (!object) {
-        rb_raise(rb_eGrnClosed,
-                 &quot;can&#39;t access already closed Groonga object: &lt;%s&gt;&quot;,
-                 rb_grn_inspect(self));
-    }
-
-    if (RVAL2CBOOL(rb_recursive_p)) {
-        grn_obj_flush_recursive(context, object);
-    } else if (RVAL2CBOOL(rb_dependent_p)) {
-        grn_obj_flush_recursive_dependent(context, object);
-    } else {
-        grn_obj_flush(context, object);
-    }
-    rb_grn_context_check(context, self);
-
-    return Qnil;
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
 
       <div id="footer">
-  Generated on Thu Aug 29 19:14:05 2019 by
+  Generated on Tue Apr  7 11:55:55 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.1).
 </div>
 
     

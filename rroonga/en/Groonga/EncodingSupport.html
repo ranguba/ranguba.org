@@ -14,11 +14,11 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Groonga::EncodingSupport";
   relpath = '../';
 </script>
@@ -105,18 +105,11 @@
   
 
   
-  <dl>
-    <dt>Included in:</dt>
-    <dd><span class='object_link'><a href="Database.html" title="Groonga::Database (class)">Database</a></span>, <span class='object_link'><a href="Table/KeySupport.html" title="Groonga::Table::KeySupport (module)">Table::KeySupport</a></span></dd>
-  </dl>
-  
 
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>ext/groonga/rb-grn-encoding-support.c<span class="defines">,<br />
-  ext/groonga/rb-grn-encoding-support.c</span>
-</dd>
+    <dd>ext/groonga/rb-grn-encoding-support.c</dd>
   </dl>
   
 </div>
@@ -139,148 +132,7 @@
 
 
 
-  
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
 
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#encoding-instance_method" title="#encoding (instance method)">#<strong>encoding</strong>  &#x21d2; Groonga::Encoding </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>オブジェクトのエンコーディングを返す。.</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
-
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="encoding-instance_method">
-  
-    #<strong>encoding</strong>  &#x21d2; <tt><span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">Groonga::Encoding</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>オブジェクトのエンコーディングを返す。</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Encoding.html" title="Groonga::Encoding (module)">Groonga::Encoding</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>オブジェクトのエンコーディング</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'ext/groonga/rb-grn-encoding-support.c', line 37</span>
-
-static VALUE
-rb_grn_encoding_support_get_encoding (VALUE self)
-{
-    grn_ctx *context = NULL;
-    grn_obj *object = NULL;
-    grn_obj *encoding_value;
-    grn_encoding encoding;
-
-    rb_grn_object_deconstruct(SELF(self), &amp;object, &amp;context,
-                              NULL, NULL, NULL, NULL);
-    if (!object) {
-        rb_raise(rb_eGrnClosed,
-                 &quot;can&#39;t access already closed Groonga object: &lt;%s&gt;&quot;,
-                 rb_grn_inspect(self));
-    }
-
-    encoding_value = grn_obj_get_info(context, object, GRN_INFO_ENCODING, NULL);
-    rb_grn_context_check(context, self);
-
-    memcpy(&amp;encoding, GRN_BULK_HEAD(encoding_value), sizeof(encoding));
-    grn_obj_unlink(context, encoding_value);
-
-    return GRNENCODING2RVAL(encoding);
-}</pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
 

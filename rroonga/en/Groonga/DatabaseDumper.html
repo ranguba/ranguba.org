@@ -14,11 +14,11 @@
  - Ranguba</title>
 
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Groonga::DatabaseDumper";
   relpath = '../';
 </script>
@@ -252,7 +252,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of DatabaseDumper</p>
+    <p>Returns a new instance of DatabaseDumper.</p>
 
 
   </div>
@@ -400,7 +400,7 @@
   <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:output</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Dumper.html" title="Groonga::Dumper (module)">Dumper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_output'><span class='object_link'><a href="Dumper.html#default_output-class_method" title="Groonga::Dumper.default_output (method)">default_output</a></span></span>
   <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:error_output</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Dumper.html" title="Groonga::Dumper (module)">Dumper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default_output'><span class='object_link'><a href="Dumper.html#default_output-class_method" title="Groonga::Dumper.default_output (method)">default_output</a></span></span>
   <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:database</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'><span class='object_link'><a href="Context.html#default-class_method" title="Groonga::Context.default (method)">default</a></span></span>
+    <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../Groonga.html" title="Groonga (module)">Groonga</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Context.html" title="Groonga::Context (class)">Context</a></span></span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span>
     <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:database</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_database'>database</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_schema</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:dump_schema</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
