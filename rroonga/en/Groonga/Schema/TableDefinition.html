@@ -781,12 +781,12 @@
       <pre class="lines">
 
 
-799
-800
-801</pre>
+797
+798
+799</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 799</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 797</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@name</span>
@@ -835,12 +835,12 @@
       <pre class="lines">
 
 
-1155
-1156
-1157</pre>
+1183
+1184
+1185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1155</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1183</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_boolean'>boolean</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bool</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -862,6 +862,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p>名前が <em>name</em> で型が <em>type</em> のカラムを作成する。</p>
+
+<p>@since 12.0.2</p>
 
 
   </div>
@@ -995,6 +997,77 @@ Weight vector column can store weight for each element.</p>
           
         </li>
       
+        <li>
+          <span class="name">:weight_float32</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>It specifies whether the column uses 32 bit float for weight or not.</p>
+
+<p>You can’t use this option for scalar column.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:missing_mode</span>
+          <span class="type">(<tt>:add</tt>, <tt>:ignore</tt>, <tt>:nil</tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>nil</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>It specifies how to process missing value.</p>
+
+<ul>
+  <li><code>:add</code>, <code>nil</code>: Correspond to <code>MISSING_ADD</code></li>
+  <li><code>:ignore</code>: Correspond to <code>MISSING_IGNORE</code></li>
+  <li><code>:nil</code>: Correspond to <code>MISSING_NIL</code></li>
+</ul>
+
+<p>See
+https://groonga.org/docs/reference/commands/column_create.html#column-create-missing-mode
+for each <code>MISSING_*</code> values.</p>
+
+<p>@since 12.0.2</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:invalid_mode</span>
+          <span class="type">(<tt>:error</tt>, <tt>:warn</tt>, <tt>:ignore</tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>nil</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>It specifies how to process invalid value.</p>
+
+<ul>
+  <li><code>:add</code>, <code>nil</code>: Correspond to <code>INVALID_ERROR</code></li>
+  <li><code>:warn</code>: Correspond to <code>INVALID_WARN</code></li>
+  <li><code>:ignore</code>: Correspond to <code>INVALID_IGNORE</code></li>
+</ul>
+
+<p>See
+https://groonga.org/docs/reference/commands/column_create.html#column-create-invalid-mode
+for each <code>INVALID_*</code> values.</p>
+
+<p>@since 12.0.2</p>
+</div>
+          
+        </li>
+      
     </ul>
   
 
@@ -1005,19 +1078,19 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-870
-871
-872
-873
-874
-875
-876
-877
-878
-879</pre>
+898
+899
+900
+901
+902
+903
+904
+905
+906
+907</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 870</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 898</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnDefinition</span><span class='rbracket'>]</span>
@@ -1063,12 +1136,12 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-1086
-1087
-1088</pre>
+1114
+1115
+1116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1086</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_float'>float</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Float</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1166,24 +1239,24 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-954
-955
-956
-957
-958
-959
-960
-961
-962
-963
-964
-965
-966
-967
-968</pre>
+982
+983
+984
+985
+986
+987
+988
+989
+990
+991
+992
+993
+994
+995
+996</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 954</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 982</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_target_table_or_target_column_full_name'>target_table_or_target_column_full_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_target_table'>target_table</span><span class='comma'>,</span> <span class='id identifier rubyid_target_columns'>target_columns</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span>
@@ -1277,12 +1350,12 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-1018
-1019
-1020</pre>
+1046
+1047
+1048</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1018</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1046</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_integer16'>integer16</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int16</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1324,12 +1397,12 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-1027
-1028
-1029</pre>
+1055
+1056
+1057</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1027</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1055</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_integer32'>integer32</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int32</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1371,12 +1444,12 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-1037
-1038
-1039</pre>
+1065
+1066
+1067</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1037</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1065</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_integer64'>integer64</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1458,12 +1531,12 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-1008
-1009
-1010</pre>
+1036
+1037
+1038</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1008</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1036</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_integer8'>integer8</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Int8</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1502,12 +1575,12 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-1134
-1135
-1136</pre>
+1162
+1163
+1164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1134</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1162</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_long_text'>long_text</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LongText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1549,13 +1622,13 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-1146
-1147
-1148
-1149</pre>
+1174
+1175
+1176
+1177</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1146</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reference'>reference</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>||=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_context'>context</span><span class='op'>|</span> <span class='id identifier rubyid_guess_table_name'>guess_table_name</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rbrace'>}</span>
@@ -1593,18 +1666,18 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-885
-886
-887
-888
-889
-890
-891
-892
-893</pre>
+913
+914
+915
+916
+917
+918
+919
+920
+921</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 885</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 913</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnRemoveDefinition</span><span class='rbracket'>]</span>
@@ -1680,27 +1753,27 @@ Weight vector column can store weight for each element.</p>
       <pre class="lines">
 
 
-984
-985
-986
-987
-988
-989
-990
-991
-992
-993
-994
-995
-996
-997
-998
-999
-1000
-1001</pre>
+1012
+1013
+1014
+1015
+1016
+1017
+1018
+1019
+1020
+1021
+1022
+1023
+1024
+1025
+1026
+1027
+1028
+1029</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 984</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1012</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_index'>remove_index</span><span class='lparen'>(</span><span class='id identifier rubyid_target_table_or_target_column_full_name'>target_table_or_target_column_full_name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_target_table'>target_table</span><span class='comma'>,</span> <span class='id identifier rubyid_target_columns'>target_columns</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span>
@@ -1801,19 +1874,19 @@ value.</p>
       <pre class="lines">
 
 
-902
-903
-904
-905
-906
-907
-908
-909
-910
-911</pre>
+930
+931
+932
+933
+934
+935
+936
+937
+938
+939</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 902</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 930</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>ColumnRenameDefinition</span><span class='rbracket'>]</span>
@@ -1863,12 +1936,12 @@ value.</p>
       <pre class="lines">
 
 
-1115
-1116
-1117</pre>
+1143
+1144
+1145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1115</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1143</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_short_text'>short_text</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShortText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1907,12 +1980,12 @@ value.</p>
       <pre class="lines">
 
 
-1125
-1126
-1127</pre>
+1153
+1154
+1155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1125</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1153</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1951,12 +2024,12 @@ value.</p>
       <pre class="lines">
 
 
-1095
-1096
-1097</pre>
+1123
+1124
+1125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1095</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1123</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Time</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -1994,13 +2067,13 @@ value.</p>
       <pre class="lines">
 
 
-1105
-1106
-1107
-1108</pre>
+1133
+1134
+1135
+1136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1105</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_timestamps'>timestamps</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_time'>time</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>created_at</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2080,12 +2153,12 @@ named @name@.</p>
       <pre class="lines">
 
 
-1166
-1167
-1168</pre>
+1194
+1195
+1196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1166</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tokyo_geo_point'>tokyo_geo_point</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TokyoGeoPoint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2167,12 +2240,12 @@ named @name@.</p>
       <pre class="lines">
 
 
-1057
-1058
-1059</pre>
+1085
+1086
+1087</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1057</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1085</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer16'>unsigned_integer16</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt16</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2214,12 +2287,12 @@ named @name@.</p>
       <pre class="lines">
 
 
-1066
-1067
-1068</pre>
+1094
+1095
+1096</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1066</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1094</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer32'>unsigned_integer32</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt32</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2261,12 +2334,12 @@ named @name@.</p>
       <pre class="lines">
 
 
-1076
-1077
-1078</pre>
+1104
+1105
+1106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1076</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1104</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer64'>unsigned_integer64</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt64</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2348,12 +2421,12 @@ named @name@.</p>
       <pre class="lines">
 
 
-1047
-1048
-1049</pre>
+1075
+1076
+1077</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1047</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1075</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unsigned_integer8'>unsigned_integer8</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UInt8</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2436,12 +2509,12 @@ named @name@.</p>
       <pre class="lines">
 
 
-1176
-1177
-1178</pre>
+1204
+1205
+1206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1176</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 1204</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_wgs84_geo_point'>wgs84_geo_point</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_column'>column</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WGS84GeoPoint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>

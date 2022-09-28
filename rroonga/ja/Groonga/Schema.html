@@ -746,14 +746,14 @@
       <pre class="lines">
 
 
+618
+619
 620
 621
-622
-623
-624</pre>
+622</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 620</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 618</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -859,14 +859,14 @@
       <pre class="lines">
 
 
+414
+415
 416
 417
-418
-419
-420</pre>
+418</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 416</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 414</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -1978,14 +1978,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
+377
+378
 379
 380
-381
-382
-383</pre>
+381</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 379</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 377</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2089,14 +2089,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
+166
+167
 168
 169
-170
-171
-172</pre>
+170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_define'>define</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_schema'>schema</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -2229,14 +2229,14 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
+518
+519
 520
 521
-522
-523
-524</pre>
+522</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 520</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 518</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_schema'>schema</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span><span class='comma'>,</span>
@@ -2278,14 +2278,14 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
+444
+445
 446
 447
-448
-449
-450</pre>
+448</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 446</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 444</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -2369,14 +2369,14 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
+388
+389
 390
 391
-392
-393
-394</pre>
+392</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 390</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 388</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_table'>remove_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2419,14 +2419,14 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
+459
+460
 461
 462
-463
-464
-465</pre>
+463</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 461</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 459</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_current_column_name'>current_column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_column_name'>new_column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2470,14 +2470,14 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
+430
+431
 432
 433
-434
-435
-436</pre>
+434</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 432</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 430</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_table'>rename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2514,14 +2514,14 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
+525
+526
 527
 528
-529
-530
-531</pre>
+529</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 527</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 525</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_text'>dumped_text</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_define'>define</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_schema'>schema</span><span class='op'>|</span>
@@ -2629,15 +2629,15 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
+711
+712
 713
 714
 715
-716
-717
-718</pre>
+716</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 713</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 711</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='symbol'>:change</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -2665,6 +2665,8 @@ Rubyスクリプト形式になる。
       <pre class="lines">
 
 
+673
+674
 675
 676
 677
@@ -2674,12 +2676,10 @@ Rubyスクリプト形式になる。
 681
 682
 683
-684
-685
-686</pre>
+684</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 675</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 673</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_lexicon'>create_lexicon</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
                    <span class='label'>use_case:</span> <span class='symbol'>:full_text_search</span><span class='comma'>,</span>
@@ -3801,14 +3801,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
+667
+668
 669
 670
-671
-672
-673</pre>
+671</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 669</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 667</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_table'>create_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Schema/TableDefinition.html" title="Groonga::Schema::TableDefinition (class)">TableDefinition</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -3845,14 +3845,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
+625
+626
 627
 628
-629
-630
-631</pre>
+629</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 627</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 625</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_define'>define</span>
   <span class='ivar'>@definitions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_definition'>definition</span><span class='op'>|</span>
@@ -3890,14 +3890,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
+644
+645
 646
 647
-648
-649
-650</pre>
+648</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 646</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 644</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span>
   <span class='id identifier rubyid_dumper'>dumper</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SchemaDumper.html" title="Groonga::SchemaDumper (class)">SchemaDumper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SchemaDumper.html#initialize-instance_method" title="Groonga::SchemaDumper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:context</span><span class='rbracket'>]</span><span class='comma'>,</span>
@@ -3939,14 +3939,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
+741
+742
 743
 744
-745
-746
-747</pre>
+745</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 743</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 741</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_column'>remove_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -4035,13 +4035,13 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
+696
+697
 698
-699
-700
-701</pre>
+699</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 698</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 696</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_table'>remove_table</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_definition'>definition</span> <span class='op'>=</span> <span class='const'>TableRemoveDefinition</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -4082,14 +4082,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
+755
+756
 757
 758
-759
-760
-761</pre>
+759</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 757</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 755</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_column'>rename_column</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='comma'>,</span> <span class='id identifier rubyid_current_column_name'>current_column_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_column_name'>new_column_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_change_table'>change_table</span><span class='lparen'>(</span><span class='id identifier rubyid_table_name'>table_name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
@@ -4177,14 +4177,14 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
+727
+728
 729
 730
-731
-732
-733</pre>
+731</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 729</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 727</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rename_table'>rename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_current_name'>current_name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_name'>new_name</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -4228,12 +4228,12 @@ can specify this by normalizer name as String such as
       <pre class="lines">
 
 
-637
-638
-639</pre>
+635
+636
+637</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 637</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/schema.rb', line 635</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_text'>dumped_text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_text'>dumped_text</span><span class='rparen'>)</span>
@@ -4248,9 +4248,9 @@ can specify this by normalizer name as String such as
 </div>
 
       <div id="footer">
-  Generated on Wed Feb  9 22:28:49 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.5).
+  Generated on Wed Sep 28 18:02:25 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.0.4).
 </div>
 
     
