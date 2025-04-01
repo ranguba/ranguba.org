@@ -687,6 +687,8 @@ return value of the call.</p>
       <pre class="lines">
 
 
+39
+40
 41
 42
 43
@@ -696,12 +698,10 @@ return value of the call.</p>
 47
 48
 49
-50
-51
-52</pre>
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_kwargs'>kwargs</span><span class='rparen'>)</span>
@@ -787,12 +787,12 @@ this context.</p>
       <pre class="lines">
 
 
-387
-388
-389</pre>
+385
+386
+387</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 387</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 385</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_conf'>conf</span>
   <span class='id identifier rubyid_config'>config</span>
@@ -861,12 +861,12 @@ this context.</p>
       <pre class="lines">
 
 
-395
-396
-397</pre>
+393
+394
+395</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 395</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 393</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_config'>config</span>
   <span class='ivar'>@config</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Config.html" title="Groonga::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -919,11 +919,11 @@ for the context.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Creating a new temporary database</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Creating a new temporary database</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_temporary_database'>temporary_database</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_create_database'>create_database</span></code></pre>
     
@@ -964,11 +964,11 @@ is closed after the passed block is finished.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Creating a new temporary database with block</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Creating a new temporary database with block</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_create_database'>create_database</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_temporary_database'>temporary_database</span><span class='op'>|</span>
   <span class='comment'># ...
@@ -1067,11 +1067,11 @@ returned value from this method.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Creating a new persistent database to <em>“/tmp/db.groonga”</em></p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Creating a new persistent database to <em>“/tmp/db.groonga”</em></p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_database'>database</span> <span class='op'>=</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_create_database'>create_database</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/db.groonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
@@ -1134,11 +1134,11 @@ finished.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Creating a new persistent database to <em>“/tmp/db.groonga”</em> database with block</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Creating a new persistent database to <em>“/tmp/db.groonga”</em> database with block</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_create_database'>create_database</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/tmp/db.groonga</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_persistent_database'>persistent_database</span><span class='op'>|</span>
   <span class='comment'># ...
@@ -1253,17 +1253,17 @@ returned value from this method.</p>
       <pre class="lines">
 
 
+130
+131
 132
 133
 134
 135
 136
-137
-138
-139</pre>
+137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_database'>create_database</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
@@ -1293,13 +1293,13 @@ returned value from this method.</p>
       <pre class="lines">
 
 
+199
+200
 201
-202
-203
-204</pre>
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 201</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 199</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_execute_command'>execute_command</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_parameters'>parameters</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_executor'>executor</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Context/CommandExecutor.html" title="Groonga::Context::CommandExecutor (class)">CommandExecutor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Context/CommandExecutor.html#initialize-instance_method" title="Groonga::Context::CommandExecutor#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -1339,14 +1339,14 @@ returned value from this method.</p>
       <pre class="lines">
 
 
+374
+375
 376
 377
-378
-379
-380</pre>
+378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 376</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 374</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_object_created'>object_created</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@memory_pools</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -1385,14 +1385,14 @@ returned value from this method.</p>
       <pre class="lines">
 
 
+56
+57
 58
 59
-60
-61
-62</pre>
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_open_database'>open_database</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
@@ -1451,13 +1451,13 @@ returned value from this method.</p>
       <pre class="lines">
 
 
+368
+369
 370
-371
-372
-373</pre>
+371</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 370</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 368</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pop_memory_pool'>pop_memory_pool</span>
   <span class='id identifier rubyid_memory_pool'>memory_pool</span> <span class='op'>=</span> <span class='ivar'>@memory_pools</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
@@ -1519,11 +1519,11 @@ can reduce GC because memory consumption is reduced.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Pushes a new memory pool with block</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Pushes a new memory pool with block</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span> <span class='kw'>do</span>
@@ -1537,8 +1537,8 @@ can reduce GC because memory consumption is reduced.</p>
 <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>      <span class='comment'># =&gt; true</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Pushes a new memory pool without block</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Pushes a new memory pool without block</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span>
@@ -1552,8 +1552,8 @@ can reduce GC because memory consumption is reduced.</p>
 <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_adults'>adults</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span>    <span class='comment'># =&gt; true</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Nesting push and pop pair</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Nesting push and pop pair</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_adults'>adults</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span> <span class='kw'>do</span>
@@ -1690,6 +1690,8 @@ method call.</p>
       <pre class="lines">
 
 
+349
+350
 351
 352
 353
@@ -1698,12 +1700,10 @@ method call.</p>
 356
 357
 358
-359
-360
-361</pre>
+359</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 351</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 349</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_push_memory_pool'>push_memory_pool</span>
   <span class='id identifier rubyid_memory_pool'>memory_pool</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="MemoryPool.html" title="Groonga::MemoryPool (class)">MemoryPool</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="MemoryPool.html#initialize-instance_method" title="Groonga::MemoryPool#initialize (method)">new</a></span></span>
@@ -1748,18 +1748,18 @@ method call.</p>
       <pre class="lines">
 
 
+142
+143
 144
 145
 146
 147
 148
 149
-150
-151
-152</pre>
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register_plugin'>register_plugin</span><span class='lparen'>(</span><span class='id identifier rubyid_name_or_options'>name_or_options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>
@@ -1796,26 +1796,26 @@ method call.</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Restore dumped commands as a String object.</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Restore dumped commands as a String object.</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_dumped_commands'>dumped_commands</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dump.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='rparen'>)</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Restore dumped commands from a File object.</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Restore dumped commands from a File object.</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dump.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_file'>file</span><span class='op'>|</span>
   <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
 <span class='kw'>end</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Restore dumped commands and reports result.</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Restore dumped commands and reports result.</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_dumped_commands'>dumped_commands</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dump.grn</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
@@ -1904,6 +1904,8 @@ line.</p>
       <pre class="lines">
 
 
+232
+233
 234
 235
 236
@@ -1928,15 +1930,13 @@ line.</p>
 255
 256
 257
-258
-259
-260</pre>
+258</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 234</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 232</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restore'>restore</span><span class='lparen'>(</span><span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>=</span> <span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_continued'>continued</span> <span class='op'>=</span> <span class='kw'>false</span>
   <span class='id identifier rubyid_dumped_commands'>dumped_commands</span><span class='period'>.</span><span class='id identifier rubyid_each_line'>each_line</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
     <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span>
@@ -2056,12 +2056,12 @@ TODO</p>
       <pre class="lines">
 
 
-197
-198
-199</pre>
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 195</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_execute_command'>execute_command</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>select</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_table'>table</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -2099,18 +2099,18 @@ TODO</p>
 <div class="tags">
   
   <div class="examples">
-    <p class="tag_title">Examples:</p>
+    <h4 class="tag_title">Examples:</h4>
     
       
-        <p class="example_title"><div class='inline'><p>Unregister a registerd plugin by name.</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Unregister a registerd plugin by name.</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_register_plugin'>register_plugin</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token_filters/stop_word</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_unregister_plugin'>unregister_plugin</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token_filters/stop_word</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>Unregister a registerd plugin by path.</p>
-</div></p>
+        <h5 class="example_title"><div class='inline'><p>Unregister a registerd plugin by path.</p>
+</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_register_plugin'>register_plugin</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token_filters/stop_word</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_unregister_plugin'>unregister_plugin</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/usr/local/lib/groonga/plugins/token_filters/stop_word.so</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
@@ -2214,13 +2214,13 @@ TODO</p>
       <pre class="lines">
 
 
+178
+179
 180
-181
-182
-183</pre>
+181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 180</span>
+      <pre class="code"><span class="info file"># File 'lib/groonga/context.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unregister_plugin'>unregister_plugin</span><span class='lparen'>(</span><span class='id identifier rubyid_name_or_path'>name_or_path</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:context</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='rbrace'>}</span>

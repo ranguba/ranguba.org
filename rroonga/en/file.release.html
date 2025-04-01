@@ -179,19 +179,23 @@
 
 <h2 id="upload-gem-to-rubygemsorg">3. Upload gem to RubyGems.org</h2>
 
-<h3 id="for-linux">3-1. For Linux</h3>
+<h3 id="bump-version-if-need">3-1. Bump version if need</h3>
+
+<p>Change <code>RB_GRN_MAJOR_VERSION</code>, <code>RB_GRN_MINOR_VERSION</code> and <code>RB_GRN_MICRO_VERSION</code>
+to the same version of the latest Groonga.</p>
+
+<pre class="code ruby"><code class="ruby">$ $EDITOR ext/groonga/rb-grn.h
+</code></pre>
+
+<h3 id="release-1">3-2. Release</h3>
 
 <pre class="code ruby"><code class="ruby">$ rake release
 </code></pre>
 
-<h3 id="for-windows">3-2. For Windows</h3>
-
-<pre class="code ruby"><code class="ruby">$ rake build:windows
-$ gem push pkg/rroonga-&lt;the latest release version&gt;-x86-mingw32.gem
-$ gem push pkg/rroonga-&lt;the latest release version&gt;-x64-mingw32.gem
-</code></pre>
-
 <h3 id="bump-version">3-3. Bump version</h3>
+
+<p>Increment <code>RB_GRN_MICRO_VERSION</code>.
+If current <code>RB_GRN_MICRO_VERSION</code> is <code>9</code>, increment <code>RB_GRN_MINOR_VERSION</code> and reset <code>RB_GRN_MICRO_VERSION</code> to <code>0</code>.</p>
 
 <pre class="code ruby"><code class="ruby">$ $EDITOR ext/groonga/rb-grn.h
 </code></pre>
@@ -236,25 +240,23 @@ $ git commit
 $ git push
 </code></pre>
 
-<h2 id="announce-in-mailing-lists">5. Announce in mailing lists</h2>
+<h2 id="update-blogroonga-blog">5. Update BloGroonga (blog)</h2>
+
+<p>Please refer to <a href="https://groonga.org//docs/contribution/development/release.html#blogroonga">Groonga document</a> 
+for how to update BloGroonga.</p>
+
+<h2 id="announce">6. Announce</h2>
 
 <ul>
-  <li>groonga-talk (English)
-    <ul>
-      <li>e.g.: http://sourceforge.net/p/groonga/mailman/message/33144993/</li>
-    </ul>
-  </li>
-  <li>groonga-dev (Japanese)
-    <ul>
-      <li>e.g.: http://sourceforge.jp/projects/groonga/lists/archive/dev/2014-December/003014.html</li>
-    </ul>
-  </li>
-  <li>ruby-talk (English) (optional)
+  <li><a href="https://github.com/ranguba/rroonga/discussions/categories/releases">GitHub Discussions</a> (English/Japanese)</li>
+  <li><a href="https://twitter.com/groonga">Twitter</a> (English/Japanese)</li>
+  <li><a href="https://ja-jp.facebook.com/groonga/">Facebook</a> (English/Japanese)</li>
+  <li>ruby-talk (English)
     <ul>
       <li>e.g.: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/428992</li>
     </ul>
   </li>
-  <li>ruby-list (Japanese) (optional)
+  <li>ruby-list (Japanese)
     <ul>
       <li>e.g.: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-list/50025</li>
     </ul>
